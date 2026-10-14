@@ -1,0 +1,243 @@
+[
+  {
+    "id": "01",
+    "title": "Tầm nhìn, trụ cột và định vị game",
+    "turns": [
+      3
+    ],
+    "path": "docs/gdd/modules/01-vision-and-pillars.md"
+  },
+  {
+    "id": "02",
+    "title": "Thế giới, lịch sử, campaign và 12 đại vùng",
+    "turns": [
+      5,
+      7
+    ],
+    "path": "docs/gdd/modules/02-world-and-history.md"
+  },
+  {
+    "id": "03",
+    "title": "Settlement và mô phỏng cộng đồng",
+    "turns": [
+      9
+    ],
+    "path": "docs/gdd/modules/03-settlements.md"
+  },
+  {
+    "id": "04",
+    "title": "Dòng họ, gia đình, household và mạng xã hội",
+    "turns": [
+      11
+    ],
+    "path": "docs/gdd/modules/04-family-and-social-graph.md"
+  },
+  {
+    "id": "05",
+    "title": "Tâm lý, cá tính và Signature Passive",
+    "turns": [
+      13
+    ],
+    "path": "docs/gdd/modules/05-psychology-and-personality.md"
+  },
+  {
+    "id": "06",
+    "title": "Life Event và sinh diễn biến có nhân quả",
+    "turns": [
+      15
+    ],
+    "path": "docs/gdd/modules/06-life-events-and-story-generation.md"
+  },
+  {
+    "id": "07",
+    "title": "Sinh nhân vật người chơi ngẫu nhiên",
+    "turns": [
+      21
+    ],
+    "path": "docs/gdd/modules/07-player-generation.md"
+  },
+  {
+    "id": "08",
+    "title": "Nghề nghiệp và sự nghiệp",
+    "turns": [
+      23
+    ],
+    "path": "docs/gdd/modules/08-profession-and-career.md"
+  },
+  {
+    "id": "09",
+    "title": "Attributes, Skills, Knowledge và Techniques",
+    "turns": [
+      25
+    ],
+    "path": "docs/gdd/modules/09-attributes-skills-and-capability.md"
+  },
+  {
+    "id": "10",
+    "title": "Class, Specialization, Skill Tree và Multiclass",
+    "turns": [
+      27
+    ],
+    "path": "docs/gdd/modules/10-class-and-progression.md"
+  },
+  {
+    "id": "11",
+    "title": "Party và Companion",
+    "turns": [
+      29
+    ],
+    "path": "docs/gdd/modules/11-party-and-companions.md"
+  },
+  {
+    "id": "12",
+    "title": "Combat theo lượt, Zone và Local Position Slots",
+    "turns": [
+      31
+    ],
+    "path": "docs/gdd/modules/12-combat.md"
+  },
+  {
+    "id": "13",
+    "title": "Vũ khí, giáp, trang bị, thương tích và trạng thái",
+    "turns": [
+      33
+    ],
+    "path": "docs/gdd/modules/13-equipment-injury-and-status.md"
+  },
+  {
+    "id": "14",
+    "title": "Khám phá, di chuyển, sinh tồn và bản đồ",
+    "turns": [
+      35
+    ],
+    "path": "docs/gdd/modules/14-exploration-travel-and-survival.md"
+  },
+  {
+    "id": "15",
+    "title": "Dungeon và Encounter",
+    "turns": [
+      37
+    ],
+    "path": "docs/gdd/modules/15-dungeons-and-encounters.md"
+  },
+  {
+    "id": "16",
+    "title": "Hội thoại, thương lượng, danh tiếng và phe phái",
+    "turns": [
+      39
+    ],
+    "path": "docs/gdd/modules/16-dialogue-social-and-factions.md"
+  },
+  {
+    "id": "17",
+    "title": "Quest, Story Thread và can thiệp của người chơi",
+    "turns": [
+      41
+    ],
+    "path": "docs/gdd/modules/17-quests-and-story-threads.md"
+  },
+  {
+    "id": "18",
+    "title": "Kinh tế, thương mại, chế tác và settlement",
+    "turns": [
+      43
+    ],
+    "path": "docs/gdd/modules/18-economy-trade-and-crafting.md"
+  },
+  {
+    "id": "19",
+    "title": "Tín ngưỡng, thần thoại, Mạch Lạc và supernatural",
+    "turns": [
+      45
+    ],
+    "path": "docs/gdd/modules/19-belief-myth-and-mach-lac.md"
+  },
+  {
+    "id": "20",
+    "title": "Sinh vật, sinh thái và mối đe dọa con người",
+    "turns": [
+      47
+    ],
+    "path": "docs/gdd/modules/20-creatures-and-ecology.md"
+  },
+  {
+    "id": "21",
+    "title": "Thời gian, tuổi tác, chết, kế tục và di sản",
+    "turns": [
+      49
+    ],
+    "path": "docs/gdd/modules/21-time-death-and-legacy.md"
+  },
+  {
+    "id": "22",
+    "title": "Game Loop, Campaign, World Director và chế độ chơi",
+    "turns": [
+      53
+    ],
+    "path": "docs/gdd/modules/22-game-loop-campaign-and-director.md"
+  },
+  {
+    "id": "23",
+    "title": "UI/UX, Journal, Codex, Chronicle và phản hồi",
+    "turns": [
+      57
+    ],
+    "path": "docs/gdd/modules/23-ui-ux-and-information.md"
+  },
+  {
+    "id": "24",
+    "title": "Deterministic Engine và AI-assisted Content Pipeline",
+    "turns": [
+      61
+    ],
+    "path": "docs/gdd/modules/24-deterministic-engine-and-content.md"
+  },
+  {
+    "id": "25",
+    "title": "Architecture Review và System Dependency Audit",
+    "turns": [
+      65
+    ],
+    "path": "docs/gdd/modules/25-architecture-audit.md"
+  },
+  {
+    "id": "26",
+    "title": "Technical System Design và Canonical Data Model",
+    "turns": [
+      69
+    ],
+    "path": "docs/gdd/modules/26-technical-design-and-data-model.md"
+  },
+  {
+    "id": "27",
+    "title": "Rule Engine và Formula Specification",
+    "turns": [
+      73
+    ],
+    "path": "docs/gdd/modules/27-rules-and-formulas.md"
+  },
+  {
+    "id": "28",
+    "title": "Vertical Slice Implementation Blueprint",
+    "turns": [
+      77
+    ],
+    "path": "docs/gdd/modules/28-vertical-slice-blueprint.md"
+  },
+  {
+    "id": "29",
+    "title": "Engine Foundation Implementation Specification",
+    "turns": [
+      81
+    ],
+    "path": "docs/gdd/modules/29-engine-foundation.md"
+  },
+  {
+    "id": "06A",
+    "title": "Core Life Event Library — nguồn mang tên Module 05A",
+    "turns": [
+      17
+    ],
+    "path": "docs/gdd/appendices/06A-core-life-event-library.md"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "parameters.kernel@1",
+  "status": "engineering-prototype-not-balanced",
+  "tick_minutes": 1,
+  "ticks_per_day": 1440,
+  "repair_duration_ticks": 60,
+  "repair_timber_units": 2,
+  "repair_condition_gain": 200,
+  "condition_max": 1000,
+  "scheduler_job_budget": 1000,
+  "scheduler_fanout_limit": 32
+}

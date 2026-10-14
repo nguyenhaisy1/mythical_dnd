@@ -1,0 +1,30 @@
+# Bằng chứng kiểm tra lần bàn giao 2026-10-13
+
+Phạm vi: khôi phục tài liệu, cấu trúc project và tooling. Các runtime tests trong TEST-MATRIX chưa được thực hiện vì gameplay/kernel chưa triển khai.
+
+| Kiểm tra | Kết quả quan sát |
+|---|---|
+| .NET Release build | SDK 10.0.401; 5 project build thành công; 0 warning, 0 error |
+| Reference fixture validator | Cấu trúc schema subset và references hợp lệ; 4 negative controls bị từ chối |
+| Assembly architecture | Dependency graph và targets khớp portable core / net10 host |
+| Source preservation | 85 source message hashes; 31 khối dài khôi phục thành 29 module + phụ lục; 1.436.697 ký tự normalized; 6.156 mục có anchor |
+| Generated docs / handoff check | 36 file sinh lại khớp nguồn; 52 requirement, 28 task và dependency DAG hợp lệ; 291 authored links tồn tại |
+| Host status smoke | `--status` trả scaffold, `simulationImplemented: false`; lệnh simulate chưa hỗ trợ phải exit 2 |
+
+Các lệnh tái kiểm tra, export còn có output machine-readable/log ở `artifacts/` khi chạy. Không dùng “Passed” ở đây để diễn đạt Unity, formula balance, deterministic simulation, save/recovery hay full-game playtest đã pass.
+
+## Bổ sung tài liệu 2026-10-14 — evidence thực tế
+
+Phạm vi lần này là specs, reference data và documentation tooling; không thay engine C# hoặc bootstrap Unity.
+
+| Kiểm tra đã chạy | Kết quả |
+|---|---|
+| build_docs + check_handoff | 36 generated files; 29 module + phụ lục; 6.156 source anchors; 52 requirements, 28 tasks, 352 authored links; source preservation/DAG hợp lệ |
+| check_contract_vectors | Codec bytes, SHA-256 known-answer, raw RNG vectors, rounding, bounded rejection branch, 3 invalid codec controls, smoke arithmetic/projection hashes hợp lệ |
+| validate_reference | Design fixture schema subset/semantic refs hợp lệ; 4 negative controls reject |
+| check_architecture | Assembly references/portable targets vẫn hợp lệ ở scope scaffold |
+| ZIP workflow | Đã xóa ZIP, HANDOFF-MANIFEST/PACKAGE-REPORT và package.py; không tạo ZIP mới |
+
+HTML/DOCX được regenerate sau khi tài liệu đồng bộ; machine-readable evidence của lần kiểm export nằm ở `artifacts/EXPORT-VALIDATION.json`, có số source fingerprints đã đối chiếu. Checker mới từ chối export nếu source inventory/hash khác manifest. Các hash của kernel fixture là **projection hashes**, không full-world runtime StateHash. Runtime acceptance tiếp tục Pending implementation; không báo C#/Unity replay hoặc persistence đã pass.
+
+Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6.156 anchors và 123 bảng trong Master DOCX. Negative control thực tế: thay source sau export khiến checker trả lỗi `Export sources changed`; sau đó regenerate bản đọc từ source mới. Chỉ kiểm container/content/navigation, không phải visual rendering hay gameplay test.

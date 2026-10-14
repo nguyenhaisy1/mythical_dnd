@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prototype Mythical"
+  short_description: "Thử giả thuyết gameplay và ghi nhận playtest"
+  default_prompt: "Dùng $mythical-prototype để xử lý yêu cầu hiện tại trong project mythical_dnd theo đúng phạm vi và bằng chứng."

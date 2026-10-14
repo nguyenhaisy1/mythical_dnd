@@ -1,0 +1,53 @@
+id,requirement,source_modules,owner,implementation_task,acceptance_test,test_specification,status
+REQ-001,Random character,"07,24,27",Characters,VS-02,TEST-001,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-002,Offline runtime,"24,27,29",Application,VS-10,TEST-002,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-003,Evidence-based class,"10,27",Characters,VS-03,TEST-003,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-004,Knowledge isolation,"23,25,26",Knowledge,VS-04,TEST-004,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-005,Director limited authority,"22,25,27",Application,VS-04,TEST-005,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-006,Atomic cross-domain mutation,"26,29",Application,FND-11,TEST-006,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-007,Contextual RNG,"27,29",Foundation,FND-04,TEST-007,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-008,Stable event time,"21,29",Foundation,FND-10,TEST-008,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-009,Command replay vs inspection,29,Infrastructure,FND-13,TEST-009,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-010,Supply projection,"14,18,25",Assets,VS-03,TEST-010,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-011,Shared directed routes,"14,18,25",Travel,VS-03,TEST-011,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-012,Health ownership,"12,13,25",Health,VS-05,TEST-012,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-013,Succession boundary,"21,26",Legacy,VS-06,TEST-013,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-014,Hard anchor feasibility,"25,27",Narrative,VS-08,TEST-014,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-015,Objective combat,"12,27",Combat,VS-05,TEST-015,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-016,Portable core,"28,29",Foundation,FND-16,TEST-016,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-017,Approved content handlers,"24,29",Infrastructure,FND-14,TEST-017,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-018,Geographic canon,"02,03,28",Travel,VS-02,TEST-018,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-019,Fixture identity,"04,05,28",Content,VS-02,TEST-019,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-020,Module source mapping,01–29,Documentation,DOC-01,TEST-020,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-021,Full handoff coverage,01–29,Documentation,DOC-01,TEST-021,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-022,Prototype parameter versions,"09,27",Foundation,VS-10,TEST-022,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-023,Scaffold status truthful,"28,29",Build,DOC-01,TEST-023,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-024,Command idempotency,29 §46,Application,FND-07,TEST-024,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-025,Payload mismatch,29 §46,Application,FND-07,TEST-025,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-026,Stale revision,29 §47,Application,FND-07,TEST-026,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-027,Stable entity ID,29 §9–14,Foundation,FND-02,TEST-027,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-028,Dead actor prevention,"25,29",Characters,FND-10,TEST-028,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-029,Resource conservation,"18,27",Assets,VS-03,TEST-029,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-030,Rumor provenance loop,"16,25",Knowledge,VS-04,TEST-030,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-031,Companion refusal,"11,25",Characters,VS-05,TEST-031,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-032,Travel outdated knowledge,"14,25",Travel,VS-03,TEST-032,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-033,Time skip breakpoints,"21,29",Application,VS-06,TEST-033,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-034,Failed persistence publication,29 §64,Infrastructure,FND-11,TEST-034,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-035,Save recovery,29 §69–74,Infrastructure,FND-12,TEST-035,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-036,Schema/content mismatch,29 §75–79,Infrastructure,FND-14,TEST-036,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-037,Event consumer idempotency,29 §54,Application,FND-09,TEST-037,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-038,Bounded fan-out,"06,29",Application,FND-10,TEST-038,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-039,Constraint before random,27,Domain,FND-08,TEST-039,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-040,Routine capability,"09,27",Characters,VS-03,TEST-040,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-041,NPC autonomy,"06,28",Characters,VS-04,TEST-041,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-042,Quest independence,"17,25",Narrative,VS-04,TEST-042,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-043,No knowledge clone on handoff,"21,23,26",Knowledge,VS-06,TEST-043,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-044,Ecology identity,"20,25",Ecology,VS-09,TEST-044,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-045,Supply permissions,"18,25",Assets,VS-03,TEST-045,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-046,Myth vs committed facts,"19,27",Belief,VS-09,TEST-046,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-047,Combat short/long health,"12,13,25",Health,VS-05,TEST-047,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-048,Directional logistics,"14,27",Travel,VS-03,TEST-048,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-049,Career stability,"08,25,27",Characters,VS-03,TEST-049,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-050,Numeric/hash consistency,"27,29",Foundation,FND-13,TEST-050,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-051,Migration failure,29 §73,Infrastructure,FND-12,TEST-051,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately
+REQ-052,Long-run benchmarks,"25,28",QA,VS-10,TEST-052,docs/qa/TEST-MATRIX.csv,Required; evidence tracked separately

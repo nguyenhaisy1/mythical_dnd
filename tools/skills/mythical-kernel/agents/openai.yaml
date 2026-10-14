@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kernel Mythical"
+  short_description: "Triển khai C# core deterministic theo contract"
+  default_prompt: "Dùng $mythical-kernel để xử lý yêu cầu hiện tại trong project mythical_dnd theo đúng phạm vi và bằng chứng."

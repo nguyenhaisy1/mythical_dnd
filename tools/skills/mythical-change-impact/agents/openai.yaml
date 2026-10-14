@@ -1,0 +1,4 @@
+interface:
+  display_name: "Đồng bộ thay đổi Mythical"
+  short_description: "Theo dõi và sửa các nơi bị ảnh hưởng bởi thay đổi"
+  default_prompt: "Dùng $mythical-change-impact để xử lý yêu cầu hiện tại trong project mythical_dnd theo đúng phạm vi và bằng chứng."

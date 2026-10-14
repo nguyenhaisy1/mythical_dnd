@@ -1,0 +1,132 @@
+# MYTHICAL_DND — Bối cảnh dự án dành cho agent
+
+Cập nhật: 2026-10-14. Ngôn ngữ làm việc: tiếng Việt.
+
+## 1. Mục đích và nguồn tham chiếu
+
+Đây là bản giới thiệu và bộ nhớ chuyển giao của project, không thay thế GDD chi tiết.
+
+- Hội thoại nguồn: https://chatgpt.com/share/6acdfd26-f510-83ec-ab19-72cbc8011300
+- Toàn văn đã nhập: `docs/source/conversation.md` — 85 thông điệp user/assistant, giữ nguyên cả các bản WritingBlock lặp.
+- Tra cứu theo module và dòng: `docs/source/INDEX.md`.
+- Kiểm kê thông điệp và checksum nội dung: `docs/source/manifest.json`.
+- Ký hiệu Txxx bên dưới trỏ tới các thông điệp trong bản nguồn.
+
+Hãy đọc bản tóm tắt này trước, rồi đọc toàn văn module liên quan khi làm việc cụ thể. Đối chiếu các quyết định sửa đổi ở Modules 24–29; không áp dụng máy móc ý tưởng sơ khai đã bị thay thế. Phân biệt yêu cầu rõ ràng của người dùng, baseline thiết kế đã được duyệt hướng đi, đề xuất của trợ lý và tham số còn phải prototype.
+
+## 2. Game này là gì?
+
+Tên thư mục: `mythical_dnd`. Tên sáng tạo tạm trong hội thoại: **HỒNG BÀNG**, campaign **HỒNG BÀNG — MẠCH LẠC**; chưa phải tên thương mại đã chốt.
+
+Một **Living World Narrative RPG** lấy cảm hứng nhập vai tabletop/D&D, ưu tiên nội dung, nhân quả và cuộc đời nhân vật hơn đồ họa. Đây là thế giới Việt cổ có nghề nghiệp, gia đình, cộng đồng, tín ngưỡng, xung đột và lịch sử riêng. Không mặc định dùng nguyên bộ luật, class hay phép thuật D&D.
+
+Người chơi sống một cuộc đời trong thế giới đang chuyển mình, có thể phát triển qua nghề nghiệp, quan hệ, điều tra, khám phá, chế tác, lãnh đạo hoặc chiến đấu. Không bắt buộc trở thành anh hùng cứu thế giới. NPC và thế giới tiếp tục vận hành khi người chơi vắng mặt.
+
+Mục tiêu sáng tạo: hỗ trợ khoảng **1.000 nhân vật khác biệt có ý nghĩa**, với biography, cá tính, mâu thuẫn nội tâm, quan hệ và Signature Passive riêng; không chỉ đổi tên hoặc cộng một stat khác. Đây là mục tiêu quy mô/khả năng sinh nội dung, chưa phải 1.000 nhân vật đã sản xuất và kiểm chứng.
+
+## 3. Thế giới, lịch sử và campaign
+
+Khung truyện chính: **cuối Văn Lang → chuyển sang Âu Lạc → xây Cổ Loa → thời An Dương Vương → khủng hoảng Mỵ Châu–Trọng Thủy**. Chất liệu Lạc Long Quân–Âu Cơ, Sơn Tinh–Thủy Tinh, Thánh Gióng, Lang Liêu… hiện diện qua truyền thuyết, tín ngưỡng, di tích và ký ức, không gom mọi nhân vật vào cùng một thời điểm.
+
+Luôn phân biệt ba lớp: **lịch sử/khảo cổ**, **truyền thuyết/truyền thống**, **game-canon hư cấu**. Mạch Lạc và Ước Sơn Hà là thành phần game-canon; không giới thiệu như sự thật lịch sử. Các trích dẫn lịch sử trong hội thoại cũ chưa được xác minh lại trong lần nhập này.
+
+12 đại vùng đã được phát triển trong World Bible:
+
+1. Phong Châu — trung tâm quyền lực và nghi lễ.
+2. Tam Giang — sông nước, bến và giao thương.
+3. Tản Viên — núi, cộng đồng và quyền lực địa phương.
+4. Bãi Lạc — nông nghiệp, nước và lương thực.
+5. Đồng Đỏ — khai khoáng, đúc đồng, lao động và công nghệ.
+6. Lâm U — rừng, tri thức địa phương và vùng cấm.
+7. Thượng Âu — cộng đồng miền cao và giao thoa văn hóa.
+8. Đại Trạch — đầm lầy, sương và những điều chưa rõ.
+9. Hải Môn — biển, muối, thuyền và giao thương xa.
+10. Việt Thường — phương Nam, khác biệt văn hóa và trao đổi.
+11. Bắc Lộ — biên lộ, tin tức, di cư và chiến tranh.
+12. Loa Vực — vùng biến đổi cùng quá trình xây dựng Cổ Loa.
+
+World Bible đã mô tả 60 settlement, 20 family test cases và một batch 40 nhân vật minh họa. Các nội dung này là thiết kế trong văn bản, chưa phải database runtime.
+
+Sáu hồi đề xuất: **Trống không vang; Những lời thề đã quên; Hai con đường; Thành xoáy ốc; Nỏ; Lông ngỗng**. Campaign dự kiến khoảng 20–25 năm game-time. Historical Anchors được phân loại Hard/Flexible/Emergent; không được dùng mốc lịch sử để cưỡng ép một kết quả bất khả thi về nhân quả.
+
+## 4. Các yêu cầu quan trọng của người dùng
+
+- **Sinh nhân vật ngẫu nhiên, không tạo thủ công** (T020–T021): người chơi không chọn origin, gia đình, tuổi, giới tính, stat, class khởi đầu, passive hay quá khứ. Họ quyết định tương lai qua hành động sau khi nhận nhân vật. Ý tưởng nhập mô tả, point-buy và chỉnh character sheet ban đầu đã bị thay thế. ADR-008 bổ sung policy prototype: một nhân vật/campaign, không reroll ở Reveal; có thể tạo campaign mới. Đây là quyết định biên soạn mới, không gán cho nguồn cũ.
+- **Runtime do code và công thức quyết định** (T058; Modules 24–29): không để LLM tự sinh quyết định, NPC, sự kiện hay kết quả gameplay realtime. LLM hỗ trợ soạn nội dung offline, sau đó chuẩn hóa, kiểm định và đưa vào dữ liệu phát hành. Hàng triệu nhánh đến từ tổ hợp rule hợp lệ. Những đề xuất LLM presentation ở giai đoạn sớm không phải yêu cầu triển khai hiện tại.
+- **Chi tiết và đồng đều** (đặc biệt T036, T042): không viết kỹ vài mục đầu rồi các mục sau sơ sài hoặc chỉ vài dòng tiếng Anh. Mỗi hệ thống cần mục tiêu, điều kiện, cơ chế, input/output, hậu quả, liên hệ và ví dụ đủ rõ.
+- **Đi hết phạm vi thiết kế trước** (T018): đào sâu production content và balance sau; không mắc kẹt vào mở rộng từng thư viện trước khi hoàn chỉnh bộ GDD.
+- **Đây là giai đoạn ý tưởng và tài liệu** (T078): nhắc dừng khi đủ tài liệu; không tự chuyển sang viết engine hoặc tiếp tục thêm module vô hạn.
+- **Bàn giao thành file dùng được, giữ đủ nội dung** (T082–T084): bản tóm tắt không thay cho các module dài. Người dùng chưa hài lòng với Master GDD 13 trang được báo cáo ở cuối hội thoại.
+
+## 5. Các hệ thống gameplay đã định hình
+
+- **Character generation:** World Seed → vùng/settlement → household/family → aptitude và tiếp xúc ban đầu → life events → năng lực, tri thức, nghề và quan hệ hiện tại → viability check. Không random độc lập từng stat rồi bịa biography để giải thích. Có fairness/viability nhưng không ép mọi cuộc đời cùng một tổng điểm.
+- **Family và psychology:** tách Lineage, Family, Household; quan hệ đa chiều, có hướng; nhân vật có giá trị, nhu cầu, sợ hãi, giới hạn đạo đức, ký ức và contradiction. Cá tính có phần nền, phần học được và trạng thái ngắn hạn.
+- **Năng lực:** bốn lớp Attributes, Skills, Knowledge, Techniques. Sáu attribute: **Thể, Xảo, Giác, Trí, Tâm, Khí**. Baseline thang Attribute 1–10, Skill 0–100; action check theo 2d10. Hệ số cộng, difficulty và balance cụ thể còn là prototype. Cảm Mạch không phải core attribute hay thanh mana.
+- **Profession/Career/Class:** nghề là cách kiếm sống và tạo giá trị; career là lịch sử nghề; class là danh tính gameplay hình thành từ hành động và bằng chứng. Có mentor, apprentice, bí quyết nghề, chuyển nghề, specialization, multiclass và di sản. Combat không độc quyền progression; tránh grind vô nghĩa.
+- **Signature Passive:** gắn với cuộc đời, giới hạn và ngữ cảnh; uniqueness cần khác biệt gameplay có ý nghĩa, không chỉ tên. Passive có thể biến đổi theo trải nghiệm.
+- **Party:** baseline 4 người gồm protagonist và tối đa 3 companion. Companion có mục tiêu, gia đình, nghĩa vụ và autonomy; có thể từ chối, rời đi, nghỉ hưu hoặc chết.
+- **Combat:** turn-based **Zone + Local Position Slots**; encounter đơn giản có thể chỉ dùng zone. Baseline 1 Major + 1 Minor action, reactions giới hạn. Trọng tâm là thông tin, vị trí, thể trạng và hậu quả; không dùng HP sponge làm chiều sâu. Đàm phán, rút lui, đầu hàng, cứu người và hoàn thành mục tiêu đều quan trọng.
+- **Equipment/Injury:** vũ khí, giáp, công cụ có nguồn gốc, chủ sở hữu, chất lượng, hư hỏng và lịch sử; tránh loot màu thay liên tục. Thương tích nối combat với chữa trị, hồi phục, nghề nghiệp và đời sống. Health domain sở hữu injury.
+- **Travel/Exploration:** khoảng cách, tuyến đường, mùa, kiến thức, phương tiện và supply có tác động thật. Dungeon có thể là hang, mộ, rừng, đoàn thuyền, lễ hội hay chuỗi đàm phán; có nhiều cách xử lý hợp lý.
+- **Social/Quest:** relationship, reputation và belief là các hệ khác nhau. Story Thread tồn tại trước/ngoài quest; player chỉ thấy và can thiệp một phần. Event có nguyên nhân, actor, tài nguyên, địa điểm, thời gian, thông tin và hậu quả. NPC có thể tự xử lý khi player không tham gia.
+- **Economy:** household, settlement và mạng trade dùng tài nguyên thật, lao động, thời gian, quyền sở hữu và logistics. Commodity Lot là nguồn vật chất; Supply Days là giá trị dẫn xuất. Crafting, trade và nghề nghiệp là con đường chơi hoàn chỉnh.
+- **Belief/Myth/Ecology:** tín ngưỡng có tác động xã hội; supernatural có giới hạn và giữ khoảng mơ hồ nhận thức. Sinh vật có ecology và hành vi, không scale level theo player. Human threats vẫn là con người có gia đình và mục tiêu.
+- **Time/Legacy:** thời gian và hậu quả dài hạn có thật; time skip phải xử lý world simulation. Chết có thể dẫn tới succession qua người có liên hệ hợp lệ. Không copy stat, tri thức và tài sản vô điều kiện sang người kế tục.
+- **Game loop/UX:** quan sát → hiểu tình huống → chọn hành động → hậu quả → thế giới thay đổi. Journal, Codex, Chronicle và UI giúp hiểu thông tin, nguồn tin và độ chắc chắn; không tiết lộ bí mật engine biết nhưng nhân vật chưa biết. Story/Standard/Tactical là challenge preset; Legacy/Ironman là lựa chọn persistence riêng.
+
+## 6. Ràng buộc kiến trúc cần giữ
+
+Baseline được cụ thể hóa ở Modules 24–29; đây là đặc tả, chưa phải code đã chạy.
+
+1. **Authoritative World State** có ownership rõ cho từng domain. Mọi mutation qua Command Processor hoặc internal workflow có cùng consistency guarantees; UI, narration và query không ghi state.
+2. **Hard constraints → resolution → kiểm tra hậu quả/invariants → atomic commit.** Random chỉ chọn trong không gian hợp lệ. Rule Handler đọc snapshot và trả proposed changes, không tự ghi database.
+3. **Determinism:** seed, RNG context/algorithm version, initial state, content/rule versions và chuỗi command phải cho phép replay. UI/preview không tiêu thụ gameplay RNG. Không dùng thứ tự collection bất định hoặc wall-clock để quyết định gameplay.
+4. **WorldTick** là thời gian simulation có thẩm quyền; scheduler có stable ordering. Time skip không được bỏ qua hậu quả quan trọng.
+5. **Persistence:** hybrid Current State + Event Journal + Snapshots. Commit phải nhất quán state, jobs, RNG, events, receipt và revision. Command Log để rerun resolution khác Event Journal để xem điều đã xảy ra.
+6. **Stable identity:** phân biệt Definition ID và Entity ID; cấp entity ID trong transaction; không xóa mất lịch sử cần cho causal trace/legacy.
+7. **Knowledge isolation:** World Truth khác Actor Perceived State. NPC ra quyết định bằng điều mình biết; UI/search/notification dùng knowledge projection từ đầu. Thông tin có provenance. Player Experience Archive khác Active Character Knowledge sau succession.
+8. **Shared world data:** Travel, Trade, logistics và lan truyền thông tin dùng cùng World Route Graph. Quest/Story Thread không tự tạo physical truth; combat không tự sở hữu health; supply không tạo kho vật chất thứ hai.
+9. **World Director giới hạn quyền:** ưu tiên/expose cơ hội hợp lệ và điều tiết presentation; không sửa hidden truth, tạo crisis vô căn cứ hoặc cưỡng ép outcome để tăng kịch tính.
+10. **Content pipeline:** authoring → schema/semantic validation → content build/versioning → runtime registry. Templates chỉ gọi approved rule handlers; không thực thi code tùy ý do LLM sinh.
+11. **QA bắt buộc khi triển khai:** headless runner, deterministic command replay, rule trace, state diff, causal trace, invariant/property tests, save/recovery và knowledge-leak tests. Đặc tả hoặc compile thành công không chứng minh engine đạt yêu cầu.
+
+## 7. Stack tham chiếu và vertical slice
+
+Định hướng Module 28: **C# simulation core độc lập Unity**, hướng tới .NET Standard 2.1; .NET console headless runner; Unity cho presentation/input/audio/UI; SQLite qua persistence adapter; JSON + JSON Schema cho authoring; Git và CI cho validation. Gameplay dự kiến single-player offline, không cần web backend/microservices.
+
+Stack đã được khởi tạo ở mức scaffold và build bằng .NET SDK 10.0.401; chưa kiểm chứng gameplay hoặc Unity runtime. ADR-008 và các contract bổ sung đã chọn identity-v1, tick một phút, sha256-counter-v1, codec mdc1 và snapshot mỗi 100 commits; có reference vectors. Unity patch/provider SQLite, physical DDL, test runner và performance budgets vẫn cần spike/implementation evidence. Không coi scaffold build là benchmark.
+
+Vertical slice đề xuất: **“Bến qua mùa nước”**, lấy **Bến Vạc, Tam Giang** làm trung tâm:
+
+- Khoảng 3 community/settlement, 20–30 NPC, 6–8 household, 2–3 nhóm lợi ích, 6–10 route edges có hướng.
+- Ba activity chính: vận tải đường sông, sửa chữa thuyền, chữa trị.
+- Thuyền xuống cấp, hợp đồng vận tải có thời hạn, mùa nước và áp lực lương thực tạo chuỗi nhân quả.
+- Ba thread: con thuyền của nhà Tòng, người rời Bến Vạc, quyền sử dụng bến.
+- Có phương án sửa thuyền, thay tuyến vận tải, điều tra hoặc không can thiệp; chứng minh NPC có thể hành động độc lập.
+- 1–2 companion, 8–12 event templates, một loại combat encounter; kiểm thử time skip, succession và Historical Anchor bằng fixture/headless.
+- Không dựng toàn bộ 12 vùng/sáu hồi trước khi slice chứng minh được các hệ liên kết.
+
+Các con số là ngân sách thử nghiệm, không phải acceptance metric duy nhất. Có điểm cần đối chiếu canon: World Bible đặt Bến Hạc tại Phong Châu, trong khi kịch bản slice dùng tuyến Bến Vạc–Bến Hạc; không tùy tiện dời địa danh để khớp phạm vi một vùng. Tên household/NPC trong fixture cũng cần đối chiếu bản gốc trước khi chuẩn hóa.
+
+## 8. Trạng thái hiện tại sau yêu cầu làm lại GDD và init project
+
+Yêu cầu mới đã cho phép xây lại bộ tài liệu đầy đủ và khởi tạo project; giới hạn nhiệm vụ chỉ nhập nguồn của phiên trước không còn áp dụng. Đã tạo 29 module chi tiết + phụ lục 06A từ nguồn đầy đủ, Master GDD, governance/ADR/contracts, QA/scenarios/backlog và tooling export/validation.
+
+Nguồn làm việc: `docs/gdd/modules/`, `docs/gdd/appendices/`. Mapping và checksum ở `docs/governance/SOURCE-COVERAGE.csv`; chỉ mục đề mục ở `SECTION-INDEX.csv`. Đọc `APPLICABLE-BASELINE.md` trước khi áp dụng đoạn nghiên cứu cũ. Ghi chú tích hợp nằm trong `tools/docs/integration-notes.json`; Master/modules được tái tạo bằng `tools/docs/build_docs.py`.
+
+Project theo hướng Module 28–29: `engine/` chứa 4 portable core libraries netstandard2.1 và headless host net10.0. SDK pin 10.0.401 để build scaffold. Unity mới có layout Assets, chưa bootstrap bằng Editor. Core libraries mới có assembly metadata; host `--status` xác nhận simulation chưa triển khai. Không có world engine, SQLite runtime, replay hay gameplay tests đã pass.
+
+`docs/production/HANDOFF.md` là cửa vào phát triển; `BACKLOG.csv` có Foundation tasks FND-01–16 và VS-01–10. Task code tiếp theo đề nghị FND-02 Typed IDs. `docs/qa/VALIDATION-RESULTS.md` ghi evidence thực tế; QA matrix là yêu cầu chưa triển khai, không được nói đã pass.
+
+Quyết định tích hợp: Bến Hạc giữ Phong Châu, dùng làm external boundary của slice Tam Giang; household Vạc Tòng và character Vạc Mộc có identity riêng. ID/tick/RNG/codec/reroll có baseline prototype tại ADR-008; provider/Unity/test runner, content production, balance và performance còn gates theo `OPEN-DECISIONS.csv`.
+
+Bộ export ở `artifacts/` gồm Master/volumes HTML và DOCX; không tạo ZIP theo yêu cầu hiện tại; các file sandbox của phiên chat cũ không phải nguồn của bản này. Khi thay docs, regenerate và kiểm tra. Đọc `AGENTS.md` cho quy tắc làm việc trong repository.
+
+## 9. Bổ sung tài liệu 14/10/2026
+
+Đọc `docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md` và ADR-008 để biết spec mới, chỗ cần code/spike và tác động liên tài liệu. Không tạo ZIP. VS-01 là headless kernel gate; Foundation complete cần thêm FND-16. Kernel fixtures và reference checks không phải runtime acceptance đã pass. Chưa có full slice roster/compiled pack; tiếp tục VS-02 theo content contract khi bắt đầu sản xuất nội dung.
+
+## 10. Bộ skill riêng của project
+
+Đã tạo mythical-task, mythical-change-impact, mythical-validation, mythical-prototype, mythical-kernel và mythical-content tại `tools/skills/`. Bản cài cá nhân liên kết tới source; xem `docs/runbooks/PROJECT-SKILLS.md`. Không sao chép GDD vào skill, không tự cài Unity/MCP hoặc mở multi-agent. Skills là hướng dẫn workflow, không phải bằng chứng runtime đã implemented.

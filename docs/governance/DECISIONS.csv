@@ -1,0 +1,28 @@
+id,topic,status,source,supersedes,applicable_resolution,requirement
+DEC-001,Nhân vật random,Confirmed user requirement,T020–T021; M07,Nhập mô tả/point-buy ở T003/T019,"Sinh cuộc đời từ world graph; không cho chọn stat, origin hoặc class ở New Game.",REQ-001
+DEC-002,Không LLM runtime,Confirmed user requirement,T058; M24; M27 §166,LLM Presentation trong World Bible/M22–24,LLM chỉ author offline; slice/full gameplay không phụ thuộc LLM service.,REQ-002
+DEC-003,Class từ evidence,Design baseline,M10; M27 §166,Chọn class trước khi sống,"Class eligibility dựa lịch sử hành động, không chỉ skill threshold.",REQ-003
+DEC-004,World Truth / Perceived State,Design baseline,M25 §21–23; M26; M29,Global truth query cho NPC/UI,Game rule vật lý dùng truth; decision/presentation dùng knowledge-filtered views.,REQ-004
+DEC-005,Director exposure-only,Design baseline,M25 §12–13; M27 §166,Director tự tạo crisis/outcome để pacing,"Director ưu tiên cơ hội hợp lệ, không ghi authoritative state.",REQ-005
+DEC-006,Single writer + staged changes,Design baseline,"M29 §15–20,38–48,64",Rule handler cập nhật database trực tiếp,Application validation/commit là ranh giới mutation; cross-domain invariants kiểm tra trước publish.,REQ-006
+DEC-007,RNG có version/context,Design baseline,M29 §29–37,System.Random mặc định/global RNG,Preview không draw gameplay stream; chọn exact PRNG trước FND-04 nghiệm thu.,REQ-007
+DEC-008,Một WorldTick,Design baseline,M29 §21–28,Frame time/wall clock làm thời gian mô phỏng,Tick và stable ordering authoritative; unit tick là tech task.,REQ-008
+DEC-009,Hybrid persistence,Design baseline,M29 §61–74,Coi Event Journal như full command replay,State + events + jobs + RNG + receipt + revision commit nguyên tử; command replay tách biệt.,REQ-009
+DEC-010,Commodity Lot là nguồn supply,Design baseline,M25 §36–39; M27,Supply Days ghi như inventory riêng,Supply chỉ projection từ quantity/usable nutrition/party consumption.,REQ-010
+DEC-011,Route Graph dùng chung,Design baseline,M25 §40–41; M27,"Travel, trade, rumor tự tính địa lý riêng",Một directed route truth; actor knowledge có version/time/provenance riêng.,REQ-011
+DEC-012,Health sở hữu wound,Design baseline,M25 §33–35; M27,Combat lưu injury riêng; Vitality=0 tự chết,"Combat gửi impact request; health quyết định wound, bleeding, incapacitation, mortality.",REQ-012
+DEC-013,Succession không clone,Design baseline,M25 §23; M26 §99; M27,Copy toàn bộ tri thức và đồ cho successor,Đổi protagonist control; tài sản/knowledge truyền qua rule và quyền hợp lệ.,REQ-013
+DEC-014,Historical anchors có hợp đồng,Design baseline,M25 §17–20; M27 §122–126,Đè committed history để buộc sự kiện xảy ra,Hard/Flexible/Emergent; protected scope có trước; thiếu causal path là design error.,REQ-014
+DEC-015,Combat zone + slots,Design baseline,M12 §181; M27 §155,Pure grid hoặc pure zone là lựa chọn duy nhất,Zone + Local Slots; simple encounter được dùng Pure Zone; 1 Major + 1 Minor + limited reactions.,REQ-015
+DEC-016,C# core và Unity presentation,Implementation baseline,M28 §9–14; M29 §5–6,Runtime phụ thuộc engine rendering,4 core libraries netstandard2.1; headless host net10.0; Unity project bootstrap riêng.,REQ-016
+DEC-017,Approved handlers,Design baseline,"M24; M29 §38,75–79",LLM JSON có script/SQL tùy ý,Content chỉ refer rule ID đã đăng ký; schema + semantic validation trước load.,REQ-017
+DEC-018,Canon Bến Hạc,Editorial integration decision,M03 PC-02; M28 §32,Di chuyển Bến Hạc sang Tam Giang để khớp one-region slice,"Bến Hạc vẫn ở Phong Châu; external route endpoint, không playable second region trong slice.",REQ-018
+DEC-019,Tên trong fixture,Editorial integration decision,M04 F01; M05 nhân vật 01–02; M28 §32,Coi household Tòng Mộc là tên canon mới,"ID fixture tách display name; household Vạc Tòng, Vạc Mộc là cá nhân; source text không sửa âm thầm.",REQ-019
+DEC-020,Chuẩn hóa numbering,Editorial integration decision,T003–T081; SOURCE-MAPPING,Roadmap T019 làm số module cuối,01–06 mapping World Bible; giữ 07–29; source 05A thành appendix 06A có alias.,REQ-020
+DEC-021,Chất lượng bàn giao,Confirmed current user requirement,Yêu cầu hiện tại; T084,Master summary thay cho toàn bộ detailed design,Toàn văn + integration contracts + governance + QA/backlog + scaffold + exports.,REQ-021
+DEC-022,Công thức baseline không phải balance final,Design baseline,"M27 §155,167–171; M29 §108",Khóa mọi con số minh họa,Attribute/Skill scales và 2d10 là baseline; hệ số prototype giữ trạng thái tuning.,REQ-022
+DEC-023,Phạm vi init,Authorized current task,Yêu cầu hiện tại; M28–29,Lệnh cũ chỉ lưu .agent,Khởi tạo repo/build boundaries và đặt tài liệu đúng chỗ; không giả lập engine hoàn chỉnh.,REQ-023
+DEC-024,Prototype identity/time/math/RNG,Prototype specification 2026-10-14; runtime pending,ADR-008 + IDENTITY/TIME/DETERMINISTIC specs,PCG32 candidate and unspecified tick/codec,identity-v1; minute ticks; sha256-counter-v1/mdc1; reference vectors are not runtime evidence,REQ-007
+DEC-025,Activity reserve and receipt semantics,Prototype specification 2026-10-14; runtime pending,ADR-008 + COMMAND-ACTIVITY-CATALOG,Unselected reserve/consume timing,Reserve start; consume completion; release remaining on cancel; persist rejection metadata without revision,REQ-006
+DEC-026,Headless versus full Foundation gates,Prototype specification 2026-10-14; runtime pending,ADR-008 + IMPLEMENTATION-PLAN,VS-01 ambiguous Foundation name,VS-01 headless FND-02–15; complete requires FND-16; FND-07 depends on FND-03,REQ-016
+DEC-027,Prototype onboarding and local docs,Prototype specification 2026-10-14; runtime pending,ADR-008 + CLIENT-UX-BASELINE,Unspecified reroll; ZIP workflow,"One generated actor/campaign; no Reveal reroll; maintain project docs directly, no ZIP",REQ-001

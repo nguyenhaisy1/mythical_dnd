@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thực hiện task Mythical"
+  short_description: "Giao và hoàn thành task theo contracts của project"
+  default_prompt: "Dùng $mythical-task để xử lý yêu cầu hiện tại trong project mythical_dnd theo đúng phạm vi và bằng chứng."

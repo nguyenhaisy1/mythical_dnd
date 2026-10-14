@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Mythical"
+  short_description: "Chuyển nghiên cứu thành dữ liệu có thể kiểm định"
+  default_prompt: "Dùng $mythical-content để xử lý yêu cầu hiện tại trong project mythical_dnd theo đúng phạm vi và bằng chứng."

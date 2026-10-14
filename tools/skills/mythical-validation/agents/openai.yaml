@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kiểm chứng Mythical"
+  short_description: "Phân biệt bằng chứng tài liệu, runtime và playtest"
+  default_prompt: "Dùng $mythical-validation để xử lý yêu cầu hiện tại trong project mythical_dnd theo đúng phạm vi và bằng chứng."

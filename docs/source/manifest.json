@@ -1,0 +1,689 @@
+{
+  "source_url": "https://chatgpt.com/share/6acdfd26-f510-83ec-ab19-72cbc8011300",
+  "import_date": "2026-10-13",
+  "scope": "public user and assistant text; no hidden reasoning, system or tool messages; attachments not recovered",
+  "message_count": 85,
+  "messages": [
+    {
+      "turn": "T000",
+      "role": "user",
+      "source_node_index": 3,
+      "line_start": 14,
+      "text_characters": 44,
+      "text_sha256": "d255f060860eaec48f9877134c2d59e5026efd5893adab905c6c587081cae953"
+    },
+    {
+      "turn": "T001",
+      "role": "assistant",
+      "source_node_index": 15,
+      "line_start": 20,
+      "text_characters": 633,
+      "text_sha256": "eb501383ae9347c76aa358b873af0d4812df21b52d7b611e0974b117c21dc880"
+    },
+    {
+      "turn": "T002",
+      "role": "user",
+      "source_node_index": 16,
+      "line_start": 32,
+      "text_characters": 666,
+      "text_sha256": "a53eb14f20ea7ab922b5d034a026678b7539a306016b3501d4f7017b94d56cf0"
+    },
+    {
+      "turn": "T003",
+      "role": "assistant",
+      "source_node_index": 22,
+      "line_start": 38,
+      "text_characters": 12374,
+      "text_sha256": "9103b5e47256db9ff17936612507fe491064e031e976709b4e2811ae31f399e2"
+    },
+    {
+      "turn": "T004",
+      "role": "user",
+      "source_node_index": 23,
+      "line_start": 853,
+      "text_characters": 185,
+      "text_sha256": "2293bfe0956e7145ffd468185f0c0dd038d66f64cebe04cd540a43705906b63f"
+    },
+    {
+      "turn": "T005",
+      "role": "assistant",
+      "source_node_index": 38,
+      "line_start": 859,
+      "text_characters": 20040,
+      "text_sha256": "397f6c16ede8b55cc7de71f11e2a5d0a964244b58c1e124468a4c24e63621700"
+    },
+    {
+      "turn": "T006",
+      "role": "user",
+      "source_node_index": 39,
+      "line_start": 1835,
+      "text_characters": 25,
+      "text_sha256": "3de43832422afeb6ab5444ce591c72d2b76c9c0fc7ad7b835ac31f381c7ce5a9"
+    },
+    {
+      "turn": "T007",
+      "role": "assistant",
+      "source_node_index": 54,
+      "line_start": 1841,
+      "text_characters": 20759,
+      "text_sha256": "bf5bf390637428f75dfe3e30badd54d80aaa3368842372959cae42ee22119865"
+    },
+    {
+      "turn": "T008",
+      "role": "user",
+      "source_node_index": 55,
+      "line_start": 3133,
+      "text_characters": 23,
+      "text_sha256": "8254c7307dbd2c7e5ee1ea89a128c263934127fb281487d9a2dd202ccfad050c"
+    },
+    {
+      "turn": "T009",
+      "role": "assistant",
+      "source_node_index": 71,
+      "line_start": 3139,
+      "text_characters": 28985,
+      "text_sha256": "31cb2670cf1559198b2eac7913d94a83e524b63fdd04e169c287d2c85343c528"
+    },
+    {
+      "turn": "T010",
+      "role": "user",
+      "source_node_index": 72,
+      "line_start": 5309,
+      "text_characters": 10,
+      "text_sha256": "2547d6fd7f1e2cb469c661e14ab9c3ec4235c267b172c05c99c3264992fff173"
+    },
+    {
+      "turn": "T011",
+      "role": "assistant",
+      "source_node_index": 79,
+      "line_start": 5315,
+      "text_characters": 21590,
+      "text_sha256": "c2b56c100115236c854af04afd2ab42a8260b9a2546f76b00fc1e229b36f472c"
+    },
+    {
+      "turn": "T012",
+      "role": "user",
+      "source_node_index": 80,
+      "line_start": 6827,
+      "text_characters": 10,
+      "text_sha256": "2547d6fd7f1e2cb469c661e14ab9c3ec4235c267b172c05c99c3264992fff173"
+    },
+    {
+      "turn": "T013",
+      "role": "assistant",
+      "source_node_index": 91,
+      "line_start": 6833,
+      "text_characters": 25368,
+      "text_sha256": "94962f5079a28d0dcbe89e5fcce1b38c721d38aaeb46d63cbd041f9f16beb1b9"
+    },
+    {
+      "turn": "T014",
+      "role": "user",
+      "source_node_index": 92,
+      "line_start": 8355,
+      "text_characters": 77,
+      "text_sha256": "4c38be0ac4aa7aaa5868d9aa8dea647a38f052eff63d616b92cb3135441c0764"
+    },
+    {
+      "turn": "T015",
+      "role": "assistant",
+      "source_node_index": 102,
+      "line_start": 8361,
+      "text_characters": 34707,
+      "text_sha256": "1b33367bdd4912b39f2d3258fcbfd1a1714a5e07a053142a1ec7f025a2bb9d84"
+    },
+    {
+      "turn": "T016",
+      "role": "user",
+      "source_node_index": 103,
+      "line_start": 11280,
+      "text_characters": 75,
+      "text_sha256": "30b2cb3d0e34d1107963c3679de1ccc5a2ba8caea0334f47d5818b6bfe72702e"
+    },
+    {
+      "turn": "T017",
+      "role": "assistant",
+      "source_node_index": 113,
+      "line_start": 11286,
+      "text_characters": 35306,
+      "text_sha256": "9b18929446d61adef59f723fb12a4885164357a9d2789644dd72c8c707258105"
+    },
+    {
+      "turn": "T018",
+      "role": "user",
+      "source_node_index": 114,
+      "line_start": 14263,
+      "text_characters": 111,
+      "text_sha256": "bdc4de66468613b7224be51a7dc8a29e4d085104d143769a9288a56ffb8490dd"
+    },
+    {
+      "turn": "T019",
+      "role": "assistant",
+      "source_node_index": 122,
+      "line_start": 14269,
+      "text_characters": 6199,
+      "text_sha256": "228653cf677ebaa0809f0197cba4200f66280705531c7570d2eef9e6d43aa5df"
+    },
+    {
+      "turn": "T020",
+      "role": "user",
+      "source_node_index": 123,
+      "line_start": 14354,
+      "text_characters": 83,
+      "text_sha256": "04126b2d91ac7ba355a12ea95cef1c239827c8ec6fc9ff7112f967e6e6e81b45"
+    },
+    {
+      "turn": "T021",
+      "role": "assistant",
+      "source_node_index": 127,
+      "line_start": 14360,
+      "text_characters": 9563,
+      "text_sha256": "6d56336f5a6124accd94c0afe9b8e0af0c754da4fb971010dd4f55c9b38586e5"
+    },
+    {
+      "turn": "T022",
+      "role": "user",
+      "source_node_index": 128,
+      "line_start": 14991,
+      "text_characters": 72,
+      "text_sha256": "c46cbac2d064e0191c2df4b754a5d580b6c1eb1d3dac98f6c2571ba0df71e0fe"
+    },
+    {
+      "turn": "T023",
+      "role": "assistant",
+      "source_node_index": 133,
+      "line_start": 14997,
+      "text_characters": 24684,
+      "text_sha256": "8de465bbe2ed7f3910b2e0107a3d78b9a1cd51f9cb20ba3b21dfda2b9290983a"
+    },
+    {
+      "turn": "T024",
+      "role": "user",
+      "source_node_index": 134,
+      "line_start": 17090,
+      "text_characters": 91,
+      "text_sha256": "d4e5bf264aee9e8d4e09b941f048b835d4d08128f5ddaf4515f24d0ce7c2cfdd"
+    },
+    {
+      "turn": "T025",
+      "role": "assistant",
+      "source_node_index": 142,
+      "line_start": 17096,
+      "text_characters": 39259,
+      "text_sha256": "7cf096ca21ded4475ea76fea680c5cf64a52b91d5e7f399aef28ba781b24ecf6"
+    },
+    {
+      "turn": "T026",
+      "role": "user",
+      "source_node_index": 143,
+      "line_start": 20462,
+      "text_characters": 29,
+      "text_sha256": "00cd6366cb724ee31f6f3e8aac2932521208ac312460c4e6868cd77133877af7"
+    },
+    {
+      "turn": "T027",
+      "role": "assistant",
+      "source_node_index": 154,
+      "line_start": 20468,
+      "text_characters": 43567,
+      "text_sha256": "3d56f7bb9471da3116ce1fda7424c8964b4154e7fab78b6cc4bdf5ad424d9dd7"
+    },
+    {
+      "turn": "T028",
+      "role": "user",
+      "source_node_index": 155,
+      "line_start": 24003,
+      "text_characters": 34,
+      "text_sha256": "7c7b82f987803092e01b93cf53b5fcebfe72b49140010a89f60a012d0346bc77"
+    },
+    {
+      "turn": "T029",
+      "role": "assistant",
+      "source_node_index": 163,
+      "line_start": 24009,
+      "text_characters": 49976,
+      "text_sha256": "d32634b4bf2f1edbde4dade4fafd159e3380374797231bbd1acdb9ff866c39fc"
+    },
+    {
+      "turn": "T030",
+      "role": "user",
+      "source_node_index": 164,
+      "line_start": 27866,
+      "text_characters": 174,
+      "text_sha256": "b525e63552c5645109f2acea7bc0811ea0869ba6089b5dbad699e7bf71309bfa"
+    },
+    {
+      "turn": "T031",
+      "role": "assistant",
+      "source_node_index": 170,
+      "line_start": 27872,
+      "text_characters": 40388,
+      "text_sha256": "8e90f394bc699f57a64280db2769638016b69c7f9652cd1d2af6ce6cfc25fc0d"
+    },
+    {
+      "turn": "T032",
+      "role": "user",
+      "source_node_index": 171,
+      "line_start": 31796,
+      "text_characters": 142,
+      "text_sha256": "f6784f6f029016d3406d6f48bdb83fb80da97335892d2f927c5880c33dc7f3db"
+    },
+    {
+      "turn": "T033",
+      "role": "assistant",
+      "source_node_index": 183,
+      "line_start": 31802,
+      "text_characters": 42581,
+      "text_sha256": "8c0acb14a64220e54a396a1dad3fd27a6fb163c7bfb4136665ac7c108661c9db"
+    },
+    {
+      "turn": "T034",
+      "role": "user",
+      "source_node_index": 184,
+      "line_start": 35763,
+      "text_characters": 60,
+      "text_sha256": "9c0e951d681cc43ffdfac5c732e139021e92c0d367505f03f482c78f4e2006bd"
+    },
+    {
+      "turn": "T035",
+      "role": "assistant",
+      "source_node_index": 192,
+      "line_start": 35769,
+      "text_characters": 43062,
+      "text_sha256": "2767479fd2dda6c07b7df087842ab5910db342a904969dfcc5236c5a712e1c90"
+    },
+    {
+      "turn": "T036",
+      "role": "user",
+      "source_node_index": 193,
+      "line_start": 40297,
+      "text_characters": 195,
+      "text_sha256": "6f89b07407398862a3d34328d87aab9efa4eb8dcca13188d9eae7189603181dd"
+    },
+    {
+      "turn": "T037",
+      "role": "assistant",
+      "source_node_index": 199,
+      "line_start": 40303,
+      "text_characters": 39416,
+      "text_sha256": "a070141cd42a56430f2fb4aff6334e12a4813119064128b1442c90c724047c66"
+    },
+    {
+      "turn": "T038",
+      "role": "user",
+      "source_node_index": 200,
+      "line_start": 43646,
+      "text_characters": 40,
+      "text_sha256": "213efe5698e3b62f03231416cbcc88d536a6126b40cce6bc8b83f629acf773a6"
+    },
+    {
+      "turn": "T039",
+      "role": "assistant",
+      "source_node_index": 208,
+      "line_start": 43652,
+      "text_characters": 39842,
+      "text_sha256": "3a509cd13bf3aa7a25e1fcce133f71ec999f6b8836de13f8aa7a5c10b4714fc2"
+    },
+    {
+      "turn": "T040",
+      "role": "user",
+      "source_node_index": 209,
+      "line_start": 47346,
+      "text_characters": 30,
+      "text_sha256": "bbaa038d5461140a5eef8c3b152d3004c4e815591bcbc7fd90c420b4edf5354f"
+    },
+    {
+      "turn": "T041",
+      "role": "assistant",
+      "source_node_index": 214,
+      "line_start": 47352,
+      "text_characters": 46001,
+      "text_sha256": "9b6c2f9fe12705ea6841ebf465be5a7d1c33cb57c9c85baaf10114aea7fd3f47"
+    },
+    {
+      "turn": "T042",
+      "role": "user",
+      "source_node_index": 215,
+      "line_start": 51237,
+      "text_characters": 53,
+      "text_sha256": "4a98e9b7a1ea6ace491834cfc1dcfdbf7cb3dfce6bff9d399c5431d88647bad4"
+    },
+    {
+      "turn": "T043",
+      "role": "assistant",
+      "source_node_index": 222,
+      "line_start": 51243,
+      "text_characters": 53414,
+      "text_sha256": "9e3d4804e18705d724d13291a584de7f9033fef548d7dc8de3bcf2e33214469d"
+    },
+    {
+      "turn": "T044",
+      "role": "user",
+      "source_node_index": 223,
+      "line_start": 56079,
+      "text_characters": 21,
+      "text_sha256": "69717b8418d08bf5f58c8666620e0f5e452ea7d7d36b8ef4c961dbac6d1980c7"
+    },
+    {
+      "turn": "T045",
+      "role": "assistant",
+      "source_node_index": 230,
+      "line_start": 56085,
+      "text_characters": 43025,
+      "text_sha256": "9bb72fb7169c35ba36d13e29e206dfa15d95c102a0ad720f416ba390c8516092"
+    },
+    {
+      "turn": "T046",
+      "role": "user",
+      "source_node_index": 231,
+      "line_start": 59471,
+      "text_characters": 24,
+      "text_sha256": "ef0ff239258991d497b186a840de19f06525afd1cb34add7e176a41b3bd60efb"
+    },
+    {
+      "turn": "T047",
+      "role": "assistant",
+      "source_node_index": 236,
+      "line_start": 59477,
+      "text_characters": 44255,
+      "text_sha256": "8ab03b7280253355579d33fcdd95f422e98143b04358093ad879fb7f4b7cfa98"
+    },
+    {
+      "turn": "T048",
+      "role": "user",
+      "source_node_index": 237,
+      "line_start": 63272,
+      "text_characters": 23,
+      "text_sha256": "8ea2a1fe55fec5c5c1b52313c4e7dc6371b4a99b3c85e93cddaf890a3f6d1dd4"
+    },
+    {
+      "turn": "T049",
+      "role": "assistant",
+      "source_node_index": 246,
+      "line_start": 63278,
+      "text_characters": 71383,
+      "text_sha256": "7bc1f0ecbb9b43f3bc7964530b10fb8b137a73fcc97d0a650de4925713bd7550"
+    },
+    {
+      "turn": "T050",
+      "role": "user",
+      "source_node_index": 247,
+      "line_start": 65904,
+      "text_characters": 119,
+      "text_sha256": "17d80fb53d5bee21836092e1d5cb93ca7e2fa3533d94b46599f53157019051ab"
+    },
+    {
+      "turn": "T051",
+      "role": "assistant",
+      "source_node_index": 256,
+      "line_start": 65910,
+      "text_characters": 1475,
+      "text_sha256": "69eed7de49f41f3a6cd19fc424a416b79408ab62033196bace58e815b0cc5dc8"
+    },
+    {
+      "turn": "T052",
+      "role": "assistant",
+      "source_node_index": 259,
+      "line_start": 65928,
+      "text_characters": 81831,
+      "text_sha256": "7ba988f9b760f93de088fac935a015a7107583fb707adb14de610b4cac1ee651"
+    },
+    {
+      "turn": "T053",
+      "role": "assistant",
+      "source_node_index": 260,
+      "line_start": 68393,
+      "text_characters": 80356,
+      "text_sha256": "ad5b5457af8c97124cd15dbbf7eb8bf7f301855dccf9d81ccbcb23ed36e8ea5f"
+    },
+    {
+      "turn": "T054",
+      "role": "user",
+      "source_node_index": 261,
+      "line_start": 70846,
+      "text_characters": 42,
+      "text_sha256": "44849cc02e9b6b50f07cdfb5223f0c3213a9cc2e60d52dca1fbe8b1954c74618"
+    },
+    {
+      "turn": "T055",
+      "role": "assistant",
+      "source_node_index": 275,
+      "line_start": 70852,
+      "text_characters": 2073,
+      "text_sha256": "cb35c1d51c7ad797d319125731300bfedd06739ddffc7adbe72285e41aa3d7e7"
+    },
+    {
+      "turn": "T056",
+      "role": "assistant",
+      "source_node_index": 278,
+      "line_start": 70881,
+      "text_characters": 73634,
+      "text_sha256": "da91b92ebbbb48d27d97db647cb3088f1ee8970e4aba7a1152e02bde6c17f1a5"
+    },
+    {
+      "turn": "T057",
+      "role": "assistant",
+      "source_node_index": 279,
+      "line_start": 73694,
+      "text_characters": 71561,
+      "text_sha256": "0e0af5c78346794fdcc217fe54e3ba3fbc72f55c5ed0635d735a6c3fa2c18f06"
+    },
+    {
+      "turn": "T058",
+      "role": "user",
+      "source_node_index": 280,
+      "line_start": 76484,
+      "text_characters": 307,
+      "text_sha256": "a64703d14fa6a4bd6142004165e137f94efaf386b0d92de22dd1355fe5cec9dd"
+    },
+    {
+      "turn": "T059",
+      "role": "assistant",
+      "source_node_index": 282,
+      "line_start": 76490,
+      "text_characters": 1563,
+      "text_sha256": "213ead7372d7513d971080e8a2c32feeb872546c0045558712baa04530de4466"
+    },
+    {
+      "turn": "T060",
+      "role": "assistant",
+      "source_node_index": 294,
+      "line_start": 76508,
+      "text_characters": 62815,
+      "text_sha256": "89c9e11f10a5131c5e65a8a2d27b61dd606e146b916d0e3cd516763ac6d39ee5"
+    },
+    {
+      "turn": "T061",
+      "role": "assistant",
+      "source_node_index": 295,
+      "line_start": 78830,
+      "text_characters": 61252,
+      "text_sha256": "947b2c7ab22c1c5aaaeeb7c028dbfa39a60a2122692538549070623635937404"
+    },
+    {
+      "turn": "T062",
+      "role": "user",
+      "source_node_index": 296,
+      "line_start": 81140,
+      "text_characters": 93,
+      "text_sha256": "feb1f2c69066c6d7258978b21e373740243e0b7e8460ba02b6b2d320629863c4"
+    },
+    {
+      "turn": "T063",
+      "role": "assistant",
+      "source_node_index": 306,
+      "line_start": 81146,
+      "text_characters": 2807,
+      "text_sha256": "34a512c5ec043c6ba4d27467ac610bd4942d91b78df4d56c84bb731c78d77147"
+    },
+    {
+      "turn": "T064",
+      "role": "assistant",
+      "source_node_index": 308,
+      "line_start": 81197,
+      "text_characters": 73212,
+      "text_sha256": "ce6658a5e644582ddf67a9b10bbc6c340439e7f902a52b19fd1d19e3db8317d4"
+    },
+    {
+      "turn": "T065",
+      "role": "assistant",
+      "source_node_index": 309,
+      "line_start": 83891,
+      "text_characters": 70405,
+      "text_sha256": "57289f279be0479096ddc1a11466e0968b73f40ee10433b305a7781420d66a05"
+    },
+    {
+      "turn": "T066",
+      "role": "user",
+      "source_node_index": 310,
+      "line_start": 86540,
+      "text_characters": 41,
+      "text_sha256": "dbdca64eb697788e06bfb3eda62a23f3a3ee653c0d8671f9f8407bc3222c55d8"
+    },
+    {
+      "turn": "T067",
+      "role": "assistant",
+      "source_node_index": 321,
+      "line_start": 86546,
+      "text_characters": 1836,
+      "text_sha256": "cb0eef794129606769f2434a26950248e0594bb9862b81403bc9add3c5e933d6"
+    },
+    {
+      "turn": "T068",
+      "role": "assistant",
+      "source_node_index": 325,
+      "line_start": 86567,
+      "text_characters": 87766,
+      "text_sha256": "fdb2fce344e43edbf0986353ae3a070605d09d5ff4cddd4bd5085341c30130a1"
+    },
+    {
+      "turn": "T069",
+      "role": "assistant",
+      "source_node_index": 326,
+      "line_start": 90355,
+      "text_characters": 85930,
+      "text_sha256": "7a16b55e3de804a97cd885c5481f604a51d15b28382e36b75ab9aaac3a737eab"
+    },
+    {
+      "turn": "T070",
+      "role": "user",
+      "source_node_index": 327,
+      "line_start": 94128,
+      "text_characters": 79,
+      "text_sha256": "8dc4a85c2ada98d6c20c2b5ca261f3548b28684048b6714627b6e0e96f24f8e9"
+    },
+    {
+      "turn": "T071",
+      "role": "assistant",
+      "source_node_index": 341,
+      "line_start": 94134,
+      "text_characters": 1364,
+      "text_sha256": "3a7f23eab5d4c1ad00b3f871ebe3d94609dc4e85c0b3eb42239fa886f0433fc2"
+    },
+    {
+      "turn": "T072",
+      "role": "assistant",
+      "source_node_index": 345,
+      "line_start": 94150,
+      "text_characters": 87814,
+      "text_sha256": "91f2bb5d41aaa3c91ae4b49c084f9c88d40ed266f204740acb523cba44837ea9"
+    },
+    {
+      "turn": "T073",
+      "role": "assistant",
+      "source_node_index": 346,
+      "line_start": 97805,
+      "text_characters": 86450,
+      "text_sha256": "8d84ed6eee0d248d1576d0a4992e831f3e29228a7c7b61a12aa046b5a624a6a6"
+    },
+    {
+      "turn": "T074",
+      "role": "user",
+      "source_node_index": 347,
+      "line_start": 101450,
+      "text_characters": 75,
+      "text_sha256": "5fffb25edb9b5f71659fcb1dee5683e422e3e587145826f9f3daf7e02b4ac7ac"
+    },
+    {
+      "turn": "T075",
+      "role": "assistant",
+      "source_node_index": 357,
+      "line_start": 101456,
+      "text_characters": 1772,
+      "text_sha256": "c02128071a53c1672d71d9f95c89fbddcce27180b3828ffada1ffbeb8a28aff9"
+    },
+    {
+      "turn": "T076",
+      "role": "assistant",
+      "source_node_index": 361,
+      "line_start": 101478,
+      "text_characters": 87189,
+      "text_sha256": "e635133e488ccad61bfe09663c64208291f6a371eb97b5b8aaf23f1ca5e392a1"
+    },
+    {
+      "turn": "T077",
+      "role": "assistant",
+      "source_node_index": 362,
+      "line_start": 105052,
+      "text_characters": 85417,
+      "text_sha256": "b27f9d5d551b5c5ccd3abfbe5f6d2cf0181293ebcfe021cb21558c2df3cbf8fb"
+    },
+    {
+      "turn": "T078",
+      "role": "user",
+      "source_node_index": 363,
+      "line_start": 108610,
+      "text_characters": 265,
+      "text_sha256": "a6bc09ac8211c3f6d62cbabaabb904352220468d75dd0f357e3f9f3f3e12e4a6"
+    },
+    {
+      "turn": "T079",
+      "role": "assistant",
+      "source_node_index": 369,
+      "line_start": 108616,
+      "text_characters": 1414,
+      "text_sha256": "7be6956c92325d49b523b992ee50a24db0ba543a6c89b6ccb4ebe8ab4bfbdf24"
+    },
+    {
+      "turn": "T080",
+      "role": "assistant",
+      "source_node_index": 370,
+      "line_start": 108634,
+      "text_characters": 70190,
+      "text_sha256": "aaf2fbaec0d7cb1b66e7b9b2b275eb1310c5003808e10bf62c4eef9449cd62bc"
+    },
+    {
+      "turn": "T081",
+      "role": "assistant",
+      "source_node_index": 371,
+      "line_start": 111284,
+      "text_characters": 68776,
+      "text_sha256": "c0c242379dacf9613d7a92f7558387614165fdc3f94d7537a399817d055f613b"
+    },
+    {
+      "turn": "T082",
+      "role": "user",
+      "source_node_index": 372,
+      "line_start": 113922,
+      "text_characters": 129,
+      "text_sha256": "a8fc886afd2cd7d6c83ef9a96c1b62dc97c1a0f8cb9d8a7234008413b0dada36"
+    },
+    {
+      "turn": "T083",
+      "role": "assistant",
+      "source_node_index": 424,
+      "line_start": 113928,
+      "text_characters": 4278,
+      "text_sha256": "77f232738cb3b987c6052e3f2de7451de8dd192a1cfdb8ba9310a5eaa982e78d"
+    },
+    {
+      "turn": "T084",
+      "role": "user",
+      "source_node_index": 425,
+      "line_start": 114005,
+      "text_characters": 93,
+      "text_sha256": "6abefe8ffb7587b013deb4a73e9d90c88b56ca41931b2c37bff2255d231c1cca"
+    }
+  ],
+  "archive_sha256": "82eaf0d97aa851d3fb65418a3da86294b25179e1dcdfa613f871a4a82ee8ce4e"
+}

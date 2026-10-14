@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>Game.Infrastructure</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Foundation/Game.Foundation.csproj" />
+    <ProjectReference Include="../Domain/Game.Domain.csproj" />
+    <ProjectReference Include="../Application/Game.Application.csproj" />
+  </ItemGroup>
+</Project>

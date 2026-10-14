@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "scope": "contract-projection-not-full-runtime-snapshot",
+  "world_id": "w0000000000000001",
+  "seed": "0000000000000000000000000000000000000000000000000000000000000000",
+  "versions": {
+    "identity": "identity-v1",
+    "codec": "mdc1",
+    "rng": "sha256-counter-v1",
+    "parameters": "parameters.kernel@1",
+    "rules": "kernel-v1"
+  },
+  "entities": {
+    "actor_1": "w0000000000000001/actor/0000000000000001",
+    "actor_2": "w0000000000000001/actor/0000000000000002",
+    "household": "w0000000000000001/household/0000000000000001",
+    "boat": "w0000000000000001/item/0000000000000001",
+    "household_lot": "w0000000000000001/lot/0000000000000001",
+    "worker_lot": "w0000000000000001/lot/0000000000000002",
+    "route": "w0000000000000001/route/0000000000000001"
+  },
+  "assumptions": {
+    "actors_alive": true,
+    "same_location": true,
+    "actor_1_controls_both_lots": true,
+    "actor_1_has_repair_skill_tool_and_rights": true,
+    "commodity": "commodity.timber@1",
+    "household_members": [
+      "actor_1",
+      "actor_2"
+    ],
+    "route_direction": [
+      "TG-01",
+      "TG-02"
+    ]
+  },
+  "initial_projection": {
+    "tick": 0,
+    "lots": {
+      "household": {
+        "on_hand": 10,
+        "reserved": 0
+      },
+      "worker": {
+        "on_hand": 0,
+        "reserved": 0
+      }
+    },
+    "item": {
+      "owner": "actor_1",
+      "condition": 400
+    },
+    "jobs": [],
+    "activity_status": "Absent"
+  },
+  "initial_projection_hash": "c8ef010a324e5dc63667b11aea47076189647c63871a17f7d5e72656ce6530ff",
+  "steps": [
+    {
+      "command_id": "smoke_1",
+      "command_type": "TransferResource",
+      "expected_revision": 0,
+      "world_tick": 0,
+      "payload": {
+        "source_lot_id": "household_lot",
+        "destination_lot_id": "worker_lot",
+        "quantity": 4
+      },
+      "expected": {
+        "outcome": "Accepted",
+        "revision": 1,
+        "household_on_hand": 6,
+        "worker_on_hand": 4,
+        "event": "ResourceTransferred"
+      }
+    },
+    {
+      "command_id": "smoke_2",
+      "command_type": "StartRepair",
+      "expected_revision": 1,
+      "world_tick": 0,
+      "payload": {
+        "actor_id": "actor_1",
+        "item_id": "boat",
+        "material_lot_id": "worker_lot",
+        "recipe_id": "recipe.boat-repair@1"
+      },
+      "expected": {
+        "outcome": "Accepted",
+        "revision": 2,
+        "worker_reserved": 2,
+        "worker_on_hand": 4,
+        "due_tick": 60,
+        "activity": "Running",
+        "event": "RepairStarted"
+      }
+    },
+    {
+      "command_id": "smoke_3",
+      "command_type": "AdvanceTime",
+      "expected_revision": 2,
+      "world_tick": 0,
+      "payload": {
+        "target_tick": 60
+      },
+      "expected": {
+        "outcome": "Accepted",
+        "revision": 5,
+        "commit_sequence": [
+          "request_target_revision_3",
+          "complete_repair_revision_4",
+          "close_workflow_revision_5"
+        ],
+        "tick": 60,
+        "worker_on_hand": 2,
+        "worker_reserved": 0,
+        "condition": 600,
+        "activity": "Completed",
+        "jobs": []
+      }
+    },
+    {
+      "command_id": "smoke_4",
+      "command_type": "TransferItemRights",
+      "expected_revision": 5,
+      "world_tick": 60,
+      "payload": {
+        "item_id": "boat",
+        "new_owner_id": "actor_2"
+      },
+      "expected": {
+        "outcome": "Accepted",
+        "revision": 6,
+        "owner": "actor_2",
+        "event": "ItemRightsTransferred"
+      }
+    }
+  ],
+  "negative_cases": [
+    {
+      "case": "insufficient",
+      "from": "initial",
+      "command": "TransferResource quantity=11",
+      "expected": "INSUFFICIENT_RESOURCE; no revision/RNG/allocation change"
+    },
+    {
+      "case": "duplicate",
+      "from": "after smoke_1",
+      "command": "retry identical smoke_1 envelope",
+      "expected": "same receipt; household=6 worker=4 revision=1"
+    },
+    {
+      "case": "mismatch",
+      "from": "after smoke_1",
+      "command": "smoke_1 with quantity=3",
+      "expected": "CMD_PAYLOAD_MISMATCH; state unchanged"
+    },
+    {
+      "case": "stale",
+      "from": "after smoke_1",
+      "command": "new ID expected_revision=0",
+      "expected": "STALE_REVISION; state unchanged"
+    },
+    {
+      "case": "cancel",
+      "from": "after smoke_2",
+      "command": "CancelActivity new ID",
+      "expected": "worker on_hand=4 reserved=0 condition=400; Cancelled; no job"
+    },
+    {
+      "case": "death",
+      "from": "after smoke_2",
+      "command": "commit actor death before completion",
+      "expected": "cancel/release; worker on_hand=4 reserved=0 condition=400; no dead worker completion"
+    },
+    {
+      "case": "destroy_reserved",
+      "from": "after smoke_2",
+      "command": "destroy 2 reserved timber",
+      "expected": "worker on_hand=2 reserved=0; activity Failed; condition=400; no refund"
+    },
+    {
+      "case": "storage_failure",
+      "from": "initial",
+      "command": "TransferResource quantity=4 fail before commit",
+      "expected": "initial state; no receipt/events; same-ID retry allowed"
+    }
+  ],
+  "expected_final_projection": {
+    "tick": 60,
+    "lots": {
+      "household": {
+        "on_hand": 6,
+        "reserved": 0
+      },
+      "worker": {
+        "on_hand": 2,
+        "reserved": 0
+      }
+    },
+    "item": {
+      "owner": "actor_2",
+      "condition": 600
+    },
+    "jobs": [],
+    "activity_status": "Completed"
+  },
+  "expected_final_projection_hash": "a142e520b5c25e4421e8d2309f2ba72875e50008432165c3cda2ca554ab96fcf",
+  "persistence_acceptance": [
+    "save revision6; load same projection",
+    "replay initial + four commands through handlers; compare projection and committed event ordering",
+    "full StateHash pending full snapshot schema and runtime implementation"
+  ]
+}

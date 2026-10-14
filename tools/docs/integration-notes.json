@@ -1,0 +1,242 @@
+{
+  "01": {
+    "baseline": "Áp dụng yêu cầu mới: nhân vật random, gameplay runtime thuần code. Đoạn tạo nhân vật bằng mô tả hoặc chọn class trong concept ban đầu chỉ còn giá trị lịch sử thiết kế. Tên Hồng Bàng là working title.",
+    "inputs": "Yêu cầu người dùng, material culture, giới hạn sản xuất.",
+    "outputs": "Pillars và tiêu chí sản phẩm; Design sở hữu, không có state mutation.",
+    "read_with": "07, 22, 24–29; ADR-001/002.",
+    "acceptance": "Một vòng đời có nghề, quan hệ và hậu quả tồn tại được ngoài combat.",
+    "open": "Tên thương mại, art budget, platform và playtest product fit."
+  },
+  "02": {
+    "baseline": "Giữ 12 vùng và sáu hồi làm world-canon. Phân biệt lịch sử, truyền thuyết, game-canon; mốc Hard/Flexible/Emergent phải theo audit 25/27. Bến Hạc vẫn thuộc Phong Châu.",
+    "inputs": "World premise; lịch sử; địa lý; truyền thuyết.",
+    "outputs": "Region/settlement definitions và historical contracts; World/History sở hữu.",
+    "read_with": "03, 19, 21, 25; CANON-REGISTER.",
+    "acceptance": "Mỗi địa danh có một parent region; mọi anchor có điều kiện vật chất và phạm vi agency.",
+    "open": "World topology đầy đủ, khảo cứu nguồn và mốc campaign production."
+  },
+  "03": {
+    "baseline": "60 settlement là thiết kế canon, chưa phải 60 scene hay 60 entity runtime đã tạo. Lưu identity và trạng thái thay đổi theo thời gian; không xây inventory shop từ hư không.",
+    "inputs": "Region, household, hạ tầng, nguồn lực, mùa và xung đột.",
+    "outputs": "Settlement state, infrastructure, production capacity; Settlement phối hợp Economy/Assets.",
+    "read_with": "02, 04, 14, 18, 26.",
+    "acceptance": "Đứt route hoặc mất worker làm thay đổi năng lực sản xuất và hậu quả có thể trace.",
+    "open": "Dân số và topology production; aggregate resolution cần benchmark."
+  },
+  "04": {
+    "baseline": "Lineage, Family và Household khác nhau. Quan hệ là graph có hướng, nhiều chiều; succession và inheritance không copy toàn bộ profile.",
+    "inputs": "Birth context, household membership, kinship, marriage, death, memories.",
+    "outputs": "Family/household graph; Household sở hữu membership; Social sở hữu relationships.",
+    "read_with": "05, 07, 16, 21, 26.",
+    "acceptance": "Một người chết không còn làm việc nhưng quan hệ và lịch sử không biến mất.",
+    "open": "Luật xã hội theo vùng và bộ fixture genealogy production."
+  },
+  "05": {
+    "baseline": "Core/Learned/State và contradiction là cơ sở hành vi; NPC chỉ đọc perceived state. Không cho personality random độc lập với toàn bộ biography.",
+    "inputs": "Life events, needs, values, memories, current stress và perceptions.",
+    "outputs": "Psychology profile và action preferences; Characters/Social theo owner contract.",
+    "read_with": "04, 06, 07, 16, 27.",
+    "acceptance": "Hai actor với cùng observation có thể diễn giải khác nhưng không biết hidden facts.",
+    "open": "Weights, stability và độ khác biệt passive cần simulation/playtest."
+  },
+  "06": {
+    "baseline": "World pressure tạo candidate; hard eligibility trước weighting. Committed Event khác Event Template, Story Thread và Quest. Lớp LLM Presentation từng đề xuất không nằm trong baseline runtime.",
+    "inputs": "World snapshot, pressure, actor eligibility, resources, clock và knowledge routes.",
+    "outputs": "Proposed commands/jobs; commit qua Application; Narrative theo dõi thread từ facts.",
+    "read_with": "06A, 17, 22, 24–29.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Chạy không có player vẫn tạo chuỗi nhân quả; không spawn vật chất để hoàn thành quest.",
+    "open": "Độ phong phú thư viện và thresholds novelty cần tuning."
+  },
+  "06A": {
+    "baseline": "Giữ nguyên thư viện 05A của nguồn, chuyển thành phụ lục 06A cho đúng nhóm Life Event. Các mẫu văn bản phải được chuyển thành definition có validation trước khi load runtime.",
+    "inputs": "Event definitions, actor roles, trigger, causal conditions và resources.",
+    "outputs": "Dữ liệu authoring; runtime chỉ chấp nhận approved rule references.",
+    "read_with": "06, 17, 24, 27; content guide.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Template thiếu actor/reference/resource không được kích hoạt thành event thật.",
+    "open": "Library này chưa phải pack JSON production và chưa vượt causal simulation tests."
+  },
+  "07": {
+    "baseline": "Không point-buy, nhập mô tả để quyết định profile hoặc chọn origin/class. Sinh biography trước năng lực cuối; reroll UX prototype được bổ sung trong ADR-008: không reroll ở Reveal; đây là quyết định biên soạn mới, không gán cho nguồn cũ. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Seed, world graph, family, aptitude, life events, current conditions.",
+    "outputs": "Playable character hợp lệ; Characters ghi qua transaction; Knowledge có provenance.",
+    "read_with": "04–06, 08–10, 24, 27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Cùng seed/version tái hiện được; tất cả starting capabilities có nguồn và có con đường sống khả thi.",
+    "open": "Onboarding viability và usability cần playtest; policy prototype một actor/campaign, không Reveal reroll theo CLIENT-UX-BASELINE."
+  },
+  "08": {
+    "baseline": "Profession, Career, Class là ba khái niệm riêng. Training và lao động có thời gian, điều kiện, tài nguyên và người dạy; không dùng nghề như combat background cộng điểm. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Capabilities, tools, mentor, work opportunities, household needs và contracts.",
+    "outputs": "Work plans, learning evidence, income/obligations; phối hợp Characters/Economy/Assets.",
+    "read_with": "09, 10, 18, 21, 27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Sửa thuyền và vận tải tạo thu nhập/tri thức hợp lệ mà không cần giết quái.",
+    "open": "Production nghề đầy đủ; rates và anti-grind cần tuning."
+  },
+  "09": {
+    "baseline": "Thể/Xảo/Giác/Trí/Tâm/Khí; Attribute 1–10, Skill 0–100; 2d10 là baseline. Dùng công thức và trạng thái Prototype ở Module 27 nếu ví dụ cũ khác. Knowledge không thay thế quyền vật chất.",
+    "inputs": "Biography, attributes, practice evidence, technique prerequisites và domain knowledge.",
+    "outputs": "Capabilities, progress, check outcome; Characters sở hữu skill; Knowledge sở hữu thông tin.",
+    "read_with": "07, 08, 10, 27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Routine task đủ điều kiện không thất bại vô lý; skill cao không tự tạo công cụ hoặc quyền truy cập.",
+    "open": "Difficulty bands, growth coefficients, soft caps và phân phối kết quả."
+  },
+  "10": {
+    "baseline": "Class xuất hiện từ evidence cuộc đời; không chỉ check một ngưỡng Skill. Người chơi có thể nhận hoặc không nhận con đường đã mở; không chọn class ở New Game.",
+    "inputs": "Skills, techniques, profession history, repeated behavior, recognition, mentors.",
+    "outputs": "Class eligibility, specialization và learning plans; Characters sở hữu.",
+    "read_with": "08, 09, 11, 27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Hai actor cùng skill nhưng thiếu bằng chứng khác nhau không tự mở cùng class.",
+    "open": "Node catalog, multiclass balance và visibility UX."
+  },
+  "11": {
+    "baseline": "Party baseline 4. Companion command có Accepted/Conditional/Refused/Impossible. Off-party vẫn sống; không teleport để giữ lịch hẹn hoặc ép làm trái moral boundary.",
+    "inputs": "Actor goals, relationship, obligations, health, location và command context.",
+    "outputs": "Membership, willingness và orders; Party logic ở Characters/Application, Social/Health giữ owner.",
+    "read_with": "04, 05, 12, 16, 21, 25.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Lệnh giết người đầu hàng có thể bị từ chối trước khi mutation; companion xa tiếp tục nghề.",
+    "open": "Party control UX và tuning độ ổn định cam kết."
+  },
+  "12": {
+    "baseline": "Chọn Zone + Local Position Slots; Pure Zone là trường hợp đơn giản. Combat xử lý hit/impact, Health xử lý wound; 0 Vitality không đồng nghĩa chết. Major/Minor/Reactions theo Module 27.",
+    "inputs": "Encounter space, equipment, capability, perception, morale và health.",
+    "outputs": "Tactical proposals, injury requests và outcomes; Application commit xuyên domain.",
+    "read_with": "09–11, 13, 15, 27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Surrender/retreat/objective hoàn thành kết thúc được trận; hậu quả tồn tại sau combat.",
+    "open": "Damage, action cost, AI weights và battle-size maximum."
+  },
+  "13": {
+    "baseline": "Giữ item identity, provenance, ownership và condition. Sửa/salvage bảo toàn component; chữa trị không hoàn nguyên mọi wound lập tức. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Impact, armor, materials, tool quality, medical knowledge và ownership rights.",
+    "outputs": "Equipment condition/asset changes và persistent wounds; Assets/Health có owner riêng.",
+    "read_with": "12, 18, 21, 25–27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Cùng injury ảnh hưởng combat, travel, work; salvage không để item và toàn bộ nguyên liệu cùng tồn tại.",
+    "open": "Mitigation, treatment rates và historical reference review."
+  },
+  "14": {
+    "baseline": "World Route Graph là nguồn route duy nhất. RouteKnowledge khác route truth. Supply Days dẫn xuất từ CommodityLot; không lưu như kho food độc lập.",
+    "inputs": "Route edges, season, direction, load, actor knowledge, tools, health và lots.",
+    "outputs": "Travel plan, scheduled arrival, resource use, observation; Travel/Assets/Knowledge sở hữu.",
+    "read_with": "02, 03, 13, 15, 18, 27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Tin cũ có thể dự báo sai; đi và về cùng sông có cost khác; tiêu thụ food đúng một lần.",
+    "open": "Full map edges, time units cụ thể và route balancing."
+  },
+  "15": {
+    "baseline": "Dungeon là chuỗi tình huống có cấu trúc, không mặc định combat corridor. Encounter phải có nguồn, actor, mục tiêu và nhiều giải pháp khi thế giới cho phép.",
+    "inputs": "Site state, local ecology, story context, resources, knowledge và objectives.",
+    "outputs": "Encounter state và commands; không tạo physical truth ngoài domain owner.",
+    "read_with": "12, 14, 17, 20.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Cùng site hỗ trợ né tránh, đối thoại hoặc điều tra nếu đủ điều kiện; hậu quả tồn tại khi rời site.",
+    "open": "Scene/encounter production và puzzle accessibility."
+  },
+  "16": {
+    "baseline": "Relationship, claim-based reputation, belief và knowledge không gộp thành một điểm. Dialogue intent/outcome do rules; text không tự cập nhật world.",
+    "inputs": "Perceived claims, relationship dimensions, leverage, obligations, faction goals.",
+    "outputs": "Social proposals, claim transmission và faction actions; Social/Knowledge/Factions owners.",
+    "read_with": "05, 11, 17, 24–27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Rumor lặp từ cùng nguồn không tăng uy tín vô hạn; NPC không trả lời từ secret chưa biết.",
+    "open": "Dialogue library, faction weights và translation production."
+  },
+  "17": {
+    "baseline": "Event tồn tại độc lập Quest. Story Thread phản ánh facts; Quest là góc nhìn/cam kết có knowledge filter. Không thưởng bằng tài sản không có nguồn.",
+    "inputs": "Committed events, player knowledge, promises, actors và intervention opportunities.",
+    "outputs": "Thread state, objective projections, scheduled consequences; Narrative sở hữu thread.",
+    "read_with": "06, 16, 22–27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Không nhận quest thì world vẫn vận hành; đối tượng chết/mất làm objective thay đổi hợp lệ.",
+    "open": "Thread catalog và coverage của các nhánh production."
+  },
+  "18": {
+    "baseline": "Commodity/Item/Unique Object có abstraction khác nhưng cùng ledger quyền sở hữu. Production/trade bị giới hạn thời gian, capacity và stock; không feedback vô hạn trong một tick. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Lots, workforce, tools, rights, route graph, demand, season và recipes.",
+    "outputs": "Production/transfer/craft proposals; Assets sở hữu quantities/rights; Economy sở hữu plans/prices.",
+    "read_with": "03, 08, 13, 14, 26–27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Sửa thuyền tiêu thụ đúng vật liệu; failed commit không mất/nhân đôi stock; route closure tác động trade.",
+    "open": "Economic coefficients, commodity catalog và physical SQLite schema."
+  },
+  "19": {
+    "baseline": "Tách internal ontology và điều nhân vật biết. Mạch là subsystem có điều kiện/giới hạn; không được dùng để hợp thức hóa teleport, resurrection hay thay hung thủ tùy ý.",
+    "inputs": "Belief, ritual authority, materials, sites, oath history, environment và Mạch state.",
+    "outputs": "Ritual proposals, permitted effects và knowledge-limited observations; Belief/Mạch owners.",
+    "read_with": "02, 05, 16, 20, 25–27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Cùng hiện tượng có diễn giải khác nhưng committed physical facts không đổi theo narration.",
+    "open": "Metaphysical content specifics, cultural review và ambiguity presentation."
+  },
+  "20": {
+    "baseline": "Không monster level scaling. Population pool và cá thể persistent phải nhất quán; Human Threat vẫn là Characters có đời sống, không mob archetype vô danh mặc định.",
+    "inputs": "Habitat, food, weather, territory, population pressure, human activity.",
+    "outputs": "Creature behavior, eligible encounters và population deltas; Ecology sở hữu.",
+    "read_with": "14, 15, 18, 19, 27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Exceptional animal đã chết không xuất hiện lại; encounter có lý do sinh thái.",
+    "open": "Species data, population models và simulation-tier budgets."
+  },
+  "21": {
+    "baseline": "WorldTick thống nhất. Time skip xử lý jobs và breakpoints; succession đổi quyền điều khiển, không clone tri thức/tài sản. Player archive khác Active Character Knowledge. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Clock, aging/health, inheritance rights, successors, obligations và world scheduler.",
+    "outputs": "Life transitions, valid transfers, legacy/chronicle; Characters/Assets/Knowledge/Legacy owners.",
+    "read_with": "04, 13, 18, 22, 25–29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Skip qua death event cập nhật membership đúng; người kế tục không tự biết secret của người chết.",
+    "open": "Mortality rates và simulation aggregation error cần prototype; tick/calendar đã có clock-v1."
+  },
+  "22": {
+    "baseline": "World Director exposure-only. Không đổi truth hoặc bắt buộc crisis cho pacing. Story/Standard/Tactical khác persistence Legacy/Ironman và assistance.",
+    "inputs": "Valid threads/opportunities, current knowledge, recent experience và player intent.",
+    "outputs": "Ranked presentations; chỉ action/authorized workflow mới commit world changes.",
+    "read_with": "06, 17, 21, 23–27.; ADR-008 và các contract specs bổ sung 14/10/2026.",
+    "acceptance": "Tắt Director không ngăn mandatory world consequences; đổi preset không sửa facts đã commit.",
+    "open": "Playtime/pacing targets, difficulty tuning và onboarding playtest."
+  },
+  "23": {
+    "baseline": "UI chỉ nhận knowledge-filtered projections, kể cả search/notification. Debug omniscient tách khỏi player build. Không dùng một checksum/render query để rút RNG. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Active character knowledge, capability, costs, provenance và read models.",
+    "outputs": "Views/input commands; Unity/ViewModels không sở hữu world state.",
+    "read_with": "14, 16, 17, 21, 22, 25–29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Search không trả actor/location bí mật; succession archive không mở kỹ thuật/dialogue trái điều kiện.",
+    "open": "Final art/platform/audio và accessibility evidence; prototype desktop flows đã có CLIENT-UX-BASELINE."
+  },
+  "24": {
+    "baseline": "Áp dụng baseline cuối Module 27: LLM chỉ hỗ trợ content offline; không tích hợp runtime LLM vào slice. Nội dung phải qua schema/semantic validation và approved handlers. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Seed, versioned rules/content, world state và authorized commands.",
+    "outputs": "Deterministic simulation và validated content pack; runtime core authoritative.",
+    "read_with": "25–29; ADR-002/003.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Gameplay và content loading hoạt động offline; không có network/LLM dependency trong core.",
+    "open": "Content compiler implementation, RNG cross-runtime conformance và content budget; algorithm prototype đã chọn ADR-008."
+  },
+  "25": {
+    "baseline": "Audit này có đề xuất đã được cụ thể hóa trong 26–29. Dùng bảng ownership/decision register của gói hiện tại để giải quyết overlap; không đọc mọi vấn đề được nêu ở đây như vẫn chưa có hướng xử lý. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Toàn bộ GDD 01–24 và phạm vi slice.",
+    "outputs": "Audit findings, dependency boundaries và design decisions; không mutation runtime.",
+    "read_with": "26–29; APPLICABLE-BASELINE, OWNERSHIP, OPEN-DECISIONS.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Không domain nào vừa có owner khác vừa ghi cùng state trực tiếp; các historical invariants có contract.",
+    "open": "Tech validation và production content gaps còn ghi riêng."
+  },
+  "26": {
+    "baseline": "Logical schema là contract, chưa phải physical SQLite schema. Core thuần C#; single authoritative writer. Canonical naming/ownership của gói này có hiệu lực với scaffold. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Design modules, entity identities, temporal semantics và domain boundaries.",
+    "outputs": "Canonical data contracts, command/events, read projections và storage ports.",
+    "read_with": "25, 27–29; docs/contracts.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Stable IDs, no hidden knowledge leakage, nonnegative stock và revision consistency có test trước feature breadth.",
+    "open": "Provider spike, runtime schemas/DDL, migration và content compiler còn phải triển khai; ID/tick/codec đã có baseline ADR-008."
+  },
+  "27": {
+    "baseline": "Công thức gắn trạng thái locked principle hoặc prototype coefficient. Không biến giá trị ví dụ thành final balance. Constraint trước roll; routines có auto-resolution; randomness có context/version. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Typed rule input, capabilities, resources, parameters, seed context và snapshot.",
+    "outputs": "Reject/proposed ChangeSet/scheduled plan; không ghi DB trực tiếp.",
+    "read_with": "09, 12–14, 18, 24–26, 29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Replay cùng inputs/version; hard constraints không bị điểm số/roll cao vượt qua; trace giải thích từng modifier.",
+    "open": "Transport/medicine prototype coefficients trước VS-03; final tuning VS-10. Numeric policy và kernel repair parameters đã có ADR-008."
+  },
+  "28": {
+    "baseline": "Scope slice tập trung Tam Giang với Bến Hạc/Phong Châu là external boundary node cho trade, không dời canon. Task milestones và acceptance gates giữ nguyên; số content là budget thử nghiệm. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Modules 01–27, minimal world fixture và implementation backlog.",
+    "outputs": "Vertical-slice milestones, task contracts và QA evidence; chưa phải build đã chạy.",
+    "read_with": "29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Chứng minh nghề–world–knowledge–narrative–time–legacy liên kết và player không phải tác nhân duy nhất.",
+    "open": "Full slice roster/compiled content, three professions, client and playtest còn pending; xem Slice Content Contract."
+  },
+  "29": {
+    "baseline": "Module cuối foundation: giữ command/state/event/jobs/RNG/receipt nhất quán. Scaffold chỉ khởi tạo assembly/host; không tự tuyên bố foundation đã hoàn thành vì build được. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "inputs": "Typed IDs, clock, rules, commands, versions, scheduler và persistence contracts.",
+    "outputs": "Foundation task FND-01–16; authoritative commit, recovery và replay khi được triển khai.",
+    "read_with": "26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "acceptance": "Foundation exit gate cần replay, atomic failure recovery, content validation và cross-runtime evidence.",
+    "open": "C#/Unity implementation/conformance, provider/editor/test-runner spike và performance evidence; identity/time/RNG/codec đã có specs và Python reference vectors."
+  }
+}

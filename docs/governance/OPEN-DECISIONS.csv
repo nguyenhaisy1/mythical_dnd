@@ -1,0 +1,13 @@
+id,category,gate,owner,question,exit_evidence,task
+OPEN-01,Technology,Implementation gate FND-04/FND-16,Foundation,Algorithm selected: sha256-counter-v1/mdc1 (ADR-008); C#/Unity conformance and performance pending,Chốt ADR variant và golden vectors; replay trên headless và Unity.,FND-04
+OPEN-02,Technology,Implementation gate FND-03,Foundation,clock-v1 selected: minute tick / 360-day simulation calendar; implementation boundary tests pending,"Chọn unit, overflow/range và conversion; test nhiều năm và boundary.",FND-03
+OPEN-03,Technology,P0 before FND-11,Infrastructure,"SQLite provider, schema, transaction strategy",Spike provider trên target runtime; atomic failure/recovery evidence.,FND-11
+OPEN-04,Technology,P0 before FND-16,Client,"Unity patch, backend Mono/IL2CPP, target platform",Ghi ProjectVersion từ Editor thật; build netstandard DLL và golden replay cùng hash.,FND-16
+OPEN-05,Tuning,Initial parameters before VS-03; final tuning VS-10,Design/QA,kernel-v1 repair parameters authored; transport/medicine initial values and final gameplay balance pending,Versioned parameter pack; statistical/property/playtest evidence.,VS-10
+OPEN-06,Product,Before player onboarding,Design,"Prototype policy selected ADR-008: one generated actor/campaign, no Reveal reroll; onboarding usability evidence pending",Prototype random-origin reveal; giữ người chơi không chỉnh profile.,VS-07
+OPEN-07,Content,Before full campaign,Narrative/World,Hard anchor invariants và valid alternative paths từng hồi,"Author campaign contracts, unreachable-state checks, failure fixtures.",VS-08
+OPEN-08,Content,Before VS-02 completion,World/Content,"Toàn bộ roster 20–30 NPC, households, 6–10 edges, 8–12 events",Full records compiled/validated per VERTICAL-SLICE-CONTENT-CONTRACT; smoke fixture is not full roster,VS-02
+OPEN-09,Technology,Before production scaling,QA/Simulation,"Tier budgets, aggregate error, performance hardware budgets",Benchmark local/multi-region/long skip; công bố hardware và version.,VS-10
+OPEN-10,Research,Before public lore release,Narrative,Nguồn khảo cổ/lịch sử và diễn giải văn hóa,"Kiểm tra URL gốc, source register và historical/traditional/game-canon classification.",CONTENT-01
+OPEN-11,Art/Product,Before client production,Art/Design,Desktop keyboard/mouse Vietnamese prototype flow specified; final art/audio/fonts/accessibility evidence pending,Readable zone prototype và accessibility playtest; không đổi rule core.,VS-07
+OPEN-12,Technology,Numeric codec before FND-04/08; save migration before FND-12,Infrastructure,"mdc1/rounding/hash specified ADR-008; full snapshots, provider DDL and migration implementation evidence pending",Codec specification + golden files; reject incompatible packs; migrate có backup.,FND-12

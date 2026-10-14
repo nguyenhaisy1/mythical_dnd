@@ -1,0 +1,129 @@
+{
+  "fixture_id": "fixture.ben-qua-mua-nuoc.reference.v1",
+  "schema_version": 1,
+  "status": "design-reference-not-runtime-pack",
+  "source_modules": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "28"
+  ],
+  "regions": [
+    {
+      "id": "region.tam-giang",
+      "name": "Tam Giang"
+    },
+    {
+      "id": "region.phong-chau",
+      "name": "Phong Châu"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "settlement.tg-01",
+      "name": "Bến Vạc",
+      "region_id": "region.tam-giang",
+      "role": "playable-center"
+    },
+    {
+      "id": "settlement.tg-02",
+      "name": "Cồn Mây",
+      "region_id": "region.tam-giang",
+      "role": "local-community"
+    },
+    {
+      "id": "settlement.tg-03",
+      "name": "Vạn Nước",
+      "region_id": "region.tam-giang",
+      "role": "local-community"
+    },
+    {
+      "id": "settlement.pc-02",
+      "name": "Bến Hạc",
+      "region_id": "region.phong-chau",
+      "role": "external-boundary"
+    }
+  ],
+  "households": [
+    {
+      "id": "household.vac-tong",
+      "name": "Nhà Vạc Tòng",
+      "settlement_id": "settlement.tg-01"
+    }
+  ],
+  "actors": [
+    {
+      "id": "actor.vac-tong",
+      "name": "Vạc Tòng",
+      "household_id": "household.vac-tong"
+    },
+    {
+      "id": "actor.vac-moc",
+      "name": "Vạc Mộc",
+      "household_id": "household.vac-tong"
+    }
+  ],
+  "routes": [
+    {
+      "id": "route.tg-01.tg-02",
+      "from": "settlement.tg-01",
+      "to": "settlement.tg-02",
+      "cost_status": "to-author-before-runtime"
+    },
+    {
+      "id": "route.tg-02.tg-01",
+      "from": "settlement.tg-02",
+      "to": "settlement.tg-01",
+      "cost_status": "to-author-before-runtime"
+    },
+    {
+      "id": "route.tg-01.tg-03",
+      "from": "settlement.tg-01",
+      "to": "settlement.tg-03",
+      "cost_status": "to-author-before-runtime"
+    },
+    {
+      "id": "route.tg-03.tg-01",
+      "from": "settlement.tg-03",
+      "to": "settlement.tg-01",
+      "cost_status": "to-author-before-runtime"
+    },
+    {
+      "id": "route.tg-01.pc-02",
+      "from": "settlement.tg-01",
+      "to": "settlement.pc-02",
+      "cost_status": "to-author-before-runtime"
+    },
+    {
+      "id": "route.pc-02.tg-01",
+      "from": "settlement.pc-02",
+      "to": "settlement.tg-01",
+      "cost_status": "to-author-before-runtime"
+    }
+  ],
+  "professions": [
+    "river-transport",
+    "boat-repair",
+    "medicine"
+  ],
+  "threads": [
+    {
+      "id": "thread.household-boat",
+      "title": "Con thuyền của nhà Tòng"
+    },
+    {
+      "id": "thread.leaving-the-wharf",
+      "title": "Người rời Bến Vạc"
+    },
+    {
+      "id": "thread.wharf-rights",
+      "title": "Quyền sử dụng bến"
+    }
+  ],
+  "notes": [
+    "Địa danh từ World Bible; choice các community/routes là fixture integration của lần bàn giao, không phải topology lịch sử đã khảo chứng.",
+    "Chỉ có hai actor reference; VS-02 cần author đầy đủ 20–30 NPC, resources, rules, costs và causal conditions.",
+    "Không thể load file này như runtime content pack; không có executable effects."
+  ]
+}

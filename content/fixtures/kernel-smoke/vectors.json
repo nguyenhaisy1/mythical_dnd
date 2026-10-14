@@ -1,0 +1,81 @@
+{
+  "status": "python-reference-not-cross-runtime-proof",
+  "codec": [
+    {
+      "value": {},
+      "hex": "4d4443316f303a",
+      "sha256": "52d1547c2dc2e85c2682b0503ceb0661509f4e94e2f0939a69326e145c108b75"
+    },
+    {
+      "value": [
+        true,
+        null,
+        -2
+      ],
+      "hex": "4d44433161333a746e692d323b",
+      "sha256": "32beab8ec59cce9dd46fc8906cc6368cad2428063d7a1e2d6c99ddf9a1658011"
+    },
+    {
+      "value": {
+        "b": "x",
+        "a": 1
+      },
+      "hex": "4d4443316f323a73313a6169313b73313a6273313a78",
+      "sha256": "3f742cfcd9e9a06c58179e84a2d30610c2eabe1ca40f7aac0b2452174ab1e667"
+    },
+    {
+      "value": {
+        "name": "Vạc Mộc",
+        "tick": 60
+      },
+      "hex": "4d4443316f323a73343a6e616d657331313a56e1baa163204de1bb996373343a7469636b6936303b",
+      "sha256": "9a796de42d57bbbfac0ee99fe56873345e7078678f5fc628d4215d0b663ac845"
+    }
+  ],
+  "rng": [
+    {
+      "context": {
+        "algorithm": "sha256-counter-v1",
+        "seed": "0000000000000000000000000000000000000000000000000000000000000000",
+        "domain": "foundation",
+        "decision": "fixture",
+        "occurrence": "command_1",
+        "entity": "w0000000000000001/actor/0000000000000001",
+        "stream": "resolution"
+      },
+      "block": 0,
+      "words": [
+        3506563779,
+        778542440,
+        2081392988,
+        3413229830,
+        2897818418,
+        2296882002,
+        469206908,
+        2995364543
+      ]
+    },
+    {
+      "context": {
+        "algorithm": "sha256-counter-v1",
+        "seed": "0000000000000000000000000000000000000000000000000000000000000000",
+        "domain": "foundation",
+        "decision": "fixture",
+        "occurrence": "command_1",
+        "entity": "w0000000000000001/actor/0000000000000001",
+        "stream": "resolution"
+      },
+      "block": 1,
+      "words": [
+        15239080,
+        3757360555,
+        3993906531,
+        4136208367,
+        4017685444,
+        1044916581,
+        3767559873,
+        4202941483
+      ]
+    }
+  ]
+}

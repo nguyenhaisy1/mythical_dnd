@@ -1,0 +1,23 @@
+# Bản đồ tài liệu
+
+[Rà soát trước phát triển — 14/10/2026](production/PRE-DEVELOPMENT-AUDIT-2026-10-14.md): phần đã đủ, contract còn cần khóa và mốc phát triển tương ứng.
+
+[White paper giới thiệu game — HTML độc lập](whitepaper/hong-bang-mach-lac.html): bối cảnh, ý tưởng, trải nghiệm và đặc trưng nổi bật.
+
+| Nơi | Mục đích |
+|---|---|
+| [gdd](gdd/README.md) | 29 module chi tiết, phụ lục Life Event và Master đầy đủ |
+| [source](source/INDEX.md) | Archive 85 thông điệp, checksum và provenance |
+| [governance](governance/APPLICABLE-BASELINE.md) | Baseline, decisions, open issues, canon, requirements, source/section coverage |
+| [adr](adr/README.md) | Rationale và hậu quả của các quyết định kiến trúc |
+| [contracts](contracts/FOUNDATION-CONTRACT.md) | Foundation, ownership, canonical data/schema boundaries |
+| [production](production/HANDOFF.md) | Handoff, implementation plan, backlog, vertical slice |
+| [qa](qa/QA-PLAN.md) | 52 ưu tiên nghiệm thu, scenario và evidence thực tế |
+| [content-guides](content-guides/AUTHORING.md) | Authoring, validation, historical labels và pipeline |
+| [runbooks](runbooks/DOCUMENTATION.md) | Build/export/rebuild docs và bootstrap client |
+
+Đọc nhanh không thay cho đọc module khi triển khai mechanic. CSV dùng UTF-8, có header; có thể mở bằng spreadsheet hoặc xử lý bằng tools. Decision register ghi cả supersession; section index cung cấp anchor ổn định để dẫn tới mục nghiên cứu cụ thể.
+
+[Bổ sung tài liệu sau audit — 14/10/2026](production/DOCUMENTATION-COMPLETION-2026-10-14.md): đặc tả mới, phạm vi đã chốt và gates còn cần triển khai.
+
+[Bộ skill của project](runbooks/PROJECT-SKILLS.md): sáu workflow cho task, prototype, change impact, kernel, content và validation; source duy trì cùng repository.
