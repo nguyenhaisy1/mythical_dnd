@@ -48,3 +48,9 @@ Nguồn hội thoại lưu bất biến tại [docs/source](docs/source/INDEX.md
 Tài liệu bổ sung sau audit: [trạng thái và đường dẫn](docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md). Kiểm vectors bằng `python3 tools/checks/check_contract_vectors.py`. Không tạo ZIP; cập nhật source và regenerate bản đọc khi thay tài liệu.
 
 [Bộ skill riêng của project](docs/runbooks/PROJECT-SKILLS.md) hỗ trợ triển khai theo contracts và đồng bộ thay đổi. Cài liên kết bằng `python3 tools/skills/install.py`; kiểm bằng `python3 tools/skills/install.py --check`.
+
+[Quy trình Git và release](docs/runbooks/GIT-WORKFLOW.md): feature → dev → release → main; version sản phẩm ở [VERSION](VERSION), thay đổi từng bản ở [CHANGELOG](CHANGELOG.md).
+
+[Nhật ký công việc theo spin](WORKLOG.md) ghi goal, phân công, tiến độ, kết quả và evidence. Các bản ghi mới nối vào cuối file; dùng làm nguồn báo cáo khi cần.
+
+Quy trình áp dụng cho AI: [AI Execution](docs/runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.

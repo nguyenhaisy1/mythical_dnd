@@ -38,3 +38,5 @@ Golden chỉ đổi khi contract thay đổi có lý do, không regenerate để
 Theo `docs/runbooks/DOCUMENTATION.md`: regenerate nếu generated inputs đổi, kiểm docs/refs/DAG, hoàn tất cập nhật evidence trước export, regenerate HTML/DOCX và check input fingerprints sau cùng. Không tạo ZIP. Nếu thiếu công cụ export, hoàn thành source và nói rõ exports stale; không tự cập nhật manifest để giả freshness.
 
 Tổng kết impacted files đã xử lý và pending thật sự. Khi user yêu cầu đồng bộ, hoàn thành các cập nhật trong phạm vi được phép; không chỉ liệt kê rồi dừng.
+
+Thay đổi đáng chú ý cần xét `CHANGELOG.md`; product release VERSION/tag tách khỏi contract/GDD versions. Branch/commit/push và release propagation theo `docs/runbooks/GIT-WORKFLOW.md`, không tự phát hành vì đã đồng bộ docs.

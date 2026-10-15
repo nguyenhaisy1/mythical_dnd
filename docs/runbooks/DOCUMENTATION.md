@@ -26,3 +26,7 @@ Export giữ citation lịch sử ở archive; token phiên cũ bị bỏ khỏi
 ## Khi cập nhật project skills
 
 `tools/skills/` là source được duy trì trong repo, không phải generated output. Giữ hướng dẫn tại [PROJECT-SKILLS](PROJECT-SKILLS.md) khớp với skill routing và installer. Export fingerprints bao gồm source skills để Handbook không giữ thông tin workflow cũ. Không sửa archive/module nghiên cứu chỉ vì thay hướng dẫn agent.
+
+## Live worklog
+
+[WORKLOG](../../WORKLOG.md) là nhật ký vận hành, chỉ append và được track bằng Git. Không nhúng toàn văn hoặc đưa live journal vào export fingerprints: việc ghi kết quả export không được làm chính export stale. Bản đọc chỉ dẫn tới journal hiện tại; thay đổi quy trình ghi log trong AGENTS/runbooks vẫn phải regenerate exports như các source docs khác.

@@ -37,3 +37,7 @@ Run checks phù hợp và required CI, không chạy benchmark/toàn suite vô h
 Ghi command, exit, discovered/passed/failed/skipped, versions/seed và artifact paths theo execution contract. Đặt evidence generated ở `tests/results/` khi cần, report duy trì ở QA theo scope. Nếu source thay đổi sau run, xác định evidence nào mất hiệu lực. Chỉ cập nhật matrix/backlog status khi acceptance tương ứng đạt.
 
 Kết luận từng gate là đạt/chưa đạt/chưa kiểm, kèm lý do. VS-01 là headless kernel; Foundation complete cần FND-16. Playtest chưa diễn ra thì chỉ tạo protocol/hypotheses, không viết phản hồi tưởng tượng.
+
+Nghiệm thu release theo `docs/runbooks/GIT-WORKFLOW.md`: VERSION/changelog/tag khớp scope, evidence áp revision cuối; tag/CI scaffold không thay gameplay gates. Phân biệt chính sách branch trong file với protection thực tế trên GitHub.
+
+Append kết quả checks đáng kể và phạm vi chưa kiểm vào `WORKLOG.md` theo AGENTS; không nhúng log vào exports hoặc đổi kết quả lịch sử. Khi report, đọc event mới nhất và xác minh trạng thái Git/evidence hiện hành, không suy mọi task hoàn tất từ một spin CLOSE.

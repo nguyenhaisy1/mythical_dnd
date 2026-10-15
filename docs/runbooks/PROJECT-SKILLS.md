@@ -63,3 +63,11 @@ Rà quyết định bằng sáu tình huống dưới đây là **static scenari
 | Author event khi compiler chưa có | Ghi reference/prototype data và missing gate; không tuyên bố compiled/runtime-ready |
 
 Cần tiếp tục quan sát hiệu quả trong task thật. Validator và static review không chứng minh mô hình sẽ luôn chọn và thực hiện skill đúng.
+
+## Git workflow
+
+Skills tuân [Git Workflow](GIT-WORKFLOW.md) và AGENTS cho branch, commit/push, version/changelog. Hoàn thành task không tự cho phép merge main hay phát hành.
+
+## Worklog theo spin
+
+Các skills tuân quy tắc WORKLOG trong AGENTS: đọc goal/assignment hiện tại, append milestones/evidence và kết thúc spin rõ ràng. Skill là workflow, không phải agent thực thi độc lập; chỉ ghi actor có thật. Xem [journal](../../WORKLOG.md).

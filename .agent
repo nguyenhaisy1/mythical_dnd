@@ -130,3 +130,29 @@ Bộ export ở `artifacts/` gồm Master/volumes HTML và DOCX; không tạo ZI
 ## 10. Bộ skill riêng của project
 
 Đã tạo mythical-task, mythical-change-impact, mythical-validation, mythical-prototype, mythical-kernel và mythical-content tại `tools/skills/`. Bản cài cá nhân liên kết tới source; xem `docs/runbooks/PROJECT-SKILLS.md`. Không sao chép GDD vào skill, không tự cài Unity/MCP hoặc mở multi-agent. Skills là hướng dẫn workflow, không phải bằng chứng runtime đã implemented.
+
+## 11. Git, commit/push và release
+
+Đọc `docs/runbooks/GIT-WORKFLOW.md` trước thao tác Git; đây là nguồn chuẩn cho branch/version/changelog.
+
+- `main` giữ mốc ổn định; `dev` tích hợp; feature/fix/docs/chore/spike tách từ dev. Tên feature: `feature/<task-id>-<slug>`. Không làm feature trực tiếp trên main/dev.
+- Feature → PR vào dev; release/X.Y.Z từ dev → main; hotfix từ tag stable → main. Đồng bộ release/hotfix trở lại dev, và release đang mở nếu có.
+- Commit dạng `type(scope): mô tả kết quả`, một thay đổi logic, kèm task/test khi có. Stage đúng scope; đọc diff và chạy checks phù hợp trước commit. Không commit secrets, caches, generated artifacts bị ignore hoặc ZIP.
+- Commit/push khi đã có chỉ dẫn cho phạm vi đang làm; không hỏi lại quyền đã có. Yêu cầu viết/sửa tài liệu không tự là lệnh publish. Push branch đích rõ, không force push/all branches/all tags; kiểm remote SHA sau push.
+- Merge main, tạo/push tag và publish release là bước riêng, chỉ thực hiện khi được giao. Không sửa lịch sử đã chia sẻ hoặc di chuyển tag release.
+- VERSION là product version, CHANGELOG.md có Unreleased và từng release dated; tags vX.Y.Z (candidate có suffix). GDD/schema/content versions độc lập. Ghi compatibility, evidence, limitations; không bịa release date hoặc gameplay readiness.
+- Branch protection là cấu hình GitHub riêng; không tuyên bố đã bật chỉ vì có hướng dẫn. Giữ thay đổi người dùng, không reset/clean/stash âm thầm.
+
+## 12. Nhật ký công việc theo spin
+
+`WORKLOG.md` ở root là nguồn báo cáo công việc, chỉ append. Khi bắt đầu/tiếp tục công việc, đọc spin đang mở và các events gần nhất; xác định goal, scope, assignment và trạng thái thực tế trước khi sửa. Mục tiêu mới mở SPIN kế tiếp; cùng mục tiêu tiếp tục spin cũ. Không sửa/xóa lịch sử; đính chính bằng CORRECTION dẫn event cũ.
+
+Ghi OPEN/ASSIGN khi nhận việc; PROGRESS/RESULT cho kết quả đáng kể và checks thật; BLOCKED/PAUSED/RESUME/HANDOFF khi trạng thái đổi; GIT cho commit/push/merge/release; CLOSE khi kết thúc với finished/partial/cancelled, evidence và bước tiếp theo. Ghi actor/task thật, không gọi skill là nhân sự hoặc bịa agent/team chưa chạy. Không cần log từng tool call, không ghi secrets.
+
+Dùng `python3 tools/worklog.py --new-spin --event OPEN --actor /root --summary "..." --details-file /path/to/details.md` hoặc `--spin SPIN-NNN` cho event tiếp theo. Helper chỉ khóa file/cấp ID/timestamp/append, không tự giám sát thay đổi hoặc thay backlog. Agent điều phối ghi kết quả của cộng tác viên sau khi có bằng chứng; không tự mở multi-agent vì log có cột phân công.
+
+Khi user hỏi báo cáo, tổng hợp goal, spin, ai đang/đã làm gì, kết quả, blockers, evidence và Git state từ log; đối chiếu trạng thái hiện tại khi cần. Không append một báo cáo trùng dài nếu không có thông tin mới. Log local chưa commit phải nói rõ; log commit/push đưa vào commit kế tiếp, không amend hoặc commit vô hạn để tự chứa hash. WORKLOG không nhúng vào exports, tránh vòng lặp ghi log làm stale export.
+
+## Thực hiện bằng AI — 2026-10-15
+
+Chủ dự án xác nhận toàn bộ phát triển do AI thực hiện. Theo `docs/runbooks/AI-EXECUTION.md`: role backlog là trách nhiệm của AI, không chờ nhân sự con người; tự implement/test/review trong scope đã giao, ghi actor và evidence thật. Self-review không là independent review; automated playthrough không là human playtest. Sprint hiện tại: `docs/production/sprints/SPRINT-01.md`; yêu cầu hiện tại đã cho phép bắt đầu nền tảng, thay giới hạn chỉ tài liệu trước đây.

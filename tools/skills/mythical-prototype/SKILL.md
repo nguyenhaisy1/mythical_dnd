@@ -35,3 +35,5 @@ Khi user chỉ yêu cầu plan, trả protocol, không tự build. Khi được 
 Mỗi session cần build/version, tester thực tế, tình huống, hành vi quan sát, câu hỏi sau chơi, bugs và điểm chưa rõ. Tách lời người chơi, quan sát và diễn giải của agent. Đề nghị tình huống so sánh (can thiệp/không can thiệp; thiếu/thừa thông tin) khi phù hợp hypothesis. Bot run không thay human playtest.
 
 Không có tester: báo chưa kiểm trải nghiệm và đưa protocol; không bịa tỷ lệ hài lòng. Có evidence: kết luận nên tiếp tục/sửa/thu hẹp/chưa đủ dữ liệu và task nhỏ tiếp theo. Nếu đổi baseline, cập nhật các consumer bị ảnh hưởng; không tự triển khai toàn roadmap hoặc rút gọn nghiên cứu gốc thành prototype spec.
+
+Ghi hypothesis/goal, actor thực hiện, scope, observations và quyết định sau thử nghiệm vào `WORKLOG.md` theo spin hiện tại. Chỉ append sự kiện thật; thiếu playtest thì ghi chưa có evidence, không tạo phản hồi mẫu như kết quả.

@@ -38,3 +38,13 @@ Bộ nghiên cứu đã bao phủ các hệ chính và nền kỹ thuật. Công
 ## Workflow hỗ trợ bằng skills
 
 [Bộ skill của project](../runbooks/PROJECT-SKILLS.md) dẫn từ task đến contracts và evidence, cùng workflow prototype/content/change impact. Không thay backlog hoặc gates; việc tạo/cài skills không đánh dấu runtime task hoàn tất.
+
+## Tích hợp và phát hành
+
+Theo [Git Workflow](../runbooks/GIT-WORKFLOW.md); product VERSION và CHANGELOG ở root. Git tag không thay milestone acceptance. main hiện có initial scaffold snapshot, chưa là game release.
+
+## Tiếp nhận công việc
+
+Đọc [WORKLOG](../../WORKLOG.md) và các events mới nhất trước khi tiếp tục spin; cập nhật assignment/result/close khi có thay đổi đáng kể. Hồi cứu SPIN-000 không phải runtime acceptance. Nhật ký chỉ append, không sửa kết quả cũ.
+
+Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.

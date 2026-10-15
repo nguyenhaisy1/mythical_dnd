@@ -21,3 +21,9 @@
 [Bổ sung tài liệu sau audit — 14/10/2026](production/DOCUMENTATION-COMPLETION-2026-10-14.md): đặc tả mới, phạm vi đã chốt và gates còn cần triển khai.
 
 [Bộ skill của project](runbooks/PROJECT-SKILLS.md): sáu workflow cho task, prototype, change impact, kernel, content và validation; source duy trì cùng repository.
+
+[Git Workflow](runbooks/GIT-WORKFLOW.md): branch model, commit/push, version, release/hotfix và changelog.
+
+[WORKLOG theo spin](../WORKLOG.md): nhật ký append-only về goal, người/agent thực hiện, kết quả và trạng thái Git; khác changelog sản phẩm theo release.
+
+Quy trình áp dụng cho AI: [AI Execution](runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.

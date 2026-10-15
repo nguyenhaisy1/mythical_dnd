@@ -25,3 +25,11 @@ Theo `ARCHITECTURE.md` và `docs/contracts/OWNERSHIP.md`; dùng `docs/production
 Làm thay đổi được giao, chạy kiểm tra phù hợp theo `docs/qa/TEST-EXECUTION-CONTRACT.md`. Khi có thay đổi contract, đồng bộ consumer và tài liệu trong cùng công việc; workflow chi tiết ở `tools/skills/mythical-change-impact/SKILL.md`, đọc khi cần. Chỉ cập nhật status tương ứng bằng chứng đã có. Không ghi ngày hoàn thành hoặc số test nếu chưa chạy.
 
 Bàn giao bằng kết quả, files chính, checks thực sự đã chạy và phần còn pending. Nếu acceptance chưa đạt, ghi partial/blocked đúng phạm vi thay vì đóng task. Không tự commit/push chỉ để có mã revision; evidence có thể dùng source fingerprint theo contract.
+
+## Git handoff
+
+Theo `docs/runbooks/GIT-WORKFLOW.md`: work branch từ dev; cập nhật CHANGELOG cho thay đổi đáng chú ý; commit/push đúng phạm vi đã được giao. Không tự merge main/tag/release khi chỉ được yêu cầu implement. Quyền commit/push đã có thì tiếp tục, không hỏi lại.
+
+## Theo dõi công việc
+
+Đọc `WORKLOG.md` theo AGENTS khi nhận/tiếp tục task; append goal/assignment/progress/result/close cho spin tương ứng bằng `tools/worklog.py`. Ghi task ID, actor thật, evidence và Git state; task status trong backlog vẫn cần acceptance riêng, không tự Done vì spin đã đóng.

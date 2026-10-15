@@ -1,0 +1,37 @@
+# Changelog
+
+Các thay đổi đáng chú ý của mythical_dnd. Product version tại [VERSION](VERSION); quy trình branch/tag/release tại [Git Workflow](docs/runbooks/GIT-WORKFLOW.md). GDD baseline có version riêng.
+
+Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài liệu/scaffold, không phải bản game đã phát hành.
+
+## [Unreleased]
+
+### AI execution — 2026-10-15
+
+- Chốt workflow AI thực hiện, self-review và evidence gates; mở Sprint 1 cho FND-02/03/04. Không tuyên bố có human playtest hoặc Unity conformance.
+
+### Added
+
+- Bộ GDD 29 module và phụ lục, source archive, contracts, governance, backlog và QA specifications.
+- Scaffold C# portable core/headless host, cấu trúc client Unity và tooling kiểm tài liệu/reference fixtures.
+- Whitepaper HTML cùng pipeline sinh bản đọc HTML/DOCX.
+- Sáu project skills và installer liên kết vào môi trường agent.
+- Quy trình main/dev/work branches/release/hotfix, Conventional Commits, product version và changelog theo release.
+
+- Nhật ký WORKLOG append-only theo spin, helper ghi có file lock và chỉ dẫn agent báo cáo goal/phân công/kết quả.
+
+### Compatibility
+
+- Product version khởi đầu `0.1.0-dev`; chưa có save/runtime compatibility được nghiệm thu.
+- Baseline ID, clock, RNG, codec và activity nằm trong contracts; reference vectors chưa thay cross-runtime evidence.
+
+### Validation
+
+- Các kết quả docs/reference/scaffold hiện có: [Validation Results](docs/qa/VALIDATION-RESULTS.md).
+- Kiểm skill metadata/installer: [Project Skills](docs/runbooks/PROJECT-SKILLS.md).
+- Chưa có runtime gameplay acceptance hoặc Unity compatibility pass.
+
+### Known limitations
+
+- Simulation core mới là scaffold; chưa có bản chơi được hoặc full slice content pack.
+- Quy tắc branch trong tài liệu chưa tự thiết lập branch protection trên GitHub.

@@ -42,3 +42,5 @@ Build và tests của phạm vi pass; không phá replay/contract; mọi mutatio
 - **Data gate:** parameter pack cho từng nghề phải có trước rules VS-03. VS-10 tune dựa playtest, không hoãn thiết kế units đến đó.
 
 Specs và trạng thái sau bổ sung: [Documentation Completion](DOCUMENTATION-COMPLETION-2026-10-14.md). Provider/editor/framework còn có gate thực nghiệm; không xem chúng là thiếu module GDD mới.
+
+Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.
