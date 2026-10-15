@@ -182,3 +182,40 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Self-review đã bổ sung coverage đủ10namespaces/world và lifecycle/revision; không có subagent hoặc review độc lập. Headless accepted; Unity/storage/atomic-world/replay/gameplay còn pending.
 - Đồng bộ ADR009, contracts, execution/QA, backlog/matrix, sprint, handoff/readme/agent, hoststatus, changelog. Checks source36files/reference/architecture/handoff405links đạt.
 - Lượt export trước từ chối source changed giữa lúc sinh; đang regenerate cuối. Build parallel có MSB4166, chuyển sequential -m:1 -nr:false đã đạt; chưa kết luận nguyên nhân host.
+
+
+### EVT-00009 | SPIN-002 | RESULT — Baseline AI và FND-02 headless đạt nghiệm thu; exports đồng bộ
+
+<!-- worklog: {"id": "EVT-00009", "spin": "SPIN-002", "event": "RESULT", "at": "2026-10-15T09:17:00+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T09:17:00+07:00
+- Actor: /root
+
+- Outcome: baseline AI và bước triển khai đầu Sprint1 hoàn tất. FND-02 headless accepted: 32/32 C# tests, 0 skipped; negative-control process 1 failed/exit1 đúng yêu cầu. Unity còn pending FND-16; Sprint1 còn FND-03/04.
+- Tooling negative control bổ sung: stub runner exit0 với TRX total0 bị runtime gate từ chối exit1. Đây là tooling test, không cộng vào32runtime tests. Source fingerprint của runtime evidence vẫn khớp sau checks.
+- Checks: docs36files, handoff405links/52requirements/28tasks, reference/vectors/architecture và diff đạt; hoststatus simulationImplemented=false,nextTask=FND-03. Export cuối đạt132sourceinputs,14HTML/DOCX,30titles,6156anchors,123tables/navigation. Không ZIP.
+- Git local: baseline94b0e53 trên dev; feature commit257c228 trên feature/fnd-02-typed-identity. Không push, không PR/merge feature về dev, không đổi main/tag/release; CI workflow đã viết nhưng chưa có remote run. Final journal events sau commit còn local diff để đưa vào commit kế tiếp theo policy.
+- Actor /root thực hiện và self-review, không có agent phụ. Không còn blocker trong scope spin. MSB4166 parallel build được tránh bằng sequential runner; không bịa nguyên nhân hoặc kết luận Unity.
+
+
+### EVT-00010 | SPIN-002 | CLOSE — Đóng SPIN-002 — finished; Sprint 1 tiếp tục
+
+<!-- worklog: {"id": "EVT-00010", "spin": "SPIN-002", "event": "CLOSE", "at": "2026-10-15T09:17:01+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T09:17:01+07:00
+- Actor: /root
+
+- Outcome: finished cho goal SPIN-002 (baseline AI + FND-02 headless). Sprint SPRINT-01 vẫn In progress; không gọi cả Foundation hoàn tất.
+- Assignment /root hoàn tất, không có actor khác hoặc blocker cần chờ. Bước tiếp theo FND-03 WorldClock theo sprint, rồi FND-04 RNG/codec; ghi spin mới cho mục tiêu tiếp theo.
+- Evidence chính docs/qa/FND-02-EVIDENCE.md và tests/results/fnd02-jy9izu9m/evidence.json. Branch hiện tại feature/fnd-02-typed-identity, HEAD257c228 local; WORKLOG event kết quả/close chưa commit là trạng thái chủ động theo quy tắc journal.
+
+
+### EVT-00011 | SPIN-003 | OPEN — Điều phối và nghiệm thu toàn bộ Sprint 1
+
+<!-- worklog: {"id": "EVT-00011", "spin": "SPIN-003", "event": "OPEN", "at": "2026-10-15T10:31:43+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T10:31:43+07:00
+- Actor: /root
+
+- Goal SPRINT-01/SPIN-003: hoàn tất FND-03 clock và FND-04 codec/math/RNG, regression FND-02, review + nghiệm thu sprint, cập nhật mọi consumer docs/exports.
+- User giao toàn bộ điều hướng/break task/giao task/nghiệm thu, báo cáo khi Sprint1 xong. Root điều phối; subagents được giao rõ theo yêu cầu này.
+- Assignment: /root/clock FND-03 Time/*.cs + TimeTests; /root/random FND-04 Random/*.cs + RandomTests; /root tích hợp runner/CI/docs, kiểm và nghiệm thu. Không có human review/playtest giả.
+- Acceptance: Release build, nonzero all-pass/no-skip, negative control, clock range/calendar, mdc1/sha256 vectors, RNG preview/abort/draw schedule và exact numeric edges. Unity/storage/scheduler/gameplay ngoài scope.
+- Branch tích hợp local feature/sprint-01-primitives từ dev, nhận feature FND-02 bằng ff; các task có commit riêng. Không main/tag/release; push không nằm trong bước nghiệm thu local này.
