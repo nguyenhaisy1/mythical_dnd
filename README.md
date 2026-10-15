@@ -2,7 +2,7 @@
 
 Living World Narrative RPG lấy chất liệu Văn Lang–Âu Lạc. Nội dung, nhân quả, nghề nghiệp, quan hệ và cuộc đời nhân vật là trọng tâm; gameplay runtime chạy offline bằng code/rules. Tên game hiện là working title.
 
-**Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Core projects build được; headless host chỉ báo trạng thái. Simulation, persistence, replay và Unity client chưa được triển khai.
+**Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Đã thêm primitive identity C# và runtime test gate Sprint 1; headless host chỉ báo trạng thái. Simulation, persistence, replay và Unity client chưa được triển khai.
 
 ## Bắt đầu đọc
 
@@ -23,11 +23,11 @@ python3 tools/docs/build_docs.py --check
 python3 tools/checks/validate_reference.py
 python3 tools/checks/check_architecture.py
 python3 tools/checks/check_handoff.py
-dotnet build MythicalDnd.sln --configuration Release
+python3 tools/tests/run_runtime.py
 dotnet run --project engine/HeadlessRunner/Game.Headless.csproj --configuration Release --no-build -- --status
 ```
 
-`--status` trả `simulationImplemented: false`. Lệnh simulate/replay không được giả làm thành công khi chưa triển khai. Bước code tiếp theo: **FND-02 Typed IDs & Entity Registry**; xem backlog trước khi mở rộng.
+`--status` trả `simulationImplemented: false`. Lệnh simulate/replay không được giả làm thành công khi chưa triển khai. FND-02 có implementation và gate headless riêng; bước tiếp theo **FND-03 WorldClock**. Unity identity conformance vẫn pending FND-16; xem backlog trước khi mở rộng.
 
 ## Bố trí dự án
 

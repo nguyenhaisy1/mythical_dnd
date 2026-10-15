@@ -158,3 +158,27 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - User ngày 2026-10-15 xác nhận toàn bộ dự án do AI làm và yêu cầu tiến hành bước tiếp theo. Chốt baseline bằng commit local; không publish/main/tag/release.
 - Scope: workflow AI, sprint brief, typed identity/registry/allocation, test runner/CI/evidence và docs liên quan. FND-03/04 còn trong sprint nhưng ngoài spin triển khai đầu tiên này. Unity/storage/gameplay chưa nghiệm thu.
 - Giữ nguyên thay đổi workflow/journal đang có; kiểm và đưa vào baseline trước branch feature. Dev local chưa publish: bootstrap fast-forward local sau checks, không thay PR policy của branch đã publish.
+
+
+### EVT-00007 | SPIN-002 | GIT — Chốt baseline local và mở branch FND-02
+
+<!-- worklog: {"id": "EVT-00007", "spin": "SPIN-002", "event": "GIT", "at": "2026-10-15T09:09:05+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T09:09:05+07:00
+- Actor: /root
+
+- Baseline local commit 94b0e53: workflow Git/release, append-only journal, AI execution và Sprint 1. Checks docs/source/reference/architecture/diff đạt. Export đang sinh và sẽ regenerate cuối sau implementation.
+- dev local bootstrap fast-forward tới baseline; tạo feature/fnd-02-typed-identity từ dev. main/origin không đổi; chưa push.
+- /root tiếp tục FND-02; self-review và runtime verification cùng actor, không có reviewer độc lập.
+
+
+### EVT-00008 | SPIN-002 | PROGRESS — FND-02 đạt gate headless; đồng bộ tài liệu và hoàn tất export
+
+<!-- worklog: {"id": "EVT-00008", "spin": "SPIN-002", "event": "PROGRESS", "at": "2026-10-15T09:15:33+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T09:15:33+07:00
+- Actor: /root
+
+- /root đã hiện thực FND-02 identity primitives, staged allocation/registry, runner exact packages + lockfile, CI nonzero/negative-control gate. Baseline local 94b0e53; feature/fnd-02-typed-identity chưa publish.
+- Final runtime source sha256:ca3efcb9cf658b08212af7333b522a5eb3f9c7dba9c613ff7331462f1e501442; 32 discovered/passed, 0 failed/skipped; negative control 1 failed/exit1; build6projects 0warnings/errors. Evidence tests/results/fnd02-jy9izu9m/evidence.json.
+- Self-review đã bổ sung coverage đủ10namespaces/world và lifecycle/revision; không có subagent hoặc review độc lập. Headless accepted; Unity/storage/atomic-world/replay/gameplay còn pending.
+- Đồng bộ ADR009, contracts, execution/QA, backlog/matrix, sprint, handoff/readme/agent, hoststatus, changelog. Checks source36files/reference/architecture/handoff405links đạt.
+- Lượt export trước từ chối source changed giữa lúc sinh; đang regenerate cuối. Build parallel có MSB4166, chuyển sequential -m:1 -nr:false đã đạt; chưa kết luận nguyên nhân host.

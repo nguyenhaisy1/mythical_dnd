@@ -1,4 +1,4 @@
-name: Validate scaffold and documentation
+name: Validate core and documentation
 on: [push, pull_request]
 permissions:
   contents: read
@@ -17,7 +17,14 @@ jobs:
           python3 tools/checks/check_contract_vectors.py
           python3 tools/checks/check_architecture.py
           python3 tools/checks/check_handoff.py
-      - name: Build scaffold
-        run: dotnet build MythicalDnd.sln --configuration Release
+      - name: Headless identity runtime gate
+        run: python3 tools/tests/run_runtime.py
+      - name: Upload runtime evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: runtime-evidence
+          path: tests/results/
+          if-no-files-found: error
       - name: Host status smoke check
         run: dotnet run --project engine/HeadlessRunner/Game.Headless.csproj --configuration Release --no-build -- --status

@@ -12,11 +12,11 @@ namespace Game.Headless
                 Console.WriteLine(JsonSerializer.Serialize(new
                 {
                     project = "mythical_dnd",
-                    stage = "repository-scaffold",
+                    stage = "foundation-identity",
                     simulationImplemented = false,
                     runtimeLlm = false,
                     documentation = "docs/production/HANDOFF.md",
-                    nextTask = "FND-02"
+                    nextTask = "FND-03"
                 }, new JsonSerializerOptions { WriteIndented = true }));
                 return 0;
             }

@@ -1,6 +1,6 @@
 # Identity & Registry Specification — identity-v1
 
-Áp dụng: FND-02/05/08/12, TEST-027. [ADR-008](../adr/008-prototype-contract-baseline.md) chọn contract từ các phương án M26 §12, M29 §9–14. Đây là đặc tả cần hiện thực hóa.
+Áp dụng: FND-02/05/08/12, TEST-027. [ADR-008](../adr/008-prototype-contract-baseline.md) chọn contract từ các phương án M26 §12, M29 §9–14. Đặc tả được hiện thực ở portable Foundation; trạng thái kiểm chứng xem evidence FND-02.
 
 ## Representation và codec
 
@@ -26,4 +26,8 @@ Registry giữ type, lifecycle, creation revision, retirement revision và canon
 
 ## Acceptance
 
-Parser roundtrip ở cả headless và Unity; invalid examples phải reject: `w0000000000000000/actor/0000000000000001`, namespace `Actor`, counter `1`, reference actor trong field yêu cầu lot. Test allocator rollback/restore/exhaustion và typed equality. Golden fixture nhỏ ở [kernel-smoke](../../content/fixtures/kernel-smoke/README.md). Kiểm tra C# và Unity còn pending; reference data không chứng minh implementation đúng.
+Parser roundtrip ở cả headless và Unity; invalid examples phải reject: `w0000000000000000/actor/0000000000000001`, namespace `Actor`, counter `1`, reference actor trong field yêu cầu lot. Test allocator rollback/restore/exhaustion và typed equality. Golden fixture nhỏ ở [kernel-smoke](../../content/fixtures/kernel-smoke/README.md). Kiểm tra headless C# được ghi riêng tại [FND-02 evidence](../qa/FND-02-EVIDENCE.md); Unity còn pending FND-16. Reference data không thay runtime acceptance.
+
+## API triển khai
+
+Theo [ADR-009](../adr/009-headless-test-runner.md): immutable typed wrappers, IdentitySnapshot và IdentityStage. PrepareSnapshot chỉ tạo candidate để Application commit; không publish UI hoặc thay atomic world transaction. Restore bắt buộc đủ cursors cho 10 namespaces; bỏ cursor không được reset về 1. Registry trả historical refs cho cả Retired/Tombstone; action eligibility vẫn thuộc rule.

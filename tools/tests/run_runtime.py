@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Build and run runtime acceptance; reject missing/zero/skipped TRX and verify an intentional failure."""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import platform
+import subprocess
+import sys
+import tempfile
+import xml.etree.ElementTree as ET
+
+ROOT = Path(__file__).resolve().parents[2]
+NS = {'t': 'http://microsoft.com/schemas/VisualStudio/TeamTest/2010'}
+PROJECT = 'tests/MythicalDnd.Foundation.Tests/MythicalDnd.Foundation.Tests.csproj'
+
+
+def source_manifest():
+    paths = [p for folder in ('engine', 'tests', 'tools/tests', 'content/fixtures/kernel-smoke')
+             for p in (ROOT / folder).rglob('*') if p.is_file()
+             and not any(part in ('bin', 'obj', 'results', '__pycache__') for part in p.relative_to(ROOT).parts)]
+    paths += [ROOT / p for p in ('Directory.Build.props', 'global.json', 'MythicalDnd.sln', '.github/workflows/validate.yml')]
+    return {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+
+
+def counts(path):
+    tree = ET.parse(path)
+    c = tree.find('t:ResultSummary/t:Counters', NS)
+    if c is None:
+        raise ValueError('Missing TRX counters')
+    total, passed, failed, executed = (int(c.attrib[k]) for k in ('total', 'passed', 'failed', 'executed'))
+    results = tree.findall('t:Results/t:UnitTestResult', NS)
+    if len(results) != total or sum(r.attrib['outcome'] == 'Passed' for r in results) != passed or sum(r.attrib['outcome'] == 'Failed' for r in results) != failed:
+        raise ValueError('TRX counters/results mismatch')
+    return {'discovered': total, 'passed': passed, 'failed': failed, 'skipped': total - executed}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--dotnet', default='dotnet')
+    args = parser.parse_args()
+    destination = ROOT / 'tests/results'
+    destination.mkdir(parents=True, exist_ok=True)
+    run_dir = Path(tempfile.mkdtemp(prefix='fnd02-', dir=destination))
+    started = datetime.now(timezone.utc).isoformat()
+    manifest = source_manifest()
+    commands = []
+
+    def run(arguments, label, env=None):
+        command = [args.dotnet] + arguments
+        commands.append(command)
+        process = subprocess.run(command, cwd=ROOT, env=env, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        (run_dir / (label + '.log')).write_text(process.stdout)
+        print(process.stdout, flush=True)
+        return process.returncode
+
+    result = dict(scope='headless-identity', task_ids=['FND-02'], test_ids=['TEST-027'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
+                  utc_started=started, os=platform.platform(), architecture=platform.machine(),
+                  runtime_version=None, unity_version=None, backend=None,
+                  fixture_versions={'identity': 'identity-v1', 'scenario': 1},
+                  content_hash=manifest['content/fixtures/kernel-smoke/scenario.json'], rule_version=None, rng_version=None, seed=None,
+                  discovered=0, passed=0, failed=0, skipped=0, exit_code=1, commands=commands)
+    (run_dir / 'sources.json').write_text(json.dumps(manifest, indent=2) + '\n')
+    try:
+        result['runtime_version'] = subprocess.check_output([args.dotnet, '--info'], cwd=ROOT, text=True)
+        if run(['restore', 'MythicalDnd.sln', '--locked-mode', '-m:1', '-nr:false'], 'restore') != 0:
+            raise ValueError('Locked restore failed')
+        if run(['build', 'MythicalDnd.sln', '-c', 'Release', '--no-restore', '-m:1', '-nr:false'], 'build') != 0:
+            raise ValueError('Build failed')
+        common = ['test', PROJECT, '-c', 'Release', '--no-build', '--no-restore', '-m:1', '-nr:false', '--results-directory', str(run_dir)]
+        clean_env = dict(os.environ)
+        clean_env.pop('MYTHICAL_NEGATIVE_CONTROL', None)
+        code = run(common + ['--logger', 'trx;LogFileName=runtime.trx'], 'runtime', clean_env)
+        result.update(counts(run_dir / 'runtime.trx'))
+        result['runtime_exit_code'] = code
+        if code != 0 or result['discovered'] <= 0 or result['passed'] != result['discovered'] or result['failed'] or result['skipped']:
+            raise ValueError('Runtime gate failed (nonzero, failed, skipped or zero tests)')
+        control_env = dict(clean_env, MYTHICAL_NEGATIVE_CONTROL='1')
+        code = run(common + ['--filter', 'TestCategory=NegativeControl', '--logger', 'trx;LogFileName=negative.trx'], 'negative', control_env)
+        control = counts(run_dir / 'negative.trx')
+        result['negative_control'] = dict(control, exit_code=code)
+        if code == 0 or control != {'discovered': 1, 'passed': 0, 'failed': 1, 'skipped': 0}:
+            raise ValueError('Negative control did not fail exactly one discovered test')
+        if source_manifest() != manifest:
+            raise ValueError('Sources changed during run')
+        result['exit_code'] = 0
+    except (ValueError, OSError, subprocess.CalledProcessError, ET.ParseError) as error:
+        result['error'] = str(error)
+        print(error, file=sys.stderr)
+    result['artifact_paths'] = [str(p.relative_to(ROOT)) for p in sorted(run_dir.iterdir())] + [str((run_dir / 'evidence.json').relative_to(ROOT))]
+    (run_dir / 'evidence.json').write_text(json.dumps(result, indent=2) + '\n')
+    print('Evidence: ' + str(run_dir / 'evidence.json'))
+    return result['exit_code']
+
+
+if __name__ == '__main__':
+    sys.exit(main())

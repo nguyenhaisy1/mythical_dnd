@@ -1,12 +1,12 @@
 # Test Execution & Evidence Contract
 
-Ngày 2026-10-14. Áp dụng FND-02–16, VS-01/10. Các TEST trong matrix là acceptance requirements; chưa có C# implementation nên không được báo chúng Passed.
+Ngày 2026-10-14. Áp dụng FND-02–16, VS-01/10. Các TEST trong matrix là acceptance requirements; chỉ cập nhật theo runtime evidence từng task. FND-02 có primitive implementation; các hệ còn lại vẫn pending.
 
 ## Hai cấp thực thi
 
 **Reference/documentation checks hiện có** chạy bằng Python stdlib: `python3 tools/checks/check_contract_vectors.py`, `validate_reference.py`, `check_handoff.py`, `check_architecture.py`. Lệnh đầu kiểm codec/math/RNG vectors và fixture expectation arithmetic; không chạy command processor C#. Evidence của chúng có scope `documentation-reference`.
 
-**Runtime tests phải tạo cùng FND-02**: thêm `tests/MythicalDnd.Foundation.Tests/` và integration project theo ownership; .NET SDK theo global.json. Chọn một framework có runner CLI tương thích SDK và Unity adapter khi spike thực tế, pin exact packages + lockfile; không để wildcard. Đây còn là setup gate, chưa có package/runner được restore và kiểm chứng trong lượt bổ sung docs. Lệnh nghiệm thu dự kiến `dotnet test MythicalDnd.sln --configuration Release --no-build --logger trx`; chỉ bật gate sau khi test projects được đưa vào solution, runner phát hiện test count>0 và negative control cố tình fail khiến exit≠0. Không coi exit0 với zero tests là pass.
+**Runtime FND-02** nằm ở `tests/MythicalDnd.Foundation.Tests/`, runner/package pin theo [ADR-009](../adr/009-headless-test-runner.md). Lệnh chuẩn: `python3 tools/tests/run_runtime.py` (hoặc `--dotnet /path/to/dotnet`). Tool restore locked, build solution Release, chạy dotnet test với TRX, kiểm count > 0 và không skip, rồi chạy negative control trong process riêng: đúng một test fail và exit khác 0. Không chỉ gọi dotnet test rồi suy zero tests là pass. Integration project sẽ thêm cùng implementation command/storage thực, không tạo suite rỗng.
 
 ## Cấu trúc và naming
 
@@ -22,4 +22,4 @@ Không thu performance numbers từ documentation checks. Benchmark phải ghi h
 
 ## CI và gates
 
-CI hiện giữ docs/reference checks và scaffold build. Runtime test task còn pending phải hiện trong backlog/QA; thêm CI test stage ở FND-02, fail nếu discovery0. VS-01 yêu cầu kernel tests FND-02–15 và reference fixtures; Foundation complete thêm FND-16 cross-runtime; VS-10 cần gameplay regression+manual accessibility+performance evidence. Không đổi TEST status do chỉ bổ sung tài liệu.
+CI giữ docs/reference checks, build và runtime FND-02 gate có negative control; upload JSON/log/TRX kể cả khi lỗi. Local run không chứng minh GitHub CI đã chạy. VS-01 yêu cầu kernel tests FND-02–15 và reference fixtures; Foundation complete thêm FND-16 cross-runtime; VS-10 cần gameplay regression+manual accessibility+performance evidence. Không đổi TEST status do chỉ bổ sung tài liệu.

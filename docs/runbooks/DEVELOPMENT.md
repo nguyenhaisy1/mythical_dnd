@@ -13,7 +13,7 @@ dotnet build MythicalDnd.sln -c Release
 dotnet run --project engine/HeadlessRunner/Game.Headless.csproj -c Release --no-build -- --status
 ```
 
-Các test runtime tương lai nằm theo nhóm trong tests; chưa cài test framework để tránh diễn đạt một empty suite như game đã pass. Khi task đầu tiên cần test, chọn/pin framework trong tooling ADR và CI, bảo đảm test có assertions vào invariants thật.
+Runtime primitives FND-02: `python3 tools/tests/run_runtime.py` (thêm `--dotnet /path/to/dotnet` nếu SDK ngoài PATH). Runner restore locked/build Release, kiểm TRX nonzero và negative control; evidence dưới tests/results. Framework pin tại ADR-009; Unity/storage/replay còn pending. Local có lỗi MSBuild child-node MSB4166 khi chạy parallel; runner dùng `-m:1 -nr:false`, build tuần tự đã kiểm.
 
 Git đã có initial commit và origin trỏ git@github.com:nguyenhaisy1/mythical_dnd.git. Branch/commit/push/version/changelog theo [Git Workflow](GIT-WORKFLOW.md); không coi yêu cầu implement là quyền publish release. Các build/export artifacts không track mặc định; nguồn tài liệu nằm trực tiếp trong repository.
 

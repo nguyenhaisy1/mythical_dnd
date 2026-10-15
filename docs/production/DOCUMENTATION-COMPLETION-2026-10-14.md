@@ -1,5 +1,8 @@
 # Bổ sung tài liệu sau audit — 14/10/2026
 
+> Báo cáo lịch sử ngày 2026-10-14. Trạng thái mới ngày 2026-10-15: xem [Sprint 1](sprints/SPRINT-01.md) và [FND-02 evidence](../qa/FND-02-EVIDENCE.md); không dùng các mục pending bên dưới thay trạng thái hiện tại.
+
+
 Đáp ứng yêu cầu duy trì tài liệu trực tiếp trong project: đã bỏ ZIP, manifest/report của ZIP và công cụ tạo ZIP. HTML/DOCX vẫn là bản đọc có thể tái tạo; chúng được kiểm tra với source fingerprints để phát hiện nội dung cũ. Archive hội thoại và toàn văn nghiên cứu được bảo toàn.
 
 ## Tài liệu đã bổ sung

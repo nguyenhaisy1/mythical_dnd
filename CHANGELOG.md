@@ -6,6 +6,12 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Identity primitives — 2026-10-15
+
+- Thêm FND-02 typed IDs, immutable registry/cursors, staged allocation/abort/restore và lifecycle giữ lịch sử theo identity-v1.
+- Thêm NUnit headless tests, exact package lock, CI runtime gate kiểm TRX nonzero và negative control; evidence theo ADR-009.
+- Compatibility: giữ identity-v1; chưa có save format/runtime migration, Unity hoặc atomic world commit đã nghiệm thu.
+
 ### AI execution — 2026-10-15
 
 - Chốt workflow AI thực hiện, self-review và evidence gates; mở Sprint 1 cho FND-02/03/04. Không tuyên bố có human playtest hoặc Unity conformance.

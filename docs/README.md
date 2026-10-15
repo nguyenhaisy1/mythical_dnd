@@ -27,3 +27,5 @@
 [WORKLOG theo spin](../WORKLOG.md): nhật ký append-only về goal, người/agent thực hiện, kết quả và trạng thái Git; khác changelog sản phẩm theo release.
 
 Quy trình áp dụng cho AI: [AI Execution](runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.
+
+Sprint đang thực hiện: [SPRINT-01](production/sprints/SPRINT-01.md). Runtime evidence đầu tiên: [FND-02](qa/FND-02-EVIDENCE.md); runner/API decision: [ADR-009](adr/009-headless-test-runner.md).

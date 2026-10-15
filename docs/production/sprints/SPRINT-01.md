@@ -8,8 +8,8 @@ Tạo primitive C# portable có kiểm thử thực thi để các task world/co
 
 | Task | Output / acceptance | Trạng thái |
 |---|---|---|
-| Baseline vận hành | Quy trình AI, Git/worklog, commit local kiểm được | Đang chốt trong SPIN-002 |
-| FND-02 | Typed entity/definition IDs, staged allocator/registry/lifecycle, restore; TEST-027 headless, runner pin/lock, CI nonzero + negative control | In progress — SPIN-002, /root |
+| Baseline vận hành | Quy trình AI, Git/worklog, commit local kiểm được | Đạt local baseline 94b0e53; chưa publish |
+| FND-02 | Typed entity/definition IDs, staged allocator/registry/lifecycle, restore; TEST-027 headless, runner pin/lock, CI nonzero + negative control | Headless accepted — SPIN-002, /root; 32 tests + negative control; Unity pending |
 | FND-03 | WorldClock/lịch 360 ngày, range/boundary tests | Ready sau conventions; chưa làm |
 | FND-04 | sha256-counter-v1/mdc1, khớp golden, không dùng global RNG | Ready sau conventions; chưa làm |
 
@@ -24,3 +24,5 @@ Chuẩn bị prototype Bến Vạc là hướng tiếp theo tùy kết quả n�
 ## Thứ tự thực hiện
 
 Chốt baseline local → FND-02 và test gate → review/evidence → FND-03 → FND-04 → đánh giá sprint. Mỗi spin ghi assignment/result trong [WORKLOG](../../../WORKLOG.md). Chưa tự mở toàn dependency tree hoặc release.
+
+Evidence hiện tại: [FND-02](../../qa/FND-02-EVIDENCE.md). Bước kế tiếp FND-03; chưa đóng sprint.

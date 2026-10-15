@@ -31,4 +31,4 @@ Khi fixture cho thấy bug: giữ command log, manifest, snapshot/state diff và
 
 ## Gates và execution bổ sung
 
-[Test Execution Contract](TEST-EXECUTION-CONTRACT.md) phân biệt reference checks, runtime tests và cross-runtime evidence. VS-01 chỉ nghiệm thu headless FND-02–15; Foundation complete thêm FND-16. Cần framework lock/CI discovery tại FND-02. Không thay TEST trạng thái runtime Pending bằng reference pass. Fixtures codec/math/RNG và smoke nằm tại [kernel-smoke](../../content/fixtures/kernel-smoke/README.md).
+[Test Execution Contract](TEST-EXECUTION-CONTRACT.md) phân biệt reference checks, runtime tests và cross-runtime evidence. VS-01 chỉ nghiệm thu headless FND-02–15; Foundation complete thêm FND-16. Framework lock/CI discovery FND-02 theo ADR-009 và FND-02-EVIDENCE; Unity adapter còn gate riêng. Không thay TEST trạng thái runtime Pending bằng reference pass. Fixtures codec/math/RNG và smoke nằm tại [kernel-smoke](../../content/fixtures/kernel-smoke/README.md).
