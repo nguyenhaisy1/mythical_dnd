@@ -232,3 +232,29 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Root integration Release gate70tests pass(32identity,25clock,13random),negative control1fail/exit1; mỗi task discovery >0. Source README Time đã được cập nhật sau run nên chạy lần cuối để fingerprint khớp toàn source inventory.
 - Docs/source/reference/architecture checks đạt,414links; backlog FND03/04 headless accepted. TEST008scheduler vẫn pendingFND10; OPEN01Unity/performance còn pending. Không nghiệm thu fullFoundation/gameplay.
 - Next: evidence fingerprint cuối, exports14HTML/DOCX, commit integration docs, close spin/sprint. Branch feature/sprint-01-primitives local; chưa publish/main/release.
+
+
+### EVT-00013 | SPIN-003 | RESULT — Nghiệm thu Sprint 1 — 70 tests đạt; docs và exports đồng bộ
+
+<!-- worklog: {"id": "EVT-00013", "spin": "SPIN-003", "event": "RESULT", "at": "2026-10-15T13:47:42+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T13:47:42+07:00
+- Actor: /root
+
+- SPRINT-01 local headless scope: COMPLETED. FND-02 identity32tests, FND-03 clock25tests, FND-04 math/codec/RNG13tests; tổng70/70 Release pass,0failed/0skipped. Negative-control process1failed/exit1 đúng yêu cầu; toàn gateexit0,build6projects0warning/error.
+- Evidence cuối tests/results/sprint01-tvdcfogg/evidence.json và docs/qa/SPRINT-01-EVIDENCE.md. Source fingerprint đã đối chiếu khớp. Tooling control: stub exit0 có2nhóm pass nhưng thiếuFND04 bị gate từ chối exit1; không cộng vào game test count.
+- /root/clock và /root/random hoàn tất implementation; /root/review read-only review không phát hiện blocker; /root tích hợp/review/checks/docs/nghiệm thu. Giới hạn context grammar thuộc caller đã ghi ADR010/OPEN01. Không còn agent đang làm task sprint.
+- Checks cuối: generated36files, source/reference/vectors/architecture, handoff414links,52requirements,28tasks, staged diff đạt. Exports134inputs/14HTML-DOCX/30titles/6156anchors/123tables/navigation đạt. Một lượt export phát hiện source đổi khi cập nhật evidence; đã regenerate và check thành công cuối.
+- Git local branch feature/sprint-01-primitives: c8f8449(clock),79c9944(RNG),081afcd(nghiệm thu/runner/CI/docs); FND02 kế thừa257c228. Chưa push, chưa PR/merge implementation vềdev, main/tag/release không đổi. Final journal events sau commit còn local theo policy.
+- Giới hạn: TEST008scheduler pendingFND10; UnityFND16,worldstate/commands/storage/replay/gameplay chưa triển khai. Sprint complete không là Foundationcomplete hoặc gameplayable. Bước kế tiếp FND05; Sprint2 chưa mở.
+
+
+### EVT-00014 | SPIN-003 | CLOSE — Đóng SPIN-003 và Sprint 1 — finished
+
+<!-- worklog: {"id": "EVT-00014", "spin": "SPIN-003", "event": "CLOSE", "at": "2026-10-15T13:47:42+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T13:47:42+07:00
+- Actor: /root
+
+- Outcome finished. SPIN-003 đóng; SPRINT-01 hoàn tất scope local headless theo sprint brief và evidence.
+- /root,/root/clock,/root/random,/root/review hoàn thành các assignment thực tế; không có blocker của sprint. Không còn spin active.
+- Next milestone bắt đầu từ FND-05 World state/revision; chưa tự triển khai ngoài Sprint1. Báo cáo cho user theo yêu cầu khi sprint xong.
+- HEAD081afcd local; chỉ WORKLOG events cuối còn chưa commit. Không commit vòng lặp chỉ để tự chứa hash.
