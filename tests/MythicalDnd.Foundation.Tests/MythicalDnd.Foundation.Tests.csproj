@@ -11,5 +11,6 @@
     <PackageReference Include="NUnit3TestAdapter" Version="[5.0.0]" />
     <ProjectReference Include="../../engine/Foundation/Game.Foundation.csproj" />
   <None Include="../../content/fixtures/kernel-smoke/scenario.json" Link="scenario.json" CopyToOutputDirectory="PreserveNewest" />
+  <None Include="../../content/fixtures/kernel-smoke/vectors.json" Link="vectors.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>
