@@ -1,6 +1,6 @@
 id,category,gate,owner,question,exit_evidence,task
-OPEN-01,Technology,Implementation gate FND-04/FND-16,Foundation,Algorithm selected: sha256-counter-v1/mdc1 (ADR-008); C#/Unity conformance and performance pending,Chốt ADR variant và golden vectors; replay trên headless và Unity.,FND-04
-OPEN-02,Technology,Implementation gate FND-03,Foundation,clock-v1 selected: minute tick / 360-day simulation calendar; implementation boundary tests pending,"Chọn unit, overflow/range và conversion; test nhiều năm và boundary.",FND-03
+OPEN-01,Technology,Implementation gate FND-04/FND-16,Foundation,sha256-counter-v1/mdc1 C# golden passed Sprint1; Unity/performance and caller context vocabulary validation pending,Chốt ADR variant và golden vectors; replay trên headless và Unity.,FND-04
+OPEN-02,Technology,Headless FND-03 satisfied; scheduler gate FND-10,Foundation,clock-v1 C# range/calendar boundaries passed Sprint1; scheduler integration remains FND-10,"Chọn unit, overflow/range và conversion; test nhiều năm và boundary.",FND-03
 OPEN-03,Technology,P0 before FND-11,Infrastructure,"SQLite provider, schema, transaction strategy",Spike provider trên target runtime; atomic failure/recovery evidence.,FND-11
 OPEN-04,Technology,P0 before FND-16,Client,"Unity patch, backend Mono/IL2CPP, target platform",Ghi ProjectVersion từ Editor thật; build netstandard DLL và golden replay cùng hash.,FND-16
 OPEN-05,Tuning,Initial parameters before VS-03; final tuning VS-10,Design/QA,kernel-v1 repair parameters authored; transport/medicine initial values and final gameplay balance pending,Versioned parameter pack; statistical/property/playtest evidence.,VS-10

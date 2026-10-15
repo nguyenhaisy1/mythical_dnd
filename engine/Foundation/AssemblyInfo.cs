@@ -1,3 +1,3 @@
 using System.Reflection;
 
-[assembly: AssemblyMetadata("ImplementationStatus", "IdentityPrimitives")]
+[assembly: AssemblyMetadata("ImplementationStatus", "IdentityTimeRandomPrimitives")]

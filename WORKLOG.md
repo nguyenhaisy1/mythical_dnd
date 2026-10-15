@@ -219,3 +219,16 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Assignment: /root/clock FND-03 Time/*.cs + TimeTests; /root/random FND-04 Random/*.cs + RandomTests; /root tích hợp runner/CI/docs, kiểm và nghiệm thu. Không có human review/playtest giả.
 - Acceptance: Release build, nonzero all-pass/no-skip, negative control, clock range/calendar, mdc1/sha256 vectors, RNG preview/abort/draw schedule và exact numeric edges. Unity/storage/scheduler/gameplay ngoài scope.
 - Branch tích hợp local feature/sprint-01-primitives từ dev, nhận feature FND-02 bằng ff; các task có commit riêng. Không main/tag/release; push không nằm trong bước nghiệm thu local này.
+
+
+### EVT-00012 | SPIN-003 | PROGRESS — Hai task đã triển khai và review; gate 70 tests đạt
+
+<!-- worklog: {"id": "EVT-00012", "spin": "SPIN-003", "event": "PROGRESS", "at": "2026-10-15T10:35:46+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T10:35:46+07:00
+- Actor: /root
+
+- /root/clock hoàn tất FND-03,25targetedtests pass; root review và commit c8f8449. /root/random hoàn tất FND-04,13targetedtests pass; commit79c9944. Không agent sửa docs/Git ngoài root.
+- /root/review được giao review read-only riêng; không phát hiện blocker. Giới hạn: context domain/decision/occurrence/stream chỉ nonblankUTF8, caller kiểm grammar/schema; root đã ghi ADR010/OPEN01/evidence.
+- Root integration Release gate70tests pass(32identity,25clock,13random),negative control1fail/exit1; mỗi task discovery >0. Source README Time đã được cập nhật sau run nên chạy lần cuối để fingerprint khớp toàn source inventory.
+- Docs/source/reference/architecture checks đạt,414links; backlog FND03/04 headless accepted. TEST008scheduler vẫn pendingFND10; OPEN01Unity/performance còn pending. Không nghiệm thu fullFoundation/gameplay.
+- Next: evidence fingerprint cuối, exports14HTML/DOCX, commit integration docs, close spin/sprint. Branch feature/sprint-01-primitives local; chưa publish/main/release.

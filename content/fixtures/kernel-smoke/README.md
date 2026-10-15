@@ -12,4 +12,4 @@ python3 tools/checks/check_contract_vectors.py
 
 Không tự cập nhật golden từ implementation đang test. FND-02/04 phải đọc cùng vectors trên C#; FND-16 so Unity; FND-07/13 phải chạy scenario qua real handlers và đối chiếu từng commit. Script hiện tại không thực hiện những runtime tests đó. Negative cases trong scenario là test specifications cần triển khai, không được tính vào số runtime tests passed.
 
-FND-02 đã đọc 7 entity wire IDs trong scenario bằng C# và kiểm parser roundtrip; allocation/lifecycle có test riêng theo Identity Spec. Chưa chạy command sequence hoặc codec/RNG vectors bằng engine; các phần này còn FND-04/07/13. Xem docs/qa/FND-02-EVIDENCE.md.
+FND-02 đã đọc 7 entity wire IDs trong scenario bằng C# và kiểm parser roundtrip; allocation/lifecycle có test riêng theo Identity Spec. FND-04 đọc codec/RNG golden bằng C# trong Sprint 1; command sequence và replay còn FND-07/13. Xem docs/qa/FND-02-EVIDENCE.md.

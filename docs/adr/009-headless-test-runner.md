@@ -23,3 +23,5 @@ BeginStage(targetRevision) → Allocate/Retire/Tombstone → PrepareSnapshot ho�
 ## Consequences và evidence
 
 Có thể nghiệm thu headless primitive riêng, Unity còn pending. Cùng AI viết code và review được ghi là self-review. Xem [evidence FND-02](../qa/FND-02-EVIDENCE.md). Quyết định không làm thay đổi GDD archive hoặc golden; consumer docs, CI, backlog và host status phải đồng bộ.
+
+Cập nhật Sprint 1: runner hiện chạy cả identity/time/RNG với per-task discovery; ADR-010 và Sprint 1 evidence mô tả phạm vi mở rộng.

@@ -21,3 +21,7 @@ Chọn thuật toán đơn giản để kiểm chứng trước, chưa có perfo
 `Uniform(n)`, n∈[1,2^32]: limit=2^32−(2^32 mod n). Đọc word x, tăng draw_index; nếu x≥limit thì discard và đọc tiếp; trả x mod n. Không modulo trước rejection. `Roll2d10` = Uniform(10)+1, hai lần, rồi cộng; probability check Uniform(10000)<p. p=0/10000 được constant-fold thành false/true không draw; phải version nếu thay draw schedule. Mỗi decision/occurrence có context riêng; không share stream ngẫu nhiên giữa UI và world.
 
 Preview đọc cloned context/snapshot, không persist draw. Abort rollback counters, ID và changes; retry cùng command trả receipt nếu đã commit, nếu chưa commit thì cùng inputs cho cùng draws. Seed và RNG không phải bảo mật/anti-cheat. Golden vectors ghi input, canonical bytes, SHA-256 và raw words; validator kiểm literal SHA-256 known answer cho `abc`, codec bytes viết tay, rounding và rejection branch trước so vectors. Cross-runtime vectors vẫn cần FND-16.
+
+## Trạng thái triển khai Sprint 1
+
+FND-04 hiện thực portable math/codec/contextual RNG; nghiệm thu xem Sprint 1 evidence. Command receipts/atomic persist/replay/Unity còn gate riêng. Xem [ADR-010](../adr/010-sprint-one-primitives.md) và [evidence](../qa/SPRINT-01-EVIDENCE.md).

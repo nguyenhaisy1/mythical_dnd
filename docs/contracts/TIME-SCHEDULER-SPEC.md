@@ -35,3 +35,7 @@ Mọi job revalidate actor alive, resource reservation, authority và location l
 ## Commit workflow cụ thể
 
 Advance có jobs: commit yêu cầu/target (revision+1, giữ tick); mỗi due job commit tick=DueTick và effects trong một transaction; cuối workflow commit tick=target và clear cursor (revision+1). Dù job cuối đúng target vẫn có closing commit để kết thúc workflow. Request receipt ban đầu outcome AcceptedPending trỏ workflow; terminal workflow status là dữ liệu riêng, không sửa fingerprint/receipt cũ. Retry cùng request trả receipt gốc và có thể query progress. Trong kernel smoke một job tương ứng ba commits advance: request, completion, close. Bảng expected outcome Accepted của scenario chỉ trạng thái workflow đã hoàn tất khi harness drain; không phải response đồng bộ nhận ban đầu. No-job advance chỉ một commit clock+terminal receipt; target=current no-job là no-op metadata receipt.
+
+## Trạng thái triển khai Sprint 1
+
+FND-03 hiện thực pure WorldTick/calendar/duration; nghiệm thu xem Sprint 1 evidence. Các phần scheduler ordering/AdvanceTime/budget/recovery bên dưới vẫn pending FND-07/10, không suy TEST-008 đầy đủ đã pass. Xem [ADR-010](../adr/010-sprint-one-primitives.md) và [evidence](../qa/SPRINT-01-EVIDENCE.md).

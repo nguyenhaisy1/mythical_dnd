@@ -32,3 +32,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Cập nhật 2026-10-15 — FND-02
 
 [Evidence FND-02](FND-02-EVIDENCE.md): 6 projects Release build 0 warnings/errors; 32 headless C# tests pass, không skip; negative control 1 test fail với exit1 đúng yêu cầu. Phạm vi identity primitives, không thay các kết quả lịch sử hoặc các gate Unity/replay/gameplay chưa chạy.
+
+## Sprint 1 — 2026-10-15
+
+[Evidence](SPRINT-01-EVIDENCE.md): 70/70 C# Release tests, không skipped, negative control1failed/exit1 đúng yêu cầu; build6projects0warnings/errors. FND-02/03/04 headless accepted; scheduler/Unity/replay/gameplay vẫn pending.

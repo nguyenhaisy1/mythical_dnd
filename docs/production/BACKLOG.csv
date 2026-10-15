@@ -1,8 +1,8 @@
 task_id,title,dependencies,owner,deliverable,acceptance,status
 FND-01,Scaffold & dependency boundaries,None,Build,"5 projects, solution, docs, local validation",Build Release; dependency checker; host status,Scaffold implemented; see validation results
 FND-02,Typed identity / registry,FND-01,Foundation,"EntityId/DefinitionId, allocator, lifecycle and ID codec; runtime test project/runner lock and CI test discovery","TEST-027, stable allocation vectors; TEST-027 executable, nonzero discovered tests",Headless accepted; Unity pending FND-16; see FND-02-EVIDENCE.md
-FND-03,WorldClock / calendar,FND-01,Foundation,Implement clock-v1 minute tick / 360-day simulation calendar and boundaries,TEST-008 plus range/calendar boundary tests,Not started
-FND-04,Deterministic RNG,FND-01,Foundation,Implement sha256-counter-v1/context/codec per ADR-008; compare committed reference vectors,TEST-007; OPEN-01 resolved,Not started
+FND-03,WorldClock / calendar,FND-01,Foundation,Implement clock-v1 minute tick / 360-day simulation calendar and boundaries,TEST-008 plus range/calendar boundary tests,Headless clock accepted; TEST-008 scheduler pending FND-10; see SPRINT-01-EVIDENCE.md
+FND-04,Deterministic RNG,FND-01,Foundation,Implement sha256-counter-v1/context/codec per ADR-008; compare committed reference vectors,TEST-007; OPEN-01 resolved,Headless accepted; Unity/performance pending; see SPRINT-01-EVIDENCE.md
 FND-05,World state / revision,FND-02,Foundation,Read-only snapshot and staged revision model,Atomic state-read invariants,Not started
 FND-06,Rule registry,FND-01 FND-05,Domain,Typed approved handler contract and registration,"Missing handler rejection, no direct IO",Not started
 FND-07,Command processor,FND-03 FND-04 FND-05 FND-06,Application,"Envelope, receipt, idempotency and error taxonomy","TEST-024,025,026",Not started

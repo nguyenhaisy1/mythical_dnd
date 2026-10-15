@@ -19,7 +19,7 @@ Nội dung nghiên cứu không bị thay bằng bản tóm tắt. Phần mô t�
 
 ## Sẵn sàng bắt đầu ở đâu?
 
-Sprint 1 đã mở: FND-02 có code/tests primitives, xem [evidence](../qa/FND-02-EVIDENCE.md) và backlog để biết gate đã đạt. Task tiếp theo FND-03; FND-04 theo conventions đã chốt. Không có P0 ở mức “thiếu toàn bộ thiết kế” buộc phải viết thêm module; các lựa chọn kỹ thuật còn mở phải được xử lý trong task tương ứng trước khi merge feature phụ thuộc.
+Sprint 1 có code/tests identity/time/codec/RNG; xem [sprint evidence](../qa/SPRINT-01-EVIDENCE.md) và backlog. Task tiếp theo FND-05; scheduler/replay/Unity chưa hoàn thành. Không có P0 ở mức “thiếu toàn bộ thiết kế” buộc phải viết thêm module; các lựa chọn kỹ thuật còn mở phải được xử lý trong task tương ứng trước khi merge feature phụ thuộc.
 
 Chưa sẵn sàng tuyên bố Foundation hoàn thành, Unity chạy được, full game balance ổn hoặc full-production content đủ. Xem `OPEN-DECISIONS.csv` và kết quả kiểm tra thực tế. Khả năng 1.000 nhân vật là mục tiêu sản phẩm, không là test đã pass.
 

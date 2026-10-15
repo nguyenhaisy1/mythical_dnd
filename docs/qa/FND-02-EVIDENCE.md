@@ -1,5 +1,7 @@
 # FND-02 — Headless identity evidence
 
+> Báo cáo lịch sử SPIN-002. Regression và trạng thái sprint mới xem [Sprint 1 evidence](SPRINT-01-EVIDENCE.md).
+
 Ngày 2026-10-15; SPRINT-01 / SPIN-002; actor /root. Scope REQ-027/TEST-027. Kết quả: **headless accepted**, Unity conformance pending FND-16. Sprint 1 vẫn đang làm; FND-03/04 chưa triển khai.
 
 ## Lệnh và kết quả

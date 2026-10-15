@@ -43,7 +43,7 @@ def main():
     args = parser.parse_args()
     destination = ROOT / 'tests/results'
     destination.mkdir(parents=True, exist_ok=True)
-    run_dir = Path(tempfile.mkdtemp(prefix='fnd02-', dir=destination))
+    run_dir = Path(tempfile.mkdtemp(prefix='sprint01-', dir=destination))
     started = datetime.now(timezone.utc).isoformat()
     manifest = source_manifest()
     commands = []
@@ -56,11 +56,11 @@ def main():
         print(process.stdout, flush=True)
         return process.returncode
 
-    result = dict(scope='headless-identity', task_ids=['FND-02'], test_ids=['TEST-027'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
+    result = dict(scope='headless-sprint01-primitives', task_ids=['FND-02', 'FND-03', 'FND-04'], test_ids=['TEST-027', 'TEST-008-primitives', 'TEST-007'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
                   utc_started=started, os=platform.platform(), architecture=platform.machine(),
                   runtime_version=None, unity_version=None, backend=None,
-                  fixture_versions={'identity': 'identity-v1', 'scenario': 1},
-                  content_hash=manifest['content/fixtures/kernel-smoke/scenario.json'], rule_version=None, rng_version=None, seed=None,
+                  fixture_versions={'identity': 'identity-v1', 'clock': 'clock-v1', 'codec': 'mdc1', 'rng': 'sha256-counter-v1', 'scenario': 1},
+                  content_hash=manifest['content/fixtures/kernel-smoke/scenario.json'], rule_version=None, rng_version='sha256-counter-v1', seed='golden contexts in vectors.json',
                   discovered=0, passed=0, failed=0, skipped=0, exit_code=1, commands=commands)
     (run_dir / 'sources.json').write_text(json.dumps(manifest, indent=2) + '\n')
     try:
@@ -75,6 +75,13 @@ def main():
         code = run(common + ['--logger', 'trx;LogFileName=runtime.trx'], 'runtime', clean_env)
         result.update(counts(run_dir / 'runtime.trx'))
         result['runtime_exit_code'] = code
+        test_results = ET.parse(run_dir / 'runtime.trx').findall('t:Results/t:UnitTestResult', NS)
+        result['task_counts'] = {}
+        for task, prefix in [('FND-02', 'TEST_027_'), ('FND-03', 'TEST_008_'), ('FND-04', 'TEST_007_')]:
+            matched = [r for r in test_results if r.attrib.get('testName', '').startswith(prefix)]
+            result['task_counts'][task] = {'discovered': len(matched), 'passed': sum(r.attrib['outcome'] == 'Passed' for r in matched)}
+            if not matched or any(r.attrib['outcome'] != 'Passed' for r in matched):
+                raise ValueError('Missing or unsuccessful task tests: ' + task)
         if code != 0 or result['discovered'] <= 0 or result['passed'] != result['discovered'] or result['failed'] or result['skipped']:
             raise ValueError('Runtime gate failed (nonzero, failed, skipped or zero tests)')
         control_env = dict(clean_env, MYTHICAL_NEGATIVE_CONTROL='1')

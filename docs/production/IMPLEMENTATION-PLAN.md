@@ -1,6 +1,6 @@
 # Kế hoạch triển khai từ bộ tài liệu
 
-Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. FND-01 và DOC-01 đã có từ lần khởi tạo. Sprint 1 đang thực hiện FND-02; headless evidence và các gate còn pending được ghi trong backlog. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
+Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. FND-01 và DOC-01 đã có từ lần khởi tạo. Sprint 1 đã triển khai FND-02/03/04; headless evidence và các gate còn pending được ghi trong backlog. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
 
 ## Trình tự bắt đầu
 
