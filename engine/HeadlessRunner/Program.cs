@@ -12,15 +12,18 @@ namespace Game.Headless
                 Console.WriteLine(JsonSerializer.Serialize(new
                 {
                     project = "mythical_dnd",
-                    stage = "foundation-primitives",
+                    stage = "in-memory-command-pipeline",
+                    commandPipelineImplemented = true,
+                    durablePersistenceImplemented = false,
                     simulationImplemented = false,
                     runtimeLlm = false,
                     documentation = "docs/production/HANDOFF.md",
-                    nextTask = "FND-05"
+                    nextTask = "FND-09"
                 }, new JsonSerializerOptions { WriteIndented = true }));
                 return 0;
             }
-            Console.Error.WriteLine("Usage: Game.Headless --status");
+            if (args.Length == 1 && args[0] == "--transfer-demo") return TransferDemo.Run();
+            Console.Error.WriteLine("Usage: Game.Headless --status | --transfer-demo");
             Console.Error.WriteLine("Simulation and replay are not implemented. See docs/production/BACKLOG.csv.");
             return 2;
         }
