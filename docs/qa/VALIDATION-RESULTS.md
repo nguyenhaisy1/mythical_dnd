@@ -36,3 +36,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint 1 — 2026-10-15
 
 [Evidence](SPRINT-01-EVIDENCE.md): 70/70 C# Release tests, không skipped, negative control1failed/exit1 đúng yêu cầu; build6projects0warnings/errors. FND-02/03/04 headless accepted; scheduler/Unity/replay/gameplay vẫn pending.
+
+## Sprint2 — 2026-10-16
+
+[Evidence](SPRINT-02-EVIDENCE.md):124/124Release tests,0skip,negativecontrol1fail/exit1 đúng yêu cầu; CLI transfer+retry đạt; build6projects0warning/error. Scope in-memoryTransferResource FND05–08, không durability/Unity/replay.

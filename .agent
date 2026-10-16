@@ -1,6 +1,6 @@
 # MYTHICAL_DND — Bối cảnh dự án dành cho agent
 
-Cập nhật: 2026-10-15. Ngôn ngữ làm việc: tiếng Việt.
+Cập nhật: 2026-10-16. Ngôn ngữ làm việc: tiếng Việt.
 
 ## 1. Mục đích và nguồn tham chiếu
 
@@ -115,9 +115,9 @@ Yêu cầu mới đã cho phép xây lại bộ tài liệu đầy đủ và kh�
 
 Nguồn làm việc: `docs/gdd/modules/`, `docs/gdd/appendices/`. Mapping và checksum ở `docs/governance/SOURCE-COVERAGE.csv`; chỉ mục đề mục ở `SECTION-INDEX.csv`. Đọc `APPLICABLE-BASELINE.md` trước khi áp dụng đoạn nghiên cứu cũ. Ghi chú tích hợp nằm trong `tools/docs/integration-notes.json`; Master/modules được tái tạo bằng `tools/docs/build_docs.py`.
 
-Project theo hướng Module 28–29: `engine/` chứa 4 portable core libraries netstandard2.1 và headless host net10.0. SDK pin 10.0.401 để build scaffold. Unity mới có layout Assets, chưa bootstrap bằng Editor. Foundation đã thêm identity/time/codec/RNG primitives FND-02/03/04 và runner C# theo ADR-009/010; các assembly khác vẫn scaffold. Host `--status` xác nhận simulation chưa triển khai. Không có world engine, SQLite runtime, replay hay gameplay acceptance đã pass.
+Project theo hướng Module 28–29: `engine/` chứa 4 portable core libraries netstandard2.1 và headless host net10.0. SDK pin 10.0.401 để build scaffold. Unity mới có layout Assets, chưa bootstrap bằng Editor. Foundation đã thêm identity/time/codec/RNG primitives FND-02/03/04 và runner C# theo ADR-009/010; Domain có immutable world/rule và Application có in-memory command path Sprint2; Infrastructure vẫn scaffold. Host `--status` xác nhận simulation chưa triển khai. Không có world engine, SQLite runtime, replay hay gameplay acceptance đã pass.
 
-`docs/production/HANDOFF.md` là cửa vào phát triển; `BACKLOG.csv` có Foundation tasks FND-01–16 và VS-01–10. Sprint 1 triển khai FND-02/03/04; task code kế tiếp FND-05 World state/revision, xem sprint evidence và backlog trước khi nhận. `docs/qa/VALIDATION-RESULTS.md` ghi evidence thực tế; QA matrix ghi trạng thái từng requirement; TEST-027/007 và phần clock primitives của TEST-008 có headless evidence, không suy mọi runtime test đã pass.
+`docs/production/HANDOFF.md` là cửa vào phát triển; `BACKLOG.csv` có Foundation tasks FND-01–16 và VS-01–10. Sprint 1 triển khai FND-02/03/04; Sprint2 đã hiện thực FND05–08 transfer path; task kế tiếp FND09event/causal, xem sprint evidence và backlog trước khi nhận. `docs/qa/VALIDATION-RESULTS.md` ghi evidence thực tế; QA matrix ghi trạng thái từng requirement; TEST-027/007, clock primitives của TEST-008 và command24/25/26 transfer path có headless evidence, không suy mọi runtime test đã pass.
 
 Quyết định tích hợp: Bến Hạc giữ Phong Châu, dùng làm external boundary của slice Tam Giang; household Vạc Tòng và character Vạc Mộc có identity riêng. ID/tick/RNG/codec/reroll có baseline prototype tại ADR-008; provider/Unity, content production, balance và performance còn gates theo `OPEN-DECISIONS.csv`.
 
@@ -158,3 +158,7 @@ Khi user hỏi báo cáo, tổng hợp goal, spin, ai đang/đã làm gì, kết
 Chủ dự án xác nhận toàn bộ phát triển do AI thực hiện. Theo `docs/runbooks/AI-EXECUTION.md`: role backlog là trách nhiệm của AI, không chờ nhân sự con người; tự implement/test/review trong scope đã giao, ghi actor và evidence thật. Self-review không là independent review; automated playthrough không là human playtest. Sprint hiện tại: `docs/production/sprints/SPRINT-01.md`; yêu cầu hiện tại đã cho phép bắt đầu nền tảng, thay giới hạn chỉ tài liệu trước đây.
 
 Chủ dự án đã giao AI điều phối, chia/giao task và nghiệm thu toàn bộ Sprint 1 (2026-10-15). Được dùng subagent cho các task đã chia trong phạm vi sprint; ghi actor, ownership, review và evidence thật. Không mở sprint mới hoặc phát hành chỉ vì Sprint 1 đã hoàn tất.
+
+## Sprint 2 được giao — 2026-10-15
+
+Yêu cầu mới đã cho phép push Sprint1 và tự điều phối planning/breaktask/giao agent/triển khai/nghiệmthu Sprint2. Sprint hiện tại `docs/production/sprints/SPRINT-02.md`, scope FND05–08 in-memory command path; không tự nghiệmthu SQLite/Unity hoặc release. Sprint1 đã push origin/feature/sprint-01-primitives; PR/merge cần GitHub API auth, không bypass branch policy.

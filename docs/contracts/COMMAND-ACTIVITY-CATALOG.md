@@ -34,3 +34,11 @@ ChangeSet field paths allowlist: Assets `lots.on_hand`, `lots.reservations`, `it
 ## Receipt và acceptance
 
 Receipt: command_id, fingerprint, outcome, error_code nullable, before_revision, after_revision, committed_tick, ordered_event_ids, activity/job IDs nếu visible. Không chứa omniscient snapshot. Transfer mất điện trước commit không đổi hai lot; sau commit trước response retry không chuyển thêm lần nữa. Start→cancel giữ on_hand ban đầu, hết reservations/jobs. Start→complete mất đúng2 timber và tăng condition đúng200. Replay từ snapshot+commands phải tính lại result, không chép expected.json vào state. Kernel smoke data định nghĩa cả positive và negative cases.
+
+## Sprint 2 implementation — in-memory TransferResource
+
+[ADR-011](../adr/011-in-memory-command-pipeline.md) quy định API/diagnostics của path TransferResource. WorldSnapshot/RuleRegistry/Application pipeline có tests; các command repair/rights/advance còn pending. Auth principal do trusted host cấp (Player/NPC/Scheduler đều không bypass rule), không deserialize từ envelope. Source/destination cùng lot là validated no-op; household control dùng explicit authoritative owner refs.
+
+Prototype bổ sung INVALID_ENVELOPE/INVALID_PAYLOAD/COMMAND_UNKNOWN/PAYLOAD_VERSION_UNSUPPORTED/COMMODITY_MISMATCH/REF_NOT_ACTIVE. PROPOSAL_* và commit failures là system failures; không terminal rejection. Command_id/correlation token giới hạn ASCII alphanumeric đầu, tiếp theo alphanumeric hoặc `_ . : / -`, tối đa128ký tự; không dùng như entityID. Invalid commandID/auth rejection không persisted để tránh poisoning; valid authenticated input reject/noop lưu metadata. Public persistence schema/migration chưa được chốt từ DTO in-memory này.
+
+[Evidence Sprint2](../qa/SPRINT-02-EVIDENCE.md) tách atomic in-process publication khỏi durability FND11. Minimal transfer event records chưa là fullcausal/eventjournal FND09.

@@ -32,3 +32,7 @@ Ngày 2026-10-15 chủ dự án giao toàn bộ break task/giao task/nghiệm th
 ## Kết quả đóng sprint
 
 70/70 Release tests pass (32 identity,25 clock,13 RNG); negative control1fail/exit1 đúng yêu cầu; reviewer /root/review không phát hiện blocker. Unity/TEST-008 scheduler/full Foundation vẫn pending. Local scope complete; publish/PR integration chưa thực hiện.
+
+## Bàn giao Git cập nhật
+
+Sprint1 đãpush0315c66 lên origin/feature/sprint-01-primitives, GitHub CI success tại [run](https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/38700799347). Các dòng local/chưa publish phía trên mô tả thời điểm nghiệmthu ban đầu; PR merge vẫn pending GitHub API auth.

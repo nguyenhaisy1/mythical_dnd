@@ -40,3 +40,5 @@ Chưa có mutable authoritative world, scheduler, atomic command/storage commit,
 ## Bàn giao
 
 Next task FND-05 World state/revision, sau đó FND-06/07 theo dependency. Sprint 2 chưa tự khởi động. Code nằm trên branch tích hợp local feature/sprint-01-primitives; dev/main chưa nhận implementation qua PR, không suy local gate thành remote CI hoặc release.
+
+Cập nhật bàn giao: Sprint1 đãpush0315c66, CI GitHub success; xem [Sprint2 evidence](SPRINT-02-EVIDENCE.md) và WORKLOG. Các thông tin chưapush trong báo cáo trên là trạng thái lúc chạy local.

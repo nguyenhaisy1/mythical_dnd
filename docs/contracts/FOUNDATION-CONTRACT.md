@@ -4,7 +4,7 @@ Nguồn chi tiết: Modules 26, 27, 29. Tài liệu này thống nhất cách đ
 
 ## 1. Identity, versions và time
 
-`EntityId` định danh instance đã tồn tại trong world; `DefinitionId` định danh authored content. Không dùng display name hoặc ID tự tạo từ wall-clock làm identity replay. Entity ID allocator thuộc transaction; rollback không được để authoritative state đi tiếp với một allocation chỉ tồn tại nửa chừng. Codec identity-v1 và allocation vectors đã có trong [Identity Spec](IDENTITY-SPEC.md); C# implementation còn pending.
+`EntityId` định danh instance đã tồn tại trong world; `DefinitionId` định danh authored content. Không dùng display name hoặc ID tự tạo từ wall-clock làm identity replay. Entity ID allocator thuộc transaction; rollback không được để authoritative state đi tiếp với một allocation chỉ tồn tại nửa chừng. Codec identity-v1 và allocation vectors đã có trong [Identity Spec](IDENTITY-SPEC.md); C# primitive implementation và headless evidence đã có ở Sprint1.
 
 `WorldTick` là integer time authoritative; `WorldRevision` tăng khi commit. Tick unit prototype là một phút; lịch 360 ngày/năm theo [Time/Scheduler Spec](TIME-SCHEDULER-SPEC.md). FND-03 hiện thực và kiểm conversion/range/boundaries. Render frame time không làm world tiến lên nếu không có time command/scheduler step.
 
@@ -47,7 +47,7 @@ Domain Event diễn tả việc **đã xảy ra**. Có event ID, event type, agg
 
 RNG interface không có global singleton. Context gồm world seed, algorithm version, domain, decision type, occurrence ID, entity ID, draw index và stream ID nếu cần. UI, preview, search, log formatting không draw stream gameplay. Retries không được reroll cho đến khi có kết quả mong muốn.
 
-PCG32 trong nguồn là ứng viên cũ; ADR-008 chọn sha256-counter-v1 cho prototype, cùng codec mdc1 và bounded rejection sampling trong [Math/RNG Spec](DETERMINISTIC-MATH-RNG-SPEC.md). FND-04 phải hiện thực và đối chiếu vectors. Không viết `System.Random` rồi gọi là cross-runtime deterministic.
+PCG32 trong nguồn là ứng viên cũ; ADR-008 chọn sha256-counter-v1 cho prototype, cùng codec mdc1 và bounded rejection sampling trong [Math/RNG Spec](DETERMINISTIC-MATH-RNG-SPEC.md). FND-04 đã đối chiếu C# vectors trong Sprint1; Unity còn pending. Không viết `System.Random` rồi gọi là cross-runtime deterministic.
 
 Numeric rules có rounding/clamping/order rõ. Critical formulas cần integer/fixed-point hoặc một policy deterministic được chứng minh. Mọi coefficient prototype nằm trong versioned parameters, không rải hardcode trong content. Kiểm tra M27 trước khi đổi scale.
 
@@ -74,3 +74,7 @@ Foundation hoàn thành khi FND-02–16 có evidence phù hợp. Skeleton build,
 ## 8. Đặc tả áp dụng bổ sung
 
 [Identity](IDENTITY-SPEC.md), [Time/Scheduler](TIME-SCHEDULER-SPEC.md), [Math/RNG/Codec](DETERMINISTIC-MATH-RNG-SPEC.md), [Command/Activity Catalog](COMMAND-ACTIVITY-CATALOG.md), [Persistence/Save](PERSISTENCE-SAVE-SPEC.md) cụ thể hóa contract này theo ADR-008. Accepted mutation receipts thuộc state commit; rejected/no-op receipts được persist riêng, không tăng world revision. Chi tiết fingerprint/retry/hash ở catalog. Không để mỗi domain tự chọn reserve/refund hoặc rounding khác nhau.
+
+## Trạng thái Sprint2
+
+[ADR011](../adr/011-in-memory-command-pipeline.md): path TransferResource đã hiện thực trong bộ nhớ; rule/snapshot/receipt/invariant contracts được kiểm bằng tests. Mục transaction durable, jobs/events đầy đủ và knowledge projections phía trên vẫn là mục tiêu, chưa nghiệmthu. Xem [evidence](../qa/SPRINT-02-EVIDENCE.md).
