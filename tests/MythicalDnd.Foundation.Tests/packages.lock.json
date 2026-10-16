@@ -99,6 +99,19 @@
         "resolved": "13.0.3",
         "contentHash": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ=="
       },
+      "game.application": {
+        "type": "Project",
+        "dependencies": {
+          "Game.Domain": "[1.0.0, )",
+          "Game.Foundation": "[1.0.0, )"
+        }
+      },
+      "game.domain": {
+        "type": "Project",
+        "dependencies": {
+          "Game.Foundation": "[1.0.0, )"
+        }
+      },
       "game.foundation": {
         "type": "Project"
       }

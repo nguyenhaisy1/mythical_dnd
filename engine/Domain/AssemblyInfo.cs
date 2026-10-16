@@ -1,3 +1,3 @@
 using System.Reflection;
 
-[assembly: AssemblyMetadata("ImplementationStatus", "ScaffoldOnly")]
+[assembly: AssemblyMetadata("ImplementationStatus", "KernelWorldAndRules")]
