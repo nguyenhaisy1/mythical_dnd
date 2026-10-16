@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Game.Domain.Kernel;
+using Game.Application.Events;
 using Game.Foundation.Identity;
 using Game.Foundation.Random;
 using Game.Foundation.Time;
@@ -77,9 +78,10 @@ namespace Game.Application.CommandPipeline
         }
     }
 
-    /// <summary>Minimal committed fact for this transfer slice; not the FND-09 journal/event schema.</summary>
+    /// <summary>Transfer convenience view over its versioned committed event envelope.</summary>
     public sealed class CommittedTransfer
     {
+        public CommittedEvent Envelope { get; }
         public EntityId<Event> Id { get; }
         public ulong Revision { get; }
         public WorldTick Tick { get; }
@@ -92,6 +94,10 @@ namespace Game.Application.CommandPipeline
         {
             Id = id; Revision = revision; Tick = tick; CommandId = command.CommandId; CorrelationId = command.CorrelationId;
             SourceLotId = transfer.SourceLotId; DestinationLotId = transfer.DestinationLotId; Quantity = transfer.Quantity;
+            // This version names the Application-enforced transfer semantics, not arbitrary injected handler code.
+            Envelope = new CommittedEvent(id, "ResourceTransferred", transfer.SourceLotId.Value, tick, revision, 0,
+                command.CommandId, command.CorrelationId, "transfer-resource-v1", 1, new Dictionary<string, object?> {
+                    ["source_lot_id"] = SourceLotId.ToString(), ["destination_lot_id"] = DestinationLotId.ToString(), ["quantity"] = Quantity });
         }
     }
 
@@ -102,6 +108,7 @@ namespace Game.Application.CommandPipeline
         public IReadOnlyList<CommandReceipt> AcceptedReceipts { get; }
         public IReadOnlyList<CommandReceipt> MetadataReceipts { get; }
         public IReadOnlyList<CommittedTransfer> Events { get; }
+        public CommittedEventJournal Journal { get; }
         internal CommittedWorld(WorldSnapshot world, IEnumerable<CommandReceipt> accepted,
             IEnumerable<CommandReceipt> metadata, IEnumerable<CommittedTransfer> events)
         {
@@ -109,6 +116,7 @@ namespace Game.Application.CommandPipeline
             AcceptedReceipts = Array.AsReadOnly(accepted.ToArray());
             MetadataReceipts = Array.AsReadOnly(metadata.ToArray());
             Events = Array.AsReadOnly(events.ToArray());
+            Journal = new CommittedEventJournal(Events.Select(fact => fact.Envelope));
         }
     }
 

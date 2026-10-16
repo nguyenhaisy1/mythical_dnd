@@ -48,3 +48,7 @@ Chủ dự án đã giao AI điều phối, chia/giao task và nghiệm thu toà
 ## Sprint 2 được giao — 2026-10-15
 
 Yêu cầu mới đã cho phép push Sprint1 và tự điều phối planning/breaktask/giao agent/triển khai/nghiệmthu Sprint2. Sprint hiện tại `docs/production/sprints/SPRINT-02.md`, scope FND05–08 in-memory command path; không tự nghiệmthu SQLite/Unity hoặc release. Sprint1 đã push origin/feature/sprint-01-primitives; PR/merge cần GitHub API auth, không bypass branch policy.
+
+## Sprint 3 được giao — 2026-10-16
+
+User giao sprint mới với cùng workflow điều phối/chia task/subagents/triển khai/nghiệm thu/báo cáo. Sprint hiện hành [Sprint3](docs/production/sprints/SPRINT-03.md), SPIN-006, scope FND-09 event/causal model và consumer idempotency in-memory; FND-10 scheduler dành sprint tiếp theo. Sprint1/2 đã tích hợp dev qua PR#1/#2; GitHub API auth đã kiểm chứng. Không tự mở Sprint4 hoặc release.

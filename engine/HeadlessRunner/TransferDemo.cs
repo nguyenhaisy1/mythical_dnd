@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using Game.Application.CommandPipeline;
+using Game.Application.Events;
 using Game.Domain.Kernel;
 using Game.Foundation.Identity;
 using Game.Foundation.Time;
@@ -32,7 +33,22 @@ namespace Game.Headless
             var first = processor.Execute(command, principal);
             var retry = processor.Execute(command, principal);
             var result = processor.InspectCommitted();
-            bool valid = first.Outcome == CommandOutcome.Accepted && ReferenceEquals(first, retry)
+            var fact = result.Journal.Events[0];
+            var consumer = new InMemoryEventConsumer();
+            ProjectionState Project(ProjectionState state, CommittedEvent e)
+            {
+                state.Values.TryGetValue("transferred", out var total);
+                return new ProjectionState(new Dictionary<string, long> {
+                    ["transferred"] = checked(total + (long)e.Payload["quantity"]!) });
+            }
+            bool firstDelivery = consumer.Consume(fact, Project);
+            bool duplicateDelivery = consumer.Consume(fact, Project);
+            var projection = consumer.InspectCommitted();
+            bool causalValid = fact.CausationId == command.CommandId && fact.CorrelationId == command.CorrelationId
+                && result.Journal.QueryByCausation(command.CommandId).Count == 1
+                && firstDelivery && !duplicateDelivery && projection.Projection.Values["transferred"] == 3
+                && projection.AppliedFingerprints.Count == 1;
+            bool valid = causalValid && first.Outcome == CommandOutcome.Accepted && ReferenceEquals(first, retry)
                 && result.World.GetLot(source).OnHand == 7 && result.World.GetLot(destination).OnHand == 3
                 && result.World.Revision.Value == 2 && result.Events.Count == 1 && result.AcceptedReceipts.Count == 1;
             Console.WriteLine(JsonSerializer.Serialize(new {
@@ -40,7 +56,10 @@ namespace Game.Headless
                 sourceBefore = 10, destinationBefore = 0,
                 sourceAfter = result.World.GetLot(source).OnHand, destinationAfter = result.World.GetLot(destination).OnHand,
                 revision = result.World.Revision.Value, events = result.Events.Count,
-                acceptedReceipts = result.AcceptedReceipts.Count, retryReturnsOriginalReceipt = ReferenceEquals(first, retry)
+                acceptedReceipts = result.AcceptedReceipts.Count, retryReturnsOriginalReceipt = ReferenceEquals(first, retry),
+                eventCausation = fact.CausationId, eventRuleVersion = fact.RuleVersion,
+                projectionTransferred = projection.Projection.Values["transferred"],
+                duplicateDeliveryApplied = duplicateDelivery, consumerCheckpoints = projection.AppliedFingerprints.Count
             }, new JsonSerializerOptions { WriteIndented = true }));
             return valid ? 0 : 1;
         }

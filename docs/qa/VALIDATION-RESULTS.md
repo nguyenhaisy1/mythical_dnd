@@ -40,3 +40,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint2 — 2026-10-16
 
 [Evidence](SPRINT-02-EVIDENCE.md):124/124Release tests,0skip,negativecontrol1fail/exit1 đúng yêu cầu; CLI transfer+retry đạt; build6projects0warning/error. Scope in-memoryTransferResource FND05–08, không durability/Unity/replay.
+
+## Sprint3 — 2026-10-16
+
+[Evidence](SPRINT-03-EVIDENCE.md):138/138 Release tests (124 regression +14 event cases),0skip; negative control1fail/exit1; CLI transfer và duplicate event consumer đạt; build6projects0warning/error. FND09 transfer journal/causal trace và diagnostic projection/checkpoint trong bộ nhớ; không durability/scheduler/replay/Unity.

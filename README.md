@@ -2,7 +2,7 @@
 
 Living World Narrative RPG lấy chất liệu Văn Lang–Âu Lạc. Nội dung, nhân quả, nghề nghiệp, quan hệ và cuộc đời nhân vật là trọng tâm; gameplay runtime chạy offline bằng code/rules. Tên game hiện là working title.
 
-**Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Đã có primitives Sprint 1 và path TransferResource in-memory Sprint 2; headless host có demo thực thi. Simulation, persistence, replay và Unity client chưa được triển khai.
+**Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Đã có primitives Sprint 1 và path TransferResource in-memory Sprint 2; Sprint3 có event journal/causal trace và idempotent consumer in-memory; headless host có demo thực thi. Simulation, persistence, replay và Unity client chưa được triển khai.
 
 ## Bắt đầu đọc
 
@@ -27,7 +27,7 @@ python3 tools/tests/run_runtime.py
 dotnet run --project engine/HeadlessRunner/Game.Headless.csproj --configuration Release --no-build -- --status
 ```
 
-`--status` trả `simulationImplemented: false`. Lệnh simulate/replay không được giả làm thành công khi chưa triển khai. FND-02–08 có primitive/transfer-path implementation và headless gates; bước tiếp theo **FND-09 event/causal model**. Unity conformance vẫn pending FND-16; xem backlog trước khi mở rộng.
+`--status` trả `simulationImplemented: false`. Lệnh simulate/replay không được giả làm thành công khi chưa triển khai. FND-02–09 có primitive/transfer/event implementation và headless gates; bước tiếp theo **FND-10 scheduler**. Xem [nghiệm thu Sprint3](docs/qa/SPRINT-03-EVIDENCE.md) cho giới hạn consumer in-memory. Unity conformance vẫn pending FND-16; xem backlog trước khi mở rộng.
 
 ## Bố trí dự án
 

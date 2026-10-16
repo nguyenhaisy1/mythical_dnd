@@ -78,3 +78,7 @@ Foundation hoàn thành khi FND-02–16 có evidence phù hợp. Skeleton build,
 ## Trạng thái Sprint2
 
 [ADR011](../adr/011-in-memory-command-pipeline.md): path TransferResource đã hiện thực trong bộ nhớ; rule/snapshot/receipt/invariant contracts được kiểm bằng tests. Mục transaction durable, jobs/events đầy đủ và knowledge projections phía trên vẫn là mục tiêu, chưa nghiệmthu. Xem [evidence](../qa/SPRINT-02-EVIDENCE.md).
+
+## Sprint3 event-v1
+
+[ADR012](../adr/012-committed-event-model.md) cụ thể hóa envelope/journal cho TransferResource và consumer projection/checkpoint in-memory. Causation trỏ command; correlation chỉ phục vụ trusted trace. Fan-out/cycle scheduling và durable publication vẫn pending FND-10/11; consumer này không thay knowledge projection hoặc gameplay reward/rumor.

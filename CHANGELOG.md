@@ -6,6 +6,13 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint 3 committed events — 2026-10-16
+
+- Thêm event-v1 cho transfer: causal/correlation metadata, rule/schema version, deterministic journal và truy vấn diagnostics.
+- Thêm consumer projection/checkpoint bất biến trong bộ nhớ; duplicate delivery không apply lại, collision và delivery sai thứ tự bị reject.
+- Nâng runtime gate TEST-037, giữ regression và negative control; tài liệu/ADR012/evidence đồng bộ.
+- Compatibility: giữ API transfer cũ; rule version transfer-resource-v1 mô tả Application invariant semantics. Chưa có save migration, durable delivery, scheduler, command replay hay Unity acceptance.
+
 ### Sprint 2 command path — 2026-10-16
 
 - Thêm immutable kernel world/revision, typed approved rule registry và TransferResource cho actor/household ownership.

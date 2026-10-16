@@ -43,7 +43,7 @@ def main():
     args = parser.parse_args()
     destination = ROOT / 'tests/results'
     destination.mkdir(parents=True, exist_ok=True)
-    run_dir = Path(tempfile.mkdtemp(prefix='sprint02-', dir=destination))
+    run_dir = Path(tempfile.mkdtemp(prefix='sprint03-', dir=destination))
     started = datetime.now(timezone.utc).isoformat()
     manifest = source_manifest()
     commands = []
@@ -56,7 +56,7 @@ def main():
         print(process.stdout, flush=True)
         return process.returncode
 
-    result = dict(scope='headless-sprint02-in-memory', task_ids=['FND-02', 'FND-03', 'FND-04', 'FND-05', 'FND-06', 'FND-07', 'FND-08'], test_ids=['TEST-027', 'TEST-008-primitives', 'TEST-007', 'TEST-024', 'TEST-025', 'TEST-026', 'FND-08-in-memory'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
+    result = dict(scope='headless-sprint03-in-memory', task_ids=['FND-02', 'FND-03', 'FND-04', 'FND-05', 'FND-06', 'FND-07', 'FND-08', 'FND-09'], test_ids=['TEST-027', 'TEST-008-primitives', 'TEST-007', 'TEST-024', 'TEST-025', 'TEST-026', 'FND-08-in-memory', 'TEST-037-in-memory'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
                   utc_started=started, os=platform.platform(), architecture=platform.machine(),
                   runtime_version=None, unity_version=None, backend=None,
                   fixture_versions={'identity': 'identity-v1', 'clock': 'clock-v1', 'codec': 'mdc1', 'rng': 'sha256-counter-v1', 'scenario': 1},
@@ -77,7 +77,7 @@ def main():
         result['runtime_exit_code'] = code
         test_results = ET.parse(run_dir / 'runtime.trx').findall('t:Results/t:UnitTestResult', NS)
         result['task_counts'] = {}
-        for task, prefix in [('FND-02', 'TEST_027_'), ('FND-03', 'TEST_008_'), ('FND-04', 'TEST_007_'), ('FND-05', 'FND_05_'), ('FND-06', 'FND_06_'), ('FND-07/idempotency', 'TEST_024_'), ('FND-07/mismatch', 'TEST_025_'), ('FND-07/stale', 'TEST_026_'), ('FND-08', 'FND_08_')]:
+        for task, prefix in [('FND-02', 'TEST_027_'), ('FND-03', 'TEST_008_'), ('FND-04', 'TEST_007_'), ('FND-05', 'FND_05_'), ('FND-06', 'FND_06_'), ('FND-07/idempotency', 'TEST_024_'), ('FND-07/mismatch', 'TEST_025_'), ('FND-07/stale', 'TEST_026_'), ('FND-08', 'FND_08_'), ('FND-09', 'TEST_037_')]:
             matched = [r for r in test_results if r.attrib.get('testName', '').startswith(prefix)]
             result['task_counts'][task] = {'discovered': len(matched), 'passed': sum(r.attrib['outcome'] == 'Passed' for r in matched)}
             if not matched or any(r.attrib['outcome'] != 'Passed' for r in matched):
@@ -93,7 +93,7 @@ def main():
         demo_code = run(['run', '--project', 'engine/HeadlessRunner/Game.Headless.csproj', '-c', 'Release', '--no-build', '--', '--transfer-demo'], 'transfer-demo')
         demo = json.loads((run_dir / 'transfer-demo.log').read_text())
         result['transfer_demo'] = dict(demo, exit_code=demo_code)
-        if demo_code != 0 or demo.get('passed') is not True or demo.get('sourceAfter') != 7 or demo.get('destinationAfter') != 3 or demo.get('events') != 1 or demo.get('revision') != 2 or demo.get('acceptedReceipts') != 1 or demo.get('retryReturnsOriginalReceipt') is not True:
+        if demo_code != 0 or demo.get('passed') is not True or demo.get('sourceAfter') != 7 or demo.get('destinationAfter') != 3 or demo.get('events') != 1 or demo.get('revision') != 2 or demo.get('acceptedReceipts') != 1 or demo.get('retryReturnsOriginalReceipt') is not True or demo.get('projectionTransferred') != 3 or demo.get('duplicateDeliveryApplied') is not False or demo.get('consumerCheckpoints') != 1:
             raise ValueError('Headless transfer demo failed')
         if source_manifest() != manifest:
             raise ValueError('Sources changed during run')
