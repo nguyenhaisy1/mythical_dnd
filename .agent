@@ -117,7 +117,7 @@ Nguồn làm việc: `docs/gdd/modules/`, `docs/gdd/appendices/`. Mapping và ch
 
 Project theo hướng Module 28–29: `engine/` chứa 4 portable core libraries netstandard2.1 và headless host net10.0. SDK pin 10.0.401 để build scaffold. Unity mới có layout Assets, chưa bootstrap bằng Editor. Foundation đã thêm identity/time/codec/RNG primitives FND-02/03/04 và runner C# theo ADR-009/010; Domain có immutable world/rule và Application có in-memory command path Sprint2; Infrastructure vẫn scaffold. Host `--status` xác nhận simulation chưa triển khai. Không có world engine, SQLite runtime, replay hay gameplay acceptance đã pass.
 
-`docs/production/HANDOFF.md` là cửa vào phát triển; `BACKLOG.csv` có Foundation tasks FND-01–16 và VS-01–10. Sprint 1 triển khai FND-02/03/04; Sprint2 đã hiện thực FND05–08 transfer path; task kế tiếp FND09event/causal, xem sprint evidence và backlog trước khi nhận. `docs/qa/VALIDATION-RESULTS.md` ghi evidence thực tế; QA matrix ghi trạng thái từng requirement; TEST-027/007, clock primitives của TEST-008 và command24/25/26 transfer path có headless evidence, không suy mọi runtime test đã pass.
+`docs/production/HANDOFF.md` là cửa vào phát triển; `BACKLOG.csv` có Foundation tasks FND-01–16 và VS-01–10. Sprint 1 triển khai FND-02/03/04; Sprint2 đã hiện thực FND05–08 transfer path; Sprint3 hiện thực FND09event/causal và consumer in-memory; task kế tiếp FND10scheduler, xem sprint evidence và backlog trước khi nhận. `docs/qa/VALIDATION-RESULTS.md` ghi evidence thực tế; QA matrix ghi trạng thái từng requirement; TEST-027/007, clock primitives của TEST-008 và command24/25/26 transfer path có headless evidence, không suy mọi runtime test đã pass.
 
 Quyết định tích hợp: Bến Hạc giữ Phong Châu, dùng làm external boundary của slice Tam Giang; household Vạc Tòng và character Vạc Mộc có identity riêng. ID/tick/RNG/codec/reroll có baseline prototype tại ADR-008; provider/Unity, content production, balance và performance còn gates theo `OPEN-DECISIONS.csv`.
 
@@ -162,3 +162,7 @@ Chủ dự án đã giao AI điều phối, chia/giao task và nghiệm thu toà
 ## Sprint 2 được giao — 2026-10-15
 
 Yêu cầu mới đã cho phép push Sprint1 và tự điều phối planning/breaktask/giao agent/triển khai/nghiệmthu Sprint2. Sprint hiện tại `docs/production/sprints/SPRINT-02.md`, scope FND05–08 in-memory command path; không tự nghiệmthu SQLite/Unity hoặc release. Sprint1 đã push origin/feature/sprint-01-primitives; PR/merge cần GitHub API auth, không bypass branch policy.
+
+## Sprint 3 được giao — 2026-10-16
+
+User giao sprint mới với cùng workflow điều phối/chia task/subagents/triển khai/nghiệm thu/báo cáo. Sprint hiện hành [Sprint3](docs/production/sprints/SPRINT-03.md), SPIN-006, scope FND-09 event/causal model và consumer idempotency in-memory; FND-10 scheduler dành sprint tiếp theo. Sprint1/2 đã tích hợp dev qua PR#1/#2; GitHub API auth đã kiểm chứng. Không tự mở Sprint4 hoặc release.

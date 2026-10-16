@@ -12,13 +12,13 @@ namespace Game.Headless
                 Console.WriteLine(JsonSerializer.Serialize(new
                 {
                     project = "mythical_dnd",
-                    stage = "in-memory-command-pipeline",
+                    stage = "in-memory-causal-events",
                     commandPipelineImplemented = true,
                     durablePersistenceImplemented = false,
                     simulationImplemented = false,
                     runtimeLlm = false,
                     documentation = "docs/production/HANDOFF.md",
-                    nextTask = "FND-09"
+                    nextTask = "FND-10"
                 }, new JsonSerializerOptions { WriteIndented = true }));
                 return 0;
             }

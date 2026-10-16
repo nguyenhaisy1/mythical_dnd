@@ -19,7 +19,7 @@ Nội dung nghiên cứu không bị thay bằng bản tóm tắt. Phần mô t�
 
 ## Sẵn sàng bắt đầu ở đâu?
 
-Sprint 1 có code/tests identity/time/codec/RNG; xem [sprint evidence](../qa/SPRINT-01-EVIDENCE.md) và backlog. Sprint2 có WorldSnapshot/rules/command/invariant path in-memory, xem [evidence Sprint2](../qa/SPRINT-02-EVIDENCE.md). Task tiếp theo FND-09; durable persistence/scheduler/replay/Unity chưa hoàn thành. Không có P0 ở mức “thiếu toàn bộ thiết kế” buộc phải viết thêm module; các lựa chọn kỹ thuật còn mở phải được xử lý trong task tương ứng trước khi merge feature phụ thuộc.
+Sprint 1 có code/tests identity/time/codec/RNG; xem [sprint evidence](../qa/SPRINT-01-EVIDENCE.md) và backlog. Sprint2 có WorldSnapshot/rules/command/invariant path in-memory, xem [evidence Sprint2](../qa/SPRINT-02-EVIDENCE.md). Sprint3 có event-v1/causal journal và idempotent diagnostic consumer, xem [evidence Sprint3](../qa/SPRINT-03-EVIDENCE.md). Task tiếp theo FND-10; durable persistence/scheduler/replay/Unity chưa hoàn thành. Không có P0 ở mức “thiếu toàn bộ thiết kế” buộc phải viết thêm module; các lựa chọn kỹ thuật còn mở phải được xử lý trong task tương ứng trước khi merge feature phụ thuộc.
 
 Chưa sẵn sàng tuyên bố Foundation hoàn thành, Unity chạy được, full game balance ổn hoặc full-production content đủ. Xem `OPEN-DECISIONS.csv` và kết quả kiểm tra thực tế. Khả năng 1.000 nhân vật là mục tiêu sản phẩm, không là test đã pass.
 

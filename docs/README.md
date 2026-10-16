@@ -33,3 +33,7 @@ Sprint đã nghiệm thu local: [SPRINT-01](production/sprints/SPRINT-01.md). Ru
 [Nghiệm thu Sprint 1](qa/SPRINT-01-EVIDENCE.md): identity/time/codec/RNG và các giới hạn.
 
 [Sprint2 planning/acceptance](production/sprints/SPRINT-02.md), [ADR011](adr/011-in-memory-command-pipeline.md) và [evidence](qa/SPRINT-02-EVIDENCE.md) mô tả command path in-memory mới.
+
+[Sprint3 planning/acceptance](production/sprints/SPRINT-03.md), [ADR012](adr/012-committed-event-model.md): event-v1 và consumer idempotency in-memory.
+
+[Nghiệm thu Sprint3](qa/SPRINT-03-EVIDENCE.md): 138 headless tests, event metadata/trace và idempotent consumer; scheduler là bước tiếp theo.

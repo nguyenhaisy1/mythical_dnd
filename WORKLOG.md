@@ -284,3 +284,138 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Checks source36files/handoff432links/52requirements/28tasks/reference/vectors/architecture/diff đạt. Export tiếp theo từ source cuối, không tạo ZIP.
 - Sprint1 GitHub CI public API đã xác minh success trên0315c66: https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/38700799347 . Chưa có gh API auth tạo/mergePR; dev chỉ baseline94b0e53. Sprint2 branch kế thừa Sprint1, sẽ push và xác minh riêng; main/tag/release không thay.
 - Limits: in-memoryTransferResource không durability/fullcausal/scheduler/replay/Unity. RNG context alias mapping phải chốt trước stochasticcommands; transfer không draw. Không activeblocker cho scope codeSprint2; PRintegration còn thiếuGitHubauth.
+
+
+### EVT-00017 | SPIN-004 | GIT — Sprint 2 đã push và CI GitHub success đúng SHA
+
+<!-- worklog: {"id": "EVT-00017", "spin": "SPIN-004", "event": "GIT", "at": "2026-10-16T08:58:48+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T08:58:48+07:00
+- Actor: /root
+
+- Sprint2 implementation commits72e1d12(world/rules),1227a4a(command/demo),acceptance9e3d761.
+- Đã push origin/feature/sprint-02-command-pipeline; git ls-remote SHA9e3d7616ecd16b8701acd350fdf794717668ef5c khớp localHEAD. CI public API xác minh completed/success trên đúngSHA: https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/38837884070 .
+- Sprint1 origin/feature/sprint-01-primitives0315c66 cũng đãpush/CIpass; origin/dev chỉ baseline94b0e53. gh auth status kiểm lại16/10 vẫn chưa đăngnhập. Không tạo PR/merge hoặc directpush implementation vào dev để né policy. main/tag/release không đổi.
+- Các event journal ghi saucommit/push vẫn local, đưa vào commit kế tiếp theo policy, không amend hoặc commit vòng lặp để tự ghiSHA.
+
+
+### EVT-00018 | SPIN-004 | RESULT — Nghiệm thu Sprint 2 — 124 tests, demo và remote CI đạt
+
+<!-- worklog: {"id": "EVT-00018", "spin": "SPIN-004", "event": "RESULT", "at": "2026-10-16T08:58:48+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T08:58:48+07:00
+- Actor: /root
+
+- Outcome Sprint2 scope headless/in-memory TransferResource đạt. Đã planning/breaktask/giao2agent implementation/reviewagent riêng, root tích hợp và nghiệmthu. S2-01–06 hoàn tất theo sprintbrief; FND05–08 được ghi accepted đúng kernel/transfer subset.
+- Runtime124/124tests pass(70Sprint1regression,13worldrule,41pipeline),0skip,negativecontrol1fail/exit1 đúngyêucầu. Releasebuild6projects0warnings/errors; demo10/0→7/3,revision2,event1,acceptedreceipt1,retryoriginal=true. Final evidence tests/results/sprint02-_g7_ufsp/evidence.json,sourcefingerprint khớp.
+- /root/s2_world,/root/s2_pipeline hoàn tất vùngcode; /root/s2_review read-only source/tests review không cònblocker. Root có reviewdiff và chạy finalgate. Reviewer requestedcases authority/metadata/nonemptyRNG/malicioushandler đã có.
+- Docs/ADR011/sprintbrief/architecture/baselinehandoff/backlog/testmatrix/README/changelog/runner/CI đồngbộ. Checks nguồn36files,handoff432links/52req/28tasks,reference/vectors/architecture/diff đạt. Exportcheck137sourceinputs,14HTML-DOCX,30titles,6156anchors,123tables/navigation đạt; khôngZIP.
+- Git đãpush9e3d761+CIpass theoEVT Git ởtrên. PRintegration cònthiếuGitHubAPIauth; khôngđổi main/release. Đây khôngphải blocker của runtime scope nhưng còn bàn giaoGit cần hoàn tất khi cóauth.
+- Limits: khôngdurability/processcrash/SQLite/fullcausaljournal/scheduler/replay/Unity hoặc gameplayplaytest. RNGstreams chỉ bảo toàn trongtransfer; contextalias mapping phải chốt trước stochasticcommands. Next FND09event/causal rồi FND10scheduler; Sprint3 chưa mở.
+
+
+### EVT-00019 | SPIN-004 | CLOSE — Đóng SPIN-004 và Sprint 2 — finished
+
+<!-- worklog: {"id": "EVT-00019", "spin": "SPIN-004", "event": "CLOSE", "at": "2026-10-16T08:58:48+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T08:58:48+07:00
+- Actor: /root
+
+- SPIN-004 finished; Sprint2 completed trong phạmvi in-memory đãchốt. Các actor /root,/root/s2_world,/root/s2_pipeline,/root/s2_review hoàn tất assignment, khôngcòn runtimeblocker hoặc task triểnkhaiđangchạy của sprint.
+- Báocáo chính docs/qa/SPRINT-02-EVIDENCE.md; kếhoạch/breaktask docs/production/sprints/SPRINT-02.md. Branch feature/sprint-02-command-pipeline remoteHEAD9e3d761; chỉ journal finalevents chưa commit.
+- Bước kế tiếp FND09/fullcausal events và FND10scheduler; báo kếtquả cho user, không tự mởSprint3. PRmerge vềdev chưa thực hiện do GitHubCLI chưa đăngnhập.
+
+
+### EVT-00020 | SPIN-005 | OPEN — Thiết lập GitHub MCP cho Codex
+
+<!-- worklog: {"id": "EVT-00020", "spin": "SPIN-005", "event": "OPEN", "at": "2026-10-16T09:18:34+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T09:18:34+07:00
+- Actor: /root
+
+- Goal: kết nối GitHub MCP theo yêu cầu user trước sprint kế tiếp. /root kiểm plugin state và Codex MCP CLI; GitHub plugin hiện installed=false, MCP list ban đầu chưa có server.
+- Đã đối chiếu official GitHub install-codex guide và OpenAI MCP docs. Đã chạy codex mcp add github --url https://api.githubcopilot.com/mcp/ --bearer-token-env-var GITHUB_PAT_TOKEN; CLI xác nhận added global server.
+- Verification sanitized: namegithub,enabledtrue,transport remote official URL,auth_statusbearer_token. GITHUB_PAT_TOKEN chưa có trong process hiện tại, chưa handshake/tool discovery hoặc authenticated repository access. Auth_status là loại cơ chế cấu hình, không bằng chứng đăng nhập thành công.
+- Token không được đưa vào chat/config/repository/log. User cần tạo PAT phù hợp repository và cung cấp qua environment của process Codex mới; GitHub CLI auth là session riêng, không tự coi đã đăng nhập gh.
+- Scope chỉ môi trường cá nhân và journal; không sửa runtime/game docs, không merge/push/tag/release. Phần cấu hình hoàn tất; phần xác thực/tool check chờ credential từ user ở máy cục bộ.
+
+
+### EVT-00021 | SPIN-005 | RESULT — GitHub MCP đã cấu hình; xác thực chưa hoàn tất
+
+<!-- worklog: {"id": "EVT-00021", "spin": "SPIN-005", "event": "RESULT", "at": "2026-10-16T09:18:34+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T09:18:34+07:00
+- Actor: /root
+
+- Goal: kết nối GitHub MCP theo yêu cầu user trước sprint kế tiếp. /root kiểm plugin state và Codex MCP CLI; GitHub plugin hiện installed=false, MCP list ban đầu chưa có server.
+- Đã đối chiếu official GitHub install-codex guide và OpenAI MCP docs. Đã chạy codex mcp add github --url https://api.githubcopilot.com/mcp/ --bearer-token-env-var GITHUB_PAT_TOKEN; CLI xác nhận added global server.
+- Verification sanitized: namegithub,enabledtrue,transport remote official URL,auth_statusbearer_token. GITHUB_PAT_TOKEN chưa có trong process hiện tại, chưa handshake/tool discovery hoặc authenticated repository access. Auth_status là loại cơ chế cấu hình, không bằng chứng đăng nhập thành công.
+- Token không được đưa vào chat/config/repository/log. User cần tạo PAT phù hợp repository và cung cấp qua environment của process Codex mới; GitHub CLI auth là session riêng, không tự coi đã đăng nhập gh.
+- Scope chỉ môi trường cá nhân và journal; không sửa runtime/game docs, không merge/push/tag/release. Phần cấu hình hoàn tất; phần xác thực/tool check chờ credential từ user ở máy cục bộ.
+
+
+### EVT-00022 | SPIN-005 | RESULT — GitHub MCP cài xong và xác thực read-tool thành công
+
+<!-- worklog: {"id": "EVT-00022", "spin": "SPIN-005", "event": "RESULT", "at": "2026-10-16T10:20:18+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T10:20:18+07:00
+- Actor: /root
+
+- User cung cấp credential và yêu cầu tự hoàn tất cài GitHub MCP. /root xác thực API được tài khoản nguyenhaisy1 và quyền truy cập repository mythical_dnd; không ghi token vào journal/tool output/repository.
+- Cài official github/github-mcp-server v2.0.2 native Linux x86_64 ngoài repository; SHA256 archive đối chiếu release metadata. Binary ~/.local/share/mythical-tools/github-mcp-server/2.0.2/github-mcp-server.
+- Credential lưu riêng ~/.config/mythical_dnd/credentials/github-token mode0600, directory0700. Launcher ~/.local/share/mythical-tools/github-mcp-launch.sh đọc credential vào env riêng của process server; config Codex chỉ chứa launcher path, không chứa token.
+- Đổi github MCP entry từ remote/env-only chưa có credential sang official local stdio server, toolsets context,repos,pull_requests,actions. codex mcp get xác minh enabledtrue và đúng launcher.
+- Verification thật bằng MCP initialize/notifications/tools/list/tools/call: servergithub-mcp-server2.0.2,37tools,get_me authenticatedOK,get_file_contents README.md trên nguyenhaisy1/mythical_dnd mainOK. create/mergePR tools hiện diện; chưa kiểm write bằng mutation và không tạo/mergePR.
+- Token đã xuất hiện trong chat: đã khuyến nghị thu hồi/thay mới; có helper update-github-token.py dùng getpass/validate account/atomic0600save để user thay kín tại Terminal. Không coi file0600 là encrypted secret vault. Không dùng tool command-logging.
+- Session Codex hiện tại chưa hot-load toolset mới; mở lại Codex/phiên mới để nạp github MCP. CLI/server đã handshake xác minh, không cần token env ngoài mỗi lần chạy. gh CLI auth là riêng, không tự tuyên bố gh đã login.
+
+
+### EVT-00023 | SPIN-005 | CLOSE — Đóng SPIN-005 — GitHub MCP setup finished
+
+<!-- worklog: {"id": "EVT-00023", "spin": "SPIN-005", "event": "CLOSE", "at": "2026-10-16T10:20:18+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T10:20:18+07:00
+- Actor: /root
+
+- Outcome finished cho cài/cấu hình/xác thực GitHub MCP trên máy. /root hoàn tất không có subagent. MCP test thành công thực tế37tools và readrepo.
+- User cần mở lại Codex để session nạp cấu hình mới; cần rotate token đã gửi trong chat qua helper nhập kín. Không còn thiếu credential ở server hiện tại.
+- Không thao tác PR/merge/Gitpush hoặc sprint runtime trong spin này. WORKLOG events mới còn local theo journalpolicy, sẽ đưa vào commit phù hợp tiếp theo.
+
+
+### EVT-00024 | SPIN-006 | OPEN — Mở Sprint 3 — committed events và causal trace
+
+<!-- worklog: {"id": "EVT-00024", "spin": "SPIN-006", "event": "OPEN", "at": "2026-10-16T10:26:21+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T10:26:21+07:00
+- Actor: /root
+
+- User giao sprint mới với workflow tự điều phối/triển khai/nghiệm thu/báo cáo. Sprint3 scope FND-09 committed event envelope, causal trace, ordering, idempotent in-memory consumers; FND-10 scheduler dành sprint sau. Không nghiệm thu SQLite/Unity/replay.
+- /root đã kiểm evidence Sprint1/2, CI đúng head và tạo/merge PR#1, PR#2 vào dev bằng GitHub API. Dùng merge commit giữ ancestry Sprint2; dev 190d8d9. Không sửa main/tag/release.
+- Branch mới feature/sprint-03-causal-events từ dev đã tích hợp. Giữ nguyên WORKLOG local của sprint/MCP trước và mang sang branch mới có chủ đích để commit trong bàn giao.
+- /root điều phối/spec/docs/integration; sẽ giao implementer events và reviewer độc lập, ghi assignment sau khi spawn.
+
+
+### EVT-00025 | SPIN-006 | ASSIGN — Giao FND09 và chốt phạm vi Sprint3
+
+<!-- worklog: {"id": "EVT-00025", "spin": "SPIN-006", "event": "ASSIGN", "at": "2026-10-16T10:27:54+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T10:27:54+07:00
+- Actor: /root
+
+- /root/s3_events triển khai FND09 trong Application pipeline/events và EventTests; không sửa docs/Git. /root chốt ADR012, sprint brief, runner/docs/Git. Review độc lập sẽ giao khi code sẵn sàng.
+- PR#1 merge aa3326e; PR#2 merge190d8d9. Branch mới tạo trực tiếp từ origin/dev sau khi switch local dev bị chặn do WORKLOG dirty; không stash/reset, WORKLOG được bảo toàn. Đây là xác nhận trạng thái branch sau OPEN.
+- Scope consumer minh chứng projection/checkpoint in-memory; không nhận scheduler/reward/rumor chưa implemented là nghiệm thu đầy đủ.
+
+
+### EVT-00026 | SPIN-006 | RESULT — Sprint3 runtime và review đạt — 138 tests
+
+<!-- worklog: {"id": "EVT-00026", "spin": "SPIN-006", "event": "RESULT", "at": "2026-10-16T12:14:41+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T12:14:41+07:00
+- Actor: /root
+
+- /root/s3_events hoàn tất FND09 event-v1/causal journal + idempotent immutable projection/checkpoint consumer. /root/s3_review independent source review phát hiện cross-world guards, đã sửa; thêm assertions old duplicate/schema/payload. Final review không còn blocker; reviewer không tự chạy suite riêng.
+- /root tích hợp CLI demo/runner/CI, ADR012/sprintbrief/backlog/matrix/handoff/README/agent/changelog. Full gate cuối tests/results/sprint03-dy8e1032/evidence.json:138/138passed (124regression+14event),0skip; negativecontrol1failed/exit1; Releasebuild6projects0warnings/errors. Fingerprint sha256:5d9cf70e6f003f7b06dfe3c927a0ca4917253a12b0e0c8cba2c3828b51a4ff08 khớp source hiện tại.
+- CLI10/0→7/3,1event/receipt, retryoriginal=true; duplicate consumer delivery projection3/checkpoint1/duplicateApplied=false. Consumer collision/order/cross-world/tick/reentry/failure/retry/immutability có tests.
+- Docs source36files/handoff442links/52requirements/28tasks; reference/vectors/architecture/diff đạt. Export đang regenerate từ nguồn cuối, khôngZIP. Credential scan versionablefiles sạch, không ghi secret.
+- Scope accepted in-memory FND09 transfer/diagnostic consumer. Không durable delivery/processcrash, scheduler/fanout/cycle, gameplayreward/rumor, replay/Unity. Next FND10; chưa mởSprint4.
+
+
+### EVT-00027 | SPIN-006 | PROGRESS — Hoàn tất docs/export và chuẩn bị tích hợp Git
+
+<!-- worklog: {"id": "EVT-00027", "spin": "SPIN-006", "event": "PROGRESS", "at": "2026-10-16T12:15:32+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T12:15:32+07:00
+- Actor: /root
+
+- Export cuối đã tái tạo7HTML+7DOCX; checker140sourceinputs,14files,30titles,6156anchors,123tables/navigationvalid. KhôngPDF/ZIP; artifactsignored. Không phải visual/gameplay acceptance.
+- Sources runtime fingerprint vẫn khớp evidence cuối. Scope diff đãreview; chuẩn bị commit/push feature/sprint-03-causal-events và PR vào dev. Main/tag/release không thay.

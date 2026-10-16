@@ -12,7 +12,7 @@ Baseline từ Modules 24–29, cụ thể hóa trong [Foundation Contract](docs/
 | Game.Infrastructure | netstandard2.1 | Persistence/content/diagnostics adapters | Foundation, Domain, Application |
 | Game.Headless | net10.0 | Composition root, CLI | Application, Infrastructure |
 
-Foundation có identity/time/math/RNG/revision; Domain có immutable kernel snapshot và typed transfer rule; Application có command pipeline/in-memory atomic publication. Infrastructure vẫn scaffold. Client Unity chưa có assembly chạy; FND-16 tạo adapter và xác nhận backend compatibility.
+Foundation có identity/time/math/RNG/revision; Domain có immutable kernel snapshot và typed transfer rule; Application có command pipeline/in-memory atomic publication, event-v1 journal và idempotent diagnostic projection consumer. Infrastructure vẫn scaffold. Client Unity chưa có assembly chạy; FND-16 tạo adapter và xác nhận backend compatibility.
 
 ## Luồng thực thi đích
 
@@ -28,7 +28,7 @@ Player/NPC/Scheduler Command
   -> UI / Director exposure / Chronicle
 ```
 
-Host có --transfer-demo thực thi path TransferResource trong bộ nhớ. Luồng durable storage/jobs/full events/projections ở trên vẫn là kiến trúc đích; không coi demo là persistence/replay acceptance. Rule chỉ đề nghị changes; save adapter không tạo rule; UI không biết toàn bộ hidden truth. Query/preview không draw gameplay RNG. Phân biệt scheduled request, committed fact và exposed information ở mọi API.
+Host có --transfer-demo thực thi path TransferResource trong bộ nhớ. Luồng durable storage/jobs/gameplay events/knowledge projections ở trên vẫn là kiến trúc đích; không coi demo là persistence/replay acceptance. Rule chỉ đề nghị changes; save adapter không tạo rule; UI không biết toàn bộ hidden truth. Query/preview không draw gameplay RNG. Phân biệt scheduled request, committed fact và exposed information ở mọi API.
 
 ## Ranh giới nội dung
 

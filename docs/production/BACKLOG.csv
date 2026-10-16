@@ -7,7 +7,7 @@ FND-05,World state / revision,FND-02,Foundation,Read-only snapshot and staged re
 FND-06,Rule registry,FND-01 FND-05,Domain,Typed approved handler contract and registration,"Missing handler rejection, no direct IO",Headless kernel subset accepted Sprint2; see SPRINT-02-EVIDENCE.md
 FND-07,Command processor,FND-03 FND-04 FND-05 FND-06,Application,"Envelope, receipt, idempotency and error taxonomy","TEST-024,025,026",In-memory TransferResource accepted Sprint2; durable/other commands pending; see SPRINT-02-EVIDENCE.md
 FND-08,ChangeSet / invariants,FND-07,Application,"Cross-domain proposals, conservation, rollback prep","TEST-006,029,039 before durable storage",In-memory TransferResource accepted Sprint2; durable/other commands pending; see SPRINT-02-EVIDENCE.md
-FND-09,Event / causal model,FND-07,Application,"Committed envelope, ordering, consumer idempotency",TEST-037; causation/correlation trace,Not started
+FND-09,Event / causal model,FND-07,Application,"Committed envelope, ordering, consumer idempotency",TEST-037; causation/correlation trace,Headless transfer event/journal and diagnostic consumer accepted Sprint3; scheduler/durability pending; see SPRINT-03-EVIDENCE.md
 FND-10,Durable scheduler,FND-03 FND-07 FND-09,Application,"Due jobs, stable ordering, cancellation, bounded fan-out","TEST-008,028,033,038",Not started
 FND-11,Persistence adapter,FND-05 FND-08 FND-09 FND-10,Infrastructure,"Provider spike, atomic state/events/jobs/RNG/receipt commit","TEST-006,034,035; OPEN-03 evidence",Not started
 FND-12,Snapshot / recovery,FND-11,Infrastructure,"Save manifest, hashes, compatible recovery/migration","TEST-035,036,051",Not started
