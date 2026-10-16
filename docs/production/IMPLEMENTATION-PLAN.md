@@ -1,6 +1,6 @@
 # Kế hoạch triển khai từ bộ tài liệu
 
-Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. FND-01 và DOC-01 đã có từ lần khởi tạo. Sprint 1 đã triển khai FND-02/03/04; headless evidence và các gate còn pending được ghi trong backlog. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
+Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. FND-01 và DOC-01 đã có từ lần khởi tạo. Sprint 1 đã triển khai FND-02/03/04; Sprint2 có FND05–08 in-memory TransferResource; headless evidence và các gate còn pending được ghi trong backlog. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
 
 ## Trình tự bắt đầu
 
@@ -43,4 +43,4 @@ Build và tests của phạm vi pass; không phá replay/contract; mọi mutatio
 
 Specs và trạng thái sau bổ sung: [Documentation Completion](DOCUMENTATION-COMPLETION-2026-10-14.md). Provider/editor/framework còn có gate thực nghiệm; không xem chúng là thiếu module GDD mới.
 
-Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.
+Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope các sprint nằm trong sprint brief được liên kết tại đó.

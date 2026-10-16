@@ -1,3 +1,5 @@
-# Unit tests
+# Kernel tests
 
-Bộ thực thi: tests/MythicalDnd.Foundation.Tests, FND-02/03/04 (identity/time/math/codec/RNG). Chạy python3 tools/tests/run_runtime.py; evidence tại tests/results và docs/qa/SPRINT-01-EVIDENCE.md. TEST-008 ở đây chỉ clock primitives; scheduler ordering vẫn FND-10. Các nhóm gameplay tests khác còn pending.
+Project tests/MythicalDnd.Foundation.Tests giữ tên lịch sử nhưng chứa primitive tests FND02–04, WorldRuleTests FND05/06 và CommandPipelineTests integration in-memory FND07/08. Reference Domain/Application được khai báo, không thay ownership của runtime assemblies.
+
+Chạy python3 tools/tests/run_runtime.py. Gate có discovery từng nhóm, negative control, headless transfer demo; evidence tests/results và docs/qa/SPRINT-02-EVIDENCE.md. TEST008scheduler, SQLite/process recovery, Unity và fullgame vẫn pending.

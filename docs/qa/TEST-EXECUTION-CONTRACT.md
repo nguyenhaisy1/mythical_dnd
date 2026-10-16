@@ -1,16 +1,16 @@
 # Test Execution & Evidence Contract
 
-Ngày 2026-10-14. Áp dụng FND-02–16, VS-01/10. Các TEST trong matrix là acceptance requirements; chỉ cập nhật theo runtime evidence từng task. FND-02/03/04 có primitive implementation; các hệ còn lại vẫn pending.
+Ngày 2026-10-14. Áp dụng FND-02–16, VS-01/10. Các TEST trong matrix là acceptance requirements; chỉ cập nhật theo runtime evidence từng task. FND-02–04 có primitives; FND05–08 có TransferResource in-memory; durable/scheduler/replay/Unity còn pending.
 
 ## Hai cấp thực thi
 
 **Reference/documentation checks hiện có** chạy bằng Python stdlib: `python3 tools/checks/check_contract_vectors.py`, `validate_reference.py`, `check_handoff.py`, `check_architecture.py`. Lệnh đầu kiểm codec/math/RNG vectors và fixture expectation arithmetic; không chạy command processor C#. Evidence của chúng có scope `documentation-reference`.
 
-**Runtime Sprint 1** nằm ở `tests/MythicalDnd.Foundation.Tests/`, runner/package pin theo [ADR-009](../adr/009-headless-test-runner.md). Lệnh chuẩn: `python3 tools/tests/run_runtime.py` (hoặc `--dotnet /path/to/dotnet`). Tool restore locked, build solution Release, chạy dotnet test với TRX, kiểm count > 0 và không skip, rồi chạy negative control trong process riêng: đúng một test fail và exit khác 0. Không chỉ gọi dotnet test rồi suy zero tests là pass. Integration project sẽ thêm cùng implementation command/storage thực, không tạo suite rỗng.
+**Runtime kernel regression** nằm ở `tests/MythicalDnd.Foundation.Tests/`, runner/package pin theo [ADR-009](../adr/009-headless-test-runner.md). Lệnh chuẩn: `python3 tools/tests/run_runtime.py` (hoặc `--dotnet /path/to/dotnet`). Tool restore locked, build solution Release, chạy dotnet test với TRX, kiểm count > 0 và không skip, rồi chạy negative control trong process riêng: đúng một test fail và exit khác 0. Không chỉ gọi dotnet test rồi suy zero tests là pass. Project hiện chứa cả primitive tests và in-memory command integration tests có Domain/Application references; storage integration project riêng sẽ thêm cùng adapter thật FND11. Không tạo suite rỗng.
 
 ## Cấu trúc và naming
 
-Unit tests kiểm primitives và pure rules, không cần DB/Unity. Integration tests dùng temp world + real persistence adapter, fault injection/process restart. Cross-runtime suite dùng cùng golden files trên headless và Unity, không re-generate expected khi chạy. Test names `TEST_027_Allocation_Abort_ReusesUncommittedCounter` hoặc equivalent; map requirement/test/task IDs vào output.
+Unit tests kiểm primitives và pure rules, không cần DB/Unity. In-memory integration tests kiểm command publication/failure. Durability integration phải dùng temp world + real persistence adapter, fault injection/process restart; không dùng in-memory pass để thay thế. Cross-runtime suite dùng cùng golden files trên headless và Unity, không re-generate expected khi chạy. Test names `TEST_027_Allocation_Abort_ReusesUncommittedCounter` hoặc equivalent; map requirement/test/task IDs vào output.
 
 Fixtures trong `content/fixtures/`; golden vectors có phiên bản, provenance, sha và được review như contract. Thay implementation không tự overwrite golden để làm test xanh. Nếu contract đổi, ADR + version bump + giải thích before/after + cập nhật consumer/test/docs; giữ migration compatibility decision. Seed cố định cho golden; property tests lưu failing seed/minimized inputs.
 
@@ -22,4 +22,4 @@ Không thu performance numbers từ documentation checks. Benchmark phải ghi h
 
 ## CI và gates
 
-CI giữ docs/reference checks, build và runtime Sprint 1 primitive gate có negative control; upload JSON/log/TRX kể cả khi lỗi. Local run không chứng minh GitHub CI đã chạy. VS-01 yêu cầu kernel tests FND-02–15 và reference fixtures; Foundation complete thêm FND-16 cross-runtime; VS-10 cần gameplay regression+manual accessibility+performance evidence. Không đổi TEST status do chỉ bổ sung tài liệu.
+CI giữ docs/reference checks, build và runtime Sprint1 regression + Sprint2 command gate/demo có negative control; upload JSON/log/TRX kể cả khi lỗi. Local run không chứng minh GitHub CI đã chạy. VS-01 yêu cầu kernel tests FND-02–15 và reference fixtures; Foundation complete thêm FND-16 cross-runtime; VS-10 cần gameplay regression+manual accessibility+performance evidence. Không đổi TEST status do chỉ bổ sung tài liệu.

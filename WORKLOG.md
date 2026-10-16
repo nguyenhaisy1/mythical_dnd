@@ -258,3 +258,29 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - /root,/root/clock,/root/random,/root/review hoàn thành các assignment thực tế; không có blocker của sprint. Không còn spin active.
 - Next milestone bắt đầu từ FND-05 World state/revision; chưa tự triển khai ngoài Sprint1. Báo cáo cho user theo yêu cầu khi sprint xong.
 - HEAD081afcd local; chỉ WORKLOG events cuối còn chưa commit. Không commit vòng lặp chỉ để tự chứa hash.
+
+
+### EVT-00015 | SPIN-004 | OPEN — Họp và triển khai Sprint 2 — command pipeline trong bộ nhớ
+
+<!-- worklog: {"id": "EVT-00015", "spin": "SPIN-004", "event": "OPEN", "at": "2026-10-15T14:46:14+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T14:46:14+07:00
+- Actor: /root
+
+- User giao pushSprint1, họp/lênplan/breaktask/triểnkhai và nghiệmthu Sprint2. Scope Sprint2 FND05–08 headless/in-memory TransferResource; SQLite/eventscheduler/replay/Unity ngoài scope.
+- Sprint1 pushed: origin/dev94b0e53265c148e329556125a2f4bff2649503ab (baseline), origin/feature/sprint-01-primitives0315c66f7dc1f1162babbb117ebe9e92cfa750fa; ls-remote khớp. gh auth chưa đăngnhập nên chưa PR/merge; không directpush implementation vào dev để né policy.
+- Tạo feature/sprint-02-command-pipeline từdev rồi ff nhậnSprint1; nhánh phụthuộc Sprint1 chưamerge. Không đổi main/tag/release.
+- Assignment /root điềuphối/API/CI/docs/QA; /root/s2_world FND05/06 WorldRevision + Domain immutable snapshot/ruleregistry/transfer + unit tests; /root/s2_pipeline FND07/08 envelope/fingerprint/receipt/atomic in-memory commit/invariant + integration tests. Reviewer riêng sẽ được giao khi code có.
+- Acceptance: immutable snapshots/no writable leaks; typed approvedrules; duplicate-before-stale,mismatch/rejected/noop semantics; authority/time/revision/ref gates; conservation/ownerchecks/rollback; precommit+postcommit fault injection và exactly-once retry. RegressionSprint1, per-taskdiscovery, negativecontrol, docs/export/sourcefingerprints.
+
+
+### EVT-00016 | SPIN-004 | PROGRESS — Sprint 2 đạt 124 tests và demo; chốt docs/export/push
+
+<!-- worklog: {"id": "EVT-00016", "spin": "SPIN-004", "event": "PROGRESS", "at": "2026-10-16T08:56:38+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T08:56:38+07:00
+- Actor: /root
+
+- /root/s2_world hoàn tất FND05/06,13tests; commit72e1d12. /root/s2_pipeline hoàn tất FND07/08,41tests; commit1227a4a. /root/s2_review review đọc độc lập không phát hiện blocker; requested tests metadata/auth/nonemptyRNG/maliciousauthority đã bổ sung.
+- /root tạo CLI transferdemo, nâng runner regression/per-task gate và docs/ADR011/sprintbrief/backlog/QA. Final run tests/results/sprint02-_g7_ufsp/evidence.json:124/124pass,0skip,negativecontrol1fail/exit1; build6projects0warning/error. Demo10/0→7/3,revision2,event1,receipt1,retryoriginal=true. Sourcefingerprint đã khớp sau commit.
+- Checks source36files/handoff432links/52requirements/28tasks/reference/vectors/architecture/diff đạt. Export tiếp theo từ source cuối, không tạo ZIP.
+- Sprint1 GitHub CI public API đã xác minh success trên0315c66: https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/38700799347 . Chưa có gh API auth tạo/mergePR; dev chỉ baseline94b0e53. Sprint2 branch kế thừa Sprint1, sẽ push và xác minh riêng; main/tag/release không thay.
+- Limits: in-memoryTransferResource không durability/fullcausal/scheduler/replay/Unity. RNG context alias mapping phải chốt trước stochasticcommands; transfer không draw. Không activeblocker cho scope codeSprint2; PRintegration còn thiếuGitHubauth.

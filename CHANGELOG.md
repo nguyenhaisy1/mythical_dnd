@@ -6,6 +6,14 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint 2 command path — 2026-10-16
+
+- Thêm immutable kernel world/revision, typed approved rule registry và TransferResource cho actor/household ownership.
+- Thêm in-memory command processor: fingerprint/envelope/auth, idempotent receipt, stale/time checks, proposal owner/conservation validation và atomic publication có fault injection.
+- Thêm CLI --transfer-demo và regression/per-task CI gate; review riêng, docs/evidence/plan/worklog đồng bộ.
+- Compatibility: giữ identity-v1/clock-v1/mdc1/sha256-counter-v1; DTO in-memory không là save format public. Durability/SQLite/full event model/scheduler/replay/Unity vẫn pending.
+
+
 ### Sprint 1 primitives — 2026-10-15
 
 - Thêm clock-v1 WorldTick/calendar/duration checked; mdc1 encoder, exact numeric math và sha256-counter-v1 immutable RNG.

@@ -26,3 +26,5 @@ Thiếu Unity/DB/provider/quyền truy cập thì ghi command, lỗi, phần b�
 Sprint là phạm vi milestone; spin là đợt thực hiện có goal. Một sprint có nhiều spin. WORKLOG ghi actor AI thật và kết quả; không tự bịa một studio gồm nhiều agent. Không dùng velocity/person-days của đội người để ước lượng. Theo dõi deliverables đạt gate, blockers, số vòng sửa lỗi và evidence; chỉ báo thời gian thực tế đã quan sát.
 
 Xem [Sprint 1](../production/sprints/SPRINT-01.md), [Git Workflow](GIT-WORKFLOW.md) và [Test Execution](../qa/TEST-EXECUTION-CONTRACT.md).
+
+Sprint hiện hành: [Sprint2](../production/sprints/SPRINT-02.md). User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.

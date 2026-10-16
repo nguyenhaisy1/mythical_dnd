@@ -10,6 +10,8 @@
     <PackageReference Include="NUnit" Version="[4.4.0]" />
     <PackageReference Include="NUnit3TestAdapter" Version="[5.0.0]" />
     <ProjectReference Include="../../engine/Foundation/Game.Foundation.csproj" />
+    <ProjectReference Include="../../engine/Domain/Game.Domain.csproj" />
+    <ProjectReference Include="../../engine/Application/Game.Application.csproj" />
   <None Include="../../content/fixtures/kernel-smoke/scenario.json" Link="scenario.json" CopyToOutputDirectory="PreserveNewest" />
   <None Include="../../content/fixtures/kernel-smoke/vectors.json" Link="vectors.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
