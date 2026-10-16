@@ -1,6 +1,6 @@
 # Kế hoạch triển khai từ bộ tài liệu
 
-Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. Tất cả runtime tasks hiện chưa làm; FND-01 và DOC-01 là phạm vi của lần khởi tạo này. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
+Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. FND-01 và DOC-01 đã có từ lần khởi tạo. Sprint 1 đã triển khai FND-02/03/04; headless evidence và các gate còn pending được ghi trong backlog. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
 
 ## Trình tự bắt đầu
 
@@ -11,13 +11,13 @@ Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance.
 5. VS-02–06 nối nghề, vật chất, perception, thread, companion, combat và di sản trong một vùng sâu.
 6. VS-07–10 đưa qua client, playtest và scale. Phê duyệt mở full production từ bằng chứng, không từ số NPC/scene.
 
-## Task đầu tiên đề nghị: FND-02
+## Task đầu tiên Sprint 1: FND-02
 
 Scope: typed entity/definition identity, allocator state, lifecycle và serialization contract. Input: M29 §9–14, Foundation contract, reference fixture IDs. Output: C# implementation độc lập Unity, codec spec, golden vectors và tests; quyết định clear committed vs temporary ID. Không gộp world generator hoặc household simulation vào task này.
 
 Done: identity được serialize ổn định; không tái dùng committed ID; rollback/retry không phá deterministic allocation; references khác loại bị phát hiện; tests có command và expected output. Nếu chọn byte/string representation khác blueprint ví dụ, ghi ADR và cập nhật fixtures đúng phiên bản.
 
-## Mẫu giao task cho lập trình viên/agent
+## Mẫu task để AI thực hiện
 
 - Task ID, requirement IDs, module/section nguồn.
 - Allowed files/assembly và dependency boundary.

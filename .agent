@@ -1,6 +1,6 @@
 # MYTHICAL_DND — Bối cảnh dự án dành cho agent
 
-Cập nhật: 2026-10-14. Ngôn ngữ làm việc: tiếng Việt.
+Cập nhật: 2026-10-15. Ngôn ngữ làm việc: tiếng Việt.
 
 ## 1. Mục đích và nguồn tham chiếu
 
@@ -95,7 +95,7 @@ Baseline được cụ thể hóa ở Modules 24–29; đây là đặc tả, ch
 
 Định hướng Module 28: **C# simulation core độc lập Unity**, hướng tới .NET Standard 2.1; .NET console headless runner; Unity cho presentation/input/audio/UI; SQLite qua persistence adapter; JSON + JSON Schema cho authoring; Git và CI cho validation. Gameplay dự kiến single-player offline, không cần web backend/microservices.
 
-Stack đã được khởi tạo ở mức scaffold và build bằng .NET SDK 10.0.401; chưa kiểm chứng gameplay hoặc Unity runtime. ADR-008 và các contract bổ sung đã chọn identity-v1, tick một phút, sha256-counter-v1, codec mdc1 và snapshot mỗi 100 commits; có reference vectors. Unity patch/provider SQLite, physical DDL, test runner và performance budgets vẫn cần spike/implementation evidence. Không coi scaffold build là benchmark.
+Stack đã được khởi tạo ở mức scaffold và build bằng .NET SDK 10.0.401; chưa kiểm chứng gameplay hoặc Unity runtime. ADR-008 và các contract bổ sung đã chọn identity-v1, tick một phút, sha256-counter-v1, codec mdc1 và snapshot mỗi 100 commits; có reference vectors. Unity patch/provider SQLite, physical DDL và performance budgets vẫn cần spike/implementation evidence. Test runner headless đã pin theo ADR-009, không thay Unity adapter. Không coi scaffold build là benchmark.
 
 Vertical slice đề xuất: **“Bến qua mùa nước”**, lấy **Bến Vạc, Tam Giang** làm trung tâm:
 
@@ -115,11 +115,11 @@ Yêu cầu mới đã cho phép xây lại bộ tài liệu đầy đủ và kh�
 
 Nguồn làm việc: `docs/gdd/modules/`, `docs/gdd/appendices/`. Mapping và checksum ở `docs/governance/SOURCE-COVERAGE.csv`; chỉ mục đề mục ở `SECTION-INDEX.csv`. Đọc `APPLICABLE-BASELINE.md` trước khi áp dụng đoạn nghiên cứu cũ. Ghi chú tích hợp nằm trong `tools/docs/integration-notes.json`; Master/modules được tái tạo bằng `tools/docs/build_docs.py`.
 
-Project theo hướng Module 28–29: `engine/` chứa 4 portable core libraries netstandard2.1 và headless host net10.0. SDK pin 10.0.401 để build scaffold. Unity mới có layout Assets, chưa bootstrap bằng Editor. Core libraries mới có assembly metadata; host `--status` xác nhận simulation chưa triển khai. Không có world engine, SQLite runtime, replay hay gameplay tests đã pass.
+Project theo hướng Module 28–29: `engine/` chứa 4 portable core libraries netstandard2.1 và headless host net10.0. SDK pin 10.0.401 để build scaffold. Unity mới có layout Assets, chưa bootstrap bằng Editor. Foundation đã thêm identity/time/codec/RNG primitives FND-02/03/04 và runner C# theo ADR-009/010; các assembly khác vẫn scaffold. Host `--status` xác nhận simulation chưa triển khai. Không có world engine, SQLite runtime, replay hay gameplay acceptance đã pass.
 
-`docs/production/HANDOFF.md` là cửa vào phát triển; `BACKLOG.csv` có Foundation tasks FND-01–16 và VS-01–10. Task code tiếp theo đề nghị FND-02 Typed IDs. `docs/qa/VALIDATION-RESULTS.md` ghi evidence thực tế; QA matrix là yêu cầu chưa triển khai, không được nói đã pass.
+`docs/production/HANDOFF.md` là cửa vào phát triển; `BACKLOG.csv` có Foundation tasks FND-01–16 và VS-01–10. Sprint 1 triển khai FND-02/03/04; task code kế tiếp FND-05 World state/revision, xem sprint evidence và backlog trước khi nhận. `docs/qa/VALIDATION-RESULTS.md` ghi evidence thực tế; QA matrix ghi trạng thái từng requirement; TEST-027/007 và phần clock primitives của TEST-008 có headless evidence, không suy mọi runtime test đã pass.
 
-Quyết định tích hợp: Bến Hạc giữ Phong Châu, dùng làm external boundary của slice Tam Giang; household Vạc Tòng và character Vạc Mộc có identity riêng. ID/tick/RNG/codec/reroll có baseline prototype tại ADR-008; provider/Unity/test runner, content production, balance và performance còn gates theo `OPEN-DECISIONS.csv`.
+Quyết định tích hợp: Bến Hạc giữ Phong Châu, dùng làm external boundary của slice Tam Giang; household Vạc Tòng và character Vạc Mộc có identity riêng. ID/tick/RNG/codec/reroll có baseline prototype tại ADR-008; provider/Unity, content production, balance và performance còn gates theo `OPEN-DECISIONS.csv`.
 
 Bộ export ở `artifacts/` gồm Master/volumes HTML và DOCX; không tạo ZIP theo yêu cầu hiện tại; các file sandbox của phiên chat cũ không phải nguồn của bản này. Khi thay docs, regenerate và kiểm tra. Đọc `AGENTS.md` cho quy tắc làm việc trong repository.
 
@@ -156,3 +156,5 @@ Khi user hỏi báo cáo, tổng hợp goal, spin, ai đang/đã làm gì, kết
 ## Thực hiện bằng AI — 2026-10-15
 
 Chủ dự án xác nhận toàn bộ phát triển do AI thực hiện. Theo `docs/runbooks/AI-EXECUTION.md`: role backlog là trách nhiệm của AI, không chờ nhân sự con người; tự implement/test/review trong scope đã giao, ghi actor và evidence thật. Self-review không là independent review; automated playthrough không là human playtest. Sprint hiện tại: `docs/production/sprints/SPRINT-01.md`; yêu cầu hiện tại đã cho phép bắt đầu nền tảng, thay giới hạn chỉ tài liệu trước đây.
+
+Chủ dự án đã giao AI điều phối, chia/giao task và nghiệm thu toàn bộ Sprint 1 (2026-10-15). Được dùng subagent cho các task đã chia trong phạm vi sprint; ghi actor, ownership, review và evidence thật. Không mở sprint mới hoặc phát hành chỉ vì Sprint 1 đã hoàn tất.

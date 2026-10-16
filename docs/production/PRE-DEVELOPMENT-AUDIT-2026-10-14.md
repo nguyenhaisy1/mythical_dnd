@@ -1,5 +1,8 @@
 > Báo cáo dưới đây ghi nhận trước đợt bổ sung. Trạng thái hiện tại: [Documentation Completion](DOCUMENTATION-COMPLETION-2026-10-14.md). ZIP đã bị xóa theo yêu cầu; các đoạn nói về ZIP là quan sát lịch sử, không là quy trình hiện hành.
 
+> Báo cáo lịch sử ngày 2026-10-14. Trạng thái mới ngày 2026-10-15: xem [Sprint 1](sprints/SPRINT-01.md) và [FND-02 evidence](../qa/FND-02-EVIDENCE.md); không dùng các mục pending bên dưới thay trạng thái hiện tại.
+
+
 # Rà soát mức sẵn sàng trước phát triển — 14/10/2026
 
 ## Kết luận

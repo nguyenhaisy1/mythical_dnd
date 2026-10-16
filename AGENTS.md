@@ -42,3 +42,5 @@ Khi user hỏi báo cáo, tổng hợp goal, spin, ai đang/đã làm gì, kết
 ## Thực hiện bằng AI — 2026-10-15
 
 Chủ dự án xác nhận toàn bộ phát triển do AI thực hiện. Theo `docs/runbooks/AI-EXECUTION.md`: role backlog là trách nhiệm của AI, không chờ nhân sự con người; tự implement/test/review trong scope đã giao, ghi actor và evidence thật. Self-review không là independent review; automated playthrough không là human playtest. Sprint hiện tại: `docs/production/sprints/SPRINT-01.md`; yêu cầu hiện tại đã cho phép bắt đầu nền tảng, thay giới hạn chỉ tài liệu trước đây.
+
+Chủ dự án đã giao AI điều phối, chia/giao task và nghiệm thu toàn bộ Sprint 1 (2026-10-15). Được dùng subagent cho các task đã chia trong phạm vi sprint; ghi actor, ownership, review và evidence thật. Không mở sprint mới hoặc phát hành chỉ vì Sprint 1 đã hoàn tất.

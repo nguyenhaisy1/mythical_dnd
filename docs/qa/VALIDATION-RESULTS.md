@@ -28,3 +28,11 @@ Phạm vi lần này là specs, reference data và documentation tooling; không
 HTML/DOCX được regenerate sau khi tài liệu đồng bộ; machine-readable evidence của lần kiểm export nằm ở `artifacts/EXPORT-VALIDATION.json`, có số source fingerprints đã đối chiếu. Checker mới từ chối export nếu source inventory/hash khác manifest. Các hash của kernel fixture là **projection hashes**, không full-world runtime StateHash. Runtime acceptance tiếp tục Pending implementation; không báo C#/Unity replay hoặc persistence đã pass.
 
 Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6.156 anchors và 123 bảng trong Master DOCX. Negative control thực tế: thay source sau export khiến checker trả lỗi `Export sources changed`; sau đó regenerate bản đọc từ source mới. Chỉ kiểm container/content/navigation, không phải visual rendering hay gameplay test.
+
+## Cập nhật 2026-10-15 — FND-02
+
+[Evidence FND-02](FND-02-EVIDENCE.md): 6 projects Release build 0 warnings/errors; 32 headless C# tests pass, không skip; negative control 1 test fail với exit1 đúng yêu cầu. Phạm vi identity primitives, không thay các kết quả lịch sử hoặc các gate Unity/replay/gameplay chưa chạy.
+
+## Sprint 1 — 2026-10-15
+
+[Evidence](SPRINT-01-EVIDENCE.md): 70/70 C# Release tests, không skipped, negative control1failed/exit1 đúng yêu cầu; build6projects0warnings/errors. FND-02/03/04 headless accepted; scheduler/Unity/replay/gameplay vẫn pending.

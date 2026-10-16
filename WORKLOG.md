@@ -158,3 +158,103 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - User ngày 2026-10-15 xác nhận toàn bộ dự án do AI làm và yêu cầu tiến hành bước tiếp theo. Chốt baseline bằng commit local; không publish/main/tag/release.
 - Scope: workflow AI, sprint brief, typed identity/registry/allocation, test runner/CI/evidence và docs liên quan. FND-03/04 còn trong sprint nhưng ngoài spin triển khai đầu tiên này. Unity/storage/gameplay chưa nghiệm thu.
 - Giữ nguyên thay đổi workflow/journal đang có; kiểm và đưa vào baseline trước branch feature. Dev local chưa publish: bootstrap fast-forward local sau checks, không thay PR policy của branch đã publish.
+
+
+### EVT-00007 | SPIN-002 | GIT — Chốt baseline local và mở branch FND-02
+
+<!-- worklog: {"id": "EVT-00007", "spin": "SPIN-002", "event": "GIT", "at": "2026-10-15T09:09:05+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T09:09:05+07:00
+- Actor: /root
+
+- Baseline local commit 94b0e53: workflow Git/release, append-only journal, AI execution và Sprint 1. Checks docs/source/reference/architecture/diff đạt. Export đang sinh và sẽ regenerate cuối sau implementation.
+- dev local bootstrap fast-forward tới baseline; tạo feature/fnd-02-typed-identity từ dev. main/origin không đổi; chưa push.
+- /root tiếp tục FND-02; self-review và runtime verification cùng actor, không có reviewer độc lập.
+
+
+### EVT-00008 | SPIN-002 | PROGRESS — FND-02 đạt gate headless; đồng bộ tài liệu và hoàn tất export
+
+<!-- worklog: {"id": "EVT-00008", "spin": "SPIN-002", "event": "PROGRESS", "at": "2026-10-15T09:15:33+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T09:15:33+07:00
+- Actor: /root
+
+- /root đã hiện thực FND-02 identity primitives, staged allocation/registry, runner exact packages + lockfile, CI nonzero/negative-control gate. Baseline local 94b0e53; feature/fnd-02-typed-identity chưa publish.
+- Final runtime source sha256:ca3efcb9cf658b08212af7333b522a5eb3f9c7dba9c613ff7331462f1e501442; 32 discovered/passed, 0 failed/skipped; negative control 1 failed/exit1; build6projects 0warnings/errors. Evidence tests/results/fnd02-jy9izu9m/evidence.json.
+- Self-review đã bổ sung coverage đủ10namespaces/world và lifecycle/revision; không có subagent hoặc review độc lập. Headless accepted; Unity/storage/atomic-world/replay/gameplay còn pending.
+- Đồng bộ ADR009, contracts, execution/QA, backlog/matrix, sprint, handoff/readme/agent, hoststatus, changelog. Checks source36files/reference/architecture/handoff405links đạt.
+- Lượt export trước từ chối source changed giữa lúc sinh; đang regenerate cuối. Build parallel có MSB4166, chuyển sequential -m:1 -nr:false đã đạt; chưa kết luận nguyên nhân host.
+
+
+### EVT-00009 | SPIN-002 | RESULT — Baseline AI và FND-02 headless đạt nghiệm thu; exports đồng bộ
+
+<!-- worklog: {"id": "EVT-00009", "spin": "SPIN-002", "event": "RESULT", "at": "2026-10-15T09:17:00+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T09:17:00+07:00
+- Actor: /root
+
+- Outcome: baseline AI và bước triển khai đầu Sprint1 hoàn tất. FND-02 headless accepted: 32/32 C# tests, 0 skipped; negative-control process 1 failed/exit1 đúng yêu cầu. Unity còn pending FND-16; Sprint1 còn FND-03/04.
+- Tooling negative control bổ sung: stub runner exit0 với TRX total0 bị runtime gate từ chối exit1. Đây là tooling test, không cộng vào32runtime tests. Source fingerprint của runtime evidence vẫn khớp sau checks.
+- Checks: docs36files, handoff405links/52requirements/28tasks, reference/vectors/architecture và diff đạt; hoststatus simulationImplemented=false,nextTask=FND-03. Export cuối đạt132sourceinputs,14HTML/DOCX,30titles,6156anchors,123tables/navigation. Không ZIP.
+- Git local: baseline94b0e53 trên dev; feature commit257c228 trên feature/fnd-02-typed-identity. Không push, không PR/merge feature về dev, không đổi main/tag/release; CI workflow đã viết nhưng chưa có remote run. Final journal events sau commit còn local diff để đưa vào commit kế tiếp theo policy.
+- Actor /root thực hiện và self-review, không có agent phụ. Không còn blocker trong scope spin. MSB4166 parallel build được tránh bằng sequential runner; không bịa nguyên nhân hoặc kết luận Unity.
+
+
+### EVT-00010 | SPIN-002 | CLOSE — Đóng SPIN-002 — finished; Sprint 1 tiếp tục
+
+<!-- worklog: {"id": "EVT-00010", "spin": "SPIN-002", "event": "CLOSE", "at": "2026-10-15T09:17:01+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T09:17:01+07:00
+- Actor: /root
+
+- Outcome: finished cho goal SPIN-002 (baseline AI + FND-02 headless). Sprint SPRINT-01 vẫn In progress; không gọi cả Foundation hoàn tất.
+- Assignment /root hoàn tất, không có actor khác hoặc blocker cần chờ. Bước tiếp theo FND-03 WorldClock theo sprint, rồi FND-04 RNG/codec; ghi spin mới cho mục tiêu tiếp theo.
+- Evidence chính docs/qa/FND-02-EVIDENCE.md và tests/results/fnd02-jy9izu9m/evidence.json. Branch hiện tại feature/fnd-02-typed-identity, HEAD257c228 local; WORKLOG event kết quả/close chưa commit là trạng thái chủ động theo quy tắc journal.
+
+
+### EVT-00011 | SPIN-003 | OPEN — Điều phối và nghiệm thu toàn bộ Sprint 1
+
+<!-- worklog: {"id": "EVT-00011", "spin": "SPIN-003", "event": "OPEN", "at": "2026-10-15T10:31:43+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T10:31:43+07:00
+- Actor: /root
+
+- Goal SPRINT-01/SPIN-003: hoàn tất FND-03 clock và FND-04 codec/math/RNG, regression FND-02, review + nghiệm thu sprint, cập nhật mọi consumer docs/exports.
+- User giao toàn bộ điều hướng/break task/giao task/nghiệm thu, báo cáo khi Sprint1 xong. Root điều phối; subagents được giao rõ theo yêu cầu này.
+- Assignment: /root/clock FND-03 Time/*.cs + TimeTests; /root/random FND-04 Random/*.cs + RandomTests; /root tích hợp runner/CI/docs, kiểm và nghiệm thu. Không có human review/playtest giả.
+- Acceptance: Release build, nonzero all-pass/no-skip, negative control, clock range/calendar, mdc1/sha256 vectors, RNG preview/abort/draw schedule và exact numeric edges. Unity/storage/scheduler/gameplay ngoài scope.
+- Branch tích hợp local feature/sprint-01-primitives từ dev, nhận feature FND-02 bằng ff; các task có commit riêng. Không main/tag/release; push không nằm trong bước nghiệm thu local này.
+
+
+### EVT-00012 | SPIN-003 | PROGRESS — Hai task đã triển khai và review; gate 70 tests đạt
+
+<!-- worklog: {"id": "EVT-00012", "spin": "SPIN-003", "event": "PROGRESS", "at": "2026-10-15T10:35:46+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T10:35:46+07:00
+- Actor: /root
+
+- /root/clock hoàn tất FND-03,25targetedtests pass; root review và commit c8f8449. /root/random hoàn tất FND-04,13targetedtests pass; commit79c9944. Không agent sửa docs/Git ngoài root.
+- /root/review được giao review read-only riêng; không phát hiện blocker. Giới hạn: context domain/decision/occurrence/stream chỉ nonblankUTF8, caller kiểm grammar/schema; root đã ghi ADR010/OPEN01/evidence.
+- Root integration Release gate70tests pass(32identity,25clock,13random),negative control1fail/exit1; mỗi task discovery >0. Source README Time đã được cập nhật sau run nên chạy lần cuối để fingerprint khớp toàn source inventory.
+- Docs/source/reference/architecture checks đạt,414links; backlog FND03/04 headless accepted. TEST008scheduler vẫn pendingFND10; OPEN01Unity/performance còn pending. Không nghiệm thu fullFoundation/gameplay.
+- Next: evidence fingerprint cuối, exports14HTML/DOCX, commit integration docs, close spin/sprint. Branch feature/sprint-01-primitives local; chưa publish/main/release.
+
+
+### EVT-00013 | SPIN-003 | RESULT — Nghiệm thu Sprint 1 — 70 tests đạt; docs và exports đồng bộ
+
+<!-- worklog: {"id": "EVT-00013", "spin": "SPIN-003", "event": "RESULT", "at": "2026-10-15T13:47:42+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T13:47:42+07:00
+- Actor: /root
+
+- SPRINT-01 local headless scope: COMPLETED. FND-02 identity32tests, FND-03 clock25tests, FND-04 math/codec/RNG13tests; tổng70/70 Release pass,0failed/0skipped. Negative-control process1failed/exit1 đúng yêu cầu; toàn gateexit0,build6projects0warning/error.
+- Evidence cuối tests/results/sprint01-tvdcfogg/evidence.json và docs/qa/SPRINT-01-EVIDENCE.md. Source fingerprint đã đối chiếu khớp. Tooling control: stub exit0 có2nhóm pass nhưng thiếuFND04 bị gate từ chối exit1; không cộng vào game test count.
+- /root/clock và /root/random hoàn tất implementation; /root/review read-only review không phát hiện blocker; /root tích hợp/review/checks/docs/nghiệm thu. Giới hạn context grammar thuộc caller đã ghi ADR010/OPEN01. Không còn agent đang làm task sprint.
+- Checks cuối: generated36files, source/reference/vectors/architecture, handoff414links,52requirements,28tasks, staged diff đạt. Exports134inputs/14HTML-DOCX/30titles/6156anchors/123tables/navigation đạt. Một lượt export phát hiện source đổi khi cập nhật evidence; đã regenerate và check thành công cuối.
+- Git local branch feature/sprint-01-primitives: c8f8449(clock),79c9944(RNG),081afcd(nghiệm thu/runner/CI/docs); FND02 kế thừa257c228. Chưa push, chưa PR/merge implementation vềdev, main/tag/release không đổi. Final journal events sau commit còn local theo policy.
+- Giới hạn: TEST008scheduler pendingFND10; UnityFND16,worldstate/commands/storage/replay/gameplay chưa triển khai. Sprint complete không là Foundationcomplete hoặc gameplayable. Bước kế tiếp FND05; Sprint2 chưa mở.
+
+
+### EVT-00014 | SPIN-003 | CLOSE — Đóng SPIN-003 và Sprint 1 — finished
+
+<!-- worklog: {"id": "EVT-00014", "spin": "SPIN-003", "event": "CLOSE", "at": "2026-10-15T13:47:42+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-15T13:47:42+07:00
+- Actor: /root
+
+- Outcome finished. SPIN-003 đóng; SPRINT-01 hoàn tất scope local headless theo sprint brief và evidence.
+- /root,/root/clock,/root/random,/root/review hoàn thành các assignment thực tế; không có blocker của sprint. Không còn spin active.
+- Next milestone bắt đầu từ FND-05 World state/revision; chưa tự triển khai ngoài Sprint1. Báo cáo cho user theo yêu cầu khi sprint xong.
+- HEAD081afcd local; chỉ WORKLOG events cuối còn chưa commit. Không commit vòng lặp chỉ để tự chứa hash.
