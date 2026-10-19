@@ -37,3 +37,5 @@ Sprint đã nghiệm thu local: [SPRINT-01](production/sprints/SPRINT-01.md). Ru
 [Sprint3 planning/acceptance](production/sprints/SPRINT-03.md), [ADR012](adr/012-committed-event-model.md): event-v1 và consumer idempotency in-memory.
 
 [Nghiệm thu Sprint3](qa/SPRINT-03-EVIDENCE.md): 138 headless tests, event metadata/trace và idempotent consumer; scheduler là bước tiếp theo.
+
+[Sprint4 planning](production/sprints/SPRINT-04.md), [ADR013](adr/013-in-memory-scheduler.md) và [evidence](qa/SPRINT-04-EVIDENCE.md): scheduler/AdvanceTime in-memory; persistence FND11 là bước tiếp theo.

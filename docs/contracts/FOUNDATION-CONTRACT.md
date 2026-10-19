@@ -82,3 +82,7 @@ Foundation hoàn thành khi FND-02–16 có evidence phù hợp. Skeleton build,
 ## Sprint3 event-v1
 
 [ADR012](../adr/012-committed-event-model.md) cụ thể hóa envelope/journal cho TransferResource và consumer projection/checkpoint in-memory. Causation trỏ command; correlation chỉ phục vụ trusted trace. Fan-out/cycle scheduling và durable publication vẫn pending FND-10/11; consumer này không thay knowledge projection hoặc gameplay reward/rumor.
+
+## Sprint4 — jobs và workflow trong publication
+
+[ADR013](../adr/013-in-memory-scheduler.md): CommittedWorld chứa SchedulerState và journal chung. Mỗi job/internal command publication atomic với clock, identity, state, receipt và events; lỗi trước publication giữ last committed state. Durability/persistence và restore interrupted workflow vẫn pending FND11/12. Fan-out/cycle guards áp dụng approved transfer continuations; chưa là gameplay event template engine hoàn chỉnh.

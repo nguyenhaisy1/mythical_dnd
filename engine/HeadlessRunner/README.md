@@ -1,3 +1,5 @@
-# Game.Headless
+# HeadlessRunner
 
-Composition root/CLI. --status trả capability flags; --transfer-demo thực thi pipeline in-memory thật: chuyển3 từ10/0 thành7/3, retry envelope cũ trả receipt cũ, revision tăng1/event1. Exit0 chỉ khi assertions của demo đạt. Đây là diagnostic fixture không UI/playablegame; chưa có durable save, scheduler hoặc simulation/replay CLI. Xem docs/qa/SPRINT-02-EVIDENCE.md.
+Composition root/CLI. --status trả capability flags; --transfer-demo kiểm transfer10/0→7/3 và duplicate event consumer. --scheduler-demo lập2jobs tại tick10/20, advance30, kiểm transfer5/5, revision7 và retry receipt pending gốc. Exit0 chỉ khi assertions thực đạt.
+
+Đây là diagnostic fixture, chưa là UI/playable game. Có scheduler in-memory; durable save, full simulation và replay CLI chưa có. Xem docs/qa/SPRINT-04-EVIDENCE.md.

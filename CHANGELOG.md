@@ -6,6 +6,13 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint 4 scheduler — 2026-10-19
+
+- Thêm immutable scheduled transfer jobs và AdvanceTime workflow cùng CommittedWorld publication; request/job/closing commits, cancellation, revalidation và idempotent retry.
+- Stable ordering, phase deferral, budget1000jobs, fanout32, causal depth64/cycle guard và prototype decision acknowledgement; pending workflow chặn mutation ngoài scope.
+- Thêm --scheduler-demo, scheduler runtime gate, regression cho publication exceptions/correlation và review độc lập; đồng bộ workflow thường trực, contracts/docs/exports.
+- Compatibility: giữ identity-v1/clock-v1/RNG, thêm scheduler-v1 event metadata. Chưa có durable storage/recovery, full repair/Health/legacy/combat hoặc Unity acceptance.
+
 ### Sprint 3 committed events — 2026-10-16
 
 - Thêm event-v1 cho transfer: causal/correlation metadata, rule/schema version, deterministic journal và truy vấn diagnostics.

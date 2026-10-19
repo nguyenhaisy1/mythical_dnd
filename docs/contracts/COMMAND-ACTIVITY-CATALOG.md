@@ -42,3 +42,7 @@ Receipt: command_id, fingerprint, outcome, error_code nullable, before_revision,
 Prototype bổ sung INVALID_ENVELOPE/INVALID_PAYLOAD/COMMAND_UNKNOWN/PAYLOAD_VERSION_UNSUPPORTED/COMMODITY_MISMATCH/REF_NOT_ACTIVE. PROPOSAL_* và commit failures là system failures; không terminal rejection. Command_id/correlation token giới hạn ASCII alphanumeric đầu, tiếp theo alphanumeric hoặc `_ . : / -`, tối đa128ký tự; không dùng như entityID. Invalid commandID/auth rejection không persisted để tránh poisoning; valid authenticated input reject/noop lưu metadata. Public persistence schema/migration chưa được chốt từ DTO in-memory này.
 
 [Evidence Sprint2](../qa/SPRINT-02-EVIDENCE.md) tách atomic in-process publication khỏi durability FND11. Minimal transfer event records chưa là fullcausal/eventjournal FND09.
+
+## Sprint4 — scheduler prototype
+
+[ADR013](../adr/013-in-memory-scheduler.md) thêm ScheduleTransfer/CancelJob/AdvanceTime/ResolveAdvanceDecision, payload_version1 và approved optional handler_key. DrainAdvance là trusted bounded host workflow. AcceptedPending request receipt giữ nguyên, query workflow để biết trạng thái; prefix scheduler/ bị chặn tại external ingress để tránh chiếm internal command ID. Khi workflow active chỉ cho retry, CancelJob và ResolveAdvanceDecision có quyền. StartRepair/CompleteRepair/CancelActivity/rights vẫn chưa implemented; không suy job cancellation là activity reservation release.

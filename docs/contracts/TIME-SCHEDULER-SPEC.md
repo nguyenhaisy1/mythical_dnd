@@ -39,3 +39,7 @@ Advance có jobs: commit yêu cầu/target (revision+1, giữ tick); mỗi due j
 ## Trạng thái triển khai Sprint 1
 
 FND-03 hiện thực pure WorldTick/calendar/duration; nghiệm thu xem Sprint 1 evidence. Các phần scheduler ordering/AdvanceTime/budget/recovery bên dưới vẫn pending FND-07/10, không suy TEST-008 đầy đủ đã pass. Xem [ADR-010](../adr/010-sprint-one-primitives.md) và [evidence](../qa/SPRINT-01-EVIDENCE.md).
+
+## Sprint4 — scheduler in-memory
+
+[ADR013](../adr/013-in-memory-scheduler.md) hiện thực ordering/deferral/bounded drain và AdvanceTime trên scheduled TransferResource. Request/job/closing publication trong bộ nhớ; budget1000/fanout32/ancestry64 và prototype breakpoint acknowledgement. Actor-death revalidation dùng committed fixture; chưa có Health/repair completion gameplay. SchedulerState.Restore chỉ pending-job bootstrap fixture, không restore interrupted workflow hoặc process-crash recovery. Phần durable/recovery phía trên vẫn là đích FND11/12. [Evidence](../qa/SPRINT-04-EVIDENCE.md) là nguồn nghiệm thu từng scope.

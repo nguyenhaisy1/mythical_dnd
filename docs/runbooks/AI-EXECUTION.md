@@ -27,4 +27,8 @@ Sprint là phạm vi milestone; spin là đợt thực hiện có goal. Một sp
 
 Xem [Sprint 1](../production/sprints/SPRINT-01.md), [Git Workflow](GIT-WORKFLOW.md) và [Test Execution](../qa/TEST-EXECUTION-CONTRACT.md).
 
-Sprint hiện hành: [Sprint3](../production/sprints/SPRINT-03.md), scope FND-09 event/causal và consumer in-memory. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
+Sprint hiện hành: [Sprint4](../production/sprints/SPRINT-04.md), scope FND-10 scheduler/AdvanceTime in-memory. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
+
+## Ủy quyền workflow thường trực
+
+Từ 2026-10-16, user không cần lặp workflow ở mỗi yêu cầu sprint: AI tự planning/breaktask, giao implementation/test/review có ownership, chạy nghiệm thu, cập nhật tài liệu và exports, commit/push nhánh feature, PR vào dev và merge sau review/CI đạt, rồi báo cáo. Ghi trạng thái/evidence và actor thật. Chỉ áp dụng sprint được giao, không tự mở sprint tiếp theo hoặc main/tag/release.

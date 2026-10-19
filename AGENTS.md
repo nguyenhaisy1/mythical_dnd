@@ -52,3 +52,9 @@ Yêu cầu mới đã cho phép push Sprint1 và tự điều phối planning/br
 ## Sprint 3 được giao — 2026-10-16
 
 User giao sprint mới với cùng workflow điều phối/chia task/subagents/triển khai/nghiệm thu/báo cáo. Sprint hiện hành [Sprint3](docs/production/sprints/SPRINT-03.md), SPIN-006, scope FND-09 event/causal model và consumer idempotency in-memory; FND-10 scheduler dành sprint tiếp theo. Sprint1/2 đã tích hợp dev qua PR#1/#2; GitHub API auth đã kiểm chứng. Không tự mở Sprint4 hoặc release.
+
+## Workflow sprint thường trực — 2026-10-16
+
+Chủ dự án xác nhận không cần nhắc lại workflow. Mỗi khi giao một sprint, AI tự đọc bàn giao/baseline, chốt phạm vi và acceptance, lập kế hoạch/break task, giao subagents với ownership rõ, triển khai, review độc lập, chạy checks, sửa lỗi, đồng bộ tài liệu/exports/changelog/worklog, commit/push feature branch, tạo PR và tích hợp vào dev sau khi review/CI đạt, rồi báo cáo kết thúc. Đây là ủy quyền cho sprint được giao; không tự mở sprint kế tiếp, merge main, tạo tag hoặc release. Không xin lại quyền routine trong phạm vi này.
+
+Sprint4 hiện hành: docs/production/sprints/SPRINT-04.md, SPIN-007, FND10 scheduler/AdvanceTime in-memory. Durability FND11 và gameplay repair/health/legacy vẫn có acceptance riêng; không đánh dấu complete vì có mock hoặc fixture.
