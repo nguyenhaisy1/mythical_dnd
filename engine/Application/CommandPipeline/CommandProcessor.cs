@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Game.Domain.Kernel;
 using Game.Application.Events;
+using Game.Application.SimulationScheduler;
 using Game.Foundation.Identity;
 using Game.Foundation.Random;
 using Game.Foundation.Time;
@@ -12,7 +13,7 @@ using Game.Foundation.Time;
 namespace Game.Application.CommandPipeline
 {
     public enum CommandSource { Player, Npc, Scheduler }
-    public enum CommandOutcome { Accepted, NoOp, Rejected }
+    public enum CommandOutcome { Accepted, NoOp, Rejected, AcceptedPending }
 
     /// <summary>Created by a trusted host after authentication, never deserialized from command data.</summary>
     public sealed class ExecutionPrincipal
@@ -109,14 +110,16 @@ namespace Game.Application.CommandPipeline
         public IReadOnlyList<CommandReceipt> MetadataReceipts { get; }
         public IReadOnlyList<CommittedTransfer> Events { get; }
         public CommittedEventJournal Journal { get; }
+        public SchedulerState Scheduler { get; }
         internal CommittedWorld(WorldSnapshot world, IEnumerable<CommandReceipt> accepted,
-            IEnumerable<CommandReceipt> metadata, IEnumerable<CommittedTransfer> events)
+            IEnumerable<CommandReceipt> metadata, IEnumerable<CommittedTransfer> events, SchedulerState? scheduler = null, IEnumerable<CommittedEvent>? journal = null)
         {
             World = world;
             AcceptedReceipts = Array.AsReadOnly(accepted.ToArray());
             MetadataReceipts = Array.AsReadOnly(metadata.ToArray());
             Events = Array.AsReadOnly(events.ToArray());
-            Journal = new CommittedEventJournal(Events.Select(fact => fact.Envelope));
+            Journal = new CommittedEventJournal(journal ?? Events.Select(fact => fact.Envelope));
+            Scheduler = scheduler ?? SchedulerState.Empty;
         }
     }
 
@@ -126,8 +129,8 @@ namespace Game.Application.CommandPipeline
         public PipelineFailureException(string code) : base(code) { Code = code; }
     }
 
-    /// <summary>In-process atomicity only. No durability, scheduler, UI projections or storage recovery claims.</summary>
-    public sealed class CommandProcessor
+    /// <summary>In-process atomicity only. No durability, UI projections or storage recovery claims.</summary>
+    public sealed partial class CommandProcessor
     {
         private static readonly Regex Token = new Regex(@"\A[a-zA-Z0-9][a-zA-Z0-9_.:/-]{0,127}\z", RegexOptions.CultureInvariant);
         private readonly object writer = new object();
@@ -137,10 +140,13 @@ namespace Game.Application.CommandPipeline
         // Failure probes are host-only test seams; no proposed facts are delivered to them.
         private readonly Action? beforeCommit;
         private readonly Action? afterCommit;
-        public CommandProcessor(WorldSnapshot initial, RuleRegistry rules, Action? beforeCommit = null, Action? afterCommit = null)
+        public CommandProcessor(WorldSnapshot initial, RuleRegistry rules, Action? beforeCommit = null, Action? afterCommit = null,
+            SchedulerState? initialScheduler = null, JobHandlerRegistry? jobHandlers = null)
         {
             current = new CommittedWorld(initial ?? throw new ArgumentNullException(nameof(initial)), Array.Empty<CommandReceipt>(),
-                Array.Empty<CommandReceipt>(), Array.Empty<CommittedTransfer>());
+                Array.Empty<CommandReceipt>(), Array.Empty<CommittedTransfer>(), initialScheduler);
+            this.jobHandlers = jobHandlers ?? new JobHandlerRegistry();
+            ValidateInitialScheduler(current.World, current.Scheduler);
             this.rules = rules ?? throw new ArgumentNullException(nameof(rules));
             this.beforeCommit = beforeCommit; this.afterCommit = afterCommit;
         }
@@ -163,7 +169,7 @@ namespace Game.Application.CommandPipeline
         {
             var before = current;
             var world = before.World;
-            if (envelope.CommandId == null || !Token.IsMatch(envelope.CommandId))
+            if (envelope.CommandId == null || !Token.IsMatch(envelope.CommandId) || envelope.CommandId.StartsWith("scheduler/", StringComparison.Ordinal))
                 return Receipt(envelope, "", CommandOutcome.Rejected, "INVALID_ENVELOPE", world);
             string fingerprint;
             try { fingerprint = envelope.Fingerprint(); }
@@ -181,6 +187,10 @@ namespace Game.Application.CommandPipeline
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "STALE_REVISION");
             if (envelope.WorldTick != world.Tick.Value)
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "TIME_MISMATCH");
+            if (before.Scheduler.Workflow != null && before.Scheduler.Workflow.Status != AdvanceStatus.Completed &&
+                envelope.CommandType != "CancelJob" && envelope.CommandType != "ResolveAdvanceDecision")
+                return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "ADVANCE_IN_PROGRESS");
+            if (IsSchedulerCommand(envelope.CommandType)) return ExecuteScheduler(envelope, principal, fingerprint);
             if (envelope.CommandType != "TransferResource")
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "COMMAND_UNKNOWN");
             if (envelope.PayloadVersion != 1)
@@ -210,7 +220,7 @@ namespace Game.Application.CommandPipeline
                 world.Tick, new[] { eventId });
             var fact = new CommittedTransfer(eventId, revision, world.Tick, envelope, transfer);
             var publication = new CommittedWorld(candidate, before.AcceptedReceipts.Concat(new[] { receipt }), before.MetadataReceipts,
-                before.Events.Concat(new[] { fact }));
+                before.Events.Concat(new[] { fact }), before.Scheduler, before.Journal.Events.Concat(new[] { fact.Envelope }));
             beforeCommit?.Invoke();
             if (!ReferenceEquals(current, before)) throw new PipelineFailureException("COMMIT_CONFLICT");
             current = publication; // Single atomic reference publication under the writer lock.
@@ -231,7 +241,7 @@ namespace Game.Application.CommandPipeline
         private CommandReceipt Metadata(CommandEnvelope command, string fingerprint, CommandOutcome outcome, string? code)
         {
             var receipt = Receipt(command, fingerprint, outcome, code, current.World);
-            var candidate = new CommittedWorld(current.World, current.AcceptedReceipts, current.MetadataReceipts.Concat(new[] { receipt }), current.Events);
+            var candidate = new CommittedWorld(current.World, current.AcceptedReceipts, current.MetadataReceipts.Concat(new[] { receipt }), current.Events, current.Scheduler, current.Journal.Events);
             beforeCommit?.Invoke();
             current = candidate;
             afterCommit?.Invoke();

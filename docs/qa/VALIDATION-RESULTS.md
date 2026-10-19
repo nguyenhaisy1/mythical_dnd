@@ -44,3 +44,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint3 — 2026-10-16
 
 [Evidence](SPRINT-03-EVIDENCE.md):138/138 Release tests (124 regression +14 event cases),0skip; negative control1fail/exit1; CLI transfer và duplicate event consumer đạt; build6projects0warning/error. FND09 transfer journal/causal trace và diagnostic projection/checkpoint trong bộ nhớ; không durability/scheduler/replay/Unity.
+
+## Sprint4 — 2026-10-19
+
+[Evidence](SPRINT-04-EVIDENCE.md):184/184Release tests(138regression+46scheduler),0skip; negativecontrol1fail/exit1 đúng; build6projects0warning/error. Scheduler demo2jobs tick10/20→target30,revision7,resource5/5,retryoriginalpending=true. FND10 ordering/advance/cancel/revalidation/bounds in-memory; không durable storage/recovery hoặc full gameplay breakpoint.

@@ -1,6 +1,6 @@
 # Test Execution & Evidence Contract
 
-Ngày 2026-10-14. Áp dụng FND-02–16, VS-01/10. Các TEST trong matrix là acceptance requirements; chỉ cập nhật theo runtime evidence từng task. FND-02–04 có primitives; FND05–08 có TransferResource in-memory; durable/scheduler/replay/Unity còn pending.
+Ngày 2026-10-14. Áp dụng FND-02–16, VS-01/10. Các TEST trong matrix là acceptance requirements; chỉ cập nhật theo runtime evidence từng task. FND-02–04 có primitives; FND05–08 có TransferResource in-memory; FND09 có event/consumer in-memory; Sprint4 kiểm scheduler in-memory riêng. Durability/replay/Unity còn pending.
 
 ## Hai cấp thực thi
 
@@ -22,4 +22,4 @@ Không thu performance numbers từ documentation checks. Benchmark phải ghi h
 
 ## CI và gates
 
-CI giữ docs/reference checks, build và runtime Sprint1 regression + Sprint2 command gate/demo có negative control; upload JSON/log/TRX kể cả khi lỗi. Local run không chứng minh GitHub CI đã chạy. VS-01 yêu cầu kernel tests FND-02–15 và reference fixtures; Foundation complete thêm FND-16 cross-runtime; VS-10 cần gameplay regression+manual accessibility+performance evidence. Không đổi TEST status do chỉ bổ sung tài liệu.
+CI giữ docs/reference checks, build và runtime regression cùng gate/demo của sprint hiện hành có negative control; upload JSON/log/TRX kể cả khi lỗi. Local run không chứng minh GitHub CI đã chạy. VS-01 yêu cầu kernel tests FND-02–15 và reference fixtures; Foundation complete thêm FND-16 cross-runtime; VS-10 cần gameplay regression+manual accessibility+performance evidence. Không đổi TEST status do chỉ bổ sung tài liệu.

@@ -12,7 +12,7 @@ Baseline từ Modules 24–29, cụ thể hóa trong [Foundation Contract](docs/
 | Game.Infrastructure | netstandard2.1 | Persistence/content/diagnostics adapters | Foundation, Domain, Application |
 | Game.Headless | net10.0 | Composition root, CLI | Application, Infrastructure |
 
-Foundation có identity/time/math/RNG/revision; Domain có immutable kernel snapshot và typed transfer rule; Application có command pipeline/in-memory atomic publication, event-v1 journal và idempotent diagnostic projection consumer. Infrastructure vẫn scaffold. Client Unity chưa có assembly chạy; FND-16 tạo adapter và xác nhận backend compatibility.
+Foundation có identity/time/math/RNG/revision; Domain có immutable kernel snapshot và typed transfer rule; Application có command pipeline/in-memory atomic publication, event-v1 journal và idempotent diagnostic projection consumer và immutable scheduler/AdvanceTime workflow. Infrastructure vẫn scaffold. Client Unity chưa có assembly chạy; FND-16 tạo adapter và xác nhận backend compatibility.
 
 ## Luồng thực thi đích
 
@@ -28,7 +28,7 @@ Player/NPC/Scheduler Command
   -> UI / Director exposure / Chronicle
 ```
 
-Host có --transfer-demo thực thi path TransferResource trong bộ nhớ. Luồng durable storage/jobs/gameplay events/knowledge projections ở trên vẫn là kiến trúc đích; không coi demo là persistence/replay acceptance. Rule chỉ đề nghị changes; save adapter không tạo rule; UI không biết toàn bộ hidden truth. Query/preview không draw gameplay RNG. Phân biệt scheduled request, committed fact và exposed information ở mọi API.
+Host có --transfer-demo thực thi path TransferResource trong bộ nhớ. Luồng durable storage/gameplay events/knowledge projections ở trên vẫn là kiến trúc đích; không coi demo là persistence/replay acceptance. Rule chỉ đề nghị changes; save adapter không tạo rule; UI không biết toàn bộ hidden truth. Query/preview không draw gameplay RNG. Phân biệt scheduled request, committed fact và exposed information ở mọi API.
 
 ## Ranh giới nội dung
 
@@ -41,3 +41,5 @@ JSON authoring không phải scripting engine. Approved rule handlers được c
 Thêm logical folders Settlements/Factions/Ecology/Belief để các subsystem đã có GDD có nơi triển khai rõ; vẫn chung Domain assembly. Thêm governance và production docs cho quyết định/traceability/task handoff. Không tạo hàng chục assembly hoặc GameManager toàn quyền từ đầu.
 
 SDK 10.0.401 được chọn để kiểm tra scaffold ở lần bàn giao này; core vẫn .NET Standard 2.1 để đi theo baseline portable library. [Microsoft .NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) và [Unity API compatibility](https://docs.unity.com/en-us/engine/6000.7/manual/programming-environment/overview-of-dot-net-in-unity/dotnet-profile-support) là tài liệu toolchain tham chiếu. Build .NET thành công chưa chứng minh Mono/IL2CPP tương thích; gate FND-16 yêu cầu test thật.
+
+Sprint4 theo [ADR013](docs/adr/013-in-memory-scheduler.md): SchedulerState là thành viên CommittedWorld. Mỗi job dùng due-tick snapshot rồi publish clock/effects/status/receipt/events cùng nhau; target workflow không tạo world thứ hai. --scheduler-demo kiểm2jobs và timeadvance. Durability/recovery vẫn cần Infrastructure/FND11–12.

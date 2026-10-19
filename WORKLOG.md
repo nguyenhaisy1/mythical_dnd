@@ -419,3 +419,84 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 
 - Export cuối đã tái tạo7HTML+7DOCX; checker140sourceinputs,14files,30titles,6156anchors,123tables/navigationvalid. KhôngPDF/ZIP; artifactsignored. Không phải visual/gameplay acceptance.
 - Sources runtime fingerprint vẫn khớp evidence cuối. Scope diff đãreview; chuẩn bị commit/push feature/sprint-03-causal-events và PR vào dev. Main/tag/release không thay.
+
+
+### EVT-00028 | SPIN-006 | GIT — Đã push Sprint3 và tạo PR3; chờ CI
+
+<!-- worklog: {"id": "EVT-00028", "spin": "SPIN-006", "event": "GIT", "at": "2026-10-16T12:15:58+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T12:15:58+07:00
+- Actor: /root
+
+- Commit c7cdb29bcb2d41a7a42e39572f4a736fc4dc568c đã push origin/feature/sprint-03-causal-events; remoteSHA xác minh khớp. PR#3 https://github.com/nguyenhaisy1/mythical_dnd/pull/3 vào dev đã tạo.
+- CI push https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/38854841426 đang chạy; chưa merge trước khi CI đạt. Main/tag/release không đổi.
+- Events sau commit này local theo journalpolicy, đưa vào commit kế tiếp; không amend hoặc commit vô hạn để tự ghi hash.
+
+
+### EVT-00029 | SPIN-006 | CLOSE — Đóng Sprint3 — finished; PR3 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00029", "spin": "SPIN-006", "event": "CLOSE", "at": "2026-10-16T12:17:30+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T12:17:30+07:00
+- Actor: /root
+
+- Sprint3/SPIN006 finished trong phạm vi FND09 transfer committed event/causal trace và idempotent diagnostic consumer in-memory. /root điều phối/integration/docs/Git; /root/s3_events implementation; /root/s3_review independent source review, không còn blocker. Runtime138/138,0skip và negativecontrol đúng; docs/reference/architecture/export đạt theo RESULT/PROGRESS trước.
+- Branchcommit c7cdb29bcb2d41a7a42e39572f4a736fc4dc568c push và PR CI success: https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/38854841426 và https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/38854851302 .
+- PR#3 https://github.com/nguyenhaisy1/mythical_dnd/pull/3 squashmerged vào dev06f5dd798d16ea7a607e9ee2e859f2bb6a99963e; remoteSHA verified, tree diff HEAD→origin/dev rỗng. DevCI completed/success đúng06f5dd7: https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/38854925100 . main giữ1e45977; không tag/release.
+- Local branch vẫn feature/sprint-03-causal-events. Chỉ WORKLOG postcommit events chưa commit; đưa vào commit công việc kế tiếp theo policy, không amend/infinitecommit.
+- Báo cáo docs/qa/SPRINT-03-EVIDENCE.md; kế hoạch docs/production/sprints/SPRINT-03.md. Next FND10 scheduler/timeadvance/fanout/cycle; chưa mở Sprint4. Không fullFoundation, durability/processcrash/replay/Unity hoặc gameplayplaytest.
+
+
+### EVT-00030 | SPIN-007 | OPEN — Mở Sprint4 — scheduler và AdvanceTime
+
+<!-- worklog: {"id": "EVT-00030", "spin": "SPIN-007", "event": "OPEN", "at": "2026-10-16T12:59:01+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T12:59:01+07:00
+- Actor: /root
+
+- User giao Sprint4 và xác nhận workflow thường lệ áp dụng lâu dài: AI tự planning/breaktask/giaoagent/implementation/review/acceptance/docs/commit-push/PR-dev/báocáo khi xong. Không tự mở sprint tiếp theo hoặc main/tag/release khi chưa giao.
+- Sprint4 mục tiêu FND10 scheduler/AdvanceTime trong bộ nhớ trên kernel hiện có; durable persistence FND11 chưa triển khai nên không nghiệmthu processcrash. Phạm vi chi tiết/ADR sẽ chốt từ Time Scheduler Spec, không tự biến các activity/gameplay chưa có thành behavior.
+- Branch feature/sprint-04-scheduler từ origin/dev06f5dd7. Bảo toàn và mang WORKLOG local postcommit Sprint3 có chủ đích; không reset/stash.
+
+
+### EVT-00031 | SPIN-007 | ASSIGN — Giao implementation, tests và review Sprint4
+
+<!-- worklog: {"id": "EVT-00031", "spin": "SPIN-007", "event": "ASSIGN", "at": "2026-10-16T13:00:52+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-16T13:00:52+07:00
+- Actor: /root
+
+- /root/s4_scheduler implementation Application scheduler+pipeline; /root/s4_tests sở hữu SchedulerTests độc lập; /root/s4_review source review read-only; /root chốt ADR/docs/runner/CLI/Git/nghiệmthu.
+- API đề xuất ScheduleTransfer,CancelJob,AdvanceTime,ResolveAdvanceDecision qua Execute; DrainAdvance là bounded host workflow. AcceptedPending receipt bất biến; workflow state query riêng. Jobs/sequence/clock/events/receipt chung publication.
+- Ghi workflow thường trực vào AGENTS/.agent/AI-EXECUTION: sprint được giao tự planning→agents→tests/review→docs→commit/push→PR/dev/CI→report; không tự mở sprint mới/main/release.
+
+
+### EVT-00032 | SPIN-007 | RESUME — Tiếp tục Sprint4 sau gián đoạn; kiểm fixes và nghiệm thu
+
+<!-- worklog: {"id": "EVT-00032", "spin": "SPIN-007", "event": "RESUME", "at": "2026-10-19T08:25:17+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T08:25:17+07:00
+- Actor: /root
+
+- Tiếp tục2026-10-19 theo user sau gián đoạn usage limit của agents. Không coi agent lỗi là task hoàn tất. Code scheduler và39targetedtests đã có từ phiên trước; chưa finalgate/commit/push.
+- Hai findings: catch quá rộng có thể biến exception sau commit thành rejection và correlation job/advance không nhất quán. Implementer đã sửa source trước interruption, cần kiểm chứng regression/finalreview.
+- /root tiếp quản integration/fixes; gọi lại /root/s4_tests hoàn tất regression và /root/s4_review review độc lập. Giữ SPIN007/Sprint4, không mở mục tiêu khác.
+
+
+### EVT-00033 | SPIN-007 | RESULT — Sprint4 đạt184tests và review; chốt export/Git
+
+<!-- worklog: {"id": "EVT-00033", "spin": "SPIN-007", "event": "RESULT", "at": "2026-10-19T08:28:09+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T08:28:09+07:00
+- Actor: /root
+
+- /root/s4_scheduler hoàn tất models/pipeline và sửa2findings trước usage interruption; /root/s4_tests tiếp tục ngày19,46targetedtests pass. /root/s4_review independent finalsource review không cònblocker; không tựchạysuite riêng.
+- Root finalgate tests/results/sprint04-s_zsf3_6/evidence.json:184/184passed(138regression+46scheduler),0skip,negativecontrol1fail/exit1; Releasebuild6projects0warning/error. Fingerprint sha256:49484ff195caf15cb710ab47027e654cfde9da56b59235d6869df42bbf8a947f khớp current source.
+- Demo2jobs tick10/20→target30,revision7,resources5/5,Completed,originalpendingreceipt retry=true. Existing transferdemo/consumer vẫnpass.
+- Findings catchquárộng publication exception và job correlation đã sửa; regressions before/afterArgumentException,distinctcorrelation,depth64,reentry đạt. Budget1001fixture dừng1000/resume; fanout/cycle/deferral/authority/cancellation/sequence/fault có tests.
+- Docs36/handoff457links/52req/28tasks/reference/vectors/architecture/diff pass; credentialscanversionablefiles sạch. Export đang chạy từ nguồn cuối. KhôngSQLite/durable/recovery/replay/Unity/fullgameplaybreakpoints; nextFND11. Chưacommit/pushSprint4.
+
+
+### EVT-00034 | SPIN-007 | PROGRESS — Final contract fix clear cursor;184tests trên source cuối
+
+<!-- worklog: {"id": "EVT-00034", "spin": "SPIN-007", "event": "PROGRESS", "at": "2026-10-19T08:29:32+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T08:29:32+07:00
+- Actor: /root
+
+- Final contract review bổ sung fix Completed workflow phải clearCursor (TimeSpec), giữ Executions/CommittedJobs; regression thêm assertion và reviewer kiểm lại khôngblocker.
+- Finalgate mới tests/results/sprint04-dbhhrenr/evidence.json thay evidence trước cho revisioncuối:184/184,0skip,negativecontrol1fail/exit1,demosđạt,build0warning/error. Fingerprint sha256:947ad738d68380bbf58643ea169314d4d18f040291aa65c32dfad6f5797c31f8.
+- QA report đã cập nhật evidence mới; exports đang regenerate vì reportinputthayđổi. Không đổi scope; tests cũ giữ historicalartifact, không overwrite golden.
