@@ -86,3 +86,7 @@ Foundation hoàn thành khi FND-02–16 có evidence phù hợp. Skeleton build,
 ## Sprint4 — jobs và workflow trong publication
 
 [ADR013](../adr/013-in-memory-scheduler.md): CommittedWorld chứa SchedulerState và journal chung. Mỗi job/internal command publication atomic với clock, identity, state, receipt và events; lỗi trước publication giữ last committed state. Durability/persistence và restore interrupted workflow vẫn pending FND11/12. Fan-out/cycle guards áp dụng approved transfer continuations; chưa là gameplay event template engine hoàn chỉnh.
+
+## Sprint5 — headless durable publication
+
+[ADR014](../adr/014-headless-sqlite-persistence.md) đặt ICommittedWorldStore trước mọi publication, gồm metadata và scheduler. SQLite adapter commit full current image/mirrors atomically; lỗi store buộc reopen trước xử lý tiếp. Full periodic save/recovery/replay và Unity provider chưa xong; không coi current-image restore là toàn Foundation ready.

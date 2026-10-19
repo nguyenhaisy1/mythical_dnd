@@ -62,6 +62,7 @@ namespace Game.Application.CommandPipeline
 
     public sealed class CommandReceipt
     {
+        public CommandEnvelope OriginalEnvelope { get; }
         public string CommandId { get; }
         public string Fingerprint { get; }
         public CommandOutcome Outcome { get; }
@@ -73,7 +74,7 @@ namespace Game.Application.CommandPipeline
         internal CommandReceipt(CommandEnvelope envelope, string fingerprint, CommandOutcome outcome, string? error,
             ulong before, ulong after, WorldTick tick, IEnumerable<EntityId<Event>> events)
         {
-            CommandId = envelope.CommandId; Fingerprint = fingerprint; Outcome = outcome; ErrorCode = error;
+            OriginalEnvelope = envelope; CommandId = envelope.CommandId; Fingerprint = fingerprint; Outcome = outcome; ErrorCode = error;
             BeforeRevision = before; AfterRevision = after; CommittedTick = tick;
             OrderedEventIds = Array.AsReadOnly(events.ToArray());
         }
@@ -137,6 +138,8 @@ namespace Game.Application.CommandPipeline
         private readonly RuleRegistry rules;
         private CommittedWorld current;
         private bool executing;
+        private readonly ICommittedWorldStore? store;
+        public bool NeedsRecovery { get; private set; }
         // Failure probes are host-only test seams; no proposed facts are delivered to them.
         private readonly Action? beforeCommit;
         private readonly Action? afterCommit;
@@ -150,6 +153,15 @@ namespace Game.Application.CommandPipeline
             this.rules = rules ?? throw new ArgumentNullException(nameof(rules));
             this.beforeCommit = beforeCommit; this.afterCommit = afterCommit;
         }
+        public CommandProcessor(CommittedWorld initial, RuleRegistry rules, ICommittedWorldStore? store = null,
+            JobHandlerRegistry? jobHandlers = null, Action? beforeCommit = null, Action? afterCommit = null)
+        {
+            current = initial ?? throw new ArgumentNullException(nameof(initial));
+            this.rules = rules ?? throw new ArgumentNullException(nameof(rules));
+            this.store = store; this.jobHandlers = jobHandlers ?? new JobHandlerRegistry();
+            ValidateInitialScheduler(current.World, current.Scheduler, true);
+            this.beforeCommit = beforeCommit; this.afterCommit = afterCommit;
+        }
         // Trusted diagnostics/composition only: this omniscient view must not be exposed to UI/actor decisions.
         public CommittedWorld InspectCommitted() { lock (writer) return current; }
 
@@ -159,6 +171,7 @@ namespace Game.Application.CommandPipeline
             if (principal == null) throw new ArgumentNullException(nameof(principal));
             lock (writer)
             {
+                if (NeedsRecovery) throw new PipelineFailureException("PERSISTENCE_RECOVERY_REQUIRED");
                 if (executing) throw new PipelineFailureException("REENTRANT_COMMAND");
                 executing = true;
                 try { return ExecuteLocked(envelope, principal); }
@@ -221,10 +234,7 @@ namespace Game.Application.CommandPipeline
             var fact = new CommittedTransfer(eventId, revision, world.Tick, envelope, transfer);
             var publication = new CommittedWorld(candidate, before.AcceptedReceipts.Concat(new[] { receipt }), before.MetadataReceipts,
                 before.Events.Concat(new[] { fact }), before.Scheduler, before.Journal.Events.Concat(new[] { fact.Envelope }));
-            beforeCommit?.Invoke();
-            if (!ReferenceEquals(current, before)) throw new PipelineFailureException("COMMIT_CONFLICT");
-            current = publication; // Single atomic reference publication under the writer lock.
-            afterCommit?.Invoke(); // A lost response cannot roll back this already committed action.
+            Publish(before, publication);
             return receipt;
         }
         public static string SourceName(CommandSource source) => source == CommandSource.Player ? "Player" : source == CommandSource.Npc ? "NPC" : "Scheduler";
@@ -242,9 +252,7 @@ namespace Game.Application.CommandPipeline
         {
             var receipt = Receipt(command, fingerprint, outcome, code, current.World);
             var candidate = new CommittedWorld(current.World, current.AcceptedReceipts, current.MetadataReceipts.Concat(new[] { receipt }), current.Events, current.Scheduler, current.Journal.Events);
-            beforeCommit?.Invoke();
-            current = candidate;
-            afterCommit?.Invoke();
+            Publish(current, candidate);
             return receipt;
         }
         private static void ValidateTransfer(WorldSnapshot world, EntityId<Actor> issuer, TransferResource transfer, ChangeSet proposal)

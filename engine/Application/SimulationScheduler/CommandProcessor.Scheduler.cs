@@ -31,11 +31,11 @@ namespace Game.Application.CommandPipeline
             { throw new SchedulerInputException("INVALID_PAYLOAD"); }
         }
         private static bool IsSchedulerCommand(string type) => type == "ScheduleTransfer" || type == "CancelJob" || type == "AdvanceTime" || type == "ResolveAdvanceDecision";
-        private void ValidateInitialScheduler(WorldSnapshot world, SchedulerState scheduler)
+        private void ValidateInitialScheduler(WorldSnapshot world, SchedulerState scheduler, bool restoreHistory = false)
         {
             foreach (var job in scheduler.Jobs)
             {
-                if (job.Status != ScheduledJobStatus.Pending || world.Identity.Resolve<Job>(job.Id.Value).Lifecycle != EntityLifecycle.Active || job.DueTick < world.Tick)
+                if ((!restoreHistory && job.Status != ScheduledJobStatus.Pending) || world.Identity.Resolve<Job>(job.Id.Value).Lifecycle != (job.Status == ScheduledJobStatus.Pending ? EntityLifecycle.Active : EntityLifecycle.Retired) || (job.Status == ScheduledJobStatus.Pending && job.DueTick < world.Tick))
                     throw new ArgumentException("Invalid restored job lifecycle/time");
                 ValidateJobReferences(world, job.ActorId, job.Transfer, job.HandlerKey);
                 if (job.AncestorKeys.Count > MaximumCausalDepth || job.AncestorKeys.Any(string.IsNullOrWhiteSpace) ||
@@ -75,6 +75,11 @@ namespace Game.Application.CommandPipeline
         {
             beforeCommit?.Invoke();
             if (!ReferenceEquals(current, before)) throw new PipelineFailureException("COMMIT_CONFLICT");
+            if (store != null)
+            {
+                try { store.Commit(before, publication); }
+                catch { NeedsRecovery = true; throw; }
+            }
             current = publication;
             afterCommit?.Invoke();
         }
@@ -177,6 +182,7 @@ namespace Game.Application.CommandPipeline
             if (budget < 1 || budget > MaximumJobsPerInvocation) throw new ArgumentOutOfRangeException(nameof(budget));
             lock (writer)
             {
+                if (NeedsRecovery) throw new PipelineFailureException("PERSISTENCE_RECOVERY_REQUIRED");
                 if (executing) throw new PipelineFailureException("REENTRANT_COMMAND");
                 executing = true;
                 try

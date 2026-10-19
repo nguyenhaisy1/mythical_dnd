@@ -32,3 +32,9 @@ Recovery replay không republish side effects đã delivered; projection có th�
 Owner Infrastructure, FND-11: so sánh một managed binding tương thích headless và một Unity-compatible native binding, ghi license/version/runtime IDs, packaging, parameterized SQL, transaction rollback, busy/disk-full và crash behavior. Chốt provider ADR sau khi cả host/target client mở cùng format. Không dùng provider API trong Foundation/Domain. Editor/backend/OS phải ghi từ môi trường chạy thật; không suy từ .NET build.
 
 Fault injection points: trước BEGIN; sau từng table mutation; trước COMMIT; sau COMMIT trước publish; giữa snapshot write; giữa migration copy. Expected: tất cả hoặc không có commit, không orphan job/reservation/receipt, không mất last good save. Chạy trên process bị kill thật ngoài unit rollback. Backup retention tối thiểu2 bản migration gần nhất; UI cho biết đường dẫn backup và nguyên nhân fail. Chính sách prototype không cam kết save tương thích các schema chưa có migrator.
+
+## Sprint5 implementation amendment — 2026-10-19
+
+[ADR014](../adr/014-headless-sqlite-persistence.md) chọn provisional Microsoft.Data.Sqlite10.0.13 cho headless Linux; [spike](../qa/SQLITE-PROVIDER-SPIKE.md) giữ rõ native/Unity chưa chạy. Revision lưu fixed16hex UInt64 TEXT thay câu Int64 trong logical layout cũ, khớp kernel; tick vẫn Int64. Whole current-image mdc1 + integrity hash trong world_meta và relational mirrors dùng một transaction; chưa field deltas, periodic snapshots hoặc migration. Metadata receipts thuộc full-image CAS/integrity, không được gọi là gameplay hash.
+
+Store failure giữ current cũ và khóa processor bằng NeedsRecovery; host reopen từ database trước retry. Codec restore originalenvelope/receipts/scheduler history, kiểm workflow/execution với command gốc. [Evidence](../qa/SPRINT-05-EVIDENCE.md) tách processkill/current-image reopen khỏi FND12 snapshot fallback/powerloss/Unity. Các yêu cầu save manager phía trên vẫn áp dụng khi triển khai FND12.

@@ -27,7 +27,7 @@ Sprint là phạm vi milestone; spin là đợt thực hiện có goal. Một sp
 
 Xem [Sprint 1](../production/sprints/SPRINT-01.md), [Git Workflow](GIT-WORKFLOW.md) và [Test Execution](../qa/TEST-EXECUTION-CONTRACT.md).
 
-Sprint hiện hành: [Sprint4](../production/sprints/SPRINT-04.md), scope FND-10 scheduler/AdvanceTime in-memory. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
+Sprint hiện hành: [Sprint5](../production/sprints/SPRINT-05.md), scope FND11 headless SQLite current-state persistence. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
 
 ## Ủy quyền workflow thường trực
 

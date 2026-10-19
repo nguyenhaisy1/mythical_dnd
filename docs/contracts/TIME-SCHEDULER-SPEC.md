@@ -43,3 +43,5 @@ FND-03 hiện thực pure WorldTick/calendar/duration; nghiệm thu xem Sprint 1
 ## Sprint4 — scheduler in-memory
 
 [ADR013](../adr/013-in-memory-scheduler.md) hiện thực ordering/deferral/bounded drain và AdvanceTime trên scheduled TransferResource. Request/job/closing publication trong bộ nhớ; budget1000/fanout32/ancestry64 và prototype breakpoint acknowledgement. Actor-death revalidation dùng committed fixture; chưa có Health/repair completion gameplay. SchedulerState.Restore chỉ pending-job bootstrap fixture, không restore interrupted workflow hoặc process-crash recovery. Phần durable/recovery phía trên vẫn là đích FND11/12. [Evidence](../qa/SPRINT-04-EVIDENCE.md) là nguồn nghiệm thu từng scope.
+
+Sprint5 bổ sung durable current-image restore riêng qua Infrastructure codec, gồm pending/paused/completed workflows và receipts; không dùng SchedulerState.Restore(pending fixture) để giả recovery. Xem [ADR014](../adr/014-headless-sqlite-persistence.md). Periodic snapshot/replay fallback vẫn FND12/13.

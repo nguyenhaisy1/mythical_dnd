@@ -500,3 +500,62 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Final contract review bổ sung fix Completed workflow phải clearCursor (TimeSpec), giữ Executions/CommittedJobs; regression thêm assertion và reviewer kiểm lại khôngblocker.
 - Finalgate mới tests/results/sprint04-dbhhrenr/evidence.json thay evidence trước cho revisioncuối:184/184,0skip,negativecontrol1fail/exit1,demosđạt,build0warning/error. Fingerprint sha256:947ad738d68380bbf58643ea169314d4d18f040291aa65c32dfad6f5797c31f8.
 - QA report đã cập nhật evidence mới; exports đang regenerate vì reportinputthayđổi. Không đổi scope; tests cũ giữ historicalartifact, không overwrite golden.
+
+
+### EVT-00035 | SPIN-007 | GIT — Đã push Sprint4 và mở PR4; chờ CI
+
+<!-- worklog: {"id": "EVT-00035", "spin": "SPIN-007", "event": "GIT", "at": "2026-10-19T08:31:02+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T08:31:02+07:00
+- Actor: /root
+
+- Export cuối143sourceinputs/14HTML-DOCX/30titles/6156anchors/123tables/navigation valid; khôngZIP. Final runtime fingerprint đã verify trướccommit.
+- Commit7bded4ce810090bec131cc2d19fe9550afa079a3 push origin/feature/sprint-04-scheduler; PR#4 https://github.com/nguyenhaisy1/mythical_dnd/pull/4 vào dev. CI push https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/39185679402 đang chạy, chưa suy pass.
+- Events saucommit local theo policy; không amend/infinitecommit. Main/tag/release không đổi.
+
+
+### EVT-00036 | SPIN-007 | CLOSE — Đóng Sprint4 — finished; PR4 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00036", "spin": "SPIN-007", "event": "CLOSE", "at": "2026-10-19T08:32:37+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T08:32:37+07:00
+- Actor: /root
+
+- Sprint4/SPIN007 finished scope FND10 scheduler/AdvanceTime in-memory ngày2026-10-19. Actors thật: /root/s4_scheduler implementation+fixes, /root/s4_tests46scheduler tests, /root/s4_review independent source review, /root integration/finalcursorfix/docs/CLI/runner/Git/acceptance. Không cònblocker trong scope.
+- Final184/184tests,0skip,negativecontrolđúng,2demosđạt; evidence tests/results/sprint04-dbhhrenr/evidence.json. Docs/reference/architecture/export143inputs/14HTML-DOCX đạt. Report docs/qa/SPRINT-04-EVIDENCE.md và sprintbrief.
+- FeatureSHA7bded4ce810090bec131cc2d19fe9550afa079a3 đãpush/remoteverified; CIpush39185679402 và PR39185688497 success. PR#4 https://github.com/nguyenhaisy1/mythical_dnd/pull/4 squashmerged dev9fdb1ef6477310ea9879e404737a249a4071fcc8; tree HEAD→origin/dev giống nhau.
+- DevCI https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/39185762881 completed/success đúng9fdb1ef. Main giữ1e45977, khôngtag/release.
+- Workflow thường trực đãcommit trong AGENTS/.agent/AI-EXECUTION. NextFND11 persistence adapter/provider spike; không tự mởSprint5. Khôngdurable recovery/replay/Unity hoặc fullgameplay activitybreakpoints.
+- Local vẫnfeature/sprint-04-scheduler; chỉ WORKLOG postcommit events local, đưa vào commit kế tiếp theo policy. Khôngamend/infinitecommit để tự chứa hash.
+
+
+### EVT-00037 | SPIN-008 | OPEN — Mở Sprint5 — SQLite persistence cho headless kernel
+
+<!-- worklog: {"id": "EVT-00037", "spin": "SPIN-008", "event": "OPEN", "at": "2026-10-19T09:50:42+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T09:50:42+07:00
+- Actor: /root
+
+- User giao Sprint5 theo workflow thường trực. Mở SPIN008/FND11 headless SQLite adapter, atomic commit/reopen/retry và provider spike; Unity native target chưa có Editor, không chốt universal provider hoặc full FND12 recovery/migration.
+- Branch feature/sprint-05-persistence từ origin/dev9fdb1ef; giữ WORKLOG postcommit Sprint4 có chủ đích. /root đọc save-v1/OPEN03/backlog và kiểm môi trường.
+- Cần ADR giải quyết mismatch save-v1 revision Int64 vs kernel UInt64, relational layout và canonical mdc1 current-state image; full periodic snapshots/migration/replay thuộc FND12/13. Không tự đơn giản hóa thành JSON hoặc in-memory giảdurability.
+
+
+### EVT-00038 | SPIN-008 | ASSIGN — Tiếp quản implementation sau agent quota; chốt headless scope
+
+<!-- worklog: {"id": "EVT-00038", "spin": "SPIN-008", "event": "ASSIGN", "at": "2026-10-19T13:35:10+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T13:35:10+07:00
+- Actor: /root
+
+- /root/s5_codec đã thêm ICommittedWorldStore, raw envelope receipt retention và prepublication bridge trước khi quota dừng; /root/s5_sqlite và /root/s5_review cũng bị quota. Reviewer mới đọc contract, chưa review implementation tại thời điểm này.
+- /root tiếp quản codec/mdc1 reader/SQLite adapter/tests/CLI SIGKILL harness/packages/ADR014/sprintbrief.26SQLite targetedtests pass; fullgate đang chạy. Không ghi agent đã hoàn tất phần chưa làm.
+- Provider Microsoft.Data.Sqlite10.0.13 exact/lock; Unity chưa kiểm. FullFND11/OPEN03 provider gate vẫn pending, Sprint5 scope headless subset. Đã gửi lại reviewer yêu cầu review nguồn khi có thể.
+
+
+### EVT-00039 | SPIN-008 | RESULT — Sprint5 đạt runtime gate và independent review; hoàn thiện export/Git
+
+<!-- worklog: {"id": "EVT-00039", "spin": "SPIN-008", "event": "RESULT", "at": "2026-10-19T13:41:39+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T13:41:39+07:00
+- Actor: /root
+
+- /root/s5_sqlite đã tiếp tục, bổ sung14testcases; /root/s5_review review độc lập tìm restore binding thiếu, root sửa và reviewer cuối xác nhận không còn blocker. Root thực hiện integration/codec/adapter/CLI/docs.
+- Final Release gate224/224,0skip,40FND11cases,negativecontrol1fail đúng,2demos và3actualSIGKILL đạt; evidence tests/results/sprint05-dgsslqle/evidence.json, fingerprint88ed1f6aa58b56f80b0f5e25d1ae4073de32794250cfb410457bc9e8bf49f2aa.
+- Docs36generated/handoff476links/referencevectors pass. Architecture check ban packages cũ được cập nhật allowlist duy nhất Infrastructure Microsoft.Data.Sqlite[10.0.13] theo ADR014, tiếp tục cấm dependencies mới ngoài baseline; check đãpass. Export đang regenerate.
+- Headless current-state subset đạt; periodic snapshot/recovery/replay/Unity pending. Không bản playable, benchmark hoặc power-loss claim.

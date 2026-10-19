@@ -48,3 +48,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint4 — 2026-10-19
 
 [Evidence](SPRINT-04-EVIDENCE.md):184/184Release tests(138regression+46scheduler),0skip; negativecontrol1fail/exit1 đúng; build6projects0warning/error. Scheduler demo2jobs tick10/20→target30,revision7,resource5/5,retryoriginalpending=true. FND10 ordering/advance/cancel/revalidation/bounds in-memory; không durable storage/recovery hoặc full gameplay breakpoint.
+
+## Sprint5 — 2026-10-19
+
+[Evidence Sprint5](SPRINT-05-EVIDENCE.md):224/224headless tests,0skip,40FND11cases;negativecontrol đúng;3SIGKILL subprocess trước/sau COMMIT đạt. SQLite current-state commit/reopen được nghiệm thu; periodic snapshot/recovery fallback/replay/Unity vẫn pending. Independent source review không còn blocker.
