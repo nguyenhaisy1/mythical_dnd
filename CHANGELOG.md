@@ -6,6 +6,12 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint 5 persistence — 2026-10-19
+
+- Thêm Application durability port, original-envelope receipt retention và NeedsRecovery; mọi mutation/metadata/scheduler publish sau commit.
+- Thêm mdc1 current-state codec và SQLite file store, full-image CAS, relational integrity mirrors, busy/full/rollback/unknown-outcome và actual SIGKILL harness.
+- Pin Microsoft.Data.Sqlite10.0.13 và package locks; provider provisional Linux headless. ADR014 dùng UInt64 hex revision, full current image chưa là periodic snapshots/migrations/replay hoặc Unity provider acceptance.
+
 ### Sprint 4 scheduler — 2026-10-19
 
 - Thêm immutable scheduled transfer jobs và AdvanceTime workflow cùng CommittedWorld publication; request/job/closing commits, cancellation, revalidation và idempotent retry.

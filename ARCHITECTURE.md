@@ -12,7 +12,7 @@ Baseline từ Modules 24–29, cụ thể hóa trong [Foundation Contract](docs/
 | Game.Infrastructure | netstandard2.1 | Persistence/content/diagnostics adapters | Foundation, Domain, Application |
 | Game.Headless | net10.0 | Composition root, CLI | Application, Infrastructure |
 
-Foundation có identity/time/math/RNG/revision; Domain có immutable kernel snapshot và typed transfer rule; Application có command pipeline/in-memory atomic publication, event-v1 journal và idempotent diagnostic projection consumer và immutable scheduler/AdvanceTime workflow. Infrastructure vẫn scaffold. Client Unity chưa có assembly chạy; FND-16 tạo adapter và xác nhận backend compatibility.
+Foundation có identity/time/math/RNG/revision; Domain có immutable kernel snapshot và typed transfer rule; Application có command pipeline/in-memory atomic publication, event-v1 journal và idempotent diagnostic projection consumer và immutable scheduler/AdvanceTime workflow. Infrastructure có headless SQLite adapter/committed-image codec; Unity provider vẫn provisional. Client Unity chưa có assembly chạy; FND-16 tạo adapter và xác nhận backend compatibility.
 
 ## Luồng thực thi đích
 
@@ -43,3 +43,5 @@ Thêm logical folders Settlements/Factions/Ecology/Belief để các subsystem �
 SDK 10.0.401 được chọn để kiểm tra scaffold ở lần bàn giao này; core vẫn .NET Standard 2.1 để đi theo baseline portable library. [Microsoft .NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) và [Unity API compatibility](https://docs.unity.com/en-us/engine/6000.7/manual/programming-environment/overview-of-dot-net-in-unity/dotnet-profile-support) là tài liệu toolchain tham chiếu. Build .NET thành công chưa chứng minh Mono/IL2CPP tương thích; gate FND-16 yêu cầu test thật.
 
 Sprint4 theo [ADR013](docs/adr/013-in-memory-scheduler.md): SchedulerState là thành viên CommittedWorld. Mỗi job dùng due-tick snapshot rồi publish clock/effects/status/receipt/events cùng nhau; target workflow không tạo world thứ hai. --scheduler-demo kiểm2jobs và timeadvance. Durability/recovery vẫn cần Infrastructure/FND11–12.
+
+Sprint5 theo [ADR014](docs/adr/014-headless-sqlite-persistence.md): Application sở hữu ICommittedWorldStore port; Infrastructure dùng Microsoft.Data.Sqlite để CAS/commit current-image mdc1 và relational mirrors. Publish sau durable commit; store error yêu cầu reopen. Layer graph không đổi; full save manager/replay và Unity compatibility chưa được nghiệm thu.

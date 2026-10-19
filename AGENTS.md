@@ -58,3 +58,7 @@ User giao sprint mới với cùng workflow điều phối/chia task/subagents/t
 Chủ dự án xác nhận không cần nhắc lại workflow. Mỗi khi giao một sprint, AI tự đọc bàn giao/baseline, chốt phạm vi và acceptance, lập kế hoạch/break task, giao subagents với ownership rõ, triển khai, review độc lập, chạy checks, sửa lỗi, đồng bộ tài liệu/exports/changelog/worklog, commit/push feature branch, tạo PR và tích hợp vào dev sau khi review/CI đạt, rồi báo cáo kết thúc. Đây là ủy quyền cho sprint được giao; không tự mở sprint kế tiếp, merge main, tạo tag hoặc release. Không xin lại quyền routine trong phạm vi này.
 
 Sprint4 hiện hành: docs/production/sprints/SPRINT-04.md, SPIN-007, FND10 scheduler/AdvanceTime in-memory. Durability FND11 và gameplay repair/health/legacy vẫn có acceptance riêng; không đánh dấu complete vì có mock hoặc fixture.
+
+## Sprint5 — 2026-10-19
+
+User giao Sprint5 theo workflow thường trực. Scope FND11 headless SQLite current-state commit/reopen, ADR014; periodic snapshot/recovery/replay và Unity provider còn gates riêng. SPIN008; docs/production/sprints/SPRINT-05.md và docs/qa/SPRINT-05-EVIDENCE.md ghi actor/evidence thực, gồm việc agents quota và root tiếp quản. NextFND12, không tự mởSprint6.

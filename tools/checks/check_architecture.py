@@ -11,7 +11,13 @@ for p in sorted((ROOT/'engine').glob('*/*.csproj')):
     for n in xml.iter('ProjectReference'):assert (p.parent/n.attrib['Include']).exists(),'Missing project'
     tfm=xml.findtext('./PropertyGroup/TargetFramework')
     assert tfm==('net10.0' if name=='Game.Headless' else 'netstandard2.1'),f'Wrong framework: {name}'
-    assert not list(xml.iter('PackageReference')),'New package requires architecture review/check update'
+    # ADR014 permits the pinned headless provider only at the Infrastructure boundary.
+    packages=[(n.attrib['Include'],n.attrib.get('Version')) for n in xml.iter('PackageReference')]
+    expected=[('Microsoft.Data.Sqlite','[10.0.13]')] if name=='Game.Infrastructure' else []
+    assert packages==expected,f'{name}: package change requires architecture review: {packages}'
+    if packages:
+        assert xml.findtext('./PropertyGroup/RestorePackagesWithLockFile')=='true'
+        assert (p.parent/'packages.lock.json').is_file(),'Missing provider lockfile'
 for p in (ROOT/'engine').rglob('*.cs'):
     if any(k in p.parts for k in ['bin','obj']):continue
     if p.relative_to(ROOT/'engine').parts[0] in ['Foundation','Domain']:

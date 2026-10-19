@@ -1,9 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <RootNamespace>Game.Infrastructure</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="[10.0.13]" />
     <ProjectReference Include="../Foundation/Game.Foundation.csproj" />
     <ProjectReference Include="../Domain/Game.Domain.csproj" />
     <ProjectReference Include="../Application/Game.Application.csproj" />

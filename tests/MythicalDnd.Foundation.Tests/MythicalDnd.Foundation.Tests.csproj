@@ -12,6 +12,7 @@
     <ProjectReference Include="../../engine/Foundation/Game.Foundation.csproj" />
     <ProjectReference Include="../../engine/Domain/Game.Domain.csproj" />
     <ProjectReference Include="../../engine/Application/Game.Application.csproj" />
+    <ProjectReference Include="../../engine/Infrastructure/Game.Infrastructure.csproj" />
   <None Include="../../content/fixtures/kernel-smoke/scenario.json" Link="scenario.json" CopyToOutputDirectory="PreserveNewest" />
   <None Include="../../content/fixtures/kernel-smoke/vectors.json" Link="vectors.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
