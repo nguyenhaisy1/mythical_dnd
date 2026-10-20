@@ -1,6 +1,6 @@
 # Test Execution & Evidence Contract
 
-Ngày 2026-10-14. Áp dụng FND-02–16, VS-01/10. Các TEST trong matrix là acceptance requirements; chỉ cập nhật theo runtime evidence từng task. FND-02–04 có primitives; FND05–08 có TransferResource in-memory; FND09 có event/consumer in-memory; Sprint4 kiểm scheduler in-memory riêng; Sprint5 kiểm SQLite current-state durability/reopen bằng file thật và SIGKILL subprocess. Periodic snapshots/recovery fallback/replay/Unity còn pending.
+Ngày 2026-10-14. Áp dụng FND-02–16, VS-01/10. Các TEST trong matrix là acceptance requirements; chỉ cập nhật theo runtime evidence từng task. FND-02–04 có primitives; FND05–08 có TransferResource in-memory; FND09 có event/consumer in-memory; Sprint4 kiểm scheduler in-memory riêng; Sprint5 kiểm SQLite current-state durability/reopen bằng file thật và SIGKILL subprocess. Sprint6 kiểm periodic/manual snapshot, committed-image fallback và new-file migration1→2; rule replay/Unity/platform replacement còn pending.
 
 ## Hai cấp thực thi
 

@@ -559,3 +559,78 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Final Release gate224/224,0skip,40FND11cases,negativecontrol1fail đúng,2demos và3actualSIGKILL đạt; evidence tests/results/sprint05-dgsslqle/evidence.json, fingerprint88ed1f6aa58b56f80b0f5e25d1ae4073de32794250cfb410457bc9e8bf49f2aa.
 - Docs36generated/handoff476links/referencevectors pass. Architecture check ban packages cũ được cập nhật allowlist duy nhất Infrastructure Microsoft.Data.Sqlite[10.0.13] theo ADR014, tiếp tục cấm dependencies mới ngoài baseline; check đãpass. Export đang regenerate.
 - Headless current-state subset đạt; periodic snapshot/recovery/replay/Unity pending. Không bản playable, benchmark hoặc power-loss claim.
+
+
+### EVT-00040 | SPIN-008 | GIT — Push Sprint5 và mở PR5; đợi CI
+
+<!-- worklog: {"id": "EVT-00040", "spin": "SPIN-008", "event": "GIT", "at": "2026-10-19T13:44:07+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-19T13:44:07+07:00
+- Actor: /root
+
+- Export cuối147sourceinputs/14HTML-DOCX/6156anchors/123tables/navigation đạt; khôngZIP. Runtime sourcefingerprint vẫn khớp finalgate.
+- Commit056696a7d30ea02afbd15267d6ad7f4b1cf0eeae đãpush origin/feature/sprint-05-persistence và remoteSHA verified.
+- PR#5 https://github.com/nguyenhaisy1/mythical_dnd/pull/5 vào dev đãmở; chưa merge, đang đợi CI xuất hiện/chạy.
+- Postcommit log local theo policy, đưa vào commit kế tiếp; main/tag/release không đổi.
+
+
+### EVT-00041 | SPIN-008 | CLOSE — Đóng Sprint5 — finished; PR5 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00041", "spin": "SPIN-008", "event": "CLOSE", "at": "2026-10-20T09:01:24+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-20T09:01:24+07:00
+- Actor: /root
+
+- Chốt báo cáo ngày 2026-10-20 theo client date. Sprint5/SPIN-008 finished trong phạm vi FND11 headless SQLite current-state persistence; không còn blocker trong scope.
+- /root điều phối/implementation/integration/docs/Git; /root/s5_codec bắt đầu port trước quota; /root/s5_sqlite bổ sung14cases; /root/s5_review review độc lập, findings restore binding đã sửa và xác nhận không còn blocker.
+- Final224/224tests,0skip,40FND11cases; negativecontrol đúng;2demos và3SIGKILL đạt. Evidence/report docs/qa/SPRINT-05-EVIDENCE.md. Export147inputs/14HTML-DOCX,6156anchors,123tables/navigation đạt.
+- PR#5 https://github.com/nguyenhaisy1/mythical_dnd/pull/5 đã squash merge ngày2026-10-19 vào dev b20923b47ccde25f10809d4ac80e7cd4487665af. Feature056696a7d30ea02afbd15267d6ad7f4b1cf0eeae; CI push39211600401 và PR39211605020 success.
+- Xác minh lại GitHub API ngày2026-10-20: dev CI39211698260 completed/success đúng mergeSHA; https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/39211698260. Fetch và diff HEAD/origin/dev không khác tree. Main giữ1e45977c0791154bb778230c06801782e0052aeb; không tag/release.
+- Bước tiếp theo FND12 snapshot/save/recovery, sau đó FND13 replay. OPEN03 Unity provider pending; chưa có bản playable. Không tự mởSprint6.
+- Local giữ feature/sprint-05-persistence; chỉ WORKLOG postcommit events chưa commit, đưa vào commit kế tiếp theo policy.
+
+
+### EVT-00042 | SPIN-009 | OPEN — Mở Sprint6 — snapshot và save recovery; cập nhật định dạng báo cáo
+
+<!-- worklog: {"id": "EVT-00042", "spin": "SPIN-009", "event": "OPEN", "at": "2026-10-20T09:19:54+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-20T09:19:54+07:00
+- Actor: /root
+
+- User giao Sprint6 theo workflow thường trực, yêu cầu từ nay mọi báo cáo sprint mở đầu bằng tổng hợp tiếng Việt dễ hiểu rồi mới chi tiết kỹ thuật/evidence/Git.
+- Goal FND12: snapshot/manual save/compatible recovery trên SQLite headless, kế thừa Sprint5 b20923b. Chốt design gaps về manifest/suffix/migration trước implementation; FND13 deterministic rerun và Unity ngoài scope.
+- Giữ WORKLOG postcommit Sprint5 khi tạo branch; không thay lịch sử. /root điều phối, chuẩn bị task ownership/review và acceptance thật.
+
+
+### EVT-00043 | SPIN-009 | ASSIGN — Chốt ADR015, giao implementation/tests/review và lưu quy tắc báo cáo
+
+<!-- worklog: {"id": "EVT-00043", "spin": "SPIN-009", "event": "ASSIGN", "at": "2026-10-20T09:22:29+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-20T09:22:29+07:00
+- Actor: /root
+
+- /root/s6_storage sở hữu Infrastructure save manager; /root/s6_tests sở hữu SaveRecoveryTests.cs; /root/s6_design_review đọc spec và review độc lập; /root ADR/docs/host/crash/integration/Git.
+- ADR015 chốt schema2 explicit InitializeSave, legacy Initialize schema1, snapshot100accepted commits và manual không reset periodic; recovery full-image suffix không rule rerun; migration1->2/newfile+backup không atomic replace source.
+- Đã ghi yêu cầu báo cáo tổng hợp dễ hiểu lên đầu trong AGENTS/.agent/AI-EXECUTION và Sprint6 brief. SDK pin10.0.401 đang cài lại vào /tmp (khôngcommit).
+
+
+### EVT-00044 | SPIN-009 | PROGRESS — Tiếp quản sau agent quota; review đạt, đang chạy final runtime gate
+
+<!-- worklog: {"id": "EVT-00044", "spin": "SPIN-009", "event": "PROGRESS", "at": "2026-10-20T14:50:01+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-20T14:50:01+07:00
+- Actor: /root
+
+- /root/s6_storage đã hiện thực schema2/save manager và sửa findings reviewer; /root/s6_tests đã soạn tests. Hai agent chạm usage limit trước final gate, /root tiếp quản.
+- Review độc lập /root/s6_design_review tìm/sửa manifest integrity/world binding, cadence sau recovery, fallback codec exception, readonly source, accepted receipt delta. Review cuối và delta migration_before_commit không còn blocker; reviewer không chạy runtime.
+- Test Debug ban đầu25cases có3failure do assertion so raw backupbytes với source; đã sửa thành canonical state equality theo spec (SQLite backup page metadata có thể khác), vẫn kiểm source bytes và immutable backup.
+- Root thêm fixture RNG không rỗng, fault rollback/retry tại mutation100 và6SIGKILL snapshot/migration cases gồm output trước COMMIT. Final Release gate đang chạy, chưa ghi pass.
+- Đã ghi ADR015, Sprint6 brief, SAVE-RECOVERY runbook và quy tắc report tổng hợp trước/chi tiết sau. Next FND13, Unity và atomic source replacement ngoài scope.
+
+
+### EVT-00045 | SPIN-009 | RESULT — Sprint6 đạt256tests và9SIGKILLcases; hoàn thiện export/Git
+
+<!-- worklog: {"id": "EVT-00045", "spin": "SPIN-009", "event": "RESULT", "at": "2026-10-20T14:53:23+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-20T14:53:23+07:00
+- Actor: /root
+
+- Final Release gate256/256tests,0skip;32FND12cases +224regression;negativecontrol đúng1fail;2demos và6save/migrationSIGKILL mới+3current-stateSIGKILL đều đạt.
+- Evidence tests/results/sprint06-nf_eo33r/evidence.json; fingerprint8fe87283c85474f8ad97fbfa889caeec80c07875f241581634affd005a0b4687. Build0warnings/0errors. Source fingerprint đã kiểm lại không stale.
+- Review độc lập /root/s6_design_review không còn blocker, gồm delta midmigrationtransaction. Root nghiệm thu runtime. Actors/quota takeover ghi rõ trong report.
+- Bộ tài liệu đã đồng bộ ADR015/save contract/runbook/backlog/matrix/handoff/agent/README/changelog/CI. Báo cáo Sprint6 có tổng hợp tiếng Việt dễ hiểu ngay đầu theo yêu cầu user. Docs/reference/architecture checks đạt; exports đang regenerate, chưa push.
+- Headless snapshot/recovery/newfile migration đạt; platform atomic replacement/Unity save UI/OPEN03/FND13 rule replay còn pending. Không tự mởSprint7.

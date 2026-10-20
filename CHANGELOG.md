@@ -6,6 +6,13 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint6 — snapshot và khôi phục bản lưu
+- Schema2 manifest và periodic snapshots mỗi100accepted mutation commits; lưu thủ công không thay gameplay state hoặc cadence.
+- Khôi phục đúng committed head từ snapshot và full-image suffix; migration1→2 tạo backup/output mới, giữ nguồn.
+- Quy tắc báo cáo sprint mở đầu bằng tổng hợp tiếng Việt dễ hiểu, sau đó mới chi tiết kỹ thuật/evidence/Git.
+- Compatibility: schema1 giữ API legacy; upgrade explicit. Không rule replay, Unity save UI hoặc atomic replace nguồn; xem ADR015 và Sprint6 evidence.
+
+
 ### Sprint 5 persistence — 2026-10-19
 
 - Thêm Application durability port, original-envelope receipt retention và NeedsRecovery; mọi mutation/metadata/scheduler publish sau commit.

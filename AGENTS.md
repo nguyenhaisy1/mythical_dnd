@@ -62,3 +62,9 @@ Sprint4 hiện hành: docs/production/sprints/SPRINT-04.md, SPIN-007, FND10 sche
 ## Sprint5 — 2026-10-19
 
 User giao Sprint5 theo workflow thường trực. Scope FND11 headless SQLite current-state commit/reopen, ADR014; periodic snapshot/recovery/replay và Unity provider còn gates riêng. SPIN008; docs/production/sprints/SPRINT-05.md và docs/qa/SPRINT-05-EVIDENCE.md ghi actor/evidence thực, gồm việc agents quota và root tiếp quản. NextFND12, không tự mởSprint6.
+
+## Sprint6 và định dạng báo cáo — 2026-10-20
+
+User giao Sprint6 theo workflow thường trực; SPIN-009, docs/production/sprints/SPRINT-06.md, FND12 headless snapshot/recovery/migration theo ADR015. Không tự mởSprint7 hoặc release.
+
+Từ nay báo cáo sprint phải bắt đầu bằng phần tổng hợp tiếng Việt dễ hiểu: sprint làm những việc gì, kết quả giúp ích gì và phần còn thiếu. Sau đó mới trình bày chi tiết kỹ thuật, phân công, kiểm thử/evidence, blockers và Git. Không dùng thuật ngữ kỹ thuật làm phần tổng hợp khó hiểu.

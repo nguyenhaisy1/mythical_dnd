@@ -41,3 +41,7 @@ Sprint đã nghiệm thu local: [SPRINT-01](production/sprints/SPRINT-01.md). Ru
 [Sprint4 planning](production/sprints/SPRINT-04.md), [ADR013](adr/013-in-memory-scheduler.md) và [evidence](qa/SPRINT-04-EVIDENCE.md): scheduler/AdvanceTime in-memory; persistence FND11 là bước tiếp theo.
 
 [Sprint5](production/sprints/SPRINT-05.md), [ADR014](adr/014-headless-sqlite-persistence.md), [provider spike](qa/SQLITE-PROVIDER-SPIKE.md), [evidence](qa/SPRINT-05-EVIDENCE.md): headless SQLite commit/reopen, OPEN03 Unity còn pending.
+
+[Sprint6](production/sprints/SPRINT-06.md), [ADR015](adr/015-snapshot-and-recovery-frames.md), [evidence](qa/SPRINT-06-EVIDENCE.md): snapshots/manual save, committed-image recovery và migration1→2 sang file mới.
+
+[Vận hành save/recovery headless](runbooks/SAVE-RECOVERY.md): API, lỗi, backup và giới hạn.

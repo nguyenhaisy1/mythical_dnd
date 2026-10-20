@@ -17,7 +17,7 @@ jobs:
           python3 tools/checks/check_contract_vectors.py
           python3 tools/checks/check_architecture.py
           python3 tools/checks/check_handoff.py
-      - name: Headless kernel regression and Sprint 5 gate
+      - name: Headless kernel regression and Sprint 6 gate
         run: python3 tools/tests/run_runtime.py
       - name: Upload runtime evidence
         if: always()

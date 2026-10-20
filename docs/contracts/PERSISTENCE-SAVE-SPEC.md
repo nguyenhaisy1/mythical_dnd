@@ -38,3 +38,11 @@ Fault injection points: trước BEGIN; sau từng table mutation; trước COMM
 [ADR014](../adr/014-headless-sqlite-persistence.md) chọn provisional Microsoft.Data.Sqlite10.0.13 cho headless Linux; [spike](../qa/SQLITE-PROVIDER-SPIKE.md) giữ rõ native/Unity chưa chạy. Revision lưu fixed16hex UInt64 TEXT thay câu Int64 trong logical layout cũ, khớp kernel; tick vẫn Int64. Whole current-image mdc1 + integrity hash trong world_meta và relational mirrors dùng một transaction; chưa field deltas, periodic snapshots hoặc migration. Metadata receipts thuộc full-image CAS/integrity, không được gọi là gameplay hash.
 
 Store failure giữ current cũ và khóa processor bằng NeedsRecovery; host reopen từ database trước retry. Codec restore originalenvelope/receipts/scheduler history, kiểm workflow/execution với command gốc. [Evidence](../qa/SPRINT-05-EVIDENCE.md) tách processkill/current-image reopen khỏi FND12 snapshot fallback/powerloss/Unity. Các yêu cầu save manager phía trên vẫn áp dụng khi triển khai FND12.
+
+## Sprint6 implementation amendment — 2026-10-20
+
+[ADR015](../adr/015-snapshot-and-recovery-frames.md) bổ sung schema2 save manager: InitializeSave tạo initial snapshot; snapshot định kỳ mỗi100accepted mutations và CreateSnapshot thủ công không đổi gameplay state hoặc reset cadence. Initialize legacy vẫn schema1. Manifest bảo vệ versions/content/world/seed provenance, sequence/head hash và accepted count; full-image recovery frames giữ metadata receipts giữa các revisions.
+
+RecoverToNewFile chọn valid snapshot và kiểm complete suffix tới committed head, không rerun rules hoặc republish effects. Đây là committed-image recovery amendment thay command-suffix rerun trong scope FND12; FND13 vẫn cần resolver replay riêng. Thiếu đường khôi phục đầy đủ phải fail, không trả save cũ như thành công.
+
+MigrateToNewFile hỗ trợ1→2 với SQLite-consistent backup và output mới được validate. Không overwrite nguồn, không tự prune backups, không atomic replace file gốc/platform UI. Seed campaign chưa có trong legacy có thể unavailable; RNG contexts vẫn đầy đủ, không suy seed giả. Manual save/quit và breakpoint có API nền tảng, Unity UI/lifecycle wiring còn pending.

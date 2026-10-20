@@ -52,3 +52,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint5 — 2026-10-19
 
 [Evidence Sprint5](SPRINT-05-EVIDENCE.md):224/224headless tests,0skip,40FND11cases;negativecontrol đúng;3SIGKILL subprocess trước/sau COMMIT đạt. SQLite current-state commit/reopen được nghiệm thu; periodic snapshot/recovery fallback/replay/Unity vẫn pending. Independent source review không còn blocker.
+
+## Sprint6 — 2026-10-20
+
+[Báo cáo Sprint6](SPRINT-06-EVIDENCE.md) mở đầu bằng tổng hợp dễ hiểu. Runtime256/256tests,0skip,32FND12cases;negativecontrol đúng;6save/migrationSIGKILL mới và3current-stateSIGKILL regression đạt. Independent source review không còn blocker. Nghiệm thu schema2 snapshot/committed-image fallback và new-file migration1→2; rule replay/Unity/platform replacement còn pending.
