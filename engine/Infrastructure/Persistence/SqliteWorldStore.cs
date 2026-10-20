@@ -9,8 +9,8 @@ using Microsoft.Data.Sqlite;
 
 namespace Game.Infrastructure.Persistence
 {
-    /// <summary>File-backed single-world kernel store. No periodic snapshots, migrations or replay fallback.</summary>
-    public sealed class SqliteWorldStore : ICommittedWorldStore
+    /// <summary>File-backed single-world kernel store with explicit schema 2 snapshot/recovery support.</summary>
+    public sealed partial class SqliteWorldStore : ICommittedWorldStore
     {
         private readonly string path;
         private readonly string contentHash;
@@ -35,7 +35,9 @@ namespace Game.Infrastructure.Persistence
         {using var cmd=c.CreateCommand();cmd.Transaction=t;cmd.CommandText=sql;foreach(var v in values)cmd.Parameters.AddWithValue(v.Item1,v.Item2);cmd.ExecuteNonQuery();}
         private static object Scalar(SqliteConnection c,SqliteTransaction? t,string sql)
         {using var cmd=c.CreateCommand();cmd.Transaction=t;cmd.CommandText=sql;return cmd.ExecuteScalar()??throw new InvalidDataException("STORE_ROW_MISSING");}
-        public void Initialize(CommittedWorld initial)
+        public void Initialize(CommittedWorld initial) => InitializeCore(initial,false,null);
+        public void InitializeSave(CommittedWorld initial,string? worldSeed=null) => InitializeCore(initial,true,worldSeed);
+        private void InitializeCore(CommittedWorld initial,bool save,string? worldSeed,long acceptedCount=0,Action? beforeInitializeCommit=null)
         {
             // Explicit create only. Never initialize an existing file, even if empty or incompatible.
             using(var file=new FileStream(path,FileMode.CreateNew,FileAccess.Write,FileShare.None)){}
@@ -51,7 +53,7 @@ CREATE TABLE events(id TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,revision 
 CREATE TABLE commands(id TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,fingerprint TEXT NOT NULL,metadata INTEGER NOT NULL CHECK(metadata IN(0,1)));
 CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,sha256 TEXT NOT NULL);");
             var bytes=CommittedWorldCodec.Encode(initial);_ = CommittedWorldCodec.Decode(bytes);
-            Write(c,t,initial,bytes,false);t.Commit();
+            Write(c,t,initial,bytes,false);if(save){Exec(c,t,"UPDATE world_meta SET schema_version=2");InitializeRecovery(c,t,initial,bytes,worldSeed,acceptedCount);}beforeInitializeCommit?.Invoke();t.Commit();
         }
         public CommittedWorld Load()
         {
@@ -62,12 +64,15 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
         {
             using var cmd=c.CreateCommand();cmd.Transaction=t;cmd.CommandText="SELECT world_id,revision,tick,schema_version,codec_version,rule_version,content_hash,rng_version,image,sha256 FROM world_meta WHERE singleton=1";
             using var r=cmd.ExecuteReader();if(!r.Read())throw new InvalidDataException("STORE_ROW_MISSING");
-            if(r.GetInt64(3)!=1)throw new InvalidDataException("UNSUPPORTED_SCHEMA");
+            if(r.GetInt64(3)!=1&&r.GetInt64(3)!=2)throw new InvalidDataException("UNSUPPORTED_SCHEMA");
             if(r.GetString(4)!="mdc1"||r.GetString(5)!=RuleVersion||r.GetString(6)!=contentHash||r.GetString(7)!="sha256-counter-v1")throw new InvalidDataException("INCOMPATIBLE_SAVE");
             var bytes=(byte[])r[8];if(CommittedWorldCodec.Hash(bytes)!=r.GetString(9))throw new InvalidDataException("CORRUPT_IMAGE");
             var state=CommittedWorldCodec.Decode(bytes);
             if(r.GetString(0)!=state.World.WorldId.ToString("x16",CultureInfo.InvariantCulture)||r.GetString(1)!=state.World.Revision.Value.ToString("x16",CultureInfo.InvariantCulture)||r.GetInt64(2)!=state.World.Tick.Value)throw new InvalidDataException("CORRUPT_META");
-            if(r.Read())throw new InvalidDataException("DUPLICATE_WORLD");return bytes;
+            var schema=r.GetInt64(3);if(r.Read())throw new InvalidDataException("DUPLICATE_WORLD");r.Close();
+            if(schema==1&&Convert.ToInt64(Scalar(c,t,"SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name IN ('save_manifest','save_points','recovery_images')"),CultureInfo.InvariantCulture)>0)throw new InvalidDataException("SCHEMA_LAYOUT_MISMATCH");
+            if(schema==2){var manifest=ReadManifest(c,t);if(manifest.Sha!=CommittedWorldCodec.Hash(bytes)||manifest.World!=state.World.WorldId.ToString("x16",CultureInfo.InvariantCulture))throw new InvalidDataException("SAVE_HEAD_CONFLICT");}
+            return bytes;
         }
         public void Commit(CommittedWorld expected,CommittedWorld candidate)
         {
@@ -78,7 +83,7 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
             var actual=Read(c,t);
             if(!actual.SequenceEqual(before))throw new InvalidOperationException("STORE_CONFLICT");
             VerifyMirrors(c,t,expected,actual);
-            Write(c,t,candidate,after,true);probe?.Invoke("before_commit");t.Commit();probe?.Invoke("after_commit");
+            Write(c,t,candidate,after,true);AppendRecovery(c,t,expected,candidate,after);probe?.Invoke("before_commit");t.Commit();probe?.Invoke("after_commit");
         }
         private sealed class Row
         {
@@ -116,8 +121,9 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
                 }
                 if(fault)probe?.Invoke("after_"+table);
             }
+            var schemaVersion=Convert.ToInt64(Scalar(c,t,"SELECT COALESCE(MAX(schema_version),1) FROM world_meta"),CultureInfo.InvariantCulture);
             Exec(c,t,"DELETE FROM world_meta");
-            Exec(c,t,"INSERT INTO world_meta VALUES(1,$world,$revision,$tick,1,'mdc1',$rule,$content,'sha256-counter-v1',$image,$sha)",("$world",state.World.WorldId.ToString("x16",CultureInfo.InvariantCulture)),("$revision",state.World.Revision.Value.ToString("x16",CultureInfo.InvariantCulture)),("$tick",state.World.Tick.Value),("$rule",RuleVersion),("$content",contentHash),("$image",bytes),("$sha",CommittedWorldCodec.Hash(bytes)));
+            Exec(c,t,"INSERT INTO world_meta VALUES(1,$world,$revision,$tick,$schema,'mdc1',$rule,$content,'sha256-counter-v1',$image,$sha)",("$schema",schemaVersion),("$world",state.World.WorldId.ToString("x16",CultureInfo.InvariantCulture)),("$revision",state.World.Revision.Value.ToString("x16",CultureInfo.InvariantCulture)),("$tick",state.World.Tick.Value),("$rule",RuleVersion),("$content",contentHash),("$image",bytes),("$sha",CommittedWorldCodec.Hash(bytes)));
             if(fault)probe?.Invoke("after_world_meta");
         }
         private static void VerifyMirrors(SqliteConnection c,SqliteTransaction t,CommittedWorld state,byte[] bytes)

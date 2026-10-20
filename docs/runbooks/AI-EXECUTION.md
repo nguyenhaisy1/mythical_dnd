@@ -27,8 +27,14 @@ Sprint là phạm vi milestone; spin là đợt thực hiện có goal. Một sp
 
 Xem [Sprint 1](../production/sprints/SPRINT-01.md), [Git Workflow](GIT-WORKFLOW.md) và [Test Execution](../qa/TEST-EXECUTION-CONTRACT.md).
 
-Sprint hiện hành: [Sprint5](../production/sprints/SPRINT-05.md), scope FND11 headless SQLite current-state persistence. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
+Sprint hiện hành: [Sprint6](../production/sprints/SPRINT-06.md), scope FND12 headless snapshots/recovery/migration. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
 
 ## Ủy quyền workflow thường trực
 
 Từ 2026-10-16, user không cần lặp workflow ở mỗi yêu cầu sprint: AI tự planning/breaktask, giao implementation/test/review có ownership, chạy nghiệm thu, cập nhật tài liệu và exports, commit/push nhánh feature, PR vào dev và merge sau review/CI đạt, rồi báo cáo. Ghi trạng thái/evidence và actor thật. Chỉ áp dụng sprint được giao, không tự mở sprint tiếp theo hoặc main/tag/release.
+
+## Sprint6 và định dạng báo cáo — 2026-10-20
+
+User giao Sprint6 theo workflow thường trực; SPIN-009, docs/production/sprints/SPRINT-06.md, FND12 headless snapshot/recovery/migration theo ADR015. Không tự mởSprint7 hoặc release.
+
+Từ nay báo cáo sprint phải bắt đầu bằng phần tổng hợp tiếng Việt dễ hiểu: sprint làm những việc gì, kết quả giúp ích gì và phần còn thiếu. Sau đó mới trình bày chi tiết kỹ thuật, phân công, kiểm thử/evidence, blockers và Git. Không dùng thuật ngữ kỹ thuật làm phần tổng hợp khó hiểu.

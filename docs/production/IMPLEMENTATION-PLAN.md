@@ -1,6 +1,6 @@
 # Kế hoạch triển khai từ bộ tài liệu
 
-Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. FND-01 và DOC-01 đã có từ lần khởi tạo. Sprint 1 đã triển khai FND-02/03/04; Sprint2 có FND05–08 in-memory TransferResource; Sprint3 đã có event/causal journal và idempotent consumer; Sprint4 triển khai scheduler in-memory; Sprint5 có SQLite atomic current-state commit/reopen cho headless. FND12 periodic snapshot/recovery và FND13 replay chưa triển khai; OPEN03 Unity provider vẫn pending. Headless evidence và các gate còn pending được ghi trong backlog. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
+Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. FND-01 và DOC-01 đã có từ lần khởi tạo. Sprint 1 đã triển khai FND-02/03/04; Sprint2 có FND05–08 in-memory TransferResource; Sprint3 đã có event/causal journal và idempotent consumer; Sprint4 triển khai scheduler in-memory; Sprint5 có SQLite atomic current-state commit/reopen cho headless. Sprint6 triển khai FND12 snapshot/recovery/new-file migration; FND13 replay chưa triển khai; OPEN03 Unity provider vẫn pending. Headless evidence và các gate còn pending được ghi trong backlog. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
 
 ## Trình tự bắt đầu
 
