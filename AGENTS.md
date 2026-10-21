@@ -68,3 +68,7 @@ User giao Sprint5 theo workflow thường trực. Scope FND11 headless SQLite cu
 User giao Sprint6 theo workflow thường trực; SPIN-009, docs/production/sprints/SPRINT-06.md, FND12 headless snapshot/recovery/migration theo ADR015. Không tự mởSprint7 hoặc release.
 
 Từ nay báo cáo sprint phải bắt đầu bằng phần tổng hợp tiếng Việt dễ hiểu: sprint làm những việc gì, kết quả giúp ích gì và phần còn thiếu. Sau đó mới trình bày chi tiết kỹ thuật, phân công, kiểm thử/evidence, blockers và Git. Không dùng thuật ngữ kỹ thuật làm phần tổng hợp khó hiểu.
+
+## Sprint7 — 2026-10-20
+
+User giao tiếp tục sprint sau Sprint6. Sprint7/SPIN-010, FND13 headless command replay theo ADR016 và docs/production/sprints/SPRINT-07.md. Rerun Execute/Drain từ initial image, không đánh đồng đọc events/recovery images với replay. Không tự mởSprint8 hoặc release; giữ báo cáo tổng hợp tiếng Việt dễ hiểu trước chi tiết.

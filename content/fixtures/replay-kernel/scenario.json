@@ -1,0 +1,16 @@
+{
+  "fixture": "replay-kernel-v1",
+  "scope": "headless transfer and scheduled transfer; no random gameplay draws",
+  "seed": "0000000000000000000000000000000000000000000000000000000000000000",
+  "world_id": 1,
+  "initial_revision": 1,
+  "initial_lots": [10, 0],
+  "transfer_quantity": 3,
+  "scheduled_quantities": [2, 2],
+  "scheduled_ticks": [10, 11],
+  "target_tick": 20,
+  "expected_revision": 8,
+  "expected_lots": [3, 7],
+  "expected_executions": 2,
+  "expected_rng_draw_index": 7
+}

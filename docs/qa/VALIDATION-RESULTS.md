@@ -56,3 +56,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint6 — 2026-10-20
 
 [Báo cáo Sprint6](SPRINT-06-EVIDENCE.md) mở đầu bằng tổng hợp dễ hiểu. Runtime256/256tests,0skip,32FND12cases;negativecontrol đúng;6save/migrationSIGKILL mới và3current-stateSIGKILL regression đạt. Independent source review không còn blocker. Nghiệm thu schema2 snapshot/committed-image fallback và new-file migration1→2; rule replay/Unity/platform replacement còn pending.
+
+## Sprint7 — 2026-10-21
+
+[Báo cáo Sprint7](SPRINT-07-EVIDENCE.md):284/284Release tests,0skip,28FND13cases;2process fixed golden15actions cùng kết quả; replay negativecontrol phát hiện index0. Runtime negativecontrol đúng và9SIGKILLregression đạt. Independent source/delta review không còn blocker. Scope transfer/scheduler QA; stochastic gameplay/Unity/full fielddiff còn pending.

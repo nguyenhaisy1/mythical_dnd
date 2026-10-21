@@ -46,3 +46,7 @@ Store failure giữ current cũ và khóa processor bằng NeedsRecovery; host r
 RecoverToNewFile chọn valid snapshot và kiểm complete suffix tới committed head, không rerun rules hoặc republish effects. Đây là committed-image recovery amendment thay command-suffix rerun trong scope FND12; FND13 vẫn cần resolver replay riêng. Thiếu đường khôi phục đầy đủ phải fail, không trả save cũ như thành công.
 
 MigrateToNewFile hỗ trợ1→2 với SQLite-consistent backup và output mới được validate. Không overwrite nguồn, không tự prune backups, không atomic replace file gốc/platform UI. Seed campaign chưa có trong legacy có thể unavailable; RNG contexts vẫn đầy đủ, không suy seed giả. Manual save/quit và breakpoint có API nền tảng, Unity UI/lifecycle wiring còn pending.
+
+## Sprint7 replay QA — 2026-10-21
+
+[ADR016](../adr/016-headless-command-replay.md) bổ sung artifact QA riêng để rerun Execute/Drain từ initial state. Không tự thay recovery frames bằng rule replay hoặc suy attempted command log từ durable receipts. Recovery schema2 của Sprint6 không đổi; replay chạy isolated in-memory, expected manifest do host chọn. File save cũ không tự trở thành replay artifact đầy đủ mọi attempts.

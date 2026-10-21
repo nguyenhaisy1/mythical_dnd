@@ -23,3 +23,7 @@ Không thu performance numbers từ documentation checks. Benchmark phải ghi h
 ## CI và gates
 
 CI giữ docs/reference checks, build và runtime regression cùng gate/demo của sprint hiện hành có negative control; upload JSON/log/TRX kể cả khi lỗi. Local run không chứng minh GitHub CI đã chạy. VS-01 yêu cầu kernel tests FND-02–15 và reference fixtures; Foundation complete thêm FND-16 cross-runtime; VS-10 cần gameplay regression+manual accessibility+performance evidence. Không đổi TEST status do chỉ bổ sung tài liệu.
+
+## Sprint7 replay scope
+
+Headless golden15actions được đọc từ content/fixtures/replay-kernel và chạy trong2process riêng; negativecontrol checkpoint đầu sai phải fail. Counting-rule/changed-rule tests chứng minh rerun resolution. First-divergence report hiện có action index/category/revisions/hashes; full state-field diff/trace còn FND15. Không ghi gameplay RNG replay vì transfer/scheduler chưa draw, không ghi Unity conformance.
