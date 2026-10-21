@@ -6,6 +6,12 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint7 — kiểm tra chạy lại hành động
+- Replay QA ghi initial state, explicit versions/content/seed và ordered Execute/Drain attempts; thực thi lại processor và phát hiện checkpoint đầu sai khác.
+- Golden15actions cố định,2subprocess replay và negativecontrol; gameplay hash tách metadata khỏi full-image integrity.
+- Compatibility: replay-v1 riêng, không đổi save schema2; không live auth/production store, Unity, stochastic gameplay hoặc full field diff FND15.
+
+
 ### Sprint6 — snapshot và khôi phục bản lưu
 - Schema2 manifest và periodic snapshots mỗi100accepted mutation commits; lưu thủ công không thay gameplay state hoặc cadence.
 - Khôi phục đúng committed head từ snapshot và full-image suffix; migration1→2 tạo backup/output mới, giữ nguồn.

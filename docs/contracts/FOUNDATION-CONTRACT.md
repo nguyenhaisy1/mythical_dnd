@@ -90,3 +90,7 @@ Foundation hoàn thành khi FND-02–16 có evidence phù hợp. Skeleton build,
 ## Sprint5 — headless durable publication
 
 [ADR014](../adr/014-headless-sqlite-persistence.md) đặt ICommittedWorldStore trước mọi publication, gồm metadata và scheduler. SQLite adapter commit full current image/mirrors atomically; lỗi store buộc reopen trước xử lý tiếp. Full periodic save/recovery/replay và Unity provider chưa xong; không coi current-image restore là toàn Foundation ready.
+
+## Replay QA Sprint7
+
+[ADR016](../adr/016-headless-command-replay.md) hiện thực FND13 headless transfer/scheduler replay: initial image + explicit manifest + ordered Execute/Drain attempts. Không dựng từ receipts hoặc apply saved after-images. Result/gameplay/integrity/journal/jobs hashes bind manifest; first divergence có action/category/revisions. Golden cố định chạy subprocess; full diagnostics FND15, Unity và stochastic gameplay còn gates riêng.

@@ -45,3 +45,7 @@ Sprint đã nghiệm thu local: [SPRINT-01](production/sprints/SPRINT-01.md). Ru
 [Sprint6](production/sprints/SPRINT-06.md), [ADR015](adr/015-snapshot-and-recovery-frames.md), [evidence](qa/SPRINT-06-EVIDENCE.md): snapshots/manual save, committed-image recovery và migration1→2 sang file mới.
 
 [Vận hành save/recovery headless](runbooks/SAVE-RECOVERY.md): API, lỗi, backup và giới hạn.
+
+[Sprint7](production/sprints/SPRINT-07.md), [ADR016](adr/016-headless-command-replay.md), [báo cáo](qa/SPRINT-07-EVIDENCE.md): replay QA thực thi lại hành động, fixed golden và first-divergence report.
+
+[Hướng dẫn replay QA](runbooks/REPLAY-QA.md): cách chạy, đọc divergence và giữ golden.

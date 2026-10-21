@@ -634,3 +634,67 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Review độc lập /root/s6_design_review không còn blocker, gồm delta midmigrationtransaction. Root nghiệm thu runtime. Actors/quota takeover ghi rõ trong report.
 - Bộ tài liệu đã đồng bộ ADR015/save contract/runbook/backlog/matrix/handoff/agent/README/changelog/CI. Báo cáo Sprint6 có tổng hợp tiếng Việt dễ hiểu ngay đầu theo yêu cầu user. Docs/reference/architecture checks đạt; exports đang regenerate, chưa push.
 - Headless snapshot/recovery/newfile migration đạt; platform atomic replacement/Unity save UI/OPEN03/FND13 rule replay còn pending. Không tự mởSprint7.
+
+
+### EVT-00046 | SPIN-009 | GIT — Push Sprint6 và mở PR6; chờ CI
+
+<!-- worklog: {"id": "EVT-00046", "spin": "SPIN-009", "event": "GIT", "at": "2026-10-20T14:55:10+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-20T14:55:10+07:00
+- Actor: /root
+
+- Export151inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt; khôngZIP. Commitd9f000c9a9d0ab99e96e51b2603dc61b4045a1f5 đãpush origin/feature/sprint-06-save-recovery, remoteSHA verified.
+- PR#6 https://github.com/nguyenhaisy1/mythical_dnd/pull/6 vào dev đãmở; CIpush39389697081 đang chạy, chưa merge hoặc suy pass.
+- Postcommit WORKLOG local theo policy, đưa commit tiếp theo; main/tag/release không đổi.
+
+
+### EVT-00047 | SPIN-009 | CLOSE — Đóng Sprint6 — finished; PR6 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00047", "spin": "SPIN-009", "event": "CLOSE", "at": "2026-10-20T14:57:44+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-20T14:57:44+07:00
+- Actor: /root
+
+- Sprint6/SPIN-009 finished ngày2026-10-20 trong scope FND12 headless: snapshot định kỳ/thủ công không làm thay đổi gameplay; recovery exact committed head; migration1->2 tạo backup/newfile giữ nguồn.
+- /root điều phối/ADR/docs/host6SIGKILL/integration/Git; /root/s6_storage implementation/fixes; /root/s6_tests integrationtests; /root/s6_design_review design/source/delta independent review, no blocker. Root tiếp quản sau storage/tests quota, ghi evidence thật.
+- Final256/256tests,0skip,32FND12cases;negativecontrol đúng;2demos và9SIGKILLcases (6mới+3regression) đạt. Evidence tests/results/sprint06-nf_eo33r/evidence.json; report docs/qa/SPRINT-06-EVIDENCE.md mở đầu tổng hợp dễ hiểu theo user.
+- Docs36generated/handoff487links/reference/architecture và export151inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt. KhôngZIP. Quy tắc báo cáo đã lưu AGENTS/.agent/AI-EXECUTION.
+- Featured9f000c9a9d0ab99e96e51b2603dc61b4045a1f5 push/remoteverified; CIpush39389697081 và PR39389711744 success. PR#6 https://github.com/nguyenhaisy1/mythical_dnd/pull/6 squashmerged dev2759ee0db7da8873259863e5b7d71626133c7aa9; diff HEAD/origin/dev không khác tree.
+- DevCI https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/39389890216 completed/success đúngmergeSHA. Main giữ1e45977c0791154bb778230c06801782e0052aeb; khôngtag/release.
+- NextFND13 command replay; không tự mởSprint7. Unity/native OPEN03, UI Save/Load/quit và platform atomic source replacement pending; chưa bản playable hoặc powerloss/performance claim.
+- Local giữ feature/sprint-06-save-recovery; chỉ WORKLOG postcommit events chưacommit, đưa vào commit kế tiếp theo policy.
+
+
+### EVT-00048 | SPIN-010 | OPEN — Mở Sprint7 — chạy lại hành động và kiểm tra tính nhất quán
+
+<!-- worklog: {"id": "EVT-00048", "spin": "SPIN-010", "event": "OPEN", "at": "2026-10-20T16:29:16+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-20T16:29:16+07:00
+- Actor: /root
+
+- User yêu cầu tiếp tục sau Sprint6 đã đóng; mở Sprint7/FND13 theo workflow thường trực. Branch feature/sprint-07-replay từ dev2759ee0; giữ WORKLOG postcommit.
+- Goal rerun resolution từ initial state và ordered host actions, checkpoints canonical hashes; không chỉ đọc event journal/recovery frames. Không live production store hoặc Unity.
+- /root/s7_replay sở hữu Infrastructure/Replay; /root/s7_tests ReplayTests.cs; /root/s7_review design và independent source review; /root ADR/docs/CLI/golden cross-process/runner/Git.
+- Báo cáo mở đầu bằng tổng hợp tiếng Việt dễ hiểu. Chốt ADR016 trước khi nghiệmthu; RNG hiện transfer/scheduler không draw nên không claim randomgameplay rerun.
+
+
+### EVT-00049 | SPIN-010 | PROGRESS — Tiếp tục Sprint7;28tests targeted đạt, chốt golden và chạy finalgate
+
+<!-- worklog: {"id": "EVT-00049", "spin": "SPIN-010", "event": "PROGRESS", "at": "2026-10-21T08:22:43+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-21T08:22:43+07:00
+- Actor: /root
+
+- Tiếp tục21/10 sau quota gián đoạn. /root/s7_replay đã tạo harness+codec rồi quota; /root tiếp quản build/host/golden/integration. /root/s7_tests tiếp tục chạy28/28Debugcases đạt; reviewer /root/s7_review source review không còn blocker, đang reviewdeltaCLI/golden.
+- Golden15actions ghi có chủ đích, mathexpected lots3/7 revision8 tick20 2executions RNGdraw7 đã đối chiếu; checksum cố định. CI chỉ đọc,2subprocess +negativecontrolindex0 không regenerate.
+- SDK10.0.401 cài tại /home/synh/.cache/mythical-dnd/dotnet để tránh mất /tmp, khôngcommit. Final Release gate đang chạy; chưa nhậnpass.
+- Phân biệt gameplayhash loạimetadata và fullimageintegrity, explicitexpectedmanifest trước execution; no productionstore. Fullfielddiff FND15, stochasticgameplay/Unity vẫnpending.
+
+
+### EVT-00050 | SPIN-010 | RESULT — Sprint7 đạt284tests và replaygolden; hoàn thiện export/Git
+
+<!-- worklog: {"id": "EVT-00050", "spin": "SPIN-010", "event": "RESULT", "at": "2026-10-21T08:32:10+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-21T08:32:10+07:00
+- Actor: /root
+
+- Final Release284/284tests,0skip;28FND13cases+256regression. Runtime negativecontrol đúng1fail;2separateprocess golden15actions khớp; replaynegativecontrol exit1/index0/categoryresult;2demos và9SIGKILLregression đạt.
+- Evidence tests/results/sprint07-b_ezo__5/evidence.json; fingerprinta40d964e46f9ac6cf4a9b7b5e8dbe9fe434d73b4e50b36e3a7a81868f0edd7eb verifiedfresh. Run trước tfhbyryo284pass nhưng gate1 sourcechanged, không dùng nghiệmthu.
+- /root/s7_review independent source+CLI/golden review không còn blocker sau bounded read guard dùng capturedlength; /root/s7_tests28Debugcases; root finalintegration/host/golden/docs/Git. Replayagent implementation trướcquota.
+- Docs36generated/handoff496links/reference/architecture đạt; source docs/backlog/matrix/runbook/changelog đãsync. Export đang regenerate. Report tổng hợp dễ hiểu trước technical details.
+- Headless transfer/scheduler QA subset đạt; no stochasticgameplay/Unity; fullfielddiffFND15, contentregistryFND14next. Không tự mởSprint8.

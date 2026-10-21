@@ -1,0 +1,22 @@
+{
+  "fixture": "replay-kernel-v1",
+  "artifact_sha256": "bc82e0428cfd260d93b6a62a4eb09e472e73c2e15f8b7dab2b2f27d536423d2b",
+  "content_hash": "e1ec516b24221e6820ab3bb2cea3cad8c874a98872844a89902497158dec4848",
+  "seed": "0000000000000000000000000000000000000000000000000000000000000000",
+  "expected": {
+    "passed": true,
+    "actions": 15,
+    "stateHash": "f89945aab9028bd7e847f4f30cca5f0b9d397486ac42d25eb266ac1ebfb7644c",
+    "revision": 8,
+    "tick": 20,
+    "lots": [
+      3,
+      7
+    ],
+    "executions": 2,
+    "rngDraws": [
+      7
+    ],
+    "divergence": null
+  }
+}
