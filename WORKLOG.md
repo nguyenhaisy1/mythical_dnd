@@ -836,3 +836,79 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Diagnostics16processes/14negativecases; content46processes/15invalidcases; replaygolden/negativecontrol/2demos/9SIGKILL regression đạt. Fingerprint2b3591e211b883a698699ea9279eb79707843d7488f5e415ef00c942f8907e2c verifiedfresh.
 - /root/s9_review independent source/delta và subprocess16process check không còn blocker. Root tiếp quản tests/integration/docs sau diagnostics/testsagent quota; ghi actor thực ở report.
 - Nghiệmthu FND15 developer headless profile, không VS01 signoff/Foundationcomplete/Unity/playable game. Docs/backlog/matrix/AGENTS/handoff/changelog và generated GDD sync; export đang regenerate trước Git.
+
+
+### EVT-00062 | SPIN-012 | GIT — Push Sprint9 và mở PR9; chờ CI
+
+<!-- worklog: {"id": "EVT-00062", "spin": "SPIN-012", "event": "GIT", "at": "2026-10-22T13:32:35+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T13:32:35+07:00
+- Actor: /root
+
+- Export172inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt; docs36generated/handoff526links/reference/architecture đạt. KhôngZIP.
+- Commit0512b4d364277ee54d060ab1e606671679381228 push origin/feature/sprint-09-diagnostics, remoteSHA verified.
+- PR#9 https://github.com/nguyenhaisy1/mythical_dnd/pull/9 mở vào dev, CIpush39734551134 đang chạy. Chưa merge.
+- WORKLOG postcommit local đưa commit kế tiếp; không main/tag/release.
+
+
+### EVT-00063 | SPIN-012 | CLOSE — Đóng Sprint9 — finished; PR9 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00063", "spin": "SPIN-012", "event": "CLOSE", "at": "2026-10-22T13:35:38+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T13:35:38+07:00
+- Actor: /root
+
+- Sprint9/SPIN-012 finished ngày2026-10-22, FND15 headless developer diagnostics. Actual rule checks/evaluation traces, full committed field diff, causal traversal/job inspection và fixed evidence reproduction đạt.
+- /root/s9_diagnostics Infrastructure code trước quota; /root/s9_tests20cases trước quota; /root sửa invalid test key và bổ sung3cases, implement Domain checks/replay observer/host/fixture/gates/docs/Git. /root/s9_review independent source/delta và16process checker không còn blocker. Không gọi selfreview là independent.
+- Final338/338Release,0skip,23FND15+315regression; diagnostics16processes/14negativecases; content46processes/15invalidcases; fixed replay/negativecontrols/2demos/9SIGKILL đạt. Evidence tests/results/sprint09-s40q56gp/evidence.json fingerprint2b3591e211b883a698699ea9279eb79707843d7488f5e415ef00c942f8907e2c.
+- Docs36generated/handoff526links/reference/architecture đạt; export172inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt, khôngZIP. Báo cáo docs/qa/SPRINT-09-EVIDENCE.md mở đầu bằng tổng hợp tiếng Việt dễ hiểu.
+- Feature0512b4d364277ee54d060ab1e606671679381228 pushed/remoteverified. CIpush39734551134 và PR39734576126 success. PR#9 https://github.com/nguyenhaisy1/mythical_dnd/pull/9 squashmerged deveacf076807cb26459fbce9fb55c2b6d5ad1c0c44, tree HEAD/origin/dev khớp.
+- DevCI https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/39734777874 completed/success đúngmergeSHA. Main giữ1e45977c0791154bb778230c06801782e0052aeb; khôngtag/release.
+- Tiếp theo review milestone VS01 và FND16 Unity; chưa tự nghiệmthu Foundationcomplete/full gameplay/player UX. Không tự mởSprint10. Local feature/sprint-09-diagnostics; chỉ WORKLOG postcommit chưa commit, đưa commit kế tiếp theo policy.
+
+
+### EVT-00064 | SPIN-013 | OPEN — Mở Sprint10: VS01 review và FND16 preparation; Unity chưa cài
+
+<!-- worklog: {"id": "EVT-00064", "spin": "SPIN-013", "event": "OPEN", "at": "2026-10-22T13:59:48+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T13:59:48+07:00
+- Actor: /root
+
+- User giao Sprint10 và xác nhận máy chưa cài/kích hoạt Unity. SPIN-013: nghiệmthu VS01 headless kernel và chuẩn bị FND16 actual cross-runtime conformance; Unity runtime giữNotRun đến khi có Editor/license thật. Không giảProjectVersion hoặc dùng dotnetbuild thay Unity.
+- Feature/sprint-10-unity-conformance từ deveacf076807cb26459fbce9fb55c2b6d5ad1c0c44; giữ WORKLOG postcommit Sprint9.
+- /root điều phối/probe/tooling/tests/docs/Git. /root/s10_audit đã rà raw338evidence và nhận xét VS01 đủ scoped kernel trước quota; /root/s10_unity đề xuất staging/batch architecture trước quota; /root/s10_review design review acceptance trước quota. Chưa có implementation hoặc independentsource review từ ba agents; root tiếp quản.
+- Không tìm thấy Unity/Hub trong PATH hoặc /opt,/usr/local/bin,/home/synh/.local/share,/home/synh/Unity,/home/synh/Applications; user xác nhận chưacài. Disk161GiBfree Linuxx64. Không đọc/in credentials/license.
+- Scope: shared portable probe+host evidence, staging/batch tooling có strict NotRun missingEditor, VS01 evidenceaudit; FND16/Open03/04 và independentfinalreview là gates chưa đạt.
+
+
+### EVT-00065 | SPIN-013 | PROGRESS — Conformance preparation và independent review đạt; Unity vẫn NotRun
+
+<!-- worklog: {"id": "EVT-00065", "spin": "SPIN-013", "event": "PROGRESS", "at": "2026-10-22T14:11:40+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T14:11:40+07:00
+- Actor: /root
+
+{
+  "scope": "host and tooling only",
+  "unity_status": "NotRun",
+  "host_processes": 4,
+  "host_exit_codes": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "parity_negative_cases": 10,
+  "missing_editor_exit": 2,
+  "import_count": 13,
+  "fingerprint": "d47e710ae21268d937742dc3fda208ae5e58b220309eeb2b276697a5367372f9"
+}
+
+
+### EVT-00066 | SPIN-013 | RESULT — Final headless/tooling gate đạt; Sprint10 còn actual Unity gate
+
+<!-- worklog: {"id": "EVT-00066", "spin": "SPIN-013", "event": "RESULT", "at": "2026-10-22T14:17:56+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T14:17:56+07:00
+- Actor: /root
+
+- /root hoàn thiện portable conformance probe/host CLI, isolated Unity candidate runner, parity/negative checks và VS01 audit; cập nhật backlog/open decisions/handoff/runbooks/evidence.
+- /root/s10_final_review independent review: ba findings được sửa, rerun checker 4 host processes/10parity negatives/missingEditor exit2/13imports đạt. Review preparation-only, không FND16 acceptance.
+- Final Release tests/results/sprint10-ku8vaxft/evidence.json exit0:338/338,0skip, fingerprint07f8e53efa21074e7b82c7edf59fabf0b28abf7de6ad7ea3c3fb29d3e0ce45a6. Build0warnings/errors; expected negativecontrol1fail; regression crash/replay/content/diagnostics/demos đạt. Previous cn93gg2e freshness rejected do sửa source; không dùng nghiệmthu.
+- Docs36generated/handoff536links/architecture/reference/codec checks đạt. Exports đang regenerate, khôngZIP.
+- Actual Unity NotRun do chưa cài/kíchhoạt; chưa khóa actual patch/provider/client hoặc nghiệmthu Foundation. Sprint10/SPIN013 còn mở; chuẩn bị draftPR, khôngmerge/release/sprintmới.

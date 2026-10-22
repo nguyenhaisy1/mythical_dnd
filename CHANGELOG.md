@@ -6,6 +6,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+- Sprint10 preparation: shared conformance probe, isolated Unity runner và strict NotRun khi thiếu Editor. Host/tooling evidence riêng; chưa nghiệmthu FND16 hoặc phát hành game.
+
 ### Sprint9 — truy nguyên và tái hiện lỗi
 - Actual rule checks, QA command observations, full typed state-field diff, causal traversal và scheduler inspection với missing/truncation rõ.
 - Fixed diagnostic package chạy baseline rồi compiled injected rejection; report phân biệt baseline/actual và chỉ rõ first divergence/field changes. Hai process và negative controls giữ fixture cố định.

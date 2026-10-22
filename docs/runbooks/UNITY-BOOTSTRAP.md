@@ -14,3 +14,7 @@ Nguồn công nghệ: [Unity .NET compatibility](https://docs.unity.com/en-us/en
 ## Prototype UX và early spike
 
 [Client UX Baseline](../production/CLIENT-UX-BASELINE.md) quy định desktop keyboard/mouse, Reveal/action/save/succession flows. Có thể spike DLL primitive vectors sau FND-02/03/04; final FND-16 vẫn cần command replay FND-13. Không ghi ProjectVersion chưa lấy từ Editor thực tế.
+
+## Sprint10: isolated conformance preparation
+
+[Bộ chạy conformance](UNITY-CONFORMANCE.md) tạo project kiểm chứng riêng bằng Editor thật khi có cài đặt/license. Máy hiện chưa cài/kích hoạt Unity; client layout chưa bootstrap và FND16 vẫn NotRun. Không dùng DLL build .NET hoặc validator synthetic thay Editor evidence.

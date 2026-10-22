@@ -48,3 +48,7 @@ Theo [Git Workflow](../runbooks/GIT-WORKFLOW.md); product VERSION và CHANGELOG 
 Đọc [WORKLOG](../../WORKLOG.md) và các events mới nhất trước khi tiếp tục spin; cập nhật assignment/result/close khi có thay đổi đáng kể. Hồi cứu SPIN-000 không phải runtime acceptance. Nhật ký chỉ append, không sửa kết quả cũ.
 
 Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope các sprint nằm trong sprint brief được liên kết tại đó.
+
+## Sprint10 — chuẩn bị Unity conformance
+
+[Bộ kiểm chứng và cách chạy](../runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Hiện chưa cài/kích hoạt Unity: FND16 NotRun, client vẫn layout; không có bản chơi thử.

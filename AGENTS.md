@@ -80,3 +80,7 @@ User giao sprint tiếp theo theo workflow thường trực. Sprint8/SPIN-011, F
 ## Sprint9 — 2026-10-22
 
 User giao sprint mới theo workflow thường trực. Sprint9/SPIN-012, FND15 diagnostics theo ADR018 và docs/production/sprints/SPRINT-09.md. Actual rule checks, full committed field diff, causal/job inspectors và fixed evidence reproduction; chỉ developer QA, không player projection. VS01 cần milestone review riêng; Foundation complete còn FND16 Unity. Không tự mởSprint10 hoặc release; giữ báo cáo tiếng Việt dễ hiểu trước chi tiết.
+
+## Sprint10 — 2026-10-22
+
+User giao Sprint10/SPIN-013: VS01 review và FND16 conformance preparation. Xem docs/production/sprints/SPRINT-10.md. User xác nhận chưa cài/kích hoạt Unity; actual Unity gate NotRun, không đánh đồng host probe với FND16 accepted. Không mở Sprint11 hoặc release.

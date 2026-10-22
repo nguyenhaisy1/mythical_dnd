@@ -7,6 +7,7 @@ namespace Game.Headless
     {
         private static int Main(string[] args)
         {
+            if (args.Length > 0 && args[0] == "--conformance") return ConformanceProbe.Run(args);
             if (args.Length > 0 && (args[0] == "--diagnose" || args[0] == "--record-diagnostic-fixture")) return DiagnosticProbe.Run(args);
             if (args.Length > 0 && (args[0] == "--content-compile" || args[0] == "--content-demo" || args[0] == "--content-open")) return ContentProbe.Run(args);
             if ((args.Length == 3 || args.Length == 4) &&

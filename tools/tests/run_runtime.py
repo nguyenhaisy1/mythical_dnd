@@ -5,6 +5,7 @@ from check_persistence_crash import run as run_crash_checks
 from check_save_crash import run as run_save_crash_checks
 from check_replay import run as run_replay_checks
 from check_content import run as run_content_checks
+from check_conformance import run as run_conformance_checks
 from check_diagnostics import run as run_diagnostic_checks
 from datetime import datetime, timezone
 import hashlib
@@ -23,7 +24,7 @@ PROJECT = 'tests/MythicalDnd.Foundation.Tests/MythicalDnd.Foundation.Tests.cspro
 
 
 def source_manifest():
-    paths = [p for folder in ('engine', 'tests', 'tools/tests', 'content/fixtures/kernel-smoke', 'content/fixtures/replay-kernel', 'content/fixtures/content-kernel', 'content/fixtures/diagnostic-kernel', 'content/schemas')
+    paths = [p for folder in ('engine', 'tests', 'tools/tests', 'tools/unity', 'content/fixtures/kernel-smoke', 'content/fixtures/replay-kernel', 'content/fixtures/content-kernel', 'content/fixtures/diagnostic-kernel', 'content/schemas')
              for p in (ROOT / folder).rglob('*') if p.is_file()
              and not any(part in ('bin', 'obj', 'results', '__pycache__') for part in p.relative_to(ROOT).parts)]
     paths += [ROOT / p for p in ('Directory.Build.props', 'global.json', 'MythicalDnd.sln', '.github/workflows/validate.yml')]
@@ -48,7 +49,7 @@ def main():
     args = parser.parse_args()
     destination = ROOT / 'tests/results'
     destination.mkdir(parents=True, exist_ok=True)
-    run_dir = Path(tempfile.mkdtemp(prefix='sprint09-', dir=destination))
+    run_dir = Path(tempfile.mkdtemp(prefix='sprint10-', dir=destination))
     started = datetime.now(timezone.utc).isoformat()
     manifest = source_manifest()
     commands = []
@@ -61,7 +62,7 @@ def main():
         print(process.stdout, flush=True)
         return process.returncode
 
-    result = dict(scope='headless-sprint09-diagnostics', task_ids=['FND-02', 'FND-03', 'FND-04', 'FND-05', 'FND-06', 'FND-07', 'FND-08', 'FND-09', 'FND-10', 'FND-11', 'FND-12', 'FND-13', 'FND-14', 'FND-15'], test_ids=['TEST-027', 'TEST-008-primitives', 'TEST-007', 'TEST-024', 'TEST-025', 'TEST-026', 'FND-08-in-memory', 'TEST-037-in-memory', 'FND-10-in-memory', 'TEST-006-durable', 'TEST-034', 'TEST-035-current-image', 'TEST-035-snapshot', 'TEST-051', 'TEST-009', 'TEST-050', 'TEST-017', 'TEST-036'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
+    result = dict(scope='headless-sprint10-conformance-preparation', task_ids=['FND-02', 'FND-03', 'FND-04', 'FND-05', 'FND-06', 'FND-07', 'FND-08', 'FND-09', 'FND-10', 'FND-11', 'FND-12', 'FND-13', 'FND-14', 'FND-15'], test_ids=['TEST-027', 'TEST-008-primitives', 'TEST-007', 'TEST-024', 'TEST-025', 'TEST-026', 'FND-08-in-memory', 'TEST-037-in-memory', 'FND-10-in-memory', 'TEST-006-durable', 'TEST-034', 'TEST-035-current-image', 'TEST-035-snapshot', 'TEST-051', 'TEST-009', 'TEST-050', 'TEST-017', 'TEST-036'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
                   utc_started=started, os=platform.platform(), architecture=platform.machine(),
                   runtime_version=None, unity_version=None, backend=None,
                   fixture_versions={'identity': 'identity-v1', 'clock': 'clock-v1', 'codec': 'mdc1', 'rng': 'sha256-counter-v1', 'scenario': 1},
@@ -110,6 +111,7 @@ def main():
         result['replay'] = run_replay_checks(args.dotnet, run_dir / 'replay.json')
         result['content'] = run_content_checks(args.dotnet, run_dir / 'content.json')
         result['diagnostics'] = run_diagnostic_checks(args.dotnet, run_dir / 'diagnostics.json')
+        result['conformance_preparation'] = run_conformance_checks(args.dotnet, run_dir / 'conformance.json')
         if source_manifest() != manifest:
             raise ValueError('Sources changed during run')
         result['exit_code'] = 0

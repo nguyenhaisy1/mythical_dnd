@@ -54,3 +54,7 @@ Tài liệu bổ sung sau audit: [trạng thái và đường dẫn](docs/produc
 [Nhật ký công việc theo spin](WORKLOG.md) ghi goal, phân công, tiến độ, kết quả và evidence. Các bản ghi mới nối vào cuối file; dùng làm nguồn báo cáo khi cần.
 
 Quy trình áp dụng cho AI: [AI Execution](docs/runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.
+
+## Sprint10 — chuẩn bị Unity conformance
+
+[Bộ kiểm chứng và cách chạy](docs/runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Hiện chưa cài/kích hoạt Unity: FND16 NotRun, client vẫn layout; không có bản chơi thử.
