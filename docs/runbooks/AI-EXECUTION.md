@@ -27,7 +27,7 @@ Sprint là phạm vi milestone; spin là đợt thực hiện có goal. Một sp
 
 Xem [Sprint 1](../production/sprints/SPRINT-01.md), [Git Workflow](GIT-WORKFLOW.md) và [Test Execution](../qa/TEST-EXECUTION-CONTRACT.md).
 
-Sprint hiện hành: [Sprint7](../production/sprints/SPRINT-07.md), scope FND13 headless command replay. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
+Sprint hiện hành: [Sprint8](../production/sprints/SPRINT-08.md), scope FND14 runtime content registry. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
 
 ## Ủy quyền workflow thường trực
 
@@ -42,3 +42,7 @@ Từ nay báo cáo sprint phải bắt đầu bằng phần tổng hợp tiếng
 ## Sprint7 — 2026-10-20
 
 User giao tiếp tục sprint sau Sprint6. Sprint7/SPIN-010, FND13 headless command replay theo ADR016 và docs/production/sprints/SPRINT-07.md. Rerun Execute/Drain từ initial image, không đánh đồng đọc events/recovery images với replay. Không tự mởSprint8 hoặc release; giữ báo cáo tổng hợp tiếng Việt dễ hiểu trước chi tiết.
+
+## Sprint 8 — 2026-10-21, tiếp tục 2026-10-22
+
+User giao sprint tiếp theo theo workflow thường trực. Sprint8/SPIN-011, FND-14 runtime content registry theo ADR-017 và docs/production/sprints/SPRINT-08.md. Profile commodity/transfer-template, strict authoring parser, approved handlers và exact content compatibility. Full VS-02 roster/Unity còn riêng; không tự mở Sprint9 hoặc release. Báo cáo vẫn tổng hợp tiếng Việt dễ hiểu trước chi tiết.

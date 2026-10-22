@@ -12,7 +12,7 @@ Module cuối foundation: giữ command/state/event/jobs/RNG/receipt nhất quá
 |---|---|
 | Dữ liệu đầu vào | Typed IDs, clock, rules, commands, versions, scheduler và persistence contracts. |
 | Đầu ra / bên sở hữu | Foundation task FND-01–16; authoritative commit, recovery và replay khi được triển khai. |
-| Đọc cùng | 26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-017 và docs/runbooks/CONTENT-PIPELINE.md cho runtime content profile commodity/transfer-template; full VS-02/Unity vẫn có gate riêng. |
 | Cổng nghiệm thu | Foundation exit gate cần replay, atomic failure recovery, content validation và cross-runtime evidence. |
 | Việc chưa được chứng minh | C#/Unity implementation/conformance, provider/editor/test-runner spike và performance evidence; identity/time/RNG/codec đã có specs và Python reference vectors. |
 

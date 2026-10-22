@@ -6,6 +6,11 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint8 — kiểm tra và nạp nội dung
+- Strict JSON authoring parser, portable semantic compiler và immutable registry cho commodity/transfer-template; pin dependency/version/hash, approved typed handler, diagnostic definition/path.
+- Host chạy transfer từ template và save/reopen với exact content hash; invalid content bị từ chối trước mutation.
+- Compatibility: profile kernel-content-v1 mới, không đổi save schema/replay/RNG; không tự chuyển save fixture cũ. Full roster VS-02 và Unity vẫn pending.
+
 ### Sprint7 — kiểm tra chạy lại hành động
 - Replay QA ghi initial state, explicit versions/content/seed và ordered Execute/Drain attempts; thực thi lại processor và phát hiện checkpoint đầu sai khác.
 - Golden15actions cố định,2subprocess replay và negativecontrol; gameplay hash tách metadata khỏi full-image integrity.

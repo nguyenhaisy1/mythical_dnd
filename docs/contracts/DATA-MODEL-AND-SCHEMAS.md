@@ -25,3 +25,7 @@ Runtime pack phải có manifest chứa pack ID, version/schema, dependencies, d
 ## Contract baseline 1.1
 
 Codec và numbers theo [Math/RNG Spec](DETERMINISTIC-MATH-RNG-SPEC.md); identity theo [Identity Spec](IDENTITY-SPEC.md); storage tables/compatibility theo [Save Spec](PERSISTENCE-SAVE-SPEC.md). Kernel fixture là projection contract, không full snapshot. [Slice Content Contract](../content-guides/VERTICAL-SLICE-CONTENT-CONTRACT.md) xác định records, units, invariants và gate trước compile. Runtime JSON Schemas/DDL sinh cùng FND-14/11 phải khớp specs; hiện không được gọi reference schema là production validator.
+
+## Runtime profile Sprint 8
+
+[ADR-017](../adr/017-runtime-content-registry.md) và [Content Pipeline](../runbooks/CONTENT-PIPELINE.md): schema kernel-content-v1 cho commodity/transfer-template khớp contracts hiện có; parser strict host .NET và semantic compiler portable tạo immutable registry. Definition IDs/rule references/validation profile được derive từ compiler output; hash bind authored metadata và exact dependency pins. Không tự nhận JSON schema này bao phủ full logical model hoặc roster VS-02.

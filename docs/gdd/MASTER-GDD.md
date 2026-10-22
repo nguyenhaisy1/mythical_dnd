@@ -83996,7 +83996,7 @@ Logical schema là contract, chưa phải physical SQLite schema. Core thuần C
 | Đầu ra / bên sở hữu | Canonical data contracts, command/events, read projections và storage ports. |
 | Đọc cùng | 25, 27–29; docs/contracts.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
 | Cổng nghiệm thu | Stable IDs, no hidden knowledge leakage, nonnegative stock và revision consistency có test trước feature breadth. |
-| Việc chưa được chứng minh | Provider spike, runtime schemas/DDL, migration và content compiler còn phải triển khai; ID/tick/codec đã có baseline ADR-008. |
+| Việc chưa được chứng minh | Full production schemas/content và Unity provider còn gates riêng. Headless SQLite/schema2 migration đã có Sprint5–6, content compiler kernel profile ở Sprint8/ADR-017; xem evidence trước khi suy rộng. ID/tick/codec theo ADR-008. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../governance/APPLICABLE-BASELINE.md) và [Decision Register](../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 
@@ -96378,7 +96378,7 @@ Module cuối foundation: giữ command/state/event/jobs/RNG/receipt nhất quá
 |---|---|
 | Dữ liệu đầu vào | Typed IDs, clock, rules, commands, versions, scheduler và persistence contracts. |
 | Đầu ra / bên sở hữu | Foundation task FND-01–16; authoritative commit, recovery và replay khi được triển khai. |
-| Đọc cùng | 26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-017 và docs/runbooks/CONTENT-PIPELINE.md cho runtime content profile commodity/transfer-template; full VS-02/Unity vẫn có gate riêng. |
 | Cổng nghiệm thu | Foundation exit gate cần replay, atomic failure recovery, content validation và cross-runtime evidence. |
 | Việc chưa được chứng minh | C#/Unity implementation/conformance, provider/editor/test-runner spike và performance evidence; identity/time/RNG/codec đã có specs và Python reference vectors. |
 

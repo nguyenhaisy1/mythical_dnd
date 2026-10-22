@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kernel runtime content pack v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pack_id",
+    "version",
+    "schema_version",
+    "rule_version",
+    "dependencies",
+    "definitions"
+  ],
+  "properties": {
+    "pack_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9.-]{0,127}$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "rule_version": {
+      "const": "transfer-resource-v1+scheduler-v1"
+    },
+    "dependencies": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "pack_id",
+          "version",
+          "content_hash"
+        ],
+        "properties": {
+          "pack_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9.-]{0,127}$"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 2147483647
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "definitions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4096,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "definition_id",
+              "version",
+              "kind",
+              "schema_version",
+              "source",
+              "classification",
+              "owner_domain",
+              "display_key",
+              "unit"
+            ],
+            "properties": {
+              "definition_id": {
+                "type": "string",
+                "maxLength": 256,
+                "pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*@[1-9][0-9]*$"
+              },
+              "version": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 2147483647
+              },
+              "kind": {
+                "const": "commodity"
+              },
+              "schema_version": {
+                "const": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              "classification": {
+                "enum": [
+                  "historical",
+                  "traditional",
+                  "game-canon"
+                ]
+              },
+              "owner_domain": {
+                "const": "Assets"
+              },
+              "display_key": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9.-]{0,127}$"
+              },
+              "unit": {
+                "const": "count"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "definition_id",
+              "version",
+              "kind",
+              "schema_version",
+              "source",
+              "classification",
+              "owner_domain",
+              "display_key",
+              "commodity_id",
+              "handler",
+              "quantity"
+            ],
+            "properties": {
+              "definition_id": {
+                "type": "string",
+                "maxLength": 256,
+                "pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*@[1-9][0-9]*$"
+              },
+              "version": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 2147483647
+              },
+              "kind": {
+                "const": "transfer-template"
+              },
+              "schema_version": {
+                "const": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              "classification": {
+                "enum": [
+                  "historical",
+                  "traditional",
+                  "game-canon"
+                ]
+              },
+              "owner_domain": {
+                "const": "Assets"
+              },
+              "display_key": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9.-]{0,127}$"
+              },
+              "commodity_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              "handler": {
+                "const": "TransferResource@1"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9223372036854775807
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
