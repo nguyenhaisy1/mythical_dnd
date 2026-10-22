@@ -773,3 +773,66 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Content checker46processes/15invalid cases đạt; exact dependency/hash/save refusal giữ bytes, file không tạo trước validation; transfer7/3/revision2 và reopen khớp. Fingerprint14d6b6f2a197b79da3da4a98b5946e76b77746c9b57e7e4ffbd01c09be1d1918 verifiedfresh.
 - Reviewer /root/s8_review closure review không còn blocker, gồm explicit InvalidDataException catch. Source review độc lập; runtime final do root chạy. /root/s8_compiler code, /root/s8_tests31Debug và subprocess script; root tiếp quản docs/finalintegration sau quota.
 - Nghiệm thu FND14 kernel-content-v1; full VS02/Unity/FND15 chưa hoàn thành. Backlog/matrix/evidence/changelog/handoff/AGENTS và generated GDD đã đồng bộ; đang export trước Git.
+
+
+### EVT-00057 | SPIN-011 | GIT — Push Sprint8 và mở PR8; chờ CI
+
+<!-- worklog: {"id": "EVT-00057", "spin": "SPIN-011", "event": "GIT", "at": "2026-10-22T08:28:36+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T08:28:36+07:00
+- Actor: /root
+
+- Export165inputs/14HTML-DOCX/6156anchors/123tables và navigation đạt; khôngZIP. Final docs36generated/handoff514links/reference/architecture đạt.
+- Commit3ad85c1c48fe983066fc105bfcf85e57df45569b push origin/feature/sprint-08-content-registry; remote SHA verified.
+- PR#8 https://github.com/nguyenhaisy1/mythical_dnd/pull/8 đã mở vào dev. Push CI39705864669 đang chạy; chưa merge.
+- WORKLOG postcommit local đưa commit kế tiếp theo policy. Không main/tag/release.
+
+
+### EVT-00058 | SPIN-011 | CLOSE — Đóng Sprint8 — finished; PR8 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00058", "spin": "SPIN-011", "event": "CLOSE", "at": "2026-10-22T08:31:28+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T08:31:28+07:00
+- Actor: /root
+
+- Sprint8/SPIN-011 finished ngày2026-10-22, scope FND14 kernel-content-v1. Compiler/parser/registry pin exact dependencies và approved handler; template qua actual pipeline, SQLite save/reopen; invalid content không mutate/create save.
+- Phân công thực: /root/s8_compiler Infrastructure implementation; /root/s8_tests31Debugcases và subprocess checker; /root/s8_review independent design/source/delta review; /root host/schema/docs/finaltests/Git và tiếp quản docs sau quota. Findings dependency count/fixedhash/InvalidDataException đã xử lý; không còn blocker trong scope.
+- Final315/315Release,0skip,31FND14 +284regression;46contentprocesses/15invalidcases;2demos/replaygolden/negativecontrols/9SIGKILL đạt. Evidence tests/results/sprint08-2bas9yx4/evidence.json, fingerprint14d6b6f2a197b79da3da4a98b5946e76b77746c9b57e7e4ffbd01c09be1d1918.
+- Docs36generated/handoff514links/reference/architecture đạt; export165inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt. KhôngZIP. Báo cáo docs/qa/SPRINT-08-EVIDENCE.md mở đầu bằng tổng hợp dễ hiểu.
+- Feature3ad85c1c48fe983066fc105bfcf85e57df45569b pushed remoteverified; pushCI39705864669 và PRCI39705877815 success. PR#8 https://github.com/nguyenhaisy1/mythical_dnd/pull/8 squashmerged dev914785cf9d2118ac1c7775dab0d7ea823601f82f; HEAD/origin/dev tree khớp.
+- DevCI https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/39706045149 completed/success đúngmergeSHA. Main giữ1e45977c0791154bb778230c06801782e0052aeb; khôngtag/release.
+- NextFND15 diagnostics; UnityFND16/fullVS02/playable game chưa nghiệmthu. Không tự mởSprint9. Local feature/sprint-08-content-registry; WORKLOG postcommit events chưacommit, đưa commit kế tiếp theo policy.
+
+
+### EVT-00059 | SPIN-012 | OPEN — Mở Sprint9: FND15 diagnostics và tái hiện lỗi
+
+<!-- worklog: {"id": "EVT-00059", "spin": "SPIN-012", "event": "OPEN", "at": "2026-10-22T09:15:14+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T09:15:14+07:00
+- Actor: /root
+
+- User giao Sprint9 sau Sprint8. SPIN-012/FND15: actual rule evaluation trace, full committed state diff, causal/job inspection và tái hiện lỗi từ evidence package. Không tự nhận VS01/Foundation/Unity/gameplay hoàn thành.
+- Feature/sprint-09-diagnostics từ dev914785cf9d2118ac1c7775dab0d7ea823601f82f. Giữ WORKLOG postcommit Sprint8, đưa commit kế tiếp theo policy.
+- /root điều phối/contracts/host/evidence/gates/docs/Git; /root/s9_diagnostics Infrastructure diagnostic tools; /root/s9_tests runtime tests; /root/s9_review independent review. Agents đã chạy thật.
+- Input committed states/replay actions/compiled handlers và versions/content seed; output deterministic bounded diagnostics và reproducible injectedfailure report. Không đoán fielddiff từ hashes, không gọi lại rule để bịa actual trace; correlation không là causation.
+
+
+### EVT-00060 | SPIN-012 | PROGRESS — Diagnostics23tests và16processes đạt; review độc lập đóng findings
+
+<!-- worklog: {"id": "EVT-00060", "spin": "SPIN-012", "event": "PROGRESS", "at": "2026-10-22T13:26:47+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T13:26:47+07:00
+- Actor: /root
+
+- Tiếp tục Sprint9 sau user tiếp tục. /root/s9_diagnostics đã viết implementation trước quota; /root/s9_tests để lại20cases, root tiếp quản sửa1test dùng key không hợp lệ mdc1 và bổ sung3cases actualchecks/observer/failedjob. Focused23/23Debug pass.
+- Root bổ sung Domain actualchecks, replay observer, DiagnosticProbe strict package và fixtures/process checker. Unknown scripts/version/hash/expectedimage/limits bị từ chối; fault compiled actualevaluate rồi injectedreject, không production store.
+- /root/s9_review independent source/delta closure không còn blocker; tự chạy16processes/14negativecases exit0, /tmp/s9-independent-diagnostics.json. Root cũng chạy subprocess checker đạt. Baseline/actual traces/graph phân biệt rõ; không bịa cause từ correlation.
+- Full Release regression đang chuẩn bị sau sourcefreeze. Chưa nghiệmthu sprint/VS01/Unity. Docs ADR018/runbook/sprintbrief đã soạn; root tiếp quản docs/final integration.
+
+
+### EVT-00061 | SPIN-012 | RESULT — Sprint9 đạt338tests và diagnostics reproduction; hoàn thiện export/Git
+
+<!-- worklog: {"id": "EVT-00061", "spin": "SPIN-012", "event": "RESULT", "at": "2026-10-22T13:30:22+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T13:30:22+07:00
+- Actor: /root
+
+- Final Release gate tests/results/sprint09-s40q56gp/evidence.json exit0:338/338tests,0skip,23FND15+315regression. Locked restore/build0warnings/errors, runtime negativecontrol đúng1fail/exit1.
+- Diagnostics16processes/14negativecases; content46processes/15invalidcases; replaygolden/negativecontrol/2demos/9SIGKILL regression đạt. Fingerprint2b3591e211b883a698699ea9279eb79707843d7488f5e415ef00c942f8907e2c verifiedfresh.
+- /root/s9_review independent source/delta và subprocess16process check không còn blocker. Root tiếp quản tests/integration/docs sau diagnostics/testsagent quota; ghi actor thực ở report.
+- Nghiệmthu FND15 developer headless profile, không VS01 signoff/Foundationcomplete/Unity/playable game. Docs/backlog/matrix/AGENTS/handoff/changelog và generated GDD sync; export đang regenerate trước Git.

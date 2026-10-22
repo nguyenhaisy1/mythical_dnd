@@ -47,12 +47,23 @@ namespace Game.Domain.Kernel
             LotChanges = Array.AsReadOnly(changes);
         }
     }
+    public sealed class RuleCheck
+    {
+        public string Name { get; }
+        public bool Passed { get; }
+        public string? Detail { get; }
+        public RuleCheck(string name, bool passed, string? detail = null)
+        { Name = name; Passed = passed; Detail = detail; }
+    }
     public sealed class RuleResult
     {
         public string? ErrorCode { get; }
         public ChangeSet? Changes { get; }
         public bool IsNoOp => ErrorCode == null && Changes!.LotChanges.Count == 0;
-        private RuleResult(string? errorCode, ChangeSet? changes) { ErrorCode = errorCode; Changes = changes; }
+        public IReadOnlyList<RuleCheck> Checks { get; }
+        private RuleResult(string? errorCode, ChangeSet? changes, IEnumerable<RuleCheck>? checks = null)
+        { ErrorCode = errorCode; Changes = changes; Checks = Array.AsReadOnly((checks ?? Array.Empty<RuleCheck>()).ToArray()); }
+        public RuleResult WithChecks(IEnumerable<RuleCheck> checks) => new RuleResult(ErrorCode, Changes, checks);
         public static RuleResult Reject(string code)
         {
             if (string.IsNullOrWhiteSpace(code)) throw new ArgumentException("Missing rejection code");
@@ -99,25 +110,31 @@ namespace Game.Domain.Kernel
         public Type PayloadType => typeof(TransferResource);
         public RuleResult Evaluate(WorldSnapshot world, EntityId<Actor> issuer, IKernelCommand command)
         {
-            if (!(command is TransferResource transfer)) return RuleResult.Reject("INVALID_PAYLOAD");
-            if (transfer.Quantity <= 0) return RuleResult.Reject("INVALID_PAYLOAD");
+            var checks = new List<RuleCheck>();
+            bool Check(string name, bool passed, string? detail = null)
+            { checks.Add(new RuleCheck(name, passed, detail)); return passed; }
+            RuleResult Reject(string code) => RuleResult.Reject(code).WithChecks(checks);
+            if (!Check("payload_type", command is TransferResource)) return Reject("INVALID_PAYLOAD");
+            var transfer = (TransferResource)command;
+            if (!Check("quantity_positive", transfer.Quantity > 0)) return Reject("INVALID_PAYLOAD");
             try
             {
                 var actor = world.GetActor(issuer);
-                if (!actor.Alive) return RuleResult.Reject("ACTOR_DEAD");
+                if (!Check("actor_alive", actor.Alive)) return Reject("ACTOR_DEAD");
                 var source = world.GetLot(transfer.SourceLotId); var destination = world.GetLot(transfer.DestinationLotId);
-                if (!actor.Controls(source.Owner)) return RuleResult.Reject("NOT_AUTHORIZED");
-                if (!source.Commodity.Equals(destination.Commodity)) return RuleResult.Reject("COMMODITY_MISMATCH");
-                if (!source.Location.Equals(destination.Location)) return RuleResult.Reject("LOCATION_MISMATCH");
-                if (source.Available < transfer.Quantity) return RuleResult.Reject("INSUFFICIENT_RESOURCE");
-                if (source.Id.Equals(destination.Id)) return RuleResult.NoOp();
+                if (!Check("controls_source", actor.Controls(source.Owner))) return Reject("NOT_AUTHORIZED");
+                if (!Check("commodity_match", source.Commodity.Equals(destination.Commodity))) return Reject("COMMODITY_MISMATCH");
+                if (!Check("location_match", source.Location.Equals(destination.Location))) return Reject("LOCATION_MISMATCH");
+                if (!Check("available_quantity", source.Available >= transfer.Quantity)) return Reject("INSUFFICIENT_RESOURCE");
+                if (source.Id.Equals(destination.Id)) return RuleResult.NoOp().WithChecks(checks);
                 var afterDestination = checked(destination.OnHand + transfer.Quantity);
+                Check("destination_capacity", true);
                 return RuleResult.Propose(new ChangeSet(new[] {
                     new LotChange(source.Id, source.OnHand, checked(source.OnHand - transfer.Quantity)),
-                    new LotChange(destination.Id, destination.OnHand, afterDestination) }));
+                    new LotChange(destination.Id, destination.OnHand, afterDestination) })).WithChecks(checks);
             }
-            catch (IdentityException ex) { return RuleResult.Reject(ex.Code); }
-            catch (OverflowException) { return RuleResult.Reject("NUMERIC_OVERFLOW"); }
+            catch (IdentityException ex) { Check("identity_resolution", false, ex.Code); return Reject(ex.Code); }
+            catch (OverflowException) { Check("destination_capacity", false, "NUMERIC_OVERFLOW"); return Reject("NUMERIC_OVERFLOW"); }
         }
     }
 }

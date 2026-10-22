@@ -93,6 +93,17 @@ namespace Game.Infrastructure.Replay
         public CommittedWorld FinalState { get; }
         internal ReplayReport(CommittedWorld state,ReplayDivergence? divergence=null){FinalState=state;Divergence=divergence;}
     }
+    public sealed class ReplayObservation
+    {
+        public int Index { get; }
+        public ReplayAction Action { get; }
+        public CommittedWorld Before { get; }
+        public CommittedWorld After { get; }
+        public string Outcome { get; }
+        public string? ErrorCode { get; }
+        internal ReplayObservation(int index, ReplayAction action, CommittedWorld before, CommittedWorld after, string outcome, string? error)
+        { Index = index; Action = action; Before = before; After = after; Outcome = outcome; ErrorCode = error; }
+    }
     /// <summary>Omniscient QA harness. Artifact principals are test inputs, never live authorization.</summary>
     public static class ReplayHarness
     {
@@ -106,22 +117,22 @@ namespace Game.Infrastructure.Replay
                 throw new ReplayCompatibilityException();
         }
         public static ReplayArtifact Record(CommittedWorld initial,IEnumerable<ReplayAction> actions,ReplayManifest manifest,
-            RuleRegistry rules,JobHandlerRegistry? handlers=null)
+            RuleRegistry rules,JobHandlerRegistry? handlers=null,Action<ReplayObservation>? observer=null)
         {
             CheckManifest(manifest,manifest);
             var image=CommittedWorldCodec.Encode(initial);var clean=CommittedWorldCodec.Decode(image);
             var list=actions.Take(10001).ToArray();if(list.Length>10000)throw new ArgumentException("REPLAY_ACTION_COUNT");
             var processor=new CommandProcessor(clean,rules,jobHandlers:handlers);
-            var checkpoints=list.Select(a=>Step(processor,a,manifest)).ToArray();
+            var checkpoints=list.Select((a,i)=>Step(processor,a,manifest,i,observer)).ToArray();
             return new ReplayArtifact(manifest,image,list,checkpoints);
         }
-        public static ReplayReport Replay(ReplayArtifact artifact,ReplayManifest expected,RuleRegistry rules,JobHandlerRegistry? handlers=null)
+        public static ReplayReport Replay(ReplayArtifact artifact,ReplayManifest expected,RuleRegistry rules,JobHandlerRegistry? handlers=null,Action<ReplayObservation>? observer=null)
         {
             CheckManifest(artifact.Manifest,expected);
             var processor=new CommandProcessor(CommittedWorldCodec.Decode(artifact.InitialImage),rules,jobHandlers:handlers);
             for(int i=0;i<artifact.Actions.Count;i++)
             {
-                var actual=Step(processor,artifact.Actions[i],expected);var wanted=artifact.Checkpoints[i];
+                var actual=Step(processor,artifact.Actions[i],expected,i,observer);var wanted=artifact.Checkpoints[i];
                 var pairs=new[]{("result",wanted.ResultHash,actual.ResultHash),("journal",wanted.JournalHash,actual.JournalHash),
                     ("jobs",wanted.JobsHash,actual.JobsHash),("gameplay",wanted.GameplayHash,actual.GameplayHash),("integrity",wanted.IntegrityHash,actual.IntegrityHash)};
                 foreach(var pair in pairs)if(pair.Item2!=pair.Item3)return new ReplayReport(processor.InspectCommitted(),new ReplayDivergence(i,pair.Item1,pair.Item2,pair.Item3,wanted.Revision,actual.Revision));
@@ -129,26 +140,32 @@ namespace Game.Infrastructure.Replay
             }
             return new ReplayReport(processor.InspectCommitted());
         }
-        private static ReplayCheckpoint Step(CommandProcessor processor,ReplayAction action,ReplayManifest manifest)
+        private static ReplayCheckpoint Step(CommandProcessor processor,ReplayAction action,ReplayManifest manifest,int index,Action<ReplayObservation>? observer)
         {
             object result;
+            var before = observer == null ? null : processor.InspectCommitted();
+            string outcome; string? error = null;
             try
             {
                 if(action.Kind=="execute")
                 {
                     var r=processor.Execute(action.Envelope!,action.Principal);
+                    outcome = r.Outcome.ToString(); error = r.ErrorCode;
                     result=ReplayArtifactCodec.Obj("kind","receipt","id",r.CommandId,"fingerprint",r.Fingerprint,"outcome",(int)r.Outcome,"error",r.ErrorCode,
                         "before",r.BeforeRevision,"after",r.AfterRevision,"tick",r.CommittedTick.Value,"events",r.OrderedEventIds.Select(x=>(object?)x.ToString()).ToArray());
                 }
                 else
                 {
                     var w=processor.DrainAdvance(action.Principal,action.Budget);
+                    outcome = w.Status.ToString();
                     result=ReplayArtifactCodec.Obj("kind","workflow","id",w.Id,"owner",w.OwnerId.ToString(),"source",(int)w.OwnerSource,"target",w.TargetTick.Value,
                         "status",(int)w.Status,"cursor",w.Cursor?.ToString(),"committed",w.CommittedJobs,"correlation",w.CorrelationId);
                 }
             }
-            catch(PipelineFailureException ex) when(StableFailures.Contains(ex.Code)) {result=ReplayArtifactCodec.Obj("kind","failure","code",ex.Code);}
-            var state=processor.InspectCommitted();var full=ReplayArtifactCodec.Map(MdcReader.Decode(CommittedWorldCodec.Encode(state)));
+            catch(PipelineFailureException ex) when(StableFailures.Contains(ex.Code)) {outcome="PipelineFailure";error=ex.Code;result=ReplayArtifactCodec.Obj("kind","failure","code",ex.Code);}
+            var state=processor.InspectCommitted();
+            observer?.Invoke(new ReplayObservation(index, action, before!, state, outcome, error));
+            var full=ReplayArtifactCodec.Map(MdcReader.Decode(CommittedWorldCodec.Encode(state)));
             var gameplay=new Dictionary<string,object?>(full,StringComparer.Ordinal);gameplay.Remove("metadata");
             string Bound(object value)=>CanonicalCodec.Hash(ReplayArtifactCodec.Obj("manifest",ReplayArtifactCodec.ManifestObject(manifest),"value",value));
             return new ReplayCheckpoint(state.World.Revision.Value,Bound(result),Bound(gameplay),Bound(full),Bound(full["events"]!),

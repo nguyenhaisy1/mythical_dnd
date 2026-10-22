@@ -26,4 +26,4 @@ CI giữ docs/reference checks, build và runtime regression cùng gate/demo c�
 
 ## Sprint7 replay scope
 
-Headless golden15actions được đọc từ content/fixtures/replay-kernel và chạy trong2process riêng; negativecontrol checkpoint đầu sai phải fail. Counting-rule/changed-rule tests chứng minh rerun resolution. First-divergence report hiện có action index/category/revisions/hashes; full state-field diff/trace còn FND15. Không ghi gameplay RNG replay vì transfer/scheduler chưa draw, không ghi Unity conformance.
+Headless golden15actions được đọc từ content/fixtures/replay-kernel và chạy trong2process riêng; negativecontrol checkpoint đầu sai phải fail. Counting-rule/changed-rule tests chứng minh rerun resolution. First-divergence report hiện có action index/category/revisions/hashes; Sprint9/FND15 thêm full state-field diff/actual trace bằng diagnostic package có expected image riêng; xem [Diagnostics](../runbooks/DIAGNOSTICS.md). Không ghi gameplay RNG replay vì transfer/scheduler chưa draw, không ghi Unity conformance.
