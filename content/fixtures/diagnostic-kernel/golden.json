@@ -1,0 +1,19 @@
+{
+  "package_sha256": "2f0d55d04ef61f954997107f6e6d6d3ce9c38a505b1d0ccf29a256920d98b6d7",
+  "report_sha256": "9747f17fc3dfeccbdabf460bd55df85a9122f255979fa61f05906c3ccd05597d",
+  "first_action": 1,
+  "category": "result",
+  "expected_revision": 2,
+  "actual_revision": 1,
+  "expected_lots": [
+    7,
+    3
+  ],
+  "actual_lots": [
+    10,
+    0
+  ],
+  "baseline_commands": 15,
+  "actual_commands": 2,
+  "baseline_jobs": 2
+}

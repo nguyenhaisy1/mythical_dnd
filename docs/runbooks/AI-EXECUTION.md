@@ -27,7 +27,7 @@ Sprint là phạm vi milestone; spin là đợt thực hiện có goal. Một sp
 
 Xem [Sprint 1](../production/sprints/SPRINT-01.md), [Git Workflow](GIT-WORKFLOW.md) và [Test Execution](../qa/TEST-EXECUTION-CONTRACT.md).
 
-Sprint hiện hành: [Sprint8](../production/sprints/SPRINT-08.md), scope FND14 runtime content registry. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
+Sprint hiện hành: [Sprint9](../production/sprints/SPRINT-09.md), scope FND15 diagnostics. User đã giao điều phối/subagents/nghiệmthu; ghi từng actor thật. Các sprint đã đóng giữ evidence lịch sử, không rewrite nhật ký.
 
 ## Ủy quyền workflow thường trực
 
@@ -46,3 +46,7 @@ User giao tiếp tục sprint sau Sprint6. Sprint7/SPIN-010, FND13 headless comm
 ## Sprint 8 — 2026-10-21, tiếp tục 2026-10-22
 
 User giao sprint tiếp theo theo workflow thường trực. Sprint8/SPIN-011, FND-14 runtime content registry theo ADR-017 và docs/production/sprints/SPRINT-08.md. Profile commodity/transfer-template, strict authoring parser, approved handlers và exact content compatibility. Full VS-02 roster/Unity còn riêng; không tự mở Sprint9 hoặc release. Báo cáo vẫn tổng hợp tiếng Việt dễ hiểu trước chi tiết.
+
+## Sprint9 — 2026-10-22
+
+User giao sprint mới theo workflow thường trực. Sprint9/SPIN-012, FND15 diagnostics theo ADR018 và docs/production/sprints/SPRINT-09.md. Actual rule checks, full committed field diff, causal/job inspectors và fixed evidence reproduction; chỉ developer QA, không player projection. VS01 cần milestone review riêng; Foundation complete còn FND16 Unity. Không tự mởSprint10 hoặc release; giữ báo cáo tiếng Việt dễ hiểu trước chi tiết.

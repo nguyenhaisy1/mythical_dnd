@@ -6,6 +6,11 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint9 — truy nguyên và tái hiện lỗi
+- Actual rule checks, QA command observations, full typed state-field diff, causal traversal và scheduler inspection với missing/truncation rõ.
+- Fixed diagnostic package chạy baseline rồi compiled injected rejection; report phân biệt baseline/actual và chỉ rõ first divergence/field changes. Hai process và negative controls giữ fixture cố định.
+- Compatibility: diagnostic-v1 riêng; không đổi gameplay decisions/save/replay/RNG/content hashes. Developer omniscient tools chưa là player UI, Unity hoặc full Foundation acceptance.
+
 ### Sprint8 — kiểm tra và nạp nội dung
 - Strict JSON authoring parser, portable semantic compiler và immutable registry cho commodity/transfer-template; pin dependency/version/hash, approved typed handler, diagnostic definition/path.
 - Host chạy transfer từ template và save/reopen với exact content hash; invalid content bị từ chối trước mutation.

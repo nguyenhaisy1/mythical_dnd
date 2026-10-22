@@ -93,4 +93,8 @@ Foundation hoàn thành khi FND-02–16 có evidence phù hợp. Skeleton build,
 
 ## Replay QA Sprint7
 
-[ADR016](../adr/016-headless-command-replay.md) hiện thực FND13 headless transfer/scheduler replay: initial image + explicit manifest + ordered Execute/Drain attempts. Không dựng từ receipts hoặc apply saved after-images. Result/gameplay/integrity/journal/jobs hashes bind manifest; first divergence có action/category/revisions. Golden cố định chạy subprocess; full diagnostics FND15, Unity và stochastic gameplay còn gates riêng.
+[ADR016](../adr/016-headless-command-replay.md) hiện thực FND13 headless transfer/scheduler replay: initial image + explicit manifest + ordered Execute/Drain attempts. Không dựng từ receipts hoặc apply saved after-images. Result/gameplay/integrity/journal/jobs hashes bind manifest; first divergence có action/category/revisions. Golden cố định chạy subprocess; Sprint9 bổ sung diagnostics profile FND15 theo ADR018; Unity và stochastic gameplay còn gates riêng.
+
+## Diagnostics không có authority — Sprint9
+
+[ADR018](../adr/018-foundation-diagnostics.md) bổ sung RuleResult.Checks từ actual TransferResourceRule evaluation, QA replay observer và Infrastructure state/causal/job inspectors. Checks không persist vào state/receipt/journal hoặc thay hash. Chỉ các điều kiện đã chạy được ghi, proposal khác commit. Omniscient diagnostics không được đưa vào player knowledge projection. Replay-v1 hashes không đủ suy field diff, evidence package có expected image riêng và baseline kiểm lại trước fault.

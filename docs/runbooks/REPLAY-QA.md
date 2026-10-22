@@ -28,4 +28,4 @@ Giữ artifact/manifest/versions/sourcefingerprint và JSON report. Xác định
 
 ## Giới hạn
 
-Hiện kiểm transfer/scheduler compiled rules. RNG contexts/counters được giữ, nhưng các commands này không draw nên chưa chứng minh stochastic gameplay. Full fielddiff/rule trace thuộc FND15; content registry FND14 có profile kernel-content-v1 ở [Content Pipeline](CONTENT-PIPELINE.md); replay golden cũ vẫn pin fixturedescriptor, không tự chuyển sang pack mới. Unity FND16 còn pending. Replay không thay schema2 committed-image recovery của Sprint6.
+Hiện kiểm transfer/scheduler compiled rules. RNG contexts/counters được giữ, nhưng các commands này không draw nên chưa chứng minh stochastic gameplay. Full fielddiff/rule trace đã có profile FND15 ở [Diagnostics](DIAGNOSTICS.md), cần expected image riêng để so field, không suy từ replay hashes; content registry FND14 có profile kernel-content-v1 ở [Content Pipeline](CONTENT-PIPELINE.md); replay golden cũ vẫn pin fixturedescriptor, không tự chuyển sang pack mới. Unity FND16 còn pending. Replay không thay schema2 committed-image recovery của Sprint6.

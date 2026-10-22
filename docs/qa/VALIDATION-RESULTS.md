@@ -64,3 +64,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint8 — 2026-10-22
 
 [Báo cáo Sprint8](SPRINT-08-EVIDENCE.md):315/315Release tests,0skip,31FND14cases;46content subprocesses/15invalid cases, actual transfer/save reopen và exact dependency/hash refusal đạt. Replay golden/negative controls và9SIGKILL regression đạt. Independent source/delta review không còn blocker. Profile commodity/transfer-template; full VS02/Unity/playable game và FND15 còn pending.
+
+## Sprint9 — 2026-10-22
+
+[Báo cáo Sprint9](SPRINT-09-EVIDENCE.md):338/338Release tests,0skip,23FND15cases;16diagnostic processes/14negativecases tái hiện fixed fault và chỉ rõ fielddiff. Content/replay/negativecontrols/9SIGKILL regression đạt. Independent source/delta review và subprocess check đạt. Developer omniscient tooling, chưa VS01 milestone signoff/Unity/player UX/full gameplay acceptance.
