@@ -72,3 +72,7 @@ Từ nay báo cáo sprint phải bắt đầu bằng phần tổng hợp tiếng
 ## Sprint7 — 2026-10-20
 
 User giao tiếp tục sprint sau Sprint6. Sprint7/SPIN-010, FND13 headless command replay theo ADR016 và docs/production/sprints/SPRINT-07.md. Rerun Execute/Drain từ initial image, không đánh đồng đọc events/recovery images với replay. Không tự mởSprint8 hoặc release; giữ báo cáo tổng hợp tiếng Việt dễ hiểu trước chi tiết.
+
+## Sprint 8 — 2026-10-21, tiếp tục 2026-10-22
+
+User giao sprint tiếp theo theo workflow thường trực. Sprint8/SPIN-011, FND-14 runtime content registry theo ADR-017 và docs/production/sprints/SPRINT-08.md. Profile commodity/transfer-template, strict authoring parser, approved handlers và exact content compatibility. Full VS-02 roster/Unity còn riêng; không tự mở Sprint9 hoặc release. Báo cáo vẫn tổng hợp tiếng Việt dễ hiểu trước chi tiết.

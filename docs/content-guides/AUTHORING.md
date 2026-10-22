@@ -27,3 +27,7 @@ Schema hợp lệ; IDs/references duy nhất và tồn tại; owner domain đún
 ## Gate chuyển nghiên cứu sang dữ liệu
 
 Đọc [Slice Content Contract](VERTICAL-SLICE-CONTENT-CONTRACT.md) cho record fields, validation, provenance và parameter gate trước VS-03. Full roster/compiled pack vẫn là deliverable VS-02; kernel fixture không thay thế production content.
+
+## Profile runtime Sprint 8
+
+[Content Pipeline](../runbooks/CONTENT-PIPELINE.md) và [ADR-017](../adr/017-runtime-content-registry.md) xác định compiler/registry hiện có cho commodity và transfer-template. Schema `content/schemas/kernel-content-v1.schema.json`; fixture `content/fixtures/content-kernel/pack.json` là prototype-authored/game-canon chạy được. Compile tạo registry trong bộ nhớ, chưa ghi binary vào content/compiled. Các loại NPC/household/routes/recipes/event AST chưa có runtime contracts đầy đủ nên bị từ chối rõ; full production roster vẫn thuộc VS-02. Reference fixture không tự trở thành runtime pack.

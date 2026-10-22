@@ -27,7 +27,7 @@ python3 tools/tests/run_runtime.py
 dotnet run --project engine/HeadlessRunner/Game.Headless.csproj --configuration Release --no-build -- --status
 ```
 
-`--status` trả `simulationImplemented: false`. Lệnh simulate/replay không được giả làm thành công khi chưa triển khai. Sprint6 bổ sung FND12 snapshot/recovery/migration headless; trạng thái nghiệm thu ở [báo cáo Sprint6](docs/qa/SPRINT-06-EVIDENCE.md). Sprint7 bổ sung replay QA; xem [báo cáo Sprint7](docs/qa/SPRINT-07-EVIDENCE.md). Bước sau là **FND-14 content registry**; provider Unity, UI save/quit và platform atomic replacement vẫn pending. Unity conformance vẫn pending FND-16; xem backlog trước khi mở rộng.
+`--status` trả `simulationImplemented: false`. Lệnh simulate/replay không được giả làm thành công khi chưa triển khai. Sprint6 bổ sung FND12 snapshot/recovery/migration headless; trạng thái nghiệm thu ở [báo cáo Sprint6](docs/qa/SPRINT-06-EVIDENCE.md). Sprint7 bổ sung replay QA; xem [báo cáo Sprint7](docs/qa/SPRINT-07-EVIDENCE.md). Sprint8 bổ sung compiler/registry nội dung; xem [Content Pipeline](docs/runbooks/CONTENT-PIPELINE.md) và [evidence Sprint8](docs/qa/SPRINT-08-EVIDENCE.md). Bước sau là **FND-15 diagnostics**; provider Unity, UI save/quit và platform atomic replacement vẫn pending. Unity conformance vẫn pending FND-16; xem backlog trước khi mở rộng.
 
 ## Bố trí dự án
 

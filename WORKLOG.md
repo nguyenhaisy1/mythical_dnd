@@ -698,3 +698,78 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - /root/s7_review independent source+CLI/golden review không còn blocker sau bounded read guard dùng capturedlength; /root/s7_tests28Debugcases; root finalintegration/host/golden/docs/Git. Replayagent implementation trướcquota.
 - Docs36generated/handoff496links/reference/architecture đạt; source docs/backlog/matrix/runbook/changelog đãsync. Export đang regenerate. Report tổng hợp dễ hiểu trước technical details.
 - Headless transfer/scheduler QA subset đạt; no stochasticgameplay/Unity; fullfielddiffFND15, contentregistryFND14next. Không tự mởSprint8.
+
+
+### EVT-00051 | SPIN-010 | GIT — Push Sprint7 và mở PR7; chờ CI
+
+<!-- worklog: {"id": "EVT-00051", "spin": "SPIN-010", "event": "GIT", "at": "2026-10-21T13:20:02+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-21T13:20:02+07:00
+- Actor: /root
+
+- Export158inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt, khôngZIP. Commit1ebb0eccd0956cfa8d81cc7d8bb8e337b16abaa9 push origin/feature/sprint-07-replay, remoteSHA verified.
+- PR#7 https://github.com/nguyenhaisy1/mythical_dnd/pull/7 vào dev đãmở. CIpush39554733812 đang chạy, chưamerge.
+- Postcommit WORKLOG local theo policy; main/tag/release không đổi.
+
+
+### EVT-00052 | SPIN-010 | CLOSE — Đóng Sprint7 — finished; PR7 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00052", "spin": "SPIN-010", "event": "CLOSE", "at": "2026-10-21T13:22:56+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-21T13:22:56+07:00
+- Actor: /root
+
+- Sprint7/SPIN-010 finished ngày2026-10-21 trong scope FND13 headless transfer/scheduler replay. Rerun actual Execute/Drain từ initial state; first divergence diagnostic, không đọc journal để giả replay.
+- /root/s7_replay harness/codec trướcquota; /root/s7_tests28Debugcases; /root/s7_review independent design/source/CLI/golden review; /root tiếp quản integration/host/golden/guard/docs/Git/finalacceptance. Không cònblocker trong scope.
+- Final284/284Release,0skip,28FND13+256regression;2process fixedgolden15actions đạt; runtime/replaynegativecontrols đúng;2demos và9SIGKILLregression pass. Evidence tests/results/sprint07-b_ezo__5/evidence.json, report docs/qa/SPRINT-07-EVIDENCE.md tổng hợp dễ hiểu trước.
+- Docs36generated/handoff499links/reference/architecture đạt; export158inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt, khôngZIP.
+- Feature1ebb0eccd0956cfa8d81cc7d8bb8e337b16abaa9 push/remoteverified. CIpush39554733812 và PR39554743483 success. PR#7 https://github.com/nguyenhaisy1/mythical_dnd/pull/7 squashmerged dev0437817de6405c48d10e91ad57733731729cd259; diff HEAD/origin/dev khôngkháctree.
+- DevCI https://github.com/nguyenhaisy1/mythical_dnd/actions/runs/39554888962 completed/success đúngmergeSHA. Main giữ1e45977c0791154bb778230c06801782e0052aeb, khôngtag/release.
+- NextFND14 contentregistry, FND15fullfielddiff/diagnostics và UnityFND16 cònpending. No stochasticgameplay/fullgameplay/Unity replay claim. Không tự mởSprint8.
+- Local feature/sprint-07-replay; chỉ WORKLOG postcommit events chưa commit, đưa commit kế tiếp theo policy.
+
+
+### EVT-00053 | SPIN-011 | OPEN — Mở Sprint8: FND14 content compiler và registry
+
+<!-- worklog: {"id": "EVT-00053", "spin": "SPIN-011", "event": "OPEN", "at": "2026-10-21T14:11:24+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-21T14:11:24+07:00
+- Actor: /root
+
+- User giao sprint tiếp theo sau Sprint7. Sprint8/SPIN-011: FND14 compiler/registry cho content phù hợp contracts hiện có; không mở toàn bộ roster VS02 hoặc Unity.
+- Branch feature/sprint-08-content-registry từ origin/dev0437817, giữ WORKLOG postcommit Sprint7 chuyển sang commit kế tiếp theo policy.
+- /root điều phối, schema/parser/host integration/docs/final gates/Git; /root/s8_compiler portable compiler/registry; /root/s8_tests runtime tests; /root/s8_review independent review. Agents đã khởi chạy thật.
+- Acceptance TEST017/036: unknown handler/executable fields/missing references/schema/hash/dependency mismatch bị từ chối trước mutation; registry immutable và hash deterministic, actual host/save integration; regression gates và PR CI phải đạt.
+- Áp dụng mythical-task/content/validation/change-impact; mọi phạm vi chưa có runtime entity contract bị từ chối rõ, không tự biến unknown thành gameplay.
+
+
+### EVT-00054 | SPIN-011 | RESUME — Tiếp tục Sprint8, sửa findings và chạy final gate
+
+<!-- worklog: {"id": "EVT-00054", "spin": "SPIN-011", "event": "RESUME", "at": "2026-10-22T08:18:29+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T08:18:29+07:00
+- Actor: /root
+
+- Tiếp tục Sprint8/SPIN-011 ngày22/10 sau gián đoạn quota. Compiler agent đã hoàn thành code; tests agent31/31Debug cases và subprocess checker trước quota; reviewer source review phát hiện hai điểm cần sửa.
+- /root tiếp quản docs sync và final gate do agents quota. Sửa dependency path count trước đọc file và thêm fixed canonical hash assertion theo independent review; không nhận là review delta độc lập đã hoàn tất.
+- Final Release gate đang chạy; chưa ghi Passed. Schema/parser/typed transfer/save reopen đã tích hợp, không thêm dependency package.
+
+
+### EVT-00055 | SPIN-011 | PROGRESS — Content subprocess đạt, chạy lại final gate sau sửa lỗi diagnostic
+
+<!-- worklog: {"id": "EVT-00055", "spin": "SPIN-011", "event": "PROGRESS", "at": "2026-10-22T08:22:16+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T08:22:16+07:00
+- Actor: /root
+
+- C# Release315/315tests đạt lần đầu, nhưng gate không dùng nghiệm thu vì source đổi trong khi chạy. Evidence sprint08-epb1658_ exit1 Sources changed during run.
+- Subprocess checker phát hiện InvalidDataException không thuộc IOException nên host thiếu catch cho parser/save incompatibility. Root thêm catch explicit, reviewer độc lập xác nhận filter vẫn giới hạn lỗi dự kiến; không nuốt arbitrary exceptions.
+- Check content riêng sau fix:46processes/15invalid cases đạt, actual transfer7/3/revision2/save reopen khớp, wrong content không sửa file. Fixed hash assertion; dependency path bound trước file I/O.
+- Source freeze và final full gate đang chạy lại; chưa đóng sprint. Root tiếp quản docs sync sau agents quota. Tài liệu generated36/reference/architecture/handoff511links đạt trước final status sync.
+
+
+### EVT-00056 | SPIN-011 | RESULT — Sprint8 đạt runtime acceptance; hoàn thiện export và Git
+
+<!-- worklog: {"id": "EVT-00056", "spin": "SPIN-011", "event": "RESULT", "at": "2026-10-22T08:26:33+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T08:26:33+07:00
+- Actor: /root
+
+- Final gate tests/results/sprint08-2bas9yx4/evidence.json exit0:315/315Release tests,0skip,31FND14 +284regression. Locked restore/build0warning/error. Runtime negativecontrol đúng1fail;2demos/replaygolden/negativecontrol và9SIGKILL đạt.
+- Content checker46processes/15invalid cases đạt; exact dependency/hash/save refusal giữ bytes, file không tạo trước validation; transfer7/3/revision2 và reopen khớp. Fingerprint14d6b6f2a197b79da3da4a98b5946e76b77746c9b57e7e4ffbd01c09be1d1918 verifiedfresh.
+- Reviewer /root/s8_review closure review không còn blocker, gồm explicit InvalidDataException catch. Source review độc lập; runtime final do root chạy. /root/s8_compiler code, /root/s8_tests31Debug và subprocess script; root tiếp quản docs/finalintegration sau quota.
+- Nghiệm thu FND14 kernel-content-v1; full VS02/Unity/FND15 chưa hoàn thành. Backlog/matrix/evidence/changelog/handoff/AGENTS và generated GDD đã đồng bộ; đang export trước Git.

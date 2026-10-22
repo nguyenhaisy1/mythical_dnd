@@ -1,0 +1,33 @@
+{
+  "pack_id": "kernel.demo",
+  "version": 1,
+  "schema_version": 1,
+  "rule_version": "transfer-resource-v1+scheduler-v1",
+  "dependencies": [],
+  "definitions": [
+    {
+      "definition_id": "commodity.timber@1",
+      "version": 1,
+      "kind": "commodity",
+      "schema_version": 1,
+      "source": "prototype-authored: FND14 kernel transfer fixture",
+      "classification": "game-canon",
+      "owner_domain": "Assets",
+      "display_key": "commodity.timber",
+      "unit": "count"
+    },
+    {
+      "definition_id": "transfer.timber@1",
+      "version": 1,
+      "kind": "transfer-template",
+      "schema_version": 1,
+      "source": "prototype-authored: FND14 kernel transfer fixture",
+      "classification": "game-canon",
+      "owner_domain": "Assets",
+      "display_key": "transfer.timber",
+      "commodity_id": "commodity.timber@1",
+      "handler": "TransferResource@1",
+      "quantity": 3
+    }
+  ]
+}

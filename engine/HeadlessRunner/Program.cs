@@ -7,6 +7,7 @@ namespace Game.Headless
     {
         private static int Main(string[] args)
         {
+            if (args.Length > 0 && (args[0] == "--content-compile" || args[0] == "--content-demo" || args[0] == "--content-open")) return ContentProbe.Run(args);
             if ((args.Length == 3 || args.Length == 4) &&
                 (args[0] == "--replay" || args[0] == "--replay-negative-control" || args[0] == "--record-replay-fixture"))
                 return ReplayProbe.Run(args[0], args[1], args[2], args.Length == 4 ? args[3] : null);
@@ -17,16 +18,17 @@ namespace Game.Headless
                 Console.WriteLine(JsonSerializer.Serialize(new
                 {
                     project = "mythical_dnd",
-                    stage = "headless-command-replay",
+                    stage = "headless-content-registry",
                     commandPipelineImplemented = true,
                     inMemorySchedulerImplemented = true,
                     durablePersistenceImplemented = true,
                     snapshotRecoveryImplemented = true,
                     commandReplayImplemented = true,
+                    contentRegistryImplemented = true,
                     simulationImplemented = false,
                     runtimeLlm = false,
                     documentation = "docs/production/HANDOFF.md",
-                    nextTask = "FND-14"
+                    nextTask = "FND-15"
                 }, new JsonSerializerOptions { WriteIndented = true }));
                 return 0;
             }

@@ -32,3 +32,7 @@ Sửa thuyền dùng reserve/consume contract; vận tải cần route mở, cap
 ## Parameters và tuning
 
 kernel-v1 chỉ có thông số đủ fixture: ticks/day1440, repair duration60, timber2, gain200, conditionmax1000, schedulerbudget1000/fanout32. Các giá trị là engineering prototype, không có khảo cứu lịch sử hoặc balance claim. Initial parameters cho transport/medicine phải author và review **trước VS-03**, không đợi VS-10. VS-10 là tune dựa measurements, không là nơi phát minh units lần đầu. Thêm field yêu cầu versioned schema, vectors, rules consumer và test expectations cùng thay đổi.
+
+## Profile runtime Sprint 8
+
+[Content Pipeline](../runbooks/CONTENT-PIPELINE.md) và [ADR-017](../adr/017-runtime-content-registry.md) xác định compiler/registry hiện có cho commodity và transfer-template. Schema `content/schemas/kernel-content-v1.schema.json`; fixture `content/fixtures/content-kernel/pack.json` là prototype-authored/game-canon chạy được. Compile tạo registry trong bộ nhớ, chưa ghi binary vào content/compiled. Các loại NPC/household/routes/recipes/event AST chưa có runtime contracts đầy đủ nên bị từ chối rõ; full production roster vẫn thuộc VS-02. Reference fixture không tự trở thành runtime pack.

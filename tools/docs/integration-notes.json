@@ -213,7 +213,7 @@
     "outputs": "Canonical data contracts, command/events, read projections và storage ports.",
     "read_with": "25, 27–29; docs/contracts.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
     "acceptance": "Stable IDs, no hidden knowledge leakage, nonnegative stock và revision consistency có test trước feature breadth.",
-    "open": "Provider spike, runtime schemas/DDL, migration và content compiler còn phải triển khai; ID/tick/codec đã có baseline ADR-008."
+    "open": "Full production schemas/content và Unity provider còn gates riêng. Headless SQLite/schema2 migration đã có Sprint5–6, content compiler kernel profile ở Sprint8/ADR-017; xem evidence trước khi suy rộng. ID/tick/codec theo ADR-008."
   },
   "27": {
     "baseline": "Công thức gắn trạng thái locked principle hoặc prototype coefficient. Không biến giá trị ví dụ thành final balance. Constraint trước roll; routines có auto-resolution; randomness có context/version. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
@@ -235,7 +235,7 @@
     "baseline": "Module cuối foundation: giữ command/state/event/jobs/RNG/receipt nhất quán. Scaffold chỉ khởi tạo assembly/host; không tự tuyên bố foundation đã hoàn thành vì build được. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
     "inputs": "Typed IDs, clock, rules, commands, versions, scheduler và persistence contracts.",
     "outputs": "Foundation task FND-01–16; authoritative commit, recovery và replay khi được triển khai.",
-    "read_with": "26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "read_with": "26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-017 và docs/runbooks/CONTENT-PIPELINE.md cho runtime content profile commodity/transfer-template; full VS-02/Unity vẫn có gate riêng.",
     "acceptance": "Foundation exit gate cần replay, atomic failure recovery, content validation và cross-runtime evidence.",
     "open": "C#/Unity implementation/conformance, provider/editor/test-runner spike và performance evidence; identity/time/RNG/codec đã có specs và Python reference vectors."
   }
