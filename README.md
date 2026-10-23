@@ -2,7 +2,7 @@
 
 Living World Narrative RPG lấy chất liệu Văn Lang–Âu Lạc. Nội dung, nhân quả, nghề nghiệp, quan hệ và cuộc đời nhân vật là trọng tâm; gameplay runtime chạy offline bằng code/rules. Tên game hiện là working title.
 
-**Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Đã có primitives Sprint 1 và path TransferResource in-memory Sprint 2; Sprint3 có event journal/causal trace và idempotent consumer; Sprint4 có scheduler/AdvanceTime in-memory cùng demo thực thi. Sprint5 có SQLite current-state commit/reopen headless; full gameplay simulation, snapshot recovery, replay và Unity client chưa được triển khai.
+**Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Đã có primitives Sprint 1 và path TransferResource in-memory Sprint 2; Sprint3 có event journal/causal trace và idempotent consumer; Sprint4 có scheduler/AdvanceTime in-memory cùng demo thực thi. Sprint5 có SQLite current-state commit/reopen headless; snapshot/recovery và replay headless đã bổ sung Sprint6–7; full gameplay simulation và playable Unity client chưa được triển khai.
 
 ## Bắt đầu đọc
 
@@ -27,7 +27,7 @@ python3 tools/tests/run_runtime.py
 dotnet run --project engine/HeadlessRunner/Game.Headless.csproj --configuration Release --no-build -- --status
 ```
 
-`--status` trả `simulationImplemented: false`. Lệnh simulate/replay không được giả làm thành công khi chưa triển khai. Sprint6 bổ sung FND12 snapshot/recovery/migration headless; trạng thái nghiệm thu ở [báo cáo Sprint6](docs/qa/SPRINT-06-EVIDENCE.md). Sprint7 bổ sung replay QA; xem [báo cáo Sprint7](docs/qa/SPRINT-07-EVIDENCE.md). Sprint8 bổ sung compiler/registry nội dung; xem [Content Pipeline](docs/runbooks/CONTENT-PIPELINE.md) và [evidence Sprint8](docs/qa/SPRINT-08-EVIDENCE.md). Sprint9 bổ sung [diagnostics](docs/runbooks/DIAGNOSTICS.md) và [evidence](docs/qa/SPRINT-09-EVIDENCE.md). Bước sau là **review gate VS-01 và FND-16 Unity conformance**; provider Unity, UI save/quit và platform atomic replacement vẫn pending. Unity conformance vẫn pending FND-16; xem backlog trước khi mở rộng.
+`--status` trả `simulationImplemented: false`. Lệnh simulate/replay không được giả làm thành công khi chưa triển khai. Sprint6 bổ sung FND12 snapshot/recovery/migration headless; trạng thái nghiệm thu ở [báo cáo Sprint6](docs/qa/SPRINT-06-EVIDENCE.md). Sprint7 bổ sung replay QA; xem [báo cáo Sprint7](docs/qa/SPRINT-07-EVIDENCE.md). Sprint8 bổ sung compiler/registry nội dung; xem [Content Pipeline](docs/runbooks/CONTENT-PIPELINE.md) và [evidence Sprint8](docs/qa/SPRINT-08-EVIDENCE.md). Sprint9 bổ sung [diagnostics](docs/runbooks/DIAGNOSTICS.md) và [evidence](docs/qa/SPRINT-09-EVIDENCE.md). Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Bước tiếp theo là VS02 khi được giao; xem backlog trước khi mở rộng.
 
 ## Bố trí dự án
 
@@ -54,3 +54,7 @@ Tài liệu bổ sung sau audit: [trạng thái và đường dẫn](docs/produc
 [Nhật ký công việc theo spin](WORKLOG.md) ghi goal, phân công, tiến độ, kết quả và evidence. Các bản ghi mới nối vào cuối file; dùng làm nguồn báo cáo khi cần.
 
 Quy trình áp dụng cho AI: [AI Execution](docs/runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.
+
+## Sprint10 — chuẩn bị Unity conformance
+
+[Bộ kiểm chứng và cách chạy](docs/runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Client game vẫn layout; project conformance tạo riêng bằng Editor thật.

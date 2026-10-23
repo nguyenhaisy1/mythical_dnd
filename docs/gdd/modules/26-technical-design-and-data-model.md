@@ -12,9 +12,9 @@ Logical schema là contract, chưa phải physical SQLite schema. Core thuần C
 |---|---|
 | Dữ liệu đầu vào | Design modules, entity identities, temporal semantics và domain boundaries. |
 | Đầu ra / bên sở hữu | Canonical data contracts, command/events, read projections và storage ports. |
-| Đọc cùng | 25, 27–29; docs/contracts.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 25, 27–29; docs/contracts.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-019 và docs/runbooks/UNITY-CONFORMANCE.md cho exact Editor profile và giới hạn nghiệmthu. |
 | Cổng nghiệm thu | Stable IDs, no hidden knowledge leakage, nonnegative stock và revision consistency có test trước feature breadth. |
-| Việc chưa được chứng minh | Full production schemas/content và Unity provider còn gates riêng. Headless SQLite/schema2 migration đã có Sprint5–6, content compiler kernel profile ở Sprint8/ADR-017; xem evidence trước khi suy rộng. ID/tick/codec theo ADR-008. |
+| Việc chưa được chứng minh | Sprint10/ADR019: VS01 kernel và FND16 Unity6000.6.7f1 LinuxEditor Mono đã có actual conformance evidence. Player/IL2CPP, Unity crash/recovery/migration, production gameplay/content và performance còn gates riêng; xem docs/qa/SPRINT-10-EVIDENCE.md. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../../governance/APPLICABLE-BASELINE.md) và [Decision Register](../../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 

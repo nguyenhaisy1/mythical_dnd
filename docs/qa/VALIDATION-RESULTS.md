@@ -68,3 +68,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint9 — 2026-10-22
 
 [Báo cáo Sprint9](SPRINT-09-EVIDENCE.md):338/338Release tests,0skip,23FND15cases;16diagnostic processes/14negativecases tái hiện fixed fault và chỉ rõ fielddiff. Content/replay/negativecontrols/9SIGKILL regression đạt. Independent source/delta review và subprocess check đạt. Developer omniscient tooling, chưa VS01 milestone signoff/Unity/player UX/full gameplay acceptance.
+
+## Sprint10 — conformance preparation
+
+[Báo cáo Sprint10](SPRINT-10-EVIDENCE.md) tách host/tooling checks khỏi actual Unity. [VS01 audit](VS-01-REVIEW.md) rà kernel subset FND02–15. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu.

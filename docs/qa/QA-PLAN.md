@@ -32,3 +32,7 @@ Khi fixture cho thấy bug: giữ command log, manifest, snapshot/state diff và
 ## Gates và execution bổ sung
 
 [Test Execution Contract](TEST-EXECUTION-CONTRACT.md) phân biệt reference checks, runtime tests và cross-runtime evidence. VS-01 chỉ nghiệm thu headless FND-02–15; Foundation complete thêm FND-16. Framework lock/CI discovery FND-02 theo ADR-009 và FND-02-EVIDENCE; Unity adapter còn gate riêng. Không thay TEST trạng thái runtime Pending bằng reference pass. Fixtures codec/math/RNG và smoke nằm tại [kernel-smoke](../../content/fixtures/kernel-smoke/README.md).
+
+## Cập nhật Sprint10 — 2026-10-23
+
+Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Xem [ADR019](../adr/019-unity-editor-conformance.md) và báo cáo Sprint10. Các đoạn mô tả sprint trước giữ phạm vi evidence tại thời điểm đó.

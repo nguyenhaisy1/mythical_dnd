@@ -6,6 +6,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+- Sprint10: VS01 kernel và FND16 Unity6000.6.7f1/LinuxEditor Mono conformance đạt. Sửa staging/import và API enum alias; 5shared checks khớp host. Player/IL2CPP và playable game chưa nghiệmthu; không phát hành.
+
 ### Sprint9 — truy nguyên và tái hiện lỗi
 - Actual rule checks, QA command observations, full typed state-field diff, causal traversal và scheduler inspection với missing/truncation rõ.
 - Fixed diagnostic package chạy baseline rồi compiled injected rejection; report phân biệt baseline/actual và chỉ rõ first divergence/field changes. Hai process và negative controls giữ fixture cố định.
