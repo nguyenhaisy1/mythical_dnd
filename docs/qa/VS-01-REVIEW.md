@@ -1,6 +1,6 @@
 # VS-01 — Rà soát nền tảng headless
 
-Ngày 2026-10-22, SPIN-013. Kết luận: đã có evidence cho kernel subset FND02–15; chờ nghiệm thu tích hợp Sprint10 trước cập nhật VS01 accepted. Không đồng nghĩa toàn bộ hành vi dự kiến trong GDD đã hiện thực hoặc Foundation complete.
+Ngày 2026-10-22, SPIN-013. Kết luận: đã có evidence cho kernel subset FND02–15; VS01 accepted trong kernel subset sau actual Unity conformance Sprint10 và independent review. Không đồng nghĩa toàn bộ hành vi dự kiến trong GDD đã hiện thực hoặc Foundation complete.
 
 | Nhóm | Evidence có thật | Giới hạn |
 |---|---|---|
@@ -18,4 +18,4 @@ Các báo cáo SPRINT-01 đến SPRINT-09 trong cùng thư mục lưu evidence c
 
 Public boundaries giữ Foundation/Domain không phụ thuộc Unity/IO; Application điều phối; Infrastructure adapters; UI/narrative không có quyền ghi authoritative state. Stable ở đây nghĩa contracts đã có regression evidence cho kernel profile, không cam kết save API thương mại v1.0.
 
-Bước tiếp theo: chạy shared conformance trong Unity thật cho FND16, rồi giao VS02 riêng khi được yêu cầu. Không dùng số tests để suy game chơi được hoặc gameplay thú vị.
+FND16 đã đạt Unity6000.6.7f1/LinuxEditor Mono; bước tiếp theo là giao VS02 riêng khi được yêu cầu. Không dùng số tests để suy game chơi được hoặc gameplay thú vị.

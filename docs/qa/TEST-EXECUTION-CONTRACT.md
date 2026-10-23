@@ -27,3 +27,7 @@ CI giữ docs/reference checks, build và runtime regression cùng gate/demo c�
 ## Sprint7 replay scope
 
 Headless golden15actions được đọc từ content/fixtures/replay-kernel và chạy trong2process riêng; negativecontrol checkpoint đầu sai phải fail. Counting-rule/changed-rule tests chứng minh rerun resolution. First-divergence report hiện có action index/category/revisions/hashes; Sprint9/FND15 thêm full state-field diff/actual trace bằng diagnostic package có expected image riêng; xem [Diagnostics](../runbooks/DIAGNOSTICS.md). Không ghi gameplay RNG replay vì transfer/scheduler chưa draw, không ghi Unity conformance.
+
+## Cập nhật Sprint10 — 2026-10-23
+
+Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Xem [ADR019](../adr/019-unity-editor-conformance.md) và báo cáo Sprint10. Các đoạn mô tả sprint trước giữ phạm vi evidence tại thời điểm đó.

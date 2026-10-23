@@ -11,6 +11,8 @@ public static class ConformanceEntry
     {
         public string status, profile, fingerprint, sqliteVersion, unityVersion, backend, platform, api;
         public string[] checks;
+        public int apiValue;
+        public string apiEnumName;
     }
     private static string Arg(string name)
     {
@@ -30,7 +32,7 @@ public static class ConformanceEntry
             var result = RuntimeConformance.Run(Arg("-conformanceFixture"), Arg("-conformanceDatabase"));
             var report = new Report { status = "Passed", profile = RuntimeConformance.Profile, checks = result.Checks.ToArray(),
                 fingerprint = result.Fingerprint, sqliteVersion = result.SqliteVersion, unityVersion = Application.unityVersion,
-                backend = "Editor-Mono", platform = Application.platform.ToString(), api = api.ToString() };
+                backend = "Editor-Mono", platform = Application.platform.ToString(), api = "NET_Standard", apiValue = (int)api, apiEnumName = api.ToString() };
             using (var output = new StreamWriter(new FileStream(Arg("-conformanceOutput"), FileMode.CreateNew))) output.Write(JsonUtility.ToJson(report));
             EditorApplication.Exit(0);
         }

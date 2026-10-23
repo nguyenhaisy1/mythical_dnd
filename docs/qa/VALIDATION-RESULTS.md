@@ -71,4 +71,4 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 
 ## Sprint10 — conformance preparation
 
-[Báo cáo Sprint10](SPRINT-10-EVIDENCE.md) tách host/tooling checks khỏi actual Unity. [VS01 audit](VS-01-REVIEW.md) rà kernel subset FND02–15. Máy chưa cài/kích hoạt Editor; FND16 NotRun, không có Player/IL2CPP hoặc bản chơi thử.
+[Báo cáo Sprint10](SPRINT-10-EVIDENCE.md) tách host/tooling checks khỏi actual Unity. [VS01 audit](VS-01-REVIEW.md) rà kernel subset FND02–15. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu.

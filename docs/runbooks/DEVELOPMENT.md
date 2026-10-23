@@ -24,3 +24,7 @@ Git đã có initial commit và origin trỏ git@github.com:nguyenhaisy1/mythica
 Quy trình áp dụng cho AI: [AI Execution](AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope Sprint 1 nằm trong sprint brief được liên kết tại đó.
 
 Demo thực thi: `dotnet run --project engine/HeadlessRunner/Game.Headless.csproj -c Release --no-build -- --transfer-demo`; chỉ in-memory transfer+retry, không game simulation/replay. Runtime gate cũng chạy và xác minh demo này.
+
+## Cập nhật Sprint10 — 2026-10-23
+
+Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Xem [ADR019](../adr/019-unity-editor-conformance.md) và báo cáo Sprint10. Các đoạn mô tả sprint trước giữ phạm vi evidence tại thời điểm đó.

@@ -912,3 +912,50 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Final Release tests/results/sprint10-ku8vaxft/evidence.json exit0:338/338,0skip, fingerprint07f8e53efa21074e7b82c7edf59fabf0b28abf7de6ad7ea3c3fb29d3e0ce45a6. Build0warnings/errors; expected negativecontrol1fail; regression crash/replay/content/diagnostics/demos đạt. Previous cn93gg2e freshness rejected do sửa source; không dùng nghiệmthu.
 - Docs36generated/handoff536links/architecture/reference/codec checks đạt. Exports đang regenerate, khôngZIP.
 - Actual Unity NotRun do chưa cài/kíchhoạt; chưa khóa actual patch/provider/client hoặc nghiệmthu Foundation. Sprint10/SPIN013 còn mở; chuẩn bị draftPR, khôngmerge/release/sprintmới.
+
+
+### EVT-00067 | SPIN-013 | GIT — Push preparation và mở draft PR10
+
+<!-- worklog: {"id": "EVT-00067", "spin": "SPIN-013", "event": "GIT", "at": "2026-10-22T14:19:56+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T14:19:56+07:00
+- Actor: /root
+
+- Commit f5f1ebeda7a064a7b9c30e6fc42d917ca9a3dfd8 push origin/feature/sprint-10-unity-conformance; remote SHA verified.
+- Draft PR#10 https://github.com/nguyenhaisy1/mythical_dnd/pull/10 vào dev. CIpush39739693355/PR39739710603 đang chạy, chưa merge.
+- Export176inputs/14files/6156anchors/123tables/navigation đạt. KhôngZIP/main/tag/release.
+- SPIN013/Sprint10 còn mở, actual Unity NotRun. WORKLOG postcommit local đưa commit kế tiếp theo policy.
+
+
+### EVT-00068 | SPIN-013 | HANDOFF — CI PR10 đạt; bàn giao phần chuẩn bị, chờ actual Unity
+
+<!-- worklog: {"id": "EVT-00068", "spin": "SPIN-013", "event": "HANDOFF", "at": "2026-10-22T14:21:07+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T14:21:07+07:00
+- Actor: /root
+
+- CIpush39739693355 và PR39739710603 completed/success đúng f5f1ebeda7a064a7b9c30e6fc42d917ca9a3dfd8. DraftPR10 chưa merge; main/dev không thay đổi trong Sprint10.
+- Preparation hoàn thành và independentreview đạt, Sprint10/SPIN013 vẫn partial/open vì actual Unity chưa cài/kíchhoạt. Không gọi đây FND16 acceptance hoặc Foundationcomplete.
+- Tiếp theo cài/kíchhoạt Editor thật; chạy tools/unity/run_conformance.py --editor <path> theo runbook, giải quyết import/native/parity từ log thật, ghi exactpatch và acceptance trước tíchhợp. Không tự mởSprint11.
+- WORKLOG EVT00067/00068 local chưacommit, đưa commit kế tiếp; toàn bộ code/docs đãpush.
+
+
+### EVT-00069 | SPIN-013 | RESUME — Tiếp tục actual Unity conformance với Editor user đã cài
+
+<!-- worklog: {"id": "EVT-00069", "spin": "SPIN-013", "event": "RESUME", "at": "2026-10-22T15:07:06+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-22T15:07:06+07:00
+- Actor: /root
+
+- User đã cài Unity6000.6.7f1. Tìm thấy /home/synh/Unity/Hub/Editor/6000.6.7f1; root tiếp tục SPIN013, chạy actual conformance và kiểm license từ kết quả Editor.
+- Chưa nghiệmthu version/provider hoặc Unity gate; giữ WORKLOG local từ lần trước. Không yêu cầu lại quyền workflow sprint.
+
+
+### EVT-00070 | SPIN-013 | RESULT — Actual Unity và final regression đạt; nghiệmthu scoped FND16/VS01
+
+<!-- worklog: {"id": "EVT-00070", "spin": "SPIN-013", "event": "RESULT", "at": "2026-10-23T08:50:40+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-23T08:50:40+07:00
+- Actor: /root
+
+- Actual Unity6000.6.7f1/Linuxx64 EditorMono đã chạy5semanticchecks khớp .NET: codec/RNG/replay15actions/content/SQLite commit-reopen-snapshot-refusal. Evidence tests/results/unity-hmn0_eqs/evidence.json exit0, fingerprint2077904913f2dc32eaf1e5bf54ecf9b5257b011e1e9cb5f7cc0874afe11bbb01. api rawNET_Standard_2_0/value6 bằngNET_Standard, output chuẩn hóa sau guard.
+- Root sửa staging Plugins/MythicalRuntime+tách import, bổ sung source hashes/timestamps/commands. Hai actual attempts trước CS0246 giữ failure evidence; không kết luận nguyên nhân nội bộ importer. Không đổi gameplay/schema/content.
+- /root/s10_actual_review independent source+artifactreview đạt: recomputeparity/source/import13hashes/Editorhash và full338test evidence. Chấp nhận scopedFND16/VS01, khôngPlayer/IL2CPP hoặc playablegame.
+- Finalheadless tests/results/sprint10-nbc5jibw/evidence.json338/338,0skip,exit0; regression crash/replay/content/diagnostics/demos và negativecontrols đạt. Source manifest giữfresh.
+- ADR019/exactEditorprofile/OPEN04 resolved; OPEN03 chỉEditorproviderverified cònPlayerpackaging/Unitycrash-recovery-migration. Docs/generatednotes/source-preservation đồngbộ; exportsđangregenerate. Khôngsprint11/main/tag/release.

@@ -11,3 +11,5 @@ Các ADR này ghi rationale cho baseline bàn giao. [Decision Register](../gover
 - [ADR-007 — Bảo toàn nghiên cứu, chuẩn hóa số và canon slice](007-source-preservation-and-canon.md)
 
 [ADR-008 — Prototype contract baseline](008-prototype-contract-baseline.md): bổ sung các lựa chọn triển khai và phân biệt specification với runtime evidence.
+
+[ADR-019 — Unity Editor conformance](019-unity-editor-conformance.md): exact6000.6.7f1/LinuxEditor Mono và giới hạn acceptance.

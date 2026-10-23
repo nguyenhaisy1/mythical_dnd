@@ -15,3 +15,7 @@ Sources chính: [Microsoft custom SQLite versions](https://learn.microsoft.com/e
 Môi trường: /tmp/mythical-dotnet/dotnet10.0.401/Linuxx64. Không tìm thấy Unity executable trong PATH hoặc các thư mục Editor thông dụng đã kiểm; không chạy Mono/IL2CPP/native mobile. OPEN03 chưa đóng: cần chạy target client đọc cùng format, transactions/rollback/native loading và packaging license review.
 
 Runtime tests/crash evidence cuối xem [Sprint5 evidence](SPRINT-05-EVIDENCE.md). SQLite engine version thật lấy từ SELECT sqlite_version trong subprocess report; không suy từ package number. Tests actual busy/full, injected table failures và SIGKILL có phạm vi khác nhau; không phải power-loss hoặc performance benchmark.
+
+## Cập nhật Sprint10 — 2026-10-23
+
+Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Xem [ADR019](../adr/019-unity-editor-conformance.md) và báo cáo Sprint10. Các đoạn mô tả sprint trước giữ phạm vi evidence tại thời điểm đó.

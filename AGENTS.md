@@ -83,4 +83,4 @@ User giao sprint mới theo workflow thường trực. Sprint9/SPIN-012, FND15 d
 
 ## Sprint10 — 2026-10-22
 
-User giao Sprint10/SPIN-013: VS01 review và FND16 conformance preparation. Xem docs/production/sprints/SPRINT-10.md. User xác nhận chưa cài/kích hoạt Unity; actual Unity gate NotRun, không đánh đồng host probe với FND16 accepted. Không mở Sprint11 hoặc release.
+User giao Sprint10/SPIN-013: VS01 review và FND16 conformance preparation. Xem docs/production/sprints/SPRINT-10.md. Chủ dự án sau đó đã cài Unity6000.6.7f1. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Không mở Sprint11 hoặc release.

@@ -4,7 +4,7 @@
 
 Đối chiếu phần nền đã xây qua chín sprint và chuẩn bị một bộ kiểm tra dùng chung cho chương trình .NET và Unity. Bộ kiểm tra phát hiện sai lệch dữ liệu, kết quả ngẫu nhiên, phát lại hành động và lưu game giữa hai môi trường.
 
-SPIN-013. Trạng thái đang thực hiện; chưa đóng sprint vì máy chưa có Unity được cài/kích hoạt. Không có bản chơi thử, không tuyên bố Foundation complete.
+SPIN-013. Actual Editor gate đã đạt; hoàn tất review/docs/Git trước đóng sprint. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu.
 
 ## Phạm vi và acceptance
 
@@ -20,4 +20,4 @@ Các agents s10_audit/s10_unity/s10_review đóng góp đề xuất ban đầu t
 
 ## Gates còn mở
 
-FND16 chỉ được nghiệm thu sau actual Editor run và đối chiếu đúng profile, không lấy synthetic validator tests làm Unity evidence. Candidate Linux x64 Editor Mono chưa chứng minh Player/IL2CPP hoặc packaging. OPEN03/04 chưa đóng; phiên bản Editor phải lấy từ cài đặt thật. Xem [runbook](../../runbooks/UNITY-CONFORMANCE.md) và [evidence](../../qa/SPRINT-10-EVIDENCE.md).
+FND16 chỉ được nghiệm thu sau actual Editor run và đối chiếu đúng profile, không lấy synthetic validator tests làm Unity evidence. Linux x64 Editor Mono6000.6.7f1 đã đạt, OPEN04 khóa profile; Player/IL2CPP hoặc packaging và Unity crash/recovery còn riêng trong OPEN03. Xem [runbook](../../runbooks/UNITY-CONFORMANCE.md) và [evidence](../../qa/SPRINT-10-EVIDENCE.md).

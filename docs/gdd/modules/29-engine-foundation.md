@@ -12,9 +12,9 @@ Module cuối foundation: giữ command/state/event/jobs/RNG/receipt nhất quá
 |---|---|
 | Dữ liệu đầu vào | Typed IDs, clock, rules, commands, versions, scheduler và persistence contracts. |
 | Đầu ra / bên sở hữu | Foundation task FND-01–16; authoritative commit, recovery và replay khi được triển khai. |
-| Đọc cùng | 26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-017 và docs/runbooks/CONTENT-PIPELINE.md cho runtime content profile commodity/transfer-template; full VS-02/Unity vẫn có gate riêng. ADR-018 và docs/runbooks/DIAGNOSTICS.md cho Sprint9 actual traces/state diff/evidence package; không suy field values từ replay hash. |
+| Đọc cùng | 26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-017 và docs/runbooks/CONTENT-PIPELINE.md cho runtime content profile commodity/transfer-template; full VS-02/Unity vẫn có gate riêng. ADR-018 và docs/runbooks/DIAGNOSTICS.md cho Sprint9 actual traces/state diff/evidence package; không suy field values từ replay hash. ADR-019 và docs/runbooks/UNITY-CONFORMANCE.md cho exact Editor profile và giới hạn nghiệmthu. |
 | Cổng nghiệm thu | Foundation exit gate cần replay, atomic failure recovery, content validation và cross-runtime evidence. |
-| Việc chưa được chứng minh | C#/Unity implementation/conformance, provider/editor/test-runner spike và performance evidence; identity/time/RNG/codec đã có specs và Python reference vectors. |
+| Việc chưa được chứng minh | Sprint10/ADR019: VS01 kernel và FND16 Unity6000.6.7f1 LinuxEditor Mono đã có actual conformance evidence. Player/IL2CPP, Unity crash/recovery/migration, production gameplay/content và performance còn gates riêng; xem docs/qa/SPRINT-10-EVIDENCE.md. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../../governance/APPLICABLE-BASELINE.md) và [Decision Register](../../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 

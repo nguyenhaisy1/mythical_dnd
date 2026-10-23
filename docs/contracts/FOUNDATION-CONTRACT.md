@@ -98,3 +98,7 @@ Foundation hoàn thành khi FND-02–16 có evidence phù hợp. Skeleton build,
 ## Diagnostics không có authority — Sprint9
 
 [ADR018](../adr/018-foundation-diagnostics.md) bổ sung RuleResult.Checks từ actual TransferResourceRule evaluation, QA replay observer và Infrastructure state/causal/job inspectors. Checks không persist vào state/receipt/journal hoặc thay hash. Chỉ các điều kiện đã chạy được ghi, proposal khác commit. Omniscient diagnostics không được đưa vào player knowledge projection. Replay-v1 hashes không đủ suy field diff, evidence package có expected image riêng và baseline kiểm lại trước fault.
+
+## Cập nhật Sprint10 — 2026-10-23
+
+Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Xem [ADR019](../adr/019-unity-editor-conformance.md) và báo cáo Sprint10. Các đoạn mô tả sprint trước giữ phạm vi evidence tại thời điểm đó.

@@ -6,4 +6,4 @@ Thực hiện FND-16/VS-07 theo docs/runbooks/UNITY-BOOTSTRAP.md: chọn editor,
 
 ## Sprint10 — chuẩn bị Unity conformance
 
-[Bộ kiểm chứng và cách chạy](../../docs/runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Hiện chưa cài/kích hoạt Unity: FND16 NotRun, client vẫn layout; không có bản chơi thử.
+[Bộ kiểm chứng và cách chạy](../../docs/runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Client này vẫn layout; project kiểm chứng nằm trong tests/results.

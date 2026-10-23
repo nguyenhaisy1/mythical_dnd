@@ -2,6 +2,7 @@
 """Candidate Linux Unity6 Editor-Mono conformance runner. Missing Editor is NotRun, never Passed."""
 import argparse
 import base64
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -108,7 +109,12 @@ def main():
     output = args.output.resolve() if args.output else Path(tempfile.mkdtemp(prefix='unity-', dir=ROOT / 'tests/results'))
     if args.output:
         output.mkdir(parents=True, exist_ok=False)
-    report = dict(status='NotRun', unity_status='NotRun', scope='candidate Linux Unity6 Editor-Mono; not Player/IL2CPP', output=str(output))
+    report = dict(utc_started=datetime.now(timezone.utc).isoformat(), task_ids=['FND-16'], test_ids=['TEST-016'], source_revision=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(), status='NotRun', unity_status='NotRun', scope='candidate Linux Unity6 Editor-Mono; not Player/IL2CPP', output=str(output))
+    source_paths = sorted(p for folder in ['engine', 'tools/unity'] for p in (ROOT / folder).rglob('*') if p.is_file() and not any(x in ['bin','obj','__pycache__'] for x in p.parts))
+    report['source_files'] = {str(p.relative_to(ROOT)): digest(p).hex() for p in source_paths}
+    report['source_fingerprint'] = hashlib.sha256(json.dumps(report['source_files'], sort_keys=True).encode()).hexdigest()
+    report['fixture_versions'] = dict(codec='mdc1', rng='sha256-counter-v1', profile='kernel-conformance-v1', world_seed='0' * 64)
+    report['commands'] = []
     exit_code = 2
     try:
         if platform.system() != 'Linux' or platform.machine() not in ['x86_64', 'AMD64']:
@@ -120,6 +126,7 @@ def main():
             if editor and not os.access(editor, os.X_OK):
                 raise ValueError('Editor is not executable')
             def run(command, label):
+                report['commands'].append(dict(label=label, argv=list(map(str, command))))
                 with (output / (label + '.log')).open('w') as log:
                     subprocess.run(list(map(str, command)), cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, check=True, timeout=1200)
             run([args.dotnet, 'restore', 'MythicalDnd.sln', '--locked-mode', '-m:1', '-nr:false'], 'restore')
@@ -142,16 +149,19 @@ def main():
                 scripts = project / 'Assets/Editor'; scripts.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(TEMPLATES / 'ConformanceBootstrap.cs', scripts / 'ConformanceBootstrap.cs')
                 run([editor, '-batchmode', '-nographics', '-projectPath', project, '-executeMethod', 'ConformanceBootstrap.Configure', '-logFile', output / 'configure-editor.log'], 'configure')
-                report['imports'] = stage(project / 'Assets/Plugins/GameCore', editor)
+                report['imports'] = stage(project / 'Assets/Plugins/MythicalRuntime', editor)
+                run([editor, '-batchmode', '-nographics', '-projectPath', project, '-quit', '-logFile', output / 'import-editor.log'], 'import')
                 shutil.copyfile(TEMPLATES / 'ConformanceEntry.cs', scripts / 'ConformanceEntry.cs')
                 run([editor, '-batchmode', '-nographics', '-projectPath', project, '-executeMethod', 'ConformanceEntry.Run',
                      '-conformanceFixture', fixture, '-conformanceDatabase', output / 'unity.db', '-conformanceOutput', output / 'unity.json', '-logFile', output / 'run-editor.log'], 'unity')
                 unity = json.loads((output / 'unity.json').read_text())
                 parity(host, unity, version_path.read_text())
                 report.update(status='Passed', unity_status='Passed', unity=unity, project_version=version_path.read_text(), editor_sha256=digest(editor).hex())
+                report['semantic_checks_passed'] = len(unity['checks'])
                 exit_code = 0
     except (OSError, ValueError, subprocess.SubprocessError, zipfile.BadZipFile, KeyError) as error:
         report.update(status='Failed', reason=str(error)); exit_code = 1
+    report['utc_finished'] = datetime.now(timezone.utc).isoformat()
     report['exit_code'] = exit_code
     (output / 'evidence.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report))

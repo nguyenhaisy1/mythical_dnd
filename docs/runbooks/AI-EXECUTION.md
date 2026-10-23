@@ -53,4 +53,4 @@ User giao sprint mới theo workflow thường trực. Sprint9/SPIN-012, FND15 d
 
 ## Sprint10 đang thực hiện
 
-[Sprint10](../production/sprints/SPRINT-10.md), SPIN-013: root hoàn thiện shared probe/tooling và VS01 audit; reviewer độc lập s10_final_review kiểm preparation. Actual Unity chờ cài/kích hoạt Editor; không đóng FND16 hoặc tự mở Sprint11. Draft PR được dùng để lưu phần chuẩn bị đã kiểm chứng, chưa merge milestone còn thiếu acceptance.
+[Sprint10](../production/sprints/SPRINT-10.md), SPIN-013: root hoàn thiện shared probe/tooling và VS01 audit; reviewer độc lập s10_final_review kiểm preparation. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Không tự mở Sprint11; tích hợp PR10 sau final review/CI.

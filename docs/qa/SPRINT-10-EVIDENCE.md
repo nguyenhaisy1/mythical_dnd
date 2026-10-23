@@ -1,23 +1,41 @@
-# Sprint10 — Báo cáo phần chuẩn bị kiểm chứng Unity
+# Sprint10 — Nền tảng đã chạy được trong Unity Editor
 
 ## Tổng hợp dễ hiểu
 
-Đã xây bộ kiểm tra chung để xác nhận dữ liệu và kết quả xử lý giống nhau giữa chương trình nền và Unity. Có công cụ chuẩn bị các thư viện cần nhập, tạo project kiểm tra riêng và báo rõ khi thiếu Editor. Đồng thời rà lại nền tảng của chín sprint, cập nhật các trạng thái cũ còn ghi chờ phần đã hoàn thành.
+Đã đưa cùng bộ nền tảng sang Unity6000.6.7f1 và kiểm tra kết quả với chương trình .NET. Dữ liệu tiếng Việt, kết quả ngẫu nhiên, phát lại chuỗi hành động, nội dung và lưu/mở lại dữ liệu đều khớp. Đã rà nền tảng của chín sprint trước và đồng bộ trạng thái backlog.
 
-**Sprint10 còn mở:** máy chưa cài/kích hoạt Unity theo xác nhận của chủ dự án. Chưa có bản chơi thử, chưa nghiệmthu FND16/Foundation complete. Phần đã chạy chỉ là .NET và kiểm thử công cụ.
+VS01 kernel và FND16 đạt trong profile Linux x64/Unity Editor Mono. Đây là nền để tiếp tục xây nội dung và giao diện; **chưa có bản game chơi thử**. Player/IL2CPP, packaging, Unity crash/recovery/migration và full gameplay còn gates riêng.
 
-## Phạm vi, phân công và review
+## Phân công và review
 
-SPIN-013; branch `feature/sprint-10-unity-conformance`. Root implement portable probe, host CLI, Python staging/batch runner, validator tests, audit/docs. s10_audit/s10_unity/s10_review đóng góp đề xuất trước quota; không có implementation review từ họ. s10_final_review review độc lập tìm ba vấn đề: comparator nhận malformed reports giống nhau, thiếu thư mục output ở checkout mới, snapshot check chưa chứng minh snapshot được lưu. Root sửa cả ba; /root/s10_final_review kiểm lại và chạy checker độc lập: 4 host processes, 10 parity negative cases, missing Editor exit2, 13 imports. Không còn blocker cho preparation-only draft PR; không duyệt FND16 hoặc Sprint10 complete.
+SPIN-013, branch `feature/sprint-10-unity-conformance`. /root implement probe/host/tooling/tests/docs và tích hợp. s10_audit/s10_unity/s10_review đóng góp thiết kế ban đầu trước quota; không tính là source review. s10_final_review phát hiện ba lỗi preparation (parity giả giống nhau, output parent, snapshot chưa kiểm count); root sửa và reviewer kiểm lại đạt.
 
-Input immutable replay fixture hash `bc82e0428cfd260d93b6a62a4eb09e472e73c2e15f8b7dab2b2f27d536423d2b`. Probe fingerprint cố định `d47e710ae21268d937742dc3fda208ae5e58b220309eeb2b276697a5367372f9` gồm năm kết quả semantic. Không đổi rule/schema/content versions hay gameplay behavior.
+Sau khi user cài Editor, /root chạy actual import, sửa staging sang MythicalRuntime và tách import trước entry script; chuẩn hóa API enum label sau equality guard, giữ raw name/value. /root/s10_actual_review review độc lập lần cuối: tự recompute parity, source fingerprint,13import hashes, Editor binary hash và đọc338-test evidence; không còn finding chặn tích hợp trong scoped acceptance.
 
-## Evidence và giới hạn
+## Kết quả thật
 
-Kết quả host ban đầu: .NET10.0.12, SQLite3.53.3, codec/RNG/replay/content/commit-reopen đúng known answers. Preparation đầu phát hiện cách so hash archive NuGet với lock không đúng với cache hiện tại; sửa để kiểm metadata against lock và archive against SHA512 sidecar riêng. Không hạ kiểm chứng thành bỏ qua checksum.
+| Gate | Artifact | Kết quả |
+|---|---|---|
+| Headless Release regression | `tests/results/sprint10-nbc5jibw/evidence.json` | 338/338,0failed,0skipped,exit0 |
+| Actual host–Unity | `tests/results/unity-hmn0_eqs/evidence.json` | 5semantic checks ở cả host và Editor,exit0 |
+| Host/tooling negatives | Trong runtime evidence | 4host processes,10parity rejection cases,missingEditor exit2,13imports |
 
-Final Release gate `tests/results/sprint10-ku8vaxft/evidence.json`: exit0, 338/338 tests, 0 skipped; fingerprint `sha256:07f8e53efa21074e7b82c7edf59fabf0b28abf7de6ad7ea3c3fb29d3e0ce45a6`. Locked restore/build không warnings/errors; negative control thất bại đúng một test. Regression diagnostics/content/replay, hai demos và 9 SIGKILL checks đạt. Preparation: 4 host processes, 10 parity rejection cases, missing Editor exit2 NotRun, 13 imports. Lượt trước `sprint10-cn93gg2e` bị freshness gate từ chối vì source sửa trong lúc chạy; không dùng lượt đó để nghiệmthu. Synthetic parity reports chỉ là validator tests, không có Unity invocation thành công. Không có Player/IL2CPP evidence, benchmark hoặc human playtest. [VS01 review](VS-01-REVIEW.md) giới hạn ở kernel subset; [runbook](../runbooks/UNITY-CONFORMANCE.md) mô tả cách tiếp tục sau cài Editor.
+Headless source fingerprint `sha256:b0a9a67ed78cc24c21e1b5da08efe2de85763d64d5a07a63109dbdc267baaeac`. Actual conformance source fingerprint `2077904913f2dc32eaf1e5bf54ecf9b5257b011e1e9cb5f7cc0874afe11bbb01`. Run ghi parent revision `f5f1ebeda7a064a7b9c30e6fc42d917ca9a3dfd8` cùng hash từng source có thay đổi chưa commit; fingerprint là provenance của source thực thi, không giả rằng parent commit đã chứa bản sửa.
+
+Actual Editor `6000.6.7f1`, ProjectVersion do Editor tạo; backend Editor-Mono, LinuxEditor, API enum value6/raw `NET_Standard_2_0` bằng `NET_Standard` theo guard. Host .NET10.0.12 và cả hai SQLite3.53.3. API label là chuẩn hóa tên alias, không đổi giá trị kiểm. Rule/codec/RNG/content/save versions không đổi; codec mdc1, sha256-counter-v1, world seed64số0, replay rule TransferResource+scheduler v1.
+
+Năm kiểm chứng: known-answer codec tiếng Việt;8RNGwords; replay15actions và final image hash; compiled content hash; SQLite command commit/reopen tồn kho nguồn7/đích3/revision2, snapshot count tăng và compatible-state giữ nguyên, wrong-content refusal không đổi database. Fingerprint chung `d47e710ae21268d937742dc3fda208ae5e58b220309eeb2b276697a5367372f9`. Fixture SHA256 `bc82e0428cfd260d93b6a62a4eb09e472e73c2e15f8b7dab2b2f27d536423d2b`. Năm semantic checks không phải338 Unity tests.
+
+Locked restore/build0warnings/errors. Negative control cố ý thất bại đúng một test; diagnostics/content/replay regressions,2demos và9SIGKILL checks đạt trên headless. CI chỉ chạy host/tooling; actual Unity chạy local, không gán cho GitHub CI.
+
+## Lỗi tìm được và phạm vi chưa kiểm
+
+Hai actual attempts x72o4op9/v1rcfl4g thất bại CS0246 khi stage trong Plugins/GameCore; giữ nguyên evidence thất bại. Rename experiment sang MythicalRuntime chạy probe thành công, sau đó full run mới hmn0_eqs đạt. Chưa khẳng định nguyên nhân nội bộ của Unity importer. Enum.ToString trả alias khác tên canonical; guard enum không đổi, output giữ cả raw value/name.
+
+Preparation cũ ku8vaxft từng338/338 đạt; cn93gg2e bị freshness gate từ chối do source sửa lúc chạy. Chỉ dùng nbc5jibw/hmn0_eqs cho source cuối. License/raw Editor logs ở artifacts ignored, không commit hoặc đưa vào exports; báo cáo duy trì không chứa tài khoản/license.
+
+[ADR019](../adr/019-unity-editor-conformance.md) khóa exact profile. [VS01 audit](VS-01-REVIEW.md) nghiệmthu kernel subset FND02–15. OPEN04 resolved cho Editor; OPEN03 còn Player packaging/native distribution, Unity crash/recovery/migration. Không có Player/IL2CPP, accessibility/performance hay human playtest evidence; client game vẫn layout.
 
 ## Bàn giao
 
-Independent preparation review đạt; docs/reference/architecture checks đạt. Nhánh preparation được push và mở draft PR vào dev, chưa merge vì actual Unity gate chưa chạy. Sprint10/SPIN-013 tiếp tục khi Editor được cài/kích hoạt; không đóng sprint hoặc mở sprint mới. Chi tiết Git thực tế ghi append trong WORKLOG.
+Tích hợp PR10 vào dev theo standing workflow sau review/CI. Git SHA và trạng thái merge thực tế ghi append trong WORKLOG. Không đổi main, tag hoặc release; không tự mởSprint11. Bước tiếp theo khi được giao là VS02 living settlement content, không cần thêm module nghiên cứu để thay implementation.

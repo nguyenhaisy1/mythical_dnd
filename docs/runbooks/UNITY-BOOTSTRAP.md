@@ -17,4 +17,4 @@ Nguồn công nghệ: [Unity .NET compatibility](https://docs.unity.com/en-us/en
 
 ## Sprint10: isolated conformance preparation
 
-[Bộ chạy conformance](UNITY-CONFORMANCE.md) tạo project kiểm chứng riêng bằng Editor thật khi có cài đặt/license. Máy hiện chưa cài/kích hoạt Unity; client layout chưa bootstrap và FND16 vẫn NotRun. Không dùng DLL build .NET hoặc validator synthetic thay Editor evidence.
+[Bộ chạy conformance](UNITY-CONFORMANCE.md) tạo project kiểm chứng riêng bằng Editor thật khi có cài đặt/license. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Client layout chưa bootstrap thành game. Không dùng DLL build .NET hoặc validator synthetic thay Editor evidence.
