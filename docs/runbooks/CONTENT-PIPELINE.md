@@ -31,3 +31,7 @@ Content không được SQL/script/state path/eval. Parser báo path và ID khi 
 Demo là world cố định phục vụ nghiệm thu, chưa là campaign loader/UX; người gọi phải cung cấp expected hash từ campaign selection. SQLite vẫn kiểm hash thật bên trong save trước đọc state thành công. Registry không chứa runtime entity instances và không bypass ownership. Các QA probes cũ giữ fixture hashes riêng để hồi quy, chưa chuyển save/golden cũ sang pack này.
 
 Không có binary distribution/cache; JSON đã kiểm định compile thành registry trong bộ nhớ. Không có Unity loader, full NPC/household/routes/event AST/recipes hoặc roster VS-02. Khi thêm loại definition phải bổ sung contract/schema/compiler/semantic tests, không bỏ qua unknown fields để tương thích giả.
+
+## Profile bổ sung Sprint11
+
+Các giới hạn ở trên áp dụng kernel-content-v1. [Settlement profile](SETTLEMENT-CONTENT.md) là compiler độc lập cho24actors/households/graph authoring; không nhập vào world/save cũ, không chạy event/routine và không thay fullVS02.

@@ -54,3 +54,7 @@ User giao sprint mới theo workflow thường trực. Sprint9/SPIN-012, FND15 d
 ## Sprint10 đang thực hiện
 
 [Sprint10](../production/sprints/SPRINT-10.md), SPIN-013: root hoàn thiện shared probe/tooling và VS01 audit; reviewer độc lập s10_final_review kiểm preparation. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Không tự mở Sprint11; tích hợp PR10 sau final review/CI.
+
+## Sprint11 — VS02A: dữ liệu dân cư và mạng đường
+
+[Compiler và cách dùng](SETTLEMENT-CONTENT.md) kiểm24actors/6households/4communities/8routes/24claims/24directedrelationships, tạo immutable authoring registry. VS02 full vẫnpartial: chưa8–12eventtemplates/eligibility, actor-specificobligations, randomprotagonist, routine execution hoặc gameplay. Không coi đủrecordcount là worldsimulation.

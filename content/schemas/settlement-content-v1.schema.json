@@ -1,0 +1,828 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mythical-dnd.local/schemas/settlement-content-v1.schema.json",
+  "title": "Settlement authoring profile v1 (no executable behavior)",
+  "$defs": {
+    "community": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^community\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "version": {
+          "const": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "community"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "classification": {
+          "const": "game-canon"
+        },
+        "owner_domain": {
+          "const": "Settlements"
+        },
+        "display_key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "region": {
+          "enum": [
+            "tam-giang",
+            "phong-chau"
+          ]
+        },
+        "external": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "definition_id",
+        "version",
+        "schema_version",
+        "kind",
+        "source",
+        "classification",
+        "owner_domain",
+        "display_key",
+        "region",
+        "external"
+      ],
+      "additionalProperties": false
+    },
+    "household": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^household\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "version": {
+          "const": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "household"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "classification": {
+          "const": "game-canon"
+        },
+        "owner_domain": {
+          "const": "Households"
+        },
+        "display_key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "community_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^community\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "member_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048,
+            "pattern": "^actor\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+          },
+          "minItems": 1,
+          "maxItems": 256
+        },
+        "lots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lot_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^[a-z][a-z0-9_-]*(?![\\s\\S])"
+              },
+              "commodity": {
+                "enum": [
+                  "grain",
+                  "timber"
+                ]
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "unit": {
+                "enum": [
+                  "count"
+                ]
+              }
+            },
+            "required": [
+              "lot_id",
+              "commodity",
+              "quantity",
+              "unit"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 256
+        },
+        "rights": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lot_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^[a-z][a-z0-9_-]*(?![\\s\\S])"
+              },
+              "holder_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^actor\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+              },
+              "permission": {
+                "enum": [
+                  "use",
+                  "manage"
+                ]
+              }
+            },
+            "required": [
+              "lot_id",
+              "holder_id",
+              "permission"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 256
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "to_household_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^household\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "to_household_id",
+              "description"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "definition_id",
+        "version",
+        "schema_version",
+        "kind",
+        "source",
+        "classification",
+        "owner_domain",
+        "display_key",
+        "community_id",
+        "member_ids",
+        "lots",
+        "rights",
+        "obligations"
+      ],
+      "additionalProperties": false
+    },
+    "actor": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^actor\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "version": {
+          "const": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "actor"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "classification": {
+          "const": "game-canon"
+        },
+        "owner_domain": {
+          "const": "Characters"
+        },
+        "display_key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "household_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^household\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "age": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "alive": {
+          "type": "boolean"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "the": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "xao": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "giac": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "tri": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "tam": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "khi": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            }
+          },
+          "required": [
+            "the",
+            "xao",
+            "giac",
+            "tri",
+            "tam",
+            "khi"
+          ],
+          "additionalProperties": false
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "history_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^[a-z][a-z0-9_-]*(?![\\s\\S])"
+              },
+              "at_age": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "history_id",
+              "at_age",
+              "description"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 256
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "skill_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^[a-z][a-z0-9_-]*(?![\\s\\S])"
+              },
+              "value": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "history_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^[a-z][a-z0-9_-]*(?![\\s\\S])"
+              }
+            },
+            "required": [
+              "skill_id",
+              "value",
+              "history_id"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 256
+        },
+        "known_facts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fact_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^fact\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+              },
+              "history_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "^[a-z][a-z0-9_-]*(?![\\s\\S])"
+              }
+            },
+            "required": [
+              "fact_id",
+              "history_id"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 256
+        },
+        "needs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048,
+            "pattern": "\\S"
+          },
+          "minItems": 1,
+          "maxItems": 256
+        },
+        "routine": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048,
+              "pattern": "\\S"
+            },
+            "community_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048,
+              "pattern": "^community\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+            },
+            "skill_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048,
+              "pattern": "^[a-z][a-z0-9_-]*(?![\\s\\S])"
+            },
+            "duration_ticks": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1440
+            },
+            "executable": {
+              "const": false
+            }
+          },
+          "required": [
+            "description",
+            "community_id",
+            "skill_id",
+            "duration_ticks",
+            "executable"
+          ],
+          "additionalProperties": false
+        },
+        "viability": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048,
+              "pattern": "\\S"
+            },
+            "caregiver_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2048,
+                  "pattern": "^actor\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "description",
+            "caregiver_id"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "definition_id",
+        "version",
+        "schema_version",
+        "kind",
+        "source",
+        "classification",
+        "owner_domain",
+        "display_key",
+        "household_id",
+        "age",
+        "alive",
+        "attributes",
+        "history",
+        "skills",
+        "known_facts",
+        "needs",
+        "routine",
+        "viability"
+      ],
+      "additionalProperties": false
+    },
+    "fact": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^fact\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "version": {
+          "const": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "fact"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "classification": {
+          "const": "game-canon"
+        },
+        "owner_domain": {
+          "const": "Knowledge"
+        },
+        "display_key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "claim": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "definition_id",
+        "version",
+        "schema_version",
+        "kind",
+        "source",
+        "classification",
+        "owner_domain",
+        "display_key",
+        "claim",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "relationship": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^relationship\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "version": {
+          "const": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "relationship"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "classification": {
+          "const": "game-canon"
+        },
+        "owner_domain": {
+          "const": "Social"
+        },
+        "display_key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "from_actor_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^actor\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "to_actor_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^actor\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "trust": {
+          "type": "integer",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "definition_id",
+        "version",
+        "schema_version",
+        "kind",
+        "source",
+        "classification",
+        "owner_domain",
+        "display_key",
+        "from_actor_id",
+        "to_actor_id",
+        "trust",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "route": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^route\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "version": {
+          "const": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "route"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "classification": {
+          "const": "game-canon"
+        },
+        "owner_domain": {
+          "const": "Travel"
+        },
+        "display_key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "from_community_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^community\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "to_community_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^community\\.[a-z][a-z0-9_-]*@1(?![\\s\\S])"
+        },
+        "mode": {
+          "enum": [
+            "water",
+            "land"
+          ]
+        },
+        "duration_ticks": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "capacity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "open_seasons": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "dry",
+              "wet"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 256,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "definition_id",
+        "version",
+        "schema_version",
+        "kind",
+        "source",
+        "classification",
+        "owner_domain",
+        "display_key",
+        "from_community_id",
+        "to_community_id",
+        "mode",
+        "duration_ticks",
+        "capacity",
+        "open_seasons"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "pack_id": {
+      "const": "slice.settlement"
+    },
+    "version": {
+      "const": 1
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "profile": {
+      "const": "settlement-content-v1"
+    },
+    "definitions": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/community"
+          },
+          {
+            "$ref": "#/$defs/household"
+          },
+          {
+            "$ref": "#/$defs/actor"
+          },
+          {
+            "$ref": "#/$defs/fact"
+          },
+          {
+            "$ref": "#/$defs/relationship"
+          },
+          {
+            "$ref": "#/$defs/route"
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 512
+    },
+    "localization": {
+      "type": "object",
+      "maxProperties": 1024,
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2048,
+        "pattern": "\\S"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2048,
+        "pattern": "\\S"
+      }
+    }
+  },
+  "required": [
+    "pack_id",
+    "version",
+    "schema_version",
+    "profile",
+    "definitions",
+    "localization"
+  ],
+  "additionalProperties": false
+}

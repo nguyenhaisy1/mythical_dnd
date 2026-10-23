@@ -1,0 +1,2708 @@
+{
+  "pack_id": "slice.settlement",
+  "version": 1,
+  "schema_version": 1,
+  "profile": "settlement-content-v1",
+  "definitions": [
+    {
+      "definition_id": "community.ben-vac@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "community",
+      "source": "M03 §TG-01; ADR020: prototype boundary profile",
+      "classification": "game-canon",
+      "owner_domain": "Settlements",
+      "display_key": "slice.community.ben-vac",
+      "region": "tam-giang",
+      "external": false
+    },
+    {
+      "definition_id": "community.con-may@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "community",
+      "source": "M03 §TG-02; ADR020: prototype boundary profile",
+      "classification": "game-canon",
+      "owner_domain": "Settlements",
+      "display_key": "slice.community.con-may",
+      "region": "tam-giang",
+      "external": false
+    },
+    {
+      "definition_id": "community.van-nuoc@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "community",
+      "source": "M03 §TG-03; ADR020: prototype boundary profile",
+      "classification": "game-canon",
+      "owner_domain": "Settlements",
+      "display_key": "slice.community.van-nuoc",
+      "region": "tam-giang",
+      "external": false
+    },
+    {
+      "definition_id": "community.ben-hac@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "community",
+      "source": "M03 §PC-02; ADR020: prototype boundary profile",
+      "classification": "game-canon",
+      "owner_domain": "Settlements",
+      "display_key": "slice.community.ben-hac",
+      "region": "phong-chau",
+      "external": true
+    },
+    {
+      "definition_id": "household.vac-tong@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "household",
+      "source": "prototype-authored: Sprint11 household stocks/rights/obligations; M04 §I, V–VII; M28 §25; M04 §XXVII F01 (canonical five members and ages); DEC-019 household name",
+      "classification": "game-canon",
+      "owner_domain": "Households",
+      "display_key": "slice.household.vac-tong",
+      "community_id": "community.ben-vac@1",
+      "member_ids": [
+        "actor.vac-tong@1",
+        "actor.vac-moc@1",
+        "actor.vac-mai@1",
+        "actor.vac-lam@1",
+        "actor.vac-nhu@1"
+      ],
+      "lots": [
+        {
+          "lot_id": "vac-tong-grain",
+          "commodity": "grain",
+          "quantity": 72,
+          "unit": "count"
+        },
+        {
+          "lot_id": "vac-tong-timber",
+          "commodity": "timber",
+          "quantity": 12,
+          "unit": "count"
+        }
+      ],
+      "rights": [
+        {
+          "lot_id": "vac-tong-grain",
+          "holder_id": "actor.vac-tong@1",
+          "permission": "manage"
+        },
+        {
+          "lot_id": "vac-tong-grain",
+          "holder_id": "actor.vac-moc@1",
+          "permission": "use"
+        },
+        {
+          "lot_id": "vac-tong-timber",
+          "holder_id": "actor.vac-tong@1",
+          "permission": "manage"
+        }
+      ],
+      "obligations": [
+        {
+          "to_household_id": "household.ben-sen@1",
+          "description": "Đã hứa dành thời gian đưa người cần chăm tới chỗ Sen khi có chuyến phù hợp; không phải quyền gọi đò vô hạn."
+        }
+      ]
+    },
+    {
+      "definition_id": "household.trieu@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "household",
+      "source": "prototype-authored: Sprint11 household stocks/rights/obligations; M04 §I, V–VII; M28 §25; M04 §XXVII F12; M05 §XX F12 (Khê/Lục); Hiên/Bé invented",
+      "classification": "game-canon",
+      "owner_domain": "Households",
+      "display_key": "slice.household.trieu",
+      "community_id": "community.van-nuoc@1",
+      "member_ids": [
+        "actor.trieu-khe@1",
+        "actor.trieu-luc@1",
+        "actor.trieu-hien@1",
+        "actor.trieu-be@1"
+      ],
+      "lots": [
+        {
+          "lot_id": "trieu-grain",
+          "commodity": "grain",
+          "quantity": 54,
+          "unit": "count"
+        },
+        {
+          "lot_id": "trieu-timber",
+          "commodity": "timber",
+          "quantity": 8,
+          "unit": "count"
+        }
+      ],
+      "rights": [
+        {
+          "lot_id": "trieu-grain",
+          "holder_id": "actor.trieu-khe@1",
+          "permission": "manage"
+        },
+        {
+          "lot_id": "trieu-grain",
+          "holder_id": "actor.trieu-luc@1",
+          "permission": "use"
+        },
+        {
+          "lot_id": "trieu-timber",
+          "holder_id": "actor.trieu-khe@1",
+          "permission": "manage"
+        }
+      ],
+      "obligations": [
+        {
+          "to_household_id": "household.con-say@1",
+          "description": "Đã nhận lời hỏi trước khi neo gần chỗ sinh hoạt nhà Sậy và báo lại lịch dự kiến."
+        }
+      ]
+    },
+    {
+      "definition_id": "household.may-dan@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "household",
+      "source": "prototype-authored: Sprint11 household stocks/rights/obligations; M04 §I, V–VII; M28 §25",
+      "classification": "game-canon",
+      "owner_domain": "Households",
+      "display_key": "slice.household.may-dan",
+      "community_id": "community.con-may@1",
+      "member_ids": [
+        "actor.may-dan@1",
+        "actor.may-riu@1",
+        "actor.may-soi@1",
+        "actor.may-chau@1"
+      ],
+      "lots": [
+        {
+          "lot_id": "may-dan-grain",
+          "commodity": "grain",
+          "quantity": 46,
+          "unit": "count"
+        },
+        {
+          "lot_id": "may-dan-timber",
+          "commodity": "timber",
+          "quantity": 24,
+          "unit": "count"
+        }
+      ],
+      "rights": [
+        {
+          "lot_id": "may-dan-grain",
+          "holder_id": "actor.may-dan@1",
+          "permission": "manage"
+        },
+        {
+          "lot_id": "may-dan-grain",
+          "holder_id": "actor.may-riu@1",
+          "permission": "use"
+        },
+        {
+          "lot_id": "may-dan-timber",
+          "holder_id": "actor.may-dan@1",
+          "permission": "manage"
+        }
+      ],
+      "obligations": [
+        {
+          "to_household_id": "household.vac-tong@1",
+          "description": "Đã hứa xem tình trạng đồ cần sửa trước khi báo công và vật liệu; chưa là hợp đồng sửa thuyền."
+        }
+      ]
+    },
+    {
+      "definition_id": "household.ben-sen@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "household",
+      "source": "prototype-authored: Sprint11 household stocks/rights/obligations; M04 §I, V–VII; M28 §25",
+      "classification": "game-canon",
+      "owner_domain": "Households",
+      "display_key": "slice.household.ben-sen",
+      "community_id": "community.ben-vac@1",
+      "member_ids": [
+        "actor.ben-sen@1",
+        "actor.ben-ha@1",
+        "actor.ben-kien@1",
+        "actor.ben-ngo@1"
+      ],
+      "lots": [
+        {
+          "lot_id": "ben-sen-grain",
+          "commodity": "grain",
+          "quantity": 61,
+          "unit": "count"
+        },
+        {
+          "lot_id": "ben-sen-timber",
+          "commodity": "timber",
+          "quantity": 6,
+          "unit": "count"
+        }
+      ],
+      "rights": [
+        {
+          "lot_id": "ben-sen-grain",
+          "holder_id": "actor.ben-sen@1",
+          "permission": "manage"
+        },
+        {
+          "lot_id": "ben-sen-grain",
+          "holder_id": "actor.ben-ha@1",
+          "permission": "use"
+        },
+        {
+          "lot_id": "ben-sen-timber",
+          "holder_id": "actor.ben-sen@1",
+          "permission": "manage"
+        }
+      ],
+      "obligations": [
+        {
+          "to_household_id": "household.nuoc-thoa@1",
+          "description": "Đã hẹn hoàn lại thời gian vận chuyển được giúp bằng một buổi hỗ trợ phù hợp, cần đồng thuận mới."
+        }
+      ]
+    },
+    {
+      "definition_id": "household.con-say@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "household",
+      "source": "prototype-authored: Sprint11 household stocks/rights/obligations; M04 §I, V–VII; M28 §25",
+      "classification": "game-canon",
+      "owner_domain": "Households",
+      "display_key": "slice.household.con-say",
+      "community_id": "community.con-may@1",
+      "member_ids": [
+        "actor.con-say@1",
+        "actor.con-lan@1",
+        "actor.con-ut@1",
+        "actor.con-ba@1"
+      ],
+      "lots": [
+        {
+          "lot_id": "con-say-grain",
+          "commodity": "grain",
+          "quantity": 85,
+          "unit": "count"
+        },
+        {
+          "lot_id": "con-say-timber",
+          "commodity": "timber",
+          "quantity": 9,
+          "unit": "count"
+        }
+      ],
+      "rights": [
+        {
+          "lot_id": "con-say-grain",
+          "holder_id": "actor.con-say@1",
+          "permission": "manage"
+        },
+        {
+          "lot_id": "con-say-grain",
+          "holder_id": "actor.con-lan@1",
+          "permission": "use"
+        },
+        {
+          "lot_id": "con-say-timber",
+          "holder_id": "actor.con-say@1",
+          "permission": "manage"
+        }
+      ],
+      "obligations": [
+        {
+          "to_household_id": "household.may-dan@1",
+          "description": "Đã hứa giúp thu dọn đồ nghề khi rời cồn, nếu người và thời gian cho phép."
+        }
+      ]
+    },
+    {
+      "definition_id": "household.nuoc-thoa@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "household",
+      "source": "prototype-authored: Sprint11 household stocks/rights/obligations; M04 §I, V–VII; M28 §25",
+      "classification": "game-canon",
+      "owner_domain": "Households",
+      "display_key": "slice.household.nuoc-thoa",
+      "community_id": "community.van-nuoc@1",
+      "member_ids": [
+        "actor.nuoc-thoa@1",
+        "actor.nuoc-nghiem@1",
+        "actor.nuoc-nho@1"
+      ],
+      "lots": [
+        {
+          "lot_id": "nuoc-thoa-grain",
+          "commodity": "grain",
+          "quantity": 48,
+          "unit": "count"
+        },
+        {
+          "lot_id": "nuoc-thoa-timber",
+          "commodity": "timber",
+          "quantity": 7,
+          "unit": "count"
+        }
+      ],
+      "rights": [
+        {
+          "lot_id": "nuoc-thoa-grain",
+          "holder_id": "actor.nuoc-thoa@1",
+          "permission": "manage"
+        },
+        {
+          "lot_id": "nuoc-thoa-grain",
+          "holder_id": "actor.nuoc-nghiem@1",
+          "permission": "use"
+        },
+        {
+          "lot_id": "nuoc-thoa-timber",
+          "holder_id": "actor.nuoc-thoa@1",
+          "permission": "manage"
+        }
+      ],
+      "obligations": [
+        {
+          "to_household_id": "household.trieu@1",
+          "description": "Đã hứa báo tin chỗ nghỉ nghe được cho nhà Triều, phải nói rõ nguồn và độ chắc chắn."
+        }
+      ]
+    },
+    {
+      "definition_id": "fact.vac-tong-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.vac-tong-claim",
+      "claim": "Tòng cho rằng luồng quen đang bồi cạn; đó là nhận xét từ các chuyến đò của ông, chưa phải đo đạc toàn sông.",
+      "provenance": "Vạc Tòng: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.vac-tong@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.vac-tong@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16; M04 §XXVII F01 canonical name/age; M05 §XX F01 for Tòng/Mộc motivations",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.vac-tong",
+      "household_id": "household.vac-tong@1",
+      "age": 58,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 6,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 16,
+          "description": "Theo cha đưa đò, học đọc luồng và phân tải thay vì chỉ dựa vào sức chèo."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 56,
+          "description": "Sau nhiều chuyến phải đổi bến, tự kiểm kê số lương dự trữ và hứa giữ việc cho các con."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "transport",
+          "value": 76,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.vac-tong-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Giữ sinh kế chung",
+        "được các con hiểu trách nhiệm nhưng không buộc họ nối nghề."
+      ],
+      "routine": {
+        "description": "Rà dây buộc tại bến rồi trao đổi lịch đò với Mộc; chỉ nhận chuyến khi có phương tiện và quyền dùng được kiểm tra.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "transport",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.vac-tong-to-vac-moc@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.vac-tong-to-vac-moc",
+      "from_actor_id": "actor.vac-tong@1",
+      "to_actor_id": "actor.vac-moc@1",
+      "trust": 64,
+      "description": "Tin tay nghề con trưởng nhưng thường giấu lo lắng khiến Mộc tưởng cha coi nhẹ mình."
+    },
+    {
+      "definition_id": "fact.vac-moc-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.vac-moc-claim",
+      "claim": "Mộc nhớ một cọc bến lộ thêm sau mùa khô; anh không biết các bến khác có cùng biến đổi không.",
+      "provenance": "Vạc Mộc: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.vac-moc@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.vac-moc@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16; M04 §XXVII F01 canonical name/age; M05 §XX F01 for Tòng/Mộc motivations",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.vac-moc",
+      "household_id": "household.vac-tong@1",
+      "age": 31,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 6,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 13,
+          "description": "Học theo Tòng cách nhìn xoáy nước; những lần đoán sai đều được ghi nhớ bằng dấu bờ."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 30,
+          "description": "Một chuyến về muộn khiến Mộc muốn kiểm tra hiện tượng nước bằng quan sát thay vì quy lỗi thần linh."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "transport",
+          "value": 68,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.vac-moc-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Chứng minh năng lực bằng việc làm",
+        "giữ người thân an toàn mà không kiểm soát mọi lựa chọn của họ."
+      ],
+      "routine": {
+        "description": "Quan sát mặt nước gần bến, trao đổi tải dự kiến với cha; không tự khởi hành từ mô tả này.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "transport",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.vac-moc-to-vac-lam@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.vac-moc-to-vac-lam",
+      "from_actor_id": "actor.vac-moc@1",
+      "to_actor_id": "actor.vac-lam@1",
+      "trust": 32,
+      "description": "Muốn bảo vệ em nhưng nghi việc em giấu chuyện học ở miếu sẽ khiến nhà thiếu người."
+    },
+    {
+      "definition_id": "fact.vac-mai-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.vac-mai-claim",
+      "claim": "Mai nhớ lần kiểm gần nhất phần lương trong hộ đủ chia trước chuyến xa; không biết lượng các hộ khác.",
+      "provenance": "Vạc Mai: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.vac-mai@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.vac-mai@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16; M04 §XXVII F01 canonical name/age; M05 §XX F01 for Tòng/Mộc motivations",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.vac-mai",
+      "household_id": "household.vac-tong@1",
+      "age": 28,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 5,
+        "tri": 6,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 12,
+          "description": "Giúp bà Nhu chia phần ăn, sau đó tập đối chiếu lượng giao nhận với người bán tại bến."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 27,
+          "description": "Tự trả lại một phần hàng bị tính thừa, được tin cậy hơn nhưng mất cơ hội tích riêng."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "trading",
+          "value": 57,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.vac-mai-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có quyền nói trong quyết định chi tiêu",
+        "dành thời gian học nghề đổi hàng ngoài việc chăm nhà."
+      ],
+      "routine": {
+        "description": "Đối chiếu phần ăn dự kiến và hỏi từng người trước khi thỏa thuận trao đổi; không tự chuyển lương.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "trading",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.vac-mai-to-vac-nhu@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.vac-mai-to-vac-nhu",
+      "from_actor_id": "actor.vac-mai@1",
+      "to_actor_id": "actor.vac-nhu@1",
+      "trust": 72,
+      "description": "Kính bà nhưng muốn bà nghe ý mình khi phân việc trong hộ."
+    },
+    {
+      "definition_id": "fact.vac-lam-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.vac-lam-claim",
+      "claim": "Lâm chỉ biết người dạy ở miếu hẹn gặp sau ngày mưa, không có bằng chứng lời đoán dòng chảy sẽ đúng.",
+      "provenance": "Vạc Lâm: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.vac-lam@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.vac-lam@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16; M04 §XXVII F01 canonical name/age; M05 §XX F01 for Tòng/Mộc motivations",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.vac-lam",
+      "household_id": "household.vac-tong@1",
+      "age": 22,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 11,
+          "description": "Học vá tấm che và đan dây từ bà Nhu để phụ việc lúc thuyền nghỉ."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 21,
+          "description": "Bí mật tìm người ở Miếu Tam Thủy học nghi lễ; vẫn muốn giữ lời giúp gia đình qua mùa nước."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "weaving",
+          "value": 43,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.vac-lam-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Tự chọn con đường sống",
+        "nói thật chuyện học ở miếu mà không bị đuổi khỏi nhà."
+      ],
+      "routine": {
+        "description": "Vá tấm che dưới mái nhà rồi dành buổi rảnh gặp người dạy; lịch chỉ là ý định, không cấp phép vắng mặt.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "weaving",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.vac-lam-to-vac-tong@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.vac-lam-to-vac-tong",
+      "from_actor_id": "actor.vac-lam@1",
+      "to_actor_id": "actor.vac-tong@1",
+      "trust": 40,
+      "description": "Thương cha và sợ làm ông thất vọng nên tránh đối thoại trực tiếp."
+    },
+    {
+      "definition_id": "fact.vac-nhu-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.vac-nhu-claim",
+      "claim": "Bà tin việc giữ nghi lễ giúp gia đình yên lòng; đây là niềm tin riêng, không xác nhận tác dụng siêu nhiên.",
+      "provenance": "Bà Nhu: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.vac-nhu@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.vac-nhu@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16; M04 §XXVII F01 canonical name/age; M05 §XX F01 for Tòng/Mộc motivations",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.vac-nhu",
+      "household_id": "household.vac-tong@1",
+      "age": 77,
+      "alive": true,
+      "attributes": {
+        "the": 3,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 14,
+          "description": "Học đan đồ dùng và truyền chuyện nghi lễ trong gia đình, coi việc cùng làm là cách giữ nếp."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 75,
+          "description": "Giảm việc mang vác, chuyển sang hướng dẫn Mai và Lâm sửa đồ dùng tại chỗ."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "weaving",
+          "value": 61,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.vac-nhu-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Được tham gia việc nhà vừa sức",
+        "giữ quan hệ với các cháu dù khác niềm tin."
+      ],
+      "routine": {
+        "description": "Ngồi chọn dây và chỉ cách đan; cần người mang vật liệu tới, không giao việc di chuyển dài.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "weaving",
+        "duration_ticks": 30,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Cần hỗ trợ mang vác và đi xa; nghề hiện tại chỉ làm tại chỗ.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.vac-nhu-to-vac-mai@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.vac-nhu-to-vac-mai",
+      "from_actor_id": "actor.vac-nhu@1",
+      "to_actor_id": "actor.vac-mai@1",
+      "trust": 83,
+      "description": "Tin Mai biết lo chung nhưng hay nhắc lệ cũ khiến Mai khó đề xuất cách mới."
+    },
+    {
+      "definition_id": "fact.trieu-khe-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.trieu-khe-claim",
+      "claim": "Khê nhớ một bờ nghỉ ít sóng ở chuyến gần đây; không coi đó là quyền neo vĩnh viễn.",
+      "provenance": "Triều Khê: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.trieu-khe@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.trieu-khe@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16; M04 §XXVII F12 and M05 §XX F12 canonical name/age/motivation",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.trieu-khe",
+      "household_id": "household.trieu@1",
+      "age": 35,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 6,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 12,
+          "description": "Theo mẹ sống trên thuyền, học tìm chỗ neo có thể nghỉ mà không cản lối người khác."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 34,
+          "description": "Bàn với người bạn đời từ Bãi Lạc về chỗ ở ổn định; lần đầu cân nhắc đất dù vẫn quý đời sông nước."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "transport",
+          "value": 67,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.trieu-khe-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Tạo chỗ nghỉ an toàn cho con",
+        "dung hòa mong muốn của bạn đời với nếp sống mẹ giữ."
+      ],
+      "routine": {
+        "description": "Kiểm tra chỗ nghỉ dự kiến và bàn với Lục trước chuyến; chưa có hành vi mua đất hay đổi nơi ở.",
+        "community_id": "community.van-nuoc@1",
+        "skill_id": "transport",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.trieu-khe-to-trieu-luc@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.trieu-khe-to-trieu-luc",
+      "from_actor_id": "actor.trieu-khe@1",
+      "to_actor_id": "actor.trieu-luc@1",
+      "trust": 58,
+      "description": "Kính kinh nghiệm mẹ nhưng không muốn quyết định nơi ở chỉ theo nỗi sợ mất căn tính."
+    },
+    {
+      "definition_id": "fact.trieu-luc-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.trieu-luc-claim",
+      "claim": "Lục cho rằng nhà trên bờ khó chuyển đi lúc nước đổi; đó là kinh nghiệm của bà, không phải kết luận mọi vùng.",
+      "provenance": "Triều Lục: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.trieu-luc@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.trieu-luc@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16; M04 §XXVII F12 and M05 §XX F12 canonical name/age/motivation",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.trieu-luc",
+      "household_id": "household.trieu@1",
+      "age": 61,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 5,
+        "tri": 6,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 15,
+          "description": "Học đổi lương giữa các thuyền cư trú, nhận ra hoàn cảnh người khác qua đồ đạc nhưng luôn phải hỏi lại."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 60,
+          "description": "Nghe con nói chuyện lên đất, lo những mối giúp đỡ giữa các thuyền sẽ đứt đoạn."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "trading",
+          "value": 63,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.trieu-luc-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Giữ liên hệ với cộng đồng thuyền",
+        "được con hỏi ý mà không phải quyết định thay con."
+      ],
+      "routine": {
+        "description": "Hỏi nhu cầu đổi hàng của các thuyền quen rồi báo lại Khê; không tự biết kho của họ.",
+        "community_id": "community.van-nuoc@1",
+        "skill_id": "trading",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.trieu-luc-to-trieu-hien@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.trieu-luc-to-trieu-hien",
+      "from_actor_id": "actor.trieu-luc@1",
+      "to_actor_id": "actor.trieu-hien@1",
+      "trust": 24,
+      "description": "Quý sự chăm chút của con dâu nhưng sợ mong muốn lên bờ làm gia đình xa nhau."
+    },
+    {
+      "definition_id": "fact.trieu-hien-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.trieu-hien-claim",
+      "claim": "Hiên từng thấy một bao hạt mốc sau chỗ neo ẩm; không quy nguyên nhân cho mọi thuyền cư trú.",
+      "provenance": "Triều Hiên: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.trieu-hien@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.trieu-hien@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.trieu-hien",
+      "household_id": "household.trieu@1",
+      "age": 32,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 13,
+          "description": "Lớn lên ở Bãi Lạc, học giữ hạt giống khô và quan sát chỗ đất đọng nước."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 30,
+          "description": "Về sống cùng Khê, chuyển kinh nghiệm cất lương lên thuyền và nhận ra trẻ nhỏ cần chỗ nghỉ ổn định."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "farming",
+          "value": 54,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.trieu-hien-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có nơi cất lương khô",
+        "được tôn trọng nguồn gốc Bãi Lạc khi bàn tương lai của con."
+      ],
+      "routine": {
+        "description": "Kiểm tra chỗ cất lương và hướng dẫn con nhận dấu ẩm; canh tác trên đất chưa có quyền không được thực hiện.",
+        "community_id": "community.van-nuoc@1",
+        "skill_id": "farming",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.trieu-hien-to-trieu-khe@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.trieu-hien-to-trieu-khe",
+      "from_actor_id": "actor.trieu-hien@1",
+      "to_actor_id": "actor.trieu-khe@1",
+      "trust": 76,
+      "description": "Tin Khê giữ lời nhưng cần anh biến lời hứa chỗ ở ổn định thành cuộc bàn bạc rõ ràng."
+    },
+    {
+      "definition_id": "fact.trieu-be-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.trieu-be-claim",
+      "claim": "Bé nhớ mẹ dặn không xuống mép thuyền một mình; không biết hành trình xa của người lớn.",
+      "provenance": "Triều Bé: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.trieu-be@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.trieu-be@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.trieu-be",
+      "household_id": "household.trieu@1",
+      "age": 10,
+      "alive": true,
+      "attributes": {
+        "the": 3,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 3
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 7,
+          "description": "Được Hiên chỉ cách đan dải buộc đơn giản để giữ đồ cá nhân trên thuyền."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 9,
+          "description": "Làm rơi vật khi giúp người lớn, từ đó chịu hỏi trước khi chạm vào đồ chung."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "weaving",
+          "value": 12,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.trieu-be-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có người trông nom",
+        "được thử việc vừa sức và có thời gian chơi."
+      ],
+      "routine": {
+        "description": "Tập đan dưới sự trông nom của Hiên, không nhận ca làm hoặc tự đi tuyến.",
+        "community_id": "community.van-nuoc@1",
+        "skill_id": "weaving",
+        "duration_ticks": 30,
+        "executable": false
+      },
+      "viability": {
+        "description": "Chưa thành niên, sinh hoạt cùng hộ; người chăm phải còn sống và không giao việc nguy hiểm.",
+        "caregiver_id": "actor.trieu-hien@1"
+      }
+    },
+    {
+      "definition_id": "relationship.trieu-be-to-trieu-hien@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.trieu-be-to-trieu-hien",
+      "from_actor_id": "actor.trieu-be@1",
+      "to_actor_id": "actor.trieu-hien@1",
+      "trust": 91,
+      "description": "Tìm mẹ khi lo lắng và mong được khen khi biết hỏi trước."
+    },
+    {
+      "definition_id": "fact.may-dan-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.may-dan-claim",
+      "claim": "Đan nhận xét lô gỗ nhà mình có đoạn cần hong; chưa có kiểm định kết cấu thuyền của nhà Tòng.",
+      "provenance": "Mây Đan: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.may-dan@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.may-dan@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.may-dan",
+      "household_id": "household.may-dan@1",
+      "age": 46,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 15,
+          "description": "Học ghép ván từ thợ qua cồn, bắt đầu bằng tháo mối hỏng trước khi tự sửa."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 44,
+          "description": "Từ chối nhận chuyến sửa quá gấp vì vật liệu chưa khô, bị khách giận nhưng giữ được uy tín về sau."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "boat-repair",
+          "value": 74,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.may-dan-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Giữ uy tín nghề",
+        "có lương nuôi hộ trong lúc chờ gỗ đủ dùng."
+      ],
+      "routine": {
+        "description": "Phân loại vật liệu và chỉ học việc quan sát mối nối; không tự tiêu hao gỗ hoặc sửa độ bền.",
+        "community_id": "community.con-may@1",
+        "skill_id": "boat-repair",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.may-dan-to-may-riu@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.may-dan-to-may-riu",
+      "from_actor_id": "actor.may-dan@1",
+      "to_actor_id": "actor.may-riu@1",
+      "trust": 55,
+      "description": "Tin sự nhanh nhẹn của Rìu nhưng buộc con giải thích vì sao chọn từng mảnh gỗ."
+    },
+    {
+      "definition_id": "fact.may-riu-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.may-riu-claim",
+      "claim": "Rìu nhớ một mối ghép của mình hở khi thử, không giấu thất bại ấy với Đan.",
+      "provenance": "Mây Rìu: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.may-riu@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.may-riu@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.may-riu",
+      "household_id": "household.may-dan@1",
+      "age": 23,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 14,
+          "description": "Theo Đan học nhận thớ gỗ, nhiều lần phải tháo mối ghép mình làm vội."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 22,
+          "description": "Muốn nhận việc độc lập nhưng đã đồng ý để người dạy kiểm tra sản phẩm đầu tiên."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "boat-repair",
+          "value": 42,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.may-riu-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có cơ hội chứng minh tay nghề",
+        "được trả phần công riêng bằng thỏa thuận rõ."
+      ],
+      "routine": {
+        "description": "Tập chọn vật liệu dưới giám sát, hỏi lại trước khi nhận việc có hạn giao.",
+        "community_id": "community.con-may@1",
+        "skill_id": "boat-repair",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.may-riu-to-may-dan@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.may-riu-to-may-dan",
+      "from_actor_id": "actor.may-riu@1",
+      "to_actor_id": "actor.may-dan@1",
+      "trust": 61,
+      "description": "Biết ơn người dạy nhưng khó chịu khi bị sửa trước mặt khách."
+    },
+    {
+      "definition_id": "fact.may-soi-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.may-soi-claim",
+      "claim": "Sợi từng thấy dây ướt dễ bị bỏ sót vết sờn; nhận xét chỉ áp dụng đồ mình đã kiểm.",
+      "provenance": "Mây Sợi: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.may-soi@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.may-soi@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.may-soi",
+      "household_id": "household.may-dan@1",
+      "age": 39,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 12,
+          "description": "Học bện dây và nhận biết chỗ sờn từ người thân làm nghề ven cồn."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 38,
+          "description": "Tách dây hỏng khỏi đồ chờ bán dù hộ đang thiếu lương, tranh luận với Rìu về việc tiết kiệm."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "weaving",
+          "value": 69,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.may-soi-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Giữ an toàn của người dùng",
+        "phân đều việc chăm người già và việc có thu nhập."
+      ],
+      "routine": {
+        "description": "Soát dây dưới mái che và chỉ Cháu phân biệt đồ được phép cầm; không tạo thêm hàng từ lời kể.",
+        "community_id": "community.con-may@1",
+        "skill_id": "weaving",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.may-soi-to-may-chau@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.may-soi-to-may-chau",
+      "from_actor_id": "actor.may-soi@1",
+      "to_actor_id": "actor.may-chau@1",
+      "trust": 79,
+      "description": "Kiên nhẫn dạy trẻ nhưng không muốn biến việc giúp nhà thành ca lao động."
+    },
+    {
+      "definition_id": "fact.may-chau-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.may-chau-claim",
+      "claim": "Cháu nhớ vị trí giỏ dây chưa kiểm trong nhà; không biết chất lượng toàn bộ hàng của hộ.",
+      "provenance": "Mây Cháu: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.may-chau@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.may-chau@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.may-chau",
+      "household_id": "household.may-dan@1",
+      "age": 12,
+      "alive": true,
+      "attributes": {
+        "the": 3,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 3
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 8,
+          "description": "Được Sợi chỉ cách tách dây nguyên khỏi dây sờn và cất riêng phần chưa kiểm."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 11,
+          "description": "Báo một đoạn dây có vết rách thay vì cố giấu vì sợ bị mắng."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "weaving",
+          "value": 18,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.may-chau-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có người lớn bảo vệ",
+        "học một việc mình có thể làm tốt mà không bị so với Rìu."
+      ],
+      "routine": {
+        "description": "Tập bện mẫu ngắn bên Sợi; không phụ trách dây chịu tải hoặc đi giao hàng.",
+        "community_id": "community.con-may@1",
+        "skill_id": "weaving",
+        "duration_ticks": 30,
+        "executable": false
+      },
+      "viability": {
+        "description": "Chưa thành niên, sinh hoạt cùng hộ; người chăm phải còn sống và không giao việc nguy hiểm.",
+        "caregiver_id": "actor.may-soi@1"
+      }
+    },
+    {
+      "definition_id": "relationship.may-chau-to-may-soi@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.may-chau-to-may-soi",
+      "from_actor_id": "actor.may-chau@1",
+      "to_actor_id": "actor.may-soi@1",
+      "trust": 88,
+      "description": "Tin Sợi sẽ nghe mình báo lỗi và nhờ cô nói giúp khi người lớn vội."
+    },
+    {
+      "definition_id": "fact.ben-sen-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.ben-sen-claim",
+      "claim": "Sen nhớ một người từng phản ứng khó chịu với cách chăm cũ; đó không là chẩn đoán cho người mới.",
+      "provenance": "Bến Sen: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.ben-sen@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.ben-sen@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.ben-sen",
+      "household_id": "household.ben-sen@1",
+      "age": 49,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 5,
+        "tri": 6,
+        "tam": 6,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 17,
+          "description": "Học chăm người ốm từ một người chữa trị qua bến; quen hỏi triệu chứng trước khi nhận giúp."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 47,
+          "description": "Không nhận chắc sẽ khỏi cho một người bị thương, giữ việc theo dõi dù gia đình họ sốt ruột."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "medicine",
+          "value": 70,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.ben-sen-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có chỗ chăm người sạch và yên",
+        "được người bệnh đồng thuận trước khi can thiệp."
+      ],
+      "routine": {
+        "description": "Hỏi người cần giúp và kiểm dụng cụ dự kiến; không tự chữa thương, cấp thuốc hay hồi phục trạng thái.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "medicine",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.ben-sen-to-ben-ha@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.ben-sen-to-ben-ha",
+      "from_actor_id": "actor.ben-sen@1",
+      "to_actor_id": "actor.ben-ha@1",
+      "trust": 66,
+      "description": "Tin Hà ghi nhớ diễn biến nhưng nhắc không kể chuyện người bệnh cho khách bến."
+    },
+    {
+      "definition_id": "fact.ben-ha-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.ben-ha-claim",
+      "claim": "Hà chỉ nhớ người mình từng hỗ trợ cần được hỏi lại trước mỗi lần chăm; không có quyền đọc tình trạng cả bến.",
+      "provenance": "Bến Hà: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.ben-ha@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.ben-ha@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.ben-ha",
+      "household_id": "household.ben-sen@1",
+      "age": 25,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 5,
+        "tri": 6,
+        "tam": 6,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 15,
+          "description": "Theo Sen học hỏi lại người bệnh và phân biệt điều tự thấy với lời người nhà kể."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 24,
+          "description": "Từ chối nhắc tên người được chăm trong một cuộc trao đổi hàng dù bị chê khó gần."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "medicine",
+          "value": 39,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.ben-ha-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Học nghề có người hướng dẫn",
+        "giữ kín chuyện riêng mà vẫn được cộng đồng tin."
+      ],
+      "routine": {
+        "description": "Chuẩn bị chỗ nghỉ và báo Sen điều quan sát; không đưa chẩn đoán hoặc kế hoạch chữa trị tự động.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "medicine",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.ben-ha-to-ben-sen@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.ben-ha-to-ben-sen",
+      "from_actor_id": "actor.ben-ha@1",
+      "to_actor_id": "actor.ben-sen@1",
+      "trust": 82,
+      "description": "Tôn trọng sự thận trọng của Sen nhưng mong được giải thích lý do mỗi lần bị dừng tay."
+    },
+    {
+      "definition_id": "fact.ben-kien-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.ben-kien-claim",
+      "claim": "Kiên nhớ đoạn cầu lên chỗ Sen trơn sau mưa; chưa có phép đo hay quyền tự đóng tuyến.",
+      "provenance": "Bến Kiên: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.ben-kien@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.ben-kien@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.ben-kien",
+      "household_id": "household.ben-sen@1",
+      "age": 37,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 6,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 16,
+          "description": "Làm việc chuyển hàng ở bến, học nhường lối và chia tải để không làm người mang quá sức."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 36,
+          "description": "Bớt nhận chuyến xa để đưa người cần giúp đến chỗ Sen, nhưng muốn gia đình biết khoản thu bị giảm."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "transport",
+          "value": 52,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.ben-kien-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Duy trì lương cho nhà",
+        "tránh bị mặc định luôn sẵn sàng vận chuyển miễn phí."
+      ],
+      "routine": {
+        "description": "Trao đổi nhu cầu đi lại rồi kiểm tải dự kiến; việc di chuyển cần lệnh và quyền dùng phương tiện riêng.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "transport",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.ben-kien-to-ben-ngo@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.ben-kien-to-ben-ngo",
+      "from_actor_id": "actor.ben-kien@1",
+      "to_actor_id": "actor.ben-ngo@1",
+      "trust": 57,
+      "description": "Muốn Ngô báo trước khi mượn đồ, đôi lúc nhầm tò mò của trẻ với cẩu thả."
+    },
+    {
+      "definition_id": "fact.ben-ngo-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.ben-ngo-claim",
+      "claim": "Ngô nhớ chỗ cất hạt của hộ; không biết công dụng chữa bệnh của cây nhìn thấy ngoài bến.",
+      "provenance": "Bến Ngô: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.ben-ngo@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.ben-ngo@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.ben-ngo",
+      "household_id": "household.ben-sen@1",
+      "age": 13,
+      "alive": true,
+      "attributes": {
+        "the": 3,
+        "xao": 4,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 3
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 9,
+          "description": "Được Kiên chỉ cách giữ chỗ gieo nhỏ và tưới vừa đủ để không úng."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 12,
+          "description": "Giúp che phần hạt cất trong nhà khi mưa, nhưng học rằng cây không thay được thuốc chữa mọi bệnh."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "farming",
+          "value": 16,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.ben-ngo-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Được học ngoài việc giúp nhà",
+        "có người lớn giải đáp thay vì đoán công dụng cây."
+      ],
+      "routine": {
+        "description": "Quan sát chỗ gieo cùng Kiên; không thu hái làm thuốc hoặc tự chăm người bệnh.",
+        "community_id": "community.ben-vac@1",
+        "skill_id": "farming",
+        "duration_ticks": 30,
+        "executable": false
+      },
+      "viability": {
+        "description": "Chưa thành niên, sinh hoạt cùng hộ; người chăm phải còn sống và không giao việc nguy hiểm.",
+        "caregiver_id": "actor.ben-kien@1"
+      }
+    },
+    {
+      "definition_id": "relationship.ben-ngo-to-ben-kien@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.ben-ngo-to-ben-kien",
+      "from_actor_id": "actor.ben-ngo@1",
+      "to_actor_id": "actor.ben-kien@1",
+      "trust": 73,
+      "description": "Muốn được cha tin nhưng cần cha nói rõ việc nào được thử một mình."
+    },
+    {
+      "definition_id": "fact.con-say-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.con-say-claim",
+      "claim": "Sậy quan sát bãi gần nhà ngập lâu hơn lần trước; chưa biết nguyên nhân ở thượng nguồn.",
+      "provenance": "Cồn Sậy: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.con-say@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.con-say@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.con-say",
+      "household_id": "household.con-say@1",
+      "age": 41,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 13,
+          "description": "Học chọn bãi gieo theo dấu nước rút, từng mất một vụ vì tin dấu năm trước."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 40,
+          "description": "Chấp nhận giảm diện tích dự kiến để còn thời gian chuẩn bị rời cồn khi nước cao."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "farming",
+          "value": 65,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.con-say-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có lương qua thời gian rời cồn",
+        "giữ đất khỏi bị coi là bỏ hoang khi gia đình tạm đi."
+      ],
+      "routine": {
+        "description": "Quan sát bãi và bàn lịch thu dọn; không tự trồng, thu hoạch hay xác lập quyền đất.",
+        "community_id": "community.con-may@1",
+        "skill_id": "farming",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.con-say-to-con-lan@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.con-say-to-con-lan",
+      "from_actor_id": "actor.con-say@1",
+      "to_actor_id": "actor.con-lan@1",
+      "trust": 71,
+      "description": "Tin Lan giữ nhà nhưng đôi khi hứa với người ngoài trước khi hỏi sức làm của vợ."
+    },
+    {
+      "definition_id": "fact.con-lan-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.con-lan-claim",
+      "claim": "Lan nhớ người mua từng hẹn rồi trễ; không kết luận mọi người cùng bến đều thiếu tin cậy.",
+      "provenance": "Cồn Lan: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.con-lan@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.con-lan@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.con-lan",
+      "household_id": "household.con-say@1",
+      "age": 38,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 12,
+          "description": "Học đan từ sậy khô, đổi sản phẩm lấy lương và tập nhận ra khách hay trả chậm."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 37,
+          "description": "Dừng nhận đơn mới để sửa đồ chứa khi chuẩn bị rời cồn, dù bỏ một cơ hội bán tốt."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "weaving",
+          "value": 66,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.con-lan-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Được quyết định số việc mình nhận",
+        "giữ đủ lương mà không đánh đổi toàn bộ giờ nghỉ."
+      ],
+      "routine": {
+        "description": "Đan đồ dự kiến và hỏi lịch đi của Sậy trước khi hứa giao; chưa tạo sản phẩm hay khoản nợ.",
+        "community_id": "community.con-may@1",
+        "skill_id": "weaving",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.con-lan-to-con-say@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.con-lan-to-con-say",
+      "from_actor_id": "actor.con-lan@1",
+      "to_actor_id": "actor.con-say@1",
+      "trust": 49,
+      "description": "Tin Sậy có trách nhiệm nhưng bực vì anh thường tự nhận giúp họ hàng."
+    },
+    {
+      "definition_id": "fact.con-ut-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.con-ut-claim",
+      "claim": "Út thấy một chỗ đặt cá gần nhà ít cá hơn; không biết có phải do người khác lấy hay nước đổi.",
+      "provenance": "Cồn Út: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.con-ut@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.con-ut@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.con-ut",
+      "household_id": "household.con-say@1",
+      "age": 18,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 6,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 11,
+          "description": "Theo người nhà đặt dụng cụ bắt cá gần bờ, học thu lại khi nước đổi."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 17,
+          "description": "Muốn đi xa cùng người Vạn Nước để học đường sông nhưng còn hứa giúp nhà dọn đồ mùa nước."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "fishing",
+          "value": 36,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.con-ut-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Tìm cơ hội học ngoài cồn",
+        "hoàn thành lời hứa với hộ trước khi nhận chuyến xa."
+      ],
+      "routine": {
+        "description": "Kiểm chỗ đặt dụng cụ gần bờ và báo nhà; không tự đánh cá, sinh tài nguyên hay rời cộng đồng.",
+        "community_id": "community.con-may@1",
+        "skill_id": "fishing",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.con-ut-to-nuoc-thoa@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.con-ut-to-nuoc-thoa",
+      "from_actor_id": "actor.con-ut@1",
+      "to_actor_id": "actor.nuoc-thoa@1",
+      "trust": 35,
+      "description": "Ngưỡng mộ kinh nghiệm đi xa của Thoa, dễ nghe lời kể hơn kiểm điều kiện chuyến đi."
+    },
+    {
+      "definition_id": "fact.con-ba-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.con-ba-claim",
+      "claim": "Bà nhớ từng thấy vật giống mảnh đồ cũ khi nước rút; không xác định tuổi hay người sở hữu.",
+      "provenance": "Cồn Bà: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.con-ba@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.con-ba@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.con-ba",
+      "household_id": "household.con-say@1",
+      "age": 68,
+      "alive": true,
+      "attributes": {
+        "the": 3,
+        "xao": 4,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 14,
+          "description": "Lớn lên với việc giữ hạt và đổi bãi theo mùa, ghi nhớ vụ thất bằng chuyện kể trong nhà."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 66,
+          "description": "Giảm đi ngoài bãi, bắt đầu nhờ Út nhắc lại điều nghe được để tránh truyền sai ký ức."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "farming",
+          "value": 58,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.con-ba-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Được nghe khi bàn rời cồn",
+        "có người giúp mang đồ mà không bị coi vô dụng."
+      ],
+      "routine": {
+        "description": "Chọn phần hạt dự kiến dưới mái nhà, kể kinh nghiệm như ký ức có thể sai; không khẳng định di tích là sự thật mới.",
+        "community_id": "community.con-may@1",
+        "skill_id": "farming",
+        "duration_ticks": 30,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Cần hỗ trợ mang vác và đi xa; nghề hiện tại chỉ làm tại chỗ.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.con-ba-to-con-ut@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.con-ba-to-con-ut",
+      "from_actor_id": "actor.con-ba@1",
+      "to_actor_id": "actor.con-ut@1",
+      "trust": 80,
+      "description": "Muốn Út được đi học nhưng nhắc giữ lời với gia đình trước chuyến đầu."
+    },
+    {
+      "definition_id": "fact.nuoc-thoa-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.nuoc-thoa-claim",
+      "claim": "Thoa nghe một khách nói Bến Hạc đang đông; đây là lời kể chưa được kiểm tại chỗ.",
+      "provenance": "Nước Thoa: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.nuoc-thoa@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.nuoc-thoa@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.nuoc-thoa",
+      "household_id": "household.nuoc-thoa@1",
+      "age": 33,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 5,
+        "tri": 6,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 14,
+          "description": "Theo người thân đổi hàng trên các thuyền, học hỏi nguồn tin trước khi nhận lời giao."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 32,
+          "description": "Từ chối hứa giao qua Bến Hạc khi chưa biết bến nhận, chấp nhận mất một khách nóng vội."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "trading",
+          "value": 64,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.nuoc-thoa-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Giữ uy tín giao hàng",
+        "tách tin nghe từ khách khỏi cam kết có thể thực hiện."
+      ],
+      "routine": {
+        "description": "Đối chiếu lời hẹn và hỏi tuyến dự kiến với Nghiêm; không tự ký hợp đồng hoặc biết thị trường từ xa.",
+        "community_id": "community.van-nuoc@1",
+        "skill_id": "trading",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.nuoc-thoa-to-nuoc-nghiem@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.nuoc-thoa-to-nuoc-nghiem",
+      "from_actor_id": "actor.nuoc-thoa@1",
+      "to_actor_id": "actor.nuoc-nghiem@1",
+      "trust": 60,
+      "description": "Tin Nghiêm giữ hàng nhưng muốn anh nói sớm khi thấy chuyến không khả thi."
+    },
+    {
+      "definition_id": "fact.nuoc-nghiem-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.nuoc-nghiem-claim",
+      "claim": "Nghiêm nhớ chiều đi từng lâu hơn chiều về ở một đoạn; thời lượng fixture không được coi là phép đo lịch sử.",
+      "provenance": "Nước Nghiêm: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.nuoc-nghiem@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.nuoc-nghiem@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.nuoc-nghiem",
+      "household_id": "household.nuoc-thoa@1",
+      "age": 36,
+      "alive": true,
+      "attributes": {
+        "the": 5,
+        "xao": 4,
+        "giac": 6,
+        "tri": 4,
+        "tam": 5,
+        "khi": 5
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 15,
+          "description": "Học chèo và phân tải trên thuyền gia đình, từng phải quay lại vì nước trái."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 35,
+          "description": "Đề nghị bỏ chuyến lãi tốt lúc thiếu người, nhận lời chê nhát để tránh hứa vượt sức."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "transport",
+          "value": 60,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.nuoc-nghiem-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có quyền từ chối chuyến thiếu điều kiện",
+        "chia thời gian chăm con với Thoa."
+      ],
+      "routine": {
+        "description": "Kiểm nhu cầu tải và hỏi người đi cùng; không khởi hành hay sinh quyền tiếp cận tuyến.",
+        "community_id": "community.van-nuoc@1",
+        "skill_id": "transport",
+        "duration_ticks": 120,
+        "executable": false
+      },
+      "viability": {
+        "description": "Nguồn ăn dự kiến từ phần lương hữu hạn của hộ; quyền phân phối vẫn thuộc người được khai báo. Có kỹ năng nền nhưng hành động cần điều kiện, dụng cụ, quyền và handler chưa thuộc profile.",
+        "caregiver_id": null
+      }
+    },
+    {
+      "definition_id": "relationship.nuoc-nghiem-to-nuoc-thoa@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.nuoc-nghiem-to-nuoc-thoa",
+      "from_actor_id": "actor.nuoc-nghiem@1",
+      "to_actor_id": "actor.nuoc-thoa@1",
+      "trust": 69,
+      "description": "Tin cách Thoa thương lượng nhưng cần cô nghe giới hạn vận chuyển trước khi hứa."
+    },
+    {
+      "definition_id": "fact.nuoc-nho-claim@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "fact",
+      "source": "prototype-authored: Sprint11 perceived claim; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Knowledge",
+      "display_key": "slice.fact.nuoc-nho-claim",
+      "claim": "Nhỏ chỉ nhớ mẹ dặn hỏi lại khi không nghe rõ, không biết nội dung các thỏa thuận giao hàng.",
+      "provenance": "Nước Nhỏ: ký ức/nhận định tại life history recent; chỉ được khai báo cho actor.nuoc-nho@1, chưa xác lập World Truth."
+    },
+    {
+      "definition_id": "actor.nuoc-nho@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "actor",
+      "source": "prototype-authored: Sprint11 life episodes/skills/claims/needs/routine/attributes; M28 §25; M04 §V–VII; M05 §V,XIV; M06 §15–16",
+      "classification": "game-canon",
+      "owner_domain": "Characters",
+      "display_key": "slice.actor.nuoc-nho",
+      "household_id": "household.nuoc-thoa@1",
+      "age": 8,
+      "alive": true,
+      "attributes": {
+        "the": 3,
+        "xao": 6,
+        "giac": 5,
+        "tri": 4,
+        "tam": 5,
+        "khi": 3
+      },
+      "history": [
+        {
+          "history_id": "learning",
+          "at_age": 6,
+          "description": "Được Thoa dạy buộc đồ cá nhân và gọi người lớn khi thấy vật rơi xuống nước."
+        },
+        {
+          "history_id": "recent",
+          "at_age": 7,
+          "description": "Báo một lời nhắn mình nghe không rõ thay vì tự thêm chi tiết để làm vui người lớn."
+        }
+      ],
+      "skills": [
+        {
+          "skill_id": "weaving",
+          "value": 9,
+          "history_id": "learning"
+        }
+      ],
+      "known_facts": [
+        {
+          "fact_id": "fact.nuoc-nho-claim@1",
+          "history_id": "recent"
+        }
+      ],
+      "needs": [
+        "Có người chăm nom gần bên",
+        "được học và chơi ở chỗ an toàn trên thuyền."
+      ],
+      "routine": {
+        "description": "Tập buộc dải vải cạnh Thoa; không nhận việc đưa tin hoặc giữ hàng thay người lớn.",
+        "community_id": "community.van-nuoc@1",
+        "skill_id": "weaving",
+        "duration_ticks": 30,
+        "executable": false
+      },
+      "viability": {
+        "description": "Chưa thành niên, sinh hoạt cùng hộ; người chăm phải còn sống và không giao việc nguy hiểm.",
+        "caregiver_id": "actor.nuoc-thoa@1"
+      }
+    },
+    {
+      "definition_id": "relationship.nuoc-nho-to-nuoc-thoa@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "relationship",
+      "source": "prototype-authored: Sprint11 directed perceived tie; M04 §V–VII",
+      "classification": "game-canon",
+      "owner_domain": "Social",
+      "display_key": "slice.relationship.nuoc-nho-to-nuoc-thoa",
+      "from_actor_id": "actor.nuoc-nho@1",
+      "to_actor_id": "actor.nuoc-thoa@1",
+      "trust": 94,
+      "description": "Tin mẹ sẽ giải thích lời khó hiểu và cần được trấn an khi thuyền đổi chỗ nghỉ."
+    },
+    {
+      "definition_id": "route.vac-hac@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "route",
+      "source": "prototype-authored: Sprint11 directed costs/capacities/seasons; M28 §5; M03 TG-02/TG-03; ADR020 boundary identity",
+      "classification": "game-canon",
+      "owner_domain": "Travel",
+      "display_key": "slice.route.vac-hac",
+      "from_community_id": "community.ben-vac@1",
+      "to_community_id": "community.ben-hac@1",
+      "mode": "water",
+      "duration_ticks": 240,
+      "capacity": 16,
+      "open_seasons": [
+        "dry",
+        "wet"
+      ]
+    },
+    {
+      "definition_id": "route.hac-vac@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "route",
+      "source": "prototype-authored: Sprint11 directed costs/capacities/seasons; M28 §5; M03 TG-02/TG-03; ADR020 boundary identity",
+      "classification": "game-canon",
+      "owner_domain": "Travel",
+      "display_key": "slice.route.hac-vac",
+      "from_community_id": "community.ben-hac@1",
+      "to_community_id": "community.ben-vac@1",
+      "mode": "water",
+      "duration_ticks": 300,
+      "capacity": 12,
+      "open_seasons": [
+        "dry",
+        "wet"
+      ]
+    },
+    {
+      "definition_id": "route.vac-may@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "route",
+      "source": "prototype-authored: Sprint11 directed costs/capacities/seasons; M28 §5; M03 TG-02/TG-03; ADR020 boundary identity",
+      "classification": "game-canon",
+      "owner_domain": "Travel",
+      "display_key": "slice.route.vac-may",
+      "from_community_id": "community.ben-vac@1",
+      "to_community_id": "community.con-may@1",
+      "mode": "land",
+      "duration_ticks": 90,
+      "capacity": 4,
+      "open_seasons": [
+        "dry"
+      ]
+    },
+    {
+      "definition_id": "route.may-vac@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "route",
+      "source": "prototype-authored: Sprint11 directed costs/capacities/seasons; M28 §5; M03 TG-02/TG-03; ADR020 boundary identity",
+      "classification": "game-canon",
+      "owner_domain": "Travel",
+      "display_key": "slice.route.may-vac",
+      "from_community_id": "community.con-may@1",
+      "to_community_id": "community.ben-vac@1",
+      "mode": "land",
+      "duration_ticks": 110,
+      "capacity": 3,
+      "open_seasons": [
+        "dry"
+      ]
+    },
+    {
+      "definition_id": "route.vac-nuoc@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "route",
+      "source": "prototype-authored: Sprint11 directed costs/capacities/seasons; M28 §5; M03 TG-02/TG-03; ADR020 boundary identity",
+      "classification": "game-canon",
+      "owner_domain": "Travel",
+      "display_key": "slice.route.vac-nuoc",
+      "from_community_id": "community.ben-vac@1",
+      "to_community_id": "community.van-nuoc@1",
+      "mode": "water",
+      "duration_ticks": 80,
+      "capacity": 10,
+      "open_seasons": [
+        "dry",
+        "wet"
+      ]
+    },
+    {
+      "definition_id": "route.nuoc-vac@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "route",
+      "source": "prototype-authored: Sprint11 directed costs/capacities/seasons; M28 §5; M03 TG-02/TG-03; ADR020 boundary identity",
+      "classification": "game-canon",
+      "owner_domain": "Travel",
+      "display_key": "slice.route.nuoc-vac",
+      "from_community_id": "community.van-nuoc@1",
+      "to_community_id": "community.ben-vac@1",
+      "mode": "water",
+      "duration_ticks": 100,
+      "capacity": 8,
+      "open_seasons": [
+        "dry",
+        "wet"
+      ]
+    },
+    {
+      "definition_id": "route.may-nuoc@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "route",
+      "source": "prototype-authored: Sprint11 directed costs/capacities/seasons; M28 §5; M03 TG-02/TG-03; ADR020 boundary identity",
+      "classification": "game-canon",
+      "owner_domain": "Travel",
+      "display_key": "slice.route.may-nuoc",
+      "from_community_id": "community.con-may@1",
+      "to_community_id": "community.van-nuoc@1",
+      "mode": "water",
+      "duration_ticks": 65,
+      "capacity": 6,
+      "open_seasons": [
+        "wet"
+      ]
+    },
+    {
+      "definition_id": "route.nuoc-may@1",
+      "version": 1,
+      "schema_version": 1,
+      "kind": "route",
+      "source": "prototype-authored: Sprint11 directed costs/capacities/seasons; M28 §5; M03 TG-02/TG-03; ADR020 boundary identity",
+      "classification": "game-canon",
+      "owner_domain": "Travel",
+      "display_key": "slice.route.nuoc-may",
+      "from_community_id": "community.van-nuoc@1",
+      "to_community_id": "community.con-may@1",
+      "mode": "water",
+      "duration_ticks": 95,
+      "capacity": 5,
+      "open_seasons": [
+        "wet"
+      ]
+    }
+  ],
+  "localization": {
+    "slice.community.ben-vac": "Bến Vạc",
+    "slice.community.con-may": "Cồn Mây",
+    "slice.community.van-nuoc": "Vạn Nước",
+    "slice.community.ben-hac": "Bến Hạc",
+    "slice.household.vac-tong": "Nhà Vạc Tòng",
+    "slice.household.trieu": "Nhà Triều",
+    "slice.household.may-dan": "Nhà Mây Đan",
+    "slice.household.ben-sen": "Nhà Bến Sen",
+    "slice.household.con-say": "Nhà Cồn Sậy",
+    "slice.household.nuoc-thoa": "Nhà Nước Thoa",
+    "slice.fact.vac-tong-claim": "Nhận biết riêng của Vạc Tòng",
+    "slice.actor.vac-tong": "Vạc Tòng",
+    "slice.relationship.vac-tong-to-vac-moc": "Vạc Tòng → Vạc Mộc",
+    "slice.fact.vac-moc-claim": "Nhận biết riêng của Vạc Mộc",
+    "slice.actor.vac-moc": "Vạc Mộc",
+    "slice.relationship.vac-moc-to-vac-lam": "Vạc Mộc → Vạc Lâm",
+    "slice.fact.vac-mai-claim": "Nhận biết riêng của Vạc Mai",
+    "slice.actor.vac-mai": "Vạc Mai",
+    "slice.relationship.vac-mai-to-vac-nhu": "Vạc Mai → Bà Nhu",
+    "slice.fact.vac-lam-claim": "Nhận biết riêng của Vạc Lâm",
+    "slice.actor.vac-lam": "Vạc Lâm",
+    "slice.relationship.vac-lam-to-vac-tong": "Vạc Lâm → Vạc Tòng",
+    "slice.fact.vac-nhu-claim": "Nhận biết riêng của Bà Nhu",
+    "slice.actor.vac-nhu": "Bà Nhu",
+    "slice.relationship.vac-nhu-to-vac-mai": "Bà Nhu → Vạc Mai",
+    "slice.fact.trieu-khe-claim": "Nhận biết riêng của Triều Khê",
+    "slice.actor.trieu-khe": "Triều Khê",
+    "slice.relationship.trieu-khe-to-trieu-luc": "Triều Khê → Triều Lục",
+    "slice.fact.trieu-luc-claim": "Nhận biết riêng của Triều Lục",
+    "slice.actor.trieu-luc": "Triều Lục",
+    "slice.relationship.trieu-luc-to-trieu-hien": "Triều Lục → Triều Hiên",
+    "slice.fact.trieu-hien-claim": "Nhận biết riêng của Triều Hiên",
+    "slice.actor.trieu-hien": "Triều Hiên",
+    "slice.relationship.trieu-hien-to-trieu-khe": "Triều Hiên → Triều Khê",
+    "slice.fact.trieu-be-claim": "Nhận biết riêng của Triều Bé",
+    "slice.actor.trieu-be": "Triều Bé",
+    "slice.relationship.trieu-be-to-trieu-hien": "Triều Bé → Triều Hiên",
+    "slice.fact.may-dan-claim": "Nhận biết riêng của Mây Đan",
+    "slice.actor.may-dan": "Mây Đan",
+    "slice.relationship.may-dan-to-may-riu": "Mây Đan → Mây Rìu",
+    "slice.fact.may-riu-claim": "Nhận biết riêng của Mây Rìu",
+    "slice.actor.may-riu": "Mây Rìu",
+    "slice.relationship.may-riu-to-may-dan": "Mây Rìu → Mây Đan",
+    "slice.fact.may-soi-claim": "Nhận biết riêng của Mây Sợi",
+    "slice.actor.may-soi": "Mây Sợi",
+    "slice.relationship.may-soi-to-may-chau": "Mây Sợi → Mây Cháu",
+    "slice.fact.may-chau-claim": "Nhận biết riêng của Mây Cháu",
+    "slice.actor.may-chau": "Mây Cháu",
+    "slice.relationship.may-chau-to-may-soi": "Mây Cháu → Mây Sợi",
+    "slice.fact.ben-sen-claim": "Nhận biết riêng của Bến Sen",
+    "slice.actor.ben-sen": "Bến Sen",
+    "slice.relationship.ben-sen-to-ben-ha": "Bến Sen → Bến Hà",
+    "slice.fact.ben-ha-claim": "Nhận biết riêng của Bến Hà",
+    "slice.actor.ben-ha": "Bến Hà",
+    "slice.relationship.ben-ha-to-ben-sen": "Bến Hà → Bến Sen",
+    "slice.fact.ben-kien-claim": "Nhận biết riêng của Bến Kiên",
+    "slice.actor.ben-kien": "Bến Kiên",
+    "slice.relationship.ben-kien-to-ben-ngo": "Bến Kiên → Bến Ngô",
+    "slice.fact.ben-ngo-claim": "Nhận biết riêng của Bến Ngô",
+    "slice.actor.ben-ngo": "Bến Ngô",
+    "slice.relationship.ben-ngo-to-ben-kien": "Bến Ngô → Bến Kiên",
+    "slice.fact.con-say-claim": "Nhận biết riêng của Cồn Sậy",
+    "slice.actor.con-say": "Cồn Sậy",
+    "slice.relationship.con-say-to-con-lan": "Cồn Sậy → Cồn Lan",
+    "slice.fact.con-lan-claim": "Nhận biết riêng của Cồn Lan",
+    "slice.actor.con-lan": "Cồn Lan",
+    "slice.relationship.con-lan-to-con-say": "Cồn Lan → Cồn Sậy",
+    "slice.fact.con-ut-claim": "Nhận biết riêng của Cồn Út",
+    "slice.actor.con-ut": "Cồn Út",
+    "slice.relationship.con-ut-to-nuoc-thoa": "Cồn Út → Nước Thoa",
+    "slice.fact.con-ba-claim": "Nhận biết riêng của Cồn Bà",
+    "slice.actor.con-ba": "Cồn Bà",
+    "slice.relationship.con-ba-to-con-ut": "Cồn Bà → Cồn Út",
+    "slice.fact.nuoc-thoa-claim": "Nhận biết riêng của Nước Thoa",
+    "slice.actor.nuoc-thoa": "Nước Thoa",
+    "slice.relationship.nuoc-thoa-to-nuoc-nghiem": "Nước Thoa → Nước Nghiêm",
+    "slice.fact.nuoc-nghiem-claim": "Nhận biết riêng của Nước Nghiêm",
+    "slice.actor.nuoc-nghiem": "Nước Nghiêm",
+    "slice.relationship.nuoc-nghiem-to-nuoc-thoa": "Nước Nghiêm → Nước Thoa",
+    "slice.fact.nuoc-nho-claim": "Nhận biết riêng của Nước Nhỏ",
+    "slice.actor.nuoc-nho": "Nước Nhỏ",
+    "slice.relationship.nuoc-nho-to-nuoc-thoa": "Nước Nhỏ → Nước Thoa",
+    "slice.route.vac-hac": "ben-vac → ben-hac",
+    "slice.route.hac-vac": "ben-hac → ben-vac",
+    "slice.route.vac-may": "ben-vac → con-may",
+    "slice.route.may-vac": "con-may → ben-vac",
+    "slice.route.vac-nuoc": "ben-vac → van-nuoc",
+    "slice.route.nuoc-vac": "van-nuoc → ben-vac",
+    "slice.route.may-nuoc": "con-may → van-nuoc",
+    "slice.route.nuoc-may": "van-nuoc → con-may"
+  }
+}

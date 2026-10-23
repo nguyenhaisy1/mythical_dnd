@@ -15,5 +15,6 @@
     <ProjectReference Include="../../engine/Infrastructure/Game.Infrastructure.csproj" />
   <None Include="../../content/fixtures/kernel-smoke/scenario.json" Link="scenario.json" CopyToOutputDirectory="PreserveNewest" />
   <None Include="../../content/fixtures/kernel-smoke/vectors.json" Link="vectors.json" CopyToOutputDirectory="PreserveNewest" />
+  <None Include="../../content/definitions/vertical-slice/pack.json" Link="settlement-pack.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

@@ -6,6 +6,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+- Sprint11 VS02A:24nhân vật/6hộ/8tuyến có hướng, claims và quan hệ authoring với compiler strict/immutable registry. Không khởi tạo world, không chạy routine/event hoặc sinh protagonist; fullVS02 vẫnpartial.
+
 - Sprint10: VS01 kernel và FND16 Unity6000.6.7f1/LinuxEditor Mono conformance đạt. Sửa staging/import và API enum alias; 5shared checks khớp host. Player/IL2CPP và playable game chưa nghiệmthu; không phát hành.
 
 ### Sprint9 — truy nguyên và tái hiện lỗi

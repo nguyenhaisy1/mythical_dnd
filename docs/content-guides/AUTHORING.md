@@ -31,3 +31,9 @@ Schema hợp lệ; IDs/references duy nhất và tồn tại; owner domain đún
 ## Profile runtime Sprint 8
 
 [Content Pipeline](../runbooks/CONTENT-PIPELINE.md) và [ADR-017](../adr/017-runtime-content-registry.md) xác định compiler/registry hiện có cho commodity và transfer-template. Schema `content/schemas/kernel-content-v1.schema.json`; fixture `content/fixtures/content-kernel/pack.json` là prototype-authored/game-canon chạy được. Compile tạo registry trong bộ nhớ, chưa ghi binary vào content/compiled. Các loại NPC/household/routes/recipes/event AST chưa có runtime contracts đầy đủ nên bị từ chối rõ; full production roster vẫn thuộc VS-02. Reference fixture không tự trở thành runtime pack.
+
+## Profile Sprint11 — VS02A
+
+[ADR020](../adr/020-settlement-content-profile.md) và [Settlement Content](../runbooks/SETTLEMENT-CONTENT.md) bổ sung profile riêng settlement-content-v1 cho communities/households/actors/claims/relationships/routes. Kernel-content-v1 vẫn từ chối các kinds này; không nới compiler cũ. Pack24actors/6households/8routes nằm content/definitions/vertical-slice; compile thành registry readonly, chưa WorldState.
+
+Routine là mô tả nonexecutable; lot/rights là Assets seeddata, household obligations descriptive, capacity prototype_load_unit chưa transportsemantics. FullVS02 phải bổ sung8–12events/causaleligibility và actor-specificobligations; TEST001randomprotagonist chưa triển khai. Không tự dùng registryomniscient làm playerprojection hoặc NPCperception.

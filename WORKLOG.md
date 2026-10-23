@@ -959,3 +959,65 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - /root/s10_actual_review independent source+artifactreview đạt: recomputeparity/source/import13hashes/Editorhash và full338test evidence. Chấp nhận scopedFND16/VS01, khôngPlayer/IL2CPP hoặc playablegame.
 - Finalheadless tests/results/sprint10-nbc5jibw/evidence.json338/338,0skip,exit0; regression crash/replay/content/diagnostics/demos và negativecontrols đạt. Source manifest giữfresh.
 - ADR019/exactEditorprofile/OPEN04 resolved; OPEN03 chỉEditorproviderverified cònPlayerpackaging/Unitycrash-recovery-migration. Docs/generatednotes/source-preservation đồngbộ; exportsđangregenerate. Khôngsprint11/main/tag/release.
+
+
+### EVT-00071 | SPIN-013 | GIT — Push actual Unity fixes; PR10 ready, chờ CI
+
+<!-- worklog: {"id": "EVT-00071", "spin": "SPIN-013", "event": "GIT", "at": "2026-10-23T08:52:53+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-23T08:52:53+07:00
+- Actor: /root
+
+- Commit78b25a61199f39058b728ac65f733def755c2321 push origin/feature/sprint-10-unity-conformance, remoteSHAverified. PR10 updated title/body và readyforreview; independent source/artifact/docsreview đạt trướcpush.
+- CIpush39886444992/PR39886449186 đangchạy đúngheadSHA. ChờCItrướcmerge dev; khôngmain/tag/release.
+- Export177inputs/14files/6156anchors/123tables/navigation đạt; docs36generated/handoff543links/reference/architecture đạt; actualUnity và338headless evidence đãghi EVT00070. WORKLOGpostcommit local đưa commitkếtiếp.
+
+
+### EVT-00072 | SPIN-013 | CLOSE — Đóng Sprint10 — finished scoped VS01/FND16; PR10 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00072", "spin": "SPIN-013", "event": "CLOSE", "at": "2026-10-23T08:55:18+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-23T08:55:18+07:00
+- Actor: /root
+
+- Sprint10/SPIN013 finished trong scoped VS01 kernel + FND16 Unity6000.6.7f1/Linuxx64 EditorMono. Năm shared semantic checks khớp host; user không cần cấp thêm quyền Unity cho profile đã chạy.
+- /root probe/tooling/importfix/docs/tests/Git; /root/s10_final_review preparationreview; /root/s10_actual_review independent final source/artifact/docsreview đạt, recomputeparity/source/import13hashes/Editorhash. Không gọi selfreview độc lập.
+- Headless338/338,0skip exit0 tests/results/sprint10-nbc5jibw/evidence.json; actual5checks tests/results/unity-hmn0_eqs/evidence.json exit0; docs36generated/handoff543links/reference/architecture; exports177inputs/14files/6156anchors/123tables/navigation đạt. KhôngZIP.
+- Head78b25a61199f39058b728ac65f733def755c2321 remoteverified. CIpush39886444992/PR39886449186 success. PR10 https://github.com/nguyenhaisy1/mythical_dnd/pull/10 squashmerged deve7e660bee70ac7c14788d22900245959a397ccad; HEAD/origin/dev tree khớp.
+- DevCI39886581787 completed/success đúngmergeSHA. Main giữ1e45977c0791154bb778230c06801782e0052aeb. Khôngtag/release hoặc sprintmới.
+- OPEN04 khóaEditorprofile; OPEN03 cònPlayerpackaging/Unitycrash-recovery-migration. ChưaPlayer/IL2CPP, playableclient/fullgameplay/performance/humanplaytest. Bước sau khiusergiao: VS02 living settlement content theo contract; không tự mởSprint11.
+- WORKLOG EVT00071/00072 postcommit local đưa commitkếtiếp. Docs brief ghi actualgateđạt/hoàntấtreview-Git trướcđóng; event này xác nhận closure sauCI, khôngcommitvôhạn để tựchứahash.
+
+
+### EVT-00073 | SPIN-014 | OPEN — Mở Sprint11 — VS02A settlement content và compiler
+
+<!-- worklog: {"id": "EVT-00073", "spin": "SPIN-014", "event": "OPEN", "at": "2026-10-23T09:11:03+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-23T09:11:03+07:00
+- Actor: /root
+
+- User giao sprint tiếp theo theo standing workflow. Sprint11/SPIN014 scopeVS02A settlement-content-v1: typed authoring/portable compiler/immutable registry/stricthost/QA cho roster-households-facts-directedrelations-routes; fullVS02eventtemplates còn gate riêng.
+- Branch feature/sprint-11-settlement-content từ origin/dev e7e660bee70ac7c14788d22900245959a397ccad; giữ WORKLOGpostcommitSprint10.
+- /root ADR020/planning/tests/integration/docs/Git; giao content và compiler agents ownership riêng; review độc lập sauimplementation. Chưaclaimpass/VS02complete, khôngsprint12/main/tag/release.
+
+
+### EVT-00074 | SPIN-014 | PROGRESS — Root tiếp quản sau agents quota; roster compile và31focusedtests đạt
+
+<!-- worklog: {"id": "EVT-00074", "spin": "SPIN-014", "event": "PROGRESS", "at": "2026-10-23T13:10:12+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-23T13:10:12+07:00
+- Actor: /root
+
+- /root/s11_content đã viết pack24actors/6households/4communities/8routes/24facts/24relationships trướcquota; /root/s11_compiler đã viết initial SettlementCompiler trướcquota; /root/s11_review chỉ contractreview trướcquota, chưa source/evidencereview cuối.
+- /root tiếpquản toàn bộ: sửa ownerdomains theoOWNERSHIP, quyềnAssetsseeddata, rightscoverage/duplicates, alivechildcaregiver, canonical localization hash, namespacecollision; implement hoststrictJSON/CLI/schema,31C#tests và processchecker. Rootselfreview khôngindependentreview.
+- Focused31/31tests0skip đạt; fullregression chưa chạy. Actualcompile packhash60ce05463edcc1c2e4abbeae8f30159d430f57613b902ec6d48bb775db193ec8. Khác biệtpersonas/canon tự đốichiếu M03TG01–03,M04F01,M05TriềuKhê/Lục; mới ghi prototypeauthored/gamecanon.
+- FullVS02partial (eventtemplates/eligibility/randomprotagonist/gameplay chưa có). Independentfinalreview pending doagentsquota; khôngmerge nếu chưa có review, cóthểpushdraftPR sauchecks.
+
+
+### EVT-00075 | SPIN-014 | RESULT — Final371tests và settlement processgate đạt; review độc lập đạt
+
+<!-- worklog: {"id": "EVT-00075", "spin": "SPIN-014", "event": "RESULT", "at": "2026-10-23T13:19:20+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-23T13:19:20+07:00
+- Actor: /root
+
+- FinalReleasegate tests/results/sprint11-r4h28ruo/evidence.json exit0:371/371tests,0skip,33VS02A+338regression. Sourcefingerprint979b4e16dd0ed3ac98641048617457e1f0e76f40f7ba849d8847ad2594f8ab7d verifiedfresh. Lượt1b66z3iz freshnessrejected do2integrationedits; khôngdùngacceptance.
+- Settlement21processes/17negativecases +independentPythonmdc1 hashreference đạt; readonly/determinism/canon/membership/provenance/rights/children/directedroutes tests đạt. Existingreplay/content/diagnostics/demos/9SIGKILLregression đạt. LocalDraft202012jsonschema validated; khôngclaimCIjsonschema.
+- /root/s11_review độc lậpsource/content/schema/docsreview đạt sauquota; phát hiệnnewlineID/tokenbug, rootfixC#\z/schemaendguard/2newtests; reviewer33/33rerun vàhost/schema negativesconfirm. Rootselfreviewkhôngindependent.
+- Pack24actors/6households/4communities/8routes/24claims/24relationships. Root completed host/schema/tests/docs after2agentsquota; contentagent authoredinitialpack, compileragentinitialportablecompiler.
+- Docs36generated/handoff557+links/reference/architecture đạt; exportsđangregenerate. ScopeVS02Aauthoringregistry; fullVS02stillpartial,eventeligibility/protagonist/worldinit/executableNPC/Unityprofile mới chưa có. Khôngsprint12/main/tag/release.

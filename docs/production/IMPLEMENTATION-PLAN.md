@@ -44,3 +44,7 @@ Build và tests của phạm vi pass; không phá replay/contract; mọi mutatio
 Specs và trạng thái sau bổ sung: [Documentation Completion](DOCUMENTATION-COMPLETION-2026-10-14.md). Provider/editor/framework còn có gate thực nghiệm; không xem chúng là thiếu module GDD mới.
 
 Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai trò chuyên môn trong tài liệu được AI đảm nhiệm; trạng thái và scope các sprint nằm trong sprint brief được liên kết tại đó.
+
+## Sprint11 — VS02A: dữ liệu dân cư và mạng đường
+
+[Compiler và cách dùng](../runbooks/SETTLEMENT-CONTENT.md) kiểm24actors/6households/4communities/8routes/24claims/24directedrelationships, tạo immutable authoring registry. VS02 full vẫnpartial: chưa8–12eventtemplates/eligibility, actor-specificobligations, randomprotagonist, routine execution hoặc gameplay. Không coi đủrecordcount là worldsimulation.
