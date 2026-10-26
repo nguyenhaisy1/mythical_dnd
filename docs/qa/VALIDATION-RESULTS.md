@@ -76,3 +76,7 @@ Export checker đã xác minh 14 HTML/DOCX outputs, 30 module/appendix titles, 6
 ## Sprint11 — settlement authoring
 
 [Xem evidence Sprint11](SPRINT-11-EVIDENCE.md) cho compiler/runtime checks của VS02A; không thay TEST001randomprotagonist, TEST004playerknowledge hoặc fullVS02eventeligibility.
+
+## Sprint12 — event eligibility
+
+[Xem evidence Sprint12](SPRINT-12-EVIDENCE.md) cho compiler/evaluator và process fixtures. Không thay player knowledge isolation end-to-end, NPC no-player consequences hoặc fullVS02 acceptance.

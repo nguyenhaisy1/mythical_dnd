@@ -88,3 +88,7 @@ User giao Sprint10/SPIN-013: VS01 review và FND16 conformance preparation. Xem 
 ## Sprint11 — 2026-10-23
 
 User giao sprint tiếp theo/SPIN014. Scope VS02A settlement-content-v1 theo ADR020 và docs/production/sprints/SPRINT-11.md:24actors/6households/3local+externalBếnHạc/8routes, immutable authoring registry và strict compiler. Không WorldState/routine execution/randomprotagonist hoặc fullVS02eventeligibility. Không tự mởSprint12/release; fullVS02 cònpartial.
+
+## Sprint12 — 2026-10-26
+
+User giao sprint tiếp theo và yêu cầu mốc hình ảnh/demo. Sprint12/SPIN-015: VS02B event-eligibility-v1 theo ADR021 và docs/production/sprints/SPRINT-12.md. Tám template và evaluator trên trusted observations; không event effects hoặc fullVS02. Forecast mới tại docs/production/PLAYABLE-ROADMAP.md: Sprint13 định hướng hình ảnh, Sprint15–16 demo nhỏ, phụ thuộc gates; không tự mởSprint13/main/tag/release.

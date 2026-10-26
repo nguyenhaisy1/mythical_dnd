@@ -1,0 +1,473 @@
+{
+  "profile": "event-eligibility-fixtures-v1",
+  "scenarios": [
+    {
+      "scenario_id": "transport-deadline-eligible",
+      "template_id": "event.transport-deadline@1",
+      "expected_eligible": true,
+      "reason": "Chỉ đủ điều kiện tạo candidate; không thực thi hành động hay ghi world state.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "deadline_remaining_ticks": 30
+        },
+        "perceived": {
+          "transport_request": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "transport-deadline-ineligible",
+      "template_id": "event.transport-deadline@1",
+      "expected_eligible": false,
+      "reason": "Một prerequisite cụ thể không đạt; không sinh candidate.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "deadline_remaining_ticks": 61
+        },
+        "perceived": {
+          "transport_request": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "boat-degradation-eligible",
+      "template_id": "event.boat-degradation@1",
+      "expected_eligible": true,
+      "reason": "Chỉ đủ điều kiện tạo candidate; không thực thi hành động hay ghi world state.",
+      "context": {
+        "actor_id": "actor.vac-moc@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "boat_condition": 350
+        },
+        "perceived": {
+          "repair_need": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "boat-degradation-ineligible",
+      "template_id": "event.boat-degradation@1",
+      "expected_eligible": false,
+      "reason": "Một prerequisite cụ thể không đạt; không sinh candidate.",
+      "context": {
+        "actor_id": "actor.vac-moc@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "boat_condition": 401
+        },
+        "perceived": {
+          "repair_need": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "rain-interruption-eligible",
+      "template_id": "event.rain-interruption@1",
+      "expected_eligible": true,
+      "reason": "Chỉ đủ điều kiện tạo candidate; không thực thi hành động hay ghi world state.",
+      "context": {
+        "actor_id": "actor.nuoc-nghiem@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "rain_intensity": 750
+        },
+        "perceived": {
+          "transport_request": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "rain-interruption-ineligible",
+      "template_id": "event.rain-interruption@1",
+      "expected_eligible": false,
+      "reason": "Một prerequisite cụ thể không đạt; không sinh candidate.",
+      "context": {
+        "actor_id": "actor.nuoc-nghiem@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "rain_intensity": 699
+        },
+        "perceived": {
+          "transport_request": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "food-shortage-eligible",
+      "template_id": "event.food-shortage@1",
+      "expected_eligible": true,
+      "reason": "Chỉ đủ điều kiện tạo candidate; không thực thi hành động hay ghi world state.",
+      "context": {
+        "actor_id": "actor.vac-mai@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {},
+        "perceived": {
+          "food_shortage": true
+        },
+        "known_fact_ids": [],
+        "resources": {
+          "grain": 2
+        }
+      }
+    },
+    {
+      "scenario_id": "food-shortage-ineligible",
+      "template_id": "event.food-shortage@1",
+      "expected_eligible": false,
+      "reason": "Một prerequisite cụ thể không đạt; không sinh candidate.",
+      "context": {
+        "actor_id": "actor.vac-mai@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {},
+        "perceived": {
+          "food_shortage": true
+        },
+        "known_fact_ids": [],
+        "resources": {
+          "grain": 3
+        }
+      }
+    },
+    {
+      "scenario_id": "food-shortage-unknown-resource",
+      "template_id": "event.food-shortage@1",
+      "expected_eligible": false,
+      "reason": "Không biết lượng hạt không đồng nghĩa hết hạt; Not(Unknown) không được True.",
+      "context": {
+        "actor_id": "actor.vac-mai@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {},
+        "perceived": {
+          "food_shortage": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "rumor-arrival-eligible",
+      "template_id": "event.rumor-arrival@1",
+      "expected_eligible": true,
+      "reason": "Chỉ đủ điều kiện tạo candidate; không thực thi hành động hay ghi world state.",
+      "context": {
+        "actor_id": "actor.nuoc-thoa@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "rumor_delivered": true
+        },
+        "perceived": {},
+        "known_fact_ids": [
+          "fact.nuoc-thoa-claim@1"
+        ],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "rumor-arrival-ineligible",
+      "template_id": "event.rumor-arrival@1",
+      "expected_eligible": false,
+      "reason": "Một prerequisite cụ thể không đạt; không sinh candidate.",
+      "context": {
+        "actor_id": "actor.nuoc-thoa@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "rumor_delivered": false
+        },
+        "perceived": {},
+        "known_fact_ids": [
+          "fact.nuoc-thoa-claim@1"
+        ],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "rumor-arrival-not-known",
+      "template_id": "event.rumor-arrival@1",
+      "expected_eligible": false,
+      "reason": "Delivery evidence không tự thêm lời kể vào knowledge của actor.",
+      "context": {
+        "actor_id": "actor.nuoc-thoa@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "rumor_delivered": true
+        },
+        "perceived": {},
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "landing-rights-dispute-eligible",
+      "template_id": "event.landing-rights-dispute@1",
+      "expected_eligible": true,
+      "reason": "Chỉ đủ điều kiện tạo candidate; không thực thi hành động hay ghi world state.",
+      "context": {
+        "actor_id": "actor.trieu-khe@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "landing_access_disputed": true
+        },
+        "perceived": {
+          "landing_dispute": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "landing-rights-dispute-ineligible",
+      "template_id": "event.landing-rights-dispute@1",
+      "expected_eligible": false,
+      "reason": "Một prerequisite cụ thể không đạt; không sinh candidate.",
+      "context": {
+        "actor_id": "actor.trieu-khe@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "landing_access_disputed": true
+        },
+        "perceived": {
+          "landing_dispute": false
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "injury-treatment-eligible",
+      "template_id": "event.injury-treatment@1",
+      "expected_eligible": true,
+      "reason": "Chỉ đủ điều kiện tạo candidate; không thực thi hành động hay ghi world state.",
+      "context": {
+        "actor_id": "actor.ben-sen@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "injury_severity": 100
+        },
+        "perceived": {
+          "treatment_request": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "injury-treatment-ineligible",
+      "template_id": "event.injury-treatment@1",
+      "expected_eligible": false,
+      "reason": "Một prerequisite cụ thể không đạt; không sinh candidate.",
+      "context": {
+        "actor_id": "actor.ben-sen@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "injury_severity": 0
+        },
+        "perceived": {
+          "treatment_request": true
+        },
+        "known_fact_ids": [],
+        "resources": {}
+      }
+    },
+    {
+      "scenario_id": "npc-hires-repair-eligible",
+      "template_id": "event.npc-hires-repair@1",
+      "expected_eligible": true,
+      "reason": "Chỉ đủ điều kiện tạo candidate; không thực thi hành động hay ghi world state.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "boat_condition": 300
+        },
+        "perceived": {
+          "repair_need": true
+        },
+        "known_fact_ids": [],
+        "resources": {
+          "timber": 2
+        }
+      }
+    },
+    {
+      "scenario_id": "npc-hires-repair-ineligible",
+      "template_id": "event.npc-hires-repair@1",
+      "expected_eligible": false,
+      "reason": "Một prerequisite cụ thể không đạt; không sinh candidate.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "boat_condition": 300
+        },
+        "perceived": {
+          "repair_need": true
+        },
+        "known_fact_ids": [],
+        "resources": {
+          "timber": 1
+        }
+      }
+    },
+    {
+      "scenario_id": "npc-hires-repair-dead-actor",
+      "template_id": "event.npc-hires-repair@1",
+      "expected_eligible": false,
+      "reason": "Actor đã chết không có candidate quyết định thuê sửa.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": false,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "boat_condition": 300
+        },
+        "perceived": {
+          "repair_need": true
+        },
+        "known_fact_ids": [],
+        "resources": {
+          "timber": 2
+        }
+      }
+    },
+    {
+      "scenario_id": "npc-hires-repair-cooldown",
+      "template_id": "event.npc-hires-repair@1",
+      "expected_eligible": false,
+      "reason": "Occurrence đã commit gần đây chặn candidate; evaluator không tự ghi occurrence.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": 2999,
+        "physical": {
+          "boat_condition": 300
+        },
+        "perceived": {
+          "repair_need": true
+        },
+        "known_fact_ids": [],
+        "resources": {
+          "timber": 2
+        }
+      }
+    },
+    {
+      "scenario_id": "npc-hires-repair-cooldown-boundary",
+      "template_id": "event.npc-hires-repair@1",
+      "expected_eligible": true,
+      "reason": "Đúng mốc cooldown theo tick simulation; không dùng wall clock.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": 2760,
+        "physical": {
+          "boat_condition": 300
+        },
+        "perceived": {
+          "repair_need": true
+        },
+        "known_fact_ids": [],
+        "resources": {
+          "timber": 2
+        }
+      }
+    },
+    {
+      "scenario_id": "npc-hires-repair-unknown-perception",
+      "template_id": "event.npc-hires-repair@1",
+      "expected_eligible": false,
+      "reason": "Boat hỏng trong physical snapshot không tự cho actor biết cần sửa.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "boat_condition": 300
+        },
+        "perceived": {},
+        "known_fact_ids": [],
+        "resources": {
+          "timber": 2
+        }
+      }
+    },
+    {
+      "scenario_id": "npc-hires-repair-no-player",
+      "template_id": "event.npc-hires-repair@1",
+      "expected_eligible": true,
+      "reason": "Không có player/proximity input; candidate NPC độc lập player. Chưa chứng minh NPC tự thực thi.",
+      "context": {
+        "actor_id": "actor.vac-tong@1",
+        "alive": true,
+        "now_tick": 3000,
+        "last_occurrence_tick": null,
+        "physical": {
+          "boat_condition": 300
+        },
+        "perceived": {
+          "repair_need": true
+        },
+        "known_fact_ids": [],
+        "resources": {
+          "timber": 2
+        }
+      }
+    }
+  ]
+}
