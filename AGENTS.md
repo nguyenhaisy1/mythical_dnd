@@ -84,3 +84,7 @@ User giao sprint mới theo workflow thường trực. Sprint9/SPIN-012, FND15 d
 ## Sprint10 — 2026-10-22
 
 User giao Sprint10/SPIN-013: VS01 review và FND16 conformance preparation. Xem docs/production/sprints/SPRINT-10.md. Chủ dự án sau đó đã cài Unity6000.6.7f1. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Không mở Sprint11 hoặc release.
+
+## Sprint11 — 2026-10-23
+
+User giao sprint tiếp theo/SPIN014. Scope VS02A settlement-content-v1 theo ADR020 và docs/production/sprints/SPRINT-11.md:24actors/6households/3local+externalBếnHạc/8routes, immutable authoring registry và strict compiler. Không WorldState/routine execution/randomprotagonist hoặc fullVS02eventeligibility. Không tự mởSprint12/release; fullVS02 cònpartial.

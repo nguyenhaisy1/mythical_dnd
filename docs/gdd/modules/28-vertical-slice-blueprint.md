@@ -12,9 +12,9 @@ Scope slice tập trung Tam Giang với Bến Hạc/Phong Châu là external bou
 |---|---|
 | Dữ liệu đầu vào | Modules 01–27, minimal world fixture và implementation backlog. |
 | Đầu ra / bên sở hữu | Vertical-slice milestones, task contracts và QA evidence; chưa phải build đã chạy. |
-| Đọc cùng | 29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. |
 | Cổng nghiệm thu | Chứng minh nghề–world–knowledge–narrative–time–legacy liên kết và player không phải tác nhân duy nhất. |
-| Việc chưa được chứng minh | Full slice roster/compiled content, three professions, client and playtest còn pending; xem Slice Content Contract. |
+| Việc chưa được chứng minh | Full slice roster/compiled content, three professions, client and playtest còn pending; xem Slice Content Contract. VS02A có24actors/6households/8routes compiled authoring; VS02 full còn eventtemplates/eligibility, randomprotagonist và actor-specificobligations. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../../governance/APPLICABLE-BASELINE.md) và [Decision Register](../../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 

@@ -17,7 +17,7 @@ jobs:
           python3 tools/checks/check_contract_vectors.py
           python3 tools/checks/check_architecture.py
           python3 tools/checks/check_handoff.py
-      - name: Headless regression and Unity conformance preparation
+      - name: Headless regression and settlement authoring gate
         run: python3 tools/tests/run_runtime.py
       - name: Upload runtime evidence
         if: always()

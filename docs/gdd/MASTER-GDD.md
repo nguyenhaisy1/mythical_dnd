@@ -83994,9 +83994,9 @@ Logical schema là contract, chưa phải physical SQLite schema. Core thuần C
 |---|---|
 | Dữ liệu đầu vào | Design modules, entity identities, temporal semantics và domain boundaries. |
 | Đầu ra / bên sở hữu | Canonical data contracts, command/events, read projections và storage ports. |
-| Đọc cùng | 25, 27–29; docs/contracts.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-019 và docs/runbooks/UNITY-CONFORMANCE.md cho exact Editor profile và giới hạn nghiệmthu. |
+| Đọc cùng | 25, 27–29; docs/contracts.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-019 và docs/runbooks/UNITY-CONFORMANCE.md cho exact Editor profile và giới hạn nghiệmthu. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. |
 | Cổng nghiệm thu | Stable IDs, no hidden knowledge leakage, nonnegative stock và revision consistency có test trước feature breadth. |
-| Việc chưa được chứng minh | Sprint10/ADR019: VS01 kernel và FND16 Unity6000.6.7f1 LinuxEditor Mono đã có actual conformance evidence. Player/IL2CPP, Unity crash/recovery/migration, production gameplay/content và performance còn gates riêng; xem docs/qa/SPRINT-10-EVIDENCE.md. |
+| Việc chưa được chứng minh | Sprint10/ADR019: VS01 kernel và FND16 Unity6000.6.7f1 LinuxEditor Mono đã có actual conformance evidence. Player/IL2CPP, Unity crash/recovery/migration, production gameplay/content và performance còn gates riêng; xem docs/qa/SPRINT-10-EVIDENCE.md. VS02A có24actors/6households/8routes compiled authoring; VS02 full còn eventtemplates/eligibility, randomprotagonist và actor-specificobligations. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../governance/APPLICABLE-BASELINE.md) và [Decision Register](../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 
@@ -92356,9 +92356,9 @@ Scope slice tập trung Tam Giang với Bến Hạc/Phong Châu là external bou
 |---|---|
 | Dữ liệu đầu vào | Modules 01–27, minimal world fixture và implementation backlog. |
 | Đầu ra / bên sở hữu | Vertical-slice milestones, task contracts và QA evidence; chưa phải build đã chạy. |
-| Đọc cùng | 29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. |
 | Cổng nghiệm thu | Chứng minh nghề–world–knowledge–narrative–time–legacy liên kết và player không phải tác nhân duy nhất. |
-| Việc chưa được chứng minh | Full slice roster/compiled content, three professions, client and playtest còn pending; xem Slice Content Contract. |
+| Việc chưa được chứng minh | Full slice roster/compiled content, three professions, client and playtest còn pending; xem Slice Content Contract. VS02A có24actors/6households/8routes compiled authoring; VS02 full còn eventtemplates/eligibility, randomprotagonist và actor-specificobligations. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../governance/APPLICABLE-BASELINE.md) và [Decision Register](../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 
@@ -96378,9 +96378,9 @@ Module cuối foundation: giữ command/state/event/jobs/RNG/receipt nhất quá
 |---|---|
 | Dữ liệu đầu vào | Typed IDs, clock, rules, commands, versions, scheduler và persistence contracts. |
 | Đầu ra / bên sở hữu | Foundation task FND-01–16; authoritative commit, recovery và replay khi được triển khai. |
-| Đọc cùng | 26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-017 và docs/runbooks/CONTENT-PIPELINE.md cho runtime content profile commodity/transfer-template; full VS-02/Unity vẫn có gate riêng. ADR-018 và docs/runbooks/DIAGNOSTICS.md cho Sprint9 actual traces/state diff/evidence package; không suy field values từ replay hash. ADR-019 và docs/runbooks/UNITY-CONFORMANCE.md cho exact Editor profile và giới hạn nghiệmthu. |
+| Đọc cùng | 26–28; FOUNDATION-CONTRACT, IMPLEMENTATION-PLAN, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR-017 và docs/runbooks/CONTENT-PIPELINE.md cho runtime content profile commodity/transfer-template; full VS-02/Unity vẫn có gate riêng. ADR-018 và docs/runbooks/DIAGNOSTICS.md cho Sprint9 actual traces/state diff/evidence package; không suy field values từ replay hash. ADR-019 và docs/runbooks/UNITY-CONFORMANCE.md cho exact Editor profile và giới hạn nghiệmthu. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. |
 | Cổng nghiệm thu | Foundation exit gate cần replay, atomic failure recovery, content validation và cross-runtime evidence. |
-| Việc chưa được chứng minh | Sprint10/ADR019: VS01 kernel và FND16 Unity6000.6.7f1 LinuxEditor Mono đã có actual conformance evidence. Player/IL2CPP, Unity crash/recovery/migration, production gameplay/content và performance còn gates riêng; xem docs/qa/SPRINT-10-EVIDENCE.md. |
+| Việc chưa được chứng minh | Sprint10/ADR019: VS01 kernel và FND16 Unity6000.6.7f1 LinuxEditor Mono đã có actual conformance evidence. Player/IL2CPP, Unity crash/recovery/migration, production gameplay/content và performance còn gates riêng; xem docs/qa/SPRINT-10-EVIDENCE.md. VS02A có24actors/6households/8routes compiled authoring; VS02 full còn eventtemplates/eligibility, randomprotagonist và actor-specificobligations. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../governance/APPLICABLE-BASELINE.md) và [Decision Register](../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 
