@@ -56,3 +56,7 @@ Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai t
 ## Sprint11 — VS02A: dữ liệu dân cư và mạng đường
 
 [Compiler và cách dùng](../runbooks/SETTLEMENT-CONTENT.md) kiểm24actors/6households/4communities/8routes/24claims/24directedrelationships, tạo immutable authoring registry. VS02 full vẫnpartial: chưa8–12eventtemplates/eligibility, actor-specificobligations, randomprotagonist, routine execution hoặc gameplay. Không coi đủrecordcount là worldsimulation.
+
+## Sprint12 — điều kiện sự kiện và mốc demo
+
+[Event Eligibility](../runbooks/EVENT-ELIGIBILITY.md) mô tả tám templates, strict compiler và evaluator vật lý/nhận thức theo [ADR021](../adr/021-event-eligibility-profile.md). Chỉ trusted observations, không occurrence/effects hoặc player projection. FullVS02 còn random protagonist, actor-specific obligations và world binding. [Lộ trình chơi thử](PLAYABLE-ROADMAP.md) đặt forecast mới: hình ảnh Sprint13, demo nhỏ Sprint15–16; chỉ Sprint12 đang được giao.

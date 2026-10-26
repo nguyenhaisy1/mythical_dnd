@@ -1,0 +1,256 @@
+{
+  "pack_id": "slice.events",
+  "version": 1,
+  "schema_version": 1,
+  "profile": "event-eligibility-v1",
+  "settlement_hash": "60ce05463edcc1c2e4abbeae8f30159d430f57613b902ec6d48bb775db193ec8",
+  "templates": [
+    {
+      "definition_id": "event.transport-deadline@1",
+      "version": 1,
+      "schema_version": 1,
+      "source": "prototype-authored; M17 §20–22; M28 §95–97",
+      "classification": "game-canon",
+      "owner_domain": "Narrative",
+      "display_key": "event.transport-deadline.title",
+      "handler": "eligibility-candidate-v1",
+      "actor_ids": [
+        "actor.vac-tong@1"
+      ],
+      "cooldown_ticks": 60,
+      "physical_condition": {
+        "op": "All",
+        "children": [
+          {
+            "op": "Compare",
+            "field": "deadline_remaining_ticks",
+            "comparison": "gte",
+            "value": 0
+          },
+          {
+            "op": "Compare",
+            "field": "deadline_remaining_ticks",
+            "comparison": "lte",
+            "value": 60
+          }
+        ]
+      },
+      "perceived_condition": {
+        "op": "Compare",
+        "field": "transport_request",
+        "comparison": "eq",
+        "value": true
+      },
+      "information_route": "actor-known-facts"
+    },
+    {
+      "definition_id": "event.boat-degradation@1",
+      "version": 1,
+      "schema_version": 1,
+      "source": "prototype-authored; M28 §95–97; prototype repair need",
+      "classification": "game-canon",
+      "owner_domain": "Narrative",
+      "display_key": "event.boat-degradation.title",
+      "handler": "eligibility-candidate-v1",
+      "actor_ids": [
+        "actor.vac-moc@1"
+      ],
+      "cooldown_ticks": 120,
+      "physical_condition": {
+        "op": "Compare",
+        "field": "boat_condition",
+        "comparison": "lte",
+        "value": 400
+      },
+      "perceived_condition": {
+        "op": "Compare",
+        "field": "repair_need",
+        "comparison": "eq",
+        "value": true
+      },
+      "information_route": "actor-known-facts"
+    },
+    {
+      "definition_id": "event.rain-interruption@1",
+      "version": 1,
+      "schema_version": 1,
+      "source": "prototype-authored; M17 §1–3; M28 §95–97",
+      "classification": "game-canon",
+      "owner_domain": "Narrative",
+      "display_key": "event.rain-interruption.title",
+      "handler": "eligibility-candidate-v1",
+      "actor_ids": [
+        "actor.nuoc-nghiem@1"
+      ],
+      "cooldown_ticks": 60,
+      "physical_condition": {
+        "op": "Compare",
+        "field": "rain_intensity",
+        "comparison": "gte",
+        "value": 700
+      },
+      "perceived_condition": {
+        "op": "Compare",
+        "field": "transport_request",
+        "comparison": "eq",
+        "value": true
+      },
+      "information_route": "actor-known-facts"
+    },
+    {
+      "definition_id": "event.food-shortage@1",
+      "version": 1,
+      "schema_version": 1,
+      "source": "prototype-authored; M28 §96; prototype household food need",
+      "classification": "game-canon",
+      "owner_domain": "Narrative",
+      "display_key": "event.food-shortage.title",
+      "handler": "eligibility-candidate-v1",
+      "actor_ids": [
+        "actor.vac-mai@1"
+      ],
+      "cooldown_ticks": 1440,
+      "physical_condition": {
+        "op": "Not",
+        "child": {
+          "op": "HasResource",
+          "resource": "grain",
+          "minimum": 3
+        }
+      },
+      "perceived_condition": {
+        "op": "Compare",
+        "field": "food_shortage",
+        "comparison": "eq",
+        "value": true
+      },
+      "information_route": "actor-known-facts"
+    },
+    {
+      "definition_id": "event.rumor-arrival@1",
+      "version": 1,
+      "schema_version": 1,
+      "source": "prototype-authored; M16 §3–6; M17 §6; M28 §96",
+      "classification": "game-canon",
+      "owner_domain": "Narrative",
+      "display_key": "event.rumor-arrival.title",
+      "handler": "eligibility-candidate-v1",
+      "actor_ids": [
+        "actor.nuoc-thoa@1"
+      ],
+      "cooldown_ticks": 120,
+      "physical_condition": {
+        "op": "Compare",
+        "field": "rumor_delivered",
+        "comparison": "eq",
+        "value": true
+      },
+      "perceived_condition": {
+        "op": "HasKnownFact",
+        "fact_id": "fact.nuoc-thoa-claim@1"
+      },
+      "information_route": "actor-known-facts"
+    },
+    {
+      "definition_id": "event.landing-rights-dispute@1",
+      "version": 1,
+      "schema_version": 1,
+      "source": "prototype-authored; M16 §23; M17 §3; M28 §96",
+      "classification": "game-canon",
+      "owner_domain": "Narrative",
+      "display_key": "event.landing-rights-dispute.title",
+      "handler": "eligibility-candidate-v1",
+      "actor_ids": [
+        "actor.trieu-khe@1"
+      ],
+      "cooldown_ticks": 240,
+      "physical_condition": {
+        "op": "Compare",
+        "field": "landing_access_disputed",
+        "comparison": "eq",
+        "value": true
+      },
+      "perceived_condition": {
+        "op": "Compare",
+        "field": "landing_dispute",
+        "comparison": "eq",
+        "value": true
+      },
+      "information_route": "actor-known-facts"
+    },
+    {
+      "definition_id": "event.injury-treatment@1",
+      "version": 1,
+      "schema_version": 1,
+      "source": "prototype-authored; M28 §96; prototype Health-owned injury need",
+      "classification": "game-canon",
+      "owner_domain": "Narrative",
+      "display_key": "event.injury-treatment.title",
+      "handler": "eligibility-candidate-v1",
+      "actor_ids": [
+        "actor.ben-sen@1"
+      ],
+      "cooldown_ticks": 60,
+      "physical_condition": {
+        "op": "Compare",
+        "field": "injury_severity",
+        "comparison": "gte",
+        "value": 1
+      },
+      "perceived_condition": {
+        "op": "Compare",
+        "field": "treatment_request",
+        "comparison": "eq",
+        "value": true
+      },
+      "information_route": "actor-known-facts"
+    },
+    {
+      "definition_id": "event.npc-hires-repair@1",
+      "version": 1,
+      "schema_version": 1,
+      "source": "prototype-authored; M17 §1–3; M28 §96; prototype NPC repair candidate",
+      "classification": "game-canon",
+      "owner_domain": "Narrative",
+      "display_key": "event.npc-hires-repair.title",
+      "handler": "eligibility-candidate-v1",
+      "actor_ids": [
+        "actor.vac-tong@1"
+      ],
+      "cooldown_ticks": 240,
+      "physical_condition": {
+        "op": "All",
+        "children": [
+          {
+            "op": "Compare",
+            "field": "boat_condition",
+            "comparison": "lte",
+            "value": 400
+          },
+          {
+            "op": "HasResource",
+            "resource": "timber",
+            "minimum": 2
+          }
+        ]
+      },
+      "perceived_condition": {
+        "op": "Compare",
+        "field": "repair_need",
+        "comparison": "eq",
+        "value": true
+      },
+      "information_route": "actor-known-facts"
+    }
+  ],
+  "localization": {
+    "event.transport-deadline.title": "Hạn giao hàng đang đến",
+    "event.boat-degradation.title": "Thuyền cần được kiểm tra",
+    "event.rain-interruption.title": "Mưa cản chuyến vận tải",
+    "event.food-shortage.title": "Hộ cần tìm thêm lương thực",
+    "event.rumor-arrival.title": "Một lời kể đến bến",
+    "event.landing-rights-dispute.title": "Cần làm rõ quyền neo bến",
+    "event.injury-treatment.title": "Có yêu cầu chăm sóc thương tích",
+    "event.npc-hires-repair.title": "Chủ thuyền cân nhắc thuê sửa"
+  }
+}

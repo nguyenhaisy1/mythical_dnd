@@ -42,3 +42,7 @@ kernel-v1 chỉ có thông số đủ fixture: ticks/day1440, repair duration60,
 [ADR020](../adr/020-settlement-content-profile.md) và [Settlement Content](../runbooks/SETTLEMENT-CONTENT.md) bổ sung profile riêng settlement-content-v1 cho communities/households/actors/claims/relationships/routes. Kernel-content-v1 vẫn từ chối các kinds này; không nới compiler cũ. Pack24actors/6households/8routes nằm content/definitions/vertical-slice; compile thành registry readonly, chưa WorldState.
 
 Routine là mô tả nonexecutable; lot/rights là Assets seeddata, household obligations descriptive, capacity prototype_load_unit chưa transportsemantics. FullVS02 phải bổ sung8–12events/causaleligibility và actor-specificobligations; TEST001randomprotagonist chưa triển khai. Không tự dùng registryomniscient làm playerprojection hoặc NPCperception.
+
+## Profile Sprint12 — VS02B
+
+[ADR021](../adr/021-event-eligibility-profile.md) và [runbook](../runbooks/EVENT-ELIGIBILITY.md) bổ sung tám event templates cùng evaluator declarative trên trusted observations. Handler eligibility-candidate-v1 chỉ đánh giá ứng viên, không là gameplay IRuleHandler. Binding world/perception, effects, occurrence cooldown persistence, random protagonist và nghĩa vụ từng actor còn gate riêng; fullVS02 vẫn partial.

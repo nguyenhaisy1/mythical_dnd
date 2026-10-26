@@ -7,6 +7,7 @@ namespace Game.Headless
     {
         private static int Main(string[] args)
         {
+            if (args.Length > 0 && args[0] == "--event-eligibility") return EventEligibilityProbe.Run(args);
             if (args.Length > 0 && args[0] == "--settlement-compile") return SettlementProbe.Run(args);
             if (args.Length > 0 && args[0] == "--conformance") return ConformanceProbe.Run(args);
             if (args.Length > 0 && (args[0] == "--diagnose" || args[0] == "--record-diagnostic-fixture")) return DiagnosticProbe.Run(args);
@@ -21,7 +22,7 @@ namespace Game.Headless
                 Console.WriteLine(JsonSerializer.Serialize(new
                 {
                     project = "mythical_dnd",
-                    stage = "settlement-authoring",
+                    stage = "event-eligibility",
                     commandPipelineImplemented = true,
                     inMemorySchedulerImplemented = true,
                     durablePersistenceImplemented = true,
@@ -30,10 +31,11 @@ namespace Game.Headless
                     contentRegistryImplemented = true,
                     foundationDiagnosticsImplemented = true,
                     settlementAuthoringImplemented = true,
+                    eventEligibilityImplemented = true,
                     simulationImplemented = false,
                     runtimeLlm = false,
                     documentation = "docs/production/HANDOFF.md",
-                    nextTask = "VS-02B"
+                    nextTask = "VS-02C / bounded playable prototype"
                 }, new JsonSerializerOptions { WriteIndented = true }));
                 return 0;
             }

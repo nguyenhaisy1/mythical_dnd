@@ -1,0 +1,554 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pack_id",
+    "version",
+    "schema_version",
+    "profile",
+    "settlement_hash",
+    "templates",
+    "localization"
+  ],
+  "properties": {
+    "pack_id": {
+      "const": "slice.events"
+    },
+    "version": {
+      "const": 1
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "profile": {
+      "const": "event-eligibility-v1"
+    },
+    "settlement_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$(?![\\s\\S])"
+    },
+    "templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "definition_id",
+          "version",
+          "schema_version",
+          "source",
+          "classification",
+          "owner_domain",
+          "display_key",
+          "handler",
+          "actor_ids",
+          "cooldown_ticks",
+          "physical_condition",
+          "perceived_condition",
+          "information_route"
+        ],
+        "properties": {
+          "definition_id": {
+            "type": "string",
+            "pattern": "^event\\.[a-z][a-z0-9_-]*@1$(?![\\s\\S])"
+          },
+          "version": {
+            "const": 1
+          },
+          "schema_version": {
+            "const": 1
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048
+          },
+          "classification": {
+            "const": "game-canon"
+          },
+          "owner_domain": {
+            "const": "Narrative"
+          },
+          "display_key": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$(?![\\s\\S])"
+          },
+          "handler": {
+            "const": "eligibility-candidate-v1"
+          },
+          "actor_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^actor\\.[a-z][a-z0-9_-]*@1$(?![\\s\\S])"
+            },
+            "minItems": 1,
+            "maxItems": 30,
+            "uniqueItems": true
+          },
+          "cooldown_ticks": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000000
+          },
+          "physical_condition": {
+            "$ref": "#/$defs/condition"
+          },
+          "perceived_condition": {
+            "$ref": "#/$defs/condition"
+          },
+          "information_route": {
+            "const": "actor-known-facts"
+          }
+        }
+      },
+      "minItems": 8,
+      "maxItems": 12
+    },
+    "localization": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 256,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$(?![\\s\\S])"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2048
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mythical-dnd.local/schemas/event-eligibility-v1.schema.json",
+  "title": "VS02B candidate eligibility authoring profile",
+  "description": "Structural schema. Portable compiler additionally enforces physical/perceived read permissions, AST depth and reference integrity. No gameplay effects.",
+  "$defs": {
+    "condition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "children"
+          ],
+          "properties": {
+            "op": {
+              "const": "All"
+            },
+            "children": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              },
+              "minItems": 1,
+              "maxItems": 16
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "children"
+          ],
+          "properties": {
+            "op": {
+              "const": "Any"
+            },
+            "children": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              },
+              "minItems": 1,
+              "maxItems": 16
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "child"
+          ],
+          "properties": {
+            "op": {
+              "const": "Not"
+            },
+            "child": {
+              "$ref": "#/$defs/condition"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "fact_id"
+          ],
+          "properties": {
+            "op": {
+              "const": "HasKnownFact"
+            },
+            "fact_id": {
+              "type": "string",
+              "pattern": "^fact\\.[a-z][a-z0-9_-]*@1$(?![\\s\\S])"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "resource",
+            "minimum"
+          ],
+          "properties": {
+            "op": {
+              "const": "HasResource"
+            },
+            "resource": {
+              "enum": [
+                "grain",
+                "timber"
+              ]
+            },
+            "minimum": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000000
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "boat_condition"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne",
+                "lt",
+                "lte",
+                "gt",
+                "gte"
+              ]
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "rain_intensity"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne",
+                "lt",
+                "lte",
+                "gt",
+                "gte"
+              ]
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "deadline_remaining_ticks"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne",
+                "lt",
+                "lte",
+                "gt",
+                "gte"
+              ]
+            },
+            "value": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "injury_severity"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne",
+                "lt",
+                "lte",
+                "gt",
+                "gte"
+              ]
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "landing_access_disputed"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne"
+              ]
+            },
+            "value": {
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "rumor_delivered"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne"
+              ]
+            },
+            "value": {
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "repair_need"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne"
+              ]
+            },
+            "value": {
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "transport_request"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne"
+              ]
+            },
+            "value": {
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "landing_dispute"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne"
+              ]
+            },
+            "value": {
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "treatment_request"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne"
+              ]
+            },
+            "value": {
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "field",
+            "comparison",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "const": "Compare"
+            },
+            "field": {
+              "const": "food_shortage"
+            },
+            "comparison": {
+              "enum": [
+                "eq",
+                "ne"
+              ]
+            },
+            "value": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

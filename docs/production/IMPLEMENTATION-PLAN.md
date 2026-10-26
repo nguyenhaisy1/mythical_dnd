@@ -48,3 +48,7 @@ Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai t
 ## Sprint11 — VS02A: dữ liệu dân cư và mạng đường
 
 [Compiler và cách dùng](../runbooks/SETTLEMENT-CONTENT.md) kiểm24actors/6households/4communities/8routes/24claims/24directedrelationships, tạo immutable authoring registry. VS02 full vẫnpartial: chưa8–12eventtemplates/eligibility, actor-specificobligations, randomprotagonist, routine execution hoặc gameplay. Không coi đủrecordcount là worldsimulation.
+
+## Forecast theo sprint — 26/10/2026
+
+[Lộ trình hình ảnh và bản chơi thử](PLAYABLE-ROADMAP.md) bổ sung mốc dự kiến Sprint13 art direction/UI prototype và Sprint15–16 demo nhỏ. Đây là dự báo mới, chưa là release commitment. Client prototype giới hạn có thể làm trước VS07 đầy đủ; không thay dependencies hoặc exit gates của VS07/10.
