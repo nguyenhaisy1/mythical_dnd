@@ -1,6 +1,6 @@
 # Lộ trình hình ảnh và bản chơi thử
 
-Cập nhật 2026-10-26 khi giao Sprint12. Đây là **forecast mới**, chuyển roadmap milestone sang các mốc sprint dự kiến; tài liệu trước đó chưa cam kết số sprint cho hình ảnh/demo. Chỉ Sprint12 đang được giao triển khai. Các sprint sau được mở khi chủ dự án giao theo workflow thường trực.
+Cập nhật 2026-10-26 khi giao Sprint12. Đây là **forecast mới**, chuyển roadmap milestone sang các mốc sprint dự kiến; tài liệu trước đó chưa cam kết số sprint cho hình ảnh/demo. Sprint13 đã được giao theo chế độ thử nghiệm, chỉ chủ dự án được chốt nghiệm thu. Các sprint sau được mở khi chủ dự án giao theo workflow thường trực.
 
 | Sprint dự kiến | Kết quả nhìn thấy được | Điều kiện nghiệm thu |
 |---|---|---|
@@ -24,4 +24,4 @@ VS07 đầy đủ vẫn phụ thuộc VS03/04/05 theo [Implementation Plan](IMPL
 
 ## Khi nào phải điều chỉnh mốc?
 
-Mục tiêu là **bắt đầu hình ảnh Sprint13; chơi thử nhỏ Sprint15–16**, không là bảo đảm phát hành. Cuối mỗi sprint đối chiếu: generator/viability, luật repair và save, actor-scoped projection, Unity scene/input/build. Nếu một gate chưa đạt, ghi nguyên nhân và forecast mới trong sprint report trước khi chuyển mốc; không âm thầm đổi định nghĩa “demo” thành ảnh hoặc video. Chưa quy đổi sang ngày vì chưa có thời lượng sprint cố định và còn rủi ro tích hợp.
+Mục tiêu là **bắt đầu hình ảnh Sprint13; chơi thử nhỏ Sprint15–16**, không là bảo đảm phát hành. Sprint13 có thể gồm nhiều spin thử nghiệm; không chuyển Sprint14 khi [các mục cần chốt](sprints/sprint-13/APPROVALS.md) chưa được chủ dự án duyệt. Vì vậy forecast demo phải xét lại sau khi chốt Sprint13. Cuối mỗi sprint đối chiếu: generator/viability, luật repair và save, actor-scoped projection, Unity scene/input/build. Nếu một gate chưa đạt, ghi nguyên nhân và forecast mới trong sprint report trước khi chuyển mốc; không âm thầm đổi định nghĩa “demo” thành ảnh hoặc video. Chưa quy đổi sang ngày vì chưa có thời lượng sprint cố định và còn rủi ro tích hợp.

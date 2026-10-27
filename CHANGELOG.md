@@ -6,6 +6,12 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint13 — thử nghiệm chưa được duyệt
+
+- Thử nghiệm01 hình ảnh Bến Vạc, giao diện offline và mô hình xuất thân phục vụ UX được tách trong prototypes/sprint13; không import vào production hoặc coi là Unity gameplay.
+- Chủ dự án chốt từng sản phẩm và kết thúc sprint; thêm approval register và quy tắc nhắc pending trước khi chuyển sprint.
+
+
 ### Sprint12 — event eligibility
 
 - Thêm tám template sự kiện và compiler/evaluator declarative tách physical/perceived conditions; Unknown fail closed, readonly registry và exact settlement binding. Candidate chưa là occurrence hoặc gameplay effect.

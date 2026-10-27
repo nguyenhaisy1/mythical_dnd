@@ -1084,3 +1084,64 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Event20processes/17negativecases/23fixtures +independentPythonmdc1 hash/crossprocessdeterminism đạt. Existing settlement/replay/content/diagnostics/transfer/scheduler/conformancepreparation và9SIGKILLregression đạt. KhôngUnitynewprofile hoặc gameplayeffects.
 - /root/s12_review independent source/contracts/schema/host/process review và78focusedtests đạt; finalartifactfreshness đang đối chiếu. Root fixes backlogLF/oldstatus vàowner documentation; khôngcoveredsourceedits saugate.
 - Docs36generated/578authoredlinks/reference/architecture đạt; exports đangregenerate trướccommit. KhôngZIP/main/tag/release/Sprint13execution.
+
+
+### EVT-00081 | SPIN-015 | GIT — Push Sprint12 và mở PR12; chờ CI tích hợp
+
+<!-- worklog: {"id": "EVT-00081", "spin": "SPIN-015", "event": "GIT", "at": "2026-10-26T13:58:11+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-26T13:58:11+07:00
+- Actor: /root
+
+- Commit414ed667c56944941073293aa3bb8028ac876004 đãpush origin/feature/sprint-12-event-eligibility; remoteSHAkhớpHEAD.
+- PR12 https://github.com/nguyenhaisy1/mythical_dnd/pull/12 vào dev. CIpush40282862502 đangchạy; chờCI trướcmerge.
+- /root/s12_review xác nhận final449/449TRX và recomputedfingerprint d11f305c9f94d3069aca515cf6272ce0a645ca386968a875964c84037aaabf9f khớpevidence/current source; finalacceptanceVS02Bđạt.
+- Exports192inputs/14files/6156anchors/123tables/navigation đạt; docs36generated/579links. Logpostcommitlocal đưa commitkếtiếp. Khôngmain/tag/release.
+
+
+### EVT-00082 | SPIN-015 | CLOSE — Đóng Sprint12 — VS02B hoàn thành; PR12 merged và dev CI đạt
+
+<!-- worklog: {"id": "EVT-00082", "spin": "SPIN-015", "event": "CLOSE", "at": "2026-10-26T14:00:56+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-26T14:00:56+07:00
+- Actor: /root
+
+- Sprint12/SPIN015 finished trong scopeVS02B:8templates,23fixturecontexts,strictportablecompiler/readonlyregistry/evaluator/CLI/schema. Physical/perceivedallowlist,Unknownfailclosed,cooldown,exactsettlementhash; candidatekhôngoccurrence/effects/NPCautonomy.
+- /root/s12_content authoredpack/schema/fixtures; /root/s12_eligibility compiler/evaluator78tests; /root host/processgate/docs/forecast/Git; /root/s12_review independentreview/focusedtests/finalartifactfreshness đạt. NUnitcompilefinding được sửa trướcacceptance; owner/docs/backlogfixes đồngbộ.
+- Finalgate tests/results/sprint12-ui45g8mh/evidence.json:449/449Release0skip,78VS02B+371regression; fingerprintd11f305c9f94d3069aca515cf6272ce0a645ca386968a875964c84037aaabf9f independentlyverified. Event20processes17negativecases23scenarios,Pythonhashreference; existingregression9SIGKILL/replay/content/diagnostics/settlement đạt.
+- Docs36generated/579links; exports192inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt. KhôngZIP. KhôngactualUnityprofilemới hoặcplayablegameclaim.
+- Feature414ed667c56944941073293aa3bb8028ac876004 remoteverified. CIpush40282862502 vàPR40282882711success. PR12 https://github.com/nguyenhaisy1/mythical_dnd/pull/12 squashmerged dev146dc668439db41a9dbcfba00490e64cb17ae287; HEAD/origin/devtree identical; devCI40283009830success đúngmergeSHA.
+- Main giữ1e45977c0791154bb778230c06801782e0052aeb; khôngtag/release. WORKLOG EVT00081/00082 postcommitlocal đưacommitkếtiếp; khôngamend/selfcontaininghash.
+- Forecast docs/production/PLAYABLE-ROADMAP.md: Sprint13 địnhhướnghìnhảnh/UIprototype vàcampaign/randomoriginprototype; Sprint14repairloop; Sprint15–16demoUnitynhỏ nếu dependencies đạt. Đây là forecastmới,khôngfullVS07 hoặc camkếtpháthành. ChưatựmởSprint13; chờusergiao. FullVS02cònpartial world/perceptionbinding/actorobligations/randomprotagonist/effects.
+
+
+### EVT-00083 | SPIN-016 | OPEN — Sprint13 thử nghiệm01 — hình ảnh và trải nghiệm nhận nhân vật
+
+<!-- worklog: {"id": "EVT-00083", "spin": "SPIN-016", "event": "OPEN", "at": "2026-10-26T14:46:47+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-26T14:46:47+07:00
+- Actor: /root
+
+- User giao Sprint13 với3worker+2critic+root; giới hạn4concurrent nên worker song song, critics theo lượt sau, không giả6concurrent.
+- Experiment01: Bến Vạc buổi sáng trước mùa nước; art direction, interactive UI prototype và campaign/random-origin bounded experiment. Tất cả Pending user approval; root chỉ technical review lớpđầu.
+- Mỗi thử nghiệm mới mở spin mới trong Sprint13; sửa cùng thử nghiệm tiếp tục spin. Không sangSprint14 nếu itemschưađượcuserchốt; luôn nhắc lại pending khi user yêu cầu sprintmới. Khôngmerge dev trướcuserapproval; feature/draftPR được giữ riêng.
+
+
+### EVT-00084 | SPIN-016 | RESUME — Tiếp tục thử nghiệm01 và hai lượt phản biện độc lập
+
+<!-- worklog: {"id": "EVT-00084", "spin": "SPIN-016", "event": "RESUME", "at": "2026-10-27T08:06:01+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-27T08:06:01+07:00
+- Actor: /root
+
+- Tiếp tục ngày27/10 theo user, cùngSPIN016/experiment01. Ba worker đã bàn giao SVG+artdirection, HTML/CSS/JSUI và campaign.js+5tests; root đã chạy browser và chụp menu/reveal/world/preview/journal/text150 vào tests/results/sprint13-experiment01.
+- Hai critics trước bịquota, chưareview; nay đã resume /root/s13_critic_code và /root/s13_critic_ux. Khôngclaimreviewhoànthànhtrướcđó. Criticcode phát hiệnP1 khôngrenderderivedskills nên chưaxemđượchistory→capability; giaoUIworkerfix trongsameexperiment.
+- Root quan sátworldscreenshot thật; đủsảnphẩmxemnhưngPendinguserapproval. KhôngđóngSprint13/merge dev/sangSprint14.
+
+
+### EVT-00085 | SPIN-016 | RESULT — Thử nghiệm01 qua hai lượt bắt lỗi và kiểm tra lớp đầu; chờ user chốt
+
+<!-- worklog: {"id": "EVT-00085", "spin": "SPIN-016", "event": "RESULT", "at": "2026-10-27T08:09:19+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-27T08:09:19+07:00
+- Actor: /root
+
+- Ba workers hoàn thành SVG/art direction, HTML/CSS/JS và originhistoryprototype; hai critics độc lập đã hoàn tất sauquota. C01P1 thiếuskillsprovenance được UIworker sửa; UX01P2 contrast được sửa; hai critics táikiểm resolved vàTechnicalreviewed.
+- Root chạy5/5Nodetests gồm500seeds, browser-check.py exit0 với Chrome/file://, no pageerror, keyboard/dialogfocus/text150/actorconsistency; root đã nhìnảnh menu/world/reveal thực. Evidence tests/results/sprint13-experiment01; khônghumanplaytest hoặcUnitygameplay.
+- Tất cảS13A01–A04 vẫnPendinguserapproval. Root chỉ nghiệmthu lớpđầu để trình xem; khôngmerge dev/đóngSprint13/chuyểnSprint14. Cùngexperiment01/SPIN016, chưa mởphươngánmới.
+- Docs vàcriticreports đồngbộ; exports đangregenerate. Chuẩnbịcommit/pushnhánhreview vàdraftPR theo scope, khôngfinalacceptance.

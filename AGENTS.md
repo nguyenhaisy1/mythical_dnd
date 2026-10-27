@@ -92,3 +92,11 @@ User giao sprint tiếp theo/SPIN014. Scope VS02A settlement-content-v1 theo ADR
 ## Sprint12 — 2026-10-26
 
 User giao sprint tiếp theo và yêu cầu mốc hình ảnh/demo. Sprint12/SPIN-015: VS02B event-eligibility-v1 theo ADR021 và docs/production/sprints/SPRINT-12.md. Tám template và evaluator trên trusted observations; không event effects hoặc fullVS02. Forecast mới tại docs/production/PLAYABLE-ROADMAP.md: Sprint13 định hướng hình ảnh, Sprint15–16 demo nhỏ, phụ thuộc gates; không tự mởSprint13/main/tag/release.
+
+## Sprint13 — thử nghiệm và nghiệm thu bởi chủ dự án
+
+User giao Sprint13 ngày26/10/2026. Cơ cấu6vai trò:3worker,2critic độc lập và/root điều phối/kiểm tra lớp đầu. Runtime chỉ4concurrent nên luân phiên worker/critic; log actor thực, không claim6chạyđồngthời.
+
+**Riêng Sprint13: mọi sản phẩm Pending user approval cho đến khi chủ dự án chốt rõ.** Root/test/critic pass chỉ Technical reviewed, không Final accepted. Không tựmerge dev, đóngSprint13 hoặc chuyểnSprint14 khi còn mục chưa chốt. Khi user yêu cầu sangsprintmới, nhắc đầy đủ pending từ docs/production/sprints/sprint-13/APPROVALS.md và chờchốt; “tiếp tục” không là approval. Mỗi thử nghiệm/phươngán mới mở SPIN mới trongSprint13, giữ lịch sử và sản phẩm cũ; sửa cùngphươngán tiếp tụcspin. Featurecommit/push/draftPR cho review vẫn theo workflow, không main/tag/release.
+
+Thử nghiệm01/SPIN016 tại prototypes/sprint13/experiment-01; độc lập production. Sprintbrief docs/production/sprints/SPRINT-13.md.
