@@ -1145,3 +1145,76 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Root chạy5/5Nodetests gồm500seeds, browser-check.py exit0 với Chrome/file://, no pageerror, keyboard/dialogfocus/text150/actorconsistency; root đã nhìnảnh menu/world/reveal thực. Evidence tests/results/sprint13-experiment01; khônghumanplaytest hoặcUnitygameplay.
 - Tất cảS13A01–A04 vẫnPendinguserapproval. Root chỉ nghiệmthu lớpđầu để trình xem; khôngmerge dev/đóngSprint13/chuyểnSprint14. Cùngexperiment01/SPIN016, chưa mởphươngánmới.
 - Docs vàcriticreports đồngbộ; exports đangregenerate. Chuẩnbịcommit/pushnhánhreview vàdraftPR theo scope, khôngfinalacceptance.
+
+
+### EVT-00086 | SPIN-016 | HANDOFF — Bàn giao thử nghiệm01 để user chốt; draftPR13 và CI đạt
+
+<!-- worklog: {"id": "EVT-00086", "spin": "SPIN-016", "event": "HANDOFF", "at": "2026-10-27T08:12:35+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-27T08:12:35+07:00
+- Actor: /root
+
+- Experiment01/SPIN016 đã đủ sản phẩm để userreview: SVG BếnVạc, offlineUI, origin→history→skills/knowledge preview. Roottechnicalreview và hai critics độc lập đạt sau sửa C01/P1 vàUX01/P2. Khônguserapproval/humanplaytest/gameplayacceptance.
+- Commit7043240e68b8293589b9959cf2f6bb6ed90496d2 push origin/feature/sprint-13-experiment-01 remoteSHAverified. DraftPR13 https://github.com/nguyenhaisy1/mythical_dnd/pull/13; CIpush40431018696 vàPR40431039582completed/success đúngHEAD. Khôngmerge dev/main/tag/release.
+- Local5/5Nodetests gồm500seeds vàbrowser-check actualChrome/file:// pass; screenshotmenu/world/reveal đãquan sát. Docs36generated/589links; exports197inputs/14files/6156anchors/123tables/navigation đạt. KhôngZIP/caches/screenshotscommit.
+- S13-A01 hìnhảnh, A02UI, A03originpresentation, A04kếtthúcsprint đềuPending. GiữSprint13mở; nhắc lại pending nếuuserđòisangSprint14. Đây là HANDOFF chờnhận xét, khôngCLOSE/finished hoặcPAUSED theoquyếtđịnhtựý. Newexperiment=newspin,cùngphươngánfix tiếpSPIN016.
+- WORKLOGeventnày localpostcommit sẽđưacommitkếtiếp. Báocáo docs/production/sprints/sprint-13/EXPERIMENT-01-REPORT.md; sảnphẩm prototypes/sprint13/experiment-01/index.html.
+
+
+### EVT-00087 | SPIN-016 | RESULT — Tích hợp chọn lọc art direction và design review vào hai skill hiện có
+
+<!-- worklog: {"id": "EVT-00087", "spin": "SPIN-016", "event": "RESULT", "at": "2026-10-27T13:11:20+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-27T13:11:20+07:00
+- Actor: /root
+
+- Theo yêu cầu tích hợp chọn lọc, đã mở rộng mythical-prototype (game art direction) và mythical-validation (game design/art/UX review); giữ sáu skill và symlink hiện có, không thêm orchestration/hooks hoặc runtime dependency.
+- Nguồn pin: Donchitos/Claude-Code-Game-Studios commit05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418; sickn33/agentic-awesome-skills commite8d346bcb691225fb6ae51a49c353bcedb2ef61d. Manifest source paths/SHA256 và nguyên license MIT tại tools/skills/upstream. Nội dung adaptation viết theo contracts và quyền user của project.
+- quick_validate hai skill đạt; install.py --check xác nhận6links; handoff592links vàdiffcheck đạt. Exports201inputs/14HTML-DOCX/6156anchors/123tables/navigation đã kiểm freshness.
+- Forward-test /root/s13_critic_code được yêu cầu nhưng bịquota trước khi trả kết quả; chưa có independentbehavioralvalidation cho skill mới. Root staticreview: readreferences đúngscope, không épRPGcombat, không xemtechnicalpass làuserapproval, không tựmởSprint14. Không gọi staticreview là forwardtest.
+- Metadata của hai skill mới đã xuất hiện trong catalog phiên hiện tại; chưa claim automatic invocation đã xảy ra. Có thể đọc skill qua symlink ngay.
+- Thay đổi skill/docs/license và WORKLOG đanglocal chưacommit/push; draftPR13 vẫn là commit7043240 trước lần tích hợp này. Khôngmerge dev/đóngSprint13 hoặc thayS13A01–A04Pending. Đây là hỗ trợ cùngSPIN016, không một thử nghiệm mỹ thuật mới.
+
+
+### EVT-00088 | SPIN-016 | RESULT — Forward-test độc lập skill mới đạt trong tình huống thử có giới hạn
+
+<!-- worklog: {"id": "EVT-00088", "spin": "SPIN-016", "event": "RESULT", "at": "2026-10-27T13:12:10+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-27T13:12:10+07:00
+- Actor: /root
+
+- Bổ sung sau EVT00087: retry /root/s13_critic_code khi quota reset đã chạy thành công. Đọc hai skill/hai references +APPROVALS, trả actionoutline cho tìnhhuốnggiảđịnh user chưa thích hìnhảnh nhưngtestsđạt.
+- Kết quả độc lập: khôngsangSprint14, nhắc đúngA01–A04; đề xuất2hướng khác camera/material/hierarchy, giữExperiment01; plan-onlykhôngtựtạoartwork; nếuđượcgiaoimplementation thìnewspin vàartifactthật; khôngđổiPending thànhApproved. Không cóconflictchặn được tìm thấy.
+- Đây là một scoped behavioral forward-test bằngresponseoutline, không chứngminh chấtlượngartwork hoặcgameplay, khônguserfeedbackthật. Không sửaapprovalregister theo tìnhhuốnggiảđịnh. Phần 'chưa có independentbehavioralvalidation' ởEVT00087 đúng tại thờiđiểmghi và nay được cập nhật bởi eventnày.
+- Không cósourcechanges sauexportcheck; skillintegration vẫnlocalchưacommit/push; sáulinks dùng được ngay.
+
+
+### EVT-00089 | SPIN-017 | OPEN — Sprint13 thử nghiệm02 — tranh cảnh có chiều sâu thay hướng vector phẳng
+
+<!-- worklog: {"id": "EVT-00089", "spin": "SPIN-017", "event": "OPEN", "at": "2026-10-27T13:14:16+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-27T13:14:16+07:00
+- Actor: /root
+
+- User phản hồi thực tế: 'bản Thử nghiệm 01 hiện tại của spin này có đồ họa chưa được ưng ý tôi'; yêu cầu tạo bản khác. S13A01/Experiment01 Changes requested, không suy user phản đốiUX hoặcorigin.
+- Mở Experiment02/SPIN017 trongSprint13: painterly raster riverlife +immersiveUI; giữExperiment01nguyênvẹn. Root imagegen/tíchhợp/kiểmtralớpđầu;3workers artdirection/UI/compatibility và2critics sauimplementation theo4concurrentlimit.
+- Skillintegrationlocal từSPIN016 được giữ; khôngreset/stash. Tất cảExperiment02Pendingapproval; khôngmerge dev/đóngSprint13/chuyểnSprint14.
+
+
+### EVT-00090 | SPIN-017 | RESUME — Hoàn thiện bản02 sau phản biện; kiểm lại cảnh và tương tác
+
+<!-- worklog: {"id": "EVT-00090", "spin": "SPIN-017", "event": "RESUME", "at": "2026-10-28T10:21:07+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T10:21:07+07:00
+- Actor: /root
+
+- Tiếp tục cùngSPIN017 ngày28/10. Root kiểm lại browser-check Exp02 hai viewports pass và5/5Nodetests, sửa whitespace heading 'thuyền ở'. Root xem screenshot world1280 hiện tại: leftpanels khôngche thợ/thuyềnphải.
+- Ba workers đã bàn giao artdirection/UI/browserchecker. Hai critics đã chạy: codeC02HTTPguide/C03copyboat resolved; UX P1 che focalpoint đã được chuyểnpanel và reviewer trướcđó báo táikiểm pass, đangđồngbộ báo cáo cuối sauheadingfix.
+- GiữExp01 nguyênvẹn, skillintegration từspintrước được giữ để commitriêng. Khôngmerge dev hoặc userapprovalclaim.
+
+
+### EVT-00091 | SPIN-017 | RESULT — Bản02 qua phản biện và kiểm tra lớp đầu; chờ chủ dự án xem
+
+<!-- worklog: {"id": "EVT-00091", "spin": "SPIN-017", "event": "RESULT", "at": "2026-10-28T10:22:05+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T10:22:05+07:00
+- Actor: /root
+
+- Experiment02 đã có PNG1672x941 (~3.2MB) tạo bằng built-in image_gen và copy vào assets/ben-vac-painterly.png; fullprompt/provenance ởGENERATION.md. KhôngAPIkey/CLI, khôngclaimkhảocổ/Unity/productionassetlayer.
+- Workers /root/s13e2_art direction, /root/s13e2_ui interactiveUI, /root/s13e2_checks browser/README; rootgeneratedart/integration. Critics /root/s13_critic_code và /root/s13_critic_ux độc lập hoànthành. C02HTTPcompare/C03boatcopy resolved; UX P1panelcheartisan vàP2headingwhitespace resolved táikiểm28/10.
+- Root5/5Node và browser2viewports1280/1920 pass, sourceExp01unchanged; actualWorldscreenshot đã xem. Critic cuối1280text100/150/key/focus/nooverflow pass vàviewedscreenshot. Khônghumanplaytest/userapproval.
+- Skillintegration commitriêng da10a91 local; Experiment02 đangchuẩnbịcommit/pushdraftPR13. Docs36generated/601links/diffcheck đạt; exportsregenerate. Khôngmerge dev/đóngSprint13/chuyểnSprint14. S13A01bản01Changesrequested,bản02Pending; A02–A04chưachốt.

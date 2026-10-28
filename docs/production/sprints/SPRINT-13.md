@@ -32,3 +32,7 @@ Không merge dev, đóng sprint hoặc chuyển Sprint14 trước khi chủ dự
 Standalone HTML/CSS/JS/SVG, không production import, không Unity game hoặc implementation generator cuối. Luồng New→Reveal→World→Preview/Journal kiểm UX với dữ liệu prototype. Một nhân vật/campaign; không chỉnh origin và không reroll tại Reveal. Hệ origin nhỏ phải giải thích được capability từ history; không giả rằng chọn một NPC trong roster đã là full life generator.
 
 Không giả lập lưu bền, sửa thuyền có conservation, NPC autonomy hoặc runtime knowledge adapter. Preview/result minh họa phải có nhãn UX. Không dùng LLM runtime. Điều kiện đạt lớp đầu: chạy được, tests phù hợp, không lỗi chặn, UI đã quan sát nếu có công cụ browser; thiếu quan sát phải ghi thật. Điều kiện final: **user chốt**.
+
+## Thử nghiệm02 — SPIN017
+
+Theo phản hồi đồ họa bản01 chưa ưng ý, thử hướng painterly raster và giao diện ưu tiên cảnh. Giữ bản01 để đối chiếu; [báo cáo02](sprint-13/EXPERIMENT-02-REPORT.md). Root dùng imagegen tạo tranh, ba workers art direction/UI/browser-check và hai critics code/UX; Pending user approval.
