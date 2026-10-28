@@ -30,3 +30,7 @@ Xem artifact ở kích thước target, không chỉ zoom lớn. Kiểm silhouet
 So sánh phương án bằng tiêu chí của game: bản sắc, khả năng đọc lựa chọn/hậu quả, mức nhất quán và chi phí sản xuất. Trình bày nhận xét mỹ thuật là nhận xét, không giả metric hay phản hồi playtest. Những mục chưa có bằng chứng giữ Unknown/Not assessed.
 
 Áp dụng approval register hiện hành. Riêng Sprint13, mọi phương án vẫn Pending user approval dù technical checks đạt; nhắc pending khi user muốn sang sprint mới. Không nhập policy hỏi phép trước từng lần viết file từ upstream: quyền tạo/sửa đã giao vẫn có hiệu lực. Giữ bản thử cũ, log spin thật; skill không tự mở sprint hoặc sinh thêm phương án ngoài mục tiêu đang giao.
+
+## Tạo mô hình3D — chỉ dẫn chủ dự án28/10/2026
+
+Từ lần tạo mô hình3D tiếp theo, dùng MCP Hyper3D đã cài làm đường tạo model. Blender/engine có thể dùng cho bố trí cảnh, camera, kiểm tra và render sau đó. Nếu MCP chưa hiện hoặc không truy cập được, ghi rõ tình trạng và khôi phục kết nối; không âm thầm thay bằng procedural mesh hoặc công cụ sinh model khác. Chủ dự án có thể chỉ định ngoại lệ rõ ràng. Experiment04/SPIN020 đang dựng bằng Blender trước chỉ dẫn này được tiếp tục hoàn thiện theo yêu cầu user, phải ghi đúng nguồn; không gán là modelHyper3D.

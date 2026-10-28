@@ -18,3 +18,7 @@ User đã yêu cầu đổi hướng hình ảnh của bản01; không suy thàn
 ## Thử nghiệm03 — SPIN019
 
 28/10/2026 user nói bản02 đẹp hơn nhiều nhưng màu có cảm giác AI dễ nhận ra, yêu cầu thử tiếp từ nhiều góc độ. Đây là **Changes requested về hình ảnh**, không phải Approved bản02. Bản03 có ba hướng A tự nhiên trời âm, B góc chéo gouache, C đồ họa nét khắc. Giữ01/02 làm tham chiếu; ba hướng mới đềuPending. [Báo cáo03](EXPERIMENT-03-REPORT.md).
+
+## Thử nghiệm04 — SPIN020
+
+User yêu cầu thử tiếp và có thể tạo view từ3D, đính kèm ảnh B bản03 làm tham chiếu. Chưa chốt B/A/C. Bản04 thử actual3D scene với nhiều camera, render và viewer; Pending. [Báo cáo04](EXPERIMENT-04-REPORT.md).

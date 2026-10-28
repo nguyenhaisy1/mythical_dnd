@@ -100,3 +100,7 @@ User giao Sprint13 ngày26/10/2026. Cơ cấu6vai trò:3worker,2critic độc l�
 **Riêng Sprint13: mọi sản phẩm Pending user approval cho đến khi chủ dự án chốt rõ.** Root/test/critic pass chỉ Technical reviewed, không Final accepted. Không tựmerge dev, đóngSprint13 hoặc chuyểnSprint14 khi còn mục chưa chốt. Khi user yêu cầu sangsprintmới, nhắc đầy đủ pending từ docs/production/sprints/sprint-13/APPROVALS.md và chờchốt; “tiếp tục” không là approval. Mỗi thử nghiệm/phươngán mới mở SPIN mới trongSprint13, giữ lịch sử và sản phẩm cũ; sửa cùngphươngán tiếp tụcspin. Featurecommit/push/draftPR cho review vẫn theo workflow, không main/tag/release.
 
 Thử nghiệm01/SPIN016 tại prototypes/sprint13/experiment-01; độc lập production. Sprintbrief docs/production/sprints/SPRINT-13.md.
+
+## Tạo mô hình3D — chỉ dẫn chủ dự án28/10/2026
+
+Từ lần tạo mô hình3D tiếp theo, dùng MCP Hyper3D đã cài làm đường tạo model. Blender/engine có thể dùng cho bố trí cảnh, camera, kiểm tra và render sau đó. Nếu MCP chưa hiện hoặc không truy cập được, ghi rõ tình trạng và khôi phục kết nối; không âm thầm thay bằng procedural mesh hoặc công cụ sinh model khác. Chủ dự án có thể chỉ định ngoại lệ rõ ràng. Experiment04/SPIN020 đang dựng bằng Blender trước chỉ dẫn này được tiếp tục hoàn thiện theo yêu cầu user, phải ghi đúng nguồn; không gán là modelHyper3D.

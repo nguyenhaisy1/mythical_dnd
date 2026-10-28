@@ -40,3 +40,7 @@ Theo phản hồi đồ họa bản01 chưa ưng ý, thử hướng painterly ra
 ## Thử nghiệm03 — SPIN019
 
 Theo phản hồi màu bản02 có cảm giác AI, tạo ba hướng khác camera, chất liệu và cách tổ chức màu; gallery trung tính cho so sánh cùng bản02. [Báo cáo03](sprint-13/EXPERIMENT-03-REPORT.md). Phần này chỉ thử art direction, không mở thêm gameplay hoặc tựduyệt sản phẩm.
+
+## Thử nghiệm04 — SPIN020
+
+Thử góc nhìn từ mô hình3D thật bằng Blender và browser viewer, cùng geometry cho ba camera. [Báo cáo04](sprint-13/EXPERIMENT-04-REPORT.md). Dùng ảnh B03 làm tham chiếu, không coi đó là user approval.

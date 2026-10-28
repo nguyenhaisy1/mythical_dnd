@@ -1289,3 +1289,53 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Workersdirection/gallery/checkerđãbàngiao; criticcodeHTTP/browser/source/artreview khôngblocker; criticUXvisualreview actual3images+gallery xácnhậnkhác camera/material/palette, findinglabelAnearphotorealđãsửa cảHTML+JS. Root táichạyfinalbrowser2viewports+HTTPcompareexit0 vànhìnảnhcompare1920.
 - Limitations: Anearphotohơnintenttranh, Bnhânvậtnhỏ/diorama, Cnhiềunét; khôngclaimAIundetectable,historyaccuracy,gameplay hoặchumanplaytest. Báocáo03 vàapprovalregister ghi phản hồi user02beautifulbutAIcolor=Changesrequested, khôngApproved.
 - Docs36generated/610links/diffcheck đạt;01/02nguyênvẹn,kernelkhôngđổi. Chuẩnbịexport/commit/pushdraftPR13, khôngmerge dev/đóngSprint13/Sprint14. Cả3directionschờuserchốt.
+
+
+### EVT-00098 | SPIN-019 | HANDOFF — Bàn giao ba hướng hình ảnh03 để user so sánh; draftPR13 và CI đạt
+
+<!-- worklog: {"id": "EVT-00098", "spin": "SPIN-019", "event": "HANDOFF", "at": "2026-10-28T12:05:03+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T12:05:03+07:00
+- Actor: /root
+
+- Experiment03/SPIN019 đủđiềukiệntrìnhuserxem:3rawPNG Aovercast/Bobliquegouache/Cwoodcut, neutralgallery fullview/sidecompare/reference02; prompt+manifesthashes. KhôngtuyênbốAIundetectablehoặcđãchốtthẩm mỹ.
+- Commit0632813c2bc13634d881ccffe059db909b992896 đãpush origin/feature/sprint-13-experiment-01 remoteSHAverified. DraftPR13 vẫn drafttrue, bodycậpnhật03. CIpush40635773310 vàPR40635778705success đúngHEAD. Khôngmerge dev/main/tag/release.
+- Finalbrowser2viewports1280/1920+HTTP02compareexit0;2criticsđộc lậptechnicalreviewđạt. LabelAactualnearphotođãsửa/táikiểm vàreporthashcậpnhật. Rootđãxem3generatedoutputs+gallerycompare1920. Docs36generated/610links; exports207inputs/14files/6156anchors/123tables/navigationđạt. Giữ01/02nguyênvẹn.
+- A01Exp02Changesrequestedtheouser,Exp03ABCđềuPending; A02/A03/A04chưachốt. HANDOFFđểuserđánhgiá, khôngđóngSprint13/Sprint14. HướngBrootđềxuấtđểthửcameragamechỉlàrecommendation khôngquyếtđịnhuser.
+- WORKLOGeventnày postcommitlocalđưacommitkếtiếp. Sảnphẩm prototypes/sprint13/experiment-03/index.html; report docs/production/sprints/sprint-13/EXPERIMENT-03-REPORT.md.
+
+
+### EVT-00099 | SPIN-020 | OPEN — Sprint13 thử nghiệm04 — bến sông 3D và nhiều camera trên cùng mô hình
+
+<!-- worklog: {"id": "EVT-00099", "spin": "SPIN-020", "event": "OPEN", "at": "2026-10-28T12:15:14+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T12:15:14+07:00
+- Actor: /root
+
+- Usergiao vòng thử nghiệm mới, gợi ý tạo viewtừ3D và đínhkèm ảnh B-gouache củaExp03. Đây là referencebố cục khônguserapprovaldirectionB. Lầntrướcturninterrupted chỉprobe môi trường,chưaOPEN nênnaymởSPIN020duynhất.
+- Experiment04/SPIN020: actualprocedural3D scene bằngBlender5.2.2LTS,3camera rendercùnggeometry, GLB vàofflineinteractiveviewer. Giữ03/02/01nguyênvẹn. Rootintegration/artdirection/docs/Git;3workers scene/viewer/checks,2critics sauimplementation theo4concurrentlimit.
+- Hyper3Dchưalộtrongcurrenttools; khôngclaimđãgọiRodin. CóBlenderthật nênbuildscene3Dthật,khôngimagegenảnhgiả3D. AllPendinguserapproval, khôngUnitygameplay/fullVS07/merge dev/Sprint14.
+
+
+### EVT-00100 | SPIN-020 | PROGRESS — Root tiếp quản sau quota, kiểm 3D thật và lưu quy tắc Hyper3D cho lần sau
+
+<!-- worklog: {"id": "EVT-00100", "spin": "SPIN-020", "event": "PROGRESS", "at": "2026-10-28T12:30:12+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T12:30:12+07:00
+- Actor: /root
+
+- Workers đãtạo actualBlender scene:26materialmeshes/43.887verts/62.454triangles;3PNG1280x900CPU24samples; GLB3.34MB+embeddedJS vàsourceblend. UIbundlepinnedThree0.186.1/esbuild0.28.2/license/localfileworks.
+- /root/s13_critic_code đãruntime/source kiểmindependent trước finalFOVfix; phát hiệnP2ignoredFOV. Scene/viewerworkers sửa metadataFOVdọc/eyeheight; sau đó họ vàcriticUXbịquota (reset16:40). Roottiếpquản bundle/checker/finalsource/docs, khônggọi rootselfreview làindependent.
+- Root finalbrowser2viewports exit0 cảpose/target/FOVconsistency vàorbit/zoom/keyboard/reset/wireframe/modal/images/text150/HTTP03. Rootxem renderoverview/eye+viewer thật; đangrefinecameraeye rộnghơn vìkhungcũchật. Independentvisualreview vẫnNotRun doquota.
+- User chỉđịnh từlầnsautạomodel3D dùngMCPHyper3D. ĐãlưuAGENTS/.agent/artdirectionref/HANDOFF; Blendercho bốtrí/camera/render. Vòng04đãdựngtrướcchỉdẫn được tiếp tục, ghinguồnproceduralBlenderkhôngRodin.
+- ScopevẫnSPIN020/Exp04, khôngmởsprint/spinmớicho fixcamera, khôngmerge dev/userapprovalclaim.
+
+
+### EVT-00101 | SPIN-020 | RESULT — Bản04 xem 3D thật và root checks đạt; phản biện cuối còn thiếu do quota
+
+<!-- worklog: {"id": "EVT-00101", "spin": "SPIN-020", "event": "RESULT", "at": "2026-10-28T12:31:45+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T12:31:45+07:00
+- Actor: /root
+
+- Rootfinalbrowser sau camera/FOVfix exit0:2viewports1280/1920,26meshes/62.454triangles, declaredpose/target/FOVtolerance1e-7, camerachangesactualpixels, orbit/zoom/keyboard/reset/wireframe/imageModal/focus/text150/HTTP03. Evidence tests/results/sprint13-experiment04/browser.json. Rootxem renderoverview/eye(viewnới30mmlens) vàvieweractualscreenshots.
+- ActualsceneGlB3.34MB/blend~0.95MB, PNG3x1280x900CyclesCPU24samples. GLB/hash/base64matchverifiedbycriticcodebeforefinal, noexternalnetwork/source models. ThreeMIT/pinneddeps/bundlemanifest đầyđủ. `.blend1`backuploạibỏ, buildsave_version0; khôngnode_modules/cachecommit.
+- Codecriticindependentinitial runtimeđạt nhưngP2FOVfix finaldoRoot; criticvisualquotaNotRun. Khôngclaimindependentfinalpassed. BáocáoCRITIC-UX-04ghi rõmissinggate+rootreviewphânbiệt, giữdraft vàuserpending.
+- Userfuture3D viaHyper3Dpolicy đãlưuAGENTS/.agent/skillref/HANDOFF/README; Exp04proceduralBlenderđược usercho tiếp tục khônggánRodin. Giữ01–03nguyênvẹn, coreUnitykhôngđổi.
+- Docs36generated/618links/skillvalidator/diffcheckđạt; exportregenerate vàdraftpush kếtiếp. Khôngmerge dev/đóngSprint13/Sprint14.
