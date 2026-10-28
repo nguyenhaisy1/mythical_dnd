@@ -1,6 +1,6 @@
 ---
 name: mythical-prototype
-description: "Plan or build bounded mythical_dnd gameplay/UX prototypes and technical spikes, then interpret real playtest evidence. Use to test random-origin engagement, non-combat choices or causal-world readability; not to implement the entire vertical slice automatically."
+description: "Plan or build bounded mythical_dnd gameplay/UX prototypes, game art direction and technical spikes, then interpret real playtest evidence. Use to test random-origin engagement, non-combat choices or causal-world readability; not to implement the entire vertical slice automatically."
 ---
 
 # Prototype Mythical
@@ -37,3 +37,7 @@ Mỗi session cần build/version, tester thực tế, tình huống, hành vi q
 Không có tester: báo chưa kiểm trải nghiệm và đưa protocol; không bịa tỷ lệ hài lòng. Có evidence: kết luận nên tiếp tục/sửa/thu hẹp/chưa đủ dữ liệu và task nhỏ tiếp theo. Nếu đổi baseline, cập nhật các consumer bị ảnh hưởng; không tự triển khai toàn roadmap hoặc rút gọn nghiên cứu gốc thành prototype spec.
 
 Ghi hypothesis/goal, actor thực hiện, scope, observations và quyết định sau thử nghiệm vào `WORKLOG.md` theo spin hiện tại. Chỉ append sự kiện thật; thiếu playtest thì ghi chưa có evidence, không tạo phản hồi mẫu như kết quả.
+
+## Thiết kế hình ảnh trong prototype
+
+Khi task cần visual direction, concept scene hoặc UI game, đọc [Game Art Direction](references/game-art-direction.md). Tạo artifact để so sánh theo mục tiêu trải nghiệm; không thay hình ảnh bằng mô tả. Dùng approval register hiện hành; technical review không thay user approval. Nguồn adaptation và license ở [Design Sources](../upstream/DESIGN-SOURCES.md).
