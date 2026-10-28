@@ -26,3 +26,7 @@ Lượt đầu script dùng equality số thực tuyệt đối cho camera và f
 ## Root tiếp quản tái kiểm C04 — 28/10
 
 Sau khi workers chạm quota, `/root` xác nhận metadata dùng FOV dọc suy từ sensor horizontal36mm, lens từng camera và aspect1280/900; viewer đã đọc data.fov và updateProjectionMatrix. Root bổ sung debug getter cameraFov đọc camera thật và kiểm browser so pose/target/FOV với metadata trong tolerance1e-7: hai viewport đều đạt. Eye camera được hạ còn1,7m trên mặt bank theo scene manifest. C04 đã được root sửa/tái kiểm; **chưa có lượt tái kiểm độc lập cho revision cuối**. Báo cáo review trước vẫn là evidence phạm vi đã nêu, không tự chuyển toàn bộ final verdict thành independent passed.
+
+## Bổ sung evidence tái kiểm độc lập C04
+
+/root/review đã chạy browser-check trên bản cuối và ghi ở [review bổ sung](CRITIC-UX-04.md): exit0 hai viewport, cameraFov/position/target ba preset khớpmetadata1e-7. C04 resolved có evidence độc lập. Các nhận xét mỹ thuật còn mở và userapproval vẫnPending.
