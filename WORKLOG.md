@@ -1218,3 +1218,74 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 - Workers /root/s13e2_art direction, /root/s13e2_ui interactiveUI, /root/s13e2_checks browser/README; rootgeneratedart/integration. Critics /root/s13_critic_code và /root/s13_critic_ux độc lập hoànthành. C02HTTPcompare/C03boatcopy resolved; UX P1panelcheartisan vàP2headingwhitespace resolved táikiểm28/10.
 - Root5/5Node và browser2viewports1280/1920 pass, sourceExp01unchanged; actualWorldscreenshot đã xem. Critic cuối1280text100/150/key/focus/nooverflow pass vàviewedscreenshot. Khônghumanplaytest/userapproval.
 - Skillintegration commitriêng da10a91 local; Experiment02 đangchuẩnbịcommit/pushdraftPR13. Docs36generated/601links/diffcheck đạt; exportsregenerate. Khôngmerge dev/đóngSprint13/chuyểnSprint14. S13A01bản01Changesrequested,bản02Pending; A02–A04chưachốt.
+
+
+### EVT-00092 | SPIN-017 | HANDOFF — Bản02 sẵn sàng để user xem; draftPR13 cập nhật và CI đạt
+
+<!-- worklog: {"id": "EVT-00092", "spin": "SPIN-017", "event": "HANDOFF", "at": "2026-10-28T10:24:59+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T10:24:59+07:00
+- Actor: /root
+
+- Bàn giaoExperiment02/SPIN017 ngày28/10: painterly PNG+immersiveUI+fullartview+comparisonlink. 3workers/2critics/rootthực đãghibáocáo; findingcode/UX resolved,5/5Node vàbrowser1280/1920 pass. Rootquan sátảnhWorldcuối. Khônghumanplaytest hoặcUnitygameplay.
+- Hai commits da10a91(skillintegration) vàe6d391862d8f92f488674f98adbbd8728aa813e6(Exp02) đãpush origin/feature/sprint-13-experiment-01; remoteSHAkhớpHEAD. DraftPR13 cậpnhậttitle/body cho2experiments, vẫn drafttrue. CIpush40626379217 vàPR40626382658success đúngHEAD. Khôngmerge dev/main/tag/release.
+- Exports204inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt; docs36generated/601links. Exp01nguyênvẹn, sourcearchive/corekhôngđổi. Assetprojectpath prototypes/sprint13/experiment-02/assets/ben-vac-painterly.png, promptbuilt-inimagegen ởGENERATION.md.
+- S13A01Exp01Changesrequested theo user; Exp02Pending. A02/A03/A04chưauserchốt. GiữSprint13mở, khôngchuyểnSprint14. HANDOFFchờnhậnxét khôngCLOSE/Finalaccepted. Logpostcommitlocalđưacommitkếtiếp.
+
+
+### EVT-00093 | SPIN-018 | OPEN — Kết nối Hyper3D MCP bằng OAuth
+
+<!-- worklog: {"id": "EVT-00093", "spin": "SPIN-018", "event": "OPEN", "at": "2026-10-28T10:29:45+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T10:29:45+07:00
+- Actor: /root
+
+- User giao cấu hình MCP hyper3d StreamableHTTP https://api.hyper3d.com/api/mcp OAuth; bảo toàn config khác, hỗ trợbrowserauthorization, verifyconnection vàlisttools.
+- Đã kiểm localCodexCLI supports mcp add/login; userconfigkhôngcóentryhyper3d. Backupprivate ~/.codex/backups/hyper3d-setup/config.before.toml, khôngrepo/secretoutput. Khôngsửdụngcreditgeneration trongtasksetup.
+- Đây là setupsupport mới, Sprint13 vẫnPending vàkhônguserapproval sảnphẩm.
+
+
+### EVT-00094 | SPIN-018 | RESULT — Hyper3D OAuth thành công, xác nhận9tools từ tiến trình Codex mới
+
+<!-- worklog: {"id": "EVT-00094", "spin": "SPIN-018", "event": "RESULT", "at": "2026-10-28T11:45:38+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T11:45:38+07:00
+- Actor: /root
+
+- Hoàn thành cấuhìnhhyper3d StreamableHTTP https://api.hyper3d.com/api/mcp. Appconfig ~/.codex/config.toml thêmđúngentry; đốichiếutoml với backup xácnhận mọithiếtlậpkhácgiữnguyên. SnapCLIcóconfigriêng ~/snap/codex/34/config.toml; entrygithubvẫncòn, hyper3dđượcthêmkhôngthaygithub.
+- Các lần OAuth bằng SnapCLI0.114.0 thấtbại trướcconsent với userreported 'Authorization request is invalid'; thêm scope vẫnfailed. Dùngtạm npm exec @openai/codex@0.165.0 vớiCIMD vàresource trongURL đãthànhcông; khôngnângcấpCLIglobal, khôngđổiservice_tier trongfile (overridechỉprocess). Khôngkhẳngđịnhđãcôlậpmộtnguyênnhân serverduynhất.
+- User xácnhận cấpquyền thànhcông; CLIreturn Successfully logged in vàmcp list enabled/OAuth. Read-only appserver mới initialize+MCPstatus/tool-discovery xácnhận authStatusoAuth và9tools. Evidence secretfree ignored tests/results/hyper3d-connection/tools.json.
+- Actualtools: rodin_generate,rodin_generate_agentic,rodin_generate_bang,rodin_generate_rigging,rodin_create_uploads,rodin_get_status,rodin_wait,rodin_get_result,rodin_list_animation_presets. Chưa chạy generation hoặc dùngcredits.
+- Currentthread ALL_TOOLS chưanạphyper3d; cầnmởlạiCodex/phiênmới đểdùngtools trongchat. Verifiedtools ởnewprocess, khôngclaimcurrentthreadhotreload. OAuthcredentialsdoCodexquảnlýkhôngghirepo/chat. NếuloginlạidùngCLI0.165.0hoặcmới hỗtrợCIMD/resource, khôngdùngSnapCLIcũchoauthorization.
+- Sprint13A01–A04vẫnchưachốt; khôngmerge dev hoặcđổiapproval vìkếtnốiMCP. WORKLOGlocalchưacommit/push.
+
+
+### EVT-00095 | SPIN-018 | CLOSE — Đóng cấu hình Hyper3D — finished; cần phiên mới để nạp tools
+
+<!-- worklog: {"id": "EVT-00095", "spin": "SPIN-018", "event": "CLOSE", "at": "2026-10-28T11:45:39+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T11:45:39+07:00
+- Actor: /root
+
+- SPIN018 finished trongscopeMCPsetup: namedentry/URL/OAuth đãverified, giữothersettings, hướngdẫnbrowserauthorizationhoànthành, live9toolslisted, restart/newsessionrequirementđãbáouser.
+- Khôngthực hiệngeneration. Bướcuser: mởlạiCodex/phiênmới đểnạpMCP rồi tiếptụcthửnghiệmSprint13khiđượcgiao. Userapprovalgameproducts giữPending. ChỉWORKLOGlocal thayđổitrongrepo; config/credentialslocalngoàirepo.
+
+
+### EVT-00096 | SPIN-019 | OPEN — Sprint13 thử nghiệm03 — ba góc nhìn và cách dùng màu khác nhau
+
+<!-- worklog: {"id": "EVT-00096", "spin": "SPIN-019", "event": "OPEN", "at": "2026-10-28T11:52:05+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T11:52:05+07:00
+- Actor: /root
+
+- Userphản hồi Exp02đẹp hơn nhiều nhưngmàu cócảmgiácAI dễnhậnra; yêu cầutiếp tục thửvànhiềugócđộ. Khôngcoi lời khen làApproved.
+- MởExperiment03/SPIN019 trongSprint13:3hướng A ánhsángâm trungtính ngangmắt/B gouachegócchéotừcao/C tranhkhắcmàugiớihạn. CùngbốicảnhBếnVạc, đổi camera/material/rendering/colorhierarchy thật khôngchỉlọcmàu. Giữ01/02nguyênvẹn.
+- /root tạoảnhbuilt-inimagegen,tíchhợp/kiểmtralớpđầu;3workers direction/gallery/browserQC và2critics độc lập sauvòngworkers theo4concurrentlimit. MCPHyper3dchưahiệntrongALL_TOOLSphiênnày; khôngclaimđãdùng3DhoặcCredits.
+- Deliverabletrangso sánh3ảnh+fullview+nguồn/prompt/limitations; khôngmởthêmgameplay. TấtcảPendinguserapproval; khôngmerge dev/Sprint14.
+
+
+### EVT-00097 | SPIN-019 | RESULT — Ba hướng hình ảnh và gallery so sánh qua kiểm tra; chờ chủ dự án chốt
+
+<!-- worklog: {"id": "EVT-00097", "spin": "SPIN-019", "event": "RESULT", "at": "2026-10-28T12:01:37+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T12:01:37+07:00
+- Actor: /root
+
+- Ba PNG built-inimage_gen đã tạo/lưu rawassets: A1672x940 (~3.16MB), B/C1672x941 (~3.40/3.98MB), manifestSHA256 vàfullprompts trongassets. Khôngediting02/CSSfilter hoặc Hyper3Dcall; currentthreadchưanạptoolHyper3D.
+- Workersdirection/gallery/checkerđãbàngiao; criticcodeHTTP/browser/source/artreview khôngblocker; criticUXvisualreview actual3images+gallery xácnhậnkhác camera/material/palette, findinglabelAnearphotorealđãsửa cảHTML+JS. Root táichạyfinalbrowser2viewports+HTTPcompareexit0 vànhìnảnhcompare1920.
+- Limitations: Anearphotohơnintenttranh, Bnhânvậtnhỏ/diorama, Cnhiềunét; khôngclaimAIundetectable,historyaccuracy,gameplay hoặchumanplaytest. Báocáo03 vàapprovalregister ghi phản hồi user02beautifulbutAIcolor=Changesrequested, khôngApproved.
+- Docs36generated/610links/diffcheck đạt;01/02nguyênvẹn,kernelkhôngđổi. Chuẩnbịexport/commit/pushdraftPR13, khôngmerge dev/đóngSprint13/Sprint14. Cả3directionschờuserchốt.

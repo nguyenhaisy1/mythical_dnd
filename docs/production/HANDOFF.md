@@ -64,3 +64,5 @@ Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai t
 ## Sprint13 — thử nghiệm, chưa nghiệm thu
 
 [Sprint13](sprints/SPRINT-13.md) đang thử hình ảnh/UX/campaign preview. [Các mục cần chốt](sprints/sprint-13/APPROVALS.md) do user quyết định; AI review không là final acceptance. Không chuyển Sprint14 hoặc merge dev trước khi user chốt. Mỗi phương án mới là spin mới.
+
+Sprint13 đang ở Experiment03/SPIN019: ba hướng hình ảnh A/B/C sau phản hồi màu bản02, xem [report03](sprints/sprint-13/EXPERIMENT-03-REPORT.md). Approval register vẫn là nguồn chốt;01/02giữ nguyên. Hyper3D setup đã verifiedOAuth riêng nhưng tool chưa lộ trong thread hiện tại; không claim đã dùng để tạo hình03.

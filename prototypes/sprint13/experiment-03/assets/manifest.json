@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-28",
+  "tool": "built-in image_gen",
+  "approval": "pending",
+  "prompts": "GENERATION.md",
+  "assets": [
+    {
+      "file": "a-overcast.png",
+      "width": 1672,
+      "height": 940,
+      "bytes": 3163885,
+      "sha256": "4d01e175fa1fe4fb3af094840d266d55bdda304a3cb6726be9d46a6339302081"
+    },
+    {
+      "file": "b-gouache.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 3399730,
+      "sha256": "96243aa0dd5556fd39979b840ca8b94fe48baf75b502b9d93bed08304598c4ff"
+    },
+    {
+      "file": "c-woodcut.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 3976470,
+      "sha256": "c7b11d51feaccdbc8de9a9291987b238d65ded56b85153675608dbed2041632e"
+    }
+  ]
+}

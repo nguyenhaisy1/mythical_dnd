@@ -36,3 +36,7 @@ Không giả lập lưu bền, sửa thuyền có conservation, NPC autonomy ho�
 ## Thử nghiệm02 — SPIN017
 
 Theo phản hồi đồ họa bản01 chưa ưng ý, thử hướng painterly raster và giao diện ưu tiên cảnh. Giữ bản01 để đối chiếu; [báo cáo02](sprint-13/EXPERIMENT-02-REPORT.md). Root dùng imagegen tạo tranh, ba workers art direction/UI/browser-check và hai critics code/UX; Pending user approval.
+
+## Thử nghiệm03 — SPIN019
+
+Theo phản hồi màu bản02 có cảm giác AI, tạo ba hướng khác camera, chất liệu và cách tổ chức màu; gallery trung tính cho so sánh cùng bản02. [Báo cáo03](sprint-13/EXPERIMENT-03-REPORT.md). Phần này chỉ thử art direction, không mở thêm gameplay hoặc tựduyệt sản phẩm.

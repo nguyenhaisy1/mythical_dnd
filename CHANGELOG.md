@@ -8,6 +8,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ### Sprint13 — thử nghiệm chưa được duyệt
 
+- Thử nghiệm03: ba hướng camera/chất liệu/màu khác nhau và gallery so sánh trung tính sau phản hồi màu bản02; built-inimagegen và prompt/provenance đầy đủ, vẫn chờ user chốt.
+
 - Thử nghiệm02: painterly raster Bến Vạc tạo bằng built-in imagegen, UI ưu tiên cảnh và xem toàn tranh; giữ bản01 để so sánh sau phản hồi đồ họa chưa ưng ý. Vẫn Pending user approval.
 
 - Bổ sung art direction và game design review vào mythical-prototype/mythical-validation; adaptation chọn lọc có pin nguồn và giữ MIT notices, không cài orchestration upstream.
