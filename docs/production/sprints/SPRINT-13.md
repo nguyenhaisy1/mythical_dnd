@@ -44,3 +44,7 @@ Theo phản hồi màu bản02 có cảm giác AI, tạo ba hướng khác camer
 ## Thử nghiệm04 — SPIN020
 
 Thử góc nhìn từ mô hình3D thật bằng Blender và browser viewer, cùng geometry cho ba camera. [Báo cáo04](sprint-13/EXPERIMENT-04-REPORT.md). Dùng ảnh B03 làm tham chiếu, không coi đó là user approval.
+
+## Thử nghiệm05 — SPIN021
+
+Tạo model bằng MCPHyper3D thật, kiểm vật liệu/geometry và viewer. Đầu raA lệch brief thành nhà thuyền; correction gặp lỗi submission chưa xác địnhID. [Báo cáo05](sprint-13/EXPERIMENT-05-REPORT.md) phân biệt technical pass, brief mismatch và provider state; không chốt mỹ thuật vì modelcompleted.

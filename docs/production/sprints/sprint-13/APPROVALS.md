@@ -22,3 +22,7 @@ User đã yêu cầu đổi hướng hình ảnh của bản01; không suy thàn
 ## Thử nghiệm04 — SPIN020
 
 User yêu cầu thử tiếp và có thể tạo view từ3D, đính kèm ảnh B bản03 làm tham chiếu. Chưa chốt B/A/C. Bản04 thử actual3D scene với nhiều camera, render và viewer; Pending. [Báo cáo04](EXPERIMENT-04-REPORT.md).
+
+## Thử nghiệm05 — SPIN021
+
+User giao tiếp tục, dùngMCPHyper3D theo quy tắc. ModelA có output thật nhưng lệch brief nhà thuyền; lượt sửa providererror không trảID và user chỉ thấy modelA trongMine. Không coi user xác nhận link modelA là approval. ModelA/ý tưởng nhà thuyền vẫnPending, brief xưởng sửa thuyền chưa đạt. [Báo cáo05](EXPERIMENT-05-REPORT.md).

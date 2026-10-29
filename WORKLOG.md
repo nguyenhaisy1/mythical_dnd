@@ -1360,3 +1360,64 @@ Skills chỉ hỗ trợ workflow; không có team/agent khác đang làm song so
 
 - /root/review đãtáikiểmđộclậpC04 bằng browser-check.py bảncuối exit0:2viewports,FOV/position/target3presetkhớpmetadata1e-7. Appendedownreport, khôngimplementationedit. RootsyncCRITIC-CODE/EXPERIMENTREPORTdẫnevidence C04resolved độc lập; P2visualkhôngđóng.
 - Từđâykhôngcònmissingreview gate doquota chobản04spatial/camerareview; khôngsuythànhfinalartapproval. Bản04đủtrìnhuser; vẫnPendingmọiquyếtđịnh.
+
+
+### EVT-00104 | SPIN-020 | HANDOFF — Bàn giao bản04 xoay camera3D thật; review và CI đạt, chờ user chốt
+
+<!-- worklog: {"id": "EVT-00104", "spin": "SPIN-020", "event": "HANDOFF", "at": "2026-10-28T12:42:43+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T12:42:43+07:00
+- Actor: /root
+
+- Bản04/SPIN020 đủtrìnhuserxem actual3Dcamera:26mesh/62.454triangles, sourceBlender+GLB+embeddedviewer và3render1280x900, orbit/zoom/presets/wireframe. RawnguồnproceduralBlenderkhôngHyper3D, khôngUnitygameplay.
+- Workers/rootintegrationcompleted; /root/s13_critic_code independentinitialreview, /root/review thaycriticvisual đãxem3render+B03+3screenshots vàindependentfinalC04browser retestexit0. P2visualgrounding/shadingdifferent/simplifieddiorama vẫnopen. Rootkhôngđềxuấtchốtmỹthuật04, khôngfakeuserapproval.
+- Commit5d9b398 vàdocsreviewdab49484024e598a65cdf3fec9580bf7eea0757b đãpush origin/feature/sprint-13-experiment-01, remoteSHAverified. DraftPR13vẫndrafttrue bodyđồngbộ. FinalCIpush40639391584 vàPR40639398218success đúngHEAD. Khôngmerge dev/main/tag/release.
+- Docs36generated/619links;exports210inputs/14HTML-DOCX/6156anchors/123tables/navigation đạt; noZIP/cache/node_modulescommit. Skill artdirectionvalid. Giữ01–03nguyênvẹn.
+- Đãlưuquytắcuser: từlầntạomodel3Dkếtiếp dùngMCPHyper3D, Blenderchobốtrí/camera/render. Userđãcho bản04đangdựng tiếp tụctrongscope hiệncó.
+- Handoffchờusernhậnxét; Sprint13mọiitemsPending/Changesrequested, khôngCLOSE/Sprint14. WORKLOGpostcommitlocaleventnàyđưacommitkếtiếp. Viewer prototypes/sprint13/experiment-04/index.html; report docs/production/sprints/sprint-13/EXPERIMENT-04-REPORT.md.
+
+
+### EVT-00105 | SPIN-021 | OPEN — Sprint13 thử nghiệm05 — model qua MCP Hyper3D và góc nhìn xưởng sửa thuyền
+
+<!-- worklog: {"id": "EVT-00105", "spin": "SPIN-021", "event": "OPEN", "at": "2026-10-28T12:48:53+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T12:48:53+07:00
+- Actor: /root
+
+- Usergiao tiếp tục thử nghiệmSprint13 sauExp04; áp dụngquytắc đãchốt tạomodel3DquaMCPHyper3D. MởExp05/SPIN021, giữ01–04nguyênvẹn, allPendingapproval.
+- LiveCodexMCPstatus xácnhậnhyper3dOAuth/9tools; currentALL_TOOLS chưaexposenames. Đãtìm endpointappserver mcpServer/tool/call trongschema0.165.0 đểgọiMCP quaCodexcredentialmanagement, khôngđọc/chéptoken hoặcđổicôngcụprocedural.
+- Scope: modelxưởngsửathuyền/singlecohesiveasset từHyper3D, bốtrí/camera/renderBlender cho phép, viewer/browser/evidence và2critics. Rootbridge/calls/integration;3workers direction/viewer/checks nếuquotaavailable; logactualactorskhôngbịa.
+- Khôngmua gói/release/merge dev/Sprint14. Generationchỉmộtrequestbanđầu,khôngautoresubmitnếutimeout; usertaskđãgiao tạo3DexperimenttheoMCP. Chi tiếtquota/provideroutcomechỉghisaukếtquảthật.
+
+
+### EVT-00106 | SPIN-021 | PROGRESS — Hyper3D tạo modelA lệch brief; lượt sửa lỗi provider, giữ trạng thái chưa xác định
+
+<!-- worklog: {"id": "EVT-00106", "spin": "SPIN-021", "event": "PROGRESS", "at": "2026-10-28T13:15:17+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T13:15:17+07:00
+- Actor: /root
+
+- ActualHyper3DMCPtoolcalls quaCodexappserver: readonlypresets succeeded; rodin_generate Gen2.5Medium/Raw60000 initialprompt908chars acceptedgen e7fe0cb0-45a6-4d85-9f87-63be17c5e6dc, waitcompletedpack5/5, getresultcompleted+PBRGLBdownload. Rawsource14.93MB SHA ccfee2bf6f0e764f11f312536d84b97001d27efa4a8b3b1e4fba2931c0c8e3c1. Khôngtokenread/directgenerationAPI/proceduralreplacement.
+- Rootviewoverviewactual +criticvisualindependent: đầu raA gộpmái/vách/thuyền thànhnhàthuyền, khôngđạtbriefrepairboat/twotrestles. GhiP1semanticfailed vàP2uniformwarm/smearedmaterial, khôngcoicompletedproviderlàacceptance. Retainattempt-a renders/provenance.
+- Rootmanualpromptcorrection953chars sauinspectcompletedA, khôngphải retrytimeout: secondrodin_generatereturnedINTERNAL_SERVER_ERROR req-39nj, 'submissionmayhaveoccurred', noID. Đãdừng khôngautoresubmit. UserbanđầugửiURLinitiale7fe, sauđóxácnhậnMinechỉcómodelA; secondproviderstatevẫnunknown,khôngbịaID/claimnocharge.
+- BridgeP2safeoutput/Timeoutmessageđãsửa,4offlinecontrols independentlypass. /root/reviewverifiedrawSHA/provider-source/exportSHA/base64chain, actualbrowser2viewports modelApass. Model1mesh/60000triangles/1material/3textures; Blenderonlyscale/placement/light/camera/render. NoS13approval.
+- Bản05viewertruthfullabelAfailedbrief, correctionunknown; no04fallback. Preparingreport/export/draftGit. ModelAtechnicalreadykhôngnghĩaartgoalđạt; mainrepairassetacceptancechưahoànthành.
+
+
+### EVT-00107 | SPIN-021 | RESULT — Bản05 có model MCP thật nhưng không đạt brief; lượt sửa chưa xác định do provider
+
+<!-- worklog: {"id": "EVT-00107", "spin": "SPIN-021", "event": "RESULT", "at": "2026-10-28T13:18:53+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-28T13:18:53+07:00
+- Actor: /root
+
+- Exp05 có đầu raAactualHyper3Dmodel đãbàn giao vàoofflineviewer. RawPBRdownload14.934MB,1mesh60ktriangles/1material/3maps. Blenderonlyimportscale/camera/render; mainexportSHA1161c36bb238e0a98ff382c79a22d61311ea5b3f23d5a4aec9f22bcf01ede27c vàbase64matchđượccriticđộclậpverified.
+- /root/reviewindependent4/4transporttests+browser2viewports+provenanceđạt; /root/s13e5_visualactual3renders+finalscreenshotconfirmedP1failed-to-brief/P2materialvẫnOPEN,UIlabelhonest. Rootđãxemrenderoverview vàviewer screenshotactual. Khôngpromoteassetacceptance hoặcUnitygameplay.
+- Correctionreq-39njambiguouserror/noID; userclarifiedMineonlyinitiale7fe. Khôngautoresubmit,khôngclaimchắcchắnjobchưatồn tại/creditstate. NoBoutputaccepted hoặcfakeID.
+- SourcebridgeCodexappserverMCP+runbook/CI4offlinecontrolchecksadded, notruntimegamedeps. Allprivateresponses/signedURLsstayignored0600. Publicproviderpageonlyaftercompleted; noaccounttokensrepo.
+- Docs36generated/630links/diffchecksđạt. Export/commit/pushdraftPR13 tiếp theo; markExp05partial/brieffailed+providerunknown, khôngmerge dev/đóngSprint13/Sprint14. Giữ01–04nguyênvẹn.
+
+
+### EVT-00108 | SPIN-021 | HANDOFF — Bàn giao partial vòng05; user chuyển sang ảnh mô phỏng trước khi dựng model
+
+<!-- worklog: {"id": "EVT-00108", "spin": "SPIN-021", "event": "HANDOFF", "at": "2026-10-29T12:37:41+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T12:37:41+07:00
+- Actor: /root
+
+Chủ dự án ngày29/10 chuyển hướng: chỉ cần ảnh mô phỏng game, không tiếp tục tạo model3D thật ở giai đoạn chọn ý tưởng. Bản05 giữ nguyên làm kết quả thử nghiệm partial: modelA nhà thuyền lệch brief, lỗi correction req-39nj chưa xác địnhID; không gửi lại generation. Hồ sơ kỹ thuật/browser/provenance và214inputs/14exports được kiểm; chưa nghiệmthu art, không merge dev/đóngSprint13. Tiếp theo mởSpin mới cho ảnh concept, lưu chỉ dẫn mới trong các nguồn policy liên quan.

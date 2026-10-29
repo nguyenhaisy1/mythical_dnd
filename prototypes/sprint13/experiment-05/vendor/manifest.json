@@ -1,0 +1,7 @@
+{
+  "three": "0.186.1",
+  "esbuild": "0.28.2",
+  "file": "viewer.bundle.js",
+  "sha256": "89331cebe62f22e91285364a090794f59506bc7d6711ac0b14122a26ad33742f",
+  "scope": "bundled local viewer only; no CDN or production dependency"
+}
