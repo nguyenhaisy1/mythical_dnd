@@ -4,12 +4,12 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Experiment01–06 → Experiment07 A/B/C (đồ họa và bối cảnh mới) | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–08, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
 | S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
-Khi có phương án mới, thêm dòng/tham chiếu thay thế có lịch sử, không coi phương án cũ bị từ chối nếu user chưa nói. Khi user yêu cầu sang sprint mới, nhắc các mục Pending/Changes requested; chỉ chuyển khi chốt rõ. “Tiếp tục” cho phép làm tiếp thử nghiệm, không là nghiệm thu.
+Khi có phương án mới, thêm tham chiếu vào thư viện với lịch sử rõ; không mặc định thay thế, loại hoặc đánh giá kém phương án cũ nếu user chưa nói. Nhận xét/finding chỉ áp dụng đúng phiên bản và phạm vi đã quan sát. Khi user yêu cầu sang sprint mới, nhắc các mục Pending/Changes requested; chỉ chuyển khi chốt rõ. “Tiếp tục” cho phép làm tiếp thử nghiệm, không là nghiệm thu.
 
 ## Thử nghiệm02 — SPIN017
 
@@ -36,3 +36,9 @@ User giao tiếp tục, dùngMCPHyper3D theo quy tắc. ModelA có output thật
 ## Thử nghiệm 07 — SPIN-023
 
 29/10 user yêu cầu “thử ý tưởng khác”, nhấn mạnh “thử cả đồ họa”. Vòng07 thử khắc gỗ/làng mùa nước, pixel art/xưởng đồng và giấy cắt/chợ hoặc đêm hội ven sông. Đây là yêu cầu tạo phương án mới, không phải approval bản06 hoặc quyết định canon/gameplay. Đổi cả phong cách và bối cảnh nên nhận xét cần phân biệt hai yếu tố; [báo cáo07](EXPERIMENT-07-REPORT.md) ghi evidence khi có. S13-A01–A04 giữ Pending/Changes requested;01–06 được giữ nguyên.
+
+## Thử nghiệm08 — SPIN-024 và cách hiểu thư viện
+
+29/10 user ghi nhận ý tưởng tốt dần, yêu cầu nghĩ thêm và làm rõ: các version để tham khảo; sang spin/thử nghiệm mới không có nghĩa bản cũ chắc chắn bị bỏ hoặc dở. Đây là chỉ dẫn giữ thư viện, **không phải final approval** cho A/B/C hoặc Sprint13. Phản hồi bản01 chưa ưng ý và các nhận xét lịch sử khác được giữ nguyên, không áp cho mọi phiên bản sau.
+
+Vòng08 thêm ba hướng trên cùng cảnh nhà chữa trị bên suối đồi: A hoạt hình2D, B thế giới dệt và C ảnh diện mạo3D cách điệu. [Báo cáo08](EXPERIMENT-08-REPORT.md). Thư viện01–08 cùng tồn tại; chỉ ghi chọn/loại/thay thế khi có quyết định rõ. S13-A01–A04 vẫn Pending/Changes requested theo đúng phản hồi đã có; không chuyển Sprint14.

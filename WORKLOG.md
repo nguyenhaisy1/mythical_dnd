@@ -1516,3 +1516,60 @@ Ba worker đã nhận việc và chạy song song: /root/s13e7_direction viết 
 Đã hoàn tất bộ ảnh07 để chủ dự án xem: A khắc gỗ trong làng mùa nước, B pixel art xưởng đúc đồng, C giấy cắt sinh hoạt đêm ven sông. Ba PNG1672×941RGB được tạo mới bằng built-inimage_gen, không hậu kỳ/model3D. Prompts/provenance và bản sao gốc lưu ởexperiment07. Gallery ảnh-only cóHUD minh họa theo từng bối cảnh, đổi ảnh/phím/modal/ẩnUI.
 Ba workers đã bàn giao; /root/s13e7_critic_code chạy Chrome thật ba viewport desktop/mobile/chữ150%, hashes/bytes/originals/HUD năm dòng theo từng cảnh/nút/phím/modal/focus/toggle/linklocal, khôngscript errors/requestngoài. /root/s13e7_critic_visual xem ba ảnh gốc và screenshotB/C, xác nhận đồ họa khác rõ06; không thấyP1cản việc so sánh. P2còn mở: A nétphụdày, B chưa chuẩngrid/paletteassetproduction, C người chìm trong tím/tối. Root xem cả ba output và screenshotB, kiểm sourcehash khớpreview. Review kỹ thuật không là approval.
 Docs đã đồng bộ report/handoff/sprint/approval/changelog/export, không sửa policy hoặc archive/GDD/canon/runtime. Checks:36generatedfiles/650authoredlinks; finalexports220inputs/14containers/6156anchors/123tables/navigation đạt. NoZIP/cache/secrets/model mới trongscope07. Tất cảS13-A01–A04 vẫnPending/Changesrequested; khôngmerge dev/Sprint14. Đổi cảbối cảnh lẫn đồ họa nên chưa quy sở thích chỉ cho một yếu tố. Tiếp theo pushdraftbranch/PR13 và xác nhậnCI, khôngrelease.
+
+
+### EVT-00119 | SPIN-023 | GIT — Đã push vòng07; PR13 vẫn draft, CI PR đạt đúng HEAD
+
+<!-- worklog: {"id": "EVT-00119", "spin": "SPIN-023", "event": "GIT", "at": "2026-10-29T13:11:48+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:11:48+07:00
+- Actor: /root
+
+Commit77317226382054ea1640f1d5311d7b89a5a6585e đã push origin/feature/sprint-13-experiment-01; remoteSHA khớpHEAD. DraftPR13 đã cập nhật, draft=true/base dev, khôngmerge. CI pull_request40827500956 completed/success đúngHEAD; push40827492718 cònin_progress ở lần kiểm cuối, không báo cảhai đãpass. Local browser/docs/export checks đã đạt. Khôngmain/tag/release. EventGit này cònlocal, đưa vào commit công việc kế tiếp theo workflow.
+
+
+### EVT-00120 | SPIN-023 | HANDOFF — Bàn giao ba ngôn ngữ đồ họa mới để chủ dự án xem và chọn hướng
+
+<!-- worklog: {"id": "EVT-00120", "spin": "SPIN-023", "event": "HANDOFF", "at": "2026-10-29T13:11:49+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:11:49+07:00
+- Actor: /root
+
+Bàn giao ba ảnh và gallery07: prototypes/sprint13/experiment-07/index.html; preview http://127.0.0.1:8016/experiment-07/ đang HTTP200, server chỉbind127.0.0.1 vàscope prototypes/sprint13. Có PNG/prompt/provenance và hai review thật. Root đề nghị user xem A về bản sắc, B về cảm giácRPG, C về chuyệnkể; không tựchốt. Ba P2 mỹthuật cònmở, mọiS13-A01–A04 vẫnPending/Changesrequested; khôngđóngSprint13/Sprint14. Không tạo model, không thêm canon/runtime. Giữ01–06. WORKLOG GIT/HANDOFF cuối cònlocal saucommit; khôngcommitvònglặp chỉđểtựghihash.
+
+
+### EVT-00121 | SPIN-024 | OPEN — Sprint13 thử nghiệm08 — mở thêm phiên bản tham khảo, không loại bản cũ
+
+<!-- worklog: {"id": "EVT-00121", "spin": "SPIN-024", "event": "OPEN", "at": "2026-10-29T13:26:42+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:26:42+07:00
+- Actor: /root
+
+Chủ dự án ghi nhận ý tưởng tốt dần và yêu cầu nghĩ thêm, đồng thời làm rõ mọi vòng là version tham khảo: spin/thử nghiệm mới không mặc định loại hoặc chê bản cũ. MởExperiment08, ba hướng ảnh cùng cảnh nhà chữa trị trên đồi: A hoạt hình nét rõ/mảng bóng gọn, B thế giới dệt bằng sợi/vải, C diện mạo3D cách điệu hình khối rõ. Cùng cảnh để quan sát đồ họa thuận tiện hơn, không biến thành benchmark kiểm soát hoàn toàn. Tất cả ảnh-only, khôngHyper3D/Blender/model3D. Giữ01–07 như thư viện tham khảo; lời khen không là chốtA/B/C haySprint13. Ba workers, hai critics luân phiên vàroot theo workflow. Khôngmerge dev/Sprint14.
+
+
+### EVT-00122 | SPIN-024 | ASSIGN — Ba worker tạo brief, gallery và lưu nguyên tắc thư viện tham khảo
+
+<!-- worklog: {"id": "EVT-00122", "spin": "SPIN-024", "event": "ASSIGN", "at": "2026-10-29T13:29:08+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:29:08+07:00
+- Actor: /root
+
+Đã giao ba worker: /root/s13e8_direction artdirection/README; /root/s13e8_gallery gallery08 và liên kết thư viện01–07; /root/s13e8_docs lưu policy tham khảo bổ sung và đồng bộ hồ sơ. Root tạo artwork bằng built-inimage_gen, lưu provenance, tích hợp và kiểm lớp đầu. Hai critic độc lập chạy lượt sau khi artifact sẵn sàng. Ownership rõ, không nói sáu actor đồng thời. Không thay nội dung bản cũ hoặc suy user đã chọn một hướng từ lời khen.
+
+
+### EVT-00123 | SPIN-024 | PROGRESS — Ba phiên bản tham khảo08 đã tạo; giữ nguyên thư viện cũ và review bổ sung
+
+<!-- worklog: {"id": "EVT-00123", "spin": "SPIN-024", "event": "PROGRESS", "at": "2026-10-29T13:34:15+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:34:15+07:00
+- Actor: /root
+
+Đã tạo và xem trực tiếp3ảnh08: A nét hoạt hình/mảng bóng, B cảnh vật bằng sợi/thêu, C hình khối có diện mạo3D. Tất cả1672×941RGB, sao chép nguyênPNG, không hậu kỳ, không model3D. Cùngbrief nhà bênsuối/cầu/lốiđi/người mangthảo mộc và ngườiđợi trênhiên; ảnh độc lập nên bố trí/góc nhìn vẫnkhác, khôngsamegeometry. Prompt đầyđủ/provenance/hash lưu08. Root nhận thấyB khácchấtliệurõ, A/C gầnnhauvềbốcụcvàcảnhvật nhưngkhácnét/phẳng/khối. Đây làquan sátchứkhôngxếphạngloạibản. Hai critics đãnhậnartifact; gallery08cóbảyliênkếtthamkhảo01–07 vàpolicygiữmọiversion.
+
+
+### EVT-00124 | SPIN-024 | RESULT — Thêm ba phiên bản08 và lưu nguyên tắc thư viện; các bản trước giữ nguyên
+
+<!-- worklog: {"id": "EVT-00124", "spin": "SPIN-024", "event": "RESULT", "at": "2026-10-29T13:41:34+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:41:34+07:00
+- Actor: /root
+
+Vòng08 bổ sung ba ảnh tham khảo cùng brief nhà bên suối: A nét hoạt hình/mảng bóng, B thế giới sợi/thêu, C hình khối có diện mạo3D. Mỗi PNG1672×941RGB được tạo mới bằng built-inimage_gen và sao chép nguyên bytes, prompt/provenance có thật; không hậu kỳ hoặc model3D. Gallery có nhãn thư viện và bảy liên kết01–07; giữ nguyên artwork/hồ sơ cũ.
+Ba workers hoàn tất đúng ownership; hai critic độc lập đã review. /root/s13e8_critic_code chạy Chrome ba viewport desktop/mobile/chữ150%, ảnh/hash/bytes/originals/HUD chung/phím/modal/focus/toggle và bảy liên kết lịch sử; không pageerror hoặc requestngoài. /root/s13e8_critic_visual xem baPNG và hai screenshot, ghi lợi ích/đánh đổi: B khác chất liệu rõ nhưng nổi/dày, A/C gần nhau hơn, A nền chi tiết và C cách điệu chưa đồng nhất. Không xếp hạng loại bỏ hoặc gọi toàn bộ ý tưởng thất bại. Root xem output và galleryB; sourcehash HTML/CSS/JS khớp review.
+Đã lưu nguyên tắc user29/10 vàoAGENTS/.agent/artreference/handoff/sprint/approval/changelog: spin mới không mặc định bỏ/thay/chê bản cũ; chỉ ghi chọn/loại khi user nói rõ, giữ phản hồi lịch sử thật. Lời khen không bị suy thành finalapproval. Không sửa archive/GDD/canon/runtime/save/schema/VERSION.
+Checks:36generateddocs/659authoredlinks, stagedscope/secretpattern scan23files; finalexports223inputs/14containers/6156anchors/123tables/navigation đạt. Export không là visual/game acceptance. Tất cả phiên bản vẫnthamkhảo/Pending, khôngmerge dev hoặcchuyểnSprint14. Tiếp theo commit/pushdraftPR13 và xác nhậnCI; khôngmain/tag/release.

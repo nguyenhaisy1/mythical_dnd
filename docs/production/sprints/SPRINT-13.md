@@ -58,3 +58,9 @@ Theo chỉ dẫn mới 29/10, tiếp tục thử ý tưởng bằng ảnh 2D ho�
 ## Thử nghiệm 07 — SPIN-023: đổi ngôn ngữ đồ họa và bối cảnh
 
 Theo yêu cầu thử ý tưởng khác, bao gồm cả đồ họa, vòng07 thử khắc gỗ màu phẳng, pixel art và giấy cắt nhiều lớp. Ba concept lần lượt đặt ở làng mùa nước/chuyển thóc, xưởng đúc đồng và chợ hoặc đêm hội ven sông; chưa chốt canon hoặc đặc tả gameplay. Đây không phải chỉ đổi camera/palette của cảnh sửa thuyền. Vì đổi cả bối cảnh, chưa thể tách tác động của phong cách khỏi chủ đề khi so sánh. [Báo cáo07](sprint-13/EXPERIMENT-07-REPORT.md) giữ evidence thật và giới hạn; mọi phương án Pending, không model3D thật, không tự mở Sprint14.
+
+## Thử nghiệm08 — SPIN-024: thêm phiên bản, cùng cảnh để xem đồ họa
+
+Theo yêu cầu nghĩ thêm và làm rõ ý nghĩa các version, vòng08 bổ sung ba hướng ảnh trên cùng tình huống hư cấu tại nhà chữa trị bên suối đồi: nét hoạt hình2D/mảng bóng gọn, thế giới như dệt bằng sợi/vải và diện mạo3D cách điệu hình khối rõ. Chỉ tạo raster xem trước; không dựng model3D, triển khai chữa trị hoặc chốt canon. Cùng một ý tưởng cảnh giúp xem đồ họa thuận tiện hơn, nhưng ảnh tạo riêng không có cùng geometry hoặc mọi biến số được kiểm soát. [Báo cáo08](sprint-13/EXPERIMENT-08-REPORT.md).
+
+Các vòng01–08 là thư viện tham khảo cùng được giữ. Thử nghiệm mới không mặc định thay thế, loại hoặc đánh giá kém bản cũ; phản hồi/finding gắn đúng phiên bản và phạm vi. Giữ nhận xét lịch sử thật; lời khen tiến triển không tự là approval. Mọi phương án chưa được chốt vẫn Pending user approval, không đóng Sprint13 hoặc mở Sprint14.

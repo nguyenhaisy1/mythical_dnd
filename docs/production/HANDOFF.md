@@ -84,3 +84,9 @@ Experiment 06/SPIN-022 chuyển sang ba hướng ảnh: tranh 2D góc chéo, c�
 ## Sprint 13 — vòng07 thử cả ngôn ngữ đồ họa
 
 Yêu cầu tiếp theo ngày29/10 nhấn mạnh phải thử cả đồ họa. Experiment07/SPIN-023 mở ba concept ảnh với phong cách và bối cảnh khác nhau: khắc gỗ/làng mùa nước, pixel art/xưởng đúc đồng, giấy cắt/chợ hoặc đêm hội ven sông. [Báo cáo07](sprints/sprint-13/EXPERIMENT-07-REPORT.md) ghi phạm vi và evidence khi đã thực hiện. Đây là concept hư cấu chưa chốt canon; thay cả cảnh lẫn phong cách nên không quy sở thích chỉ cho đồ họa. Giữ01–06, tiếp tục ảnh-only và Pending user approval; không merge dev hoặc chuyển Sprint14.
+
+## Sprint13 — thư viện tham khảo và vòng08
+
+Chủ dự án làm rõ ngày29/10: mở spin/thử nghiệm mới không mặc định bỏ hoặc chê bản cũ. Giữ các phiên bản như một thư viện tham khảo, nhận xét theo đúng artifact/phạm vi và chỉ ghi quyết định chọn/loại khi user nói rõ. Lời khen ý tưởng tốt dần không tự chốt một hướng hoặc kết thúc Sprint13. Phản hồi lịch sử thực tế, gồm bản01 chưa ưng ý, vẫn giữ nguyên.
+
+Experiment08/SPIN-024 bổ sung ba hướng trên cùng cảnh nhà chữa trị bên suối đồi: hoạt hình2D với nét/mảng bóng gọn, thế giới dệt bằng sợi/vải, và ảnh có diện mạo3D hình khối rõ. [Báo cáo08](sprints/sprint-13/EXPERIMENT-08-REPORT.md) ghi phạm vi và evidence thực tế khi có; ảnh-only, không tạo model, không chốt canon hoặc hoạt động chữa trị. Thư viện01–08 cùng được giữ, mọi mục Sprint13 vẫn chờ chủ dự án chốt; không merge dev hoặc chuyển Sprint14.
