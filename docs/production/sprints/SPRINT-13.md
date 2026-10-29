@@ -53,3 +53,8 @@ Tạo model bằng MCPHyper3D thật, kiểm vật liệu/geometry và viewer. �
 ## Thử nghiệm 06 — SPIN-022: xem trước bằng ảnh
 
 Theo chỉ dẫn mới 29/10, tiếp tục thử ý tưởng bằng ảnh 2D hoặc ảnh có diện mạo 3D, không tạo model 3D thật. Ba hướng cùng tình huống sửa thuyền ở Bến Vạc: tranh 2D góc chéo, giả lập 3D gần tầm người và 2.5D nhìn ngang. Ảnh được tạo riêng, không chứng minh cùng geometry hoặc gameplay. [Báo cáo 06](sprint-13/EXPERIMENT-06-REPORT.md) và approval register giữ trạng thái chưa chốt. Không gọi Hyper3D/Blender cho vòng xem trước này; quy tắc Hyper3D chỉ dùng khi được giao task model thật trong tương lai.
+
+
+## Thử nghiệm 07 — SPIN-023: đổi ngôn ngữ đồ họa và bối cảnh
+
+Theo yêu cầu thử ý tưởng khác, bao gồm cả đồ họa, vòng07 thử khắc gỗ màu phẳng, pixel art và giấy cắt nhiều lớp. Ba concept lần lượt đặt ở làng mùa nước/chuyển thóc, xưởng đúc đồng và chợ hoặc đêm hội ven sông; chưa chốt canon hoặc đặc tả gameplay. Đây không phải chỉ đổi camera/palette của cảnh sửa thuyền. Vì đổi cả bối cảnh, chưa thể tách tác động của phong cách khỏi chủ đề khi so sánh. [Báo cáo07](sprint-13/EXPERIMENT-07-REPORT.md) giữ evidence thật và giới hạn; mọi phương án Pending, không model3D thật, không tự mở Sprint14.

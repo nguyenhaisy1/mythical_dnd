@@ -79,3 +79,8 @@ Exp05/SPIN021 đã dùngMCPHyper3D thật qua [client và runbook](../runbooks/H
 Chủ dự án 29/10 xác nhận chỉ cần ảnh để xem game có thể trông như thế nào; ảnh 2D hoặc diện mạo 3D đều được. **Không tiếp tục tạo model 3D thật ở giai đoạn chọn ý tưởng.** Chỉ dẫn Hyper3D 28/10 giữ cho task model thật nếu được giao sau này, không áp vào ảnh giả lập 3D. Experiment 05 và lỗi lượt sửa chưa xác định ID được giữ nguyên làm lịch sử, không tự gửi lại.
 
 Experiment 06/SPIN-022 chuyển sang ba hướng ảnh: tranh 2D góc chéo, cảnh giả lập 3D gần tầm người và 2.5D nhìn ngang. [Báo cáo 06](sprints/sprint-13/EXPERIMENT-06-REPORT.md) ghi ba ảnh thực tế, hai review độc lập và browser evidence; đây không phải game chạy hoặc ba camera của cùng scene 3D. Approval register vẫn quyết định các mục cần chủ dự án chốt; không merge dev, đóng Sprint 13 hoặc chuyển Sprint 14.
+
+
+## Sprint 13 — vòng07 thử cả ngôn ngữ đồ họa
+
+Yêu cầu tiếp theo ngày29/10 nhấn mạnh phải thử cả đồ họa. Experiment07/SPIN-023 mở ba concept ảnh với phong cách và bối cảnh khác nhau: khắc gỗ/làng mùa nước, pixel art/xưởng đúc đồng, giấy cắt/chợ hoặc đêm hội ven sông. [Báo cáo07](sprints/sprint-13/EXPERIMENT-07-REPORT.md) ghi phạm vi và evidence khi đã thực hiện. Đây là concept hư cấu chưa chốt canon; thay cả cảnh lẫn phong cách nên không quy sở thích chỉ cho đồ họa. Giữ01–06, tiếp tục ảnh-only và Pending user approval; không merge dev hoặc chuyển Sprint14.

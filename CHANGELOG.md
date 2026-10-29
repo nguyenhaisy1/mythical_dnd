@@ -8,6 +8,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ### Sprint13 — thử nghiệm chưa được duyệt
 
+- Thử nghiệm07 mở ba hướng đồ họa khác nhau: khắc gỗ, pixel art và giấy cắt nhiều lớp, đồng thời đổi bối cảnh để khám phá ý tưởng ngoài cảnh sửa thuyền. Concept hư cấu chưa chốt canon, ảnh-only và Pending user approval.
+
 - Thử nghiệm 06 chuyển sang ảnh mô phỏng game để so sánh ý tưởng theo chỉ dẫn 29/10; không tạo model 3D thật trong giai đoạn chọn hướng. Quy tắc Hyper3D giữ cho task model thật nếu được giao về sau; mọi phương án vẫn chờ chủ dự án chốt.
 
 - Thử nghiệm05 dùng Hyper3D MCP thật, giữ PBR/provenance và đầu raA lệch brief để đánh giá; ghi lỗi correction chưa xác định, không tự tạo trùng. Thêm client app-server và bốn kiểm tra offline transport/privacy; không đổi runtime game.
