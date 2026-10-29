@@ -4,7 +4,7 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Experiment01 → Experiment02 → Experiment03 A/B/C | Changes requested; bản03 Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Experiment01–05 → Experiment06 A/B/C (ảnh mô phỏng) | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
 | S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
@@ -26,3 +26,8 @@ User yêu cầu thử tiếp và có thể tạo view từ3D, đính kèm ảnh 
 ## Thử nghiệm05 — SPIN021
 
 User giao tiếp tục, dùngMCPHyper3D theo quy tắc. ModelA có output thật nhưng lệch brief nhà thuyền; lượt sửa providererror không trảID và user chỉ thấy modelA trongMine. Không coi user xác nhận link modelA là approval. ModelA/ý tưởng nhà thuyền vẫnPending, brief xưởng sửa thuyền chưa đạt. [Báo cáo05](EXPERIMENT-05-REPORT.md).
+
+
+## Thử nghiệm 06 — SPIN-022
+
+29/10 user làm rõ mục tiêu: không muốn tạo model 3D thật ở bước này; yêu cầu ảnh giả lập game để xem trước, có thể 2D hoặc diện mạo 3D. Đây là **quyết định về cách thử nghiệm**, không phải duyệt hình ảnh/camera/màu hay kết quả Sprint 13. Vòng 06 thử ba hướng ảnh A góc chéo 2D, B giả lập 3D gần tầm người, C 2.5D nhìn ngang; ảnh tạo riêng, không cùng scene 3D. [Báo cáo 06](EXPERIMENT-06-REPORT.md). S13-A01–A04 vẫn Pending/Changes requested; không mở Sprint 14.

@@ -218,3 +218,9 @@ Thử nghiệm01/SPIN016 tại prototypes/sprint13/experiment-01; độc lập p
 ## Tạo mô hình3D — chỉ dẫn chủ dự án28/10/2026
 
 Từ lần tạo mô hình3D tiếp theo, dùng MCP Hyper3D đã cài làm đường tạo model. Blender/engine có thể dùng cho bố trí cảnh, camera, kiểm tra và render sau đó. Nếu MCP chưa hiện hoặc không truy cập được, ghi rõ tình trạng và khôi phục kết nối; không âm thầm thay bằng procedural mesh hoặc công cụ sinh model khác. Chủ dự án có thể chỉ định ngoại lệ rõ ràng. Experiment04/SPIN020 đang dựng bằng Blender trước chỉ dẫn này được tiếp tục hoàn thiện theo yêu cầu user, phải ghi đúng nguồn; không gán là modelHyper3D.
+
+## Xem trước ý tưởng bằng ảnh — chỉ dẫn chủ dự án 29/10/2026
+
+Ở giai đoạn chọn ý tưởng hiện tại, tạo **ảnh mô phỏng game**, có thể là tranh 2D hoặc ảnh mang diện mạo 3D; không tạo model 3D thật chỉ để trình bày ý tưởng. Chỉ dẫn này thay cách triển khai bằng model ở Experiment 05, không yêu cầu xử lý tiếp lượt sửa Hyper3D đang chưa xác định ID. Dùng ảnh concept để chủ dự án xem bối cảnh, góc nhìn, phong cách và giao diện minh họa trước; ghi rõ ảnh không phải game đang chạy hoặc render từ một scene 3D đã dựng. Không tự gọi Hyper3D/Blender hay xây pipeline 3D cho yêu cầu thử hình ảnh.
+
+Quy tắc 28/10 về MCP Hyper3D chỉ áp dụng khi chủ dự án giao lại task **tạo model 3D thật** trong tương lai; không buộc dùng Hyper3D cho ảnh có vẻ 3D. Giữ các thử nghiệm cũ và nguồn gốc thật. Experiment 06/SPIN-022 dùng ảnh mô phỏng và gallery để so sánh; mọi phương án Sprint 13 vẫn Pending user approval. Việc đổi cách xem trước không phải duyệt mỹ thuật hoặc cho phép chuyển Sprint 14.

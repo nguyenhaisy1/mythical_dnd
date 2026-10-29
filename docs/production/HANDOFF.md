@@ -72,3 +72,10 @@ Sprint13 chuyển sang Experiment04/SPIN020 theo yêu cầu thử tiếp view t�
 Chỉ dẫn user28/10: từ lần tạo model3D sauExp04 dùngMCPHyper3D; Blender dùng bố trí/camera/render. Khả năng kết nối và nguồn asset phải ghi thật, không tự thay công cụ nếu MCP chưa nạp.
 
 Exp05/SPIN021 đã dùngMCPHyper3D thật qua [client và runbook](../runbooks/HYPER3D-MCP.md). Xem [report05](sprints/sprint-13/EXPERIMENT-05-REPORT.md): modelAcompleted nhưng lệchbrief; correction submissionambiguous khôngautoresubmit. Mọi sản phẩmSprint13 vẫnchưauserchốt.
+
+
+## Sprint 13 — ảnh mô phỏng trước, chưa dựng model tiếp
+
+Chủ dự án 29/10 xác nhận chỉ cần ảnh để xem game có thể trông như thế nào; ảnh 2D hoặc diện mạo 3D đều được. **Không tiếp tục tạo model 3D thật ở giai đoạn chọn ý tưởng.** Chỉ dẫn Hyper3D 28/10 giữ cho task model thật nếu được giao sau này, không áp vào ảnh giả lập 3D. Experiment 05 và lỗi lượt sửa chưa xác định ID được giữ nguyên làm lịch sử, không tự gửi lại.
+
+Experiment 06/SPIN-022 chuyển sang ba hướng ảnh: tranh 2D góc chéo, cảnh giả lập 3D gần tầm người và 2.5D nhìn ngang. [Báo cáo 06](sprints/sprint-13/EXPERIMENT-06-REPORT.md) ghi ba ảnh thực tế, hai review độc lập và browser evidence; đây không phải game chạy hoặc ba camera của cùng scene 3D. Approval register vẫn quyết định các mục cần chủ dự án chốt; không merge dev, đóng Sprint 13 hoặc chuyển Sprint 14.

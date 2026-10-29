@@ -48,3 +48,8 @@ Thử góc nhìn từ mô hình3D thật bằng Blender và browser viewer, cùn
 ## Thử nghiệm05 — SPIN021
 
 Tạo model bằng MCPHyper3D thật, kiểm vật liệu/geometry và viewer. Đầu raA lệch brief thành nhà thuyền; correction gặp lỗi submission chưa xác địnhID. [Báo cáo05](sprint-13/EXPERIMENT-05-REPORT.md) phân biệt technical pass, brief mismatch và provider state; không chốt mỹ thuật vì modelcompleted.
+
+
+## Thử nghiệm 06 — SPIN-022: xem trước bằng ảnh
+
+Theo chỉ dẫn mới 29/10, tiếp tục thử ý tưởng bằng ảnh 2D hoặc ảnh có diện mạo 3D, không tạo model 3D thật. Ba hướng cùng tình huống sửa thuyền ở Bến Vạc: tranh 2D góc chéo, giả lập 3D gần tầm người và 2.5D nhìn ngang. Ảnh được tạo riêng, không chứng minh cùng geometry hoặc gameplay. [Báo cáo 06](sprint-13/EXPERIMENT-06-REPORT.md) và approval register giữ trạng thái chưa chốt. Không gọi Hyper3D/Blender cho vòng xem trước này; quy tắc Hyper3D chỉ dùng khi được giao task model thật trong tương lai.

@@ -1,6 +1,8 @@
 # Hyper3D MCP trong quy trình làm asset
 
-Chủ dự án yêu cầu từ lần tạo model3D sauExp04 dùng MCPHyper3D. Đây là công cụ authoring offline; không thêm LLM/network vào gameplay. Blender có thể nhập, bố trí, camera và render sau khi có model.
+**Giai đoạn hiện tại — cập nhật 29/10/2026:** chủ dự án chỉ yêu cầu ảnh mô phỏng để xem trước ý tưởng game; không tạo model 3D thật. Ảnh mang diện mạo 3D vẫn là ảnh concept, không cần gọi Hyper3D hoặc dựng Blender. Quy trình dưới đây chỉ dùng khi có task tạo model 3D thật được giao lại trong tương lai.
+
+Chỉ dẫn 28/10 về đường tạo model qua MCP Hyper3D được giữ cho các task model thật đó. Đây là công cụ authoring offline; không thêm LLM/network vào gameplay. Blender có thể nhập, bố trí, camera và render sau khi có model trong task tương ứng. Không tiếp tục request correction của Experiment 05 chỉ vì runbook có sẵn lệnh generation.
 
 ## Kết nối và client
 
