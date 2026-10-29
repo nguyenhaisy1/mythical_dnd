@@ -64,3 +64,13 @@ Theo yêu cầu thử ý tưởng khác, bao gồm cả đồ họa, vòng07 th�
 Theo yêu cầu nghĩ thêm và làm rõ ý nghĩa các version, vòng08 bổ sung ba hướng ảnh trên cùng tình huống hư cấu tại nhà chữa trị bên suối đồi: nét hoạt hình2D/mảng bóng gọn, thế giới như dệt bằng sợi/vải và diện mạo3D cách điệu hình khối rõ. Chỉ tạo raster xem trước; không dựng model3D, triển khai chữa trị hoặc chốt canon. Cùng một ý tưởng cảnh giúp xem đồ họa thuận tiện hơn, nhưng ảnh tạo riêng không có cùng geometry hoặc mọi biến số được kiểm soát. [Báo cáo08](sprint-13/EXPERIMENT-08-REPORT.md).
 
 Các vòng01–08 là thư viện tham khảo cùng được giữ. Thử nghiệm mới không mặc định thay thế, loại hoặc đánh giá kém bản cũ; phản hồi/finding gắn đúng phiên bản và phạm vi. Giữ nhận xét lịch sử thật; lời khen tiến triển không tự là approval. Mọi phương án chưa được chốt vẫn Pending user approval, không đóng Sprint13 hoặc mở Sprint14.
+
+## Thử nghiệm09 — SPIN-025: đồ họa xuyên nhân vật và UI
+
+Theo yêu cầu táo bạo hơn và đồng bộ diện mạo toàn game, vòng09 thử ba bảng concept sơn mài sống, phù điêu đồng và mực đen/trắng+nét đỏ. Mỗi hướng cần thể hiện cùng ngôn ngữ qua thế giới, nhân vật toàn thân/chân dung, vật phẩm/icon và UI hội thoại/túi đồ/nhật ký, thay vì chỉ có phong cảnh. Gallery trung tính phục vụ xem bảng; UI raster là minh họa, không là chức năng gameplay hoặc character creator chỉnh origin. [Báo cáo09](sprint-13/EXPERIMENT-09-REPORT.md) ghi phạm vi và evidence thật. Chỉ tạo ảnh, giữ01–08 làm tham khảo, mọi hướng Pending; không tự mởSprint14.
+
+## Thử nghiệm10 — SPIN-026: số lượng theo ý tưởng
+
+Theo yêu cầu tiếp tục sáng tạo và tự quyết số lượng, vòng10 chọn hai bảng concept có tên riêng thay vì mặc định A/B/C: Men chàm và Bóng rối. Hai ngôn ngữ cùng được thử xuyên thế giới, nhân vật/chân dung, vật phẩm/icon và UI; hình ảnh là đề xuất sáng tạo hư cấu, chưa chốt canon, UI chạy hoặc quy trình sản xuất. [Báo cáo10](sprint-13/EXPERIMENT-10-REPORT.md).
+
+Số hướng phụ thuộc giá trị ý tưởng và phạm vi được giao, không là yêu cầu tạo vô hạn. Thư viện01–10 được giữ; vòng mới và lời khuyến khích không tự là approval hay loại bản trước. Hồ sơ09 đã được hai critic mới kiểm lại và viết report riêng sau gián đoạn; vòng10 được review cùng lượt, các phiên bản cùng được giữ. Không model3D/Hyper3D/Blender, không chuyểnSprint14 khi còn pending.

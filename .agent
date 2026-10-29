@@ -228,3 +228,11 @@ Quy tắc 28/10 về MCP Hyper3D chỉ áp dụng khi chủ dự án giao lại 
 ## Thư viện phiên bản tham khảo — làm rõ ngày 29/10/2026
 
 Mỗi spin/thử nghiệm hình ảnh bổ sung một phiên bản để chủ dự án tham khảo. Mở vòng mới không có nghĩa phiên bản cũ bị bỏ, bị thay thế hoặc bị đánh giá kém; giữ artwork, nguồn và hồ sơ cũ để xem lại, so sánh hoặc kết hợp ý tưởng. Chỉ ghi loại/thay thế/chọn khi chủ dự án nói rõ. Nhận xét và findings phải gắn đúng phiên bản, artifact và phạm vi đã quan sát; một lỗi cụ thể không tự là kết luận toàn bộ ý tưởng dở. Giữ nguyên phản hồi lịch sử thật, gồm phản hồi đồ họa bản01 chưa ưng ý. Lời khen tiến triển hoặc yêu cầu nghĩ thêm không là final approval cho một hướng hay Sprint13.
+
+## Định hướng hình ảnh xuyên suốt game — 29/10/2026
+
+Khi nhiệm vụ là đề xuất ngôn ngữ mỹ thuật cho toàn game, mỗi hướng cần cho thấy sự thống nhất giữa thế giới, tạo hình nhân vật toàn thân/chân dung, vật phẩm/icon và giao diện như hội thoại, túi đồ, nhật ký. Không chỉ đổi phong cảnh rồi suy ra cả game đã có bản sắc. Có thể dùng một bảng concept gồm cảnh chơi và mẫu nhân vật/UI để xem trước; yêu cầu này theo scope định hướng tổng thể, không buộc mọi batch ảnh nhỏ phải làm lại toàn bộ thành phần. UI raster trong ảnh là minh họa, cần kiểm chữ và độ đọc nhưng không là UI runtime hoặc bằng chứng tương tác. Giữ baseline xuất thân ngẫu nhiên, không diễn giải màn hình nhân vật thành cho phép chọn/chỉnh origin. Các phiên bản tiếp tục bổ sung thư viện, chưa thay quyền chốt của chủ dự án.
+
+## Số lượng concept linh hoạt — 29/10/2026
+
+Chủ dự án giao AI tự quyết số lượng concept theo độ khác biệt và giá trị của ý tưởng; không cố định mỗi vòng ba phương án A/B/C. Chọn phạm vi hữu ích cho yêu cầu đang làm, có thể đào sâu ít hướng hoặc mở thêm nhiều hướng; đây không phải yêu cầu tạo vô hạn hoặc tự mở sprint mới. Tiếp tục thể hiện ngôn ngữ xuyên cảnh, nhân vật và UI khi scope là định hướng toàn game; mọi phiên bản vẫn bổ sung thư viện tham khảo và cần quyết định rõ của chủ dự án để được chốt.

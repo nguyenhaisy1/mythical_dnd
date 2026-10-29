@@ -4,8 +4,8 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–08, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
-| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI | Pending | Chưa có |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–10, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–10 UI concept tổng thể | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
@@ -42,3 +42,14 @@ User giao tiếp tục, dùngMCPHyper3D theo quy tắc. ModelA có output thật
 29/10 user ghi nhận ý tưởng tốt dần, yêu cầu nghĩ thêm và làm rõ: các version để tham khảo; sang spin/thử nghiệm mới không có nghĩa bản cũ chắc chắn bị bỏ hoặc dở. Đây là chỉ dẫn giữ thư viện, **không phải final approval** cho A/B/C hoặc Sprint13. Phản hồi bản01 chưa ưng ý và các nhận xét lịch sử khác được giữ nguyên, không áp cho mọi phiên bản sau.
 
 Vòng08 thêm ba hướng trên cùng cảnh nhà chữa trị bên suối đồi: A hoạt hình2D, B thế giới dệt và C ảnh diện mạo3D cách điệu. [Báo cáo08](EXPERIMENT-08-REPORT.md). Thư viện01–08 cùng tồn tại; chỉ ghi chọn/loại/thay thế khi có quyết định rõ. S13-A01–A04 vẫn Pending/Changes requested theo đúng phản hồi đã có; không chuyển Sprint14.
+
+## Thử nghiệm09 — SPIN-025: ngôn ngữ hình ảnh toàn game
+
+29/10 user yêu cầu ý tưởng táo bạo hơn, nhấn mạnh đồ họa xuyên suốt từ tạo hình nhân vật tới giao diện. Đây là mở rộng scope thử định hướng, không phải chọn/loại một phiên bản. Vòng09 thử bảng concept sơn mài, phù điêu đồng và mực đen/trắng+nét đỏ, gồm cảnh chơi, nhân vật/chân dung, vật phẩm/icon và UI trong ảnh. [Báo cáo09](EXPERIMENT-09-REPORT.md). UI raster chưa là UI chạy hoặc quyết định thay baseline random-origin. Thư viện01–09 được giữ; S13-A01–A04 chưa được chốt, không chuyểnSprint14.
+
+
+## Thử nghiệm10 — SPIN-026: không cố định ba concept
+
+29/10 user yêu cầu tiếp tục ý tưởng, cho AI tự quyết số lượng theo trí tưởng tượng thay vì luôn ba phương án A/B/C. Đây là quyền chọn phạm vi concept trong vòng được giao, không là final approval cho đồ họa hoặc Sprint13. Vòng10 chọn hai hướng Men chàm và Bóng rối, có thế giới/cast/vật phẩm/UI trong ảnh; [báo cáo10](EXPERIMENT-10-REPORT.md) ghi evidence thật khi có.
+
+Thư viện01–10 cùng được giữ. Hồ sơ09 đã được hai critic mới kiểm lại và viết report riêng sau gián đoạn. Review09/10 là bằng chứng kỹ thuật/hình ảnh, không tự duyệt hay loại một phiên bản. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật, không chuyểnSprint14.

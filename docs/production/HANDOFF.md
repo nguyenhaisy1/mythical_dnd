@@ -90,3 +90,15 @@ Yêu cầu tiếp theo ngày29/10 nhấn mạnh phải thử cả đồ họa. E
 Chủ dự án làm rõ ngày29/10: mở spin/thử nghiệm mới không mặc định bỏ hoặc chê bản cũ. Giữ các phiên bản như một thư viện tham khảo, nhận xét theo đúng artifact/phạm vi và chỉ ghi quyết định chọn/loại khi user nói rõ. Lời khen ý tưởng tốt dần không tự chốt một hướng hoặc kết thúc Sprint13. Phản hồi lịch sử thực tế, gồm bản01 chưa ưng ý, vẫn giữ nguyên.
 
 Experiment08/SPIN-024 bổ sung ba hướng trên cùng cảnh nhà chữa trị bên suối đồi: hoạt hình2D với nét/mảng bóng gọn, thế giới dệt bằng sợi/vải, và ảnh có diện mạo3D hình khối rõ. [Báo cáo08](sprints/sprint-13/EXPERIMENT-08-REPORT.md) ghi phạm vi và evidence thực tế khi có; ảnh-only, không tạo model, không chốt canon hoặc hoạt động chữa trị. Thư viện01–08 cùng được giữ, mọi mục Sprint13 vẫn chờ chủ dự án chốt; không merge dev hoặc chuyển Sprint14.
+
+## Sprint13 — vòng09: bản sắc xuyên nhân vật và giao diện
+
+Yêu cầu mới ngày29/10 nhấn mạnh đồ họa phải xuyên suốt game, từ tạo hình nhân vật tới giao diện. Experiment09/SPIN-025 thử ba bảng concept tổng thể: sơn mài đen/đỏ/vàng, phù điêu đồng có patina, và mực đen/trắng với nét đỏ. Mỗi bảng hướng tới cảnh chơi cùng nhân vật toàn thân/chân dung, vật phẩm/icon và UI hội thoại/túi đồ/nhật ký trong cùng một ngôn ngữ. [Báo cáo09](sprints/sprint-13/EXPERIMENT-09-REPORT.md) giữ output/evidence thật sau khi thực hiện.
+
+Gallery chỉ phục vụ xem ảnh; UI được minh họa trong raster, không là UI runtime hoặc lựa chọn origin thủ công. Tiếp tục ảnh-only, không model3D/Hyper3D/Blender. Thư viện01–09 cùng được giữ để tham khảo/kết hợp, không mặc định loại bản cũ hoặc chốt một hướng. Mọi mục chưa được duyệt vẫn Pending; không merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+## Sprint13 — vòng10: hai hướng theo trí tưởng tượng
+
+Chủ dự án cho AI tự quyết số lượng concept, không bắt buộc ba phương án A/B/C. Experiment10/SPIN-026 chọn hai hướng toàn game: **Men chàm** với ngôn ngữ gốm men xanh/trắng, và **Bóng rối** với lớp bóng/cắt sáng xuyên thấu. Mỗi bảng hướng tới thế giới, tạo hình nhân vật/chân dung, vật phẩm/icon và UI hội thoại/túi đồ/nhật ký; tất cả là ảnh raster tham khảo, không model3D hoặc UI runtime. [Báo cáo10](sprints/sprint-13/EXPERIMENT-10-REPORT.md) ghi output và evidence khi thực hiện.
+
+Giữ thư viện01–10, không suy vòng mới là loại bản cũ. Hồ sơ09 sau phiên bị ngắt đã được hai critic mới kiểm lại và viết report09 riêng, cùng lượt review10. Ảnh/browser evidence và phản biện có phạm vi riêng, không thay quyền chốt của user. Mọi mục chưa chốt vẫn Pending; không merge dev, đóngSprint13 hoặc chuyểnSprint14.

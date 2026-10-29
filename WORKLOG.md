@@ -1573,3 +1573,96 @@ Vòng08 bổ sung ba ảnh tham khảo cùng brief nhà bên suối: A nét ho�
 Ba workers hoàn tất đúng ownership; hai critic độc lập đã review. /root/s13e8_critic_code chạy Chrome ba viewport desktop/mobile/chữ150%, ảnh/hash/bytes/originals/HUD chung/phím/modal/focus/toggle và bảy liên kết lịch sử; không pageerror hoặc requestngoài. /root/s13e8_critic_visual xem baPNG và hai screenshot, ghi lợi ích/đánh đổi: B khác chất liệu rõ nhưng nổi/dày, A/C gần nhau hơn, A nền chi tiết và C cách điệu chưa đồng nhất. Không xếp hạng loại bỏ hoặc gọi toàn bộ ý tưởng thất bại. Root xem output và galleryB; sourcehash HTML/CSS/JS khớp review.
 Đã lưu nguyên tắc user29/10 vàoAGENTS/.agent/artreference/handoff/sprint/approval/changelog: spin mới không mặc định bỏ/thay/chê bản cũ; chỉ ghi chọn/loại khi user nói rõ, giữ phản hồi lịch sử thật. Lời khen không bị suy thành finalapproval. Không sửa archive/GDD/canon/runtime/save/schema/VERSION.
 Checks:36generateddocs/659authoredlinks, stagedscope/secretpattern scan23files; finalexports223inputs/14containers/6156anchors/123tables/navigation đạt. Export không là visual/game acceptance. Tất cả phiên bản vẫnthamkhảo/Pending, khôngmerge dev hoặcchuyểnSprint14. Tiếp theo commit/pushdraftPR13 và xác nhậnCI; khôngmain/tag/release.
+
+
+### EVT-00125 | SPIN-024 | GIT — Đã push thư viện08, hai CI đạt đúng HEAD; PR13 vẫn draft
+
+<!-- worklog: {"id": "EVT-00125", "spin": "SPIN-024", "event": "GIT", "at": "2026-10-29T13:44:20+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:44:20+07:00
+- Actor: /root
+
+Commit64e9c416fbc84b7f560b2ff0cdf851701de843d0 đãpush origin/feature/sprint-13-experiment-01; remoteSHA khớpHEAD. DraftPR13 được cập nhật, vẫn draft=true/base dev; khôngmerge. CI đúngHEAD: pull_request40830769690 vàpush40830764875 đềucompleted/success. Khôngmain/tag/release. EventGit saucommit này cònlocal để đi cùng commit côngviệc kếtiếp, khôngamend/commitvònglặp.
+
+
+### EVT-00126 | SPIN-024 | HANDOFF — Bàn giao ba phiên bản tham khảo08, giữ đầy đủ01–07
+
+<!-- worklog: {"id": "EVT-00126", "spin": "SPIN-024", "event": "HANDOFF", "at": "2026-10-29T13:44:20+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:44:20+07:00
+- Actor: /root
+
+Bàn giao thưviện bổsung08 tại prototypes/sprint13/experiment-08/index.html và preview http://127.0.0.1:8016/experiment-08/. CóbaPNG gốc, prompt/provenance vàhai review thật; bảy liênkết01–07 vẫn còn. Nguyên tắcuser đãlưu: version mới không mặcđịnhbỏ/thay/chê version trước, cóthểquaylạithamkhảo/kếthợp. Nhận xét theoartifact làđánhđổi/độkhớpbrief, khôngxếphạngloại. Tấtcả vẫnthamkhảo/Pending, khôngđóngSprint13/chuyểnSprint14. Khôngmodel3D/runtime/canon mới. WORKLOG GIT/HANDOFF cuối cònlocal; chờ phản hồi chủdựán trong phạmvi thưviện hiệncó.
+
+
+### EVT-00127 | SPIN-025 | OPEN — Sprint13 thử nghiệm09 — ngôn ngữ đồ họa xuyên nhân vật, thế giới và UI
+
+<!-- worklog: {"id": "EVT-00127", "spin": "SPIN-025", "event": "OPEN", "at": "2026-10-29T13:47:57+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:47:57+07:00
+- Actor: /root
+
+User muốn ý tưởng táo bạo hơn và nhắc đồ họa phải xuyên suốt game, từ tạo hình nhân vật đến giao diện. MởExperiment09: ba key-art/style boards có cảnh chơi+nhânvật+chân dung/vậtphẩm+UI cùng ngôn ngữ, không chỉ thêmtranhphongcảnh. A sơnmài sống, B phùđiêu đồng, C mực đen/trắng+nétđỏ. Root dùngbuilt-inimage_gen, chỉảnh, khôngmodel3D/Hyper3D/Blender. UI trongảnh là concept, văn bản raster chưa là UI engine; không chọnorigin thủcông. Ba workers+hai critics theo workflow, giữ01–08 nhưthưviện, mọiitemsPending, khôngmerge dev/Sprint14.
+
+
+### EVT-00128 | SPIN-025 | ASSIGN — Ba worker chuẩn bị art system, gallery và hồ sơ; root tạo style boards
+
+<!-- worklog: {"id": "EVT-00128", "spin": "SPIN-025", "event": "ASSIGN", "at": "2026-10-29T13:51:30+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T13:51:30+07:00
+- Actor: /root
+
+Ba workers thực nhậnownership: /root/s13e9_direction artdirection/README và quy tắc đồng bộ style; /root/s13e9_gallery trang xemboard khôngphủHUD trungtínhlênUItrongảnh; /root/s13e9_docs lưu yêu cầu đồ họa xuyên game và đồng bộ hồ sơ. Roottạobaảnh/styleboard bằngbuilt-inimage_gen, xemoutput/lưunguồn/tíchhợp; hai critics nhận sau. Mỗi board có cảnh+cast/portrait+icons+UI, không chỉcảnhđẹp. Nhữngphầninterfaceinảnhchưa phảiUIengine, khôngsuy nhânvậtillustrationthànhcharactercreationmanual. Giữ01–08 thamkhảo.
+
+
+### EVT-00129 | SPIN-025 | PROGRESS — Ba style boards có đủ thế giới, nhân vật, portrait, vật phẩm và UI đã tạo
+
+<!-- worklog: {"id": "EVT-00129", "spin": "SPIN-025", "event": "PROGRESS", "at": "2026-10-29T14:00:10+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T14:00:10+07:00
+- Actor: /root
+
+Đã tạo và thực sự xem ba styleboards09 bằngbuilt-inimage_gen, mỗiPNG1672×941RGB. Cảba cócảnh chơi/HUD/hội thoại+túiđồ, dải nhânvậttoànthân/chândung/icon/nhậtký; không chỉphongcảnh. Ađen/son/ánhkim/nétkhắc, Bphùđiêuđồng/patina/nổi-chìm, Cmựcđen/trắng/điểmđỏ. UI nằmtrongPNGtheostyle, khôngphủHTMLHUDtrungtính lên. SaochépnguyênPNG, prompts/provenance/SHAđãlưu, khônghậu kỳ/model3D. Hai critics thực đãnhậnartifact; reviewchưakếtthúcởeventnày. Văn bảnraster khônglàUIengine/reflow; charillustrationkhônglàmanualoriginselector. Giữ01–08 thamkhảo, chưauserchốt.
+
+
+### EVT-00130 | SPIN-026 | OPEN — Sprint13 thử nghiệm10 — hai hướng toàn game, số lượng theo ý tưởng
+
+<!-- worklog: {"id": "EVT-00130", "spin": "SPIN-026", "event": "OPEN", "at": "2026-10-29T14:12:08+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T14:12:08+07:00
+- Actor: /root
+
+User cho AI tự quyết số lượng concept, không nhất thiết3A/B/C; yêu cầu tiếp tục ý tưởng. MởExperiment10 với2ngônngữđồhọa xuyêncảnh/nhânvật/UI: Menchàm(gốmmen) vàBóngrối(sânkhấubóng). Tất cảảnhstyleboard, khôngmodel/Hyper3D/Blender. Giữ01–09 thamkhảo, khôngloạibảncũ, khôngchốtSprint13. Vòng09đãcó3board vàbrowser evidence nhưng bịngắttrước khihaicriticghi report; scopehiệntạibao gồmhoàntấthồsơ09vàreviewthậtcho09/10. Ba workers10 rồi2criticsreview09/10, rootảnh/tíchhợp/checks/Git. Khôngmerge dev/Sprint14.
+
+
+### EVT-00131 | SPIN-026 | ASSIGN — Ba worker chuẩn bị hai concept; hai critic sẽ hoàn thiện cả09 và10
+
+<!-- worklog: {"id": "EVT-00131", "spin": "SPIN-026", "event": "ASSIGN", "at": "2026-10-29T14:15:26+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T14:15:26+07:00
+- Actor: /root
+
+Đã giao3workers10: /root/s13e10_direction brief/ma trận/readme; /root/s13e10_gallery gallery2concept cótên/2phímtắt, khôngABCcứng; /root/s13e10_docs policy sốlượnglinhhoạt vàhồsơ10. Rootảnh/provenance/tíchhợp/kiểm. Hai criticslượtsau sẽreview cả09(hồsơbịngắt) và10thực, khônggiảreviewcũđãghixong. GalleryUItrongPNG, nocanvas/model3D/noHTMLHUDcheboard. Giữ01–09 nhưthamkhảo.
+
+
+### EVT-00132 | SPIN-026 | PROGRESS — Hai concept có tên đã tạo; phản biện lại09 và kiểm10 đang thực hiện
+
+<!-- worklog: {"id": "EVT-00132", "spin": "SPIN-026", "event": "PROGRESS", "at": "2026-10-29T14:21:57+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T14:21:57+07:00
+- Actor: /root
+
+Đã tạo và xemhai styleboard10 bằngbuilt-inimage_gen, mỗiPNG1672×941RGB: Menchàm lam/trắng/gốm vàBóngrối silhouettedxuyênsáng/hổphách/đen/đỏ. Mỗiboardcócảnh+casttoànthân+portrait+icons+UIhộithoại/túiđồ/nhậtký, khôngchỉtranhcảnh. PNGgốcsaochepnguyênbytes, prompt/provenance/hashđãlưu, khônghậukỳ/model. TênÔngLành/CôHòa/BàLànhvàlờithoạitrongảnhlàminhhọa, chưađưa canon/contentdefinitions. Hai critics mới thựcnhậnviệc hoànthiện09và10, khônggánreportvàotácnhân09cũbịngắt. Mọiphiênbản01–09giữthamkhảo, sốlượnglinhhoạtđãlưupolicy.
+
+
+### EVT-00133 | SPIN-025 | RESULT — Hoàn tất review09 bằng hai critic mới sau gián đoạn
+
+<!-- worklog: {"id": "EVT-00133", "spin": "SPIN-025", "event": "RESULT", "at": "2026-10-29T14:34:44+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T14:34:44+07:00
+- Actor: /root
+
+Hồ sơ09 được hoàn tất sau gián đoạn, giữ ba styleboard đã tạo trước đó: sơnmài/phùđiêuđồng/mực. Các board có thếgiới/casttoànthân/portrait/items/UI hội thoại/túiđồ/nhậtký; không modelthật/gameplay. PNG/prompt/provenance đãlưu. Hai critic MỚI /root/s13e10_critic_code và /root/s13e10_critic_visual thực sự chạy lại checker09/xem baPNG09+screenshot và viết report09 dưới tên của họ. Không gán report cho actor09cũ chưa lưu trước ngắt.
+Code09Chrome156 ba viewport/sourcehash/provenance/originalbytes/contain/modal/focus/phím/linkPNGgốc/8historylinks đạt; không pageerror/requestngoài. Visual09ghi coherence vàđánhđổiA/Bmậtđộnét,Ctạohình/iconbảnsắc, khôngP1cảnxem vàkhôngartapproval. RasterUIkhôngreflowhoặcchứngminhgameUIa11y. Rootđãxem3outputvàreport, khôngnhậnautomationcriticthànhlượttựchạy. Mọi01–09giữthamkhảo; khôngcloseSprint13/merge dev/Sprint14. Docs/checks/exportđồngbộcùng09–10 trướccommit; scopecore/canonkhôngđổi.
+
+
+### EVT-00134 | SPIN-026 | RESULT — Hai concept10 và hồ sơ09–10 đã kiểm; thư viện tiếp tục mở
+
+<!-- worklog: {"id": "EVT-00134", "spin": "SPIN-026", "event": "RESULT", "at": "2026-10-29T14:34:44+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-29T14:34:44+07:00
+- Actor: /root
+
+Vòng10 tạo hai styleboard tênMenchàm/Bóngrối, mỗiPNG1672×941RGB, bằngbuilt-inimage_gen; PNGgốc/prompt/provenanceđãlưu, khônghậukỳ/model3D. Có thếgiới/cast/portrait/icon/UItrongPNG, khôngHTMLHUDcheart. TênNPC/lờithoạiminhhọakhôngthêmcanon/rules. Gallerycó2concept, phím1/2/M/R,9historylinks vàảnhgốczoom. Giữ01–09đểthamkhảo/kếthợp.
+Ba workers10đãbàngiao. Hai criticmới thực kiểm09/10 và viết4reports. Chrome10ba viewport/HTML150/bytes/hash/originals/modal/focus/contain/phím/linkPNG/lịch sử đạt, khôngpageerror/requestngoài. Visual10xem2PNG+screenshot, ghicoherencevàđánhđổi: Menchàmchưagốmhóatoànbộcảnh/người; Bóngrối nghiênghoànghôn/portraitbántảthực. KhôngP1cảnxem, khôngloạibản hoặcchốtthayuser. RootxemPNGvàgalleryBóngrối; sourcehash09/10khớpreviews.
+PolicylinhhoạtsốconceptđãđồngbộAGENTS/.agent/artref/handoff/sprint/approval/changelog. Khôngarchive/GDD/canon/runtime/schema/VERSIONmới. Checks36generateddocs/677authoredlinks, scope-secretpatternscan36files; finalexports229inputs/14containers/6156anchors/123tables/navigationđạt. Rootnguồndocsđãsửatrạngthái09reviewdoneởmọinơiliênquan. Tiếptheocommit/pushbundle09–10vàdraftPR13,khôngmerge dev/Sprint14/main/tag/release.

@@ -44,3 +44,13 @@ Quy tắc 28/10 về MCP Hyper3D chỉ áp dụng khi chủ dự án giao lại 
 ## Thư viện phiên bản tham khảo — làm rõ ngày 29/10/2026
 
 Mỗi spin/thử nghiệm hình ảnh bổ sung một phiên bản để chủ dự án tham khảo. Mở vòng mới không có nghĩa phiên bản cũ bị bỏ, bị thay thế hoặc bị đánh giá kém; giữ artwork, nguồn và hồ sơ cũ để xem lại, so sánh hoặc kết hợp ý tưởng. Chỉ ghi loại/thay thế/chọn khi chủ dự án nói rõ. Nhận xét và findings phải gắn đúng phiên bản, artifact và phạm vi đã quan sát; một lỗi cụ thể không tự là kết luận toàn bộ ý tưởng dở. Giữ nguyên phản hồi lịch sử thật, gồm phản hồi đồ họa bản01 chưa ưng ý. Lời khen tiến triển hoặc yêu cầu nghĩ thêm không là final approval cho một hướng hay Sprint13.
+
+## Thử bản sắc xuyên thế giới, nhân vật và UI
+
+Với task định hướng mỹ thuật cho cả game, kiểm một ngôn ngữ chung qua cảnh chơi, nhân vật toàn thân/chân dung, props/icon và UI hội thoại/túi đồ/nhật ký. Bảng concept có các mẫu này giúp thấy quy tắc hình khối, vật liệu, màu và typography có đi cùng nhau hay chỉ là một tranh cảnh đẹp. Không dùng một HUD HTML trung tính phủ lên mọi ảnh để thay cho việc thiết kế UI riêng của từng hướng; gallery có thể giữ khung trung tính để người xem so sánh. Đây là scope của task tổng thể, không là checklist bắt buộc cho mọi ảnh lẻ.
+
+Chữ và nút vẽ trong raster cần được xem thực tế, có thể còn sai dấu hoặc thiếu độ đọc; không coi chúng là text component hoặc interaction đã được triển khai. Mẫu chân dung/cast không đổi baseline xuất thân ngẫu nhiên thành character creator tùy chọn origin. Giữ thư viện cũ và phân biệt ý định, output đã quan sát, kiểm kỹ thuật và quyết định chủ dự án.
+
+## Số lượng concept linh hoạt — 29/10/2026
+
+Chủ dự án giao AI tự quyết số lượng concept theo độ khác biệt và giá trị của ý tưởng; không cố định mỗi vòng ba phương án A/B/C. Chọn phạm vi hữu ích cho yêu cầu đang làm, có thể đào sâu ít hướng hoặc mở thêm nhiều hướng; đây không phải yêu cầu tạo vô hạn hoặc tự mở sprint mới. Tiếp tục thể hiện ngôn ngữ xuyên cảnh, nhân vật và UI khi scope là định hướng toàn game; mọi phiên bản vẫn bổ sung thư viện tham khảo và cần quyết định rõ của chủ dự án để được chốt.
