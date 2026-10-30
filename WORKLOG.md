@@ -1855,3 +1855,63 @@ Workshop có bản tổng hợp ART-DIRECTION-RETHINK.md và năm hồ sơ art-r
 Hai critic thực /root/art_rethink_critic_reasoning và /root/art_rethink_critic_brief đã kiểm, nêu và tái kiểm các sửa: bỏ câu mơ hồ chống tỷ lệ trẻ con; thêm oldartifact→thay đổi hình/camera/độ đọc→dấu hiệu lặp; thêm nguồn→biến đổi sáng tạo→dấu hiệu trong frame; giới hạn so sánh nhiều biến và giữ camera cận người làm đối chứng. Không còn blocker bàn giao workshop ở cấp tài liệu; chưa có ảnh mới để xác nhận hiệu quả mỹ thuật, không visual/runtime acceptance.
 Đã đồng bộ AGENTS/.agent/reference art-direction/HANDOFF/Sprint13/approval register/changelog/export inputs. Không tạo ảnh/model mới, không đổi engine/canon/gameplay/version, không xóa01–12, giữ truth actualgeometry04/05. Tất cả phương án và thứ tự AI đề xuất thử vẫn Pending user approval; không đóngSprint13/Sprint14/merge dev.
 Checks thật: diff/staged diff đạt; scope và secret-pattern scan14files trước journal đạt. build_docs36files; handoff704authoredlinks. Skillquick_validate chạy trực tiếp thiếu PyYAML; chạy lại qua uv --with PyYAML exit0, không đổi dependencyproject; installedskill là symlink đúng source, reference target/routing tồn tại. Export cuối241sourceinputs/14containers/6156anchors/123tables/navigation valid, ignored và không chứa WORKLOG. Không runtime/Unity/playtest/benchmark/ảnh mới cần browsercheck trong scope này. Tiếp theo commit/push draftPR13 và kiểmCI đúngHEAD.
+
+
+### EVT-00155 | SPIN-029 | GIT — Workshop đã push và hai CI đúng HEAD thành công; PR13 vẫn draft
+
+<!-- worklog: {"id": "EVT-00155", "spin": "SPIN-029", "event": "GIT", "at": "2026-10-30T11:23:54+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T11:23:54+07:00
+- Actor: /root
+
+Commit f7207e61fc12e5c588fd315e2124f33831c6c432 đã push origin/feature/sprint-13-experiment-01; remote SHA khớp local HEAD. DraftPR13 cập nhật workshop SPIN-029, vẫn draft=true/base dev. CI đúng HEAD: pull_request41002451215 và push41002446094 đều completed/success. Không merge dev/main, không tag/release. Journal sau commit còn local, sẽ đưa vào commit công việc kế tiếp; không amend hoặc tạo vòng lặp commit log.
+
+
+### EVT-00156 | SPIN-029 | HANDOFF — Bàn giao kết quả brainstorming và brief mới; chưa chốt mỹ thuật
+
+<!-- worklog: {"id": "EVT-00156", "spin": "SPIN-029", "event": "HANDOFF", "at": "2026-10-30T11:23:55+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T11:23:55+07:00
+- Actor: /root
+
+Bàn giao bản tổng hợp tại docs/production/sprints/sprint-13/ART-DIRECTION-RETHINK.md cùng ba bài nghiên cứu và hai review trong art-rethink/. Đã mở bản tổng hợp trong Codex qua tool; thao tác open trả queued, không nhận đó là bằng chứng user đã đọc/chốt. Kết luận: đồ họa game gồm camera/không gian, hình khối/tỷ lệ, render, chuyển động/phản hồi, cast/icon/UI; 3D không đồng nghĩa photoreal. Root đề xuất thử khối3D và dải2.5D, giữ topdown và camera gần làm đối chứng theo câu hỏi, chưa có lựa chọn art được duyệt. Mỗi brief mới cần delta với bản cũ và nguồn→biến đổi sáng tạo→dấu hiệu trong frame.
+Workshop không sinh ảnh/model hoặc tự chạy thử nghiệm13. Tất cả01–12 giữ nguyên, Sprint13 Pending; không chuyểnSprint14. Khi user giao thử hình tiếp, dùng brief mới và chỉ tạo ảnh preview theo chỉ dẫn hiện hành. WORKLOG GIT/HANDOFF cuối còn local, các source khác đã push/CI đạt.
+
+
+### EVT-00157 | SPIN-030 | OPEN — Thử nghiệm13 — khung chơi cách điệu từ workshop, ba hướng và đối thoại riêng
+
+<!-- worklog: {"id": "EVT-00157", "spin": "SPIN-030", "event": "OPEN", "at": "2026-10-30T11:57:19+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T11:57:19+07:00
+- Actor: /root
+
+User giao tạo ý tưởng mới sau workshop SPIN029. Mở Experiment13/SPIN030: ba cách nhìn phi tả thực rõ về hình khối/camera:3D khối lớn nhìn chéo,2.5D dải sinh hoạt và3D cận người. Mỗi hướng dự kiến một frame thế giới nguyên khung và một frame đối thoại riêng để kiểm thống nhất người/cảnh/UI, tổng6ảnh; không boardasset65/35. Tình huống/cast/vật chính chung để so tổ hợp; ảnh sinh độc lập không hứa geometry/cast tuyệt đối. Root tạo bằng built-in image_gen, không model/Hyper3D/Blender/runtime. Ba worker chuẩn bị định hướng/gallery/hồ sơ, hai critic theo lượt; root kiểm lớp đầu. Các nguồn văn hóa đã khảo trong workshop chỉ là tham chiếu cho phép biến đổi mỹ thuật, không xác thực costume/architecture. Giữ01–12, không chốt art/Sprint13 hoặc Sprint14.
+
+
+### EVT-00158 | SPIN-030 | ASSIGN — Ba worker chuẩn bị ba cặp khung chơi; root tạo sáu ảnh theo brief mới
+
+<!-- worklog: {"id": "EVT-00158", "spin": "SPIN-030", "event": "ASSIGN", "at": "2026-10-30T12:00:41+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T12:00:41+07:00
+- Actor: /root
+
+Đã giao /root/s13e13_direction ART-DIRECTION/README; /root/s13e13_gallery ba file gallery3hướng×2frame; /root/s13e13_docs báo cáo draft và tài liệu liên quan/exportinputs. Root viết sáu prompt mới theo grammar khối/camera và source→transform từ workshop, tạo ảnh/provenance/tổng hợp. Một số frame dùng worldPNG đã tạo làm reference để thử giữ cast/style, không coi đó là cùng geometry/runtime. Sau workers sẽ giao hai critic; tối đa4actors cùng chạy. Không boardasset65/35, không model mới.
+
+
+### EVT-00159 | SPIN-030 | PROGRESS — Đã tạo sáu khung chơi và giữ một biến thể; chuẩn bị kiểm tra độc lập
+
+<!-- worklog: {"id": "EVT-00159", "spin": "SPIN-030", "event": "PROGRESS", "at": "2026-10-30T13:21:01+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T13:21:01+07:00
+- Actor: /root
+
+Root đã tạo/xem7ảnh thật:6frame trưng bày3hướng×world/dialogue và1biến thể frieze-world-v1 giữ riêng. Worldfrieze banđầu vẫn sâu/texture; root thực hiện một lượt sửa tham chiếu để làm phẳng cấu trúc, giữ cảv1, không lặng lẽ loại/xóa. Các frame near/worlddialogue dùng PNG trước làmreference đúngmetadata; sao chép nguyênbytes, lưu prompt chính+iteration và provenance kèmhashreference. Không model/scene/runtime.
+Đã quan sát sơ bộ: thếgiới3D đãgiảnkhối nhưng tỷlệngười lớn hơnbrief và mái/cây cònchi tiết; nearworld chưa xuốngtầmngườinhưýđịnh, near-dialogue cậnmặt rõ; friezefinal tổchức dảiphẳng hơn nhưng vẫngradient/chi tiếtUI. Cả3dialogue cóspeaker/câu/nút; chưa làinteractionthật hoặc artacceptance.
+Ba workers /root/s13e13_direction, /root/s13e13_gallery, /root/s13e13_docs đãbàn giao đúngscope; gallerypre-assetlayoutcontrols kiểmba viewport đạt, khôngnhậndecodeảnhchưađượcchạy. Usertiếptụcgiữcùnggoalspin030. Tiếptheo hai critics thực kiểm7PNGs/chain provenance và6framegallery cuối, roottổnghợp.
+
+
+### EVT-00160 | SPIN-030 | RESULT — Ba cặp khung chơi vòng13 đã tạo, review và đồng bộ; giữ biến thể và các giới hạn thật
+
+<!-- worklog: {"id": "EVT-00160", "spin": "SPIN-030", "event": "RESULT", "at": "2026-10-30T13:34:14+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T13:34:14+07:00
+- Actor: /root
+
+Đã tạo7PNG thật bằng built-in image_gen ngày30/10:6frame trưng bày3hướng×world/dialogue và frieze-world-v1 giữ riêng. Sáuảnh1672×941RGB, riêngfrieze-world cuối1671×941RGB. BảyPNG nguyênbytes tổng13,755,965bytes, khôngcrop/hậu kỳ. Sáupromptchính+1iteration và5referenceedges/hash/DAG được lưu. Một lượt làmphẳng dùngv1làmreference; near/worlddialogue dùngảnh trước đúngmetadata, khônghứacùnggeometry/model/runtime.
+Ba workers /root/s13e13_direction, /root/s13e13_gallery, /root/s13e13_docs đãbàn giao đúngscope. /root/s13e13_critic_code checker13 lượtđầuexit0 Chrome156.0.8078.47:7originalbyteequal/hash/dims/7promptmappings/5refs;3viewports1280/1920/390HTML150,3cards×2frames/6nútphímcard/contain/modal/PNG/Escape/focus/12historylinks/v1link,zeroerrors/remoterequests/failedrequests.21screenshotsfinalđủthumbs; nguồnSHAđầu/cuối/rootđốichiếukhớp.
+/root/s13e13_critic_visual xem7ảnh13+11stylized3D/06C và3screenshotsfinaldesktop/mobile. KhôngP1cảnxemý tưởng. Cótiếntriểnquan sátrõ:fullgameframe,bỏassetstrip,friezefinalđổicấu trúc,3dialogueđủspeaker/line/choices. P2giữ:nearworldvẫngóccao,ngườilớnhơntỷlệbrief/mứcgiảnlượckhôngđều,UIselected/iconschưathốngnhất; P3tuổinữ/vệttócbạcchưarõ. Khôngartapproval/độchínhxácsửđãchốt. Rootthựcxem7outputsvàgallery-frieze-dialogue390/near-dialogue1280,khôngnhậnbrowsercriticthànhruntựchạy.
+Rootpreviewgallery+7PNGHTTP200/node--check/diffcheckđạt. Stagedscope/secretpatternscan23files trướcjournalđạt. Docs36generatedfiles/713authoredlinksđạt; finalexport244sourceinputs/14containers/6156anchors/123tables/navigationvalid. Docs/handoff/sprint/approval/changelog/exportinputsđồngbộ,khôngAGENTS/.agentpolicychange,cũngkhôngarchive/GDD/canon/engine/gameplay/save/schema/content/VERSIONchange. Exportignored/WORKLOGexcluded,khôngZIP/model. Tiếptheocommit/pushdraftPR13vàCI. Giữ01–12/workshop/v1;mọihướngPendinguserapproval,khôngđóngSprint13/Sprint14/merge dev/main/tag/release.

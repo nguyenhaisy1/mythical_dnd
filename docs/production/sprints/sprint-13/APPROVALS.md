@@ -4,8 +4,8 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–12, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
-| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–12 UI concept tổng thể | Pending | Chưa có |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–13 và workshop SPIN-029, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–13 UI concept tổng thể | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
@@ -69,3 +69,9 @@ Ngày30/10 user yêu cầu “>=5 mẫu tiếp theo” và tăng cường thử 
 ## Workshop SPIN-029 — phản hồi định nghĩa đồ họa và cảm giác thời đại
 
 Ngày30/10 user yêu cầu brainstorming với các tác nhân: các mẫu còn thiên ảnh thật/minh họa, nhãn3D chưa cho cảm giác game mong muốn và cần vibe Văn Lang–Âu Lạc rõ hơn. Đây là yêu cầu điều chỉnh cách tìm hướng, không phải quyết định loại mọi bản01–12, chọn một style mới hoặc chốtSprint13. [Workshop](ART-DIRECTION-RETHINK.md) phân biệt dữ kiện, audit và đề xuất. Chỉ dẫn không lấy photoreal làm mục tiêu mặc định đã ghi trong hướng dẫn; các hướng mỹ thuật cụ thể vẫn Pending. S13-A01–A04 giữ trạng thái cũ; không có approval mới, không chuyểnSprint14.
+
+## Thử nghiệm13 — SPIN-030: triển khai thử ảnh sau workshop
+
+Ngày30/10 user nói “thử tạo thêm các ý tưởng mới” và khuyến khích tiến triển. Đây là giao tạo mẫu tiếp, không duyệt workshop, một hướng cụ thể hoặc Sprint13. Vòng13 thử Khối Lạc, Dải đời sống và Trong lòng làng với hai frame thế giới/đối thoại riêng mỗi hướng; [báo cáo13](EXPERIMENT-13-REPORT.md) giữ kết quả thực tế sau khi tạo/review. Cách gọi3D mô tả diện mạo đề xuất, không chứng minh model/scene đã dựng.
+
+Cast, công cụ, UI và việc dùng ngữ pháp văn hóa là minh họa sáng tạo, không thêm canon/character creator hoặc chọn engine. Thư viện01–12 và workshop tiếp tục được giữ; ảnh độc lập không có cùng geometry/camera tuyệt đối. S13-A01–A04 giữ Pending/Changes requested, không có approval mới hoặc quyền chuyểnSprint14.

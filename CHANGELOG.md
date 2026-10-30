@@ -8,6 +8,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ### Sprint13 — thử nghiệm chưa được duyệt
 
+- Thử nghiệm13 đưa brief workshop vào ba cách nhìn Khối Lạc, Dải đời sống và Trong lòng làng, mỗi hướng có frame thế giới/đối thoại riêng. Ưu tiên camera, hình khối và tỷ lệ chơi thay board65/35; ảnh xem trước, không model/runtime, giữ thư viện và trạng thái Pending.
+
 - Workshop SPIN-029 đặt lại định nghĩa đồ họa phục vụ chơi và cách vận dụng chất liệu Văn Lang–Âu Lạc: audit mẫu, nguồn bảo tàng, sáu hệ hình ảnh và brief thử tiếp. Đồng bộ hướng dẫn, không tạo artwork/model hoặc chốt art/engine/canon mới.
 
 - Thử nghiệm12 mở sáu mẫu toàn game theo yêu cầu ít nhất năm hướng mới: Đất biết kể, Nét trong, Vách thời gian, Ký ức CD-ROM, Đêm than bạc và Gió mảng màu. Thử chất liệu, tạo hình, ánh sáng và UI đồng bộ bằng ảnh concept; giữ thư viện01–12, không ngầm duyệt/loại hướng cũ hoặc tạo model thật.

@@ -90,3 +90,9 @@ Ba worker phụ trách định hướng, gallery và hồ sơ; root sinh ảnh/t
 ## Workshop SPIN-029 — đặt lại định nghĩa đồ họa
 
 Ngày30/10 user yêu cầu các tác nhân brainstorming về cách thể hiện game, vibe Văn Lang–Âu Lạc và vấn đề ảnh đang thiên tả thực dù gắn nhãn3D. [Bản tổng hợp](sprint-13/ART-DIRECTION-RETHINK.md) cùng ba bài nghiên cứu và hai review ghi actor/evidence thật. Scope chỉ audit/nghiên cứu/đề xuất/brief: không tự tạo vòng ảnh13, model hoặc chuyển engine. Đổi cách đặt brief, tránh công thức65/35 và medium swap; giữ đủ bản sắc xuyên cảnh/cast/UI qua artifact phù hợp. Mọi phương án và thứ tự nghiên cứu root đề xuất vẫn Pending user approval; giữ01–12, không chuyểnSprint14.
+
+## Thử nghiệm13 — SPIN-030: màn hình chơi và đối thoại riêng
+
+User30/10 giao thử ý tưởng mới sau workshop SPIN-029. Vòng13 có ba hướng: Khối Lạc/3D khối nhìn chéo, Dải đời sống/2D–2.5D theo dải sinh hoạt, Trong lòng làng/3D cách điệu gần tầm người. Mỗi hướng được giao hai ảnh nguyên khung, thế giới và đối thoại, để kiểm camera/hình/tỷ lệ/độ đọc cùng sự thống nhất cast/UI; không dùng dải asset65/35 cố định. [Báo cáo13](sprint-13/EXPERIMENT-13-REPORT.md) ghi output/review thật sau khi có.
+
+Ba worker làm định hướng/gallery/hồ sơ, root sinh ảnh/tổng hợp/kiểm lớp đầu và điều phối hai critic sau đó; assignment không tự là hoàn thành. Chỉ ảnh xem trước, không model/scene3D/runtime/animation hoặc thay engine/canon. Cast chung là mẫu cuộc đời ngẫu nhiên, không màn hình chọn origin. Ảnh độc lập không chứng minh geometry/camera/cast trùng tuyệt đối. Giữ01–12 và workshop; vòng13 cùng mọi sản phẩm chưa chốt tiếp tục Pending, không tự chuyểnSprint14.

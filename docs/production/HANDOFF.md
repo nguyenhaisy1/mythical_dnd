@@ -118,3 +118,9 @@ Các hướng khác nhau về chất liệu, nét, hình khối, ánh sáng và 
 ## Sprint13 — workshop đồ họa game và Văn Lang–Âu Lạc, SPIN-029
 
 Ngày30/10 chủ dự án yêu cầu brainstorming với tác nhân vì các mẫu thiên minh họa/tả thực và nhãn3D chưa cho cảm giác game mong muốn. [Workshop định hướng](sprints/sprint-13/ART-DIRECTION-RETHINK.md) tổng hợp audit, nguồn văn hóa và sáu cách tổ chức hình ảnh; ưu tiên thử camera/hình khối/tỷ lệ/UI trước lớp phủ vật liệu. 3D và độ tả thực được tách riêng; chất văn hóa là nguồn cho grammar hình, không chỉ hoa văn/màu cũ. Đây là đề xuất Pending, không batch ảnh mới hoặc lựa chọn art/engine/canon. Các bản01–12 giữ nguyên. Chỉ dẫn tương ứng đã đưa vào AGENTS/.agent và reference art-direction; Sprint13 chưa kết thúc.
+
+## Sprint13 — vòng13: thử khung chơi từ workshop, SPIN-030
+
+Ngày30/10 chủ dự án giao tạo thêm ý tưởng sau workshop. Experiment13 thử ba cách nhìn bằng ảnh: **Khối Lạc** nhìn chéo với khối3D cách điệu mạnh, **Dải đời sống**2D/2.5D theo lớp sinh hoạt, và **Trong lòng làng** cự ly gần cùng họ khối3D dự kiến. Mỗi hướng có một frame thế giới nguyên khung và một frame đối thoại riêng, tổng sáu frame được giao; không dùng công thức board65/35. [Báo cáo13](sprints/sprint-13/EXPERIMENT-13-REPORT.md) phân biệt brief, artifact và evidence thực tế.
+
+Cùng vai nhân vật/bến/thuyền/lối lên nhà sàn giúp đối chiếu cách thể hiện, nhưng ảnh sinh độc lập không bảo đảm camera của cùng scene hoặc cast/geometry tuyệt đối. Chỉ dùng built-in image_gen, không model/runtime hay chuyển engine. Nguồn văn hóa từ workshop được chuyển thành lựa chọn mỹ thuật, chưa xác minh phục dựng/canon. Thư viện01–13 và workshop được giữ; các sản phẩm vẫn Pending user approval, không merge dev, đóngSprint13 hoặc chuyểnSprint14.
