@@ -6,8 +6,8 @@ Bộ này gồm sáu workflow viết riêng theo contracts và cấu trúc proje
 |---|---|---|
 | [mythical-task](../../tools/skills/mythical-task/SKILL.md) | Giao/review/thực hiện task backlog | `$mythical-task triển khai FND-02 trong phạm vi task và ghi evidence` |
 | [mythical-change-impact](../../tools/skills/mythical-change-impact/SKILL.md) | Đổi contract/canon/parameter và đồng bộ consumer | `$mythical-change-impact đổi duration repair theo quyết định mới, cập nhật mọi nơi ảnh hưởng` |
-| [mythical-validation](../../tools/skills/mythical-validation/SKILL.md) | Kiểm tra thay đổi hoặc đánh giá milestone | `$mythical-validation đánh giá evidence hiện tại có đủ đóng FND-04 không` |
-| [mythical-prototype](../../tools/skills/mythical-prototype/SKILL.md) | Plan/build prototype hoặc phân tích playtest | `$mythical-prototype lập kế hoạch thử lựa chọn sửa thuyền hoặc không can thiệp tại Bến Vạc` |
+| [mythical-validation](../../tools/skills/mythical-validation/SKILL.md) | Kiểm tra thay đổi, phản biện game design/art/UX hoặc đánh giá milestone | `$mythical-validation đánh giá evidence hiện tại có đủ đóng FND-04 không` |
+| [mythical-prototype](../../tools/skills/mythical-prototype/SKILL.md) | Plan/build prototype, art direction hoặc phân tích playtest | `$mythical-prototype lập kế hoạch thử lựa chọn sửa thuyền hoặc không can thiệp tại Bến Vạc` |
 | [mythical-kernel](../../tools/skills/mythical-kernel/SKILL.md) | C# core, rules, transactions, save/replay | `$mythical-kernel review implementation RNG so với contract và golden vectors` |
 | [mythical-content](../../tools/skills/mythical-content/SKILL.md) | Chuyển nghiên cứu thành records có provenance | `$mythical-content author một event thiếu lương thực có eligible/ineligible cases` |
 
@@ -71,3 +71,14 @@ Skills tuân [Git Workflow](GIT-WORKFLOW.md) và AGENTS cho branch, commit/push,
 ## Worklog theo spin
 
 Các skills tuân quy tắc WORKLOG trong AGENTS: đọc goal/assignment hiện tại, append milestones/evidence và kết thúc spin rõ ràng. Skill là workflow, không phải agent thực thi độc lập; chỉ ghi actor có thật. Xem [journal](../../WORKLOG.md).
+
+## Tích hợp thiết kế game — 27/10/2026
+
+Theo yêu cầu chủ dự án, mở rộng hai skill hiện có, không thêm bộ điều phối:
+
+- `mythical-prototype`: [Game Art Direction](../../tools/skills/mythical-prototype/references/game-art-direction.md) — từ pillars đến phương án mỹ thuật nhìn được, camera/shape/palette/material/typography, asset specs và kiểm ở kích thước gameplay. Chọn vector hoặc image tools theo sản phẩm cần tạo, không mặc định SVG cho mọi artwork.
+- `mythical-validation`: [Game Design Review](../../tools/skills/mythical-validation/references/game-design-review.md) — đối chiếu mục tiêu, luật, dữ liệu và thứ hiển thị; findings có bằng chứng, tái kiểm fix, tách technical review khỏi trải nghiệm và user approval.
+
+[Design Sources](../../tools/skills/upstream/DESIGN-SOURCES.md) lưu phần chọn lọc, commit/hash, MIT licenses và thay đổi dành cho Codex. Đây là adaptation mới bổ sung sau hồ sơ14/10, không phải cài toàn upstream. Sáu symlink giữ nguyên; bản local đọc source cập nhật ngay. Automatic discovery metadata có thể cần phiên mới refresh.
+
+Sprint13 tiếp tục giữ mọi sản phẩm Pending đến khi user chốt; tích hợp skill không duyệt Experiment01 và không mở spin thử nghiệm hình ảnh mới.

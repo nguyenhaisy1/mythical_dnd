@@ -1,0 +1,87 @@
+{
+  "generator": "build_scene.py",
+  "blender": "5.2.2 LTS",
+  "seed": 13042026,
+  "approval": "pending",
+  "mesh_count": 26,
+  "material_count": 26,
+  "vertex_count": 43887,
+  "triangle_count": 62454,
+  "glb_sha256": "ca94bd77b5377223ae38ad0facc42de7733bd250f0fbf61624e0f8995212a25d",
+  "cameraSourceZup": {
+    "overview": {
+      "position": [
+        16,
+        -21,
+        16
+      ],
+      "target": [
+        -1,
+        0,
+        1.2
+      ],
+      "lens": 47
+    },
+    "eye": {
+      "position": [
+        -7,
+        -6.5,
+        2.2
+      ],
+      "target": [
+        0.5,
+        -0.5,
+        1.0
+      ],
+      "lens": 30
+    },
+    "repair": {
+      "position": [
+        4,
+        -10,
+        4.7
+      ],
+      "target": [
+        -2,
+        -3.2,
+        1.35
+      ],
+      "lens": 47
+    }
+  },
+  "scope": "Original procedural 3D art experiment; not Unity gameplay or archaeological reconstruction",
+  "renders": [
+    {
+      "camera": "overview",
+      "file": "render-overview.png",
+      "width": 1280,
+      "height": 900,
+      "samples": 24
+    },
+    {
+      "camera": "eye",
+      "file": "render-eye.png",
+      "width": 1280,
+      "height": 900,
+      "samples": 24
+    },
+    {
+      "camera": "repair",
+      "file": "render-repair.png",
+      "width": 1280,
+      "height": 900,
+      "samples": 24
+    }
+  ],
+  "projection": {
+    "sensor_fit": "HORIZONTAL",
+    "sensor_width_mm": 36,
+    "render_aspect": 1.4222222222222223,
+    "vertical_fov_degrees": {
+      "overview": 30.14244099668009,
+      "eye": 45.74733038125343,
+      "repair": 30.14244099668009
+    },
+    "eye_height_above_bank_m": 1.7
+  }
+}

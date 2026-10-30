@@ -6,6 +6,42 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint13 — thử nghiệm chưa được duyệt
+
+- Thử nghiệm14 mở sáu hướng độc lập sau phản hồi ảnh13 còn giống nhau: khối thành đất, mặt bằng2D, camera cong/khối tròn, first-person đồ họa, thế giới ký hình và trang truyện đời sống. Đổi camera/hình/cast/bối cảnh/UI để mở rộng thư viện, không chốt art/engine/canon hoặc tạo model thật.
+
+- Thử nghiệm13 đưa brief workshop vào ba cách nhìn Khối Lạc, Dải đời sống và Trong lòng làng, mỗi hướng có frame thế giới/đối thoại riêng. Ưu tiên camera, hình khối và tỷ lệ chơi thay board65/35; ảnh xem trước, không model/runtime, giữ thư viện và trạng thái Pending.
+
+- Workshop SPIN-029 đặt lại định nghĩa đồ họa phục vụ chơi và cách vận dụng chất liệu Văn Lang–Âu Lạc: audit mẫu, nguồn bảo tàng, sáu hệ hình ảnh và brief thử tiếp. Đồng bộ hướng dẫn, không tạo artwork/model hoặc chốt art/engine/canon mới.
+
+- Thử nghiệm12 mở sáu mẫu toàn game theo yêu cầu ít nhất năm hướng mới: Đất biết kể, Nét trong, Vách thời gian, Ký ức CD-ROM, Đêm than bạc và Gió mảng màu. Thử chất liệu, tạo hình, ánh sáng và UI đồng bộ bằng ảnh concept; giữ thư viện01–12, không ngầm duyệt/loại hướng cũ hoặc tạo model thật.
+
+- Thử nghiệm11 mở bốn tổ hợp2.5D/3D/pixel/anime cho cảnh, nhân vật và UI trên cùng tình huống đời sống; tiếp tục sau giới hạn tác nhân. Đây là ảnh tham khảo, không chuyển engine hoặc chứng minh model/parallax/animation/pixel grid; giữ thư viện01–11 và baseline nhân vật ngẫu nhiên.
+
+- Thử nghiệm10 mở hai ngôn ngữ toàn game Men chàm và Bóng rối; số concept do AI chọn theo ý tưởng thay vì cố định ba A/B/C. Tiếp tục ảnh-only, thư viện01–10 được giữ; không suy approval, đổi canon/runtime hoặc bỏ hồ sơ09 đang hoàn tất.
+
+- Thử nghiệm09 mở định hướng tổng thể sơn mài, phù điêu đồng và mực đen/trắng+nét đỏ, yêu cầu thống nhất cảnh chơi, tạo hình nhân vật/chân dung, vật phẩm/icon và UI. Bảng concept ảnh-only bổ sung thư viện; UI raster chưa là runtime, không đổi random-origin hoặc canon.
+
+- Thử nghiệm08 bổ sung hoạt hình2D, thế giới dệt và ảnh3D cách điệu trên cùng cảnh nhà chữa trị bên suối đồi. Làm rõ các vòng là thư viện phiên bản tham khảo: vòng mới không mặc định bỏ, thay thế hoặc chê bản cũ; lời khen không tự là approval. Ảnh-only, chưa chốt canon/gameplay.
+
+- Thử nghiệm07 mở ba hướng đồ họa khác nhau: khắc gỗ, pixel art và giấy cắt nhiều lớp, đồng thời đổi bối cảnh để khám phá ý tưởng ngoài cảnh sửa thuyền. Concept hư cấu chưa chốt canon, ảnh-only và Pending user approval.
+
+- Thử nghiệm 06 chuyển sang ảnh mô phỏng game để so sánh ý tưởng theo chỉ dẫn 29/10; không tạo model 3D thật trong giai đoạn chọn hướng. Quy tắc Hyper3D giữ cho task model thật nếu được giao về sau; mọi phương án vẫn chờ chủ dự án chốt.
+
+- Thử nghiệm05 dùng Hyper3D MCP thật, giữ PBR/provenance và đầu raA lệch brief để đánh giá; ghi lỗi correction chưa xác định, không tự tạo trùng. Thêm client app-server và bốn kiểm tra offline transport/privacy; không đổi runtime game.
+
+- Thử nghiệm04: cảnh bến sông dựng bằng Blender, nhiều camera cùng geometry và viewer3D offline; dùng B03 làm tham chiếu, vẫn chờ user chốt.
+
+- Thử nghiệm03: ba hướng camera/chất liệu/màu khác nhau và gallery so sánh trung tính sau phản hồi màu bản02; built-inimagegen và prompt/provenance đầy đủ, vẫn chờ user chốt.
+
+- Thử nghiệm02: painterly raster Bến Vạc tạo bằng built-in imagegen, UI ưu tiên cảnh và xem toàn tranh; giữ bản01 để so sánh sau phản hồi đồ họa chưa ưng ý. Vẫn Pending user approval.
+
+- Bổ sung art direction và game design review vào mythical-prototype/mythical-validation; adaptation chọn lọc có pin nguồn và giữ MIT notices, không cài orchestration upstream.
+
+- Thử nghiệm01 hình ảnh Bến Vạc, giao diện offline và mô hình xuất thân phục vụ UX được tách trong prototypes/sprint13; không import vào production hoặc coi là Unity gameplay.
+- Chủ dự án chốt từng sản phẩm và kết thúc sprint; thêm approval register và quy tắc nhắc pending trước khi chuyển sprint.
+
+
 ### Sprint12 — event eligibility
 
 - Thêm tám template sự kiện và compiler/evaluator declarative tách physical/perceived conditions; Unknown fail closed, readonly registry và exact settlement binding. Candidate chưa là occurrence hoặc gameplay effect.

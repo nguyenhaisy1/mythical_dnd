@@ -1,0 +1,85 @@
+{
+  "created_date": "2026-10-30",
+  "tool": "built-in image_gen",
+  "type": "six independent whole-game visual-direction frames, not paired cameras or a controlled one-variable comparison",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; original PNG bytes copied. No HTML game HUD overlay.",
+  "approval": "Pending user approval; additive reference library",
+  "images": [
+    {
+      "variant": "earth-monument",
+      "asset": "assets/earth-monument.png",
+      "source_generated_filename": "exec-b6d1178d-e926-46b9-8d69-5f584a6ca573.png",
+      "sha256": "c1abbcec80b686a39429f845877596ee3e6b00756b84f26f0317235a0db540e6",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2377606,
+      "prompt_key": "earth-monument",
+      "reference_assets": []
+    },
+    {
+      "variant": "living-grid",
+      "asset": "assets/living-grid.png",
+      "source_generated_filename": "exec-2ae5ce91-a902-4507-99c9-fc5658726cce.png",
+      "sha256": "ae48033a8d73f9d8efb7efbd0e50a83052c68f87053b39d4dd384a99958b58e7",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1950191,
+      "prompt_key": "living-grid",
+      "reference_assets": []
+    },
+    {
+      "variant": "round-world",
+      "asset": "assets/round-world.png",
+      "source_generated_filename": "exec-6d689189-cf74-4a28-ad90-3600bd974081.png",
+      "sha256": "f4b9771507a410d50ce25383e809b75e1bfdae6e09156cd4e83c4ed8cc21cfa1",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2098690,
+      "prompt_key": "round-world",
+      "reference_assets": []
+    },
+    {
+      "variant": "craft-first-person",
+      "asset": "assets/craft-first-person.png",
+      "source_generated_filename": "exec-8fa8f247-847d-4b8e-a803-7c3a88f496e2.png",
+      "sha256": "67c751386b7bafa3cff327abc8f66d3b1093846272230da677c8258574e71ba6",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2211531,
+      "prompt_key": "craft-first-person",
+      "reference_assets": []
+    },
+    {
+      "variant": "glyph-world",
+      "asset": "assets/glyph-world.png",
+      "source_generated_filename": "exec-e765783a-73bb-470c-b8e3-eed63410bef8.png",
+      "sha256": "bfa54a2fb322e865dcb8c1ed24230cb5c6577bdd5c0e844eee414747ce25cba9",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1933353,
+      "prompt_key": "glyph-world",
+      "reference_assets": []
+    },
+    {
+      "variant": "comic-life",
+      "asset": "assets/comic-life.png",
+      "source_generated_filename": "exec-3bceec7d-9c10-4ef5-91ec-120e06e83fdd.png",
+      "sha256": "c4a210a9bdc72142b4836cd85f10e2a3b729f61afae7a312a06750501dffbd53",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3341787,
+      "prompt_key": "comic-life",
+      "reference_assets": []
+    }
+  ]
+}

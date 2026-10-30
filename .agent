@@ -206,3 +206,37 @@ User giao sprint tiếp theo/SPIN014. Scope VS02A settlement-content-v1 theo ADR
 ## Sprint12 — 2026-10-26
 
 User giao sprint tiếp theo và yêu cầu mốc hình ảnh/demo. Sprint12/SPIN-015: VS02B event-eligibility-v1 theo ADR021 và docs/production/sprints/SPRINT-12.md. Tám template và evaluator trên trusted observations; không event effects hoặc fullVS02. Forecast mới tại docs/production/PLAYABLE-ROADMAP.md: Sprint13 định hướng hình ảnh, Sprint15–16 demo nhỏ, phụ thuộc gates; không tự mởSprint13/main/tag/release.
+
+## Sprint13 — thử nghiệm và nghiệm thu bởi chủ dự án
+
+User giao Sprint13 ngày26/10/2026. Cơ cấu6vai trò:3worker,2critic độc lập và/root điều phối/kiểm tra lớp đầu. Runtime chỉ4concurrent nên luân phiên worker/critic; log actor thực, không claim6chạyđồngthời.
+
+**Riêng Sprint13: mọi sản phẩm Pending user approval cho đến khi chủ dự án chốt rõ.** Root/test/critic pass chỉ Technical reviewed, không Final accepted. Không tựmerge dev, đóngSprint13 hoặc chuyểnSprint14 khi còn mục chưa chốt. Khi user yêu cầu sangsprintmới, nhắc đầy đủ pending từ docs/production/sprints/sprint-13/APPROVALS.md và chờchốt; “tiếp tục” không là approval. Mỗi thử nghiệm/phươngán mới mở SPIN mới trongSprint13, giữ lịch sử và sản phẩm cũ; sửa cùngphươngán tiếp tụcspin. Featurecommit/push/draftPR cho review vẫn theo workflow, không main/tag/release.
+
+Thử nghiệm01/SPIN016 tại prototypes/sprint13/experiment-01; độc lập production. Sprintbrief docs/production/sprints/SPRINT-13.md.
+
+## Tạo mô hình3D — chỉ dẫn chủ dự án28/10/2026
+
+Từ lần tạo mô hình3D tiếp theo, dùng MCP Hyper3D đã cài làm đường tạo model. Blender/engine có thể dùng cho bố trí cảnh, camera, kiểm tra và render sau đó. Nếu MCP chưa hiện hoặc không truy cập được, ghi rõ tình trạng và khôi phục kết nối; không âm thầm thay bằng procedural mesh hoặc công cụ sinh model khác. Chủ dự án có thể chỉ định ngoại lệ rõ ràng. Experiment04/SPIN020 đang dựng bằng Blender trước chỉ dẫn này được tiếp tục hoàn thiện theo yêu cầu user, phải ghi đúng nguồn; không gán là modelHyper3D.
+
+## Xem trước ý tưởng bằng ảnh — chỉ dẫn chủ dự án 29/10/2026
+
+Ở giai đoạn chọn ý tưởng hiện tại, tạo **ảnh mô phỏng game**, có thể là tranh 2D hoặc ảnh mang diện mạo 3D; không tạo model 3D thật chỉ để trình bày ý tưởng. Chỉ dẫn này thay cách triển khai bằng model ở Experiment 05, không yêu cầu xử lý tiếp lượt sửa Hyper3D đang chưa xác định ID. Dùng ảnh concept để chủ dự án xem bối cảnh, góc nhìn, phong cách và giao diện minh họa trước; ghi rõ ảnh không phải game đang chạy hoặc render từ một scene 3D đã dựng. Không tự gọi Hyper3D/Blender hay xây pipeline 3D cho yêu cầu thử hình ảnh.
+
+Quy tắc 28/10 về MCP Hyper3D chỉ áp dụng khi chủ dự án giao lại task **tạo model 3D thật** trong tương lai; không buộc dùng Hyper3D cho ảnh có vẻ 3D. Giữ các thử nghiệm cũ và nguồn gốc thật. Experiment 06/SPIN-022 dùng ảnh mô phỏng và gallery để so sánh; mọi phương án Sprint 13 vẫn Pending user approval. Việc đổi cách xem trước không phải duyệt mỹ thuật hoặc cho phép chuyển Sprint 14.
+
+## Thư viện phiên bản tham khảo — làm rõ ngày 29/10/2026
+
+Mỗi spin/thử nghiệm hình ảnh bổ sung một phiên bản để chủ dự án tham khảo. Mở vòng mới không có nghĩa phiên bản cũ bị bỏ, bị thay thế hoặc bị đánh giá kém; giữ artwork, nguồn và hồ sơ cũ để xem lại, so sánh hoặc kết hợp ý tưởng. Chỉ ghi loại/thay thế/chọn khi chủ dự án nói rõ. Nhận xét và findings phải gắn đúng phiên bản, artifact và phạm vi đã quan sát; một lỗi cụ thể không tự là kết luận toàn bộ ý tưởng dở. Giữ nguyên phản hồi lịch sử thật, gồm phản hồi đồ họa bản01 chưa ưng ý. Lời khen tiến triển hoặc yêu cầu nghĩ thêm không là final approval cho một hướng hay Sprint13.
+
+## Định hướng hình ảnh xuyên suốt game — 29/10/2026
+
+Khi nhiệm vụ là đề xuất ngôn ngữ mỹ thuật cho toàn game, mỗi hướng cần cho thấy sự thống nhất giữa thế giới, tạo hình nhân vật toàn thân/chân dung, vật phẩm/icon và giao diện như hội thoại, túi đồ, nhật ký. Không chỉ đổi phong cảnh rồi suy ra cả game đã có bản sắc. Có thể dùng một bảng concept gồm cảnh chơi và mẫu nhân vật/UI để xem trước; yêu cầu này theo scope định hướng tổng thể, không buộc mọi batch ảnh nhỏ phải làm lại toàn bộ thành phần. UI raster trong ảnh là minh họa, cần kiểm chữ và độ đọc nhưng không là UI runtime hoặc bằng chứng tương tác. Giữ baseline xuất thân ngẫu nhiên, không diễn giải màn hình nhân vật thành cho phép chọn/chỉnh origin. Các phiên bản tiếp tục bổ sung thư viện, chưa thay quyền chốt của chủ dự án.
+
+## Số lượng concept linh hoạt — 29/10/2026
+
+Chủ dự án giao AI tự quyết số lượng concept theo độ khác biệt và giá trị của ý tưởng; không cố định mỗi vòng ba phương án A/B/C. Chọn phạm vi hữu ích cho yêu cầu đang làm, có thể đào sâu ít hướng hoặc mở thêm nhiều hướng; đây không phải yêu cầu tạo vô hạn hoặc tự mở sprint mới. Tiếp tục thể hiện ngôn ngữ xuyên cảnh, nhân vật và UI khi scope là định hướng toàn game; mọi phiên bản vẫn bổ sung thư viện tham khảo và cần quyết định rõ của chủ dự án để được chốt.
+
+## 26. Phản hồi đồ họa và workshop 30/10/2026
+
+Chủ dự án nhận xét các mẫu còn giống minh họa/ảnh thật, nhãn3D chưa thể hiện đúng cảm giác game mong muốn; yêu cầu brainstorming với tác nhân để tìm cách thể hiện phù hợp Văn Lang–Âu Lạc. Đọc `docs/production/sprints/sprint-13/ART-DIRECTION-RETHINK.md` (SPIN-029). Đồ họa cần định nghĩa cả không gian/camera, khối/tỷ lệ, render/nét, chuyển động/phản hồi, cast/icon/UI; 3D và độ tả thực là hai trục khác nhau. Không mặc định photoreal hoặc lặp board65/35, không suy chất Việt cổ chỉ từ tre/rạ/hoa văn/màu cũ. Ưu tiên thử khung chơi với hình khối có chủ ý và nguồn văn hóa rõ. Các hướng của workshop chưa được duyệt; không ảnh/model/engine/canon mới trong workshop, giữ thư viện01–12 và truth04/05 cógeometry thật. Quy tắc preview chỉ bằng ảnh và Pending Sprint13 vẫn áp dụng.

@@ -1,6 +1,6 @@
 ---
 name: mythical-validation
-description: "Validate mythical_dnd changes and assess completion claims using actual documentation, reference, runtime, Unity and playtest evidence. Use for checks, acceptance reviews and milestone readiness; do not label reference checks as gameplay tests."
+description: "Review mythical_dnd game design, art/UX prototypes and implementation claims against actual documentation, reference, runtime, Unity and playtest evidence. Use for checks, acceptance reviews and milestone readiness; do not label reference checks as gameplay tests."
 ---
 
 # Kiểm chứng Mythical
@@ -41,3 +41,7 @@ Kết luận từng gate là đạt/chưa đạt/chưa kiểm, kèm lý do. VS-0
 Nghiệm thu release theo `docs/runbooks/GIT-WORKFLOW.md`: VERSION/changelog/tag khớp scope, evidence áp revision cuối; tag/CI scaffold không thay gameplay gates. Phân biệt chính sách branch trong file với protection thực tế trên GitHub.
 
 Append kết quả checks đáng kể và phạm vi chưa kiểm vào `WORKLOG.md` theo AGENTS; không nhúng log vào exports hoặc đổi kết quả lịch sử. Khi report, đọc event mới nhất và xác minh trạng thái Git/evidence hiện hành, không suy mọi task hoàn tất từ một spin CLOSE.
+
+## Phản biện game design và art/UX
+
+Khi được giao review thiết kế hoặc prototype, đọc [Game Design Review](references/game-design-review.md). Đối chiếu cả ý định, dữ liệu và artifact người chơi thấy; báo lỗi, preference và câu hỏi riêng. Review không tự cấp quyền viết implementation hoặc chốt sản phẩm. Nguồn adaptation và license ở [Design Sources](../upstream/DESIGN-SOURCES.md).

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bến Vạc — Ba cách nhìn · Thử nghiệm 06</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#scene">Đến ảnh ý tưởng</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Đầu trang Mythical">MYTHICAL<span>MỘT ĐỜI BÊN DÒNG NƯỚC</span></a>
+    <div class="header-tools"><span class="edition">THỬ NGHIỆM 06</span><label for="text-size">Cỡ chữ</label><select id="text-size"><option value="100">100%</option><option value="125">125%</option><option value="150">150%</option></select></div>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">BẾN VẠC / NGHIÊN CỨU HÌNH ẢNH</p><h1 id="page-title">Ba cách nhìn.<br>Cùng một đời sống.</h1></div>
+      <div class="intro-copy"><p>Thử hình dung bạn đang đứng ở một bến sông: thuyền chờ sửa, người thợ tiếp tục công việc, và một ngày sống bắt đầu.</p><p class="notice">Ảnh mô phỏng · Chưa phải game chạy · Chờ bạn chốt</p></div>
+    </section>
+    <section id="scene" class="scene-section" aria-labelledby="scene-title">
+      <div class="scene-toolbar"><div><p class="eyebrow">PHƯƠNG ÁN ĐANG XEM</p><h2 id="scene-title">A — Tranh góc chéo</h2></div><div class="view-tools"><label class="hud-toggle" for="show-hud"><input id="show-hud" type="checkbox" checked> Hiện giao diện minh họa</label><div class="switches" role="group" aria-label="Chọn phương án hình ảnh"><button type="button" data-choice="a" aria-pressed="true">A <span>Tranh 2D</span></button><button type="button" data-choice="b" aria-pressed="false">B <span>Cảm giác 3D</span></button><button type="button" data-choice="c" aria-pressed="false">C <span>Góc ngang 2.5D</span></button></div></div></div>
+      <figure class="hero-figure">
+        <div class="image-stage">
+          <img id="hero-image" src="assets/a-oblique.png" alt="Phương án A: bến sửa thuyền nhìn chéo từ trên cao, thể hiện bằng tranh 2D." fetchpriority="high">
+          <button id="enlarge" type="button" class="enlarge" aria-label="Mở ảnh phương án A toàn khung">Xem ảnh toàn khung ↗</button>
+          <div class="mock-hud" aria-label="Giao diện minh họa trên ảnh, không phải chức năng game"><span class="hud-label">GIAO DIỆN MINH HỌA</span><strong>Bến Vạc <span>— Tam Giang</span></strong><p>Một chiếc thuyền đang chờ được sửa.</p><div class="hud-choices"><span>Quan sát ván nứt</span><span>Hỏi người thợ</span><span>Đi dọc bến</span></div></div>
+        </div>
+        <figcaption><p id="scene-description">Góc chéo cho thấy lối đi, chỗ làm việc và dòng sông trong cùng một khung hình. Hướng này thử chất liệu tranh và cách phân lớp bằng màu tự nhiên.</p><p class="image-disclaimer">Ba ảnh ý tưởng độc lập; không phải các camera của cùng một mô hình 3D.</p><p id="image-error" class="image-error" hidden>Chưa tải được ảnh. Kiểm tra thư mục assets của bản thử nghiệm 06.</p></figcaption>
+      </figure>
+      <p id="selection-status" class="sr-only" aria-live="polite">Đang xem phương án A.</p>
+      <p class="keyboard-hint">Đổi ảnh bằng nút A / B / C hoặc phím 1 / 2 / 3. Chỉ giao diện xem ảnh có tương tác.</p>
+    </section>
+    <section class="comparison" aria-labelledby="comparison-title">
+      <div class="section-heading"><p class="eyebrow">CÙNG MỘT CÂU HỎI / BA LỐI THỂ HIỆN</p><h2 id="comparison-title">Bạn muốn sống trong khung cảnh nào?</h2><p>So sánh khoảng cách với nhân vật, cách đọc không gian và cảm giác chất liệu. Các đánh đổi dưới đây là giả thuyết thiết kế để bạn xem trước.</p></div>
+      <div class="cards">
+        <article class="card"><button type="button" class="card-image" data-choice="a" aria-label="Xem phương án A — Tranh góc chéo"><img src="assets/a-oblique.png" alt="Ảnh ý tưởng A, tranh bến sông nhìn góc chéo." loading="lazy"></button><p class="card-number">01 / A</p><h3>Tranh góc chéo</h3><p>Cảnh như một trang tranh đang sống. Lối đi và hoạt động nghề nghiệp được đặt trong một tổng thể.</p><p class="tradeoff"><strong>Muốn kiểm tra:</strong> dễ quan sát không gian đến đâu, và nhân vật có bị nhỏ quá không?</p></article>
+        <article class="card"><button type="button" class="card-image" data-choice="b" aria-label="Xem phương án B — Gần với con người"><img src="assets/b-grounded.png" alt="Ảnh ý tưởng B, cảnh giả lập chiều sâu 3D gần tầm người." loading="lazy"></button><p class="card-number">02 / B</p><h3>Gần với con người</h3><p>Ảnh giả lập cảm giác game 3D: gần người thợ, thấy sự cũ mới của gỗ và ánh sáng trong xưởng.</p><p class="tradeoff"><strong>Muốn kiểm tra:</strong> có cảm giác nhập vai hơn không, và chi tiết gần có che mất toàn cảnh?</p></article>
+        <article class="card"><button type="button" class="card-image" data-choice="c" aria-label="Xem phương án C — Một lát cắt đời sống"><img src="assets/c-sideview.png" alt="Ảnh ý tưởng C, cảnh 2.5D nhìn ngang với các lớp không gian." loading="lazy"></button><p class="card-number">03 / C</p><h3>Một lát cắt đời sống</h3><p>Góc ngang 2.5D biến bến sông thành một sân khấu có chiều sâu; hoạt động nối nhau qua các lớp cảnh.</p><p class="tradeoff"><strong>Muốn kiểm tra:</strong> hành động có rõ hơn không, và hướng này giới hạn khám phá ra sao?</p></article>
+      </div>
+    </section>
+    <aside class="scope-note"><p>Đây là ảnh tạo để lựa chọn ý tưởng hình ảnh, không dựng model 3D thật. Hình ảnh và giao diện minh họa chưa chứng minh gameplay, tính chính xác khảo cổ hoặc chất lượng bản game cuối.</p></aside>
+  </main>
+  <footer><p>Sprint 13 · SPIN-022 · Mọi phương án đang chờ bạn chốt</p><nav aria-label="Các thử nghiệm trước"><a href="../experiment-03/index.html">Ảnh vòng 03 ↗</a><a href="../experiment-05/index.html">Hồ sơ vòng 05 ↗</a></nav></footer>
+  <dialog id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-bar"><h2 id="dialog-title">A — Tranh góc chéo</h2><button id="close-dialog" type="button" autofocus>Đóng <span aria-hidden="true">×</span></button></div><img id="dialog-image" src="assets/a-oblique.png" alt="Phương án A: bến sửa thuyền nhìn chéo từ trên cao, thể hiện bằng tranh 2D."><p>Ảnh ý tưởng độc lập · Chưa phải ảnh chụp game chạy</p></dialog>
+</body>
+</html>
