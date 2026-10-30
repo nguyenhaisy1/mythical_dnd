@@ -4,8 +4,8 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–11, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
-| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–11 UI concept tổng thể | Pending | Chưa có |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–12, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–12 UI concept tổng thể | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
@@ -59,3 +59,9 @@ Thư viện01–10 cùng được giữ. Hồ sơ09 đã được hai critic m�
 User yêu cầu thử tiếp2.5D,3D,pixel,anime hoặc ý tưởng khác; ngày30/10 yêu cầu tiếp tục vòng đang dở. Vòng11 thử bốn bảng concept xuyên cảnh/cast/vật phẩm/UI, không chốt một phương pháp hoặc chuyển công nghệ. [Báo cáo11](EXPERIMENT-11-REPORT.md). 2.5D/3D và pixel/anime là hai trục có thể kết hợp; ảnh tĩnh không chứng minh parallax, model, animation, UI runtime hoặc grid pixel production.
 
 Cast phụ nữ lao động trưởng thành chỉ minh họa một cuộc đời, không thay baseline xuất thân ngẫu nhiên. Các bản01–10 được giữ; yêu cầu nghĩ thêm/tiếp tục không loại bản cũ hoặc là final approval. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật, không chuyểnSprint14.
+
+## Thử nghiệm12 — SPIN-028: yêu cầu ít nhất năm mẫu mới
+
+Ngày30/10 user yêu cầu “>=5 mẫu tiếp theo” và tăng cường thử nghiệm. Đây là giao thêm concept, không duyệt vòng11 hoặc chốt Sprint13. Vòng12 chọn sáu bảng toàn game: Đất biết kể, Nét trong, Vách thời gian, Ký ức CD-ROM, Đêm than bạc và Gió mảng màu. Mỗi hướng thử cảnh/cast/chân dung/vật phẩm/UI; [báo cáo12](EXPERIMENT-12-REPORT.md) ghi phạm vi và evidence thực tế.
+
+Đất nặn, cảnh dựng sẵn hoặc hoạt hình trong tên hướng chỉ mô tả diện mạo ảnh; chưa có model3D, pipeline sản xuất, chuyển động hoặc UI runtime. Không thêm lựa chọn tạo origin thủ công. Giữ nguyên các phiên bản01–11 để xem lại/kết hợp, không suy vòng mới là loại bản cũ. S13-A01–A04 giữ Pending/Changes requested theo phản hồi thật; chỉ user quyết định chọn/kết hợp/loại hoặc kết thúc sprint.

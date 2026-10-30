@@ -8,6 +8,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ### Sprint13 — thử nghiệm chưa được duyệt
 
+- Thử nghiệm12 mở sáu mẫu toàn game theo yêu cầu ít nhất năm hướng mới: Đất biết kể, Nét trong, Vách thời gian, Ký ức CD-ROM, Đêm than bạc và Gió mảng màu. Thử chất liệu, tạo hình, ánh sáng và UI đồng bộ bằng ảnh concept; giữ thư viện01–12, không ngầm duyệt/loại hướng cũ hoặc tạo model thật.
+
 - Thử nghiệm11 mở bốn tổ hợp2.5D/3D/pixel/anime cho cảnh, nhân vật và UI trên cùng tình huống đời sống; tiếp tục sau giới hạn tác nhân. Đây là ảnh tham khảo, không chuyển engine hoặc chứng minh model/parallax/animation/pixel grid; giữ thư viện01–11 và baseline nhân vật ngẫu nhiên.
 
 - Thử nghiệm10 mở hai ngôn ngữ toàn game Men chàm và Bóng rối; số concept do AI chọn theo ý tưởng thay vì cố định ba A/B/C. Tiếp tục ảnh-only, thư viện01–10 được giữ; không suy approval, đổi canon/runtime hoặc bỏ hồ sơ09 đang hoàn tất.

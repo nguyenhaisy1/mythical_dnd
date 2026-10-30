@@ -1,0 +1,73 @@
+{
+  "created_date": "2026-10-30",
+  "tool": "built-in image_gen",
+  "type": "six additive whole-game raster art-direction proposals",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; original PNG bytes copied. No HTML game HUD overlay.",
+  "approval": "Pending user approval; additive reference library",
+  "images": [
+    {
+      "variant": "clay-craft",
+      "asset": "assets/clay-craft.png",
+      "source_generated_filename": "exec-b68531f7-40d3-44ac-a25a-8653d26af666.png",
+      "sha256": "bfe03d865bbdc245c44c0734e14094470e59e543e1200188462383eabe3c176b",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3360538
+    },
+    {
+      "variant": "clear-line",
+      "asset": "assets/clear-line.png",
+      "source_generated_filename": "exec-95af3547-e061-43ae-9301-a1f06fc87667.png",
+      "sha256": "df02e0dff09fd690ebd936612b1a88ad3bb8182b11350786463ab775204e3f34",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2920236
+    },
+    {
+      "variant": "mineral-fresco",
+      "asset": "assets/mineral-fresco.png",
+      "source_generated_filename": "exec-87f1d38e-5d3a-4c48-babe-2469089f9011.png",
+      "sha256": "239bb1fd951b0b2f8a27d10e1db25be05c9857cd41523e9543efb18c5e9775c9",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3663723
+    },
+    {
+      "variant": "retro-prerender",
+      "asset": "assets/retro-prerender.png",
+      "source_generated_filename": "exec-f4913dda-5710-4217-924e-cd5a29a439cc.png",
+      "sha256": "26ebbd4503c9886ff2070bfc588e2517acbf7b8f2366f0f73bf5504d9814ed7e",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2772654
+    },
+    {
+      "variant": "charcoal-night",
+      "asset": "assets/charcoal-night.png",
+      "source_generated_filename": "exec-6b0d1c30-f24d-4543-a762-ea280d4bbc76.png",
+      "sha256": "d74e6834f34eb902367f8cf7f93e5c5c190f01ddf7208fbbbdfc922459d57260",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3079135
+    },
+    {
+      "variant": "graphic-animation",
+      "asset": "assets/graphic-animation.png",
+      "source_generated_filename": "exec-dec3309b-3e73-4e0e-af03-837ce8c88ead.png",
+      "sha256": "ae5b9a102a93f12643408f7227c3b6ddfc6df47e24ffaab1bf0fdf647d09043d",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2274488
+    }
+  ]
+}
