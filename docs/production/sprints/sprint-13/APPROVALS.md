@@ -4,8 +4,8 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–13 và workshop SPIN-029, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
-| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–13 UI concept tổng thể | Pending | Chưa có |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–14 và workshop SPIN-029, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–14 UI concept tổng thể | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
@@ -75,3 +75,9 @@ Ngày30/10 user yêu cầu brainstorming với các tác nhân: các mẫu còn 
 Ngày30/10 user nói “thử tạo thêm các ý tưởng mới” và khuyến khích tiến triển. Đây là giao tạo mẫu tiếp, không duyệt workshop, một hướng cụ thể hoặc Sprint13. Vòng13 thử Khối Lạc, Dải đời sống và Trong lòng làng với hai frame thế giới/đối thoại riêng mỗi hướng; [báo cáo13](EXPERIMENT-13-REPORT.md) giữ kết quả thực tế sau khi tạo/review. Cách gọi3D mô tả diện mạo đề xuất, không chứng minh model/scene đã dựng.
 
 Cast, công cụ, UI và việc dùng ngữ pháp văn hóa là minh họa sáng tạo, không thêm canon/character creator hoặc chọn engine. Thư viện01–12 và workshop tiếp tục được giữ; ảnh độc lập không có cùng geometry/camera tuyệt đối. S13-A01–A04 giữ Pending/Changes requested, không có approval mới hoặc quyền chuyểnSprint14.
+
+## Thử nghiệm14 — SPIN-031: tốt hơn nhưng cần khác biệt mạnh hơn
+
+Ngày30/10 user nói sáu ảnh13 tốt nhưng còn giống nhau, chưa có nhiều khác biệt/vượt bậc, rồi giao thử tiếp. Đây là phản hồi tích cực kèm yêu cầu mở rộng, không phải duyệt một hướng13, loại các bản cũ hoặc chốtSprint13. Vòng14 giao sáu hướng độc lập, thay nhiều trục tạo hình và UI; [báo cáo14](EXPERIMENT-14-REPORT.md) ghi brief, output và evidence theo thực tế.
+
+Giữ toàn bộ01–13 và workshop; mỗi ảnh mới vẫn là phương án tham khảo. Camera cong, ký hình, first-person hoặc bố cục truyện tranh không tự đổi canon/engine/gameplay. S13-A01–A04 giữ Pending/Changes requested; chưa có quyết định chọn/loại/kết hợp hoặc chuyểnSprint14.
