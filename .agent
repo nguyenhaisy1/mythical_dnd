@@ -236,3 +236,7 @@ Khi nhiệm vụ là đề xuất ngôn ngữ mỹ thuật cho toàn game, mỗi
 ## Số lượng concept linh hoạt — 29/10/2026
 
 Chủ dự án giao AI tự quyết số lượng concept theo độ khác biệt và giá trị của ý tưởng; không cố định mỗi vòng ba phương án A/B/C. Chọn phạm vi hữu ích cho yêu cầu đang làm, có thể đào sâu ít hướng hoặc mở thêm nhiều hướng; đây không phải yêu cầu tạo vô hạn hoặc tự mở sprint mới. Tiếp tục thể hiện ngôn ngữ xuyên cảnh, nhân vật và UI khi scope là định hướng toàn game; mọi phiên bản vẫn bổ sung thư viện tham khảo và cần quyết định rõ của chủ dự án để được chốt.
+
+## 26. Phản hồi đồ họa và workshop 30/10/2026
+
+Chủ dự án nhận xét các mẫu còn giống minh họa/ảnh thật, nhãn3D chưa thể hiện đúng cảm giác game mong muốn; yêu cầu brainstorming với tác nhân để tìm cách thể hiện phù hợp Văn Lang–Âu Lạc. Đọc `docs/production/sprints/sprint-13/ART-DIRECTION-RETHINK.md` (SPIN-029). Đồ họa cần định nghĩa cả không gian/camera, khối/tỷ lệ, render/nét, chuyển động/phản hồi, cast/icon/UI; 3D và độ tả thực là hai trục khác nhau. Không mặc định photoreal hoặc lặp board65/35, không suy chất Việt cổ chỉ từ tre/rạ/hoa văn/màu cũ. Ưu tiên thử khung chơi với hình khối có chủ ý và nguồn văn hóa rõ. Các hướng của workshop chưa được duyệt; không ảnh/model/engine/canon mới trong workshop, giữ thư viện01–12 và truth04/05 cógeometry thật. Quy tắc preview chỉ bằng ảnh và Pending Sprint13 vẫn áp dụng.

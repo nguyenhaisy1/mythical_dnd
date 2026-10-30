@@ -65,3 +65,7 @@ Cast phụ nữ lao động trưởng thành chỉ minh họa một cuộc đờ
 Ngày30/10 user yêu cầu “>=5 mẫu tiếp theo” và tăng cường thử nghiệm. Đây là giao thêm concept, không duyệt vòng11 hoặc chốt Sprint13. Vòng12 chọn sáu bảng toàn game: Đất biết kể, Nét trong, Vách thời gian, Ký ức CD-ROM, Đêm than bạc và Gió mảng màu. Mỗi hướng thử cảnh/cast/chân dung/vật phẩm/UI; [báo cáo12](EXPERIMENT-12-REPORT.md) ghi phạm vi và evidence thực tế.
 
 Đất nặn, cảnh dựng sẵn hoặc hoạt hình trong tên hướng chỉ mô tả diện mạo ảnh; chưa có model3D, pipeline sản xuất, chuyển động hoặc UI runtime. Không thêm lựa chọn tạo origin thủ công. Giữ nguyên các phiên bản01–11 để xem lại/kết hợp, không suy vòng mới là loại bản cũ. S13-A01–A04 giữ Pending/Changes requested theo phản hồi thật; chỉ user quyết định chọn/kết hợp/loại hoặc kết thúc sprint.
+
+## Workshop SPIN-029 — phản hồi định nghĩa đồ họa và cảm giác thời đại
+
+Ngày30/10 user yêu cầu brainstorming với các tác nhân: các mẫu còn thiên ảnh thật/minh họa, nhãn3D chưa cho cảm giác game mong muốn và cần vibe Văn Lang–Âu Lạc rõ hơn. Đây là yêu cầu điều chỉnh cách tìm hướng, không phải quyết định loại mọi bản01–12, chọn một style mới hoặc chốtSprint13. [Workshop](ART-DIRECTION-RETHINK.md) phân biệt dữ kiện, audit và đề xuất. Chỉ dẫn không lấy photoreal làm mục tiêu mặc định đã ghi trong hướng dẫn; các hướng mỹ thuật cụ thể vẫn Pending. S13-A01–A04 giữ trạng thái cũ; không có approval mới, không chuyểnSprint14.

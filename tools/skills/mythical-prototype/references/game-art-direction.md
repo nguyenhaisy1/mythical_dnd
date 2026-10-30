@@ -54,3 +54,11 @@ Chữ và nút vẽ trong raster cần được xem thực tế, có thể còn 
 ## Số lượng concept linh hoạt — 29/10/2026
 
 Chủ dự án giao AI tự quyết số lượng concept theo độ khác biệt và giá trị của ý tưởng; không cố định mỗi vòng ba phương án A/B/C. Chọn phạm vi hữu ích cho yêu cầu đang làm, có thể đào sâu ít hướng hoặc mở thêm nhiều hướng; đây không phải yêu cầu tạo vô hạn hoặc tự mở sprint mới. Tiếp tục thể hiện ngôn ngữ xuyên cảnh, nhân vật và UI khi scope là định hướng toàn game; mọi phiên bản vẫn bổ sung thư viện tham khảo và cần quyết định rõ của chủ dự án để được chốt.
+
+## Đặt lại bài toán đồ họa game — chỉ dẫn chủ dự án 30/10/2026
+
+Tham chiếu [Workshop định hướng](../../../../docs/production/sprints/sprint-13/ART-DIRECTION-RETHINK.md). User yêu cầu đồ họa có bản sắc game, phù hợp Văn Lang–Âu Lạc, không cần giống ảnh thật. Đặt brief theo các trục không gian/camera, hình/tỷ lệ, render/nét/texture, chuyển động/phản hồi, cast/icon và UI. Không gọi3D như từ đồng nghĩa với realistic; camera cố định/orthographic không loại trừ3D. Ảnh gợi khối vẫn chỉ là preview, không chứng minh model/scene/runtime.
+
+Đừng biến kiểm độ phủ toàn game thành công thức board65/35 với2người/3portrait/6icon ở mọi hướng. Với task tìm cách thể hiện game, ưu tiên màn hình ở camera và tỷ lệ chơi dự kiến, rồi bổ sung cận mặt, trạng thái hội thoại, icon hoặc sheet theo nghi vấn cần kiểm. Giữ tuổi/nghề và độ đa dạng qua thiết kế hình; cách điệu/phóng đại không mặc định là trẻ con. Xem silhouette, vùng đi lại, người nói, hành động và thông tin có đọc được trước khi khen chi tiết vật liệu.
+
+Tra nguồn cho motif/công cụ/kiến trúc cụ thể; phân biệt quan sát hiện vật với extrapolation mỹ thuật. Không suy toàn campaign có một costume/palette hoặc đồng nhất đời sống cổ với nâu xám, patin xanh, lông chim hay nghèo hoang sơ. Một hướng cần thay được quy tắc hình và cách nhìn, không chỉ đổi lớp phủ. Workshop và thứ tự AI đề xuất thử chưa là quyết định art/engine/canon được user chốt. Khi user chỉ giao brainstorming, hoàn thiện lập luận/brief, không tự tạo batch artwork hoặc model.

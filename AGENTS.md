@@ -122,3 +122,9 @@ Khi nhiệm vụ là đề xuất ngôn ngữ mỹ thuật cho toàn game, mỗi
 ## Số lượng concept linh hoạt — 29/10/2026
 
 Chủ dự án giao AI tự quyết số lượng concept theo độ khác biệt và giá trị của ý tưởng; không cố định mỗi vòng ba phương án A/B/C. Chọn phạm vi hữu ích cho yêu cầu đang làm, có thể đào sâu ít hướng hoặc mở thêm nhiều hướng; đây không phải yêu cầu tạo vô hạn hoặc tự mở sprint mới. Tiếp tục thể hiện ngôn ngữ xuyên cảnh, nhân vật và UI khi scope là định hướng toàn game; mọi phiên bản vẫn bổ sung thư viện tham khảo và cần quyết định rõ của chủ dự án để được chốt.
+
+## Đồ họa phục vụ game và chất Văn Lang–Âu Lạc — 30/10/2026
+
+Chủ dự án yêu cầu brainstorming lại: hình ảnh cần có cách thể hiện game và vibe phù hợp Văn Lang–Âu Lạc; không lấy giống ảnh thật làm mục tiêu mặc định. Phân biệt tổ chức không gian/camera, hình khối/tỷ lệ, cách vẽ/render, chuyển động/phản hồi và UI; 3D không đồng nghĩa photoreal. Khi chỉ tạo ảnh preview, ghi đúng là đề xuất diện mạo3D, không bằng chứng model/runtime. Giữ lịch sử actual3D04/05 nhưng không dùng nó để suy rằng mỹ thuật đã đạt kỳ vọng.
+
+Không khóa mọi hướng vào board65/35 hay số ô nhân vật/icon cố định. Với lượt thử cách thể hiện game, ưu tiên khung cảnh ở camera/tỷ lệ chơi dự kiến; kiểm thống nhất nhân vật/cận mặt/icon/UI bằng artifact phù hợp scope. Bản sắc văn hóa cần nguồn tạo hình và cách vận dụng rõ; không chỉ phủ texture, trống đồng hoặc màu nâu. Tách dữ kiện khảo cổ, diễn giải và hư cấu; không tự chốt một style/engine/canon từ brainstorming. [Workshop](docs/production/sprints/sprint-13/ART-DIRECTION-RETHINK.md) là đề xuất Pending, không thay quyền chốt của chủ dự án hoặc yêu cầu chỉ tạo ảnh xem trước.

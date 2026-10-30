@@ -1798,3 +1798,60 @@ Root đã tạo/xem thật6 ảnh built-in image_gen và sao chép PNG nguyên b
 Đã tạo sáu PNG ngày30/10 bằng built-in image_gen, mỗi ảnh1672×941RGB, tổng18,070,774bytes; sao chép nguyênbytes, lưu sáu prompt và provenance/SHA/tênnguồn. Không model/Hype3D/Blender hoặc hậu kỳ. Mỗi board có cảnh, hai người toànthân khác nhau, ba portrait, sáu icon, UI/actionmenu/túiđồ/nhậtký. Ghi đúng lệchbrief: clay gần miniature tảthực/cóblurtiềncảnh; fresco cònphối cảnh/texture dày; retro chưalowres/dither; charcoal lặpđiểmđỏ; animation nền cònchi tiết. Nămboard chủyếu actionmenu, chưalượt thoại đầyđủ. Gallery ghi chú từngbản; không loại01–11.
 Ba workers /root/s13e12_direction, /root/s13e12_gallery, /root/s13e12_docs đãbàn giao đúngscope. /root/s13e12_critic_code chạyfinalchecker exit0 Chrome156.0.8078.47:6PNG/originalbyteequality,3viewport1280/1920/390,HTML150,6nút/phím/card/modal/Escape/focus/PNGgốc/11historylinks,zeroerrors/remoterequests/failedrequests.21screenshots cuối đãpreloadđủthumb. Haiassertionfail vàlượt143do harnesslazydecode trướcđó khôngtínhPassed. /root/s13e12_critic_visual thựcxem6originals+desktop/mobilefinal,khôngP1cảnxem; cóP2mứcmedium/UI/dộđọcraster vàP3nútmobile150xuốngdòng nhỏ. Rootthựcxem6outputs+graphic-animation1920/text150390,sourcehashkhớpJSONfinal; selfreviewkhác independentreview.
 Rootnode--check/diffcheck/previewgallery+6PNGHTTP200đạt; stagedscope/secretpatternscan22filesđạt trướcjournal. Docs36generatedfiles/696authoredlinksđạt; finalexports235sourceinputs/14containers/6156anchors/123tables/navigationvalid. Nguồn/archive/GDD/canon/runtime/save/schema/content/VERSIONkhôngđổi,khôngZIP. Docs/approvals/changelog/exportinputsđồngbộ; exportsignored,WORKLOGexcluded. Tiếptheocommit/pushdraftPR13vàkiểmCI; mọiartifactPendinguserapproval,khôngmerge dev/đóngSprint13/Sprint14/main/tag/release.
+
+
+### EVT-00149 | SPIN-028 | GIT — Vòng12 đã push; hai CI đúng HEAD thành công, PR13 giữ draft
+
+<!-- worklog: {"id": "EVT-00149", "spin": "SPIN-028", "event": "GIT", "at": "2026-10-30T10:53:45+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T10:53:45+07:00
+- Actor: /root
+
+Commit e65bc42c6969fa9ecd17070427a401052816aaaf đã push origin/feature/sprint-13-experiment-01; ls-remote xác nhận SHA khớp HEAD. PR13 đã cập nhật mô tả vòng12, vẫn draft=true và base dev: https://github.com/nguyenhaisy1/mythical_dnd/pull/13. CI đúng HEAD: pull_request40999674373 và push40999667843 đều completed/success. Không merge dev/main, không tag/release. Event sau commit còn local để đi cùng commit công việc kế tiếp, không amend/commit vòng lặp.
+
+
+### EVT-00150 | SPIN-028 | HANDOFF — Bàn giao sáu mẫu mỹ thuật mới; giữ toàn bộ thư viện và quyền chốt của chủ dự án
+
+<!-- worklog: {"id": "EVT-00150", "spin": "SPIN-028", "event": "HANDOFF", "at": "2026-10-30T10:53:45+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T10:53:45+07:00
+- Actor: /root
+
+Bàn giao6mẫu mới vòng12 tại http://127.0.0.1:8016/experiment-12/ và prototypes/sprint13/experiment-12/index.html. Ảnh gốc, sáu prompt, provenance, định hướng, gallery, report và hai critic đều đã lưu/push. Root kiểm preview HTTP200 và sourcehash/evidence cuối; hai CI thành công. Các bản01–11 giữ nguyên để tham khảo/kết hợp; không nhận yêu cầu nghĩ thêm thành approval. Tất cả tiếp tục Pending user approval, không đóng Sprint13 hoặc mở Sprint14. Các giới hạn medium, dialogue menu và chữ raster đã ghi đúng từng artifact. WORKLOG GIT/HANDOFF cuối còn local; đưa vào commit công việc kế tiếp.
+
+
+### EVT-00151 | SPIN-029 | OPEN — Workshop định nghĩa lại đồ họa game và ngôn ngữ Văn Lang–Âu Lạc
+
+<!-- worklog: {"id": "EVT-00151", "spin": "SPIN-029", "event": "OPEN", "at": "2026-10-30T11:04:22+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T11:04:22+07:00
+- Actor: /root
+
+User yêu cầu brainstorming với các tác nhân: làm rõ đồ họa game đang hiểu là gì, tìm cách thể hiện khác, phù hợp vibe Văn Lang–Âu Lạc, không cần giống ảnh thật; chỉ ra các nhãn3D trước đây chưa thể hiện đúng kỳ vọng. Mở SPIN-029 cho workshop định hướng, không tự tạo batch ảnh/model/engine. Ba worker phản biện thư viện, nghiên cứu ngôn ngữ văn hóa từ nguồn chính, đề xuất không gian/hình khối/gamefeel; hai critic kiểm lập luận sau đó, root tổng hợp và kiểm lớp đầu. Đầu ra là bản định hướng có căn cứ, phương án cụ thể và brief thử tiếp; chưa là artapproval hoặc thay nghiên cứu/canon. Giữ tất cả01–12 và lịch sử thật, gồm actual3D thử nghiệm04/05; không phản bác cảm nhận user bằng nhãn kỹ thuật. Không đóng Sprint13/Sprint14/merge dev.
+
+
+### EVT-00152 | SPIN-029 | ASSIGN — Ba tác nhân phản biện đồ họa cũ, nghiên cứu văn hóa và tìm cách thể hiện game
+
+<!-- worklog: {"id": "EVT-00152", "spin": "SPIN-029", "event": "ASSIGN", "at": "2026-10-30T11:06:05+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T11:06:05+07:00
+- Actor: /root
+
+Đã giao ba worker thực: /root/art_rethink_audit xem mẫu cũ/phản biện định nghĩa; /root/art_rethink_culture tra nguồn bảo tàng/khảo cổ và xây ngữ pháp văn hóa; /root/art_rethink_systems đề xuất các cách tổ chức đồ họa phục vụ chơi, phản biện công thức board65/35. Root tổng hợp và đối chiếu nguồn; sau đó hai critic độc lập kiểm kết luận và độ dùng được của brief. Chưa tạo ảnh/model mới. Goal là đổi tư duy và tiêu chí thử, không lặp batch medium/palette.
+
+
+### EVT-00153 | SPIN-029 | PROGRESS — Ba bài brainstorming đã có; phản biện đang sửa cách đặt brief và tính mới của phương án
+
+<!-- worklog: {"id": "EVT-00153", "spin": "SPIN-029", "event": "PROGRESS", "at": "2026-10-30T11:16:31+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T11:16:31+07:00
+- Actor: /root
+
+Ba worker đã bàn giao ba bài thực: audit xem7originals03/08/09/11/12, culture đọc5nguồn bảo tàng/di sản và tách dữ kiện/diễn giải, systems đề xuất6cấu trúc đồ họa/camera với brief. Root viết bản tổng hợp, đối chiếu nguồn, xem thêm06C và đồng bộ AGENTS/.agent/handoff/sprint/approvals/changelog/skillreference/exportinputs. Hai critic thực /root/art_rethink_critic_reasoning và /root/art_rethink_critic_brief đang phản biện. Root đã xử lý nhận xét sơ bộ: bỏ câu chống tỷlệtrẻcon, thêm bảngdelta bảncũ→thayđổicụthể→điềukiệnkhônglặplabel, giữ camera cậnngười làmđốichứng chứ không tự chốt. Không ảnh/model mới. Skillquickvalidate Python trực tiếp thiếu PyYAML, chạy lại bằng uv --with PyYAML đã exit0; không thay dependencyproject,installedskill symlink trỏ đúng source. Docs36files/702links initial đạt, sẽ kiểm lại cuối.
+
+
+### EVT-00154 | SPIN-029 | RESULT — Workshop đã tổng hợp, phản biện và đồng bộ chỉ dẫn; chưa chốt một hướng mỹ thuật
+
+<!-- worklog: {"id": "EVT-00154", "spin": "SPIN-029", "event": "RESULT", "at": "2026-10-30T11:21:25+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-10-30T11:21:25+07:00
+- Actor: /root
+
+Workshop có bản tổng hợp ART-DIRECTION-RETHINK.md và năm hồ sơ art-rethink/01–05. Ba worker thực đã bàn giao: audit xem7ảnh đại diện; culture đọc5nguồn bảo tàng/di sản, tách dữ kiện với sáng tạo; systems viết6hệ thể hiện cùng camera/tỷ lệ/hình/UI/motion intent và đánh đổi. Root đọc/tổng hợp, đối chiếu nguồn và thực sự mở thêm06C; không nhận lượt xem của người khác thành mình.
+Hai critic thực /root/art_rethink_critic_reasoning và /root/art_rethink_critic_brief đã kiểm, nêu và tái kiểm các sửa: bỏ câu mơ hồ chống tỷ lệ trẻ con; thêm oldartifact→thay đổi hình/camera/độ đọc→dấu hiệu lặp; thêm nguồn→biến đổi sáng tạo→dấu hiệu trong frame; giới hạn so sánh nhiều biến và giữ camera cận người làm đối chứng. Không còn blocker bàn giao workshop ở cấp tài liệu; chưa có ảnh mới để xác nhận hiệu quả mỹ thuật, không visual/runtime acceptance.
+Đã đồng bộ AGENTS/.agent/reference art-direction/HANDOFF/Sprint13/approval register/changelog/export inputs. Không tạo ảnh/model mới, không đổi engine/canon/gameplay/version, không xóa01–12, giữ truth actualgeometry04/05. Tất cả phương án và thứ tự AI đề xuất thử vẫn Pending user approval; không đóngSprint13/Sprint14/merge dev.
+Checks thật: diff/staged diff đạt; scope và secret-pattern scan14files trước journal đạt. build_docs36files; handoff704authoredlinks. Skillquick_validate chạy trực tiếp thiếu PyYAML; chạy lại qua uv --with PyYAML exit0, không đổi dependencyproject; installedskill là symlink đúng source, reference target/routing tồn tại. Export cuối241sourceinputs/14containers/6156anchors/123tables/navigation valid, ignored và không chứa WORKLOG. Không runtime/Unity/playtest/benchmark/ảnh mới cần browsercheck trong scope này. Tiếp theo commit/push draftPR13 và kiểmCI đúngHEAD.
