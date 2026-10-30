@@ -74,3 +74,9 @@ Theo yêu cầu táo bạo hơn và đồng bộ diện mạo toàn game, vòng0
 Theo yêu cầu tiếp tục sáng tạo và tự quyết số lượng, vòng10 chọn hai bảng concept có tên riêng thay vì mặc định A/B/C: Men chàm và Bóng rối. Hai ngôn ngữ cùng được thử xuyên thế giới, nhân vật/chân dung, vật phẩm/icon và UI; hình ảnh là đề xuất sáng tạo hư cấu, chưa chốt canon, UI chạy hoặc quy trình sản xuất. [Báo cáo10](sprint-13/EXPERIMENT-10-REPORT.md).
 
 Số hướng phụ thuộc giá trị ý tưởng và phạm vi được giao, không là yêu cầu tạo vô hạn. Thư viện01–10 được giữ; vòng mới và lời khuyến khích không tự là approval hay loại bản trước. Hồ sơ09 đã được hai critic mới kiểm lại và viết report riêng sau gián đoạn; vòng10 được review cùng lượt, các phiên bản cùng được giữ. Không model3D/Hyper3D/Blender, không chuyểnSprint14 khi còn pending.
+
+## Thử nghiệm11 — SPIN-027: 2.5D,3D,pixel và anime
+
+Theo yêu cầu thử thêm cách thể hiện, vòng11 thử bốn tổ hợp toàn game: cảnh2.5D nhiều lớp, diện mạo3D cách điệu, pixel art và anime vẽ tay. Không coi bốn nhãn là lựa chọn loại trừ nhau: trục tổ chức không gian2.5D/3D có thể kết hợp với trục mỹ thuật pixel/anime. [Báo cáo11](sprint-13/EXPERIMENT-11-REPORT.md) theo dõi output và review thực tế.
+
+Tình huống chung là chợ lương thực/kho cao/cầu trước mùa nước, với phụ nữ lao động trưởng thành làm cast minh họa để xem tuổi, nghề và biểu cảm xuyên cảnh/chân dung/UI. Không đổi baseline sinh nhân vật ngẫu nhiên. Vòng mở29/10, tiếp tục30/10 sau khi các worker trước gặp giới hạn; artifact và actor thực phải được ghi theo kết quả, không nhận phân công làm hoàn thành. Chỉ tạo ảnh, không chuyển engine/model/parallax/animation hoặc nghiệmthu pixel assets. Thư viện01–11 được giữ, mọi hướng Pending; không tự mởSprint14.

@@ -4,8 +4,8 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–10, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
-| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–10 UI concept tổng thể | Pending | Chưa có |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–11, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–11 UI concept tổng thể | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
@@ -53,3 +53,9 @@ Vòng08 thêm ba hướng trên cùng cảnh nhà chữa trị bên suối đồ
 29/10 user yêu cầu tiếp tục ý tưởng, cho AI tự quyết số lượng theo trí tưởng tượng thay vì luôn ba phương án A/B/C. Đây là quyền chọn phạm vi concept trong vòng được giao, không là final approval cho đồ họa hoặc Sprint13. Vòng10 chọn hai hướng Men chàm và Bóng rối, có thế giới/cast/vật phẩm/UI trong ảnh; [báo cáo10](EXPERIMENT-10-REPORT.md) ghi evidence thật khi có.
 
 Thư viện01–10 cùng được giữ. Hồ sơ09 đã được hai critic mới kiểm lại và viết report riêng sau gián đoạn. Review09/10 là bằng chứng kỹ thuật/hình ảnh, không tự duyệt hay loại một phiên bản. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật, không chuyểnSprint14.
+
+## Thử nghiệm11 — SPIN-027: thêm cách thể hiện toàn game
+
+User yêu cầu thử tiếp2.5D,3D,pixel,anime hoặc ý tưởng khác; ngày30/10 yêu cầu tiếp tục vòng đang dở. Vòng11 thử bốn bảng concept xuyên cảnh/cast/vật phẩm/UI, không chốt một phương pháp hoặc chuyển công nghệ. [Báo cáo11](EXPERIMENT-11-REPORT.md). 2.5D/3D và pixel/anime là hai trục có thể kết hợp; ảnh tĩnh không chứng minh parallax, model, animation, UI runtime hoặc grid pixel production.
+
+Cast phụ nữ lao động trưởng thành chỉ minh họa một cuộc đời, không thay baseline xuất thân ngẫu nhiên. Các bản01–10 được giữ; yêu cầu nghĩ thêm/tiếp tục không loại bản cũ hoặc là final approval. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật, không chuyểnSprint14.

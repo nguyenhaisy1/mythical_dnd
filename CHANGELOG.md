@@ -8,6 +8,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ### Sprint13 — thử nghiệm chưa được duyệt
 
+- Thử nghiệm11 mở bốn tổ hợp2.5D/3D/pixel/anime cho cảnh, nhân vật và UI trên cùng tình huống đời sống; tiếp tục sau giới hạn tác nhân. Đây là ảnh tham khảo, không chuyển engine hoặc chứng minh model/parallax/animation/pixel grid; giữ thư viện01–11 và baseline nhân vật ngẫu nhiên.
+
 - Thử nghiệm10 mở hai ngôn ngữ toàn game Men chàm và Bóng rối; số concept do AI chọn theo ý tưởng thay vì cố định ba A/B/C. Tiếp tục ảnh-only, thư viện01–10 được giữ; không suy approval, đổi canon/runtime hoặc bỏ hồ sơ09 đang hoàn tất.
 
 - Thử nghiệm09 mở định hướng tổng thể sơn mài, phù điêu đồng và mực đen/trắng+nét đỏ, yêu cầu thống nhất cảnh chơi, tạo hình nhân vật/chân dung, vật phẩm/icon và UI. Bảng concept ảnh-only bổ sung thư viện; UI raster chưa là runtime, không đổi random-origin hoặc canon.

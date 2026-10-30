@@ -102,3 +102,9 @@ Gallery chỉ phục vụ xem ảnh; UI được minh họa trong raster, không
 Chủ dự án cho AI tự quyết số lượng concept, không bắt buộc ba phương án A/B/C. Experiment10/SPIN-026 chọn hai hướng toàn game: **Men chàm** với ngôn ngữ gốm men xanh/trắng, và **Bóng rối** với lớp bóng/cắt sáng xuyên thấu. Mỗi bảng hướng tới thế giới, tạo hình nhân vật/chân dung, vật phẩm/icon và UI hội thoại/túi đồ/nhật ký; tất cả là ảnh raster tham khảo, không model3D hoặc UI runtime. [Báo cáo10](sprints/sprint-13/EXPERIMENT-10-REPORT.md) ghi output và evidence khi thực hiện.
 
 Giữ thư viện01–10, không suy vòng mới là loại bản cũ. Hồ sơ09 sau phiên bị ngắt đã được hai critic mới kiểm lại và viết report09 riêng, cùng lượt review10. Ảnh/browser evidence và phản biện có phạm vi riêng, không thay quyền chốt của user. Mọi mục chưa chốt vẫn Pending; không merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+## Sprint13 — vòng11: không gian và ngôn ngữ tạo hình
+
+Experiment11/SPIN-027 mở ngày29/10 và tiếp tục ngày30/10 sau giới hạn tác nhân, thử bốn bảng ảnh toàn game: **2.5D nhiều lớp**, **3D cách điệu**, **Pixel đời làng** và **Anime đời thường**. Cùng tình huống chợ lương thực/kho kê cao/cầu trước mùa nước, mỗi bảng cần có cảnh, nhân vật toàn thân/chân dung, vật phẩm và UI. Phụ nữ lao động trưởng thành khoảng45tuổi là mẫu cast minh họa, không cố định protagonist runtime hoặc cho chọn origin thủ công. [Báo cáo11](sprints/sprint-13/EXPERIMENT-11-REPORT.md) ghi bốn PNG đã tạo30/10, review độc lập, browser evidence và các giới hạn quan sát.
+
+2.5D/3D là cách tổ chức không gian; pixel/anime là ngôn ngữ tạo hình có thể kết hợp. Các ảnh không là quyết định chuyển engine, model thật, parallax/animation chạy hoặc pixel grid production. Thư viện01–11 cùng được giữ; mọi mục chưa chốt vẫn Pending, không merge dev, đóngSprint13 hoặc chuyểnSprint14.
