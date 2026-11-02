@@ -115,3 +115,12 @@ Ba worker định hướng/gallery/hồ sơ, root tạo ảnh và kiểm lớp �
 User02/11 giao thêm những ý tưởng mới. Vòng16 có sáu frame chính: Thế giới dệt (`woven-world`), Nét dây không gian (`line-volume`), Làng gấp (`folded-village`), Mưa khắc hình (`rain-sculpt`), Mặt cắt đời sống (`living-section`) và Hạt khối (`voxel-life`), cùng hai bản đầu nét dây/làng gấp được giữ. Cần xem khác biệt camera/khối/silhouette/cast/UI thực tế, không lấy tên vật liệu hoặc nhãn3D làm bằng chứng mới/vượt bậc. [Báo cáo16](sprint-13/EXPERIMENT-16-REPORT.md) ghi scope/output/review theo evidence thực; dệt/giấy/pixel đã có tiền lệ nên cần đối chiếu rõ.
 
 Ba worker chuẩn bị brief/gallery/hồ sơ, root sinh ảnh/tích hợp/kiểm lớp đầu; hai critic được giao sau output theo lượt trong giới hạn bốn concurrent. Chỉ ảnh xem trước, không model/runtime/Hyper3D/Blender hoặc đổi engine/canon/route/physics/knowledge. Hình dây/mặt cắt không cho xem hidden truth; cast vẫn ví dụ xuất thân ngẫu nhiên. Giữ01–15, biến thể và ưu tiên14/1–3; mọi sản phẩm chưa chốt Pending, không merge dev hoặc tự chuyểnSprint14.
+
+
+## Thử nghiệm17 — SPIN-034: học từ thư viện và tạo thêm mười hướng
+
+Output đã có: mười frame chính, giữ thêm Vành sân v1 qua link riêng;11lượt built-in image_gen mới không ảnh input. Root ghi quan sát thật trong gallery/report, không nhận tên mười hướng thành mười grammar đã đạt.
+
+User02/11 yêu cầu thêm10ý tưởng, cho phép improve bản trước và brainstorming tác nhân. Ba worker đã trao đổi không gian/cast–UI/lịch sử; root gộp relief trùng và chọn10frame thử: `earth-corridor`, `river-negative`, `gentle-arc`, `living-relief`, `gesture-flat`, `nested-frames`, `tangram-people`, `low-water`, `close-pixel`, `negative-space`. Ba nhánh đầu nối ba ưu tiên14/1–3; bảy hướng khác/cải tiến phải có delta nhìn thấy, không lấy tên vật liệu hoặc3D làm chứng cứ mới/vượt bậc. [Báo cáo17](sprint-13/EXPERIMENT-17-REPORT.md) giữ phạm vi, brainstorm thật và output/evidence khi có.
+
+Sau brainstorm ba worker làm brief/gallery/hồ sơ, root tạo ảnh/tích hợp/kiểm lớp đầu, hai critic kiểm sau output theo lượt trong giới hạn4concurrent. Chỉ ảnh xem trước bằng built-in image_gen; không model/runtime/Hyper3D/Blender, engine/canon/route/physics/knowledge change. Cast vẫn ví dụ xuất thân ngẫu nhiên. Giữ01–16, mọi biến thể/dự phòng và ưu tiên14/1–3; chọn batch không là final approval, không merge dev hoặc chuyểnSprint14.

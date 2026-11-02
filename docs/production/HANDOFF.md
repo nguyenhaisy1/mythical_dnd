@@ -143,3 +143,12 @@ Experiment15 đã có sáu frame mới: ba nhánh **Thành dựng đứng**, **G
 Ngày02/11 user giao thêm ý tưởng mới sau vòng15. Experiment16 đã có sáu frame chính: **Thế giới dệt**, **Nét dây không gian**, **Làng gấp**, **Mưa khắc hình**, **Mặt cắt đời sống** và **Hạt khối**; giữ thêm hai bản đầu nét dây/làng gấp qua link riêng. Tám lượt built-in image_gen không ảnh input, copy nguyên bytes. Các hướng thử thay cách tổ chức không gian, silhouette nhân vật và UI, không chỉ palette; mức đạt chưa đồng đều. [Báo cáo16](sprints/sprint-13/EXPERIMENT-16-REPORT.md) phân biệt brief, output và evidence thực. Dệt/giấy/pixel có tiền lệ ở các vòng cũ, nên mức đổi mới phải căn cứ quy tắc tạo hình thực sự nhìn thấy, không chỉ tên vật liệu.
 
 Chỉ ảnh built-in image_gen được giao, không model/scene/runtime/Hyper3D/Blender hoặc engine/canon mới. Hình dây, mặt cắt, không gian gấp hoặc voxel không tự tạo khả năng nhìn xuyên, topology, thời tiết, phá hủy hay tri thức bí mật. Giữ01–15, các biến thể và ba ưu tiên14/1–3; giao thêm ý tưởng không là approval hoặc loại bản cũ. Mọi mục chưa chốt tiếp tục Pending; không đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Sprint13 — vòng17: brainstorming và thêm mười phương án, SPIN-034
+
+Đã có mười frame chính và một bản Vành sân đầu tiên được giữ:11PNG1672×941RGB, copy nguyên bytes, không ảnh input. Bản thử lại Vành sân giản lược khối sau lượt đầu gần tả thực; báo cáo ghi rõ phần đạt/chưa đạt.
+
+Ngày02/11 user giao thêm10ý tưởng, cho phép học hỏi/improve từ các bản cũ và brainstorming giữa tác nhân. Ba worker đã audit/trao đổi chéo; root gộp hai đề xuất relief trùng thành một và chọn batch thử ảnh: Hành lang thành đất, Bờ liền nét, Vành sân, Phù điêu đang sống, Người bằng cử chỉ, Cửa trong cửa, Khối ghép đời thường, Sát mặt nước, Pixel cự ly gần và Âm bản sống. Ba hướng đầu phát triển ưu tiên14/1–3; bảy hướng sau khác hoặc cải tiến từ thư viện, không tuyên bố bảy kỹ thuật chưa từng có. [Báo cáo17](sprints/sprint-13/EXPERIMENT-17-REPORT.md) và ba note brainstorm ghi lineage/delta, quyết định phạm vi và output/review theo evidence thực.
+
+Chỉ ảnh built-in image_gen được giao, dự kiến không ảnh input; số lượt/kích thước/hash thực ghi sau generation. Không model/scene/runtime/Hyper3D/Blender hoặc engine/canon mới. Camera thấp, âm bản, relief, pixel hoặc nêm ghép không tự thay geography/physics/route/knowledge. Giữ01–16, biến thể, phương án brainstorm dự phòng và ưu tiên14/1–3; không coi chọn batch của AI là approval. Mọi mục chưa chốt tiếp tục Pending; không đóngSprint13 hoặc chuyểnSprint14.
