@@ -240,3 +240,7 @@ Chủ dự án giao AI tự quyết số lượng concept theo độ khác biệ
 ## 26. Phản hồi đồ họa và workshop 30/10/2026
 
 Chủ dự án nhận xét các mẫu còn giống minh họa/ảnh thật, nhãn3D chưa thể hiện đúng cảm giác game mong muốn; yêu cầu brainstorming với tác nhân để tìm cách thể hiện phù hợp Văn Lang–Âu Lạc. Đọc `docs/production/sprints/sprint-13/ART-DIRECTION-RETHINK.md` (SPIN-029). Đồ họa cần định nghĩa cả không gian/camera, khối/tỷ lệ, render/nét, chuyển động/phản hồi, cast/icon/UI; 3D và độ tả thực là hai trục khác nhau. Không mặc định photoreal hoặc lặp board65/35, không suy chất Việt cổ chỉ từ tre/rạ/hoa văn/màu cũ. Ưu tiên thử khung chơi với hình khối có chủ ý và nguồn văn hóa rõ. Các hướng của workshop chưa được duyệt; không ảnh/model/engine/canon mới trong workshop, giữ thư viện01–12 và truth04/05 cógeometry thật. Quy tắc preview chỉ bằng ảnh và Pending Sprint13 vẫn áp dụng.
+
+## Ưu tiên mỹ thuật từ phản hồi vòng14 — 30/10/2026
+
+Chủ dự án đánh giá rất tốt14/1 Đất dựng thành,14/2 Ô đất sống và14/3 Làng vòng cung, cho phép đào sâu nhưng vẫn muốn thêm ý tưởng mới táo bạo hơn. Đây là ba hướng ưu tiên nghiên cứu, chưa chọn style cuối, chưa duyệt Sprint13 và không loại14/4–6 hoặc các bản cũ. Đọc HANDOFF, APPROVALS và báo cáo vòng15/SPIN-032 để tiếp tục đúng nhánh; vẫn chỉ tạo ảnh xem trước ở giai đoạn này.

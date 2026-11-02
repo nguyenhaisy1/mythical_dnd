@@ -1,0 +1,107 @@
+{
+  "created_date": "2026-10-30",
+  "tool": "built-in image_gen",
+  "type": "six displayed proposals plus one retained fresh-generation cubist variant; three branches from user-favored14/1–3 and three new grammars",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "conceptual_lineage_is_image_input": false,
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; original PNG bytes copied. No HTML game HUD overlay.",
+  "approval": "Pending user approval; Experiment14 directions1–3 favored for deeper exploration, not final art acceptance",
+  "images": [
+    {
+      "variant": "vertical-earth",
+      "asset": "assets/vertical-earth.png",
+      "source_generated_filename": "exec-7918315a-360c-4126-b71c-c64c2cfa5747.png",
+      "sha256": "992700589d3f662af44cb05734afb17d30cae4cd2f87a61f653b7fe15de91f20",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2666802,
+      "prompt_collection": "prompts",
+      "prompt_key": "vertical-earth",
+      "reference_assets": []
+    },
+    {
+      "variant": "tidal-mosaic",
+      "asset": "assets/tidal-mosaic.png",
+      "source_generated_filename": "exec-377fb5cc-3435-4474-9273-e3f3f6170c31.png",
+      "sha256": "97b7c0721652a9fdc2f6b32f9b2e072bd187ae92132d2ddf7a018f131d5389c3",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2546402,
+      "prompt_collection": "prompts",
+      "prompt_key": "tidal-mosaic",
+      "reference_assets": []
+    },
+    {
+      "variant": "rolling-world",
+      "asset": "assets/rolling-world.png",
+      "source_generated_filename": "exec-7d1ca992-9f65-4ab3-8dea-99f4bfd77057.png",
+      "sha256": "3a19f11e43901162e662ea41e539d8982587d4469b71e9c78bd83d34a6535c70",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2647726,
+      "prompt_collection": "prompts",
+      "prompt_key": "rolling-world",
+      "reference_assets": []
+    },
+    {
+      "variant": "cubist-space",
+      "asset": "assets/cubist-space.png",
+      "source_generated_filename": "exec-d498aa99-d003-4a5c-b290-2e2d7b08aee2.png",
+      "sha256": "8ca07b27523552626f1a3eba89a86b860e2e3490f17870e2427441a11dc42501",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2025916,
+      "prompt_collection": "iterations",
+      "prompt_key": "cubist-space-v2",
+      "reference_assets": []
+    },
+    {
+      "variant": "shadow-world",
+      "asset": "assets/shadow-world.png",
+      "source_generated_filename": "exec-6ce60e3b-b89e-4008-98e8-925a09f395f7.png",
+      "sha256": "cdbea351c5a8b4571f41f53e598695f9046d7e8bfc93517404e29f5d2792baab",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2220746,
+      "prompt_collection": "prompts",
+      "prompt_key": "shadow-world",
+      "reference_assets": []
+    },
+    {
+      "variant": "mirror-water",
+      "asset": "assets/mirror-water.png",
+      "source_generated_filename": "exec-3538f568-5eea-4624-bf1d-e54f93277cfd.png",
+      "sha256": "bba31bec670bfd49c007f20d8810b9f63121db7e9b3901385d2cac1dff08ee0e",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2601741,
+      "prompt_collection": "prompts",
+      "prompt_key": "mirror-water",
+      "reference_assets": []
+    }
+  ],
+  "retained_variants": [
+    {
+      "variant": "cubist-space-v1",
+      "asset": "assets/cubist-space-v1.png",
+      "source_generated_filename": "exec-1a2534e1-b7f6-4318-9363-5ced0987b716.png",
+      "sha256": "a23abf3f4daff22333eb552e54a5e0b8fd0189e359533e2fdb2ac2c1bd6dedd2",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2642410,
+      "prompt_collection": "prompts",
+      "prompt_key": "cubist-space",
+      "reference_assets": []
+    }
+  ]
+}

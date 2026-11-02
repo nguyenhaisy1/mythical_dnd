@@ -1,11 +1,11 @@
 # Sprint13 — Các mục cần chủ dự án chốt
 
-Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệt nào. AI không tự chuyển Approved dựa trên test/CI hoặc nhận xét của agent.
+Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệt mỹ thuật cuối hoặc kết thúc Sprint13. User đã ưu tiên đào sâu14/1–3; ưu tiên nghiên cứu này không tự là final approval. AI không chuyển Approved dựa trên test/CI hoặc nhận xét của agent.
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện tham khảo Experiment01–14 và workshop SPIN-029, các phiên bản cùng được giữ | Changes requested; các phương án mới Pending | 27/10: user nói đồ họa bản01 chưa ưng ý, yêu cầu bản khác |
-| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–14 UI concept tổng thể | Pending | Chưa có |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện Experiment01–15 và workshop SPIN-029;14/1–3 ưu tiên đào sâu, các phiên bản cùng được giữ | Changes requested;14/1–3 ưu tiên đào sâu; chưa Final approved | 27/10: bản01 chưa ưng ý;30/10: user đánh giá rất tốt14/1–3 và cho phép đào sâu, chưa chốt cuối |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–15 UI concept tổng thể | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
@@ -81,3 +81,9 @@ Cast, công cụ, UI và việc dùng ngữ pháp văn hóa là minh họa sáng
 Ngày30/10 user nói sáu ảnh13 tốt nhưng còn giống nhau, chưa có nhiều khác biệt/vượt bậc, rồi giao thử tiếp. Đây là phản hồi tích cực kèm yêu cầu mở rộng, không phải duyệt một hướng13, loại các bản cũ hoặc chốtSprint13. Vòng14 giao sáu hướng độc lập, thay nhiều trục tạo hình và UI; [báo cáo14](EXPERIMENT-14-REPORT.md) ghi brief, output và evidence theo thực tế.
 
 Giữ toàn bộ01–13 và workshop; mỗi ảnh mới vẫn là phương án tham khảo. Camera cong, ký hình, first-person hoặc bố cục truyện tranh không tự đổi canon/engine/gameplay. S13-A01–A04 giữ Pending/Changes requested; chưa có quyết định chọn/loại/kết hợp hoặc chuyểnSprint14.
+
+## Thử nghiệm15 — SPIN-032: ưu tiên14/1–3 và tiếp tục ý tưởng mới
+
+Ngày30/10 user nói ý tưởng1,2,3 của vòng14 rất tốt, có thể triển khai thêm, đồng thời yêu cầu những ý tưởng mới táo bạo hơn. Ghi đúng ba ưu tiên: **Đất dựng thành** (`earth-monument`), **Ô đất sống** (`living-grid`), **Làng vòng cung** (`round-world`). Đây là quyền đào sâu bằng ảnh trong giai đoạn hiện hành, chưa phải chọn một art direction cuối, cấp quyền tạo model/gameplay hoặc chốtSprint13. Các hướng14/4–6 và01–13 vẫn được giữ.
+
+Vòng15 giao ba nhánh từ ưu tiên và ba cách nhìn mới; [báo cáo15](EXPERIMENT-15-REPORT.md) ghi intent/output/evidence theo thực tế. Mảng ghép không tự là luật ô/hex; phép cuộn không là hành tinh; đa diện, bóng và phản chiếu không thêm vật lý, phép thuật hoặc nguồn hidden truth. S13-A01–A04 tiếp tục chờ chốt cuối; không có quyền tự merge dev, đóngSprint13 hoặc chuyểnSprint14.

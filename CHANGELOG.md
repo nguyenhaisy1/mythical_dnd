@@ -8,6 +8,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ### Sprint13 — thử nghiệm chưa được duyệt
 
+- Thử nghiệm15 ghi ba ưu tiên được user cho đào sâu14/1–3 và mở sáu ảnh: ba nhánh đứng/mosaic/cuộn cùng ba cách nhìn đa diện/bóng/phản chiếu. Chỉ đề xuất đồ họa; giữ thư viện, không suy ưu tiên thành final art approval hoặc thay canon/engine/gameplay.
+
 - Thử nghiệm14 mở sáu hướng độc lập sau phản hồi ảnh13 còn giống nhau: khối thành đất, mặt bằng2D, camera cong/khối tròn, first-person đồ họa, thế giới ký hình và trang truyện đời sống. Đổi camera/hình/cast/bối cảnh/UI để mở rộng thư viện, không chốt art/engine/canon hoặc tạo model thật.
 
 - Thử nghiệm13 đưa brief workshop vào ba cách nhìn Khối Lạc, Dải đời sống và Trong lòng làng, mỗi hướng có frame thế giới/đối thoại riêng. Ưu tiên camera, hình khối và tỷ lệ chơi thay board65/35; ảnh xem trước, không model/runtime, giữ thư viện và trạng thái Pending.
