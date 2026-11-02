@@ -2175,3 +2175,82 @@ Code critic /root/s13e17_critic_code chạy checker17 lượt đầu exit0 Chrom
 Visual critic /root/s13e17_critic_visual mở trực tiếp11PNG17, năm ảnh cũ (14earth/grid/round,15rolling,11pixel) và ba screenshot cuối (scene-gesture1280,scene-close-pixel390,gallery-negative1920); đọc browserJSON nhưng không tự run automation. KhôngP1 cản xem thư viện. Các P2 về mức đạt grammar/camera/relief/khoang âm, Vành sân NPC vô diện/vật như bát/marker ôm thân, pixel portrait tóc xám chưa già, texture/density/mobile raster tiny được giữ trong gallery/report/review. Dấu player/portrait và bubble nhìn chung rõ hơn16, chưa là hệUI runtime. Không nhận mười tên thành mười đột phá hoặc ý kiến reviewer thành user approval.
 Checks cuối exit0: build_docs --check36generatedfiles; check_handoff751authoredlinks; node --check và diff --check; export.py7HTML+7DOCX; check_exports256sourceinputs/14containers/6156anchors/123tables/navigationvalid. Export chỉ kiểm container/content/navigation, không visual rendering hoặc gameplay acceptance. Staged scope30files trước journal,11PNG binaries22,092,490bytes, secret-pattern scan0hit; khôngcache/ZIP/model. Exports ignored, WORKLOG excluded.
 HANDOFF/sprint/APPROVALS/changelog/report/hai review/exportinputs và ba brainstorm notes đồng bộ. Không sửa archive/generatedGDD/canon/engine/gameplay/save/schema/content/VERSION. Giữ01–16/v1/các đề xuất chưa vào batch và ưu tiên14/1–3. Toàn bộ output17/S13-A01–A04/Sprint13 Pending user approval; không merge dev, đóngSprint13, chuyểnSprint14, main/tag/release. Tiếp theo commit/push feature, cập nhật draftPR13 và kiểm CI đúng HEAD.
+
+
+### EVT-00186 | SPIN-034 | GIT — Vòng17 đã push, hai CI đúng commit thành công; PR13 giữ nháp
+
+<!-- worklog: {"id": "EVT-00186", "spin": "SPIN-034", "event": "GIT", "at": "2026-11-02T11:15:02+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T11:15:02+07:00
+- Actor: /root
+
+Đã push commit a22ca557d2ba19014db7313ca036ef7cc8296e88 lên origin/feature/sprint-13-experiment-01. SHA từ ls-remote khớp local HEAD. PR13 cập nhật bộ mười hướng, vẫn draft=true và base=dev.
+Hai CI trên đúng commit đều completed/success: pull_request41387138458 và push41387130450. Không merge dev/main, tạo tag hoặc release. Event GIT này được append sau commit và còn local; đưa vào commit công việc kế tiếp, không amend hoặc tạo vòng lặp commit nhật ký.
+
+
+### EVT-00187 | SPIN-034 | HANDOFF — Bàn giao mười phương án đã brainstorming và một biến thể giữ lại
+
+<!-- worklog: {"id": "EVT-00187", "spin": "SPIN-034", "event": "HANDOFF", "at": "2026-11-02T11:15:03+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T11:15:03+07:00
+- Actor: /root
+
+Bàn giao http://127.0.0.1:8016/experiment-17/ với mười frame chính, một link Vành sân v1 và lịch sử01–16. Mười một PNG nguyên gốc, prompt/provenance, brief/README, ba note brainstorm, báo cáo và hai review đã push. Checks ảnh/gallery/tài liệu/exports và CI đạt trong phạm vi tương ứng.
+Ba worker đã brainstorming/trao đổi chéo, root chọn phạm vi và sinh ảnh, hai critic kiểm độc lập. Các cải tiến về cự ly/cử chỉ/UI và phần chưa đạt camera/texture/portrait/prop đều được giữ trong hồ sơ. Không nhận ảnh là gameplay, scene/model3D thật hoặc human playtest. Ưu tiên14/1–3 và mọi phiên bản cũ tiếp tục được giữ; không gán bản chưa vào batch hoặc v1 là user bác bỏ.
+Mọi output17/S13-A01–A04/Sprint13 vẫn Pending user approval. Tiếp theo chờ phản hồi, chọn/kết hợp hoặc yêu cầu sửa từ chủ dự án; không tự chuyển Sprint14 hoặc merge dev. Các event nhật ký sau commit còn local, sẽ đi cùng commit công việc kế tiếp.
+
+
+### EVT-00188 | SPIN-034 | CLOSE — Finished phạm vi tạo và bàn giao mười ý tưởng; mỹ thuật/Sprint13 vẫn Pending
+
+<!-- worklog: {"id": "EVT-00188", "spin": "SPIN-034", "event": "CLOSE", "at": "2026-11-02T11:15:03+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T11:15:03+07:00
+- Actor: /root
+
+Status: finished đối với phạm vi thực hiện yêu cầu tạo thêm10ý tưởng và bàn giao ảnh/hồ sơ trong SPIN-034. Evidence:10frame chính+1bản giữ,3note brainstorming,hai review,checks đã ghi ởEVT-00185 và commit/CI ở event GIT cùng spin.
+Đóng phần thực hiện spin không phải Final accepted mỹ thuật hoặc đóng Sprint13. Mọi phương án và S13-A01–A04 tiếp tục Pending user approval. Bước tiếp theo do phản hồi/chỉ dẫn của chủ dự án quyết định; nếu sửa cùng phương án có thể RESUME đúng spin, nếu mở mục tiêu thử mới thì mở spin mới trong Sprint13. Không tự chuyển Sprint14, merge dev/main, tag hoặc release.
+
+
+### EVT-00189 | SPIN-035 | OPEN — Thử nghiệm18 — mở rộng thêm mười lăm cách thể hiện game
+
+<!-- worklog: {"id": "EVT-00189", "spin": "SPIN-035", "event": "OPEN", "at": "2026-11-02T11:17:09+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T11:17:09+07:00
+- Actor: /root
+
+User giao thêm khoảng15ý tưởng sau vòng17. Mở Experiment18/SPIN-035 trong Sprint13, chọn15frame ảnh mô phỏng game với khác biệt thực về camera/cấu trúc thế giới/silhouette/cast/UI. Có thể học/cải tiến thư viện nhưng không đổi palette rồi gọi hướng mới. Giữ01–17, mọi biến thể và ưu tiên14/1–3; lời động viên/yêu cầu thêm không là approval hoặc loại bản cũ.
+Ba worker brainstorming nhanh theo vai không gian, nhân vật/UI và audit/range, phản biện chéo; root chọn batch15 và tạo ảnh built-in image_gen không ảnh input (lineage ý tưởng không reference ảnh). Sau đó worker làm brief/gallery/hồ sơ, hai critic kiểm độc lập sau output, root tổng hợp/kiểm lớp đầu. Actor thật theo lượt, tối đa4concurrent. Chỉ ảnh preview, không model/Hyper3D/Blender/runtime/gameplay/canon mới. Mọi output18/Sprint13 vẫn Pending user approval; không merge dev, đóngSprint13, chuyểnSprint14, main/tag/release.
+
+
+### EVT-00190 | SPIN-035 | ASSIGN — Gộp đề xuất trùng, chọn mười lăm hướng và giao ba worker chuẩn bị
+
+<!-- worklog: {"id": "EVT-00190", "spin": "SPIN-035", "event": "ASSIGN", "at": "2026-11-02T11:25:32+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T11:25:32+07:00
+- Actor: /root
+
+Ba worker /root/s13e18_space,/root/s13e18_cast,/root/s13e18_audit brainstorm theo không gian, nhân vật/UI và audit/range, phản biện chéo thật. Root gộp3cặp trùng cel/soft/ink, chọn6gói space+6gói cast+3gói audit riêng để thành15. Ba dải đường phải là3lớp ngoài trời có che khuất, khác Sân khấu một nền chỉ1floor; pixel nhiều màu/cụm lớn khác một-bit bằng cách xây đặc/rỗng, không chỉ palette. Soft/hybrid dự phòng17 được thử ở18, không phải user đã loại rồi quay lại.
+Final15 theo thứ tự: open-yard/Sân chéo mở;three-bands/Ba dải đường;shoulder-craft/Qua vai người thợ;long-diagonal/Đường chéo dài;column-forest/Rừng là thân cột;plan-profile/Sân phẳng, người nổi;cel-adult/Nét mặt ba sắc;soft-mass/Khối liền mềm;ink-mass/Mực đặc;ribbon-body/Người bằng dải;contour-step/Đường đồng mức sống;square-gesture/Pixel hình lớn;one-bit/Một-bit có tuổi;single-stage/Sân khấu một nền;retro-facet/Khối răng cưa.
+Stage2 same actors: space sở hữu ART/README vànote01;cast sở hữu3gallerysource vànote02;audit sở hữu report/HANDOFF/sprint/APPROVALS/changelog/exportinputs vànote03. Root viết prompt/tạoảnh/provenance/tíchhợp. Prompt đặt graphicrule trước bối cảnh, ưu tiên mặt/cử chỉ/tuổi, chân dung selectedplayer và dấu player khác NPC. Root sẽ gọi từng concept độc lập (có thể chờ các lượt độc lập theo nhóm), không dùng ảnh input. Hai critic kiểm sau output. Giữ01–17, ưu tiên14/1–3, tất cả Pending Sprint13.
+
+
+### EVT-00191 | SPIN-035 | PROGRESS — Mười lăm hướng và hai bản đầu đã tạo; tích hợp và kiểm độc lập đang chạy
+
+<!-- worklog: {"id": "EVT-00191", "spin": "SPIN-035", "event": "PROGRESS", "at": "2026-11-02T11:56:34+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T11:56:34+07:00
+- Actor: /root
+
+Đã tạo và mở17PNG mới:15frame chính và2v1 dải thân/đồng mức giữ qua link riêng. Tất cảRGB, tổng30,511,159bytes;15ảnh1672×941, riêngplan-profile vàcontour-step-v1 1672×940. Mười bảy lượt built-in image_gen độc lập không ảnh input, gồm15prompt đầu+2iteration. Một số lượt được gọi theo nhóm; không ghi đó là benchmark/tốc độ provider. Copy nguyênbytes, nguồn/SHA/mode/dims/bytes/mapping đãlưu; khôngcrop/resize/hậu kỳ/model.
+V1 dải thân/đồng mức còn giống body mặc áo/cảnh thường nên root rebriefv2. V2 thấy rõ dải rộng/các lớp qua silhouette vàUI, nhưng tăng trừu tượng/dáng tượng/tuổi-vibe cần xem tiếp. Giữv1 khônggánuserbácbỏ. Một-bit chỉ diệnmạo đồhọa, file vẫnPNG RGB. Rootthêm15quan sát/2linkv1, cậpnhậtREADME/reportoutput vàmetadata; đãkiểmgallery+17PNGHTTP200, appopenbrowser18trảqueuedkhônglàapproval.
+Ba worker /root/s13e18_space,/root/s13e18_cast,/root/s13e18_audit xongbrainstorm vàstage2đúngownership. Gộp3cặp cel/soft/ink trùng; phânbiệt3dảioutdoors/1sàn, pixelcụmlớn/one-bit, camera/khốivàbody/UI. Note3file giữactualexchange. Workerpreassetharnesslượt1failed do checker tạm đòiPNG chưa có; JSONfailedđãgiữ. Sửa checker tạm, sourcekhôngđổi giữa2lượt, lượt2 controls/layout3viewportHTML100/125/150exit0; khôngnhậnmissingassetrequestthànhPassedasset.
+Đãgiao /root/s13e18_critic_code và /root/s13e18_critic_visual. Codecriticpháthiện tên plan-profileHTML/JS khác prompts/README trước run; root đồngbộ 'Sân phẳng, người nổi' rồi báo freeze mới. Không sửa notesbrainstorm lịch sử từng dùng tên khác. Kiểm independent cuối phảiáp source saufix, khôngtái nhậnfingerprintpreassetlàfinal. Root cũng sửa lời kếhoạch cũ ởHANDOFF17 thành trạng thái deliveredđãcóbằngchứng, không sửa archive.
+Tiếptheoreview/docs/exports/GitdraftPR, giữ01–17/biếnthể và ưu tiên14/1–3; tấtcảoutput18/Sprint13Pending, khôngmerge dev/Sprint14/main/tag/release.
+
+
+### EVT-00192 | SPIN-035 | RESULT — Mười lăm phương án vòng18 hoàn tất, hai review và checks đạt; chờ chủ dự án chốt
+
+<!-- worklog: {"id": "EVT-00192", "spin": "SPIN-035", "event": "RESULT", "at": "2026-11-02T12:08:52+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T12:08:52+07:00
+- Actor: /root
+
+Hoàn thiện yêu cầu thêm khoảng15ý tưởng bằng15frame chính và2bản đầu dải thân/đồng mức giữ qua link riêng. Mười bảy PNG RGB,30,511,159bytes, tạo02/11 bằng built-in image_gen không ảnh input;15ảnh1672×941, plan-profile vàcontour-step-v1 1672×940. Copy nguyên bytes, khôngcrop/resize/hậu kỳ; prompt15+iteration2/provenance/source/SHA/mode/dims/bytes/mapping lưu đủ. Root đã mở17output và2scene screenshot cuối ribbon1280/one-bit390, kiểm gallery+17PNGHTTP200 vàfingerprint. Appopen browser18 trảqueued, không nhận đó là user approval.
+Ba worker /root/s13e18_space,/root/s13e18_cast,/root/s13e18_audit xong brainstorming/trao đổi chéo thật, ghi3note; root gộp3cặp cel/soft/ink rồi chọn6space+6cast+3audit. Cùng3actor hoàn tất stage2 brief/gallery/hồ sơ. Bối cảnh có sân, xưởng, lối địa hình, rừng và bến; không coi15tên thành15kỹ thuật chưa từng có. Soft/hybrid từ đề xuất dự phòng17 được thử tiếp, không user bác bỏ. V1 dải/lớp còn cảnh/body thường nên root rebriefv2; cấu trúc dải rộng/lớp bậc đã thấy rõ hơn, vẫn giữv1.
+Code critic /root/s13e18_critic_code checker độc lập lượt đầu exit0 Chrome156.0.8078.79 trên source sau đồng bộ tên plan-profile.17PNG giống original từngbyte,17hash/bytes/mode/dims/mapping/norefs đạt;15cards/switch/digits1–9+0=10/ArrowLeftRightwrap/HomeEnd/contain/modal/PNG/Escape/close/focus;1280/1920/390,HTML100/125/150;17historylinks+2v1links;0JS/remote/failed request. Năm fingerprint trước/sau/rootcuối khớp. BrowserJSON và50screenshot ignored (45gallery+3text150+2scene). Codecritic đã mở2scene thật, không nhận UI raster mobile đạt. Workerpreasset riêng attempt1 failed do checker tạm đòiPNG chưa có, attempt2controls/layoutPassed; JSONfailed được giữ, không che hoặc trộn với lượt independent critic. Lệch tên plan-profile do critic phát hiện trước run được root sửa HTML/JS và báo freeze mới.
+Visual critic /root/s13e18_critic_visual mở17PNG18,3ảnh cũ12clay/16line-volume/17close-pixel và3screenshot cuối scene-ribbon1280/scene-one-bit390/gallery-column-forest1920; không tựrunautomation hoặc xem hết50screenshot. KhôngP1cản xem. P2 giữ: hybrid/3bands/retro chưa trọn, portrait thiếu3bands/shoulder/retro hoặc lặpcel/contour, density/rastermobile, tuổi/bản sắc ở dải/lớp. Root giữ các nhận xét trong report/review/ghi chú output, không coi technicalreview hay ý kiến AI là user approval. Một-bit là diệnmạo, file thực vẫnRGB. Khôngmodel/scene3D thật, runtime/Unity/humanplaytest mới.
+Checks cuối exit0: build_docs --check36generatedfiles; check_handoff763authoredlinks; node --check/diff --check; export.py7HTML+7DOCX; check_exports259sourceinputs/14containers/6156anchors/123tables/navigationvalid. Export là container/content/navigation check, không visualrendering hoặc game acceptance. Stagedscope36files trướcjournal,17PNG binaries30,511,159bytes, secret-pattern scan0hit; khôngcache/ZIP/model. Exports ignored, WORKLOG excluded.
+HANDOFF/sprint/APPROVALS/changelog/report/hai review/exportinputs và3brainstormnotes đồng bộ. Sửa wording kế hoạch cũ trong HANDOFF17 thành deliveredfacts đã có evidence; không sửa lịch sử nguồn bất biến. Khôngarchive/generatedGDD/canon/engine/gameplay/save/schema/content/VERSION change. Giữ01–17/biếnthể/ưu tiên14/1–3. Tất cả output18/S13-A01–A04/Sprint13 Pending user approval; khôngmerge dev, đóngSprint13, chuyểnSprint14, main/tag/release. Tiếp theo commit/pushfeature, cập nhật draftPR13 và kiểm CI đúngHEAD.

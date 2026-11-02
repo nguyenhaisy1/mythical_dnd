@@ -4,8 +4,8 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện Experiment01–17 và workshop SPIN-029;14/1–3 ưu tiên đào sâu, các phiên bản cùng được giữ | Changes requested;14/1–3 ưu tiên đào sâu; chưa Final approved | 27/10: bản01 chưa ưng ý;30/10: user đánh giá rất tốt14/1–3 và cho phép đào sâu, chưa chốt cuối |
-| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–17 UI concept tổng thể | Pending | Chưa có |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện Experiment01–18 và workshop SPIN-029;14/1–3 ưu tiên đào sâu, các phiên bản cùng được giữ | Changes requested;14/1–3 ưu tiên đào sâu; chưa Final approved | 27/10: bản01 chưa ưng ý;30/10: user đánh giá rất tốt14/1–3 và cho phép đào sâu, chưa chốt cuối |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–18 UI concept tổng thể | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
@@ -101,3 +101,10 @@ Giữ01–15, các biến thể và ưu tiên đào sâu14/1–3. Hình dây/m�
 Ngày02/11 user giao thêm10ý tưởng và cho phép học hỏi/improve từ bản cũ, brainstorming giữa tác nhân. Đây là quyền tạo thêm ảnh xem trước trong Sprint13, không duyệt16, loại bản cũ hoặc chốt style. Ba nhánh thành đất/mặt bằng/vòng sân nối ưu tiên14/1–3; bảy hướng khác/cải tiến bổ sung khoảng lựa chọn. [Báo cáo17](EXPERIMENT-17-REPORT.md) cùng các note brainstorm ghi lựa chọn batch của AI, lineage và output/review theo thực tế; không biến chọn phạm vi thử ảnh thành approval của user.
 
 Giữ01–16, biến thể và cả phương án dự phòng chưa đưa vào mười frame. Camera thấp/âm bản/relief/pixel không thêm luật game, nhìn xuyên hoặc quyền biết bí mật. S13-A01–A04 tiếp tục Pending/Changes requested theo phản hồi thật; chưa final approval, chưa có quyền merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Thử nghiệm18 — SPIN-035: thêm khoảng mười lăm ý tưởng
+
+Ngày02/11 user yêu cầu thêm khoảng15ý tưởng và động viên tiếp tục. Đây là quyền bổ sung ảnh xem trước, không duyệt17, loại bản cũ hoặc chọn style cuối. AI brainstorming/gộp cel–soft–ink trùng rồi chọn15tổ hợp camera/hình người/render/UI; lựa chọn phạm vi này không là approval của user. [Báo cáo18](EXPERIMENT-18-REPORT.md) và các note ghi intent/output/review theo thực tế, không nhận đủ15tên thành15phương pháp đã đạt.
+
+Giữ toàn bộ01–17, biến thể và ưu tiên nghiên cứu14/1–3. Hybrid/contour/dither/mặt cắt không tự thêm luật game hoặc tri thức bí mật. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật; chưa final approval, chưa có quyền merge dev, đóngSprint13 hoặc chuyểnSprint14.
