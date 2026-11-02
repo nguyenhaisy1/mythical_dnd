@@ -4,8 +4,8 @@ Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệ
 
 | ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
 |---|---|---|---|---|
-| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện Experiment01–15 và workshop SPIN-029;14/1–3 ưu tiên đào sâu, các phiên bản cùng được giữ | Changes requested;14/1–3 ưu tiên đào sâu; chưa Final approved | 27/10: bản01 chưa ưng ý;30/10: user đánh giá rất tốt14/1–3 và cho phép đào sâu, chưa chốt cuối |
-| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–15 UI concept tổng thể | Pending | Chưa có |
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện Experiment01–16 và workshop SPIN-029;14/1–3 ưu tiên đào sâu, các phiên bản cùng được giữ | Changes requested;14/1–3 ưu tiên đào sâu; chưa Final approved | 27/10: bản01 chưa ưng ý;30/10: user đánh giá rất tốt14/1–3 và cho phép đào sâu, chưa chốt cuối |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–16 UI concept tổng thể | Pending | Chưa có |
 | S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
 | S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
 
@@ -87,3 +87,10 @@ Giữ toàn bộ01–13 và workshop; mỗi ảnh mới vẫn là phương án t
 Ngày30/10 user nói ý tưởng1,2,3 của vòng14 rất tốt, có thể triển khai thêm, đồng thời yêu cầu những ý tưởng mới táo bạo hơn. Ghi đúng ba ưu tiên: **Đất dựng thành** (`earth-monument`), **Ô đất sống** (`living-grid`), **Làng vòng cung** (`round-world`). Đây là quyền đào sâu bằng ảnh trong giai đoạn hiện hành, chưa phải chọn một art direction cuối, cấp quyền tạo model/gameplay hoặc chốtSprint13. Các hướng14/4–6 và01–13 vẫn được giữ.
 
 Vòng15 giao ba nhánh từ ưu tiên và ba cách nhìn mới; [báo cáo15](EXPERIMENT-15-REPORT.md) ghi intent/output/evidence theo thực tế. Mảng ghép không tự là luật ô/hex; phép cuộn không là hành tinh; đa diện, bóng và phản chiếu không thêm vật lý, phép thuật hoặc nguồn hidden truth. S13-A01–A04 tiếp tục chờ chốt cuối; không có quyền tự merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Thử nghiệm16 — SPIN-033: thêm ý tưởng, chưa có quyết định duyệt mới
+
+Ngày02/11 user yêu cầu “cho tôi thêm những ý tưởng mới”. Đây là quyền bổ sung ảnh xem trước, không duyệt vòng15, loại các hướng cũ hoặc chọn một style cuối. Vòng16 giao sáu cách tạo hình: Thế giới dệt, Nét dây không gian, Làng gấp, Mưa khắc hình, Mặt cắt đời sống và Hạt khối. [Báo cáo16](EXPERIMENT-16-REPORT.md) ghi ý định, output và review theo thực tế; vật liệu có tiền lệ không tự là ý tưởng hoàn toàn mới.
+
+Giữ01–15, các biến thể và ưu tiên đào sâu14/1–3. Hình dây/mặt cắt/voxel/gấp không là luật game hoặc quyền biết bí mật. S13-A01–A04 tiếp tục Pending/Changes requested theo phản hồi thật; chưa final approval, chưa có quyền merge dev, đóngSprint13 hoặc chuyểnSprint14.
