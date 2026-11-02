@@ -25,3 +25,10 @@ VS07 đầy đủ vẫn phụ thuộc VS03/04/05 theo [Implementation Plan](IMPL
 ## Khi nào phải điều chỉnh mốc?
 
 Mục tiêu là **bắt đầu hình ảnh Sprint13; chơi thử nhỏ Sprint15–16**, không là bảo đảm phát hành. Sprint13 có thể gồm nhiều spin thử nghiệm; không chuyển Sprint14 khi [các mục cần chốt](sprints/sprint-13/APPROVALS.md) chưa được chủ dự án duyệt. Vì vậy forecast demo phải xét lại sau khi chốt Sprint13. Cuối mỗi sprint đối chiếu: generator/viability, luật repair và save, actor-scoped projection, Unity scene/input/build. Nếu một gate chưa đạt, ghi nguyên nhân và forecast mới trong sprint report trước khi chuyển mốc; không âm thầm đổi định nghĩa “demo” thành ảnh hoặc video. Chưa quy đổi sang ngày vì chưa có thời lượng sprint cố định và còn rủi ro tích hợp.
+
+
+## Hiệu chỉnh forecast sau nghiên cứu ba hướng — 02/11/2026
+
+[Báo cáo SPIN-036](sprints/sprint-13/ART-FEASIBILITY-THREE-DIRECTIONS.md) đề xuất route3D cách điệu/camera giới hạn cho ba mẫu14/17/18; đây chưa là quyết định thay baseline hay chốtSprint13. M1artproof khoảng86–215giờ công AI tùy hướng, M2demo nhỏ320–719giờ lũy kế, theo scope cụ thể trong báo cáo; Earth chỉfragment, M2áp grammar vào BếnVạc với bến/thuyền trong assetbudget. Q4/8/12 chỉ giả định tổng năng lực hữu dụng của nhóm, chưa đo trênPlus/Solhigh; bảng ngày chưa cộng phụ thuộc/chờ. Không thay forecastSprint15–16 thành ngày hứa hoặc tự mởSprint14.
+
+Trước khi chốt lịch cần M0cap12–24giờ công kiểm đường asset/rig/import/camera và ghi active/wait/retry thật; cap có thể hết mà chưa usableasset. Việc này mới được đề xuất, chưa giao triển khai. Client/scenes/Player persistence, generator có nhân quả, actor projection và repair vẫn có acceptance riêng; hình ảnh đẹp không thay các gate đó.

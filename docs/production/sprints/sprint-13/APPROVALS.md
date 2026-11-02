@@ -108,3 +108,8 @@ Giữ01–16, biến thể và cả phương án dự phòng chưa đưa vào m�
 Ngày02/11 user yêu cầu thêm khoảng15ý tưởng và động viên tiếp tục. Đây là quyền bổ sung ảnh xem trước, không duyệt17, loại bản cũ hoặc chọn style cuối. AI brainstorming/gộp cel–soft–ink trùng rồi chọn15tổ hợp camera/hình người/render/UI; lựa chọn phạm vi này không là approval của user. [Báo cáo18](EXPERIMENT-18-REPORT.md) và các note ghi intent/output/review theo thực tế, không nhận đủ15tên thành15phương pháp đã đạt.
 
 Giữ toàn bộ01–17, biến thể và ưu tiên nghiên cứu14/1–3. Hybrid/contour/dither/mặt cắt không tự thêm luật game hoặc tri thức bí mật. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật; chưa final approval, chưa có quyền merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## SPIN-036 — yêu cầu đánh giá ba mẫu không là chọn mỹ thuật
+
+Ngày02/11 chủ dự án yêu cầu brainstorm effort, khả thi, lịch và stack cho Đất dựng thành14/Hành lang thành đất17/Đường chéo dài18. [Nghiên cứu](ART-FEASIBILITY-THREE-DIRECTIONS.md) và route3D/M0 đề xuất không là approval để chọn/bỏstyle, bootstrap/assetproduction hoặc đổicanon/engine. Giữ01–18, biến thể, ưu tiên14/1–3 và trạng tháiS13-A01–A04 theo phản hồi thật. Hai critic độc lập đã review ở các lượt sau; critic estimate bị usage-limit lượt đầu rồi tiếp tục được, rootself-review vẫn là lớp riêng. ChưaFinalaccepted hoặc quyềnmerge dev/đóngSprint13/quaSprint14.

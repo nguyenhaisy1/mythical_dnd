@@ -8,6 +8,8 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ### Sprint13 — thử nghiệm chưa được duyệt
 
+- Nghiên cứu SPIN-036 so sánh khả thi/effort/stack ba hướng Đất dựng thành, Hành lang thành đất và Đường chéo dài; có WBS dùng chung, lịch theo năng lực giả định, pipeline3D và phản biện thật. Chỉ planning, chưa tạo model/scene hoặc chốt mỹ thuật; Plus không thành lịch bảo đảm.
+
 - Thử nghiệm18 giao15tổ hợp camera/không gian/cast–UI qua brainstorming chéo, gộp ba cặp cel/soft/ink trùng và mở phạm vi sân/rừng/hiên nghề. Chỉ ảnh xem trước; kiểm delta trên output thật, giữ01–17/biến thể/ưu tiên14/1–3 và Pending, không chốt art/canon/engine.
 
 - Thử nghiệm17 giao mười phương án qua brainstorming chéo: ba nhánh ưu tiên14/1–3 và bảy hướng khác/cải tiến từ thư viện. Gộp relief trùng, mở range camera thấp/pixel gần/âm bản, giữ01–16 và mọi dự phòng; chỉ ảnh xem trước, chưa chốt art/canon/engine.

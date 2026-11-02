@@ -2254,3 +2254,77 @@ Code critic /root/s13e18_critic_code checker độc lập lượt đầu exit0 C
 Visual critic /root/s13e18_critic_visual mở17PNG18,3ảnh cũ12clay/16line-volume/17close-pixel và3screenshot cuối scene-ribbon1280/scene-one-bit390/gallery-column-forest1920; không tựrunautomation hoặc xem hết50screenshot. KhôngP1cản xem. P2 giữ: hybrid/3bands/retro chưa trọn, portrait thiếu3bands/shoulder/retro hoặc lặpcel/contour, density/rastermobile, tuổi/bản sắc ở dải/lớp. Root giữ các nhận xét trong report/review/ghi chú output, không coi technicalreview hay ý kiến AI là user approval. Một-bit là diệnmạo, file thực vẫnRGB. Khôngmodel/scene3D thật, runtime/Unity/humanplaytest mới.
 Checks cuối exit0: build_docs --check36generatedfiles; check_handoff763authoredlinks; node --check/diff --check; export.py7HTML+7DOCX; check_exports259sourceinputs/14containers/6156anchors/123tables/navigationvalid. Export là container/content/navigation check, không visualrendering hoặc game acceptance. Stagedscope36files trướcjournal,17PNG binaries30,511,159bytes, secret-pattern scan0hit; khôngcache/ZIP/model. Exports ignored, WORKLOG excluded.
 HANDOFF/sprint/APPROVALS/changelog/report/hai review/exportinputs và3brainstormnotes đồng bộ. Sửa wording kế hoạch cũ trong HANDOFF17 thành deliveredfacts đã có evidence; không sửa lịch sử nguồn bất biến. Khôngarchive/generatedGDD/canon/engine/gameplay/save/schema/content/VERSION change. Giữ01–17/biếnthể/ưu tiên14/1–3. Tất cả output18/S13-A01–A04/Sprint13 Pending user approval; khôngmerge dev, đóngSprint13, chuyểnSprint14, main/tag/release. Tiếp theo commit/pushfeature, cập nhật draftPR13 và kiểm CI đúngHEAD.
+
+
+### EVT-00193 | SPIN-035 | GIT — Vòng18 đã push, hai CI đúng commit thành công; PR13 giữ nháp
+
+<!-- worklog: {"id": "EVT-00193", "spin": "SPIN-035", "event": "GIT", "at": "2026-11-02T12:13:39+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T12:13:39+07:00
+- Actor: /root
+
+Đã push commit a37228f332893dc8ac185dfd517e316ea8c1b9af lên origin/feature/sprint-13-experiment-01. SHA từ ls-remote khớp local HEAD. PR13 đã cập nhật vòng18, vẫn draft=true và base=dev.
+Hai lượt CI trên đúng commit đều completed/success: pull_request41392450936 và push41392439816. Không merge dev/main, tag hoặc release. Event sau commit còn local, sẽ đưa vào commit công việc kế tiếp; không amend hoặc tạo vòng lặp commit nhật ký.
+
+
+### EVT-00194 | SPIN-035 | HANDOFF — Bàn giao mười lăm phương án và hai bản đầu để chủ dự án xem
+
+<!-- worklog: {"id": "EVT-00194", "spin": "SPIN-035", "event": "HANDOFF", "at": "2026-11-02T12:13:40+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T12:13:40+07:00
+- Actor: /root
+
+Bàn giao http://127.0.0.1:8016/experiment-18/ gồm15frame chính và hai link bản đầu dải thân/đồng mức. Mười bảy PNG nguyên gốc, prompt/provenance, brief/README, ba note brainstorm, báo cáo và hai review đã push. Checks ảnh/gallery/tài liệu/exports và CI đạt trong scope tương ứng; không nhận đó là game/Unity hoặc human playtest acceptance.
+Bộ có thêm sân/rừng/xưởng/lối địa hình, camera/cast/render khác nhau. V2 dải/lớp thay cấu trúc rõ nhưng tăng trừu tượng/dáng tượng; các lệch hybrid/ba dải/retro, portrait thiếu/lặp, tuổi/cue văn hóa/mật độ/độ đọc raster được giữ trong hồ sơ. One-bit chỉ diện mạo, file vẫn RGB. Hai v1 và mọi01–17/các biến thể tiếp tục được giữ, không tự loại hoặc chọn thay chủ dự án.
+Toàn bộ output18 và S13-A01–A04/Sprint13 vẫn Pending user approval. Tiếp theo chờ phản hồi/chọn/kết hợp hoặc yêu cầu sửa; không tự chuyển Sprint14 hoặc merge dev/main. Các event nhật ký sau commit còn local, sẽ đi cùng commit công việc kế tiếp.
+
+
+### EVT-00195 | SPIN-035 | CLOSE — Finished phạm vi tạo và bàn giao15ý tưởng; mỹ thuật/Sprint13 vẫn Pending
+
+<!-- worklog: {"id": "EVT-00195", "spin": "SPIN-035", "event": "CLOSE", "at": "2026-11-02T12:13:40+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T12:13:40+07:00
+- Actor: /root
+
+Status: finished phạm vi thực hiện yêu cầu thêm khoảng15ý tưởng và bàn giao ảnh/hồ sơ của SPIN-035. Evidence:15frame chính+2bản giữ,3note brainstorm/hai review,checks ởEVT-00192 và commit/CI ở event GIT cùng spin.
+Đóng phần thực hiện spin không là Final accepted mỹ thuật hoặc đóng Sprint13. Mọi phương án/S13-A01–A04 tiếp tục Pending user approval. Nếu sửa cùng phương án có thể RESUME đúng spin; mục tiêu thử mới mở spin mới trong Sprint13 theo yêu cầu. Không tự chuyển Sprint14, merge dev/main, tag hoặc release.
+
+
+### EVT-00196 | SPIN-036 | OPEN — Brainstorm khả thi và effort cho ba hướng thành đất, hành lang và đường chéo
+
+<!-- worklog: {"id": "EVT-00196", "spin": "SPIN-036", "event": "OPEN", "at": "2026-11-02T12:52:40+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T12:52:40+07:00
+- Actor: /root
+
+User giao một buổi brainstorming đánh giá effort, khả thi, thời gian và techstack/cách triển khai cho đúng ba ảnh: Đất dựng thành (14/earth-monument), Hành lang thành đất (17/earth-corridor), Đường chéo dài (18/long-diagonal). Mở SPIN-036 trong Sprint13, scope phân tích/kế hoạch, không sinh thêm artwork/model, không dựng gameplay hoặc scene thật. Không tự gọi đây là Experiment19 ảnh mới, không chốt style hoặc đổi engine baseline thay user.
+Đối chiếu ảnh thật và trạng thái code/client, phân biệt ảnh PNG với 2D/2.5D/3D production route. Ước tính theo cấu hình user nêu Codex Plus + GPT-6.1 Sol high, giữ đúng model, không coi Plus là unlimited hoặc high là modelart/pipeline3D. Kiểm official docs hiện hành về model/limits và Unity techstack. Chia mốc art proof, bounded playable demo, rollout style và fullgame; dùng giả định/effortbands/bottleneck rõ, không bịa throughput, benchmark hoặc ngày cam kết. Brainstorm với tác nhân và phản biện độc lập; log actors/evidence thật, giữ Pending S13-A01–A04 và mọi bản01–18.
+Đầu ra mong muốn: báo cáo so sánh dùng để quyết định, decomposition/effortmodel/criticalpath/rủi ro/nextspike có acceptance và sources; hồ sơ handoff/approvals/sprint liên quan cập nhật nhất quán. Không tự mởSprint14/merge dev/main/tag/release hoặc cài/thay model/accountconfig.
+
+
+### EVT-00197 | SPIN-036 | ASSIGN — Ba nhánh hoàn tất; một critic gặp quota, một critic kiểm độc lập
+
+<!-- worklog: {"id": "EVT-00197", "spin": "SPIN-036", "event": "ASSIGN", "at": "2026-11-02T16:26:29+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T16:26:29+07:00
+- Actor: /root
+
+Ba worker /root/art_feas_architecture (01 kiến trúc), /root/art_feas_art (02 pipeline mỹ thuật), /root/art_feas_estimate (03 effort) đã brainstorm/trao đổi chéo và hoàn tất file thuộc ownership; root xem ba PNG, đối chiếu client/core/hardware, nguồn official OpenAI/Unity và tổng hợp báo cáo. Critic /root/art_feas_critic_estimate đã được gọi nhưng lỗi usage limit trước khi tạo báo cáo; không có independent review từ actor này. /root/art_feas_critic_tech đang chạy, đã mở ba PNG, review tech/art và được giao kiểm số bổ sung. Root tự kiểm số riêng04, không nhận self-review thành independent reviewer thứ hai. Không có sáu actor đồng thời, không model/ảnh mới/Unity implementation hoặc đổi cấu hình account/model.
+
+
+### EVT-00198 | SPIN-036 | PROGRESS — Hoàn tất tổng hợp và phản biện; sửa thêm phạm vi asset trong dự toán demo
+
+<!-- worklog: {"id": "EVT-00198", "spin": "SPIN-036", "event": "PROGRESS", "at": "2026-11-02T16:30:26+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T16:30:26+07:00
+- Actor: /root
+
+Ba worker đã hoàn tất01–03, root tổng hợp mainreport và04selfreview, critic05đọc baPNG+workerreports/mainreport và kiểm lại số18cặpceil. Một critic estimate quota không cóoutput. Findings đã xử lý: M2chuyểngrammar vềBếnVạc tínhbến/thuyền, Earthfragment, Corridorclosefidelity, calendarQkhôngentitlement. Root phát hiện thêm khoảngWBS mởlooks/clips/boatkit trongM2 chưatáchcôngrõ, đãgiaoestimatevàcritic rà lại trướcchốttổng/exports; cáccon sốtrước làworkingestimate chưafinal.
+Checks tạm exit0:build_docs --check36files,check_handoff808authoredlinks; arithmeticM1/M2/M3cũ+ceil tínhđúng nhưngkhôngchứngminhworkscopeđủ. Root đãkiểmnguồnofficialmodel/pricing/UI vàmáy i5-8400/UHD630/~19GiB. Hyper3Dtoolmetadata9visiblelúckiểm, namespace vềsau bịgỡkhỏitoolinventory; chưapreflight/generationtest vàkhôngkếtluậnservicedisconnected. Khôngảnh/model/Unityimplementation/runtimebenchmark hoặcaccountconfigchange. PendingSprint13 giữnguyên.
+
+
+### EVT-00199 | SPIN-036 | RESULT — Nghiên cứu ba hướng hoàn tất; WBS đã sửa và hai critic kiểm bản cuối
+
+<!-- worklog: {"id": "EVT-00199", "spin": "SPIN-036", "event": "RESULT", "at": "2026-11-02T16:42:19+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T16:42:19+07:00
+- Actor: /root
+
+Hoàn tất nghiên cứu ba mẫu14earth-monument/17earth-corridor/18long-diagonal, không tạoExperiment19 hoặcasset/runtime mới. Mainreport ART-FEASIBILITY-THREE-DIRECTIONS.md và6phụlục01architecture/02art/03effort/04rootselfreview/05techcritic/06estimatecritic đã có. Ba worker trao đổi chéo; criticestimate lỗiquota lượtđầu nhưng lượt tiếp tục đã chạy review thật06, critictech05 mở3PNG vàreviewmain/số; rootselfreviewvẫnriêng, không nhận6actorđồngthời. Findings đã xử lý: Corridorclosequality khácgeometrycheap; Earthfragmenthai actor≠panorama/crowd; M2áp grammar vềBếnVạc, tínhbến/thuyền; chỉPlus/modelnamekhôngsuyQ/24h.
+RootpháthiệnWBSM2thiếuart expansion; estimate và2critic đãkiểm/sửa common+28–60h vàkitbếnriêng18–40/16–36/22–48. FinalM1D86–182/C96–204/E100–215h; M2D320–662/C330–684/E346–719h; M3D456–942/C474–972/E498–1023h. Q8M2D40–83/C42–86/E44–90ngày chỉquyđổinănglực giảđịnh, chưaCP/waits; M3ROMgộpchưaWBSchi tiết. Fullgameunknown; M0cap12–24h mớiđềxuất, cóthểchưaquaassetgate. KhôngbenchmarkSolhigh/Plusquota/UnityGPU/rig. Hyper3Dmetadatađãthấylúckiểm, namespace bịgỡvềsau, chưapreflight/generationtest khôngkếtluậnservicedisconnected.
+Critic06đọcbảnmainSHA256fe1909c2d265e34fbc18e719a5cb0b21ebd06cf4739ee2c396ac0283b92aa401 và03bf2ad02e90ee0042db95006b9182c6cc93a376cdd96888922baebcebcea2f712, hashrootcuốikhớp. Critic05đọcmaincuốisauWBSsửa. KhôngP1cảnbàngiaonghiêncứu, khôngxácthựcthroughput/lịchcamkết/assetreadiness/gameplay/artacceptance.
+Checks cuối exit0: build_docs --check36generatedfiles; check_handoff816authoredlinks; Pythonroot/critic cộngWBS/ceil; stageddiff --check/UTF8/newline vàsecretpatternscan0hit. Stagedchecklượtđầu bắt1dòngMarkdownhardbreaktrailingwhitespaceở01, rootbỏ2space vàrerunđạt; khôngđổiphạmvireview. Export.pycuốiregenerate7HTML+7DOCX; check_exports266sourceinputs/14containers/6156sourceanchors/6251DOCXheadings/123tables/internalnavigationvalid. Đây làcontainer/content/navigationcheck, khôngvisualrendering/Unity/gameacceptance. Exportlượttrướcđãxong trước whitespacefix, rootregeneratecuốiđểfingerprintkhớp; khôngdùngexportcũlàfinal.
+ĐồngbộHANDOFF/roadmap/SPRINT13/APPROVALS/changelog/exportinputs; tổng14textfiles trongscope, khôngcache/ZIP/model/codegameplay/save/schema/canon/VERSIONchange. Giữ01–18/biếnthể/ưu tiên14/1–3 vàPendingS13-A01–A04/Sprint13. Tiếptheocommit/pushfeature/cậpnhậtdraftPR13/kiểmCIđúngHEAD, khôngmerge dev/main/tag/release hoặcquaSprint14.

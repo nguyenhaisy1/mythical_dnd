@@ -161,3 +161,10 @@ Ngày02/11 user giao thêm khoảng15ý tưởng sau vòng17. Ba worker brainsto
 Đã có15frame chính và2bản đầu dải thân/đồng mức được giữ:17lượt built-in image_gen mới, không ảnh input, copy nguyên bytes. Bản trưng bày hai hướng này dùng iteration;17PNG RGB,30,511,159bytes, hai ảnh cao940 và15ảnh cao941 như provenance. Review/checks chỉ ghi hoàn tất theo evidence thực. Phạm vi thử thêm sân/rừng/hiên nghề, không buộc toàn bộ cùng bến sông hoặc lặp ba nhánh favored. Giữ14/1–3 là ưu tiên nghiên cứu thật, không final approval; mọi01–17 và biến thể tiếp tục được giữ.
 
 Chỉ ảnh preview, không model/scene3D/runtime/Hyper3D/Blender, engine/canon/route/physics/knowledge mới. Hybrid/contour/khối/dither không cấp quyền nhìn xuyên hoặc biết bí mật. Mọi output18 và mục chưa chốt tiếp tục Pending; không merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Sprint13 — nghiên cứu khả thi ba hướng, SPIN-036
+
+Đã brainstorm Đất dựng thành14, Hành lang thành đất17 và Đường chéo dài18; [báo cáo so sánh](sprints/sprint-13/ART-FEASIBILITY-THREE-DIRECTIONS.md) gồm kiến trúc/art pipeline/WBS/lịch giả định và review thật. Đề xuất 3D cách điệu + UI2D + camera giới hạn, Đường chéo làm proof trước, Hành lang kiểm người cận, Đất kiểm quy mô; chưa là lựa chọn được duyệt. Ba worker trao đổi chéo; hai critic độc lập kiểm tech/art/effort ở các lượt sau; critic estimate bị usage limit lượt đầu rồi tiếp tục được, root tự rà riêng. WBS cuối đã bổ sung art expansion và kit bến/thuyền còn thiếu trong bản đầu.
+
+M1 chỉ cảnh art nhỏ hai actor (Earth fragment, không panorama/crowd), M2 chuyển grammar về Bến Vạc và tính cả bến/thuyền, cần origin/repair/projection/save thật. Mốc40–90ngày M2 chỉ quy đổi ởQ8 giả định, chưa phụ thuộc/chờ; Plus không đảm bảoQ8, chưa benchmarkSolhigh. Client còn layout, URP/UI là đề xuất, UHD630 chưa đo, Hyper3D chỉ metadata chưapreflight. M0cap12–24giờ công là bước hiệu chỉnh được đề xuất, chưa chạy. Không ảnh/model/Unity implementation/benchmark mới; không Experiment19 hoặc đổi engine/canon. Giữ01–18 và Pending S13-A01–A04, chưa quaSprint14/merge dev/main/release.
