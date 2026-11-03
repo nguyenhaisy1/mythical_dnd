@@ -1,4 +1,26 @@
-# Sprint13 — Thử nghiệm hình ảnh và trải nghiệm khởi đầu
+# Sprint13 — Định hướng mỹ thuật đã chốt, giữ cổng G13 mở lại
+
+**Trạng thái hiện tại ·03/11/2026 ·SPIN-037:** chủ dự án đã chốt Sprint13 ở phạm vi chọn hướng **Đất dựng thành — nền2D có cảm giác khối + nhân vật sprite** (`earth-monument-2d-v1`). **G13 = Accepted / Reopenable**: có thể trở lại vòng thử mỹ thuật nếu khi phát triển không ưng, đồng thời giữ toàn bộ thành quả kỹ thuật và dữ liệu đã làm.
+
+## Kết quả bàn giao hiện hành
+
+- Hướng v1 lấy cảm giác khối, bố cục, tỷ lệ gần–xa và không khí của Experiment14 `earth-monument` để phát triển bằng nền2D phân lớp và nhân vật sprite. PNG vẫn là ảnh concept, chưa scene/asset hay gameplay runtime được nghiệm thu.
+- Thư viện01–18, biến thể, workshop và nghiên cứu effort được giữ để tham khảo, so sánh hoặc tái dùng; lựa chọn v1 không là xóa hoặc phán xét các hướng khác. Dự toán3D SPIN-036 giữ làm nghiên cứu cho route khác, không áp nguyên số giờ/ngày sang pipeline2D mới.
+- [Register quyết định](sprint-13/APPROVALS.md): A01 Approved cho hướng v1; A04 Approved cho kết thúc vòng chọn hướng và giữ G13; A02/A03 Deferred sang cổng triển khai UX/onboarding, **chưa được duyệt UI cụ thể hoặc nghiệm thu implementation**.
+- Quyết định hiện hành và quy trình mở lại nằm ở [Art Direction Baseline/G13](sprint-13/ART-DIRECTION-BASELINE.md) và [ADR-022](../../adr/022-earth-monument-2d-and-reopen-gate.md). Chốt Sprint13 không tự là giao Sprint14 hoặc nghiệm thu demo chơi được.
+
+## Cách quay lại Sprint13 mà giữ phần đã làm
+
+1. Ghi vấn đề, artifact và phạm vi cần đổi vào G13; khi chủ dự án yêu cầu quay lại, mở SPIN mới trong Sprint13 cho candidate mỹ thuật mới, giữ v1 và mọi phương án cũ.
+2. Làm impact review để xác định asset/camera/layout/presenter/adapter nào thực sự bị ảnh hưởng. Core mô phỏng, luật, nội dung, stable IDs và persistence contracts được giữ; không reset hoặc revert toàn repository về thời điểm Sprint13.
+3. Triển khai và kiểm candidate trong phạm vi được giao. Các thay đổi contract/schema nếu thật sự cần phải thành task/ADR/migration riêng, không dùng lý do đổi hình ảnh để làm lại các sprint trước.
+4. Chủ dự án chốt candidate thay thế rồi cập nhật version/baseline và các consumer liên quan. Các phần không phụ thuộc hướng hình ảnh tiếp tục giữ evidence cũ đúng phạm vi; phần view bị đổi có acceptance mới.
+
+Cổng đang **Accepted / Reopenable**, không phải Sprint13 tiếp tục Pending vô thời hạn. Vòng chọn hướng đã kết thúc theo yêu cầu chủ dự án; khả năng mở lại là cơ chế cải tiến có kiểm soát. Kiểm chứng sprite/animation/che khuất/hiệu năng và gameplay vẫn phải được thực hiện ở các task được giao tiếp theo, không được ghi Passed từ quyết định mỹ thuật.
+
+## Hồ sơ lịch sử trước khi chốt03/11/2026
+
+Toàn bộ brief, phân công và trạng thái thử nghiệm từ đây trở xuống là lịch sử tại thời điểm thực hiện. Các câu Pending/chưa nghiệm thu/không chuyểnSprint14 trong hồ sơ cũ không ghi đè quyết định hiện hành; các giới hạn runtime và nhận xét về từng artifact vẫn có giá trị đúng phạm vi đã quan sát.
 
 Sprint đang mở; mọi sản phẩm **chưa nghiệm thu bởi chủ dự án**. Kiểm tra kỹ thuật và phản biện của AI không thay quyết định của người dùng.
 

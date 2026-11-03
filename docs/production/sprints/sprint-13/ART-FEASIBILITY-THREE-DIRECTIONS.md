@@ -1,5 +1,7 @@
 # Khả thi sản xuất: Đất dựng thành, Hành lang thành đất, Đường chéo dài
 
+> Cập nhật hiện hành03/11/2026: chủ dự án đã chốt **Đất dựng thành nền2D có cảm giác khối + nhân vật sprite**, theo [baselineG13](ART-DIRECTION-BASELINE.md) và [approval](APPROVALS.md). Nội dung dưới giữ trạng thái/evidence tại thời điểm nghiên cứu; route và dự toán3D không là quyết định hoặc dự toán2D hiện hành.
+
 02/11/2026 · Sprint13 / SPIN-036 · Điều phối `/root` · **Đề xuất để quyết định, Pending user approval**.
 
 ## Kết luận bằng ngôn ngữ dễ hiểu

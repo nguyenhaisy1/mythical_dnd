@@ -2328,3 +2328,72 @@ RootpháthiệnWBSM2thiếuart expansion; estimate và2critic đãkiểm/sửa c
 Critic06đọcbảnmainSHA256fe1909c2d265e34fbc18e719a5cb0b21ebd06cf4739ee2c396ac0283b92aa401 và03bf2ad02e90ee0042db95006b9182c6cc93a376cdd96888922baebcebcea2f712, hashrootcuốikhớp. Critic05đọcmaincuốisauWBSsửa. KhôngP1cảnbàngiaonghiêncứu, khôngxácthựcthroughput/lịchcamkết/assetreadiness/gameplay/artacceptance.
 Checks cuối exit0: build_docs --check36generatedfiles; check_handoff816authoredlinks; Pythonroot/critic cộngWBS/ceil; stageddiff --check/UTF8/newline vàsecretpatternscan0hit. Stagedchecklượtđầu bắt1dòngMarkdownhardbreaktrailingwhitespaceở01, rootbỏ2space vàrerunđạt; khôngđổiphạmvireview. Export.pycuốiregenerate7HTML+7DOCX; check_exports266sourceinputs/14containers/6156sourceanchors/6251DOCXheadings/123tables/internalnavigationvalid. Đây làcontainer/content/navigationcheck, khôngvisualrendering/Unity/gameacceptance. Exportlượttrướcđãxong trước whitespacefix, rootregeneratecuốiđểfingerprintkhớp; khôngdùngexportcũlàfinal.
 ĐồngbộHANDOFF/roadmap/SPRINT13/APPROVALS/changelog/exportinputs; tổng14textfiles trongscope, khôngcache/ZIP/model/codegameplay/save/schema/canon/VERSIONchange. Giữ01–18/biếnthể/ưu tiên14/1–3 vàPendingS13-A01–A04/Sprint13. Tiếptheocommit/pushfeature/cậpnhậtdraftPR13/kiểmCIđúngHEAD, khôngmerge dev/main/tag/release hoặcquaSprint14.
+
+
+### EVT-00200 | SPIN-036 | GIT — Nghiên cứu đã push; PR13 giữ nháp và hai CI đúng commit thành công
+
+<!-- worklog: {"id": "EVT-00200", "spin": "SPIN-036", "event": "GIT", "at": "2026-11-02T16:45:16+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T16:45:16+07:00
+- Actor: /root
+
+Đã push commit1e4332f0a122528b9bed850377529ffee1efb7da lên origin/feature/sprint-13-experiment-01; ls-remoteSHAkhớplocalHEAD. DraftPR13base devđãcậpnhậtscope/validation/limitations, draft=true. HaiCIđúngHEADcompleted/success:pull_request41422875735 vàpush41422866560. Khôngmerge dev/main/tag/release. Cácjournal events saucommit cònlocal, đivớicommitcôngviệckếtiếp; khôngamend hoặccommitvònglặp.
+
+
+### EVT-00201 | SPIN-036 | HANDOFF — Bàn giao báo cáo so sánh ba hướng và protocol hiệu chỉnh
+
+<!-- worklog: {"id": "EVT-00201", "spin": "SPIN-036", "event": "HANDOFF", "at": "2026-11-02T16:45:16+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T16:45:16+07:00
+- Actor: /root
+
+Bàn giao docs/production/sprints/sprint-13/ART-FEASIBILITY-THREE-DIRECTIONS.md cùng6phụlục. KhuyếnnghịkiểmĐườngchéodàitrước/Hànhlangchocharactercận/Đấtdựngthànhchoquymô; route3Dstylized+UI2D/camera giới hạn làđềxuất. M1art86–215h/M2demo320–719h lũykế; Q8M240–90ngàychỉnănglựcgiảđịnh+chờ/phụthuộc, chưaPlusbenchmark/fullgamedate. M0cap12–24hđềxuấtchưachạy. M2dùngBếnVạc/repair, thêmboatdockkit, khôngđổicanon/engine/rules. Haiindependentcritic/rootreview/checks/exports/CIghiởRESULT/GIT. Mọi01–18/S13-A01–A04Pending; đềxuấtkhônglàFinalacceptedhoặcquyềntạoasset/Unityimplementation/chuyểnSprint14.
+
+
+### EVT-00202 | SPIN-036 | CLOSE — Finished phạm vi brainstorming và bàn giao; Sprint13 vẫn chờ chủ dự án chốt
+
+<!-- worklog: {"id": "EVT-00202", "spin": "SPIN-036", "event": "CLOSE", "at": "2026-11-02T16:45:17+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-02T16:45:17+07:00
+- Actor: /root
+
+Status:finished đối vớinghiêncứu/so sánh/effort/techstack/implementationapproach đượcgiao trongSPIN-036. Evidence:main+6phụlục, nguồnprimaryđãmở, kiểmrepo/hardware, phảnbiệnthật, WBScoverageđãsửa; RESULT EVT-00199 vàGITcùngspin. KhôngFinalacceptedmỹthuật/gameplay/assetreadiness/lịchcamkết, khôngđóngSprint13/quaSprint14/merge dev/main/tag/release. Bướcsau theoquyếtđịnhchủdựán:hiệuchỉnhpipelineM0hoặcbổsung/chọn/kếthợphướng; khôngtựtriểnkhaitừbàibrainstorm. Journal saucommit cònlocal đểcommitkếtiếp.
+
+
+### EVT-00203 | SPIN-037 | OPEN — Chốt hướng 2D Đất dựng thành và giữ cổng G13 mở lại mỹ thuật
+
+<!-- worklog: {"id": "EVT-00203", "spin": "SPIN-037", "event": "OPEN", "at": "2026-11-03T09:57:00+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T09:57:00+07:00
+- Actor: /root
+
+User03/11/2026 chốtSprint13 theo hướng vừa thảo luận: Đất dựng thành14/earth-monument, nền2Dcócảmgiáckhối + nhânvậtsprite; yêu cầu giữcổng13 đểmởlạihướngmỹthuậtkhipháttriểnkhôngưng, bảotoàncôngsứcSprint1–12vàcôngviệcvềsau. Scope:ghi approvalđúngphạmvi, baseline/ADR, gateG13reopenable, checkpoint kiểmchứngđược, đồngbộtấtcảconsumer/exports/worklog; khôngtạomodel/ảnh/gameplay/Sprint14 hoặcclaimruntimepass. Khôngsuyapprovepixel/UIReveal/Journalcụthểhayfullgenerator từchốthướng. MởSPIN-037mục tiêuchốtvàbảotoàn, khôngExperiment19. Workflow3worker/2critic/root theo lượttrong4slots, logactorsthật. GitstandingSprint13:featurecommit/push/PRreview, khôngmain/tag/release; integrationdevchỉsaureview/CIđạt vàđúngphạmviđãchốt.
+
+
+### EVT-00204 | SPIN-037 | ASSIGN — Giao ba nhánh chốt approval, cổng mở lại và đồng bộ consumer
+
+<!-- worklog: {"id": "EVT-00204", "spin": "SPIN-037", "event": "ASSIGN", "at": "2026-11-03T09:59:09+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T09:59:09+07:00
+- Actor: /root
+
+Giao3worker theo4slots: /root/s13close_approval ownsAPPROVALS+SPRINT13, scopeA01/A04direction/closure vàA02/A03deferred chưaapprovechi tiết; /root/s13close_gate ownsADR022+ART-DIRECTION-BASELINE, profileearth-monument-2d-v1/G13Accepted-Reopenable/quytrìnhmởlại cóselectiveimpact; /root/s13close_consumers ownsroadmap/clientUX/implementationplan/README/docindex. RootownsAGENTS/.agent/HANDOFF/APPLICABLE/registers/integrationnotes/checkpoint/report/changelog/exports/Git. Sau3workerhếtownedscopegiao2criticđộc lậpkiểmapprovalscopevàcheckpoint/propagation; rootnghiệmthuđầutiên, khôngbịa6concurrent hoặcgameplaytests.
+
+
+### EVT-00205 | SPIN-037 | PROGRESS — Chốt hồ sơ và hai review; checkpoint giữ đủ thư viện và core không đổi
+
+<!-- worklog: {"id": "EVT-00205", "spin": "SPIN-037", "event": "PROGRESS", "at": "2026-11-03T10:09:19+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:09:19+07:00
+- Actor: /root
+
+Ba worker hoàn tấtapproval/sprint,canonicalbaseline+ADR022,5consumerfiles. Hai critic độc lập đãfreeze: /root/s13close_critic_scope kiểm phạmviA01/A04Approved/A02A03Deferred/G13v1, /root/s13close_critic_preserve đốichiếu268Gitblobs/275285127bytes/98visualassets,267worktree nguyênbyte vàREADME14source-onlybanner. Rootđãđọcreport/canonical, đồngbộAGENTS/.agent/HANDOFF/APPLICABLE/DEC028029/OPEN11/VS07/integrationnotes23+28/clientrunbooks/changelog/checkpoint/report, buildgeneratedsource; khôngchạmarchive/core/runtime.
+G13Accepted/Reopenablev1, candidatefromcurrentdev, giữhướngcũ/tấtcả01–18, khôngfullrollback. CriticbắtP2sourcecommitcheckpointcóthểmấtreachablekhiSquash; rootđãghiretentionmergecommitifpolicyallows/giữsourcebranch vàfallbackanchor. GitHubpreflight allowmergecommit=true,deletebranchonmerge=false,PR13base dev/clean; chưamerge.
+Checks cuối hiệnexit0: build_docs --check36; check_handoff882authoredlinks/6156sections/52req/28tasks; check_architecture scaffoldboundaries; diff --check; root267currentfiles/98assetsmatch và4protectedtreesHEAD=origin/dev=source, noprojectcoreuntracked/workingdiff. Lượtlinkchecktrướcfailvìcriticpreservationfilechưatạo, nayfilecóvàrerunđạt. CSVDECappendCRLFbịdiffcheckbắt;rootchuẩnhóaLFgiữnộidungcũ+2rowmới,rurunđạt. Khôngtuyênbốruntime/restore/humanplaytest. Tiếptheoexports/commit/push/CI/PRintegrationđúngphạmviđãchốt, khôngSprint14/main/tag/release.
+
+
+### EVT-00206 | SPIN-037 | RESULT — Đã chốt hướng và G13; hai review, source/checkpoint/exports đều kiểm xong
+
+<!-- worklog: {"id": "EVT-00206", "spin": "SPIN-037", "event": "RESULT", "at": "2026-11-03T10:12:03+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:12:03+07:00
+- Actor: /root
+
+Hoàn tất source chốtSprint13: user03/11ApprovedĐấtdựngthànhnền2Dcócảmgiáckhối+sprite, profileearth-monument-2d-v1; G13Accepted/Reopenable. A01/A04Approveddirection/closure, A02/A03DeferredimplementationchưaApprovedUX/runtime. CanonicalART-DIRECTION-BASELINE+ADR022+approval/sprint vàCLOSURE-REPORT cóquytrìnhcandidate từcurrentdev,giữv1/library/core/rules/content/IDs/savecontracts, khôngfullrollback haytựmởSprint14. Khôngtạosprite/scene/model/gameplay, hot-swap/restoretest hoặcperformanceclaim.
+Ba worker đãxong đúngownership;haiindependentcritic scope/preservationđãfreeze saureadsourcecuối. Scope15file/222links; preservation268Gitblobs/275285127bytes/98visualassets,267currentfilekhớp vàREADME14source-onlybannerđúng. CheckpointSHA25612234b36fec256b7401a4dd1ae809d3e026aa391a91dbc58e789c6e5fd7c94c2. Rootđốichiếu4protectedtreesengine/content/rules/tests HEAD=origin/dev=source1e4332f vàkhôngworking/untrackedcorechange. Inventorykhôngthayrestore/savecompatibilitytest. Findingretention sauSquashđược xửlý bằngmergecommitifpolicyallows,keepbranch/fallbackanchor;GitHuballowmerge=true,autodelete=false; chưa nhậnđãmergekhipreflight.
+Rootđồngbộ.agent/AGENTS/HANDOFF/APPLICABLE/DEC028029/OPEN11/VS07/clientrunbooks/README/docindex/roadmap/changelog/integrationnotes23+28/generatedMaster+modules23/28;sourcearchive/bodynghiêncứubảotoàn. Báocáo3D/14vàREADME14thêmbannerhiệnhành, khôngđổiartwork/provenance/gallerycode. ROM3Dkhôngáp2D. TEST-MATRIX/core/save/schema/IDs/productVERSIONkhôngđổi.
+Checks cuối exit0: build_docs --check36; check_handoff882authoredlinks/6156sections/52req/28tasks; check_architecture portable/scaffoldboundaries; gitdiff --check; scope/secretpatternscan0hitcho34currenttextfilesvàPRdiffcũ. Lượtchecker tạm banđầuđòiwhitespace toànMaster nênfail với bodynghiêncứulịchsử;rootkhôngsửabodynguồn,đổiđúngphạmvi kiểmdòngdiff; rerunđạt. Lượtlinkchecktrướcthiếufilecritic khiđangviết, reruncuốiđạt;CSVDECnormalizeLF giữsemantics2newrows. Export.py7HTML+7DOCX; check_exports272sourceinputs/14containers/6156anchors/6251DOCXheadings/123tables/navigationvalid. Chỉcontainer/content/navigation, khôngvisualrender/gameacceptance.
+Tiếptheo stage34files/commit/pushfeature/checkCIđúngHEAD/PR13ready vàtíchhợpdev bằngmergecommitđểcheckpointsource reachable nếu servercho phép;verifyancestry/remoteCI. Khôngmain/tag/release/xóabranch/Sprint14. Nhật kýpostcommitđivớicommitcôngviệcsau, khôngamend/commitvònglặp.

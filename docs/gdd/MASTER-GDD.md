@@ -75183,15 +75183,15 @@ Module kế tiếp cần thiết kế đầy đủ giao diện cho **Character, 
 
 ## Hướng dẫn áp dụng khi phát triển
 
-UI chỉ nhận knowledge-filtered projections, kể cả search/notification. Debug omniscient tách khỏi player build. Không dùng một checksum/render query để rút RNG. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.
+UI chỉ nhận knowledge-filtered projections, kể cả search/notification. Debug omniscient tách khỏi player build. Không dùng một checksum/render query để rút RNG. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation. Quyết định03/11/2026 (ADR022/DEC028): Đất dựng thành bằng nền2D có cảm giác khối + nhân vật sprite, profile earth-monument-2d-v1; camera giới hạn theo scene. Đây là chốt hướng, chưa nghiệmthu UI/runtime.
 
 | Hợp đồng tích hợp | Nội dung |
 |---|---|
 | Dữ liệu đầu vào | Active character knowledge, capability, costs, provenance và read models. |
 | Đầu ra / bên sở hữu | Views/input commands; Unity/ViewModels không sở hữu world state. |
-| Đọc cùng | 14, 16, 17, 21, 22, 25–29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 14, 16, 17, 21, 22, 25–29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR022; docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md; APPROVALS.md cho quyết định03/11 và cổngG13. |
 | Cổng nghiệm thu | Search không trả actor/location bí mật; succession archive không mở kỹ thuật/dialogue trái điều kiện. |
-| Việc chưa được chứng minh | Final art/platform/audio và accessibility evidence; prototype desktop flows đã có CLIENT-UX-BASELINE. |
+| Việc chưa được chứng minh | Hướng mỹ thuật đã chốt03/11/2026; còn layered-asset/sprite production, detailed UI/origin UX, font/audio/platform và accessibility evidence; xem OPEN-11/ADR022. ROM3D SPIN036 không áp sang2D. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../governance/APPLICABLE-BASELINE.md) và [Decision Register](../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 
@@ -92356,7 +92356,7 @@ Scope slice tập trung Tam Giang với Bến Hạc/Phong Châu là external bou
 |---|---|
 | Dữ liệu đầu vào | Modules 01–27, minimal world fixture và implementation backlog. |
 | Đầu ra / bên sở hữu | Vertical-slice milestones, task contracts và QA evidence; chưa phải build đã chạy. |
-| Đọc cùng | 29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. ADR021 và docs/runbooks/EVENT-ELIGIBILITY.md: VS02B declarative candidate eligibility trên trusted observations. |
+| Đọc cùng | 29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. ADR021 và docs/runbooks/EVENT-ELIGIBILITY.md: VS02B declarative candidate eligibility trên trusted observations. ADR022 và ART-DIRECTION-BASELINE: Sprint13Accepted/Reopenable ở định hướng2D/sprite, G13 cho candidate mỹ thuật giữ core/rules/content và tiến độ; chưa tự mởSprint14. |
 | Cổng nghiệm thu | Chứng minh nghề–world–knowledge–narrative–time–legacy liên kết và player không phải tác nhân duy nhất. |
 | Việc chưa được chứng minh | Full slice roster/compiled content, three professions, client and playtest còn pending; xem Slice Content Contract. VS02A có24actors/6households/8routes compiled authoring; VS02 full còn world/perception binding và event effects, randomprotagonist và actor-specificobligations. |
 

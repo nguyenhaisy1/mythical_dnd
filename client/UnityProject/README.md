@@ -7,3 +7,8 @@ Thực hiện FND-16/VS-07 theo docs/runbooks/UNITY-BOOTSTRAP.md: chọn editor,
 ## Sprint10 — chuẩn bị Unity conformance
 
 [Bộ kiểm chứng và cách chạy](../../docs/runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Client này vẫn layout; project kiểm chứng nằm trong tests/results.
+
+
+## Hướng trình bày đã chốt03/11/2026
+
+[Profileearth-monument-2d-v1 và cổngG13](../../docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) chọn nền2D có cảm giác khối + nhân vật sprite, camera giới hạn theo scene. Đây là định hướng, chưabootstrap/layeredasset/sprite/Player acceptance. Chọn renderer/package/import theo task Editor thật, không bịa manifest. View/projection/command boundaries giữ nguyên; mở lại mỹ thuật chỉ thay phần trình bày trên core hiện tại, không rollback nền tảng.

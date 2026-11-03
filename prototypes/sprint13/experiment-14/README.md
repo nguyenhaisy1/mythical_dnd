@@ -1,5 +1,7 @@
 # Thử nghiệm14 — Sáu hướng hình ảnh độc lập
 
+> Ngày03/11/2026 chủ dự án chọn ngôn ngữ **Đất dựng thành** cho route nền2D có cảm giác khối + nhân vật sprite; xem [baseline/cổngG13](../../../docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md). Các PNG/gallery này vẫn là ảnh concept lịch sử, chưa layered scene hoặc runtime2D. Giữ các phương án còn lại để tham khảo.
+
 30/10/2026 · Sprint13 · SPIN-031 · **Thư viện tham khảo, Pending user approval**.
 
 Vòng14 đáp ứng nhận xét của chủ dự án: các ảnh vòng13 đã tốt hơn nhưng còn gần nhau. Sáu hướng mới mở rộng đồng thời camera, cấu trúc hình, tỷ lệ người, bối cảnh, cast, màu và UI. Mỗi hướng có một ảnh màn hình chơi; không dùng ảnh13 làm tham chiếu để giữ cùng họ tạo hình, không lặp công thức ba hướng × hai cự ly.

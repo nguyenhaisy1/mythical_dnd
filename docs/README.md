@@ -1,5 +1,7 @@
 # Bản đồ tài liệu
 
+**Hiện hành03/11/2026:** Sprint13 đã chốt hướng `earth-monument-2d-v1` — Đất dựng thành bằng nền2D có cảm giác khối và nhân vật sprite. [Baseline mỹ thuật/cổng G13](production/sprints/sprint-13/ART-DIRECTION-BASELINE.md), [ADR-022](adr/022-earth-monument-2d-and-reopen-gate.md) và [approval register](production/sprints/sprint-13/APPROVALS.md) ghi phạm vi **Accepted / Reopenable**, các follow-up UI/Reveal và cách đổi mỹ thuật giữ phần core/luật/dữ liệu đã có. Lịch sử thử nghiệm01–18 tiếp tục được giữ; chốt định hướng chưa là runtime/gameplay acceptance hoặc mởSprint14.
+
 [Rà soát trước phát triển — 14/10/2026](production/PRE-DEVELOPMENT-AUDIT-2026-10-14.md): phần đã đủ, contract còn cần khóa và mốc phát triển tương ứng.
 
 [White paper giới thiệu game — HTML độc lập](whitepaper/hong-bang-mach-lac.html): bối cảnh, ý tưởng, trải nghiệm và đặc trưng nổi bật.

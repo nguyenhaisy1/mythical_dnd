@@ -1,6 +1,24 @@
 # Lộ trình hình ảnh và bản chơi thử
 
-Cập nhật 2026-10-26 khi giao Sprint12. Đây là **forecast mới**, chuyển roadmap milestone sang các mốc sprint dự kiến; tài liệu trước đó chưa cam kết số sprint cho hình ảnh/demo. Sprint13 đã được giao theo chế độ thử nghiệm, chỉ chủ dự án được chốt nghiệm thu. Các sprint sau được mở khi chủ dự án giao theo workflow thường trực.
+## Trạng thái hiện hành — chốt ngày 03/11/2026
+
+Chủ dự án đã chốt Sprint13 theo **Đất dựng thành: nền 2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. Đây là chốt định hướng để phát triển; chuyển động, asset production, UI chi tiết và bản game chạy thật vẫn cần acceptance riêng. [Baseline mỹ thuật và cổng G13](sprints/sprint-13/ART-DIRECTION-BASELINE.md), [ADR-022](../adr/022-earth-monument-2d-and-reopen-gate.md) và [approval register](sprints/sprint-13/APPROVALS.md) là nguồn hiện hành.
+
+**G13 = Accepted / Reopenable:** nếu phát triển thấy chưa phù hợp, mở lại thử nghiệm mỹ thuật bằng profile/candidate mới, giữ hướng v1 và thư viện01–18 để đối chiếu. Thay đổi art, sprite, camera hoặc presenter phải bảo toàn core, luật, stable IDs, content và save theo contract; không quay repository về Sprint1 hoặc bỏ các phần đã làm ở sprint sau. Đổi schema/gameplay thật sự cần đánh giá tác động và migration riêng.
+
+| Mốc tiếp theo khi được giao | Kết quả cần kiểm | Phần còn mở |
+|---|---|---|
+| Hiệu chỉnh đường 2D | Một phần cảnh có lớp nền/che khuất, nhân vật sprite, điểm đặt chân và tương tác nhỏ; đo công tạo asset và sửa thực tế | Đường đi, surface/tầng, sắp lớp, camera cố định theo cảnh và giới hạn pan/zoom phải có contract; chưa có bằng chứng chạy |
+| UI và xuất thân — S13-A02/A03 | Luồng Reveal/World/Journal/Preview đọc được và thông tin đúng nhân vật; nhận xuất thân ngẫu nhiên có nhân quả | UI pixel/layout, usability và generator implementation chưa được nghiệm thu; giữ no origin editing/no Reveal reroll |
+| Vòng sửa thuyền/demo nhỏ | Áp ngôn ngữ mỹ thuật đã chọn vào Bến Vạc, Tam Giang; luật vật liệu/thời gian/quyền sở hữu, projection và save/load thật | Cảnh công trường tham chiếu không dời Bến Vạc hoặc thay nghề sửa thuyền thành xây thành; gates gameplay/Unity vẫn riêng |
+
+Yêu cầu chốt Sprint13 **không tự mở Sprint14**. Mốc demo Sprint15–16 dưới đây là forecast cũ, chưa có thời lượng sprint cố định hoặc ngày giao hàng được cam kết. Trước khi chốt lịch triển khai phải chia lại công việc cho đường **2D/sprite**, đo thử và cập nhật nguồn lực; các khoảng **86–215h art proof / 320–719h demo của nghiên cứu 3D không áp dụng nguyên sang hướng này**. Không suy mức tiết kiệm phần trăm hay deadline mới khi chưa hiệu chỉnh. Phần luật game, projection và persistence không tự biến mất khi đổi render route.
+
+## Lịch sử forecast trước quyết định 03/11/2026
+
+Các mục từ đây giữ dự báo và trạng thái tại lúc viết, không thay quyết định hiện hành ở trên. Nội dung kế hoạch từng gắn generator/client với Sprint13 không được dùng để suy chúng đã hoàn tất khi chốt mỹ thuật.
+
+Cập nhật 2026-10-26 khi giao Sprint12: lần đầu chuyển roadmap milestone sang các mốc sprint dự kiến. Khi đó Sprint13 đang thử nghiệm và chờ chủ dự án chốt; các sprint sau chỉ được mở khi chủ dự án giao theo workflow thường trực.
 
 | Sprint dự kiến | Kết quả nhìn thấy được | Điều kiện nghiệm thu |
 |---|---|---|
@@ -27,7 +45,7 @@ VS07 đầy đủ vẫn phụ thuộc VS03/04/05 theo [Implementation Plan](IMPL
 Mục tiêu là **bắt đầu hình ảnh Sprint13; chơi thử nhỏ Sprint15–16**, không là bảo đảm phát hành. Sprint13 có thể gồm nhiều spin thử nghiệm; không chuyển Sprint14 khi [các mục cần chốt](sprints/sprint-13/APPROVALS.md) chưa được chủ dự án duyệt. Vì vậy forecast demo phải xét lại sau khi chốt Sprint13. Cuối mỗi sprint đối chiếu: generator/viability, luật repair và save, actor-scoped projection, Unity scene/input/build. Nếu một gate chưa đạt, ghi nguyên nhân và forecast mới trong sprint report trước khi chuyển mốc; không âm thầm đổi định nghĩa “demo” thành ảnh hoặc video. Chưa quy đổi sang ngày vì chưa có thời lượng sprint cố định và còn rủi ro tích hợp.
 
 
-## Hiệu chỉnh forecast sau nghiên cứu ba hướng — 02/11/2026
+## Nghiên cứu lịch sử cho đường 3D — 02/11/2026
 
 [Báo cáo SPIN-036](sprints/sprint-13/ART-FEASIBILITY-THREE-DIRECTIONS.md) đề xuất route3D cách điệu/camera giới hạn cho ba mẫu14/17/18; đây chưa là quyết định thay baseline hay chốtSprint13. M1artproof khoảng86–215giờ công AI tùy hướng, M2demo nhỏ320–719giờ lũy kế, theo scope cụ thể trong báo cáo; Earth chỉfragment, M2áp grammar vào BếnVạc với bến/thuyền trong assetbudget. Q4/8/12 chỉ giả định tổng năng lực hữu dụng của nhóm, chưa đo trênPlus/Solhigh; bảng ngày chưa cộng phụ thuộc/chờ. Không thay forecastSprint15–16 thành ngày hứa hoặc tự mởSprint14.
 

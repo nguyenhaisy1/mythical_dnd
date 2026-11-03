@@ -4,6 +4,8 @@ Living World Narrative RPG lấy chất liệu Văn Lang–Âu Lạc. Nội dung
 
 **Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Đã có primitives Sprint 1 và path TransferResource in-memory Sprint 2; Sprint3 có event journal/causal trace và idempotent consumer; Sprint4 có scheduler/AdvanceTime in-memory cùng demo thực thi. Sprint5 có SQLite current-state commit/reopen headless; snapshot/recovery và replay headless đã bổ sung Sprint6–7; full gameplay simulation và playable Unity client chưa được triển khai.
 
+**Sprint13 — chốt ngày03/11/2026:** hướng **Đất dựng thành, nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. [Baseline mỹ thuật và cổng G13](docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) giữ trạng thái **Accepted / Reopenable**: có thể mở lại hướng mỹ thuật mà giữ engine, luật, dữ liệu và tiến độ độc lập đã làm. Đây là chốt định hướng; sprite/scene/UI, chi tiết Reveal và hiệu năng vẫn cần triển khai/kiểm chứng, chưa là playable acceptance và chưa tự mở Sprint14. [Quyết định ADR-022](docs/adr/022-earth-monument-2d-and-reopen-gate.md).
+
 ## Bắt đầu đọc
 
 - [Bàn giao cho đội phát triển](docs/production/HANDOFF.md).
@@ -65,4 +67,4 @@ Quy trình áp dụng cho AI: [AI Execution](docs/runbooks/AI-EXECUTION.md). Vai
 
 ## Sprint12 — điều kiện sự kiện
 
-[Tám tình huống và evaluator](docs/runbooks/EVENT-ELIGIBILITY.md) kiểm điều kiện vật chất/nhận thức trên observations có kiểu; chưa tạo event effects hoặc NPC autonomy. [Lộ trình hình ảnh/demo](docs/production/PLAYABLE-ROADMAP.md): dự kiến hình ảnh Sprint13, demo nhỏ Sprint15–16. [Sprint12](docs/production/sprints/SPRINT-12.md) ghi phạm vi hiện tại.
+[Tám tình huống và evaluator](docs/runbooks/EVENT-ELIGIBILITY.md) kiểm điều kiện vật chất/nhận thức trên observations có kiểu; chưa tạo event effects hoặc NPC autonomy. [Lộ trình hình ảnh/demo](docs/production/PLAYABLE-ROADMAP.md): dự kiến hình ảnh Sprint13, demo nhỏ Sprint15–16 là forecast cần hiệu chỉnh theo đường2D sau chốtSprint13, chưa là deadline. [Sprint12](docs/production/sprints/SPRINT-12.md) ghi phạm vi hiện tại.

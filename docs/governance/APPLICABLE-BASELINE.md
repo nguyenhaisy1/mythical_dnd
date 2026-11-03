@@ -36,3 +36,10 @@ Bản nguồn M28 nhắc household “Tòng Mộc”; M04/M05 có gia đình V�
 ## Bổ sung baseline prototype 1.1 — 14/10/2026
 
 [ADR-008](../adr/008-prototype-contract-baseline.md) và DEC-024–027 có hiệu lực tại lớp quyết định tích hợp: identity-v1; tick một phút; lịch simulation360 ngày; sha256-counter-v1; codec mdc1; reserve/consume repair; onboarding prototype; gates tách headless/Unity. Đây là quyết định biên soạn mới để lấp gaps, không sửa archive hoặc giả rằng nguồn cũ đã chốt chúng. Chi tiết và trạng thái thực hiện ở [báo cáo bổ sung](../production/DOCUMENTATION-COMPLETION-2026-10-14.md). Tài liệu duy trì trực tiếp trong project, không tạo ZIP.
+
+
+## Mỹ thuật và cổng mở lại — quyết định chủ dự án03/11/2026
+
+[ADR022](../adr/022-earth-monument-2d-and-reopen-gate.md), DEC-028/029 và [baselineG13](../production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) có hiệu lực trước các đề xuất3D hoặc trạng tháiPending Sprint13 cũ. Chốt hướng Đất dựng thành bằng nền2D có cảm giác khối/nhân vật sprite (`earth-monument-2d-v1`); Sprint13Accepted/Reopenable theo phạmviđịnhhướng. S13-A02/A03UI/UX chi tiết vẫn là follow-up chưa nghiệmthu, không cản lệnh đóng phạm vi của user và không thành runtime acceptance.
+
+G13 mở lại mỹ thuật bằng candidate/profile revision trên code mới nhất, giữ core/rules/content/stable IDs/save contracts và tiến độ. Không reset/revert toàn bộ lịch sử Sprint1–12/vềsau; không đổi schema/domain chỉ để hợp camera. Nếu ảnh hưởng contract/save thật phải có impact/migration/acceptance riêng. Thư viện/source/checkpoint được giữ. Những dòngPending lịch sử không là trạng thái hiện hành; không coi approval này tự mởSprint14 hoặc tạo release.

@@ -12,7 +12,7 @@ Scope slice tập trung Tam Giang với Bến Hạc/Phong Châu là external bou
 |---|---|
 | Dữ liệu đầu vào | Modules 01–27, minimal world fixture và implementation backlog. |
 | Đầu ra / bên sở hữu | Vertical-slice milestones, task contracts và QA evidence; chưa phải build đã chạy. |
-| Đọc cùng | 29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. ADR021 và docs/runbooks/EVENT-ELIGIBILITY.md: VS02B declarative candidate eligibility trên trusted observations. |
+| Đọc cùng | 29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. ADR021 và docs/runbooks/EVENT-ELIGIBILITY.md: VS02B declarative candidate eligibility trên trusted observations. ADR022 và ART-DIRECTION-BASELINE: Sprint13Accepted/Reopenable ở định hướng2D/sprite, G13 cho candidate mỹ thuật giữ core/rules/content và tiến độ; chưa tự mởSprint14. |
 | Cổng nghiệm thu | Chứng minh nghề–world–knowledge–narrative–time–legacy liên kết và player không phải tác nhân duy nhất. |
 | Việc chưa được chứng minh | Full slice roster/compiled content, three professions, client and playtest còn pending; xem Slice Content Contract. VS02A có24actors/6households/8routes compiled authoring; VS02 full còn world/perception binding và event effects, randomprotagonist và actor-specificobligations. |
 

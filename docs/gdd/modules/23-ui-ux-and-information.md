@@ -6,15 +6,15 @@
 
 ## Hướng dẫn áp dụng khi phát triển
 
-UI chỉ nhận knowledge-filtered projections, kể cả search/notification. Debug omniscient tách khỏi player build. Không dùng một checksum/render query để rút RNG. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.
+UI chỉ nhận knowledge-filtered projections, kể cả search/notification. Debug omniscient tách khỏi player build. Không dùng một checksum/render query để rút RNG. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation. Quyết định03/11/2026 (ADR022/DEC028): Đất dựng thành bằng nền2D có cảm giác khối + nhân vật sprite, profile earth-monument-2d-v1; camera giới hạn theo scene. Đây là chốt hướng, chưa nghiệmthu UI/runtime.
 
 | Hợp đồng tích hợp | Nội dung |
 |---|---|
 | Dữ liệu đầu vào | Active character knowledge, capability, costs, provenance và read models. |
 | Đầu ra / bên sở hữu | Views/input commands; Unity/ViewModels không sở hữu world state. |
-| Đọc cùng | 14, 16, 17, 21, 22, 25–29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 14, 16, 17, 21, 22, 25–29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR022; docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md; APPROVALS.md cho quyết định03/11 và cổngG13. |
 | Cổng nghiệm thu | Search không trả actor/location bí mật; succession archive không mở kỹ thuật/dialogue trái điều kiện. |
-| Việc chưa được chứng minh | Final art/platform/audio và accessibility evidence; prototype desktop flows đã có CLIENT-UX-BASELINE. |
+| Việc chưa được chứng minh | Hướng mỹ thuật đã chốt03/11/2026; còn layered-asset/sprite production, detailed UI/origin UX, font/audio/platform và accessibility evidence; xem OPEN-11/ADR022. ROM3D SPIN036 không áp sang2D. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../../governance/APPLICABLE-BASELINE.md) và [Decision Register](../../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 

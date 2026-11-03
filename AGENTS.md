@@ -93,7 +93,15 @@ User giao sprint tiếp theo/SPIN014. Scope VS02A settlement-content-v1 theo ADR
 
 User giao sprint tiếp theo và yêu cầu mốc hình ảnh/demo. Sprint12/SPIN-015: VS02B event-eligibility-v1 theo ADR021 và docs/production/sprints/SPRINT-12.md. Tám template và evaluator trên trusted observations; không event effects hoặc fullVS02. Forecast mới tại docs/production/PLAYABLE-ROADMAP.md: Sprint13 định hướng hình ảnh, Sprint15–16 demo nhỏ, phụ thuộc gates; không tự mởSprint13/main/tag/release.
 
-## Sprint13 — thử nghiệm và nghiệm thu bởi chủ dự án
+## Quyết định hiện hành — 03/11/2026
+
+Chủ dự án **chốt Sprint13 ở phạm vi định hướng mỹ thuật**: **Đất dựng thành** (Experiment14/`earth-monument`) với **nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. Trạng thái **Accepted / Reopenable**, cổng **G13** luôn sẵn để mở lại một nhánh nghiên cứu mỹ thuật khi hướng này không phù hợp trong phát triển. Đọc [baseline và cổng G13](docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md), [approval](docs/production/sprints/sprint-13/APPROVALS.md) và [ADR022](docs/adr/022-earth-monument-2d-and-reopen-gate.md).
+
+Đây là approval hướng/đóng sprint, không phải approve chi tiết UI Reveal/World/Journal (S13-A02), UX xuất thân (S13-A03), quyền dùng asset hoặc runtime/playtest. A02/A03 chuyển follow-up implementation chưa nghiệm thu; không suy chúng Passed hoặc bắt chủ dự án chốt lại để đóng phạm vi đã giao. Không tự mở Sprint14, tạo asset/gameplay hoặc phát hành từ lệnh chốt này.
+
+Khi mở lại G13, giữ core/rules/content/stable IDs và tiến độ Sprint1–12 cùng các sprint về sau; đổi art/presenter/camera/UI có scope và kiểm tác động. Làm candidate từ code tích hợp hiện tại, không reset/revert toàn repository về Sprint13. Giữ profilev1, checkpoint và thư viện01–18; hướng thay thế cần approval mới của chủ dự án. Những câu Pending/không đóng Sprint13 trong các mục ngày trước bên dưới là trạng thái lịch sử trước quyết định03/11, không phủ quyết approval hiện hành. Dự toán3D SPIN-036 không được dùng làm dự toán2D đã chốt.
+
+## Sprint13 — thử nghiệm và nghiệm thu bởi chủ dự án — lịch sử trước03/11
 
 User giao Sprint13 ngày26/10/2026. Cơ cấu6vai trò:3worker,2critic độc lập và/root điều phối/kiểm tra lớp đầu. Runtime chỉ4concurrent nên luân phiên worker/critic; log actor thực, không claim6chạyđồngthời.
 

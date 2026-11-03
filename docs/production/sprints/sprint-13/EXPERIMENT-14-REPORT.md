@@ -1,5 +1,7 @@
 # Sprint13 — Thử nghiệm14: sáu hướng hình ảnh độc lập
 
+> Cập nhật hiện hành03/11/2026: chủ dự án đã chốt **Đất dựng thành nền2D có cảm giác khối + nhân vật sprite**, theo [baselineG13](ART-DIRECTION-BASELINE.md) và [approval](APPROVALS.md). Nội dung dưới giữ trạng thái/evidence tại thời điểm nghiên cứu; route và dự toán3D không là quyết định hoặc dự toán2D hiện hành.
+
 30/10/2026 · SPIN-031 · **Đã có output để xem, Pending user approval**.
 
 Chủ dự án ghi nhận các ảnh vòng13 tốt nhưng còn giống nhau, chưa có nhiều khác biệt và bước tiến rõ, rồi giao thử tiếp. Vòng14 mở rộng phạm vi bằng **sáu hướng riêng, mỗi hướng một màn hình chơi**, thay vì tiếp tục dùng cùng bến sông, cast, bảng màu và UI để tạo các cặp camera. Sáu output đã được tạo để mở rộng không gian ý tưởng; độ khác biệt và mức phù hợp theo cảm nhận chủ dự án vẫn chờ phản hồi. Không suy thay nhiều trục thành tiến bộ đã được duyệt.

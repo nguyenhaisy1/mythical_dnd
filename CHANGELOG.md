@@ -6,7 +6,11 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
-### Sprint13 — thử nghiệm chưa được duyệt
+### Sprint13 — chốt định hướng và giữ cổng mở lại
+
+- Chủ dự án chốt Đất dựng thành theo nền2D có cảm giác khối/nhân vật sprite (`earth-monument-2d-v1`); ADR022/G13 giữ khả năng đổi hướng trên code hiện tại, bảo toàn core/rules/content và thư viện01–18. UI/originUX chi tiết và runtime vẫn có gate riêng.
+
+### Sprint13 — lịch sử nghiên cứu trước khi chốt
 
 - Nghiên cứu SPIN-036 so sánh khả thi/effort/stack ba hướng Đất dựng thành, Hành lang thành đất và Đường chéo dài; có WBS dùng chung, lịch theo năng lực giả định, pipeline3D và phản biện thật. Chỉ planning, chưa tạo model/scene hoặc chốt mỹ thuật; Plus không thành lịch bảo đảm.
 

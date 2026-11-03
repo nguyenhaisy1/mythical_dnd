@@ -1,4 +1,35 @@
-# Sprint13 — Các mục cần chủ dự án chốt
+# Sprint13 — Quyết định của chủ dự án và cổng mở lại mỹ thuật
+
+Cập nhật **03/11/2026 · SPIN-037**. Trạng thái hiện tại: **Sprint13 đã được chủ dự án chốt ở phạm vi định hướng mỹ thuật; G13 = Accepted / Reopenable**. Hướng được chọn là **Đất dựng thành** (Experiment14, `earth-monument`) với **nền 2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`.
+
+Nguồn quyết định là yêu cầu rõ ràng của chủ dự án ngày03/11/2026, sau cuộc trao đổi về phương án nền2D và sprite:
+
+> chốt sprint 13 theo hướng này nhé, nhưng hãy để cổng 13 để nếu mình phát triển thấy không ưng ý có thể quay về sprint 13 để làm lại theo hướng khác, tránh mất hết những gì từ sprint 13 quay trở về sprint 1
+
+Đây là **approval của chủ dự án về hướng và kết thúc vòng chọn hướng**, không được suy ra từ CI, kiểm tra hoặc nhận xét của AI. [Baseline hiện hành và G13](ART-DIRECTION-BASELINE.md), [ADR-022](../../../adr/022-earth-monument-2d-and-reopen-gate.md) là nguồn áp dụng sau quyết định này.
+
+## Register hiện tại
+
+| ID | Mục cần chốt | Quyết định áp dụng | Trạng thái hiện tại | Phần chưa được nghiệm thu |
+|---|---|---|---|---|
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí | Lấy Đất dựng thành14 làm hướng tham chiếu; triển khai theo nền2D có cảm giác khối và nhân vật sprite, profile `earth-monument-2d-v1` | **Approved — art direction**,03/11/2026 | Không duyệt mọi pixel/palette/cast/UI trong PNG, chưa xác nhận bộ asset, hoạt ảnh hoặc hiệu năng; áp ngôn ngữ về Bến Vạc, không đổi canon địa lý |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Giữ client UX baseline làm ràng buộc; bố cục và tương tác cụ thể tiếp tục được hiện thực, kiểm và review trong task client được giao | **Deferred — implementation gate**, chưa nghiệm thu UX cụ thể | Không chọn toàn bộ UI Experiment01 hoặc09–18 làm UI cuối; focus, modal, chữ Việt, scale và actor-scoped projection cần evidence thật |
+| S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Giữ sinh nhân vật ngẫu nhiên có nhân quả; một actor/campaign, không chọn/chỉnh origin và không reroll tại Reveal; kiểm cách trình bày khi triển khai onboarding | **Deferred — implementation gate**, chưa nghiệm thu onboarding | Prototype giới hạn của Experiment01 không là full life generator hoặc usability acceptance; cần implementation và kiểm dữ liệu/tri thức theo baseline |
+| S13-A04 | Chốt kết quả Sprint13 và bàn giao | Chốt vòng định hướng theo A01, giữ cổng G13 để quay lại thử hướng khác khi phát triển không ưng; bảo toàn công việc đã có | **Approved — direction closure with G13**,03/11/2026 | Không tự mở Sprint14, không xác nhận playable demo, asset production, gameplay, Player build hoặc lịch hoàn thành |
+
+**Cách xử lý A02/A03 là diễn giải phạm vi bàn giao của AI:** yêu cầu mới chốt hướng/Sprint13, không chứa quyết định duyệt từng màn hình hoặc cách diễn đạt biography. Vì vậy hai mục này được chuyển thành cổng triển khai có acceptance riêng, **không đổi thành Approved hoặc Passed** và không dùng trạng thái Pending lịch sử để phủ nhận việc chủ dự án vừa chốt vòng chọn hướng. Khi giao task client/onboarding, phải đưa chúng vào task contract và báo phần chưa đạt; việc kết thúc Sprint13 không xóa các nghĩa vụ đó.
+
+## Cổng G13 và phạm vi có thể mở lại
+
+- **Accepted / Reopenable** nghĩa là hướng v1 hiện được dùng làm baseline và khả năng quay lại Sprint13 được giữ sẵn; không có một yêu cầu mở lại đang chờ xử lý chỉ vì cổng tồn tại.
+- Nếu chủ dự án không ưng khi phát triển, ghi yêu cầu mở lại G13 và mở SPIN mới trong Sprint13 cho phương án mỹ thuật mới. Nếu AI phát hiện vấn đề về sản xuất/độ đọc/hiệu năng thì ghi evidence và đề xuất mở lại; phát hiện kỹ thuật không tự là duyệt một hướng thay thế.
+- Tạo candidate/version mới cạnh v1; giữ nguồn, ảnh, các biến thể01–18, ghi chú, báo cáo, lịch sử nhận xét và quyết định. Không xóa các phương án còn lại hoặc đánh dấu chúng bị chê chỉ vì v1 được chọn.
+- Mở lại chỉ khoanh ảnh hưởng ở asset, camera, layout/presenter và adapter hiển thị theo impact review. Engine, rule, dữ liệu nội dung, stable IDs, command/query contracts và thành quả Sprint1–12/về sau được giữ, trừ thay đổi có task/ADR/migration được giao riêng. Không reset repository về commit cũ để “quay về Sprint13”.
+- Hướng v1 tiếp tục là baseline cho tới khi chủ dự án chốt candidate mới; chỉ phần phụ thuộc trực tiếp vào thay đổi mỹ thuật cần được kiểm lại. Đổi art không tự làm mất acceptance kernel hoặc tuyên bố save compatibility đã được kiểm. Quy trình chi tiết theo [baseline/G13](ART-DIRECTION-BASELINE.md).
+
+## Lịch sử trước quyết định03/11/2026
+
+Các trạng thái Pending/Changes requested và câu “không đóngSprint13” từ đây trở xuống được giữ **đúng như thời điểm ghi nhận trước khi chủ dự án chốt**. Chúng là lịch sử của từng phiên bản, không thay trạng thái hiện tại ở register phía trên. Mọi artwork cũ vẫn là ảnh tham khảo; approval v1 không hồi tố thành nghiệm thu tất cả sản phẩm01–18.
 
 Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệt mỹ thuật cuối hoặc kết thúc Sprint13. User đã ưu tiên đào sâu14/1–3; ưu tiên nghiên cứu này không tự là final approval. AI không chuyển Approved dựa trên test/CI hoặc nhận xét của agent.
 

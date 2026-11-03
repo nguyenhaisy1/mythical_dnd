@@ -15,3 +15,5 @@ Các ADR này ghi rationale cho baseline bàn giao. [Decision Register](../gover
 [ADR-019 — Unity Editor conformance](019-unity-editor-conformance.md): exact6000.6.7f1/LinuxEditor Mono và giới hạn acceptance.
 
 [ADR020 — Settlement authoring profile](020-settlement-content-profile.md): VS02A schema/compiler/immutable registry, chưa game simulation.
+
+[ADR022 — Đất dựng thành nền2D/sprite và cổngG13](022-earth-monument-2d-and-reopen-gate.md): chủ dự án chốt hướng03/11/2026; mở lại mỹ thuật có chọn lọc, giữ core/dữ liệu/tiến độ; không runtime acceptance.

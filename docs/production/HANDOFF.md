@@ -1,5 +1,11 @@
 # Bàn giao phát triển — 1.1-prototype-contracts
 
+## Trạng thái hiện hành — Sprint13 đã chốt định hướng, G13 có thể mở lại
+
+Ngày03/11/2026 chủ dự án chốt **Đất dựng thành + nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. Sprint13 **Accepted / Reopenable** ở phạm vi định hướng; [baseline/cổng G13](sprints/sprint-13/ART-DIRECTION-BASELINE.md) và [approval](sprints/sprint-13/APPROVALS.md) là nguồn hiện hành. S13-A02/A03 được chuyển thành follow-up implementation chưa nghiệm thu, không giả UI/originflow Passed. [ADR022](../adr/022-earth-monument-2d-and-reopen-gate.md) giữ core/luật/tri thức/dữ liệu độc lập với route đồ họa.
+
+CổngG13 cho phép nghiên cứu lại mỹ thuật trên code tích hợp mới nhất; giữ tiến độ Sprint1–12 và về sau, không quay cả repository về một commit cũ. [Checkpointv1](sprints/sprint-13/checkpoint-v1.json) ghi sourceSHA/input trees và fingerprint thư viện để đối chiếu/khôi phục có chọn lọc. Thư viện01–18 giữ nguyên, các báo cáo Pending ngày trước là lịch sử. Chưa tạo layeredassets/sprite/scene/rig hoặc nghiệm thu Unity gameplay trong việc chốt này; ROM3D ngày02/11 không áp sang2D. Chưa mở Sprint14 hoặc release.
+
 ## Những gì đã có
 
 29 module GDD chi tiết và phụ lục Life Event, source archive, source/section index, baseline/decision register, open decisions, ownership/contracts, QA matrix, scenario specifications và implementation backlog. Repository có .NET solution với portable core primitives, Domain world/rules, Application in-memory pipeline và headless transfer demo. Client Unity có layout chuẩn bị, chưa được Unity Editor bootstrap.

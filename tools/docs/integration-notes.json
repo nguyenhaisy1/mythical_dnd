@@ -184,12 +184,12 @@
     "open": "Playtime/pacing targets, difficulty tuning và onboarding playtest."
   },
   "23": {
-    "baseline": "UI chỉ nhận knowledge-filtered projections, kể cả search/notification. Debug omniscient tách khỏi player build. Không dùng một checksum/render query để rút RNG. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
+    "baseline": "UI chỉ nhận knowledge-filtered projections, kể cả search/notification. Debug omniscient tách khỏi player build. Không dùng một checksum/render query để rút RNG. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation. Quyết định03/11/2026 (ADR022/DEC028): Đất dựng thành bằng nền2D có cảm giác khối + nhân vật sprite, profile earth-monument-2d-v1; camera giới hạn theo scene. Đây là chốt hướng, chưa nghiệmthu UI/runtime.",
     "inputs": "Active character knowledge, capability, costs, provenance và read models.",
     "outputs": "Views/input commands; Unity/ViewModels không sở hữu world state.",
-    "read_with": "14, 16, 17, 21, 22, 25–29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md.",
+    "read_with": "14, 16, 17, 21, 22, 25–29.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR022; docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md; APPROVALS.md cho quyết định03/11 và cổngG13.",
     "acceptance": "Search không trả actor/location bí mật; succession archive không mở kỹ thuật/dialogue trái điều kiện.",
-    "open": "Final art/platform/audio và accessibility evidence; prototype desktop flows đã có CLIENT-UX-BASELINE."
+    "open": "Hướng mỹ thuật đã chốt03/11/2026; còn layered-asset/sprite production, detailed UI/origin UX, font/audio/platform và accessibility evidence; xem OPEN-11/ADR022. ROM3D SPIN036 không áp sang2D."
   },
   "24": {
     "baseline": "Áp dụng baseline cuối Module 27: LLM chỉ hỗ trợ content offline; không tích hợp runtime LLM vào slice. Nội dung phải qua schema/semantic validation và approved handlers. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
@@ -227,7 +227,7 @@
     "baseline": "Scope slice tập trung Tam Giang với Bến Hạc/Phong Châu là external boundary node cho trade, không dời canon. Task milestones và acceptance gates giữ nguyên; số content là budget thử nghiệm. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.",
     "inputs": "Modules 01–27, minimal world fixture và implementation backlog.",
     "outputs": "Vertical-slice milestones, task contracts và QA evidence; chưa phải build đã chạy.",
-    "read_with": "29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. ADR021 và docs/runbooks/EVENT-ELIGIBILITY.md: VS02B declarative candidate eligibility trên trusted observations.",
+    "read_with": "29; VERTICAL-SLICE, BACKLOG, QA-PLAN.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR020 và docs/runbooks/SETTLEMENT-CONTENT.md: Sprint11 VS02A authored roster/graph compiler, không WorldState/routineexecution. ADR021 và docs/runbooks/EVENT-ELIGIBILITY.md: VS02B declarative candidate eligibility trên trusted observations. ADR022 và ART-DIRECTION-BASELINE: Sprint13Accepted/Reopenable ở định hướng2D/sprite, G13 cho candidate mỹ thuật giữ core/rules/content và tiến độ; chưa tự mởSprint14.",
     "acceptance": "Chứng minh nghề–world–knowledge–narrative–time–legacy liên kết và player không phải tác nhân duy nhất.",
     "open": "Full slice roster/compiled content, three professions, client and playtest còn pending; xem Slice Content Contract. VS02A có24actors/6households/8routes compiled authoring; VS02 full còn world/perception binding và event effects, randomprotagonist và actor-specificobligations."
   },
