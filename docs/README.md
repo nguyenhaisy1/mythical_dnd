@@ -51,3 +51,5 @@ Sprint đã nghiệm thu local: [SPRINT-01](production/sprints/SPRINT-01.md). Ru
 [Sprint7](production/sprints/SPRINT-07.md), [ADR016](adr/016-headless-command-replay.md), [báo cáo](qa/SPRINT-07-EVIDENCE.md): replay QA thực thi lại hành động, fixed golden và first-divergence report.
 
 [Hướng dẫn replay QA](runbooks/REPLAY-QA.md): cách chạy, đọc divergence và giữ golden.
+
+[Sprint14 — luật sửa thuyền headless](production/sprints/SPRINT-14.md), [repairprofile](contracts/BOAT-REPAIR-PROFILE.md) và [ADR023](adr/023-bounded-boat-repair-profile.md): đã nghiệm thu headless với562/562 tests (113repair), reserve/time/cancel/complete và SQLite/replay profile riêng; [evidence](qa/SPRINT-14-EVIDENCE.md), chưa client2D hoặc fullVS03.

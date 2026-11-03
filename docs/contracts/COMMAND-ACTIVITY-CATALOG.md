@@ -1,6 +1,6 @@
 # Command & Activity Catalog — kernel-v1
 
-Áp dụng FND-07/08/09/10 và VS-03. Envelope và pipeline ở [Foundation Contract](FOUNDATION-CONTRACT.md); [time](TIME-SCHEDULER-SPEC.md), [identity](IDENTITY-SPEC.md), [numeric](DETERMINISTIC-MATH-RNG-SPEC.md) là contract bắt buộc. Chỉ catalog phạm vi kernel/repair; vận tải, điều trị và game đầy đủ có cổng authoring riêng.
+Áp dụng FND-07/08/09/10 và VS-03. Trạng thái Sprint14: bounded boat-repair-v1 được hiện thực riêng theo [ADR023](../adr/023-bounded-boat-repair-profile.md); acceptance thực tại [evidence Sprint14](../qa/SPRINT-14-EVIDENCE.md), không suy mọi dòng catalog đã triển khai. Envelope và pipeline ở [Foundation Contract](FOUNDATION-CONTRACT.md); [time](TIME-SCHEDULER-SPEC.md), [identity](IDENTITY-SPEC.md), [numeric](DETERMINISTIC-MATH-RNG-SPEC.md) là contract bắt buộc. Chỉ catalog phạm vi kernel/repair; vận tải, điều trị và game đầy đủ có cổng authoring riêng.
 
 ## Quy tắc chung
 
@@ -17,7 +17,7 @@ Errors cố định: CMD_PAYLOAD_MISMATCH, STALE_REVISION, TIME_MISMATCH, REF_NO
 | TransferResource(source_lot_id,destination_lot_id,quantity) | quantity>0; cùng commodity; issuer điều khiển source; hai lot cùng location; available≥quantity | Assets giảm source, tăng destination; không đổi tổng; ResourceTransferred |
 | TransferItemRights(item_id,new_owner_id) | owner hiện cho phép; recipient tồn tại; item không có activity/reservation | Assets đổi owner; ItemRightsTransferred; không tự đổi knowledge |
 | StartRepair(actor_id,item_id,material_lot_id,recipe_id) | actor=issuer alive, đủ nghề/tool, cùng nơi; có quyền sửa; item damaged không destroyed; available đủ | Assets reserve 2 timber units; Economy tạo activity Running; Application job CompleteRepair ở tick+60 phase3; RepairStarted |
-| CompleteRepair(activity_id) | internal scheduler với causation job hợp lệ; actor alive/cùng nơi, item còn, quyền còn, reservation nguyên vẹn | consume reserved2, condition +200 max1000; activity Completed; job Retired; RepairCompleted |
+| CompleteRepair(activity_id) — tên thao tác thiết kế; wire nội bộ Sprint14 là ExecuteScheduledRepair(job_id,workflow_id) | internal scheduler với causation job hợp lệ; actor alive/cùng nơi, item còn, quyền còn, reservation nguyên vẹn | consume reserved2, condition +200 max1000; activity Completed; job Retired; RepairCompleted |
 | CancelActivity(activity_id,reason) | issuer điều khiển actor hoặc system xử lý death/invalid reservation | release remaining reservation; activity Cancelled; job Retired; ActivityCancelled |
 | AdvanceTime(target_tick) | target≥current, không unresolved player decision | workflow theo Time Spec; jobs đi qua commands; TimeAdvanceCompleted/Paused receipt |
 
@@ -37,7 +37,7 @@ Receipt: command_id, fingerprint, outcome, error_code nullable, before_revision,
 
 ## Sprint 2 implementation — in-memory TransferResource
 
-[ADR-011](../adr/011-in-memory-command-pipeline.md) quy định API/diagnostics của path TransferResource. WorldSnapshot/RuleRegistry/Application pipeline có tests; các command repair/rights/advance còn pending. Auth principal do trusted host cấp (Player/NPC/Scheduler đều không bypass rule), không deserialize từ envelope. Source/destination cùng lot là validated no-op; household control dùng explicit authoritative owner refs.
+[ADR-011](../adr/011-in-memory-command-pipeline.md) quy định API/diagnostics của path TransferResource. WorldSnapshot/RuleRegistry/Application pipeline có tests; ở thời điểm Sprint2, các command repair/rights/advance còn pending. Amendment Sprint4 và Sprint14 bên dưới ghi phần triển khai sau đó; TransferItemRights vẫn chưa triển khai. Auth principal do trusted host cấp (Player/NPC/Scheduler đều không bypass rule), không deserialize từ envelope. Source/destination cùng lot là validated no-op; household control dùng explicit authoritative owner refs.
 
 Prototype bổ sung INVALID_ENVELOPE/INVALID_PAYLOAD/COMMAND_UNKNOWN/PAYLOAD_VERSION_UNSUPPORTED/COMMODITY_MISMATCH/REF_NOT_ACTIVE. PROPOSAL_* và commit failures là system failures; không terminal rejection. Command_id/correlation token giới hạn ASCII alphanumeric đầu, tiếp theo alphanumeric hoặc `_ . : / -`, tối đa128ký tự; không dùng như entityID. Invalid commandID/auth rejection không persisted để tránh poisoning; valid authenticated input reject/noop lưu metadata. Public persistence schema/migration chưa được chốt từ DTO in-memory này.
 
@@ -45,4 +45,15 @@ Prototype bổ sung INVALID_ENVELOPE/INVALID_PAYLOAD/COMMAND_UNKNOWN/PAYLOAD_VER
 
 ## Sprint4 — scheduler prototype
 
-[ADR013](../adr/013-in-memory-scheduler.md) thêm ScheduleTransfer/CancelJob/AdvanceTime/ResolveAdvanceDecision, payload_version1 và approved optional handler_key. DrainAdvance là trusted bounded host workflow. AcceptedPending request receipt giữ nguyên, query workflow để biết trạng thái; prefix scheduler/ bị chặn tại external ingress để tránh chiếm internal command ID. Khi workflow active chỉ cho retry, CancelJob và ResolveAdvanceDecision có quyền. StartRepair/CompleteRepair/CancelActivity/rights vẫn chưa implemented; không suy job cancellation là activity reservation release.
+[ADR013](../adr/013-in-memory-scheduler.md) thêm ScheduleTransfer/CancelJob/AdvanceTime/ResolveAdvanceDecision, payload_version1 và approved optional handler_key. DrainAdvance là trusted bounded host workflow. AcceptedPending request receipt giữ nguyên, query workflow để biết trạng thái; prefix scheduler/ bị chặn tại external ingress để tránh chiếm internal command ID. Khi workflow active chỉ cho retry, CancelJob và ResolveAdvanceDecision có quyền. Ở thời điểm Sprint4, StartRepair/CompleteRepair/CancelActivity/rights chưa implemented; Sprint14 bổ sung repair theo amendment dưới, còn rights command chưa triển khai. Không suy job cancellation transfer-only là activity reservation release.
+
+
+## Sprint14 — bounded boat-repair-v1
+
+[Boat Repair Profile](BOAT-REPAIR-PROFILE.md) là nguồn chuẩn cho chi tiết được triển khai trong Sprint14: StartRepair và CancelActivity public, completion qua trusted `ExecuteScheduledRepair(job_id,workflow_id)` do DrainAdvance tạo. `CompleteRepair(activity_id)` ở bảng trên là tên nghiệp vụ, không endpoint client có thể gọi; public CompleteRepair trả NOT_AUTHORIZED, source_type=Scheduler không cấp quyền.
+
+Repair có typed Domain proposal riêng; generic ChangeSet/RuleRegistry transfer không tự trở thành framework mọi domain. Job repair giữ ActivityId, không có transfer giả. Start giữ2timber và pin recipe/tool/worksite, job phase3 priority0 due+60; completion revalidate rồi consume2/+200 cap1000 hoặc cancel/release hold. Activity và Job terminal được retire nhưng giữ lịch sử; accepted receipt/facts/cause/pins phải khớp khi restore hoặc publication. Internal completion còn phải bind execution với workflow AdvanceTime accepted-pending thật, không chỉ một receipt có source Scheduler. CancelActivity dùng correlation của lệnh cancel mới, internal completion dùng correlation đã pin từ start.
+
+Trong profile này chỉ có Running/Completed/Cancelled; Failed/resource-destruction, Health/death/Travel/forced-rights command ở mô tả tổng quát phía trên chưa được triển khai. Trusted fixture có thể thay eligibility input để kiểm revalidation, không chứng minh các domain đó đã chạy. Khi Advance active, CancelActivity vẫn được nhận; CancelJob trực tiếp trên repair job trả ACTIVITY_STATE để tránh rò hold. External completion không thể bypass.
+
+Recipe2timber/60ticks/+200/max1000 là tham số kỹ thuật prototype, không balance sản phẩm; không draw RNG. Qualification boolean và tool refs là trusted inputs giới hạn, không toàn bộ profession/class progression. Runbook [Boat Repair](../runbooks/BOAT-REPAIR.md) mô tả cách kiểm; evidence Sprint14 phân biệt source/build/runtime và các gate Unity/client còn thiếu.

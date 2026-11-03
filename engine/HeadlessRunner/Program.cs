@@ -7,6 +7,7 @@ namespace Game.Headless
     {
         private static int Main(string[] args)
         {
+            if (args.Length > 0 && args[0] == "--repair-probe") return BoatRepairProbe.Run(args);
             if (args.Length > 0 && args[0] == "--event-eligibility") return EventEligibilityProbe.Run(args);
             if (args.Length > 0 && args[0] == "--settlement-compile") return SettlementProbe.Run(args);
             if (args.Length > 0 && args[0] == "--conformance") return ConformanceProbe.Run(args);
@@ -22,7 +23,7 @@ namespace Game.Headless
                 Console.WriteLine(JsonSerializer.Serialize(new
                 {
                     project = "mythical_dnd",
-                    stage = "event-eligibility",
+                    stage = "boat-repair-headless",
                     commandPipelineImplemented = true,
                     inMemorySchedulerImplemented = true,
                     durablePersistenceImplemented = true,
@@ -32,10 +33,11 @@ namespace Game.Headless
                     foundationDiagnosticsImplemented = true,
                     settlementAuthoringImplemented = true,
                     eventEligibilityImplemented = true,
+                    boatRepairProfileImplemented = true,
                     simulationImplemented = false,
                     runtimeLlm = false,
                     documentation = "docs/production/HANDOFF.md",
-                    nextTask = "VS-02C / bounded playable prototype"
+                    nextTask = "2D client proof / bounded world and actor projection"
                 }, new JsonSerializerOptions { WriteIndented = true }));
                 return 0;
             }

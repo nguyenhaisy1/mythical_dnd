@@ -2426,3 +2426,104 @@ FixguidancecùngSPIN037:rootđồngbộ2filetools/skills/mythical-prototype/refe
 - Actor: /root
 
 Đồngbộ2fileguidanceđúngG13v1Accepted/Reopenable/A02A03Deferred/candidateapproval,giữtiếnđộvàkhôngtựmởSprint14. Independentcritic_scopeđọcdiff+baseline,khôngP0P1;P2fullpathAPPROVALSđãfixvàđíchđượckiểm. Checks cuối exit0:build_docs --check36;check_handoff883authoredlinks;diff --check;tools/skills/install.py --check6symlinks vàreadlinkglobalreference đúngprojectsource. Export7HTML+7DOCX/check_exports272inputs/14containers/6156anchors/6251headings/123tables/navigationvalid;khôngvisualrender/runtimeacceptance. CImergePR13a497e6e push41571150439completed/success. Sourcecheckpointvẫnancestor origin/dev;khônghướng/asset/schema/corechange. Tiếptheocommit3filetext/pushdocsbranch/PRCI/intdev; đâyfixguidancecóýnghĩakhôngcommitloghashvònglặp.
+
+
+### EVT-00210 | SPIN-037 | GIT — Bổ sung skill đã tích hợp; toàn bộ CI đạt và checkpoint còn reachable trên dev
+
+<!-- worklog: {"id": "EVT-00210", "spin": "SPIN-037", "event": "GIT", "at": "2026-11-03T10:26:28+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:26:28+07:00
+- Actor: /root
+
+Đãpushdocs/sprint-13-g13-guidance719c0bf39b80047763340957361c4cd47ddffce7,ls-remoteSHAkhớp. PR14đượcreview/CIrồisquashvàoorigin/dev dd614668b1e8a9a9f1dcce1c68705c6b6662ca53;API merged=true,fetchSHAkhớp. HaiCIhead719c0bfcompleted/success:push41571739962 vàpull_request41571772434;CIdevdd61466push41571946692completed/success. CIdevPR13a497e6e push41571150439cũngcompleted/success.
+Đãverifymerge-base --is-ancestor cho sourcecheckpoint1e4332f vàmergePR13a497e6e tới finalorigin/devdd61466. CâyfilecurrentdocsbranchHEAD719c0bfkhớporigin/dev;sourcefeaturebranchđượcgiữ,khôngxóanhánh. ChỉPR13dùngmergecommitđểgiữancestry;fixguidancePR14squashtheodefaultvẫngiữsourceancestor. Khôngmain/tag/release/Sprint14. Journal saucommitcònlocalđểđivớicommitcôngviệckếtiếp,khôngamend/commitvònglặp.
+
+
+### EVT-00211 | SPIN-037 | HANDOFF — Bàn giao Sprint13 đã chốt hướng2D và cổngG13 có thể mở lại
+
+<!-- worklog: {"id": "EVT-00211", "spin": "SPIN-037", "event": "HANDOFF", "at": "2026-11-03T10:26:28+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:26:28+07:00
+- Actor: /root
+
+ChủdựánđãchốtĐấtdựngthànhnền2Dcócảmgiáckhối+sprite,profileearth-monument-2d-v1;Sprint13Acceptedởphạmviđịnhhướng/G13Accepted-Reopenable. Canonicaldocs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md vàADR022/APPROVALS/.agent/AGENTS/HANDOFF/skillguidanceđồngbộ. A02/A03UI/onboardingDeferredchưaPassed; khôngsprite/Unitygameplay/restore/performanceclaim.
+Giữtoànbộ01–18/268file/275285127bytes/98visualassets(checkpointSHA12234b36fec256b7401a4dd1ae809d3e026aa391a91dbc58e789c6e5fd7c94c2),sourcecommitreachabletừdev,core/rules/content/tests khôngđổi. G13candidatephảitừcodecurrentdev,táchart/view/adaptercóimpactreview,giữv1đếnkhiuserchốtrevisionmới;khôngfullrollbackhoặcmấtcôngSprint1–12/vềsau.
+Source/checkpoint/handoff/architecture/exports/skilllinks/CIđúngrevisionđãkiểm;đâyquyếtđịnh+quytrìnhchứkhôngruntimehotswap. Bướctiếptheođềxuấtproof2Dgiớihạnvàestimate2Driêngkhiđượcgiao;chưatựmởSprint14.
+
+
+### EVT-00212 | SPIN-037 | CLOSE — Finished chốtSprint13 và bảo toàn cổng mở lại; chưa mởSprint14
+
+<!-- worklog: {"id": "EVT-00212", "spin": "SPIN-037", "event": "CLOSE", "at": "2026-11-03T10:26:29+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:26:29+07:00
+- Actor: /root
+
+Status:finishedSPIN037theoyêucầuchốtSprint13hướngĐấtdựngthành2D/spritevàgiữG13quaylạimỹthuậtkhôngđánhđổitiếnđộcore/data. Evidence:profile/ADR/registers/closure+2criticreports/checkpoint/notesgenerated/consumer+skillguidance;RESULT EVT00206/00209 vàGITcùngspin,CIlatestdevdd61466success.
+Sprint13đãkếtthúcvòngchọnhướngtheoapprovaluser,khôngcònpendingdirectionv1;G13reopenableluônsẵn. UI/onboarding/spriteasset/runtime/performancevẫngatefuturechưanghiệmthu,khôngbịgánPassedvàkhôngxóađểđóngsprint. Việcmởlạitheoyêucầu/contractG13giữcorehiệnhành,artifactoldvàversioncandidates,chỉsửađúngphạmvi. KhôngtựmởSprint14/main/tag/release. Nhậtkýpostmergecònlocal,sẽđivớicommitcôngviệcsau.
+
+
+### EVT-00213 | SPIN-038 | OPEN — Bắt đầu Sprint14: luật sửa thuyền thật và kiểm lưu/tải/replay headless
+
+<!-- worklog: {"id": "EVT-00213", "spin": "SPIN-038", "event": "OPEN", "at": "2026-11-03T10:55:43+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:55:43+07:00
+- Actor: /root
+
+ChủdựángiaohoànthànhSprint13vàtiếnhànhSprint14theoworkflowthườngtrực. Sprint13đãAcceptedđịnhhướng2D/spriteearth-monument-2d-v1,G13reopenable;PR13/14đãvàodevdd614668vàCIđạt,khôngbắtchốtlạiv1/A02A03DeferredkhônglàblockerplanningSprint14. MởSPIN038choSprint14. Scopeđangchốtqua2readonlyaudits:VS03A boundedheadlessboatrepair thật(Start/reserve2timber,due60ticks,completecondition+200/cap1000,cancel/revalidate),atomicpipeline/scheduler,explicitrepairimage/rule/contentprofile,persistence/reopen/replay vàtests;giữlegacygoldens. KhôngUnity/artproduction/fullprofession/lifegenerator/actorprojection/fullVS03;khôngvậndụngROM3Dsang2D.
+Hai auditactors /root/s14_scope_audit và/root/s14_storage_audit đãđọccode/docs:currentpipeline/schedulertransfer-only;WorldSnapshotchưaitems/activity/capability;SQLitephysicalschema2khácimage1. Cầntypedrepaircomponent/image2+exactprofile đểkhôngfaketransfer haynớischemacũ. RootchốtADR023/spec trướcgiaoimplementation3worker,reviewđộc lập,sửa/chạychecks/fullregression,exports,commit/push/PR/CIdevtheophạmviSprint14. KhôngtựmởSprint15/main/tag/release.
+
+
+### EVT-00214 | SPIN-038 | ASSIGN — Giao ba nhánh thực thi repair Domain, Application và persistence/replay
+
+<!-- worklog: {"id": "EVT-00214", "spin": "SPIN-038", "event": "ASSIGN", "at": "2026-11-03T11:02:23+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T11:02:23+07:00
+- Actor: /root
+
+ScopefrozenADR023/BOAT-REPAIR-PROFILE/Sprint14brief:VS03Aheadlessrepair thật,provenanceholds/capabilitytools,internalcompletion/typedjob,explicitimage2/newexactrulecontent,SQLitephysicalschema2/replay. Threeworkers /root/s14_repair_domain ownsDomainRepair+WorldSnapshot+BoatRepairRuleTests; /root/s14_scope_audit chuyển từreadonlyaudit sangApplicationpipeline/scheduler+BoatRepairCommandTests; /root/s14_storage_audit chuyển từreadonlyaudit sangInfrastructurecodec/store/profile/replay+persistencetests. RootownsHostCLI/JSONsource/fixture/testcsproj/testrunner/CIgate/docs/evidence/impactexports/Git. ExactAPIđượcpeers gửi/đồngbộ, giữlegacyChangeSet vàimage1bytes thayvìfakeTransfer. Critic tasks sẽgiao saucode;khôngbịađãreview. VS02fullcònpartial nênkhôngđóngfullVS03/vượtdependency;fixtureboundedđượcghi rõ.
+
+
+### EVT-00215 | SPIN-038 | PROGRESS — Repair đã chạy; sửa fixture và tiếp tục kiểm ràng buộc lịch sử trước full gate
+
+<!-- worklog: {"id": "EVT-00215", "spin": "SPIN-038", "event": "PROGRESS", "at": "2026-11-03T11:40:53+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T11:40:53+07:00
+- Actor: /root
+
+Tiếp tục cùng SPIN038 theo yêu cầu user. Ba worker đã hoàn tất Domain/Application/Infrastructure sau quota gián đoạn; root tiếp quản Host/JSON/process gates và tests pipeline, shared repair-history invariant. /root/s14_critic_commands và /root/s14_critic_storage đã review độc lập, bổ sung 2 pin tests và 8 malformed history tests. Hai P1 cũ (Host dùng sai kiểu RecoverToNewFile; restore thiếu accepted causal start/terminal) đã có source fix và focused evidence. Worker Infra có28/28 mới và139/139 subset (139 gồm8 replay mới, không gọi legacy-only).
+Root integration đầu110cases:109Passed/1Failed do ca dead invalidation trước Advance admission. Root sửa fixture: admit Advance trước invalidation; lượt đầu assertion nhầm Accepted thay AcceptedPending làm9caseFailed, không sửa production để né. Đã sửa expected đúng workflow contract; lượtfix2 actual9/9Passed0failed/skipped,build0warnings/errors. Giữ tất cả TRX tại tests/results/sprint14-{integration,revalidation-fix,revalidation-fix2}. Host process preflight thực tế2positiveprocesses+2authoringnegativecontrols Passed tại tests/results/sprint14-probe-preflight/boat-repair.json; khôngUnity/playtest.
+Sau context tiếp tục, actors cũ không còn live. Root giao /root/s14_final_docs đồng bộ docs/contracts/registers/notes/exportinputs và /root/s14_final_critic review độc lập cuối. Critic mới phát hiện reverse workflow/execution binding của terminal internal cancelled repair có thể thiếu khi restore; đang viết adversarial cases trước khi root sửa. Chưa fullgate/chưa nghiệmthu Sprint14/chưa commitpushPR. G13v1/experiments01–18 giữ nguyên.
+
+
+### EVT-00216 | SPIN-038 | RESULT — Nghiệm thu VS-03A headless: 562/562 tests và process gates đạt
+
+<!-- worklog: {"id": "EVT-00216", "spin": "SPIN-038", "event": "RESULT", "at": "2026-11-03T16:22:29+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:22:29+07:00
+- Actor: /root
+
+VS-03A headless đã nghiệm thu trong phạm vi Sprint14. Fullrun tests/results/sprint14-2bdf5f7o/evidence.json exit0:562 discovered/executed/Passed,0failed/skipped,113repair+449regression; locked restore và Release build0warnings/errors. Negative control cố ý fail đúng1 exit1;2process repair cùng JSON/hash/11checks và2authoring negatives trướcDB đạt; legacy gates và9SIGKILL kernel regression đạt. Source fingerprint sha256:f4eab1e00e4785939da5af0d8b742e99b70a9015c5f300d104f7c4cd2b2c22d4; root hash170manifestfiles không đổi,17critic fingerprints đúng; fullTRX562rows được root parse.
+Critic cuối /root/s14_final_critic có source report và3workflow adversarial cases mới; root chạy actual before3failed/after113passed. P1 reversebinding đã fix,2P1 storage/Host cófix+actualrun. Critic tự review patch/parse focused rồi chạm quota; root tự đối chiếu full artifacts, không gọi đó là independent full audit. FINAL-REVIEW giữ critic report và root disposition riêng. Không known P0/P1 cản headless scope.
+/root/s14_final_docs đồng bộ contracts/runbooks/registers/backlog/matrix/notes/export inputs, không runtime checks. Root chốt .agent/AGENTS/HANDOFF/README/CHANGELOG/brief/evidence. FullVS03 vẫnpartial; Unity2D/randomorigin/projection/fullprofession/playtest chưa nghiệm thu. G13v1/01–18 giữ nguyên. Docs36generated/942authoredlinks/reference/vectors/architecture,4MCPofflinecontrols và6skilllinks đạt; exports đang regenerate. Branchfeature/sprint-14-boat-repair chưa commit; khôngSprint15/main/tag/release.
+
+
+### EVT-00217 | SPIN-038 | PROGRESS — Critic da audit doc lap full evidence; dang chot exports va Git
+
+<!-- worklog: {"id": "EVT-00217", "spin": "SPIN-038", "event": "PROGRESS", "at": "2026-11-03T16:25:08+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:25:08+07:00
+- Actor: /root
+
+/root/s14_final_critic da tiep tuc sau quota va hoan tat independent artifact audit: fullTRX562/562Passed/113repair/0failed-skipped; negativeTRX1Failed dung control; build0warnings-errors;170manifestpaths va17reviewfingerprints khop. Tu doc2Hoststdout/11checks/arithmetic/hashes va2authoringnegatives truocDB. Ket luan3P1 closed,khongP0/P1open trong boundedheadlessscope. Khong claim Unity/fullVS03/playtest.
+Root da append report/evidence dung actor va thoi diem audit moi, giu lich su audit truocquota. Export lan1da tao7HTML+7DOCX; dang regenerate lan2vi source evidence moi, khong doi runtime source hay rerun test voichinh sua docs. Gitbranch feature/sprint-14-boat-repair chua commit; fullsourcefingerprintf4eab1...vanapdung.
+
+
+### EVT-00218 | SPIN-038 | PROGRESS — Đã xuất lại bộ tài liệu và kiểm scope commit Sprint14
+
+<!-- worklog: {"id": "EVT-00218", "spin": "SPIN-038", "event": "PROGRESS", "at": "2026-11-03T16:26:40+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:26:40+07:00
+- Actor: /root
+
+Đã regenerate đủ7HTML+7DOCX từ nguồn cuối có independent final audit bổ sung;36generated files được xác minh. Lượt export đầu trước audit bổ sung được thay bằng lượt source mới, không sửa manifest tay hoặc tạoZIP. Kiểm freshness/check_exports đang chạy; commit chỉ sau khi đạt. Staged scope65files/3199insertions/98deletions đã đọc vàdiffcheck đạt, credential-pattern scan không phát hiện; source/archive/thưviện01–18/legacygoldens không đổi. Runtime manifest170files vẫn khớp fullrun;17criticfingerprints đúng. Gitfetch origin/dev vẫndd614668, sourcecheckpoint1e4332f làancestor; không useredits ngoài scope.
+
+
+### EVT-00219 | SPIN-038 | RESULT — Checks và exports cuối đạt; chuẩn bị tích hợp Sprint14 qua PR
+
+<!-- worklog: {"id": "EVT-00219", "spin": "SPIN-038", "event": "RESULT", "at": "2026-11-03T16:26:56+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:26:56+07:00
+- Actor: /root
+
+Final check_exports exit0:282sourceinputs/14containers/6156sourceanchors/6251DOCXheadings/123tables/internalnavigationvalid. Đâycontainer/content/navigationchecks, khôngvisualrender/runtimeacceptance. Source đã đóng băng, generateddocs36/handoff942links/reference/vectors/architecture/offlineMCPcontrols/skill6links/diffchecks đạt. Root nghiệmthu VS03Aheadless sau full562/562 và independentfinalaudit;chưaUnity2D/fullVS03.
+Tiếp theo commit65files feature/sprint-14-boat-repair, pushchínhnhánh,PR→dev vàđợiCI đúngHEAD rồimerge. ĐâyworkflowSprint14đãđượccấpquyền;khôngmain/tag/release/tựmởSprint15. LiveWORKLOGđượcloạikhỏiexportfingerprints,ghi eventkhônglàmstaleexport. PostcommitGit/CLOSElogđểlocalcho meaningfulcommitkếtiếp,khôngamendvònglặp.

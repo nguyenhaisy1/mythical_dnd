@@ -60,3 +60,10 @@ Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai t
 ## Forecast lịch sử theo sprint — 26/10/2026
 
 [Lộ trình hình ảnh và bản chơi thử](PLAYABLE-ROADMAP.md) bổ sung mốc dự kiến Sprint13 art direction/UI prototype và Sprint15–16 demo nhỏ. Đây là dự báo tại26/10, chưa là release commitment; sau chốt hướng2D03/11 cần đo/reforecast, không coi Sprint15–16 là ngày cam kết. Client prototype giới hạn có thể làm trước VS07 đầy đủ; không thay dependencies hoặc exit gates của VS07/10.
+
+
+## Sprint14 — VS-03A bounded repair implementation
+
+User đã giao [Sprint14](sprints/SPRINT-14.md) ngày03/11/2026. [ADR023](../adr/023-bounded-boat-repair-profile.md) cho phép hiện thực repair độc lập trên trusted fixture để kiểm một hành động causal thật khi VS02full cònpartial; không bypass dependency để đóngfullVS03. Typeditem/activity/holds vàinternalcompletion, SQLite/replay/canonicalcompatibility có acceptance riêng. Corechanges là gameplay mới được giao, G13 checkpoint vẫn giữ lịch sử thay vì freeze tất cả phát triển. Scene/sprite/projection/randomlife/Unitygates và fullVS07 vẫn riêng; chưa tự mởSprint15.
+
+VS-03A được nghiệm thu trong headless profile theo [evidence Sprint14](../qa/SPRINT-14-EVIDENCE.md):562/562 tests,113 repair,0failed/skipped. FullVS03 vẫnpartial; bước tiếp theo đề xuất là chia proof client2D và actor-scoped read model khi được giao, không tự mở sprint.

@@ -32,7 +32,7 @@ CREATE TABLE recovery_images(sequence INTEGER PRIMARY KEY,image BLOB NOT NULL,sh
 CREATE TABLE save_points(sequence INTEGER PRIMARY KEY,image BLOB NOT NULL,sha256 TEXT NOT NULL,kind TEXT NOT NULL);");
             Exec(c, t, "INSERT INTO save_manifest VALUES(1,1,0,$sha,$count,$world,'mdc1',$rule,$content,'sha256-counter-v1',$seed,'')",
                 ("$count", acceptedCount), ("$sha", CommittedWorldCodec.Hash(bytes)), ("$world", state.World.WorldId.ToString("x16", CultureInfo.InvariantCulture)),
-                ("$rule", RuleVersion), ("$content", contentHash), ("$seed", (object?)worldSeed ?? DBNull.Value));
+                ("$rule", ruleVersion), ("$content", contentHash), ("$seed", (object?)worldSeed ?? DBNull.Value));
             SignManifest(c, t); PutSnapshot(c, t, 0, bytes, "initial");
         }
         private sealed class Manifest
@@ -45,14 +45,14 @@ CREATE TABLE save_points(sequence INTEGER PRIMARY KEY,image BLOB NOT NULL,sha256
             if (Convert.ToInt64(Scalar(c, t, "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name IN ('recovery_images','save_points')"), CultureInfo.InvariantCulture) != 2) throw new InvalidDataException("SAVE_TABLES_MISSING");
             using var cmd = c.CreateCommand(); cmd.Transaction = t; cmd.CommandText = "SELECT * FROM save_manifest WHERE singleton=1";
             using var r = cmd.ExecuteReader(); if (!r.Read()) throw new InvalidDataException("SAVE_MANIFEST_MISSING");
-            if (r.GetInt64(1) != 1 || r.GetString(6) != "mdc1" || r.GetString(7) != RuleVersion || r.GetString(8) != contentHash || r.GetString(9) != "sha256-counter-v1") throw new InvalidDataException("INCOMPATIBLE_SAVE_MANIFEST");
+            if (r.GetInt64(1) != 1 || r.GetString(6) != "mdc1" || r.GetString(7) != ruleVersion || r.GetString(8) != contentHash || r.GetString(9) != "sha256-counter-v1") throw new InvalidDataException("INCOMPATIBLE_SAVE_MANIFEST");
             var m = new Manifest { Sequence = r.GetInt64(2), Sha = r.GetString(3), Count = r.GetInt64(4), World = r.GetString(5), Seed = r.IsDBNull(10) ? null : r.GetString(10) };
             if (m.Sequence < 0 || m.Count < 0 || m.Sha.Length != 64) throw new InvalidDataException("CORRUPT_SAVE_MANIFEST");
             if (r.GetString(11) != ManifestHash(m)) throw new InvalidDataException("CORRUPT_MANIFEST_HASH");
             return m;
         }
         private string ManifestHash(Manifest m) => CommittedWorldCodec.Hash(Game.Foundation.Random.CanonicalCodec.Encode(
-            new Dictionary<string, object?> { { "version", 1L }, { "sequence", m.Sequence }, { "count", m.Count }, { "sha", m.Sha }, { "world", m.World }, { "seed", m.Seed }, { "codec", "mdc1" }, { "rule", RuleVersion }, { "content", contentHash }, { "rng", "sha256-counter-v1" } }));
+            new Dictionary<string, object?> { { "version", 1L }, { "sequence", m.Sequence }, { "count", m.Count }, { "sha", m.Sha }, { "world", m.World }, { "seed", m.Seed }, { "codec", "mdc1" }, { "rule", ruleVersion }, { "content", contentHash }, { "rng", "sha256-counter-v1" } }));
         private void SignManifest(SqliteConnection c, SqliteTransaction t)
         {
             Manifest m;
@@ -111,7 +111,7 @@ CREATE TABLE save_points(sequence INTEGER PRIMARY KEY,image BLOB NOT NULL,sha256
             using (var cmd = c.CreateCommand())
             {
                 cmd.Transaction = t; cmd.CommandText = "SELECT schema_version,codec_version,rule_version,content_hash,rng_version FROM world_meta WHERE singleton=1";
-                using var r = cmd.ExecuteReader(); if (!r.Read() || r.GetInt64(0) != 2 || r.GetString(1) != "mdc1" || r.GetString(2) != RuleVersion || r.GetString(3) != contentHash || r.GetString(4) != "sha256-counter-v1") throw new InvalidDataException("INCOMPATIBLE_SAVE");
+                using var r = cmd.ExecuteReader(); if (!r.Read() || r.GetInt64(0) != 2 || r.GetString(1) != "mdc1" || r.GetString(2) != ruleVersion || r.GetString(3) != contentHash || r.GetString(4) != "sha256-counter-v1") throw new InvalidDataException("INCOMPATIBLE_SAVE");
             }
             var m = ReadManifest(c, t); var points = new List<(long, byte[], string)>();
             using (var cmd = c.CreateCommand())
@@ -138,7 +138,7 @@ CREATE TABLE save_points(sequence INTEGER PRIMARY KEY,image BLOB NOT NULL,sha256
             if (recovered == null) throw new InvalidDataException("NO_COMPLETE_RECOVERY_PATH");
             var state = CommittedWorldCodec.Decode(recovered);
             // Recovery never invokes gameplay handlers. Output is explicit, create-new only.
-            var output = new SqliteWorldStore(destination, contentHash); output.InitializeCore(state, true, m.Seed, m.Count);
+            var output = new SqliteWorldStore(destination, contentHash, expectedRuleVersion:ruleVersion); output.InitializeCore(state, true, m.Seed, m.Count);
             _ = output.Load(); return state;
         }
         private static void ValidateRecoveryImage(byte[] bytes, Manifest manifest, byte[]? prior)
@@ -160,9 +160,9 @@ CREATE TABLE save_points(sequence INTEGER PRIMARY KEY,image BLOB NOT NULL,sha256
             using (var f = new FileStream(backupPath, FileMode.CreateNew, FileAccess.Write, FileShare.None)) { }
             using (var backup = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = Path.GetFullPath(backupPath), Mode = SqliteOpenMode.ReadWrite, Pooling = false }.ToString()))
             { backup.Open(); c.BackupDatabase(backup); }
-            var backupStore = new SqliteWorldStore(backupPath, contentHash); var saved = backupStore.Load();
+            var backupStore = new SqliteWorldStore(backupPath, contentHash, expectedRuleVersion:ruleVersion); var saved = backupStore.Load();
             if (!CommittedWorldCodec.Encode(saved).SequenceEqual(bytes)) throw new InvalidDataException("BACKUP_VALIDATION_FAILED");
-            var output = new SqliteWorldStore(destination, contentHash); probe?.Invoke("migration_after_backup"); output.InitializeCore(state, true, worldSeed, beforeInitializeCommit: () => probe?.Invoke("migration_before_commit")); probe?.Invoke("migration_after_copy"); _ = output.Load(); return state;
+            var output = new SqliteWorldStore(destination, contentHash, expectedRuleVersion:ruleVersion); probe?.Invoke("migration_after_backup"); output.InitializeCore(state, true, worldSeed, beforeInitializeCommit: () => probe?.Invoke("migration_before_commit")); probe?.Invoke("migration_after_copy"); _ = output.Load(); return state;
         }
     }
 }

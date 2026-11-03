@@ -43,3 +43,10 @@ Bản nguồn M28 nhắc household “Tòng Mộc”; M04/M05 có gia đình V�
 [ADR022](../adr/022-earth-monument-2d-and-reopen-gate.md), DEC-028/029 và [baselineG13](../production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) có hiệu lực trước các đề xuất3D hoặc trạng tháiPending Sprint13 cũ. Chốt hướng Đất dựng thành bằng nền2D có cảm giác khối/nhân vật sprite (`earth-monument-2d-v1`); Sprint13Accepted/Reopenable theo phạmviđịnhhướng. S13-A02/A03UI/UX chi tiết vẫn là follow-up chưa nghiệmthu, không cản lệnh đóng phạm vi của user và không thành runtime acceptance.
 
 G13 mở lại mỹ thuật bằng candidate/profile revision trên code mới nhất, giữ core/rules/content/stable IDs/save contracts và tiến độ. Không reset/revert toàn bộ lịch sử Sprint1–12/vềsau; không đổi schema/domain chỉ để hợp camera. Nếu ảnh hưởng contract/save thật phải có impact/migration/acceptance riêng. Thư viện/source/checkpoint được giữ. Những dòngPending lịch sử không là trạng thái hiện hành; không coi approval này tự mởSprint14 hoặc tạo release.
+
+
+## Bổ sung thực thi Sprint14 — 03/11/2026
+
+[ADR023](../adr/023-bounded-boat-repair-profile.md), DEC-030 và [Boat Repair Profile](../contracts/BOAT-REPAIR-PROFILE.md) chốt implementation bounded VS-03A được chủ dự án giao riêng sau Sprint13: deterministic reserve/time/complete/cancel, trusted capability/tool inputs và explicit repair image/rule/content profile. Scope2timber/60ticks/+200condition/cap1000 là prototype engineering, không balance hoặc full profession.
+
+Committed image2 khi có Repair extension, legacy image1 giữ bytes; physical SQLite schema2 không đổiDDL. Save/replay phải có exact rule/content/profile/recipe, không auto-convert world cũ. Khôi phục phải giữ receipt/fact causality và activity/job/hold consistency. Acceptance thực tại [evidence Sprint14](../qa/SPRINT-14-EVIDENCE.md); không suy đã nghiệm thu Unity/client2D/fullVS03 từ contract. G13/mỹ thuật đã chốt và tiến độ trước giữ nguyên; thay core ở sprint được giao không là rollback về checkpoint13.

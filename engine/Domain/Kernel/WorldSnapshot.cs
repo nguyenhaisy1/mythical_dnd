@@ -4,6 +4,7 @@ using System.Linq;
 using Game.Foundation.Identity;
 using Game.Foundation.Random;
 using Game.Foundation.Time;
+using Game.Domain.Repair;
 using Game.Foundation.World;
 
 namespace Game.Domain.Kernel
@@ -70,7 +71,8 @@ namespace Game.Domain.Kernel
         public IReadOnlyList<ActorState> Actors { get; }
         public IReadOnlyList<ResourceLot> Lots { get; }
         public IReadOnlyList<RngStreamState> RngStates { get; }
-        public WorldSnapshot(IdentitySnapshot identity, WorldTick tick, IEnumerable<ActorState> actors, IEnumerable<ResourceLot> lots, IEnumerable<RngStreamState>? rngStates = null)
+        public RepairState? Repair { get; }
+        public WorldSnapshot(IdentitySnapshot identity, WorldTick tick, IEnumerable<ActorState> actors, IEnumerable<ResourceLot> lots, IEnumerable<RngStreamState>? rngStates = null, RepairState? repair = null)
         {
             Identity = identity ?? throw new ArgumentNullException(nameof(identity)); Tick = tick;
             this.actors = (actors ?? throw new ArgumentNullException(nameof(actors))).ToDictionary(x => x.Id);
@@ -93,6 +95,8 @@ namespace Game.Domain.Kernel
                 if (stream.State.Context.Entity.World != WorldId || !Identity.Entries.Any(x => x.Id.Equals(stream.State.Context.Entity)))
                     throw new IdentityException("REF_NOT_FOUND");
             RngStates = Array.AsReadOnly(streams.Values.OrderBy(x => x.ContextKey, StringComparer.Ordinal).ToArray());
+            Repair = repair;
+            Repair?.Validate(this);
         }
         private void RequireOwner(EntityId id)
         {

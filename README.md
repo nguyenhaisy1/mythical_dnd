@@ -6,6 +6,10 @@ Living World Narrative RPG lấy chất liệu Văn Lang–Âu Lạc. Nội dung
 
 **Sprint13 — chốt ngày03/11/2026:** hướng **Đất dựng thành, nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. [Baseline mỹ thuật và cổng G13](docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) giữ trạng thái **Accepted / Reopenable**: có thể mở lại hướng mỹ thuật mà giữ engine, luật, dữ liệu và tiến độ độc lập đã làm. Đây là chốt định hướng; sprite/scene/UI, chi tiết Reveal và hiệu năng vẫn cần triển khai/kiểm chứng, chưa là playable acceptance và chưa tự mở Sprint14. [Quyết định ADR-022](docs/adr/022-earth-monument-2d-and-reopen-gate.md).
 
+## Sprint14 hiện hành
+
+[Sprint14](docs/production/sprints/SPRINT-14.md) đã nghiệm thu luật sửa thuyền headless: giữ vật liệu, chờ đúng thời gian, hoàn tất/hủy và lưu/tải/replay. [Kiểm chứng](docs/qa/SPRINT-14-EVIDENCE.md):562/562 tests,113 repair,0failed/skipped và process gates đạt. Hướng Đất dựng thành2D/sprite đã chốt ởG13 được giữ; chưa Unitydemo hoặc sprite chuyển động được nghiệmthu. [ADR023](docs/adr/023-bounded-boat-repair-profile.md) và [runbook](docs/runbooks/BOAT-REPAIR.md) ghi scope/profile/commands.
+
 ## Bắt đầu đọc
 
 - [Bàn giao cho đội phát triển](docs/production/HANDOFF.md).

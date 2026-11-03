@@ -1,5 +1,11 @@
 # Bàn giao phát triển — 1.1-prototype-contracts
 
+## Sprint14 hiện hành — luật sửa thuyền headless
+
+Chủ dự án đã giao Sprint14 ngày03/11/2026; [sprintbrief](sprints/SPRINT-14.md), [ADR023](../adr/023-bounded-boat-repair-profile.md) và [repairprofile](../contracts/BOAT-REPAIR-PROFILE.md) chốt VS-03A bounded. Thực thi reserve2timber/60tick/+200conditioncap1000, cancel/revalidation và atomiccommand/scheduler; explicitrepairimage2/rule/contentprofile, SQLitephysicalschema2/reopen/recovery/replay. [Evidence](../qa/SPRINT-14-EVIDENCE.md) ghi nghiệm thu VS-03A headless:562/562 runtime tests (113repair),0failed/skipped, negative controls và SQLite/replay process gates đạt. Git/CI integration theo WORKLOG, không mở rộng thành playable acceptance.
+
+Sprint13 đã kết thúc vòng chọn hướng/G13Reopenable; A02/A03UI/originUX chuyển follow-up, không cản sprint được giao. Core thay đổi ở Sprint14 là phát triển gameplay mới được giao, không lấy core cũ từ checkpointG13. Hướng2D/sprite giữ nguyên, chưaUnity/spriteproduction/Player/fullprofession/randomorigin/actorprojection hoặc fullVS03. Không tự mởSprint15 hoặc release. Các đoạn ngày trước bên dưới là bàn giao lịch sử theo mốc của chúng.
+
 ## Trạng thái hiện hành — Sprint13 đã chốt định hướng, G13 có thể mở lại
 
 Ngày03/11/2026 chủ dự án chốt **Đất dựng thành + nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. Sprint13 **Accepted / Reopenable** ở phạm vi định hướng; [baseline/cổng G13](sprints/sprint-13/ART-DIRECTION-BASELINE.md) và [approval](sprints/sprint-13/APPROVALS.md) là nguồn hiện hành. S13-A02/A03 được chuyển thành follow-up implementation chưa nghiệm thu, không giả UI/originflow Passed. [ADR022](../adr/022-earth-monument-2d-and-reopen-gate.md) giữ core/luật/tri thức/dữ liệu độc lập với route đồ họa.

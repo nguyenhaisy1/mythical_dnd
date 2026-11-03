@@ -37,3 +37,12 @@ Dùng paths riêng cho các lần migration; không prune backups, giữ ít nh�
 Lệnh chuẩn: python3 tools/tests/run_runtime.py --dotnet /path/to/dotnet. Bao gồm unit/integration runtime, negative control và subprocess SIGKILL. SaveProbe trong HeadlessRunner chỉ là fixture cho crash harness, không dùng làm production gameplay frontend.
 
 Không có power-loss test, Unity lifecycle wiring, platform atomic replace, storage benchmark hoặc retention optimization. Full-image recovery tốn dung lượng theo số publication và kích thước world; chưa phù hợp để hứa hiệu năng cho1.000NPC.
+
+
+## Repair profile Sprint14
+
+Để mở save có repair, dùng `RepairContentRegistry.Compile` từ parameter pack đã kiểm, truyền `expectedRuleVersion: SqliteWorldStore.RepairRuleVersion` cùng ContentHash khi tạo store; compose CommandProcessor với cùng Recipe. Constructor mặc định vẫn legacy, không tự đoán rule profile từ save để bỏ qua compatibility check. Không mở save cũ rồi tự gắn Repair extension.
+
+Committed image2 lưu extension repair và recipe pins; physical SQLite schema2 không đổi. Load kiểm cả activity/job, reservation provenance và accepted command/fact history. Snapshot/recovery/migration new-file dùng đúng profile của instance. `RecoverToNewFile(destination)` trả CommittedWorld, không phải store; muốn kiểm output qua Load thì tạo store mới với cùng content/rule profile trên destination. Không sửa nguồn sau wrong profile refusal.
+
+[Boat Repair](BOAT-REPAIR.md) có CLI chạy fixture bounded và [evidence Sprint14](../qa/SPRINT-14-EVIDENCE.md) ghi kết quả thực. Recovery repair không là replay lệnh, Unity save UI hoặc proof SIGKILL riêng cho repair.

@@ -50,3 +50,14 @@ MigrateToNewFile hỗ trợ1→2 với SQLite-consistent backup và output mới
 ## Sprint7 replay QA — 2026-10-21
 
 [ADR016](../adr/016-headless-command-replay.md) bổ sung artifact QA riêng để rerun Execute/Drain từ initial state. Không tự thay recovery frames bằng rule replay hoặc suy attempted command log từ durable receipts. Recovery schema2 của Sprint6 không đổi; replay chạy isolated in-memory, expected manifest do host chọn. File save cũ không tự trở thành replay artifact đầy đủ mọi attempts.
+
+
+## Sprint14 — explicit repair profile và committed image2
+
+Theo [ADR023](../adr/023-bounded-boat-repair-profile.md) và [Boat Repair Profile](BOAT-REPAIR-PROFILE.md), `WorldSnapshot.Repair=null` giữ legacy committed image1 và canonical bytes/goldens. Extension repair explicit, kể cả không có activity, chọn committed image2; profile `boat-repair-v1` ghi typed items/capabilities/activities, recipe fingerprint và effective parameters. Item/activity mirrors dùng entities BLOB sẵn; **image2 không làm physical SQLite schema2 thành schema3**. Không có auto-conversion world legacy sang repair world.
+
+Host phải compose `SqliteWorldStore` với content hash từ strict RepairContentRegistry và `expectedRuleVersion=SqliteWorldStore.RepairRuleVersion` (`transfer-resource-v1+scheduler-v1+boat-repair-v1`). Default vẫn legacy; wrong rule/content/image phải refuse trước mutation. Profile instance truyền qua Load, manifest, snapshot, recovery và schema1→2 new-file migration. Migration physical schema giữ profile, không thêm nghề/repair vào save cũ. Old reader không được hứa đọc image2.
+
+Load/restore kiểm canonical field/types/refs/lifecycle, tổng holds và activity↔job; accepted start/terminal receipt và causal facts phải khớp pins/revisions. Không đủ chỉ có activity/job trông hợp lệ; completion nội bộ cần execution và accepted Advance workflow đúng binding. Cancel/completion atomically giữ item/lot/hold/job/receipt/events/revision, reopen không consume hai lần. `RecoverToNewFile` trả CommittedWorld đã validate và tạo file mới; vẫn là committed-image recovery, khác ReplayHarness rerun resolution.
+
+Acceptance thực cùng giới hạn tại [evidence Sprint14](../qa/SPRINT-14-EVIDENCE.md). Bộ kiểm mở file SQLite thật qua Running/reopen/completion/cancel, snapshot/recovery, failure và exact profile refusal; không suy đã chạy repair crash SIGKILL riêng, power loss, Unity provider hoặc UI save/load từ các API này. Legacy process-kill suites có scope riêng trong evidence trước.

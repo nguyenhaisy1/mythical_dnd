@@ -12,9 +12,9 @@ Commodity/Item/Unique Object có abstraction khác nhưng cùng ledger quyền s
 |---|---|
 | Dữ liệu đầu vào | Lots, workforce, tools, rights, route graph, demand, season và recipes. |
 | Đầu ra / bên sở hữu | Production/transfer/craft proposals; Assets sở hữu quantities/rights; Economy sở hữu plans/prices. |
-| Đọc cùng | 03, 08, 13, 14, 26–27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 03, 08, 13, 14, 26–27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR023 và docs/contracts/BOAT-REPAIR-PROFILE.md + docs/runbooks/BOAT-REPAIR.md: Sprint14 VS03A headless reserve2timber/due60/+200cap1000, typed repair state/jobs và explicit image2/exact rule-content profile; legacy image1 và physicalSQLite schema2 giữ; acceptance thực xem docs/qa/SPRINT-14-EVIDENCE.md, không Unity/full profession/world binding. |
 | Cổng nghiệm thu | Sửa thuyền tiêu thụ đúng vật liệu; failed commit không mất/nhân đôi stock; route closure tác động trade. |
-| Việc chưa được chứng minh | Economic coefficients, commodity catalog và physical SQLite schema. |
+| Việc chưa được chứng minh | Economic coefficients và broader commodity catalog còn mở; physicalSQLite schema2 headless đã có ADR015, Unity provider/platform vẫn riêng. Sprint14 repair là bounded implementation trên trusted qualification/tool inputs, không đóng fullVS03 hoặc thay các gate client/gameplay còn thiếu. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../../governance/APPLICABLE-BASELINE.md) và [Decision Register](../../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 
