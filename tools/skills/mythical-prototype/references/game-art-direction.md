@@ -29,7 +29,7 @@ Xem artifact ở kích thước target, không chỉ zoom lớn. Kiểm silhouet
 
 So sánh phương án bằng tiêu chí của game: bản sắc, khả năng đọc lựa chọn/hậu quả, mức nhất quán và chi phí sản xuất. Trình bày nhận xét mỹ thuật là nhận xét, không giả metric hay phản hồi playtest. Những mục chưa có bằng chứng giữ Unknown/Not assessed.
 
-Áp dụng approval register hiện hành. Riêng Sprint13, mọi phương án vẫn Pending user approval dù technical checks đạt; nhắc pending khi user muốn sang sprint mới. Không nhập policy hỏi phép trước từng lần viết file từ upstream: quyền tạo/sửa đã giao vẫn có hiệu lực. Giữ bản thử cũ, log spin thật; skill không tự mở sprint hoặc sinh thêm phương án ngoài mục tiêu đang giao.
+Áp dụng approval register hiện hành. Ngày03/11/2026 chủ dự án đã chốt Sprint13 theo `earth-monument-2d-v1` (Đất dựng thành, nền2D có cảm giác khối + nhân vật sprite); G13 Accepted / Reopenable. Không dùng trạng thái Pending lịch sử để yêu cầu chốt lại v1. A02/A03 là Deferred implementation gates, chưa Passed UX; candidate mỹ thuật mới vẫn cần user chốt và không tự thay v1. Xem docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md và docs/production/sprints/sprint-13/APPROVALS.md từ project root. Mở lại G13 chỉ đổi phần art/view đã khoanh tác động trên core/content hiện hành, giữ thư viện và tiến độ; không reset toàn repository. Không nhập policy hỏi phép trước từng lần viết file từ upstream: quyền tạo/sửa đã giao vẫn có hiệu lực. Giữ bản thử cũ, log spin thật; skill không tự mở sprint hoặc sinh thêm phương án ngoài mục tiêu đang giao.
 
 ## Tạo mô hình3D — chỉ dẫn chủ dự án28/10/2026
 
@@ -39,7 +39,7 @@ Từ lần tạo mô hình3D tiếp theo, dùng MCP Hyper3D đã cài làm đư�
 
 Ở giai đoạn chọn ý tưởng hiện tại, tạo **ảnh mô phỏng game**, có thể là tranh 2D hoặc ảnh mang diện mạo 3D; không tạo model 3D thật chỉ để trình bày ý tưởng. Chỉ dẫn này thay cách triển khai bằng model ở Experiment 05, không yêu cầu xử lý tiếp lượt sửa Hyper3D đang chưa xác định ID. Dùng ảnh concept để chủ dự án xem bối cảnh, góc nhìn, phong cách và giao diện minh họa trước; ghi rõ ảnh không phải game đang chạy hoặc render từ một scene 3D đã dựng. Không tự gọi Hyper3D/Blender hay xây pipeline 3D cho yêu cầu thử hình ảnh.
 
-Quy tắc 28/10 về MCP Hyper3D chỉ áp dụng khi chủ dự án giao lại task **tạo model 3D thật** trong tương lai; không buộc dùng Hyper3D cho ảnh có vẻ 3D. Giữ các thử nghiệm cũ và nguồn gốc thật. Experiment 06/SPIN-022 dùng ảnh mô phỏng và gallery để so sánh; mọi phương án Sprint 13 vẫn Pending user approval. Việc đổi cách xem trước không phải duyệt mỹ thuật hoặc cho phép chuyển Sprint 14.
+Quy tắc 28/10 về MCP Hyper3D chỉ áp dụng khi chủ dự án giao lại task **tạo model 3D thật** trong tương lai; không buộc dùng Hyper3D cho ảnh có vẻ 3D. Giữ các thử nghiệm cũ và nguồn gốc thật. Tại thời điểm29/10, Experiment06/SPIN-022 dùng ảnh mô phỏng và gallery để so sánh, chưa có approval mỹ thuật. Quyết định chốt03/11 phía trên có hiệu lực hiện hành; bản thân việc đổi cách xem trước khi ấy không phải approval. Chốt hướng không tự mởSprint14 hoặc cho phép tạo model thật.
 
 ## Thư viện phiên bản tham khảo — làm rõ ngày 29/10/2026
 
