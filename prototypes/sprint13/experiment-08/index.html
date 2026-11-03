@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mythical — Thêm ba cách thể hiện · Thử nghiệm 08</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#scene">Đến ảnh ý tưởng</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Đầu trang Mythical">MYTHICAL<span>MỘT ĐỜI BÊN DÒNG NƯỚC</span></a>
+    <div class="header-tools"><span class="edition">THỬ NGHIỆM 08</span><label for="text-size">Cỡ chữ</label><select id="text-size"><option value="100">100%</option><option value="125">125%</option><option value="150">150%</option></select></div>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">THÊM PHIÊN BẢN ĐỂ THAM KHẢO</p><h1 id="page-title">Cùng một nơi.<br>Thêm cách cảm nhận.</h1></div>
+      <div class="intro-copy"><p>Một sân nhà bên suối sau cơn mưa: người mang giỏ thảo mộc vừa tới, người trên hiên và gia đình đang chờ. Lần này thử nét hoạt hình, thế giới dệt và hình khối cách điệu.</p><p class="notice">Ảnh mô phỏng · Chưa phải game chạy · Chờ bạn chốt</p></div>
+    </section>
+    <section id="scene" class="scene-section" aria-labelledby="scene-title">
+      <div class="scene-toolbar"><div><p class="eyebrow">PHƯƠNG ÁN ĐANG XEM</p><h2 id="scene-title">A — Nét vẽ và mảng bóng</h2></div><div class="view-tools"><label class="hud-toggle" for="show-hud"><input id="show-hud" type="checkbox" checked> Hiện giao diện minh họa</label><div class="switches" role="group" aria-label="Chọn phương án đồ họa"><button type="button" data-choice="a" aria-pressed="true">A <span>Nét hoạt hình</span></button><button type="button" data-choice="b" aria-pressed="false">B <span>Thế giới dệt</span></button><button type="button" data-choice="c" aria-pressed="false">C <span>Hình khối</span></button></div></div></div>
+      <figure class="hero-figure">
+        <div class="image-stage">
+          <img id="hero-image" src="assets/a-cel.png" alt="Phương án A: ảnh ý tưởng sân nhà bên suối, thể hiện bằng nét hoạt hình và mảng bóng gọn." fetchpriority="high">
+          <button id="enlarge" type="button" class="enlarge" aria-label="Mở ảnh phương án A toàn khung">Xem ảnh toàn khung ↗</button>
+          <div class="mock-hud" aria-label="Giao diện minh họa trên ảnh, không phải chức năng game"><span class="hud-label">GIAO DIỆN MINH HỌA</span><strong id="hud-title">Nhà bên suối</strong><p id="hud-situation">Một cuộc gặp sau cơn mưa.</p><div class="hud-choices"><span id="hud-choice-1">Quan sát sân nhà</span><span id="hud-choice-2">Lắng nghe</span><span id="hud-choice-3">Đi qua cầu</span></div></div>
+        </div>
+        <figcaption><p id="scene-description">Hướng hoạt hình 2D thử đường viền rõ và mảng sáng tối gọn để diễn tả người, sân nhà và lối đi.</p><p class="image-disclaimer">Ba ảnh tạo riêng theo cùng tình huống; không phải các camera của một scene hoặc geometry khớp tuyệt đối.</p><p id="image-error" class="image-error" hidden>Chưa tải được ảnh. Kiểm tra thư mục assets của bản thử nghiệm 08.</p></figcaption>
+      </figure>
+      <p id="selection-status" class="sr-only" aria-live="polite">Đang xem phương án A.</p>
+      <p class="keyboard-hint">Đổi ảnh bằng nút A / B / C hoặc phím 1 / 2 / 3. Chỉ giao diện xem ảnh có tương tác.</p>
+    </section>
+    <section class="comparison" aria-labelledby="comparison-title">
+      <div class="section-heading"><p class="eyebrow">MỘT TÌNH HUỐNG / BA NGÔN NGỮ ĐỒ HỌA</p><h2 id="comparison-title">Nét, sợi hay hình khối?</h2><p>Giữ chung ý tưởng sân nhà, dòng suối, cây cầu và cuộc gặp để xem cách tạo hình thay đổi cảm giác thế giới ra sao.</p><p class="comparison-note">Bố cục và nhân vật vẫn có thể khác giữa các ảnh tạo riêng. Đây là cách xem trước thuận tiện hơn, chưa phải phép so sánh kiểm soát hoàn toàn.</p></div>
+      <div class="cards">
+        <article class="card"><button type="button" class="card-image" data-choice="a" aria-label="Xem phương án A — Nét vẽ và mảng bóng"><img src="assets/a-cel.png" alt="Ảnh ý tưởng A, sân nhà bên suối theo hướng hoạt hình 2D." loading="lazy"></button><p class="card-number">01 / A</p><h3>Nét vẽ và mảng bóng</h3><p>Đường viền và các mảng sáng tối thử làm rõ cử chỉ, nhân vật và đường đi trong một thế giới vẽ tay.</p><p class="tradeoff"><strong>Muốn xem:</strong> cách giản lược có giữ được vẻ trưởng thành và chiều sâu đời sống?</p></article>
+        <article class="card"><button type="button" class="card-image" data-choice="b" aria-label="Xem phương án B — Thế giới dệt bằng sợi"><img src="assets/b-woven.png" alt="Ảnh ý tưởng B, sân nhà và dòng suối được thể hiện như cảnh dệt bằng sợi." loading="lazy"></button><p class="card-number">02 / B</p><h3>Thế giới dệt bằng sợi</h3><p>Sợi và nhịp đan thử tạo nên cả cây, nước, nhà và con người, như một thế giới được dệt thành.</p><p class="tradeoff"><strong>Muốn xem:</strong> chất liệu có tạo bản sắc mà vẫn phân biệt được người và việc đang diễn ra?</p></article>
+        <article class="card"><button type="button" class="card-image" data-choice="c" aria-label="Xem phương án C — Hình khối cách điệu"><img src="assets/c-faceted.png" alt="Ảnh ý tưởng C, sân nhà có diện mạo 3D cách điệu với các hình khối rõ." loading="lazy"></button><p class="card-number">03 / C</p><h3>Hình khối cách điệu</h3><p>Mảng khối, bề mặt và ánh sáng thử tạo chiều sâu mà không cần đi theo hướng tả thực.</p><p class="tradeoff"><strong>Muốn xem:</strong> khối có giúp đọc không gian mà vẫn giữ được cảm giác con người?</p></article>
+      </div>
+    </section>
+    <section class="reference-library" aria-labelledby="library-title"><h2 id="library-title">Thư viện tham khảo — mọi phiên bản được giữ lại</h2><p>Mở phiên bản mới không có nghĩa bản trước bị loại hoặc bị đánh giá kém. Các hướng có thể được tham khảo, kết hợp hoặc quay lại khi cần; chưa tự xếp hạng hoặc chốt thay bạn.</p><nav aria-label="Thư viện các phiên bản tham khảo"><a href="../experiment-01/index.html">Phiên bản 01</a><a href="../experiment-02/index.html">Phiên bản 02</a><a href="../experiment-03/index.html">Phiên bản 03</a><a href="../experiment-04/index.html">Phiên bản 04</a><a href="../experiment-05/index.html">Phiên bản 05</a><a href="../experiment-06/index.html">Phiên bản 06</a><a href="../experiment-07/index.html">Phiên bản 07</a></nav></section>
+    <aside class="scope-note"><p>Đây là các phiên bản hình ảnh tham khảo, không phải đặc tả chữa trị, canon mới hoặc phục dựng khảo cổ. Tất cả là ảnh tạo; hướng có diện mạo 3D cũng không phải model hoặc game đang chạy.</p></aside>
+  </main>
+  <footer><p>Sprint 13 · SPIN-024 · Mọi phương án đang chờ bạn chốt</p></footer>
+  <dialog id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-bar"><h2 id="dialog-title">A — Nét vẽ và mảng bóng</h2><button id="close-dialog" type="button" autofocus>Đóng <span aria-hidden="true">×</span></button></div><img id="dialog-image" src="assets/a-cel.png" alt="Phương án A: ảnh ý tưởng sân nhà bên suối, thể hiện bằng nét hoạt hình và mảng bóng gọn."><p>Ảnh ý tưởng độc lập · Chưa phải ảnh chụp game chạy</p></dialog>
+</body>
+</html>

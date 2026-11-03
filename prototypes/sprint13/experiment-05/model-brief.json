@@ -1,0 +1,48 @@
+{
+  "experiment": "sprint13-experiment05",
+  "spin": "SPIN-021",
+  "status": "pending-user-approval",
+  "provider_required": "Hyper3D MCP",
+  "asset_role": "One compact repair-workshop model; not the whole settlement or a gameplay scene.",
+  "prompt": "One compact, fully textured 3D boat-repair workshop asset for a fictional early-Vietnamese-inspired riverside game. A small open wooden riverboat with a continuous curved hull, visible inner ribs and repaired plank patches rests securely on two stout timber trestles. A modest four-post thatched canopy covers the rear half, leaving the hull readable from every side. All supports touch one thin worn-plank platform. Include one low workbench, a coil of natural-fibre rope, two woven baskets and a plain clay jar, with clear separation and believable scale. Handcrafted stylized realism, tactile matte surfaces: silvery aged wood, warm fresh-cut patches, faded straw, muted clay, one small dull brick-red cloth. Neutral local colours; no painted lighting, gold-teal grading, gloss, toy proportions, floating props, people, text, logos, modern machinery or fantasy ornaments. Complete geometry from all sides.",
+  "submission_owner": "/root",
+  "submission_policy": "One initial provider request; do not automatically resubmit after a timeout or ambiguous state.",
+  "hypothesis": "A textured Hyper3D asset may improve material separation and believable detail over the procedural diorama of experiment04; verify actual output before making a claim.",
+  "reference_context": "Bến Vạc/Tam Giang and boat-repair activity from project design; concrete shape/material choices are prototype-authored fiction.",
+  "required_observations": [
+    "Continuous open hull and visible ribs",
+    "Two trestles visibly supporting boat",
+    "Canopy and props grounded on a shared platform",
+    "Readable wood/straw/rope/clay materials under neutral lighting",
+    "Same geometry inspected from high, eye-level and close camera views"
+  ],
+  "not_claimed": [
+    "Historical reconstruction",
+    "Production topology or UV quality",
+    "Collision/navigation readiness",
+    "A running profession or economy rule",
+    "Independent visual acceptance before review",
+    "User approval"
+  ],
+  "actual_generation": {
+    "status": "completed-provider-failed-brief",
+    "generation_id": "e7fe0cb0-45a6-4d85-9f87-63be17c5e6dc",
+    "result_asset": "assets/ben-vac.glb",
+    "submitted_by": "/root",
+    "transport": "Hyper3D MCP via Codex app-server tool call",
+    "tier": "Gen-2.5-Medium",
+    "mesh_mode": "Raw",
+    "target_polygons": 60000,
+    "display_url": "https://hyper3d.ai/workspace/rodin/e7fe0cb0-45a6-4d85-9f87-63be17c5e6dc",
+    "observed_issue": "Canopy, hull and walls fused into houseboat; open repair hull and two separate trestles not achieved."
+  },
+  "correction": {
+    "reason": "Inspected initial render: provider fused workshop/canopy into houseboat rather than separate boat on supports. Preserve failed output; manually narrow same asset requirement.",
+    "prompt": "One single open wooden river fishing boat being repaired, standing on exactly two separate stout timber trestles. No roof, canopy, hut, cabin, shelter, house or building of any kind. The entire open interior must be visible: a continuous curved timber hull, closely fitted plank strips, transverse curved ribs, two simple removable bench seats, worn gunwales and a few fresh repair patches. The two trestles clearly support the underside with their four feet each on one thin plain rectangular wood workshop base. Do not turn the boat into architecture. No people, baskets, ropes, tools, scenery or extra objects. Complete 3D geometry from all sides, realistic joinery and believable scale. Handcrafted stylized realism, tactile matte weathered grey-brown timber and subdued fresh wood patches, neutral local colours without painted lighting, glossy varnish or gold-teal grading. Grounded, legible shape suitable for inspection from above and eye level.",
+    "status": "submission-ambiguous",
+    "automatic_retry": false,
+    "provider_error": "INTERNAL_SERVER_ERROR",
+    "request_id": "req-39nj",
+    "generation_id": null
+  }
+}

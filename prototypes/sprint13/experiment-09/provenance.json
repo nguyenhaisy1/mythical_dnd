@@ -1,0 +1,43 @@
+{
+  "created_date": "2026-10-29",
+  "tool": "built-in image_gen",
+  "type": "whole-game style board raster references; UI illustrated inside PNG",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; original PNG bytes copied. No HTML game HUD overlays.",
+  "approval": "Pending user approval; additive reference library",
+  "images": [
+    {
+      "variant": "A",
+      "asset": "assets/a-lacquer.png",
+      "source_generated_filename": "exec-9111b739-5259-4b62-8ea6-aa9640635e82.png",
+      "sha256": "f15e9b30987d917a94f756c01f99b555da3ed811959eb498ecbe47be134caebf",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2654321
+    },
+    {
+      "variant": "B",
+      "asset": "assets/b-bronze.png",
+      "source_generated_filename": "exec-5ec149bc-2031-405a-aa80-19d0f3e61f2d.png",
+      "sha256": "4d1602b3c557655a12ff76f033bf45f31e99d7aeca3601ed3de8e98d916a8d8a",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3275580
+    },
+    {
+      "variant": "C",
+      "asset": "assets/c-ink.png",
+      "source_generated_filename": "exec-2f90094e-af41-4cb1-9e96-deb8c336f54a.png",
+      "sha256": "e4bc6389fa20ab1017aa1f8bbf406e0e7c749a92a1534e74d1cc1effc2f3de65",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3196819
+    }
+  ]
+}

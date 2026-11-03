@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mythical — Những quy tắc tạo hình khác · Thử nghiệm 16</title>
+<link rel="stylesheet" href="style.css"><script src="gallery.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#scene">Đến ảnh đang xem</a>
+<header class="site-header"><a class="wordmark" href="#top">MYTHICAL<span>MỘT ĐỜI BÊN DÒNG NƯỚC</span></a><div class="header-tools"><span class="edition">THỬ NGHIỆM 16</span><label for="text-size">Cỡ chữ trang xem</label><select id="text-size"><option value="100">100%</option><option value="125">125%</option><option value="150">150%</option></select></div></header>
+<main id="top">
+<section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">SÁU PHƯƠNG ÁN MỚI / THỬ QUY TẮC TẠO HÌNH</p><h1 id="page-title">Thế giới có thể<br>được dựng khác đi.</h1></div><div class="intro-copy"><p>Thử những cách tổ chức không gian, hình người và giao diện khác nhau: dải đan, nét khối rỗng, mặt gấp, dải mưa, mặt cắt và thể tích hạt vuông.</p><p class="favorite-note">Ba hướng 14/1–3 vẫn được ưu tiên đào sâu theo phản hồi trước. Sáu hướng mới bổ sung lựa chọn để tham khảo, không thay thế các bản cũ hoặc chốt mỹ thuật.</p><p class="notice">Ảnh xem trước · Giữ mọi phiên bản tham khảo · Pending user approval</p></div></section>
+<section id="scene" class="scene-section" aria-labelledby="scene-title">
+<div class="scene-toolbar"><div class="scene-heading"><p class="eyebrow" id="scene-direction">DẢI ĐAN / MẶT BẰNG CÔ ĐỌNG</p><h2 id="scene-title">Thế giới dệt</h2></div><div class="view-tools"><div class="switches" role="group" aria-label="Chọn hướng đồ họa"><button type="button" data-choice="woven-world" aria-pressed="true"><span class="choice-number">01</span><span>Thế giới dệt</span></button>
+<button type="button" data-choice="line-volume" aria-pressed="false"><span class="choice-number">02</span><span>Nét dây không gian</span></button>
+<button type="button" data-choice="folded-village" aria-pressed="false"><span class="choice-number">03</span><span>Làng gấp</span></button>
+<button type="button" data-choice="rain-sculpt" aria-pressed="false"><span class="choice-number">04</span><span>Mưa khắc hình</span></button>
+<button type="button" data-choice="living-section" aria-pressed="false"><span class="choice-number">05</span><span>Mặt cắt đời sống</span></button>
+<button type="button" data-choice="voxel-life" aria-pressed="false"><span class="choice-number">06</span><span>Hạt khối</span></button></div><button id="enlarge" type="button" class="enlarge" aria-label="Mở Thế giới dệt toàn khung">Xem ảnh toàn khung ↗</button></div></div>
+<figure class="hero-figure"><div class="image-stage"><img id="hero-image" src="assets/woven-world.png" alt="Ảnh đề xuất Thế giới dệt, thử ngôn ngữ thế giới, nhân vật và UI của hướng này." fetchpriority="high"></div><figcaption><p id="scene-description">Thử dựng cảnh bằng dải đan và nhịp sợi: người, đường nước, đồ dùng và giao diện cùng được tổ chức thành mảng, thay vì phủ vân vải lên cảnh quen.</p><p class="image-disclaimer">Ảnh đề xuất diện mạo game; cảnh và UI trong artwork là raster minh họa. Các nút trên trang chỉ phục vụ xem ảnh.</p><p id="image-error" class="image-error" hidden>Chưa tải được ảnh. Kiểm tra thư mục assets của thử nghiệm 16.</p></figcaption></figure>
+<p id="selection-status" class="sr-only" aria-live="polite">Đang xem Thế giới dệt.</p><p class="keyboard-hint">Đổi hướng bằng phím 1 / 2 / 3 / 4 / 5 / 6 hoặc các nút trên. Mở toàn khung hay PNG gốc để xem kỹ. Cỡ chữ trang xem chỉ đổi chữ HTML, không làm chữ trong ảnh reflow.</p>
+</section>
+<section class="comparison" aria-labelledby="comparison-title"><div class="section-heading"><p class="eyebrow">KHÔNG GIAN / HÌNH NGƯỜI / VẬT DỤNG / UI</p><h2 id="comparison-title">Đổi cách tạo hình, giữ cuộc sống con người.</h2><p>Mỗi hướng đặt một quy tắc riêng cho hình người và thế giới, rồi thử nối nó tới giao diện. Sinh hoạt, nghề và quan hệ cần còn đọc được giữa những phép cách điệu.</p><p>Chất dệt từng xuất hiện ở vòng 08, giấy/lớp cắt ở vòng 07 và pixel ở vòng 11. Lần này thử đổi cấu trúc dải đan, không gian gấp và thể tích khối; không coi một chất liệu quay lại là ý tưởng chưa từng có.</p><p class="comparison-note">Mô tả bên dưới là ý định và câu hỏi thử; tên hướng không chứng minh đầu ra đã đạt. Một frame không xác nhận mọi màn hình, cast hoặc chuyển động của toàn game. Nhiều yếu tố cùng đổi để tìm ý tưởng; chưa quy sở thích cho một biến đơn.</p></div><div class="cards"><article class="card">
+<button type="button" class="card-image" data-choice="woven-world" aria-label="Xem Thế giới dệt"><img src="assets/woven-world.png" alt="Ảnh đề xuất Thế giới dệt, thử ngôn ngữ thế giới, nhân vật và UI của hướng này." loading="lazy"></button>
+<p class="card-number">01 · DẢI ĐAN / MẶT BẰNG CÔ ĐỌNG</p><h3>Thế giới dệt</h3>
+<p>Thử dựng cảnh bằng dải đan và nhịp sợi: người, đường nước, đồ dùng và giao diện cùng được tổ chức thành mảng, thay vì phủ vân vải lên cảnh quen.</p><p class="tradeoff"><strong>Câu hỏi thử:</strong> Hình người và lối tiếp cận có đọc được ở cự ly chơi khi cả thế giới cùng tuân theo quy tắc đan? Chất dệt là lựa chọn tạo hình, chưa là bản đồ hay motif khảo cổ đã xác nhận.</p>
+<p class="observed"><strong>Quan sát ảnh này:</strong> Dải đất, sàn bến và đường nước đã tổ chức gần mặt bằng; UI dùng dải sáng cùng palette. Người/portrait vẫn là hình vẽ phẳng quen, chưa dựng toàn thân bằng dải đan; góc nhìn người khác mặt bằng.</p></article>
+<article class="card">
+<button type="button" class="card-image" data-choice="line-volume" aria-label="Xem Nét dây không gian"><img src="assets/line-volume.png" alt="Ảnh đề xuất Nét dây không gian, thử ngôn ngữ thế giới, nhân vật và UI của hướng này." loading="lazy"></button>
+<p class="card-number">02 · KHỐI RỖNG / ĐƯỜNG NÉT CÓ CHIỀU SÂU</p><h3>Nét dây không gian</h3>
+<p>Thử gợi thể tích bằng những đường viền có độ sâu và một số mặt đặc có chủ đích; hình người, vật cầm tay và cửa sổ giao tiếp cùng dùng nhịp nét ấy.</p><p class="tradeoff"><strong>Câu hỏi thử:</strong> Khối rỗng có cho biết ai đang đứng đâu, hay chỉ thành wireframe khó đọc? Nét không phải chế độ nhìn xuyên hoặc quyền biết dữ liệu bị che.</p>
+<p class="observed"><strong>Quan sát ảnh này:</strong> Biến thể đang xem đã có tay chân, thuyền và khung UI bằng thanh cong có độ dày, khác bản có viền đầu tiên. Nhà, nền và mặt người vẫn khá đặc/chi tiết; còn cảm giác tượng khớp và vật liệu, chưa thuần không gian nét dây.</p><p class="retained"><a href="assets/line-volume-v1.png" target="_blank" rel="noopener">Xem Bản nét dây đầu tiên được giữ lại ↗</a></p></article>
+<article class="card">
+<button type="button" class="card-image" data-choice="folded-village" aria-label="Xem Làng gấp"><img src="assets/folded-village.png" alt="Ảnh đề xuất Làng gấp, thử ngôn ngữ thế giới, nhân vật và UI của hướng này." loading="lazy"></button>
+<p class="card-number">03 · NẾP GẤP / ĐỘ SÂU XẾP LỚP</p><h3>Làng gấp</h3>
+<p>Thử sắp địa bàn thành các mặt gấp có độ sâu, nối sân, bến và hiên bằng nhịp bản lề; tỷ lệ người và giao diện cũng phải có hình khối riêng.</p><p class="tradeoff"><strong>Câu hỏi thử:</strong> Các nếp có thực sự đổi tổ chức không gian, hay chỉ là một diorama giấy quen thuộc? Mặt gấp chưa xác lập đường đi, kiến trúc hoặc cơ chế gập thế giới.</p>
+<p class="observed"><strong>Quan sát ảnh này:</strong> Biến thể đang xem giản lược mạnh thành mặt sàn, vách và ramp lớn; người và portrait cùng mặt góc cạnh. Có nhịp gấp nhưng chưa chứng minh một dải accordion liên tục; hai dấu kim cương còn dễ nhầm vai.</p><p class="retained"><a href="assets/folded-village-v1.png" target="_blank" rel="noopener">Xem Bản làng gấp đầu tiên được giữ lại ↗</a></p></article>
+<article class="card">
+<button type="button" class="card-image" data-choice="rain-sculpt" aria-label="Xem Mưa khắc hình"><img src="assets/rain-sculpt.png" alt="Ảnh đề xuất Mưa khắc hình, thử ngôn ngữ thế giới, nhân vật và UI của hướng này." loading="lazy"></button>
+<p class="card-number">04 · DẢI MƯA / KHỐI GÓC CẠNH</p><h3>Mưa khắc hình</h3>
+<p>Thử dùng màn mưa, khoảng trống và khối phẳng sắc để chia lớp không gian; dáng người, cử chỉ và UI cần giữ rõ giữa những dải nhìn có nhịp.</p><p class="tradeoff"><strong>Câu hỏi thử:</strong> Mưa và khoảng trống có tạo cách đọc mới mà không che mất cuộc gặp? Đây là đề xuất hình ảnh tĩnh, chưa là mô phỏng thời tiết, hiệu ứng động hoặc bằng chứng độ đọc khi chơi.</p>
+<p class="observed"><strong>Quan sát ảnh này:</strong> Góc nhìn sát sau người, thân góc cạnh và UI đen-vàng đã hiện rõ. Mưa vẫn là nhiều nét và nền còn phản chiếu/texture, chưa thành ba dải khoảng âm như brief; phần áo tối có thể mất chi tiết khi thu nhỏ.</p></article>
+<article class="card">
+<button type="button" class="card-image" data-choice="living-section" aria-label="Xem Mặt cắt đời sống"><img src="assets/living-section.png" alt="Ảnh đề xuất Mặt cắt đời sống, thử ngôn ngữ thế giới, nhân vật và UI của hướng này." loading="lazy"></button>
+<p class="card-number">05 · NHÌN NGANG / TẦNG SINH HOẠT</p><h3>Mặt cắt đời sống</h3>
+<p>Thử một góc nhìn ngang như mặt cắt sân nhà chung, để tầng sinh hoạt, đường lên và các vóc người có tuổi/nghề khác nhau trở thành cấu trúc màn hình.</p><p class="tradeoff"><strong>Câu hỏi thử:</strong> Người chơi có đọc được tầng, lối nối và người đang nói thay vì thấy một bảng quản lý nhà? Mặt cắt không tự cấp quyền thấy phòng riêng hoặc sự thật nhân vật chưa biết.</p>
+<p class="observed"><strong>Quan sát ảnh này:</strong> Nhìn ngang làm rõ cuộc gặp trên sàn, việc bên dưới và cầu nối. Mức đơn giản hóa chưa cao, người/vật liệu còn gần minh họa; không suy ảnh mặt cắt là quyền nhìn xuyên phòng kín hoặc lịch NPC.</p></article>
+<article class="card">
+<button type="button" class="card-image" data-choice="voxel-life" aria-label="Xem Hạt khối"><img src="assets/voxel-life.png" alt="Ảnh đề xuất Hạt khối, thử ngôn ngữ thế giới, nhân vật và UI của hướng này." loading="lazy"></button>
+<p class="card-number">06 · THỂ TÍCH HẠT VUÔNG / TỶ LỆ THÔ</p><h3>Hạt khối</h3>
+<p>Thử dựng người, cây, nhà, vật dụng và UI bằng những thể tích vuông thô nhất quán, để hình khối thực sự thay đổi thay vì thêm bộ lọc pixel lên ảnh.</p><p class="tradeoff"><strong>Câu hỏi thử:</strong> Có nhận ra thể tích khối ở người và cảnh, đồng thời còn đọc được tuổi, nghề và hành động? Đây là ảnh gợi diện mạo voxel, chưa có model, engine hoặc độ phân giải asset production.</p>
+<p class="observed"><strong>Quan sát ảnh này:</strong> Các mặt khối lập phương có thể tích rõ trên người, bờ, cây và thuyền; không chỉ filter pixel. Đơn vị khối còn dày/không đều, UI có mặt phẳng và mini-map minh họa; chưa là voxel engine hoặc asset production.</p></article></div></section>
+<section class="reference-library" aria-labelledby="library-title"><h2 id="library-title">Thư viện tham khảo — mọi phiên bản được giữ lại</h2><p>Các mẫu mới bổ sung thư viện. Ưu tiên đào sâu 14/1–3 không tự loại những hướng còn lại; có thể xem lại, so sánh hoặc kết hợp khi chủ dự án quyết định.</p><nav aria-label="Thư viện các phiên bản tham khảo"><a href="../experiment-01/index.html">Phiên bản 01</a>
+<a href="../experiment-02/index.html">Phiên bản 02</a>
+<a href="../experiment-03/index.html">Phiên bản 03</a>
+<a href="../experiment-04/index.html">Phiên bản 04</a>
+<a href="../experiment-05/index.html">Phiên bản 05</a>
+<a href="../experiment-06/index.html">Phiên bản 06</a>
+<a href="../experiment-07/index.html">Phiên bản 07</a>
+<a href="../experiment-08/index.html">Phiên bản 08</a>
+<a href="../experiment-09/index.html">Phiên bản 09</a>
+<a href="../experiment-10/index.html">Phiên bản 10</a>
+<a href="../experiment-11/index.html">Phiên bản 11</a>
+<a href="../experiment-12/index.html">Phiên bản 12</a>
+<a href="../experiment-13/index.html">Phiên bản 13</a>
+<a href="../experiment-14/index.html">Phiên bản 14</a>
+<a href="../experiment-15/index.html">Phiên bản 15</a></nav></section>
+<aside class="scope-note"><p>Đây là ảnh xem trước, không phải game đang chạy, model 3D thật hoặc render từ scene mới đã dựng. Dải đan, nét rỗng, nếp gấp, dải mưa, mặt cắt và khối vuông là đề xuất biểu đạt, không tự đổi địa lý, vật lý, canon hoặc luật di chuyển. Góc nhìn và khối rỗng không cấp quyền thấy thông tin bị che; UI chỉ nên trình bày điều nhân vật được phép biết. Cast không cố định protagonist hoặc thay xuất thân ngẫu nhiên. Trang phục, kiến trúc và motif chưa được coi là phục dựng lịch sử. Chưa có bằng chứng tương tác game, chuyển động, hiệu năng hoặc trải nghiệm chơi.</p></aside>
+</main>
+<footer><p>Sprint 13 · SPIN-033 · Thử nghiệm 16</p><p>Tham khảo mỹ thuật · Pending user approval</p></footer>
+<dialog id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-bar"><h2 id="dialog-title">Thế giới dệt</h2><div class="dialog-actions"><a id="original-image" href="assets/woven-world.png" target="_blank" rel="noopener">Mở PNG gốc ↗</a><button id="close-dialog" type="button" autofocus>Đóng <span aria-hidden="true">×</span></button></div></div><div class="dialog-art"><img id="dialog-image" src="assets/woven-world.png" alt="Ảnh đề xuất Thế giới dệt, thử ngôn ngữ thế giới, nhân vật và UI của hướng này."></div><p>UI và chữ trong artwork là raster minh họa; mở PNG gốc để phóng to bằng trình duyệt.</p></dialog>
+</body>
+</html>

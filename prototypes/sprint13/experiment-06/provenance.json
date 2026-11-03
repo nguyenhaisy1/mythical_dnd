@@ -1,0 +1,43 @@
+{
+  "created_date": "2026-10-29",
+  "tool": "built-in image_gen",
+  "type": "independent raster concept images",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; copied original generated PNG bytes. HTML overlay is separate.",
+  "approval": "Pending user approval",
+  "images": [
+    {
+      "variant": "A",
+      "asset": "assets/a-oblique.png",
+      "source_generated_filename": "exec-c7f9f3b9-9e3d-45a4-b83a-85b243a0f81e.png",
+      "sha256": "1fc2531d539f7946327effe14f47a565e7b343ea6539b2cc2b989c03d5a34bf9",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3337506
+    },
+    {
+      "variant": "B",
+      "asset": "assets/b-grounded.png",
+      "source_generated_filename": "exec-8d4558e5-4173-4d94-af89-d7b24972e759.png",
+      "sha256": "d35e52342a972903fd2f51c6f9fbe6cb49fbb7ea6e1f92265231f44cf86f73c1",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3262144
+    },
+    {
+      "variant": "C",
+      "asset": "assets/c-sideview.png",
+      "source_generated_filename": "exec-4aaca51a-9b9a-4f6a-aad9-1a366b2b78d8.png",
+      "sha256": "f90cc71aab92b40d149d75f35fe1617dc0a04d4db973fc5b6519b55b9c7db138",
+      "width": 1672,
+      "height": 940,
+      "mode": "RGB",
+      "bytes": 2604084
+    }
+  ]
+}

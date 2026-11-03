@@ -1,0 +1,35 @@
+{
+  "checked_on": "2026-10-27",
+  "integration": "Selected concepts adapted into existing project skills; no upstream hooks/scripts/agents installed.",
+  "upstreams": [
+    {
+      "repository": "Donchitos/Claude-Code-Game-Studios",
+      "commit": "05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418",
+      "license_file": "game-studios-LICENSE.txt",
+      "sources": [
+        {
+          "path": ".claude/agents/art-director.md",
+          "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418/.claude/agents/art-director.md",
+          "sha256": "36fecf445d9bfac1af6702ca9ef229013f101bcf0626dcb273886397c975e1dd"
+        },
+        {
+          "path": ".claude/skills/design-review/SKILL.md",
+          "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418/.claude/skills/design-review/SKILL.md",
+          "sha256": "8ed70a1d109fdd5e1a765ae4b2198730c033fb183ac3e3539fa339c106cebe1f"
+        }
+      ]
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "license_file": "agentic-skills-LICENSE.txt",
+      "sources": [
+        {
+          "path": "skills/game-development/game-art/SKILL.md",
+          "url": "https://github.com/sickn33/agentic-awesome-skills/blob/e8d346bcb691225fb6ae51a49c353bcedb2ef61d/skills/game-development/game-art/SKILL.md",
+          "sha256": "dd819f941e09495be03dd2efd310397e7e5b359e29e269e69de0a702a561c585"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi" data-art="a">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mythical — Ba ngôn ngữ đồ họa · Thử nghiệm 07</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#scene">Đến ảnh ý tưởng</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Đầu trang Mythical">MYTHICAL<span>MỘT ĐỜI BÊN DÒNG NƯỚC</span></a>
+    <div class="header-tools"><span class="edition">THỬ NGHIỆM 07</span><label for="text-size">Cỡ chữ</label><select id="text-size"><option value="100">100%</option><option value="125">125%</option><option value="150">150%</option></select></div>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">KHÁM PHÁ NGÔN NGỮ ĐỒ HỌA</p><h1 id="page-title">Đổi nét vẽ.<br>Mở thế giới.</h1></div>
+      <div class="intro-copy"><p>Khắc gỗ, pixel art hay giấy cắt? Lần này thử cả cách vẽ lẫn bối cảnh: làng mùa nước, xưởng đúc đồng và phiên chợ ven sông.</p><p class="notice">Ảnh mô phỏng · Chưa phải game chạy · Chờ bạn chốt</p></div>
+    </section>
+    <section id="scene" class="scene-section" aria-labelledby="scene-title">
+      <div class="scene-toolbar"><div><p class="eyebrow">PHƯƠNG ÁN ĐANG XEM</p><h2 id="scene-title">A — Khắc gỗ · Mùa nước</h2></div><div class="view-tools"><label class="hud-toggle" for="show-hud"><input id="show-hud" type="checkbox" checked> Hiện giao diện minh họa</label><div class="switches" role="group" aria-label="Chọn phương án đồ họa"><button type="button" data-choice="a" aria-pressed="true">A <span>Khắc gỗ</span></button><button type="button" data-choice="b" aria-pressed="false">B <span>Pixel art</span></button><button type="button" data-choice="c" aria-pressed="false">C <span>Giấy cắt</span></button></div></div></div>
+      <figure class="hero-figure">
+        <div class="image-stage">
+          <img id="hero-image" src="assets/a-woodcut.png" alt="Phương án A: ý tưởng làng mùa nước và chuyển thóc lên kho cao, theo hướng tranh khắc gỗ màu phẳng." fetchpriority="high">
+          <button id="enlarge" type="button" class="enlarge" aria-label="Mở ảnh phương án A toàn khung">Xem ảnh toàn khung ↗</button>
+          <div class="mock-hud" aria-label="Giao diện minh họa trên ảnh, không phải chức năng game"><span class="hud-label">GIAO DIỆN MINH HỌA</span><strong id="hud-title">Làng mùa nước</strong><p id="hud-situation">Thử tình huống đưa thóc lên kho cao.</p><div class="hud-choices"><span id="hud-choice-1">Xem đường khô</span><span id="hud-choice-2">Hỏi hộ giữ kho</span><span id="hud-choice-3">Giúp chuyển thóc</span></div></div>
+        </div>
+        <figcaption><p id="scene-description">Hướng khắc gỗ thử đường nét mạnh, mảng phẳng và số màu hạn chế để kể đời sống trong mùa nước.</p><p class="image-disclaimer">Ba ảnh và bối cảnh độc lập; không phải camera của cùng một scene hoặc phép so sánh chỉ đổi phong cách.</p><p id="image-error" class="image-error" hidden>Chưa tải được ảnh. Kiểm tra thư mục assets của bản thử nghiệm 07.</p></figcaption>
+      </figure>
+      <p id="selection-status" class="sr-only" aria-live="polite">Đang xem phương án A.</p>
+      <p class="keyboard-hint">Đổi ảnh bằng nút A / B / C hoặc phím 1 / 2 / 3. Chỉ giao diện xem ảnh có tương tác.</p>
+    </section>
+    <section class="comparison" aria-labelledby="comparison-title">
+      <div class="section-heading"><p class="eyebrow">BA KỸ THUẬT THỂ HIỆN / BA BỐI CẢNH</p><h2 id="comparison-title">Game có thể mang diện mạo nào?</h2><p>Thử những khác biệt ở hình khối, đường nét, bảng màu và chất liệu, thay vì chỉ đổi góc máy trên cùng một cảnh.</p><p class="comparison-note">Bối cảnh cũng thay đổi, nên cảm tình với một ảnh có thể đến từ câu chuyện hoặc bố cục. Muốn so riêng đồ họa, bước sau cần giữ cùng một tình huống.</p></div>
+      <div class="cards">
+        <article class="card"><button type="button" class="card-image" data-choice="a" aria-label="Xem phương án A — Khắc gỗ · Mùa nước"><img src="assets/a-woodcut.png" alt="Ảnh ý tưởng A, làng mùa nước theo hướng khắc gỗ." loading="lazy"></button><p class="card-number">01 / A</p><h3>Khắc gỗ · Mùa nước</h3><p>Đường viền và mảng màu phẳng thử biến việc giữ lương thực, đi lại và giúp hàng xóm thành một cảnh có nhịp điệu đồ họa.</p><p class="tradeoff"><strong>Muốn kiểm tra:</strong> nét khắc có bản sắc riêng mà vẫn đọc được người, vật và lối đi không?</p></article>
+        <article class="card"><button type="button" class="card-image" data-choice="b" aria-label="Xem phương án B — Pixel art · Nghề đúc"><img src="assets/b-pixel.png" alt="Ảnh ý tưởng B, hoạt động ở xưởng đúc đồng theo hướng pixel art." loading="lazy"></button><p class="card-number">02 / B</p><h3>Pixel art · Nghề đúc</h3><p>Cụm pixel, silhouette và ánh sáng theo ô thử một ngôn ngữ game rõ ràng cho nghề nghiệp và đời sống lao động.</p><p class="tradeoff"><strong>Muốn kiểm tra:</strong> cảnh có giữ được chiều sâu nghề nghiệp và vẻ trưởng thành khi chi tiết được giản lược?</p></article>
+        <article class="card"><button type="button" class="card-image" data-choice="c" aria-label="Xem phương án C — Giấy cắt · Chợ đêm"><img src="assets/c-papercut.png" alt="Ảnh ý tưởng C, phiên chợ hoặc đêm hội ven sông theo hướng giấy cắt nhiều lớp." loading="lazy"></button><p class="card-number">03 / C</p><h3>Giấy cắt · Chợ đêm</h3><p>Mảng giấy chồng lớp và bóng đổ thử tạo thế giới có chất thủ công, nơi những cuộc gặp và chuyện làng thành trọng tâm.</p><p class="tradeoff"><strong>Muốn kiểm tra:</strong> có sức hút và chiều sâu mà không biến đời sống nhân vật thành một mô hình trang trí?</p></article>
+      </div>
+    </section>
+    <aside class="scope-note"><p>Các bối cảnh là đề xuất minh họa để mở rộng thử nghiệm, chưa bổ sung canon hoặc thiết kế gameplay đã chốt. Đây là ảnh tạo, không dựng model 3D thật; chưa chứng minh gameplay, độ chính xác khảo cổ hoặc chất lượng bản game cuối.</p></aside>
+  </main>
+  <footer><p>Sprint 13 · SPIN-023 · Mọi phương án đang chờ bạn chốt</p><nav aria-label="Các thử nghiệm trước"><a href="../experiment-06/index.html">Ba góc nhìn vòng 06 ↗</a><a href="../experiment-03/index.html">Ảnh vòng 03 ↗</a></nav></footer>
+  <dialog id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-bar"><h2 id="dialog-title">A — Khắc gỗ · Mùa nước</h2><button id="close-dialog" type="button" autofocus>Đóng <span aria-hidden="true">×</span></button></div><img id="dialog-image" src="assets/a-woodcut.png" alt="Phương án A: ý tưởng làng mùa nước và chuyển thóc lên kho cao, theo hướng tranh khắc gỗ màu phẳng."><p>Ảnh ý tưởng độc lập · Chưa phải ảnh chụp game chạy</p></dialog>
+</body>
+</html>

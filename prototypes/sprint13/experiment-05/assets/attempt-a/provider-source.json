@@ -1,0 +1,14 @@
+{
+  "provider": "Hyper3D MCP",
+  "generation_id": "e7fe0cb0-45a6-4d85-9f87-63be17c5e6dc",
+  "status": "completed",
+  "display_url": "https://hyper3d.ai/workspace/rodin/e7fe0cb0-45a6-4d85-9f87-63be17c5e6dc",
+  "file": "base_basic_pbr.glb",
+  "bytes": 14934260,
+  "original_sha256": "ccfee2bf6f0e764f11f312536d84b97001d27efa4a8b3b1e4fba2931c0c8e3c1",
+  "tool": "rodin_generate",
+  "tier": "Gen-2.5-Medium",
+  "mesh_mode": "Raw",
+  "quality_override": 60000,
+  "scope": "Model created by Hyper3D; Blender only imports, positions and renders. Pending user approval."
+}

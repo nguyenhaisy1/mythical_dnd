@@ -1,0 +1,54 @@
+{
+  "created_date": "2026-10-30",
+  "prompt_planned_date": "2026-10-29",
+  "tool": "built-in image_gen",
+  "type": "four whole-game raster appearance proposals; 2.5D/3D space and pixel/anime art axes can combine",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; original PNG bytes copied. No HTML game HUD overlay.",
+  "approval": "Pending user approval; additive reference library",
+  "images": [
+    {
+      "variant": "layered-25d",
+      "asset": "assets/layered-25d.png",
+      "source_generated_filename": "exec-edac41b4-c199-4ab3-add2-d9ca99b7ab4e.png",
+      "sha256": "17a52cfc1a9b100b0eea072df16f0e1f935ca5ae464fc43b55102fa74198936d",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2850873
+    },
+    {
+      "variant": "stylized-3d",
+      "asset": "assets/stylized-3d.png",
+      "source_generated_filename": "exec-69ba7dba-a1a2-42a5-a798-5585cd67dd15.png",
+      "sha256": "fede293f1c4c473e405e4f5eca63b101ae34028362c4d32fae6d4c3d76e201d0",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2940325
+    },
+    {
+      "variant": "pixel-life",
+      "asset": "assets/pixel-life.png",
+      "source_generated_filename": "exec-e65c7d9e-6d19-4a5e-9d02-0f8ff6f59b5e.png",
+      "sha256": "d1efb98b7ca6579654c5ff1fc584950df88769d754ad998630cb3c764f917771",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2932210
+    },
+    {
+      "variant": "anime-life",
+      "asset": "assets/anime-life.png",
+      "source_generated_filename": "exec-ec30f878-3fdd-421d-92a3-0c677de12783.png",
+      "sha256": "9a50274d9136455cfc6b0fd4746b446a18fad0c7d3c706403828584acce16faf",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3119204
+    }
+  ]
+}

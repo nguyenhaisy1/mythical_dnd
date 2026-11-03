@@ -113,3 +113,10 @@ Append branch/commit/push/merge/tag/release và kết quả xác minh thực t�
 Dự án do AI thực hiện theo [AI Execution](AI-EXECUTION.md). AI tự chạy checks và review diff; không bắt buộc người duyệt thường lệ. Không ghi self-review như review độc lập, không né required checks/server protection.
 
 Ngoại lệ bootstrap một lần cho dev **chưa publish**: khi được giao chốt baseline, commit bộ docs/workflow đã kiểm trên docs branch, rồi fast-forward dev local tới commit đó trước khi tạo feature branch. Ghi SHA và checks vào WORKLOG. Không áp dụng ngoại lệ cho dev remote đã có hoặc main; các lần tích hợp sau vẫn qua PR. Việc chốt baseline cho phép commit local; không mặc định push/tag/release.
+
+
+## Checkpoint mỹ thuật Sprint13 và cổngG13 — 03/11/2026
+
+Theo [ADR022](../adr/022-earth-monument-2d-and-reopen-gate.md), PR13 cần giữ lịch sử thư viện và source commit của checkpoint. Khi policy cho phép, dùng **merge commit** theo ngoại lệ giữ ancestry ở mục4, xác minh source SHA là ancestor của `dev` sau merge và giữ feature branch trong công việc này. Nếu server yêu cầu linear/squash, giữ nhánh nguồn làm anchor và ghi retention thực trước khi tích hợp; không bypass protection. Checkpoint không là release: không tạo/di chuyển tag.
+
+Mở lạiG13 bằng candidate branch từ `dev` hiện hành; chỉ sửa phần art/view/adapter đã khoanh tác động. Không reset/revert toàn sprint hoặc checkout engine/data cũ lên tiến độ mới. Lưu profile cũ cạnh profile mới; đổi contract/save phải có ADR/migration/acceptance riêng.

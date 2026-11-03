@@ -1,0 +1,9 @@
+{
+  "name": "mythical-sprint13-experiment05-viewer",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Isolated offline 3D art-direction viewer; not production gameplay.",
+  "scripts": {"build": "node build-viewer.mjs"},
+  "dependencies": {"three": "0.186.1"},
+  "devDependencies": {"esbuild": "0.28.2"}
+}

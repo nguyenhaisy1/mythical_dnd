@@ -1,5 +1,11 @@
 # Bàn giao phát triển — 1.1-prototype-contracts
 
+## Trạng thái hiện hành — Sprint13 đã chốt định hướng, G13 có thể mở lại
+
+Ngày03/11/2026 chủ dự án chốt **Đất dựng thành + nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. Sprint13 **Accepted / Reopenable** ở phạm vi định hướng; [baseline/cổng G13](sprints/sprint-13/ART-DIRECTION-BASELINE.md) và [approval](sprints/sprint-13/APPROVALS.md) là nguồn hiện hành. S13-A02/A03 được chuyển thành follow-up implementation chưa nghiệm thu, không giả UI/originflow Passed. [ADR022](../adr/022-earth-monument-2d-and-reopen-gate.md) giữ core/luật/tri thức/dữ liệu độc lập với route đồ họa.
+
+CổngG13 cho phép nghiên cứu lại mỹ thuật trên code tích hợp mới nhất; giữ tiến độ Sprint1–12 và về sau, không quay cả repository về một commit cũ. [Checkpointv1](sprints/sprint-13/checkpoint-v1.json) ghi sourceSHA/input trees và fingerprint thư viện để đối chiếu/khôi phục có chọn lọc. Thư viện01–18 giữ nguyên, các báo cáo Pending ngày trước là lịch sử. Chưa tạo layeredassets/sprite/scene/rig hoặc nghiệm thu Unity gameplay trong việc chốt này; ROM3D ngày02/11 không áp sang2D. Chưa mở Sprint14 hoặc release.
+
 ## Những gì đã có
 
 29 module GDD chi tiết và phụ lục Life Event, source archive, source/section index, baseline/decision register, open decisions, ownership/contracts, QA matrix, scenario specifications và implementation backlog. Repository có .NET solution với portable core primitives, Domain world/rules, Application in-memory pipeline và headless transfer demo. Client Unity có layout chuẩn bị, chưa được Unity Editor bootstrap.
@@ -59,4 +65,112 @@ Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai t
 
 ## Sprint12 — điều kiện sự kiện và mốc demo
 
-[Event Eligibility](../runbooks/EVENT-ELIGIBILITY.md) mô tả tám templates, strict compiler và evaluator vật lý/nhận thức theo [ADR021](../adr/021-event-eligibility-profile.md). Chỉ trusted observations, không occurrence/effects hoặc player projection. FullVS02 còn random protagonist, actor-specific obligations và world binding. [Lộ trình chơi thử](PLAYABLE-ROADMAP.md) đặt forecast mới: hình ảnh Sprint13, demo nhỏ Sprint15–16; chỉ Sprint12 đang được giao.
+[Event Eligibility](../runbooks/EVENT-ELIGIBILITY.md) mô tả tám templates, strict compiler và evaluator vật lý/nhận thức theo [ADR021](../adr/021-event-eligibility-profile.md). Chỉ trusted observations, không occurrence/effects hoặc player projection. FullVS02 còn random protagonist, actor-specific obligations và world binding. [Lộ trình chơi thử](PLAYABLE-ROADMAP.md) đặt forecast mới: hình ảnh Sprint13, demo nhỏ Sprint15–16; Sprint13 đã được giao với nghiệm thu riêng bởi chủ dự án.
+
+## Sprint13 — thử nghiệm, chưa nghiệm thu
+
+[Sprint13](sprints/SPRINT-13.md) đang thử hình ảnh/UX/campaign preview. [Các mục cần chốt](sprints/sprint-13/APPROVALS.md) do user quyết định; AI review không là final acceptance. Không chuyển Sprint14 hoặc merge dev trước khi user chốt. Mỗi phương án mới là spin mới.
+
+Sprint13 đang ở Experiment03/SPIN019: ba hướng hình ảnh A/B/C sau phản hồi màu bản02, xem [report03](sprints/sprint-13/EXPERIMENT-03-REPORT.md). Approval register vẫn là nguồn chốt;01/02giữ nguyên. Hyper3D setup đã verifiedOAuth riêng nhưng tool chưa lộ trong thread hiện tại; không claim đã dùng để tạo hình03.
+
+Sprint13 chuyển sang Experiment04/SPIN020 theo yêu cầu thử tiếp view từ3D. [Báo cáo04](sprints/sprint-13/EXPERIMENT-04-REPORT.md) ghi scene Blender/viewer và evidence thực; các hướng trước chưa được duyệt. Approval register giữ quyền chốt của user.
+
+Chỉ dẫn user28/10: từ lần tạo model3D sauExp04 dùngMCPHyper3D; Blender dùng bố trí/camera/render. Khả năng kết nối và nguồn asset phải ghi thật, không tự thay công cụ nếu MCP chưa nạp.
+
+Exp05/SPIN021 đã dùngMCPHyper3D thật qua [client và runbook](../runbooks/HYPER3D-MCP.md). Xem [report05](sprints/sprint-13/EXPERIMENT-05-REPORT.md): modelAcompleted nhưng lệchbrief; correction submissionambiguous khôngautoresubmit. Mọi sản phẩmSprint13 vẫnchưauserchốt.
+
+
+## Sprint 13 — ảnh mô phỏng trước, chưa dựng model tiếp
+
+Chủ dự án 29/10 xác nhận chỉ cần ảnh để xem game có thể trông như thế nào; ảnh 2D hoặc diện mạo 3D đều được. **Không tiếp tục tạo model 3D thật ở giai đoạn chọn ý tưởng.** Chỉ dẫn Hyper3D 28/10 giữ cho task model thật nếu được giao sau này, không áp vào ảnh giả lập 3D. Experiment 05 và lỗi lượt sửa chưa xác định ID được giữ nguyên làm lịch sử, không tự gửi lại.
+
+Experiment 06/SPIN-022 chuyển sang ba hướng ảnh: tranh 2D góc chéo, cảnh giả lập 3D gần tầm người và 2.5D nhìn ngang. [Báo cáo 06](sprints/sprint-13/EXPERIMENT-06-REPORT.md) ghi ba ảnh thực tế, hai review độc lập và browser evidence; đây không phải game chạy hoặc ba camera của cùng scene 3D. Approval register vẫn quyết định các mục cần chủ dự án chốt; không merge dev, đóng Sprint 13 hoặc chuyển Sprint 14.
+
+
+## Sprint 13 — vòng07 thử cả ngôn ngữ đồ họa
+
+Yêu cầu tiếp theo ngày29/10 nhấn mạnh phải thử cả đồ họa. Experiment07/SPIN-023 mở ba concept ảnh với phong cách và bối cảnh khác nhau: khắc gỗ/làng mùa nước, pixel art/xưởng đúc đồng, giấy cắt/chợ hoặc đêm hội ven sông. [Báo cáo07](sprints/sprint-13/EXPERIMENT-07-REPORT.md) ghi phạm vi và evidence khi đã thực hiện. Đây là concept hư cấu chưa chốt canon; thay cả cảnh lẫn phong cách nên không quy sở thích chỉ cho đồ họa. Giữ01–06, tiếp tục ảnh-only và Pending user approval; không merge dev hoặc chuyển Sprint14.
+
+## Sprint13 — thư viện tham khảo và vòng08
+
+Chủ dự án làm rõ ngày29/10: mở spin/thử nghiệm mới không mặc định bỏ hoặc chê bản cũ. Giữ các phiên bản như một thư viện tham khảo, nhận xét theo đúng artifact/phạm vi và chỉ ghi quyết định chọn/loại khi user nói rõ. Lời khen ý tưởng tốt dần không tự chốt một hướng hoặc kết thúc Sprint13. Phản hồi lịch sử thực tế, gồm bản01 chưa ưng ý, vẫn giữ nguyên.
+
+Experiment08/SPIN-024 bổ sung ba hướng trên cùng cảnh nhà chữa trị bên suối đồi: hoạt hình2D với nét/mảng bóng gọn, thế giới dệt bằng sợi/vải, và ảnh có diện mạo3D hình khối rõ. [Báo cáo08](sprints/sprint-13/EXPERIMENT-08-REPORT.md) ghi phạm vi và evidence thực tế khi có; ảnh-only, không tạo model, không chốt canon hoặc hoạt động chữa trị. Thư viện01–08 cùng được giữ, mọi mục Sprint13 vẫn chờ chủ dự án chốt; không merge dev hoặc chuyển Sprint14.
+
+## Sprint13 — vòng09: bản sắc xuyên nhân vật và giao diện
+
+Yêu cầu mới ngày29/10 nhấn mạnh đồ họa phải xuyên suốt game, từ tạo hình nhân vật tới giao diện. Experiment09/SPIN-025 thử ba bảng concept tổng thể: sơn mài đen/đỏ/vàng, phù điêu đồng có patina, và mực đen/trắng với nét đỏ. Mỗi bảng hướng tới cảnh chơi cùng nhân vật toàn thân/chân dung, vật phẩm/icon và UI hội thoại/túi đồ/nhật ký trong cùng một ngôn ngữ. [Báo cáo09](sprints/sprint-13/EXPERIMENT-09-REPORT.md) giữ output/evidence thật sau khi thực hiện.
+
+Gallery chỉ phục vụ xem ảnh; UI được minh họa trong raster, không là UI runtime hoặc lựa chọn origin thủ công. Tiếp tục ảnh-only, không model3D/Hyper3D/Blender. Thư viện01–09 cùng được giữ để tham khảo/kết hợp, không mặc định loại bản cũ hoặc chốt một hướng. Mọi mục chưa được duyệt vẫn Pending; không merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+## Sprint13 — vòng10: hai hướng theo trí tưởng tượng
+
+Chủ dự án cho AI tự quyết số lượng concept, không bắt buộc ba phương án A/B/C. Experiment10/SPIN-026 chọn hai hướng toàn game: **Men chàm** với ngôn ngữ gốm men xanh/trắng, và **Bóng rối** với lớp bóng/cắt sáng xuyên thấu. Mỗi bảng hướng tới thế giới, tạo hình nhân vật/chân dung, vật phẩm/icon và UI hội thoại/túi đồ/nhật ký; tất cả là ảnh raster tham khảo, không model3D hoặc UI runtime. [Báo cáo10](sprints/sprint-13/EXPERIMENT-10-REPORT.md) ghi output và evidence khi thực hiện.
+
+Giữ thư viện01–10, không suy vòng mới là loại bản cũ. Hồ sơ09 sau phiên bị ngắt đã được hai critic mới kiểm lại và viết report09 riêng, cùng lượt review10. Ảnh/browser evidence và phản biện có phạm vi riêng, không thay quyền chốt của user. Mọi mục chưa chốt vẫn Pending; không merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+## Sprint13 — vòng11: không gian và ngôn ngữ tạo hình
+
+Experiment11/SPIN-027 mở ngày29/10 và tiếp tục ngày30/10 sau giới hạn tác nhân, thử bốn bảng ảnh toàn game: **2.5D nhiều lớp**, **3D cách điệu**, **Pixel đời làng** và **Anime đời thường**. Cùng tình huống chợ lương thực/kho kê cao/cầu trước mùa nước, mỗi bảng cần có cảnh, nhân vật toàn thân/chân dung, vật phẩm và UI. Phụ nữ lao động trưởng thành khoảng45tuổi là mẫu cast minh họa, không cố định protagonist runtime hoặc cho chọn origin thủ công. [Báo cáo11](sprints/sprint-13/EXPERIMENT-11-REPORT.md) ghi bốn PNG đã tạo30/10, review độc lập, browser evidence và các giới hạn quan sát.
+
+2.5D/3D là cách tổ chức không gian; pixel/anime là ngôn ngữ tạo hình có thể kết hợp. Các ảnh không là quyết định chuyển engine, model thật, parallax/animation chạy hoặc pixel grid production. Thư viện01–11 cùng được giữ; mọi mục chưa chốt vẫn Pending, không merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+## Sprint13 — vòng12: sáu ngôn ngữ mỹ thuật mới
+
+Ngày30/10 chủ dự án yêu cầu ít nhất năm mẫu tiếp theo và đẩy mạnh thử nghiệm đồ họa. Experiment12/SPIN-028 có phạm vi sáu bảng concept toàn game: **Đất biết kể** (`clay-craft`), **Nét trong** (`clear-line`), **Vách thời gian** (`mineral-fresco`), **Ký ức CD-ROM** (`retro-prerender`), **Đêm than bạc** (`charcoal-night`) và **Gió mảng màu** (`graphic-animation`). Mỗi hướng thử thống nhất cảnh chơi, tạo hình người trưởng thành, chân dung, vật phẩm/icon và UI hội thoại/túi đồ/nhật ký. [Báo cáo12](sprints/sprint-13/EXPERIMENT-12-REPORT.md) phân biệt mục tiêu với output và evidence thực tế.
+
+Các hướng khác nhau về chất liệu, nét, hình khối, ánh sáng và cách đóng khung UI, không chỉ đổi bảng màu. Đây là ảnh mô phỏng bằng built-in image_gen; diện mạo đất nặn hoặc cảnh dựng sẵn không có nghĩa đã tạo model, dựng scene3D hoặc triển khai animation. Cast và lời thoại là ví dụ minh họa, không cố định protagonist, đổi random-origin hoặc thêm canon. Thư viện01–12 cùng được giữ để tham khảo/kết hợp. Mọi mục chưa được duyệt vẫn Pending; không merge dev, đóngSprint13 hoặc mởSprint14.
+
+## Sprint13 — workshop đồ họa game và Văn Lang–Âu Lạc, SPIN-029
+
+Ngày30/10 chủ dự án yêu cầu brainstorming với tác nhân vì các mẫu thiên minh họa/tả thực và nhãn3D chưa cho cảm giác game mong muốn. [Workshop định hướng](sprints/sprint-13/ART-DIRECTION-RETHINK.md) tổng hợp audit, nguồn văn hóa và sáu cách tổ chức hình ảnh; ưu tiên thử camera/hình khối/tỷ lệ/UI trước lớp phủ vật liệu. 3D và độ tả thực được tách riêng; chất văn hóa là nguồn cho grammar hình, không chỉ hoa văn/màu cũ. Đây là đề xuất Pending, không batch ảnh mới hoặc lựa chọn art/engine/canon. Các bản01–12 giữ nguyên. Chỉ dẫn tương ứng đã đưa vào AGENTS/.agent và reference art-direction; Sprint13 chưa kết thúc.
+
+## Sprint13 — vòng13: thử khung chơi từ workshop, SPIN-030
+
+Ngày30/10 chủ dự án giao tạo thêm ý tưởng sau workshop. Experiment13 thử ba cách nhìn bằng ảnh: **Khối Lạc** nhìn chéo với khối3D cách điệu mạnh, **Dải đời sống**2D/2.5D theo lớp sinh hoạt, và **Trong lòng làng** cự ly gần cùng họ khối3D dự kiến. Mỗi hướng có một frame thế giới nguyên khung và một frame đối thoại riêng, tổng sáu frame được giao; không dùng công thức board65/35. [Báo cáo13](sprints/sprint-13/EXPERIMENT-13-REPORT.md) phân biệt brief, artifact và evidence thực tế.
+
+Cùng vai nhân vật/bến/thuyền/lối lên nhà sàn giúp đối chiếu cách thể hiện, nhưng ảnh sinh độc lập không bảo đảm camera của cùng scene hoặc cast/geometry tuyệt đối. Chỉ dùng built-in image_gen, không model/runtime hay chuyển engine. Nguồn văn hóa từ workshop được chuyển thành lựa chọn mỹ thuật, chưa xác minh phục dựng/canon. Thư viện01–13 và workshop được giữ; các sản phẩm vẫn Pending user approval, không merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+## Sprint13 — vòng14: mở rộng khác biệt giữa sáu hướng, SPIN-031
+
+Ngày30/10 chủ dự án nhận xét các ảnh13 tốt nhưng còn giống nhau, chưa có nhiều khác biệt/vượt bậc, và giao thử tiếp. Experiment14 mở sáu khung chơi thuộc sáu hướng độc lập: Đất dựng thành, Ô đất sống, Làng vòng cung, Đôi tay làm nghề, Ký hình và Mái nhà nhiều giọng. Thay đồng thời camera, hình/tỷ lệ, cast, bối cảnh, màu và UI để mở rộng thư viện; không tiếp tục ba cặp quanh cùng một cảnh hoặc dùng ảnh13 làm tham chiếu. [Báo cáo14](sprints/sprint-13/EXPERIMENT-14-REPORT.md) phân biệt brief với output/review thực tế.
+
+Chỉ ảnh built-in image_gen, không model/scene3D/runtime/engine hoặc canon mới. Camera cong không là thế giới hình cầu, ký hình không là chữ viết cổ được xác nhận, trang truyện là đề xuất cách trình bày game chứ không bảng asset. Vì nhiều biến đổi cùng lúc, không quy sở thích cho một trục đơn. Giữ01–13 và workshop; lời khen không là approval, mọi hướng chưa chốt tiếp tục Pending và không chuyểnSprint14.
+
+## Sprint13 — vòng15: đào sâu shortlist và mở rộng cách nhìn, SPIN-032
+
+Ngày30/10 chủ dự án đánh giá rất tốt14/1 **Đất dựng thành**,14/2 **Ô đất sống** và14/3 **Làng vòng cung**, cho phép đào sâu, đồng thời yêu cầu thêm ý tưởng táo bạo hơn. Ba hướng này được ghi thành ưu tiên nghiên cứu, chưa là final art approval, chưa chọn một hướng duy nhất và không loại14/4–6 hoặc các bản cũ.
+
+Experiment15 đã có sáu frame mới: ba nhánh **Thành dựng đứng**, **Ghép đảo thủy triều**, **Làng trên vành trống** và ba cách nhìn mới **Địa hình đa diện**, **Làng của bóng**, **Thủy kính**; giữ thêm biến thể đa diện v1. Bảy PNG tạo30/10, hồ sơ và hai review hoàn tất02/11. [Báo cáo15](sprints/sprint-13/EXPERIMENT-15-REPORT.md) phân biệt brief với output và evidence thực. Chỉ built-in image_gen, cả bảy lượt không có ảnh tham chiếu; không model/runtime/engine. Phép đứng, mảng ghép, cuộn, đa diện, bóng và phản chiếu là đề xuất presentation, không thêm world geometry, luật hex, phép thuật, portal hoặc hidden knowledge. Giữ01–14/workshop và mọi mục Pending; không đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Sprint13 — vòng16: thêm sáu quy tắc tạo hình, SPIN-033
+
+Ngày02/11 user giao thêm ý tưởng mới sau vòng15. Experiment16 đã có sáu frame chính: **Thế giới dệt**, **Nét dây không gian**, **Làng gấp**, **Mưa khắc hình**, **Mặt cắt đời sống** và **Hạt khối**; giữ thêm hai bản đầu nét dây/làng gấp qua link riêng. Tám lượt built-in image_gen không ảnh input, copy nguyên bytes. Các hướng thử thay cách tổ chức không gian, silhouette nhân vật và UI, không chỉ palette; mức đạt chưa đồng đều. [Báo cáo16](sprints/sprint-13/EXPERIMENT-16-REPORT.md) phân biệt brief, output và evidence thực. Dệt/giấy/pixel có tiền lệ ở các vòng cũ, nên mức đổi mới phải căn cứ quy tắc tạo hình thực sự nhìn thấy, không chỉ tên vật liệu.
+
+Chỉ ảnh built-in image_gen được giao, không model/scene/runtime/Hyper3D/Blender hoặc engine/canon mới. Hình dây, mặt cắt, không gian gấp hoặc voxel không tự tạo khả năng nhìn xuyên, topology, thời tiết, phá hủy hay tri thức bí mật. Giữ01–15, các biến thể và ba ưu tiên14/1–3; giao thêm ý tưởng không là approval hoặc loại bản cũ. Mọi mục chưa chốt tiếp tục Pending; không đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Sprint13 — vòng17: brainstorming và thêm mười phương án, SPIN-034
+
+Đã có mười frame chính và một bản Vành sân đầu tiên được giữ:11PNG1672×941RGB, copy nguyên bytes, không ảnh input. Bản thử lại Vành sân giản lược khối sau lượt đầu gần tả thực; báo cáo ghi rõ phần đạt/chưa đạt.
+
+Ngày02/11 user giao thêm10ý tưởng, cho phép học hỏi/improve từ các bản cũ và brainstorming giữa tác nhân. Ba worker đã audit/trao đổi chéo; root gộp hai đề xuất relief trùng thành một và chọn batch thử ảnh: Hành lang thành đất, Bờ liền nét, Vành sân, Phù điêu đang sống, Người bằng cử chỉ, Cửa trong cửa, Khối ghép đời thường, Sát mặt nước, Pixel cự ly gần và Âm bản sống. Ba hướng đầu phát triển ưu tiên14/1–3; bảy hướng sau khác hoặc cải tiến từ thư viện, không tuyên bố bảy kỹ thuật chưa từng có. [Báo cáo17](sprints/sprint-13/EXPERIMENT-17-REPORT.md) và ba note brainstorm ghi lineage/delta, quyết định phạm vi và output/review theo evidence thực.
+
+Mười một ảnh vòng17 đã tạo bằng built-in image_gen không ảnh input; metadata/hash thực ở báo cáo17 và provenance. Chỉ ảnh xem trước. Không model/scene/runtime/Hyper3D/Blender hoặc engine/canon mới. Camera thấp, âm bản, relief, pixel hoặc nêm ghép không tự thay geography/physics/route/knowledge. Giữ01–16, biến thể, phương án brainstorm dự phòng và ưu tiên14/1–3; không coi chọn batch của AI là approval. Mọi mục chưa chốt tiếp tục Pending; không đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Sprint13 — vòng18: thêm mười lăm cách thể hiện, SPIN-035
+
+Ngày02/11 user giao thêm khoảng15ý tưởng sau vòng17. Ba worker brainstorming camera/không gian, cast–UI và audit/range; root gộp ba cặp cel/soft/ink trùng, chọn6space +6cast +3audit để thử. Bộ15 gồm Sân chéo mở, Ba dải đường, Qua vai người thợ, Đường chéo dài, Rừng là thân cột, Sân phẳng, người nổi, Nét mặt ba sắc, Khối liền mềm, Mực đặc, Người bằng dải, Đường đồng mức sống, Pixel hình lớn, Một-bit có tuổi, Sân khấu một nền và Khối răng cưa. [Báo cáo18](sprints/sprint-13/EXPERIMENT-18-REPORT.md) cùng ba note brainstorm giữ intent/delta, trao đổi thật và output/evidence khi có.
+
+Đã có15frame chính và2bản đầu dải thân/đồng mức được giữ:17lượt built-in image_gen mới, không ảnh input, copy nguyên bytes. Bản trưng bày hai hướng này dùng iteration;17PNG RGB,30,511,159bytes, hai ảnh cao940 và15ảnh cao941 như provenance. Review/checks chỉ ghi hoàn tất theo evidence thực. Phạm vi thử thêm sân/rừng/hiên nghề, không buộc toàn bộ cùng bến sông hoặc lặp ba nhánh favored. Giữ14/1–3 là ưu tiên nghiên cứu thật, không final approval; mọi01–17 và biến thể tiếp tục được giữ.
+
+Chỉ ảnh preview, không model/scene3D/runtime/Hyper3D/Blender, engine/canon/route/physics/knowledge mới. Hybrid/contour/khối/dither không cấp quyền nhìn xuyên hoặc biết bí mật. Mọi output18 và mục chưa chốt tiếp tục Pending; không merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Sprint13 — nghiên cứu khả thi ba hướng, SPIN-036
+
+Đã brainstorm Đất dựng thành14, Hành lang thành đất17 và Đường chéo dài18; [báo cáo so sánh](sprints/sprint-13/ART-FEASIBILITY-THREE-DIRECTIONS.md) gồm kiến trúc/art pipeline/WBS/lịch giả định và review thật. Đề xuất 3D cách điệu + UI2D + camera giới hạn, Đường chéo làm proof trước, Hành lang kiểm người cận, Đất kiểm quy mô; chưa là lựa chọn được duyệt. Ba worker trao đổi chéo; hai critic độc lập kiểm tech/art/effort ở các lượt sau; critic estimate bị usage limit lượt đầu rồi tiếp tục được, root tự rà riêng. WBS cuối đã bổ sung art expansion và kit bến/thuyền còn thiếu trong bản đầu.
+
+M1 chỉ cảnh art nhỏ hai actor (Earth fragment, không panorama/crowd), M2 chuyển grammar về Bến Vạc và tính cả bến/thuyền, cần origin/repair/projection/save thật. Mốc40–90ngày M2 chỉ quy đổi ởQ8 giả định, chưa phụ thuộc/chờ; Plus không đảm bảoQ8, chưa benchmarkSolhigh. Client còn layout, URP/UI là đề xuất, UHD630 chưa đo, Hyper3D chỉ metadata chưapreflight. M0cap12–24giờ công là bước hiệu chỉnh được đề xuất, chưa chạy. Không ảnh/model/Unity implementation/benchmark mới; không Experiment19 hoặc đổi engine/canon. Giữ01–18 và Pending S13-A01–A04, chưa quaSprint14/merge dev/main/release.

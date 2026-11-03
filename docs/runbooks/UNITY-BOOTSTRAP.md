@@ -1,6 +1,6 @@
 # Bootstrap Unity ở bước FND-16 / VS-07
 
-Hiện repository chỉ có thư mục Assets dự kiến; không có Unity Editor/runtime trong bằng chứng bàn giao. Trước khi tạo client thật:
+Client game hiện chỉ có layout Assets dự kiến; Sprint10 đã có evidence Unity6000.6.7f1 ở kernel/Editor profile riêng, chưa playable client. Trước khi tạo client thật:
 
 1. Chọn Unity editor patch, target platform, backend (Mono/IL2CPP) và ghi ADR/OPEN-04. Đối chiếu hỗ trợ .NET Standard 2.1 và ngôn ngữ C# với Editor đã chọn.
 2. Tạo project thật qua Unity Hub/Editor tại `client/UnityProject` (giữ hoặc import layout Assets/Game). Commit ProjectSettings/ProjectVersion.txt, Packages manifest/lock và source .meta do Editor tạo. Không commit Library/Temp/UserSettings.
@@ -18,3 +18,8 @@ Nguồn công nghệ: [Unity .NET compatibility](https://docs.unity.com/en-us/en
 ## Sprint10: isolated conformance preparation
 
 [Bộ chạy conformance](UNITY-CONFORMANCE.md) tạo project kiểm chứng riêng bằng Editor thật khi có cài đặt/license. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Client layout chưa bootstrap thành game. Không dùng DLL build .NET hoặc validator synthetic thay Editor evidence.
+
+
+## Profile2D đã chốt và khả năng mở lạiG13
+
+Ngày03/11/2026 chủ dự án chốt [earth-monument-2d-v1](../production/sprints/sprint-13/ART-DIRECTION-BASELINE.md): nền2D phân lớp có cảm giác khối + nhân vật sprite. Task client phải kiểm renderer/import tương thích bằng Editor, vùng đi/cao độ/occluder/camera và asset mapping riêng; không suy package đã cài từ quyết định. Khi cần đổi hướng, theoG13 trên core/commands/actor projection hiện hành, giữ gameplay/content/save contracts; không quay cả project về mốc Sprint13. UI/runtime/asset rights và hiệu năng vẫn cần acceptance riêng; quyết định này không là lệnh bootstrap trong task chốt.

@@ -1,0 +1,43 @@
+{
+  "created_date": "2026-10-29",
+  "tool": "built-in image_gen",
+  "type": "independent raster reference versions; common scene brief",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; original generated PNG bytes copied. HTML overlay separate.",
+  "approval": "Pending user approval; additive library, no old version rejected implicitly",
+  "images": [
+    {
+      "variant": "A",
+      "asset": "assets/a-cel.png",
+      "source_generated_filename": "exec-301d7881-8541-4efc-b72c-5a0bb2c3b04d.png",
+      "sha256": "07b96f0ece5c05a9c0027eebd9a7ab5fa255993f09cbbb52e81da6735860ee08",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3319749
+    },
+    {
+      "variant": "B",
+      "asset": "assets/b-woven.png",
+      "source_generated_filename": "exec-6f89efd8-b01e-404b-9fdc-9ca7dac96bff.png",
+      "sha256": "48928385e5ea435ab32a6b6cfeafa67a363e4ed422c6b81c6114dd577129051c",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 4392234
+    },
+    {
+      "variant": "C",
+      "asset": "assets/c-faceted.png",
+      "source_generated_filename": "exec-577ff4f3-6283-4318-9f3d-1674b3f9ec0d.png",
+      "sha256": "96ce6793b5d7905b2220e64a4440211671896b02ff172ac8869140c65e5b63cb",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3100516
+    }
+  ]
+}

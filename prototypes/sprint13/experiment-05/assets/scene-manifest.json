@@ -1,0 +1,93 @@
+{
+  "provider": "Hyper3D MCP",
+  "generation_id": "e7fe0cb0-45a6-4d85-9f87-63be17c5e6dc",
+  "original_sha256": "ccfee2bf6f0e764f11f312536d84b97001d27efa4a8b3b1e4fba2931c0c8e3c1",
+  "glb_sha256": "1161c36bb238e0a98ff382c79a22d61311ea5b3f23d5a4aec9f22bcf01ede27c",
+  "mesh_count": 1,
+  "triangle_count": 60000,
+  "material_count": 1,
+  "blender": "5.2.2 LTS",
+  "placement_scale": 4.228183909140958,
+  "original_bbox_blender": {
+    "min": [
+      -0.44628337025642395,
+      -0.9432567954063416,
+      -0.42148762941360474
+    ],
+    "max": [
+      0.447460800409317,
+      0.948808491230011,
+      0.42057788372039795
+    ]
+  },
+  "cameraSourceZup": {
+    "overview": {
+      "position": [
+        10,
+        -13,
+        9
+      ],
+      "target": [
+        0,
+        0,
+        1.4953712982917997
+      ],
+      "lens": 47
+    },
+    "eye": {
+      "position": [
+        8,
+        -10,
+        1.7
+      ],
+      "target": [
+        0,
+        0,
+        1.35
+      ],
+      "lens": 36
+    },
+    "repair": {
+      "position": [
+        5,
+        -6,
+        3.0
+      ],
+      "target": [
+        0,
+        -0.4,
+        1.5
+      ],
+      "lens": 42
+    }
+  },
+  "vertical_fov_degrees": {
+    "overview": 30.14244099668009,
+    "eye": 38.73952406980271,
+    "repair": 33.539235450262005
+  },
+  "scope": "Imported provider geometry; only scale/placement/cameras/lights/export added locally. No procedural replacement mesh.",
+  "renders": [
+    {
+      "camera": "overview",
+      "file": "render-overview.png",
+      "width": 1280,
+      "height": 900,
+      "samples": 24
+    },
+    {
+      "camera": "eye",
+      "file": "render-eye.png",
+      "width": 1280,
+      "height": 900,
+      "samples": 24
+    },
+    {
+      "camera": "repair",
+      "file": "render-repair.png",
+      "width": 1280,
+      "height": 900,
+      "samples": 24
+    }
+  ]
+}

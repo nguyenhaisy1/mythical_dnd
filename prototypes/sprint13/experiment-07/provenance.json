@@ -1,0 +1,43 @@
+{
+  "created_date": "2026-10-29",
+  "tool": "built-in image_gen",
+  "type": "independent raster concepts; different styles and settings",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; copied original PNG bytes. HTML overlay is separate.",
+  "approval": "Pending user approval",
+  "images": [
+    {
+      "variant": "A",
+      "asset": "assets/a-woodcut.png",
+      "source_generated_filename": "exec-17a8e21c-3c52-4505-85ce-7d8b170ef9e5.png",
+      "sha256": "5197585f2f4ec48c1b9fb3afa8db6a29f93d979a674bf722ffe6be0f4d1b456f",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3517780
+    },
+    {
+      "variant": "B",
+      "asset": "assets/b-pixel.png",
+      "source_generated_filename": "exec-e19f8c3e-3e17-43f6-be13-d264f7dd62f3.png",
+      "sha256": "54af55426f622cca00f738f68373a0bff3145a967e8a74fabed4c505aacc6a27",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2845408
+    },
+    {
+      "variant": "C",
+      "asset": "assets/c-papercut.png",
+      "source_generated_filename": "exec-8345b186-15f3-40d2-aa64-1cb4162ba7b3.png",
+      "sha256": "b9067309c333cb27907eb22cd83b1b994512dfee646472b00647318b3107fb6a",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2902455
+    }
+  ]
+}

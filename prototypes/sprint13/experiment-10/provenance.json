@@ -1,0 +1,33 @@
+{
+  "created_date": "2026-10-29",
+  "tool": "built-in image_gen",
+  "type": "two named whole-game style board raster references; UI inside PNG",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "reference_images": [],
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; original generated PNG bytes copied",
+  "approval": "Pending user approval; additive library",
+  "images": [
+    {
+      "variant": "men-cham",
+      "asset": "assets/men-cham.png",
+      "source_generated_filename": "exec-3005d431-41a3-496d-a1ff-d537f1dcdc01.png",
+      "sha256": "bad50a9ec5169d43a736513931c1f0705a8813c484e047b23049fe373f2aed08",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3019187
+    },
+    {
+      "variant": "bong-roi",
+      "asset": "assets/bong-roi.png",
+      "source_generated_filename": "exec-c8e04e1c-99bc-4218-8e84-c07e66673d88.png",
+      "sha256": "ef56bb6b718cd997d2fb4cf52f0f3a36d1086e2f619ba6d2ab8179fa0279b7db",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2816182
+    }
+  ]
+}

@@ -1,0 +1,2195 @@
+{
+  "schema": "sprint13-art-checkpoint-v1",
+  "created_on": "2026-11-03",
+  "profile": "earth-monument-2d-v1",
+  "gate": "G13",
+  "source_commit": "1e4332f0a122528b9bed850377529ffee1efb7da",
+  "source_reference_branch": "feature/sprint-13-experiment-01",
+  "scope": "Historical pre-decision source inventory; approval/ADR/current profiles live in versioned documents, not this source commit.",
+  "retention": "Keep source commit reachable; prefer PR13 merge commit preserving ancestry if repository policy allows; keep source feature branch. No release tag.",
+  "protected_trees_at_source": {
+    "engine": "e5d86122e02af26ed97c285aa67f43ecd1ce6cd7",
+    "content": "c1039bd721261c4fcfc9c38529bb2211cb30e07a",
+    "rules": "79c99063b3726ab2d955dba3dade7ed14aed3980",
+    "tests": "7f6c7659af1637a95f75c6b2aaedbeab7ae8019f"
+  },
+  "protected_tree_policy": "Historical audit anchors only. Future gameplay/content progress is allowed; a G13 art-only reopening compares current-before/current-after, never restores these old trees over newer work.",
+  "files_count": 268,
+  "total_bytes": 275285127,
+  "experiment_counts": {
+    "experiment-01": 10,
+    "experiment-02": 10,
+    "experiment-03": 11,
+    "experiment-04": 20,
+    "experiment-05": 27,
+    "experiment-06": 11,
+    "experiment-07": 11,
+    "experiment-08": 11,
+    "experiment-09": 11,
+    "experiment-10": 10,
+    "experiment-11": 12,
+    "experiment-12": 14,
+    "experiment-13": 15,
+    "experiment-14": 14,
+    "experiment-15": 15,
+    "experiment-16": 16,
+    "experiment-17": 22,
+    "experiment-18": 28
+  },
+  "files": [
+    {
+      "path": "prototypes/sprint13/experiment-01/ART-DIRECTION.md",
+      "bytes": 5487,
+      "git_blob": "78731ba0e626b7e0aff3f0b0efe401d52082cc2a",
+      "sha256": "f9022d0c16d36c67e59357ab43d87f238dcdb6bc2becdd63df2cc7cfb6d494d5",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/CAMPAIGN-EXPERIMENT.md",
+      "bytes": 5698,
+      "git_blob": "00741d9db326ec010f65da61b77a4d597d0855e1",
+      "sha256": "8773d9364b904072dfcedda52e439a85457992035346843f1b32ab32c1fd5105",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/README.md",
+      "bytes": 1433,
+      "git_blob": "c6b903092978d3e5b0529e3bcb07ca5c4a689638",
+      "sha256": "cb9613d72195a9acc8c63993061117f99d054ddfeff4d91971d704a9d4afe563",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/app.js",
+      "bytes": 5340,
+      "git_blob": "54b719ee2fb28ad75e1af0faf4b731d689b9f854",
+      "sha256": "2ef2c4589dafc9e6458564138acc0c34e69eb41f678e416d327b479310b0d5ff",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/assets/ben-vac-dawn.svg",
+      "bytes": 6273,
+      "git_blob": "11de1a46b489f457255cf82d71977995fdd58a64",
+      "sha256": "75c02e3c020f6a79a6ccc59d338ffba760834d3b8f1fb13e7f739ffaeca146f2",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/browser-check.py",
+      "bytes": 2020,
+      "git_blob": "421e7f9a2672014533a6418c20b6d21421de549a",
+      "sha256": "7c0caf18d8a038b7301ce8696049f603900e142dc0063f2459cb96aca1b8a54f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/campaign.js",
+      "bytes": 7275,
+      "git_blob": "d588c2de72775e4f24c8a95db22696ed4307b6ab",
+      "sha256": "8c5cfa28483eecb92e7a2728e80e42544abf0b31e0ba6d91942e05eb8dfe1f64",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/campaign.test.js",
+      "bytes": 3949,
+      "git_blob": "dbe9c01eb3f8f0db03f4027b19aae0088c72b337",
+      "sha256": "18f940a0134819887206d9d78ef556c8839abe36f8f1a96ba3cc95e8bd733bb8",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/index.html",
+      "bytes": 6711,
+      "git_blob": "ed70fece7df2b4bf57314c5ab4ad1a20b86fc242",
+      "sha256": "a1e2b5f16c0922479d20568e7a9ea44ae25cf5e4bf118bcba812d7717100f828",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-01/style.css",
+      "bytes": 8738,
+      "git_blob": "e88c377fa41e2ecbd74d85b2ad0bdcaeb16f1859",
+      "sha256": "19b4dea4176ee3644962b4931bfb58efa3f4acd85185f477a1a28673c4cb6b93",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/ART-DIRECTION.md",
+      "bytes": 6904,
+      "git_blob": "4dd66d178c411971a4a472df4de62a788077b1f8",
+      "sha256": "a6236f69d7e79f8bc33ea12c12d4a639d596b25395e1edf14df3285bcc5f1538",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/README.md",
+      "bytes": 2510,
+      "git_blob": "9ba133624fb4250774ae6178a91424d5f0b0045a",
+      "sha256": "f9ef05576f9c979960fedde38ced650bec962b38c02a5edce4d37e488f1671a8",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/app.js",
+      "bytes": 5471,
+      "git_blob": "a58c5967aedc6190285f03320786db487241b871",
+      "sha256": "faaf6cf7061dc969d6a5be203e61322f6232fb3bfe509b40b75a3ca54bde563f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/assets/GENERATION.md",
+      "bytes": 2701,
+      "git_blob": "399614336b13198ef796e06f0be902f96fd33391",
+      "sha256": "a715dbe4f59ecca3c2f4caec0789a1542cfa5a59beedaae095ba8c375ffb17d3",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/assets/ben-vac-painterly.png",
+      "bytes": 3354140,
+      "git_blob": "78dea9f27c2a7e621beb2e8a9c93acf1690fb45b",
+      "sha256": "5632aafd7e62426d07781299aa8d24894c31b328d402f9a28e518b3111b8d042",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/browser-check.py",
+      "bytes": 5031,
+      "git_blob": "91d2c64afc12f045eb1dc15a8ade44929febf127",
+      "sha256": "d86a21aef4b23881c65437cc0604957247b2f32d333d203fc28da3ddb36d9290",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/campaign.js",
+      "bytes": 7275,
+      "git_blob": "d588c2de72775e4f24c8a95db22696ed4307b6ab",
+      "sha256": "8c5cfa28483eecb92e7a2728e80e42544abf0b31e0ba6d91942e05eb8dfe1f64",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/campaign.test.js",
+      "bytes": 3949,
+      "git_blob": "dbe9c01eb3f8f0db03f4027b19aae0088c72b337",
+      "sha256": "18f940a0134819887206d9d78ef556c8839abe36f8f1a96ba3cc95e8bd733bb8",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/index.html",
+      "bytes": 7585,
+      "git_blob": "93930a147dccdf00895d4031b7e4f41ecdb4e4c6",
+      "sha256": "9247a1960dfe4537568fed41bc42627c0e054102dcde5e705dcca92be4ff5c1f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-02/style.css",
+      "bytes": 11446,
+      "git_blob": "c23f41a88a4057b7663d2c07a60398b692d287ee",
+      "sha256": "81fe705657c430420cb91f22f592a38b028764b085f4aee10be64280b4d0294c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/ART-DIRECTION.md",
+      "bytes": 6659,
+      "git_blob": "7cd19ce34e6d98f49c9f3d969f6328852d5892a8",
+      "sha256": "b68529aa61ebe63693fd0e15b147d373000aff4ab7fe0ff2270e5bb1225f7977",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/README.md",
+      "bytes": 2197,
+      "git_blob": "6387ba571a4b65f1a29ef91ba530cd24f9944814",
+      "sha256": "e03b85d8664f9db8f3da91347bc3572b786121cd9d94e52e2ace891386059125",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/app.js",
+      "bytes": 8939,
+      "git_blob": "f0adb1b9fd41419e65bc349bc864ed5ba1d54d9a",
+      "sha256": "348171b2ae5fdc5acf935734aaa16e7313bc49df2ec1ee4531e95547a62a65ea",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/assets/GENERATION.md",
+      "bytes": 6006,
+      "git_blob": "2f19565d9bc62d12fec26df1efef2caa59027a99",
+      "sha256": "418c26218b0095845ed62871d221bcaadaaba66e1caa9376ffe87cb8e710fb72",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/assets/a-overcast.png",
+      "bytes": 3163885,
+      "git_blob": "4c18a49543acdadbcebb64095501e4d0aa83fffe",
+      "sha256": "4d01e175fa1fe4fb3af094840d266d55bdda304a3cb6726be9d46a6339302081",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/assets/b-gouache.png",
+      "bytes": 3399730,
+      "git_blob": "25cf856cc4593869671c336eb2246392a3fa99ea",
+      "sha256": "96243aa0dd5556fd39979b840ca8b94fe48baf75b502b9d93bed08304598c4ff",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/assets/c-woodcut.png",
+      "bytes": 3976470,
+      "git_blob": "06e11de34b2a1a810aa741ab6a85de097e325d8c",
+      "sha256": "c7b11d51feaccdbc8de9a9291987b238d65ded56b85153675608dbed2041632e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/assets/manifest.json",
+      "bytes": 712,
+      "git_blob": "6f57d960e77c47fe5854485c99df92dd49dc5205",
+      "sha256": "66317347ed83dc755b25d58702da2d462e6a5baa46390421458852d8f36af80d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/browser-check.py",
+      "bytes": 8242,
+      "git_blob": "5379b5ef809aeb6eea09471161ef96e29fda9a20",
+      "sha256": "1b2589c6c46ecfa10f28096d5527a653ac0b6e80a84f4d38cff75c8fad8a4c31",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/index.html",
+      "bytes": 5853,
+      "git_blob": "14ee500bde56fdb767e961a5c2510466fa00871b",
+      "sha256": "1373278399ca7b456667335570f485a32094d7cb8980ac50c90a35fab007a45d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-03/style.css",
+      "bytes": 8166,
+      "git_blob": "955d190e0d3a4183ddf09c9358c432bdbfb77811",
+      "sha256": "e3434a823cd8f1eb3d056b1febc76dccd04d4e04f0a2f4e9f85024f1f5c3ea57",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/ART-DIRECTION.md",
+      "bytes": 3911,
+      "git_blob": "cfe46ad41ebb95af4ce65018bddd8ef3232d16da",
+      "sha256": "d64d93d065f46c4b37b2333f2e1313b85fa6e720ff0af1420201482335945bfc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/README.md",
+      "bytes": 4305,
+      "git_blob": "c1a06c2dd4d4bcce82cd34145d2fecc13db9e87b",
+      "sha256": "afb87e1f92bc696255444d2e9838a853852110d269bbc13bc3ce7989b4fa12dc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/assets/ben-vac.glb",
+      "bytes": 3336112,
+      "git_blob": "358d89f86a0b94b4a8b25bf3e79a245729ba2832",
+      "sha256": "ca94bd77b5377223ae38ad0facc42de7733bd250f0fbf61624e0f8995212a25d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/assets/render-eye.png",
+      "bytes": 1379128,
+      "git_blob": "a1f72b126fcbf595e2495bd470bacd4257e02536",
+      "sha256": "feee4c4e41180458026e32ae604bb8edffeeda17f5991751f1616b035a7ed1ad",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/assets/render-overview.png",
+      "bytes": 1479735,
+      "git_blob": "8f328446c40e872d823dc8763a91ead1687f0162",
+      "sha256": "9381b2a79dc5bada1a8c0089fae6f52964f9d0770f84ef260247f3881beb25cc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/assets/render-repair.png",
+      "bytes": 1548644,
+      "git_blob": "f2d666170028b692b19ae6716bea49c21306d39d",
+      "sha256": "0dae929afc4da481ad2626dc7c7ba545aecc944edeb6cf8fdfd778bc702dbf5d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/assets/scene-data.js",
+      "bytes": 4448754,
+      "git_blob": "57e2c97291fd2044af30405ade8a05f9d619e8b8",
+      "sha256": "47cb6b455f26eee4f08626810fef3009a49f9b99306ba237f283230076424d42",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/assets/scene-manifest.json",
+      "bytes": 1652,
+      "git_blob": "f00a0ecd5f40a2b13672c6ad5da1159bf23f6e9d",
+      "sha256": "6631ab93bc9d90b7ae0a0e10fc9967c2b1742b44850bfc2a59c054b7deec91d9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/assets/scene.blend",
+      "bytes": 951627,
+      "git_blob": "4f6157468ba9b77370a7fe2fc4f4a9e307777c6c",
+      "sha256": "d7be2318cb67275a5d8cd0d32bbe4e26e7f546c2afa13631d31cd4f7cdc0b44a",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/browser-check.py",
+      "bytes": 10888,
+      "git_blob": "6cf9a7231fc7d2e43862117e741941e347a99d78",
+      "sha256": "3926b8de6d20e5ac279b33c14961fccabddb4e49d6c7a26097e5e900a9eb57f2",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/build-viewer.mjs",
+      "bytes": 1759,
+      "git_blob": "5d872029a2a1c0d4129422a6f89194b5e19169f3",
+      "sha256": "5ecaccc6a08f3baf541c83b6becafb0d53e03d6a535ac54d70bfdea3ed1b4e3c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/build_scene.py",
+      "bytes": 20499,
+      "git_blob": "8eddd02341aaccaaabd5b5271c3dbce83a72feb9",
+      "sha256": "3d09008d0e03786536b63831083e4f4b7f4236243727c9eb53958b96601a066f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/index.html",
+      "bytes": 4632,
+      "git_blob": "dafd14398e42559d22fea640e5f0a62eb70f8ba0",
+      "sha256": "64de74fb5f0019a0451579e1e17d03c564d1c4f625cb27e21cfbed2a7a3cd2fd",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/package-lock.json",
+      "bytes": 14857,
+      "git_blob": "57e404de3bbad9a152b9f789b20e4d002940163a",
+      "sha256": "62dda8f128cb8bd4b2e4ada8dd26978a30ea6b6766f471be41661bbf1e290172",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/package.json",
+      "bytes": 315,
+      "git_blob": "982aff0a4c3c558c99240019eb3518f0a855e60e",
+      "sha256": "c4453e9c2925be4c2b73297e1ab9b131b0720ac7fa05c2589cc31419216f179f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/style.css",
+      "bytes": 5328,
+      "git_blob": "b68a719bd00969da63319c5d5eb5da7a31aba83d",
+      "sha256": "e784276e4a3cf21e1790daf1aa750ea70d5be75f5fa97dfa209d4ae508d04b56",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "git_blob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/vendor/manifest.json",
+      "bytes": 231,
+      "git_blob": "93df42979eca602c83096b44f6e417fd203c4bf3",
+      "sha256": "46883e6b34129b858f2ccf9031443763ef12ca524737a8a62b3383bc34d60feb",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/vendor/viewer.bundle.js",
+      "bytes": 645860,
+      "git_blob": "8a7128e26d7ab1ebffd5bd3d52fb97e96304900d",
+      "sha256": "8f4551710ae5800067797dde2a137415f9e9eb09844f169036e92a97bfc3ce88",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-04/viewer.js",
+      "bytes": 7622,
+      "git_blob": "6b2ab08438e18e7fa43614efa2bc82dfe6996287",
+      "sha256": "30719177266756961c6d2198deab0c55c111cab434e81e58cf20563120631cb1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/ART-DIRECTION.md",
+      "bytes": 5632,
+      "git_blob": "0418e7700ab831a5812d29951803eee3e7dca1b0",
+      "sha256": "1f789b7581c4dfe497dd3c5a0bee77c2216d69b5711b216f3e06158c49168dd4",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/README.md",
+      "bytes": 6033,
+      "git_blob": "4615d6b5aab92e750aa0d58b0a236dcec6b4fb9c",
+      "sha256": "4328edf83f1c2dea63dfab3340a483d348d6d94b846b76cb4dee4742004a4fa3",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/attempt-a/provider-source.json",
+      "bytes": 565,
+      "git_blob": "7d02337de8a36033ef74e57006f176342335be50",
+      "sha256": "3b4df014beb0e46a13412df6fe9d3a35a475d0c903654ffd00ba91b2580c8d8e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/attempt-a/render-eye.png",
+      "bytes": 1056711,
+      "git_blob": "347d08d924da760fadaead25827562fe24b1393d",
+      "sha256": "80267a8f4c6a03ab8ed440fc308a89028d3114ab7dca3bfa125c65e919da51e3",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/attempt-a/render-overview.png",
+      "bytes": 1093485,
+      "git_blob": "d9f5d5b9ca79235e4ac2ca3270a08a2f827f23c8",
+      "sha256": "654f32d4a1e3444c0f34f156148b79febc2b7d782f20c2cf3f46916b463280a9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/attempt-a/render-repair.png",
+      "bytes": 1515849,
+      "git_blob": "9002448455efa9e8176b839e4516decc09af1669",
+      "sha256": "64768b74cd77f6d6241e46ac2d4cb5074e28bd471ad965dc631cf23421715387",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/attempt-a/scene-manifest.json",
+      "bytes": 1859,
+      "git_blob": "1ad45d8f2bd168f4db148dc5b845def10da7afdb",
+      "sha256": "d1350bd042a434bf17e126ed91f9e81883b576849e6120d2f2997a9f7c984bb0",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/ben-vac.glb",
+      "bytes": 14938948,
+      "git_blob": "2fd7198cefd020c6785e4cd6b03171a3e3b8d3df",
+      "sha256": "1161c36bb238e0a98ff382c79a22d61311ea5b3f23d5a4aec9f22bcf01ede27c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/provider-source.json",
+      "bytes": 565,
+      "git_blob": "7d02337de8a36033ef74e57006f176342335be50",
+      "sha256": "3b4df014beb0e46a13412df6fe9d3a35a475d0c903654ffd00ba91b2580c8d8e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/render-eye.png",
+      "bytes": 1056711,
+      "git_blob": "347d08d924da760fadaead25827562fe24b1393d",
+      "sha256": "80267a8f4c6a03ab8ed440fc308a89028d3114ab7dca3bfa125c65e919da51e3",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/render-overview.png",
+      "bytes": 1093485,
+      "git_blob": "d9f5d5b9ca79235e4ac2ca3270a08a2f827f23c8",
+      "sha256": "654f32d4a1e3444c0f34f156148b79febc2b7d782f20c2cf3f46916b463280a9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/render-repair.png",
+      "bytes": 1515849,
+      "git_blob": "9002448455efa9e8176b839e4516decc09af1669",
+      "sha256": "64768b74cd77f6d6241e46ac2d4cb5074e28bd471ad965dc631cf23421715387",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/scene-data.js",
+      "bytes": 19919161,
+      "git_blob": "42e9b771e7349161fa12dd4d6ca2f41ed0578529",
+      "sha256": "a9b5a749a9683ed8e340ce92c55ec34265e2019f4b6d57b330cbdc17caf2f5d8",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/scene-manifest.json",
+      "bytes": 1859,
+      "git_blob": "1ad45d8f2bd168f4db148dc5b845def10da7afdb",
+      "sha256": "d1350bd042a434bf17e126ed91f9e81883b576849e6120d2f2997a9f7c984bb0",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/assets/scene.blend",
+      "bytes": 14665281,
+      "git_blob": "8f7629ec8d70e7f289bd32b5881757c0d01025d2",
+      "sha256": "561f858b68af869348be8e0a12bb592c7f77410d02fc178a619d223ca1f09528",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/browser-check.py",
+      "bytes": 18519,
+      "git_blob": "c8881f319853cc042f5da24c60f8ab5cea768e8d",
+      "sha256": "b4f0343cf86a290fc9734bfa55cdba5ef22b89017ed6a10d2aaecaf54f9bf39e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/build-viewer.mjs",
+      "bytes": 1759,
+      "git_blob": "e2f7aa00365f26e3296ade69eed9ad6e173d8424",
+      "sha256": "ffb2c30ddb380c874270301a58faf60765a44b6c8e1384c2558623c8c35e411e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/index.html",
+      "bytes": 5392,
+      "git_blob": "c7393cd29d58ea1d2a710cbc947ce2f9318bf048",
+      "sha256": "dde797514c4ffecd083163cbba8b587d36d598784522456740ac8c28d896e15d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/model-brief.json",
+      "bytes": 4170,
+      "git_blob": "22b5a7daecedd3aa07aea4c9f44c8d2bb5a8a8bd",
+      "sha256": "9349d8f8b18e8a0e889d7019c544df0bd23f86d3b11545cb3c2c563cdcadcea9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/package-lock.json",
+      "bytes": 14857,
+      "git_blob": "60f60ffb4f2a6b33d1e192c32d6dd687405c7e7e",
+      "sha256": "20dd9907ef1f7ce8930ec7173900b7403006a9c5492ff2e2f6e6a43900a38f10",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/package.json",
+      "bytes": 315,
+      "git_blob": "b48472a7f5b39bd4afd500ae42b489b6e28144f7",
+      "sha256": "e68e01f70e98c7036e054bcb555cfb6e3a89ca28e94e591988ba880312fa014b",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/prepare_model.py",
+      "bytes": 6182,
+      "git_blob": "0fe74aeea919af9dd3f9d988f249955bd0eb2a4b",
+      "sha256": "dc52018e216a830a9c2df07f89eb0526ad713ed2c585beb2be48590e63fb1004",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/style.css",
+      "bytes": 5414,
+      "git_blob": "47f6f57dbb643ea6e609600c942dfe6ba115330e",
+      "sha256": "ccfbe08dd630e90f3b9afc750efe9000974436621457a582a90f2f06c28708af",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "git_blob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/vendor/manifest.json",
+      "bytes": 231,
+      "git_blob": "939a28049fe5f4d7697184ce468b439b8795ba57",
+      "sha256": "70c8de9664709adbaff2eeb6c9de7dbf0ecd1cf547fe154c131de036a2996045",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/vendor/viewer.bundle.js",
+      "bytes": 650329,
+      "git_blob": "c10bb02ef1c1a0ca2306828061bf03ca3b128410",
+      "sha256": "89331cebe62f22e91285364a090794f59506bc7d6711ac0b14122a26ad33742f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-05/viewer.js",
+      "bytes": 8905,
+      "git_blob": "06aed5403dfcf2f2fd4d635dab688da01ee4eccd",
+      "sha256": "cba7970fb9a48bce04d24c3617a0824463b8c8f3549c65f210dd32032f45bae9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/ART-DIRECTION.md",
+      "bytes": 5114,
+      "git_blob": "065c35cb682542abf40f3f84cc3fe4375c72c0b5",
+      "sha256": "c5bee1800b5991bdc361151d8ece1e33648a8639837568605ef76a3fd0ab0dee",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/README.md",
+      "bytes": 2959,
+      "git_blob": "923889d64b8480d63a88de867d6cffd0da86877a",
+      "sha256": "c20b3efc2f606130971a7390a615496e5f14810aa085e809b8a169f338619adc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/assets/a-oblique.png",
+      "bytes": 3337506,
+      "git_blob": "646a6c88ec3ba3a4964d1608a2f1219de8cf705d",
+      "sha256": "1fc2531d539f7946327effe14f47a565e7b343ea6539b2cc2b989c03d5a34bf9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/assets/b-grounded.png",
+      "bytes": 3262144,
+      "git_blob": "260a755deb0f2e0f4a3d619ed28fc1aebc2d2d7f",
+      "sha256": "d35e52342a972903fd2f51c6f9fbe6cb49fbb7ea6e1f92265231f44cf86f73c1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/assets/c-sideview.png",
+      "bytes": 2604084,
+      "git_blob": "94894cea54ffec1ba97dbc988a59d8a4f55dcfe5",
+      "sha256": "f90cc71aab92b40d149d75f35fe1617dc0a04d4db973fc5b6519b55b9c7db138",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/browser-check.py",
+      "bytes": 6480,
+      "git_blob": "bbd0169294c5659fd239c1ab4dcad86370798191",
+      "sha256": "aa503a6ce2426dfda64064e04c6a21bc4bcc2f967527ba13c5069a6bcbd51f19",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/gallery.js",
+      "bytes": 4138,
+      "git_blob": "375d4b75d03a0dd17127c7d8450b97f92403eca0",
+      "sha256": "33921a98b863eb53587e8126ea3004be23e356dacbefc40225fcc935aaef0a20",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/index.html",
+      "bytes": 7137,
+      "git_blob": "d6d6d1e2578de63e3d37de17bf7c5cfe2280b103",
+      "sha256": "c4716a713f9d6441cdad158b3ceac989004117764cbe05d150e55f284943acee",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/prompts.json",
+      "bytes": 6892,
+      "git_blob": "162082f64a1b963be5653aba35780f5d51d04e9f",
+      "sha256": "8453d1cbdaf3ad2f28b2219f21c4427f656e9265737efeb99520ce6cfdc2d66e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/provenance.json",
+      "bytes": 1385,
+      "git_blob": "7cdcc907a628277108f7049e10043f17be435dca",
+      "sha256": "07907512f766bff0ffcfff1a20ed84e66751c465491dc3ad52197906d72ec032",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-06/style.css",
+      "bytes": 7724,
+      "git_blob": "72d27ea2c2784efddc1ae392a51f254479df5900",
+      "sha256": "a5b406e893d592e449b70e3d923e97f735703656f99cc5612240118eed8818e2",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/ART-DIRECTION.md",
+      "bytes": 3463,
+      "git_blob": "873ed7ccf733eae7c75cafb698ff533c83f15ce8",
+      "sha256": "bacedc5546bf155ce15d87bf99cb8cfd1f48631b4ae1b9653d300c07cf56e62e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/README.md",
+      "bytes": 2879,
+      "git_blob": "07aa530d9278d21aa3b723af25437dc0661d18ca",
+      "sha256": "c623fe679b53c2a1251a4084752a3005855587986280725639b44daf08c317a0",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/assets/a-woodcut.png",
+      "bytes": 3517780,
+      "git_blob": "94a0e44a03f072d3dea49212880a3fdd720cb3a5",
+      "sha256": "5197585f2f4ec48c1b9fb3afa8db6a29f93d979a674bf722ffe6be0f4d1b456f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/assets/b-pixel.png",
+      "bytes": 2845408,
+      "git_blob": "ebd3fe0173db1363fb38212be53832c29c461592",
+      "sha256": "54af55426f622cca00f738f68373a0bff3145a967e8a74fabed4c505aacc6a27",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/assets/c-papercut.png",
+      "bytes": 2902455,
+      "git_blob": "576b5ebf6a22d42545b025ac42b3695f143377bc",
+      "sha256": "b9067309c333cb27907eb22cd83b1b994512dfee646472b00647318b3107fb6a",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/browser-check.py",
+      "bytes": 7430,
+      "git_blob": "3e0bbfe495d942193b4a43b966a7217c646a04b5",
+      "sha256": "90a75462b9b6a243c7568741b9aa523e8cdcda5aef997cda1c346dbd60dbdf4f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/gallery.js",
+      "bytes": 4730,
+      "git_blob": "b20997f19403825660ed41a3829f7779634076d8",
+      "sha256": "22cf6ea3df79906a980c7ace74395f38ba95e8a3cf09db74b523f9bd516b3a50",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/index.html",
+      "bytes": 7758,
+      "git_blob": "2a33d09dece5be22999f2924e4cab7931d769c9a",
+      "sha256": "c5298f0befcbb68e470f82ef25c9a335354aa7ba39cf10192423f298ed30d0ff",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/prompts.json",
+      "bytes": 6910,
+      "git_blob": "b2c2c5531dde0ede149fa7fdbd87fca1bdf503db",
+      "sha256": "2fce63a38611ab601927d1ec6fe1e7c6f92198305df317c6ee370824b29abf90",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/provenance.json",
+      "bytes": 1397,
+      "git_blob": "77ea04d10a537f545457c8b424a7810fcfb3be8f",
+      "sha256": "160411cd740edbe47a5aa175fec368df7299c2c3e2822263871f61b45407b86e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-07/style.css",
+      "bytes": 7936,
+      "git_blob": "5114254e8ebcb8a7c5ebea4997ae9373b0d6791b",
+      "sha256": "f48d0998e8c3f982912d03d21e6f453d9ff7fa0336428b7513ddbcf3b37655fb",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/ART-DIRECTION.md",
+      "bytes": 4062,
+      "git_blob": "421b4b068991cdc93300cfe51cb81c2f7d57f14e",
+      "sha256": "439e578e89a461907d5311ef267ce27d4648ab88b0b5f7799cd83ae7ccc09844",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/README.md",
+      "bytes": 3306,
+      "git_blob": "3c9237992b515e27f89aa412dcd93d90fa0666cc",
+      "sha256": "18e5df3595c9bce68dc40a38abf013f2ac68428a415f77a7794789d081e79ee5",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/assets/a-cel.png",
+      "bytes": 3319749,
+      "git_blob": "6df8671e6c963e656ca18c6fc371a35fbe2a571f",
+      "sha256": "07b96f0ece5c05a9c0027eebd9a7ab5fa255993f09cbbb52e81da6735860ee08",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/assets/b-woven.png",
+      "bytes": 4392234,
+      "git_blob": "74863372c2ccfff49221b92e53206610ab653d97",
+      "sha256": "48928385e5ea435ab32a6b6cfeafa67a363e4ed422c6b81c6114dd577129051c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/assets/c-faceted.png",
+      "bytes": 3100516,
+      "git_blob": "07ed82aa5c52c60102156125d7126748a019dcf3",
+      "sha256": "96ce6793b5d7905b2220e64a4440211671896b02ff172ac8869140c65e5b63cb",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/browser-check.py",
+      "bytes": 7738,
+      "git_blob": "159123dd7b0d190f958a91a467ad2c7b904c7774",
+      "sha256": "70dba2d152cd1dca60cb0daf57d11732f22c3bc37466556ad3b1f9b8f3997a93",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/gallery.js",
+      "bytes": 4481,
+      "git_blob": "684a651910c50903ee61d22b3adac612520c029b",
+      "sha256": "0318b09a6172e8ac984adcdfa3cd5df9e03446d4c7e28fa5eef93d394695d4a7",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/index.html",
+      "bytes": 8265,
+      "git_blob": "dcbe81f1383567a1acb0f342534f1c0eb6d4c0a0",
+      "sha256": "0dd9f8b3cb0b107e3692d761c640ece99d5c5304dc47ef2e97c8d1f286323098",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/prompts.json",
+      "bytes": 8006,
+      "git_blob": "fa639f607dcaa5fcbd369f048b0da01edfb65a7c",
+      "sha256": "1c6f3e0034e556a534096814b64236b831aa498dad78ca6f0f9f0cee1b0394d5",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/provenance.json",
+      "bytes": 1452,
+      "git_blob": "8f31804b9bee3feab630595f4541e32866d6153e",
+      "sha256": "fda447db7166991556fbb9b74a8dfd87a3254063853b32cd2962fca3e7f7c585",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-08/style.css",
+      "bytes": 8172,
+      "git_blob": "ad8ac631f30b1d4380c5eab43d2d6f8fa830b2a0",
+      "sha256": "60ea35a65a592fa5943b2675a9e722a809a0b2298939ebf63c93042776010fce",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/ART-DIRECTION.md",
+      "bytes": 6557,
+      "git_blob": "dc114b8459d40f7e1f2a57aaab2908ddadea3f48",
+      "sha256": "7efabd33e4fdc01fc31b8ea5955150664987458bdbb09cef56606eafb8b9070d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/README.md",
+      "bytes": 3560,
+      "git_blob": "4129ec036c883f88fe34e1e28002af99f1e0eb96",
+      "sha256": "e587c5c3811417aff395d48fd66461237aa4dc6c7384f7b36b29f2442754bbf0",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/assets/a-lacquer.png",
+      "bytes": 2654321,
+      "git_blob": "585fa4baaaa10d9203790e170a39b1f25492cad7",
+      "sha256": "f15e9b30987d917a94f756c01f99b555da3ed811959eb498ecbe47be134caebf",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/assets/b-bronze.png",
+      "bytes": 3275580,
+      "git_blob": "e4db36a0427dd87201ae76e7b1e232a6efec8b98",
+      "sha256": "4d1602b3c557655a12ff76f033bf45f31e99d7aeca3601ed3de8e98d916a8d8a",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/assets/c-ink.png",
+      "bytes": 3196819,
+      "git_blob": "46771ca237fb2b9681eb7b75cea5522bc55dbf1b",
+      "sha256": "e4bc6389fa20ab1017aa1f8bbf406e0e7c749a92a1534e74d1cc1effc2f3de65",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/browser-check.py",
+      "bytes": 7285,
+      "git_blob": "98739a8b6ff917eb7c3a57f8c69aa685db8bf87f",
+      "sha256": "4b70fa989c1efc1a637be8dca10e821c115e6befcceb1176e494c5d6228baeef",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/gallery.js",
+      "bytes": 3966,
+      "git_blob": "8aa4861d484d6f627e72f4e69f79fc2036642070",
+      "sha256": "b38907b280f0d3c0e9dd2fc243a66dc1edf21f50179bb71bc83c00abce4c5912",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/index.html",
+      "bytes": 8091,
+      "git_blob": "b973be1bbb4f141fbf2dd96653204f9843c55096",
+      "sha256": "3e60a30f86af394b3234f316fbdf50526bc3580fe5e2c94f788a3797b8f6f6da",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/prompts.json",
+      "bytes": 12069,
+      "git_blob": "025efb8e1d218d194858b56d8f4f485fd90b43c3",
+      "sha256": "8a643ac1324f30bba32f1ef220cca8ab5a5a563bde20662b8b6b44c95e65bc8e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/provenance.json",
+      "bytes": 1431,
+      "git_blob": "30da35a8b83ddef269f25855c70243afe67e2389",
+      "sha256": "53a0832439a9cd51074a733b72761b602c8985cd3df5679928ce28c8b68df2bc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-09/style.css",
+      "bytes": 7387,
+      "git_blob": "92c168a3b906acbdf8de26fab8875cb4a57ee59b",
+      "sha256": "89dab0bd7921f473c04055452a3f212051d51c2e3199a9b20f7d858e0a23c241",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/ART-DIRECTION.md",
+      "bytes": 5715,
+      "git_blob": "e9d04ac9bd32d0c9971ba0d3422e74ae7b5600af",
+      "sha256": "e0110bb7bcace9643c31d25fb359d27535ce3864551415c8e7c08d8ce747d468",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/README.md",
+      "bytes": 3476,
+      "git_blob": "e29639d9d622d22792f1166f653eb60956e5ffea",
+      "sha256": "220edcca9a5f51649ce5159797e355bae1c550b8ef549f885d3d2aeaf3416d42",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/assets/bong-roi.png",
+      "bytes": 2816182,
+      "git_blob": "ec24da399addef64b43526d2900261ba1d4f4586",
+      "sha256": "ef56bb6b718cd997d2fb4cf52f0f3a36d1086e2f619ba6d2ab8179fa0279b7db",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/assets/men-cham.png",
+      "bytes": 3019187,
+      "git_blob": "bbc613b55668ee9652e5f3d0143f1ab5e3fb61c1",
+      "sha256": "bad50a9ec5169d43a736513931c1f0705a8813c484e047b23049fe373f2aed08",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/browser-check.py",
+      "bytes": 7303,
+      "git_blob": "a594ce25e337f289ec467e4b7ddc0ba2e8765eb6",
+      "sha256": "35e0403eaabc0988ab26f9b2815c6b38a591190d0060e5c42dc5c7dad2da8a7a",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/gallery.js",
+      "bytes": 3868,
+      "git_blob": "b4b4b7a295b036c80f68c4c51b35a7e044b13490",
+      "sha256": "404d07a09651957bdc4500ed1c717c38b501181f35c82c5e49611995f25db6a6",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/index.html",
+      "bytes": 7658,
+      "git_blob": "381442e16b937b3e7d5c5bfae9d9b2323bf10be8",
+      "sha256": "a4c3a5bba0f15e05e48898cb1bf3fe1712c060b159e95e610c11cfff9be82da8",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/prompts.json",
+      "bytes": 8340,
+      "git_blob": "705ee40784ed1098302d6d7df17fee2e9444a884",
+      "sha256": "8ab6844c1bc6099810556aa660cf452500cbbeb600d3b625cc99a7efe1f1e032",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/provenance.json",
+      "bytes": 1090,
+      "git_blob": "eb336c93fa99cb8578a519596569e0f8dfbda224",
+      "sha256": "a389194ec11c9d10c81b916e5049cbe0cedb0b845293da18ca0b762074331951",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-10/style.css",
+      "bytes": 7387,
+      "git_blob": "b96a2f6b328264d76406b8cb9b35552bfde82b89",
+      "sha256": "2b587ea4965b783f36b9dc9075b69d6abee75bf01f0dea339586e76b348d38a5",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/ART-DIRECTION.md",
+      "bytes": 6791,
+      "git_blob": "0bb991cab6e87621e7000730f41bba046c3a0c29",
+      "sha256": "73aecbd8739718f0472540c755375fcca57b6e0740fdf0447686e9cf12668206",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/README.md",
+      "bytes": 4850,
+      "git_blob": "e170cb880073678339d25d294056fd855ad93126",
+      "sha256": "b0fd57554eb41524b30127978530e0bf77da05a9acbaa6b92a7532aa5540016c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/assets/anime-life.png",
+      "bytes": 3119204,
+      "git_blob": "6e1751ad7236a762ef998eec5918b62f9f27d433",
+      "sha256": "9a50274d9136455cfc6b0fd4746b446a18fad0c7d3c706403828584acce16faf",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/assets/layered-25d.png",
+      "bytes": 2850873,
+      "git_blob": "8fb9ae892086de9f5eafee9601ee6c15510dcfc0",
+      "sha256": "17a52cfc1a9b100b0eea072df16f0e1f935ca5ae464fc43b55102fa74198936d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/assets/pixel-life.png",
+      "bytes": 2932210,
+      "git_blob": "675974af13fe82eae49e8050ff0f5ee1d80b5166",
+      "sha256": "d1efb98b7ca6579654c5ff1fc584950df88769d754ad998630cb3c764f917771",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/assets/stylized-3d.png",
+      "bytes": 2940325,
+      "git_blob": "f844891c7815592a1aa98e9479d9fe684f044934",
+      "sha256": "fede293f1c4c473e405e4f5eca63b101ae34028362c4d32fae6d4c3d76e201d0",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/browser-check.py",
+      "bytes": 7412,
+      "git_blob": "2e378734713bbd69b774f229a928fcb8c5c9d220",
+      "sha256": "f5fe8be4d3fef1b81b4b28e2b3c0834bb002273060ed9648041dffc8d751d7e1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/gallery.js",
+      "bytes": 4755,
+      "git_blob": "99b130aad369104aa7fe717ee18bbb42223dcf5f",
+      "sha256": "dd66d9aa1ff4e4af209777ecccc2841b13725059e2bd20be3cca25566369ffad",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/index.html",
+      "bytes": 9662,
+      "git_blob": "c6ef6d68b7c773dbb411dfe9141075f593faa827",
+      "sha256": "9c8a53ca77caa444dc1053ec3ae9f746f8c3627bfd25a335968a32395121994c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/prompts.json",
+      "bytes": 16015,
+      "git_blob": "53fd97980759625e18b66a64dfc275c50045a806",
+      "sha256": "fb2c19ade754a5a462010a313a87ec58b6cf0c04a6760824cc835f6c272fd238",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/provenance.json",
+      "bytes": 1874,
+      "git_blob": "c1ca4b037ccdd3ca6539dcec2c15f8a2c148e656",
+      "sha256": "8459d34370dbdbeb169dd72c27930e36ea721729d759c7e4adb613dee060158f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-11/style.css",
+      "bytes": 7701,
+      "git_blob": "0ebe662cfab3e2278e0a11c6b29baa52d5777e69",
+      "sha256": "0badcfa1acfc482d9938c582c506c4f9ff35ac5db81c06c6ac7381141a1b6072",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/ART-DIRECTION.md",
+      "bytes": 13914,
+      "git_blob": "3504c7dd3f9e20b8b82a50a1e5c37fe76eb2b190",
+      "sha256": "60c6cbef206c087f33c9f2bf46f799b8c384402c3dd3e16e50ae86714dddae53",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/README.md",
+      "bytes": 4175,
+      "git_blob": "24f0604d177ecceb1fbe8811691c051b26a8f5a2",
+      "sha256": "1a6d51beae4e411b0fe5e38fec63bb8c1d6e1b561877b68ecd8c73438c6db403",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/assets/charcoal-night.png",
+      "bytes": 3079135,
+      "git_blob": "7b66b83646a0d85fce24b27d0d9fc2e7cc0ca295",
+      "sha256": "d74e6834f34eb902367f8cf7f93e5c5c190f01ddf7208fbbbdfc922459d57260",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/assets/clay-craft.png",
+      "bytes": 3360538,
+      "git_blob": "343ea4d181c402646b8cd1f4cfac9bd8bd9d7a65",
+      "sha256": "bfe03d865bbdc245c44c0734e14094470e59e543e1200188462383eabe3c176b",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/assets/clear-line.png",
+      "bytes": 2920236,
+      "git_blob": "d7c94a5cf24269f662662397f58224272ce28371",
+      "sha256": "df02e0dff09fd690ebd936612b1a88ad3bb8182b11350786463ab775204e3f34",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/assets/graphic-animation.png",
+      "bytes": 2274488,
+      "git_blob": "9bdb8c0d3b96769507bb6bab4cb99d06638b5a4e",
+      "sha256": "ae5b9a102a93f12643408f7227c3b6ddfc6df47e24ffaab1bf0fdf647d09043d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/assets/mineral-fresco.png",
+      "bytes": 3663723,
+      "git_blob": "e0dca8d692b36a58b7efef98036228eca89c25a2",
+      "sha256": "239bb1fd951b0b2f8a27d10e1db25be05c9857cd41523e9543efb18c5e9775c9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/assets/retro-prerender.png",
+      "bytes": 2772654,
+      "git_blob": "f62540192b8fe0a09df243293bb880b37631f265",
+      "sha256": "26ebbd4503c9886ff2070bfc588e2517acbf7b8f2366f0f73bf5504d9814ed7e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/browser-check.py",
+      "bytes": 9548,
+      "git_blob": "be2691b568a68be720a9f9686d0cde1f42c6dd21",
+      "sha256": "22b52a00edb4efba0716f30de785be8557233c88d67db1dcac41c560610b8627",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/gallery.js",
+      "bytes": 5466,
+      "git_blob": "2b5fc422463544479641bac2eaa40e5784dbb680",
+      "sha256": "88f3cc6c66e1ad91b0890a0cf034c95c23a5c919b6a4c3725a7909b7c70ba8e7",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/index.html",
+      "bytes": 13197,
+      "git_blob": "ed1a921cd90a4191eb85ef65982cb7148eb14fcf",
+      "sha256": "3117b00f92fee0c0f64f1cb7f5cc9adcf5e5e5b57c80cc9c18c8d6f4b8f7a19f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/prompts.json",
+      "bytes": 23931,
+      "git_blob": "a185c0ddd9bf927e476644356ef4d7a34f937cdb",
+      "sha256": "2602907f73de5dd39d1fd590c793b502f84de1a63c3604002c6e92c4fc07deaa",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/provenance.json",
+      "bytes": 2506,
+      "git_blob": "031fa64fe2c7825db6e95f2229ca6f9f2ff53a3b",
+      "sha256": "6e20f88c77159e484e5976f4d44dbea1f9d2bf93342d05c0e58c7e26b15cc557",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-12/style.css",
+      "bytes": 9018,
+      "git_blob": "849c48b006161f15b4e2a4c9c9d06663df145fb1",
+      "sha256": "62f1d60a9c983ad2b15e68b128be400dc7d6c706b029dd24a7bf3e85612fd679",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/ART-DIRECTION.md",
+      "bytes": 15464,
+      "git_blob": "d7a8df1f0bf7b40ac4a2de6f718b05076908f895",
+      "sha256": "d27a039d2968b3b54f4222a59195354c755fce0877f7606e9e242d35e492b875",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/README.md",
+      "bytes": 5217,
+      "git_blob": "d873dca8a2ed1e2e59c34b6a8772f4f03c918ed9",
+      "sha256": "da09b4c905432754beb0f5f41f6f79737dce524979ed7bf94c602ff9c14f4237",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/assets/block-dialogue.png",
+      "bytes": 2113612,
+      "git_blob": "6255f58ff14e6fead63ff64e559940c7fcf4e84c",
+      "sha256": "323a2c7fc4f55bc83d668d79e95512f73bf258644f1773b421da4531e66328a1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/assets/block-world.png",
+      "bytes": 2221567,
+      "git_blob": "cf2f46e519599e3f1716be2f1c9afb6ca6486fae",
+      "sha256": "280850a7d465be0a64e490a3972530eaa75414a6b9c507af541c0221291fc2fc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/assets/frieze-dialogue.png",
+      "bytes": 1606103,
+      "git_blob": "e5ae2138454dd87878292a8128278ee5acd64e3d",
+      "sha256": "7e4616eae8781d32154e6b9f22ba82b3d6ec396b315afc03221262edc4882051",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/assets/frieze-world-v1.png",
+      "bytes": 1942521,
+      "git_blob": "888b82bb15027c785c73f617a54209cfb19caccd",
+      "sha256": "e80851d7bd704975f567ac277488099e10976014e40f9bd9b9ab79a9d9109fb9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/assets/frieze-world.png",
+      "bytes": 1551610,
+      "git_blob": "a031441e6b3da7ebd3c657326a7b5a62c9089bd6",
+      "sha256": "de38781ff13fdf8dbc1c4872ef7979b545b797aa37d1dd7f275a1c7da80947ba",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/assets/near-dialogue.png",
+      "bytes": 2014045,
+      "git_blob": "ed328495ea4085cbbea064401237d4faf4cf8be2",
+      "sha256": "41a1ddb8d4c87a794dbd39a9dce820fbe44f481fcb5aa41cc1de8aa8fb0b9382",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/assets/near-world.png",
+      "bytes": 2306507,
+      "git_blob": "11c9ac2d303497036720a6748a750d4ac9e0542e",
+      "sha256": "0aa7a44c7e788c69298f1bfbb32ca21696a5d598eb85a2869b0d23faa427c28c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/browser-check.py",
+      "bytes": 12912,
+      "git_blob": "732579162fd2c6014443162b48d55dd2f430911a",
+      "sha256": "379cc9c777efde5b1e6092392a7a9ecb29cd3e68b45104cb9c930448461c9d59",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/gallery.js",
+      "bytes": 6174,
+      "git_blob": "6528ac3424a875f7eb8b8e4b9ce8c5af4a82dc61",
+      "sha256": "8fe23c227f1106c0b5f599a8bb615fbc1d08a50481d3b8d211e79384d7441098",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/index.html",
+      "bytes": 12576,
+      "git_blob": "9ab3a3ae2010cc924811ca079f294edcac891446",
+      "sha256": "3f0fffeaec0f475694a3d84d88859ebf41bb515f57db48237e51559570d888dc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/prompts.json",
+      "bytes": 36131,
+      "git_blob": "a3cfee247c0c7338b84e29442f6ba89e4a4d147a",
+      "sha256": "87e982f6d4b9132c50798c41974812a6d2cb96e2ab2ef5730c8aef2c49f951c1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/provenance.json",
+      "bytes": 4832,
+      "git_blob": "d768326186801e6cfe8a0a044ee397c9bd1ba00b",
+      "sha256": "de790a2ecda7243fca7d0eb2bba06d494a21a8c2d05519a83a60bb0f5336b8ed",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-13/style.css",
+      "bytes": 7744,
+      "git_blob": "79c0d932b257c1640c1a48804977665705a77d6e",
+      "sha256": "69fdb5d808fe2120e8eb87e38a3dbc22586f75c97f103a263dd8f76edce2a9e5",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/ART-DIRECTION.md",
+      "bytes": 16103,
+      "git_blob": "df527e1bbcaba8a62060a365acaa3d879bbb901c",
+      "sha256": "d04aeceed279c64fcdec560524c0828de193dffcf08e9ab70edda1d76e411009",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/README.md",
+      "bytes": 4704,
+      "git_blob": "5ed54ce4edf535148e46f1c9889e6b506e28f494",
+      "sha256": "de245a3067d3ffd778fa46f501369e0d19fc15f33e3b396ce15d83fdc5d33e1d",
+      "verification": "source_commit_only",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/assets/comic-life.png",
+      "bytes": 3341787,
+      "git_blob": "e6acad49c9815ec1127f6bff1ef80cb4959c2d13",
+      "sha256": "c4a210a9bdc72142b4836cd85f10e2a3b729f61afae7a312a06750501dffbd53",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/assets/craft-first-person.png",
+      "bytes": 2211531,
+      "git_blob": "3bd30df84442bba8d5ee8d6e5e1aa4ee34b1ea24",
+      "sha256": "67c751386b7bafa3cff327abc8f66d3b1093846272230da677c8258574e71ba6",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/assets/earth-monument.png",
+      "bytes": 2377606,
+      "git_blob": "549cf9b7bbb2aa06202e1a6b97129d738846d74e",
+      "sha256": "c1abbcec80b686a39429f845877596ee3e6b00756b84f26f0317235a0db540e6",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/assets/glyph-world.png",
+      "bytes": 1933353,
+      "git_blob": "992f3d79c7349fbcf6d354008d328ae2f821318f",
+      "sha256": "bfa54a2fb322e865dcb8c1ed24230cb5c6577bdd5c0e844eee414747ce25cba9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/assets/living-grid.png",
+      "bytes": 1950191,
+      "git_blob": "35546cac22c6577169697d4a70a159a1575ed06c",
+      "sha256": "ae48033a8d73f9d8efb7efbd0e50a83052c68f87053b39d4dd384a99958b58e7",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/assets/round-world.png",
+      "bytes": 2098690,
+      "git_blob": "719a29d1c4514f301baace6edb0cc927be9e5836",
+      "sha256": "f4b9771507a410d50ce25383e809b75e1bfdae6e09156cd4e83c4ed8cc21cfa1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/browser-check.py",
+      "bytes": 10982,
+      "git_blob": "6f3de2fffd2a4e1e63e6b55f192ea17433542033",
+      "sha256": "8195dbc5f63bf05cae804dbcbc252c0deb3ca4604ef20cbc288f505ee2f7ef45",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/gallery.js",
+      "bytes": 5612,
+      "git_blob": "5b246b48a14eace9a7e0914f4fd5d9648385e4ca",
+      "sha256": "2c15b15e7630bf2f6e67a4e546ab076a46a529ba032945cff7ee84917555d800",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/index.html",
+      "bytes": 13532,
+      "git_blob": "27b99dc4a252266df60bca8befccdcc2add0f242",
+      "sha256": "e98aafcc12cac6a22e5816055af3eab9fbc29e55b6340f168d6c0563186a645a",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/prompts.json",
+      "bytes": 20189,
+      "git_blob": "fa7836e3b20466a0d89552b153d3e2f1e083c739",
+      "sha256": "85f167b2c06cfd59fb97c0eccb6c846accb9620110a68b37586e3871927df3c7",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/provenance.json",
+      "bytes": 2951,
+      "git_blob": "2dd183cd1f89c5d935232a148f1b702256f0b4cd",
+      "sha256": "2f4784c1dcc40465567289fb690a00cd53fae21fe842fed0b578d0c83e8b0a34",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-14/style.css",
+      "bytes": 7575,
+      "git_blob": "06d77107c1ebe25e428ab39d908341013d966781",
+      "sha256": "4bbc68051e41987eff03e5a23db2339890e09899d279c0c334487f711e8f052f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/ART-DIRECTION.md",
+      "bytes": 17699,
+      "git_blob": "7bc81beccbca0ca12568f17205606515ec772f2f",
+      "sha256": "f655d85f69ed5e3e0ce37de6c9ca3bce232c6a374910ee648b2812f83c6d886c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/README.md",
+      "bytes": 4887,
+      "git_blob": "9b7aacdeebaf2706cf654a5db82c1af92f81549a",
+      "sha256": "2d17aeebf5acf65d5ec3febc8aa6d09ea245826a63f63b1298db7b4c92d47e1a",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/assets/cubist-space-v1.png",
+      "bytes": 2642410,
+      "git_blob": "acbf929579f697cba482d8ba7bf8653831cee03f",
+      "sha256": "a23abf3f4daff22333eb552e54a5e0b8fd0189e359533e2fdb2ac2c1bd6dedd2",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/assets/cubist-space.png",
+      "bytes": 2025916,
+      "git_blob": "21a3c42a21655096e1a4d8983244fa2548443fe9",
+      "sha256": "8ca07b27523552626f1a3eba89a86b860e2e3490f17870e2427441a11dc42501",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/assets/mirror-water.png",
+      "bytes": 2601741,
+      "git_blob": "adc83d2578547eca5bb4db83af2eb69ade135dcc",
+      "sha256": "bba31bec670bfd49c007f20d8810b9f63121db7e9b3901385d2cac1dff08ee0e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/assets/rolling-world.png",
+      "bytes": 2647726,
+      "git_blob": "eec96c76bfff2c3f78d4b3bfbd6ceb0fac667872",
+      "sha256": "3a19f11e43901162e662ea41e539d8982587d4469b71e9c78bd83d34a6535c70",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/assets/shadow-world.png",
+      "bytes": 2220746,
+      "git_blob": "2b1955e2f42d427604c1359fa5f5c71d35c9df74",
+      "sha256": "cdbea351c5a8b4571f41f53e598695f9046d7e8bfc93517404e29f5d2792baab",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/assets/tidal-mosaic.png",
+      "bytes": 2546402,
+      "git_blob": "080c1c530a1f3ba3526a179595c768d671678b08",
+      "sha256": "97b7c0721652a9fdc2f6b32f9b2e072bd187ae92132d2ddf7a018f131d5389c3",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/assets/vertical-earth.png",
+      "bytes": 2666802,
+      "git_blob": "0e36999ddc1384f00345d6d0485307dbf5d0223f",
+      "sha256": "992700589d3f662af44cb05734afb17d30cae4cd2f87a61f653b7fe15de91f20",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/browser-check.py",
+      "bytes": 12348,
+      "git_blob": "77ae510b5d81f40b1dd705d023649a261d9f66a7",
+      "sha256": "45aa5fea59ce0c86a409490d1447f40823f020503127bf79b1477a933029e65c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/gallery.js",
+      "bytes": 5793,
+      "git_blob": "7862516eb36fca5e9019685e9defeccf1b82ff1a",
+      "sha256": "ab8b79bbe114e5f7f1f4181df354d48ea25dc30fbc2b698091746944f923e25a",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/index.html",
+      "bytes": 15666,
+      "git_blob": "17639a4147440f6be931799b12bc6069f402f853",
+      "sha256": "dc0acbc8747d5dafc4876565cd52184d29c325d6778221d9c40eed62c9b21d6e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/prompts.json",
+      "bytes": 20174,
+      "git_blob": "5ec9e8e0284eefcea58c82c9a6e031d76323e8d0",
+      "sha256": "34f67db7991c05c4505af8ff69075ce6a4ecc628719795c0ccf75695edd6d9fb",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/provenance.json",
+      "bytes": 3799,
+      "git_blob": "d5a12f28c76e46c6aca9bb093d6e9e58ae69ad25",
+      "sha256": "0863568b481c2606a85bdd7e88a0f2c886c81a112ee7d7aa4a48b4246d788bd0",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-15/style.css",
+      "bytes": 8225,
+      "git_blob": "acc8aad6edba62afb9fd32385276828116556fb4",
+      "sha256": "e1a9267ca7d70064a576204696b157c4f131c5096e790ef6a4fc5b08b4c25cf1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/ART-DIRECTION.md",
+      "bytes": 15695,
+      "git_blob": "d8271372a1b024138984a05fe4559c7812e53474",
+      "sha256": "4933481a5c0a175601ebc899751e02e4d040b9266e5503e9693dccec020db02d",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/README.md",
+      "bytes": 4530,
+      "git_blob": "3849614a0d7df16d31e16672837202b209e90165",
+      "sha256": "9ef2a35c651e2997d344268b83ef92fc0eaa963b6f69893dd3b7cdda26f53c48",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/assets/folded-village-v1.png",
+      "bytes": 2455565,
+      "git_blob": "ab2fd0c5ea1b4ba0ee6a46f09df3700584986ac2",
+      "sha256": "806f1fe0f18aa4b3ef69bf3e4cef3c2e85c16334193f78b37a272a46fecbb0a9",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/assets/folded-village.png",
+      "bytes": 1786390,
+      "git_blob": "ed408a410441b1a43bfea0c2c2c3625a68bcb76c",
+      "sha256": "76dc0efd1d87df2af4d37675753228bc8580c2ccf162ec19a38f94726d297ec2",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/assets/line-volume-v1.png",
+      "bytes": 2077772,
+      "git_blob": "6f7181308c9d708b4248498fbf2991a9245164aa",
+      "sha256": "7b0011647189a5e96a010e4044ca16ab9ed6365ca6fe15e0ba638a9885fc859e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/assets/line-volume.png",
+      "bytes": 2176262,
+      "git_blob": "135082d50c2becb7a14ddc8b6d58d6ab8fc0b3bc",
+      "sha256": "2febee4cfa099ca2dcba8192cfedf5830f022c912a5f0087d0fdd6cfaab70712",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/assets/living-section.png",
+      "bytes": 2075407,
+      "git_blob": "c69d55715a09f7362d9bb764593b487022fab927",
+      "sha256": "28b8a74526e864f0d6ca31c21afe90d5d030fb9a113a39b9a81344eb8ee582da",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/assets/rain-sculpt.png",
+      "bytes": 1985015,
+      "git_blob": "d8091691e126309a898e4a8d00460b93f2151246",
+      "sha256": "9aee0ecd3912ef15062dbce0ee41d3d31677041540b7df8dcd7b737345cf7e6e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/assets/voxel-life.png",
+      "bytes": 2014384,
+      "git_blob": "d5388cb80777909954f8c59883fc5a0a315b98e3",
+      "sha256": "23191a0f3d9ded2b61f3e08305543acf55e6c98b94653a5863f95ec877a9e497",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/assets/woven-world.png",
+      "bytes": 2415068,
+      "git_blob": "1d19e954d9c278e84877beb8a9535b98779c5066",
+      "sha256": "163621a33922e1a07700f8f882cee88e6e2179c166fe9386d260f148b97f57f7",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/browser-check.py",
+      "bytes": 13100,
+      "git_blob": "14fc1dcfb1669bdcf0f43b2be5c8ed6d8b41ec11",
+      "sha256": "8dab88bba7864cb66a3bf6238572ec045b2ae1ef5817e1dfa3838ad2976418fa",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/gallery.js",
+      "bytes": 5929,
+      "git_blob": "f523cbecbf9aae27aab7df059a720eee28eb6d74",
+      "sha256": "5f72ede2b0ebf57c818d25f3672185217c22c3f23be911bcd6908e5cea072df5",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/index.html",
+      "bytes": 15754,
+      "git_blob": "d96b012e1d6db41540a282b4d4cf63cc4c91492f",
+      "sha256": "8d6cd70103e1235114d168010c7490414c339d4083d71747c4acdf2dc9330ff7",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/prompts.json",
+      "bytes": 21216,
+      "git_blob": "7ca4a16a6a8e2622159fc9d3a83f2d295ad6d2e8",
+      "sha256": "ee987289c27b2995ef386d0de659ff4cc5a42e431fa944721f43d07d6a45a335",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/provenance.json",
+      "bytes": 4375,
+      "git_blob": "1f128ff4e4dae5ae2c46c70f9e97e1dc0da96236",
+      "sha256": "a8da922950e91f1bc7e8527ba8cfac26b84e6398e109b927b3e8092027652b2c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-16/style.css",
+      "bytes": 7587,
+      "git_blob": "29d8ffc249e53773f657c9e4c49afa40493758c7",
+      "sha256": "db860400228df3537b5c60bd0d3b98877730085702594bdcfeb290af8c27c605",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/ART-DIRECTION.md",
+      "bytes": 15854,
+      "git_blob": "454e1790113edfc70aeb0710344d7ca526d435d8",
+      "sha256": "ccae0f2f715552f15996dbca6aaf72dae3c9818468290a314e52f7b25f245678",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/README.md",
+      "bytes": 6060,
+      "git_blob": "ef5265051fa84b99fb67d3c9be6bb0881df08295",
+      "sha256": "a6898d2ba5d45adfc51e0f240f76f782a63cf196aa871d85f01f43f8c723d75c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/close-pixel.png",
+      "bytes": 2271603,
+      "git_blob": "39239cdeb5f0e2864eb4a8ecc3ff002c5c179d82",
+      "sha256": "747740d023d029458f06ae46fc5650c02807044be766239209ce0582d0da0631",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/earth-corridor.png",
+      "bytes": 1964500,
+      "git_blob": "7914917d47909751fd317113b5bcfeb142a41494",
+      "sha256": "d0a7e5a24ca21015dbbe6d725caade4977864bf5ab8d57fd6a31318d30191c6e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/gentle-arc-v1.png",
+      "bytes": 2607718,
+      "git_blob": "d34fb6443c342b68b9f95eb6865797eef54ea229",
+      "sha256": "a5d8a5df53da66e86cce50d1908ab01e1756d37c59a0b07a0a387963dd4429c3",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/gentle-arc.png",
+      "bytes": 1517990,
+      "git_blob": "0ffd6b5534299d80a6023ff06439b453e5d5f214",
+      "sha256": "af8e8cf07a5fde5018977d97e02bc4715bb3673079b3235304117749702865cc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/gesture-flat.png",
+      "bytes": 1515352,
+      "git_blob": "43a889acf52599cd79f0b922655eb1b32c04aac7",
+      "sha256": "aef71f99ccf720cb8f79dab91ff4a2e94131cb30f7fd0763b840b32a7f7d1141",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/living-relief.png",
+      "bytes": 2641414,
+      "git_blob": "f003c8fdb5767a2eaea33dc9d42588fdbbee8569",
+      "sha256": "d766a03dbe8bf0f765574f05bd77f5134fab2ce67049a6d189091b248866b7c6",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/low-water.png",
+      "bytes": 2004376,
+      "git_blob": "7afc14a77864078b683c467d89d14c1e80a70c6b",
+      "sha256": "dd33509f1c50bd821ac1d32c70627fb35e8b4a3de052f3d57916d5cb1980844e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/negative-space.png",
+      "bytes": 2060920,
+      "git_blob": "5d5085b56dc3074c022a6771f40f246c73a6c77e",
+      "sha256": "77eda05d7e7772b05da47bd78cc30d38366b6face5f6cf829f97ea33ee6eef60",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/nested-frames.png",
+      "bytes": 1799815,
+      "git_blob": "41c2c362d2f2f4c92c0488f54db1c0361396d4cf",
+      "sha256": "ae9a61e42f8c428229d80e0519d7137afd5f97daa902772cd4ec851b461144ca",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/river-negative.png",
+      "bytes": 1855503,
+      "git_blob": "21994449ba4ef628e173ab791a16c0ae35c82df6",
+      "sha256": "7ee94bd13d3215c7879e60e9df82d5c5d96fa15cdc7ae634a33b1569f919cffc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/assets/tangram-people.png",
+      "bytes": 1853299,
+      "git_blob": "51e61eacb576bad4469b2149e94238ea846d34c6",
+      "sha256": "88a2bbee83caab4b29253f25d75fdfe182e8f039ca76dbbf4264edb4c1a00feb",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/brainstorm/01-SPACE.md",
+      "bytes": 11895,
+      "git_blob": "db00ebfc96837c8a6e4055e45dd1da5ea7309a22",
+      "sha256": "c4b6933393bf7ee91ccfed82aaefb38002378005babe051dcd2493761592306f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/brainstorm/02-CHARACTER-UI.md",
+      "bytes": 10374,
+      "git_blob": "339a0ca54127abb4d3fee6f54674a46a144310ca",
+      "sha256": "7a7bfc36d17fefce1a8831fa9f219f40a4d2fe13a2677ce34a72abe408a37bcc",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/brainstorm/03-HISTORY-CRITIQUE.md",
+      "bytes": 10123,
+      "git_blob": "5112ed5f5ddc6e51bd83cf63fa5519bd8cf4a3ac",
+      "sha256": "3e15716463a0f83fbd2f4a1ec0f1876cee11d507927a37f44ece4df0fa811cb8",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/browser-check.py",
+      "bytes": 13362,
+      "git_blob": "6119b82d24e191a977d9903b24e84ee50e369c36",
+      "sha256": "9840b6fb82ede7964f0083b9522f5238add1f323c805a44347ad383e7585b1d7",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/gallery.js",
+      "bytes": 7559,
+      "git_blob": "bce17205668ff79a119fdfbd2db909aebbf20898",
+      "sha256": "e846387578700327897353971c51aeb2208a46441d4135346fd7485dfb33c9d4",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/index.html",
+      "bytes": 20674,
+      "git_blob": "a7ec9a7dbe250e0a5de4079299a0f9440d83cc28",
+      "sha256": "9800170eccbe062de2216dbee62a8f8feea0d2d0c7ec2ea717d043a34b4b94a7",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/prompts.json",
+      "bytes": 27656,
+      "git_blob": "d5b1975e46be18113a83c132966e0fa384b5ac28",
+      "sha256": "51391eefd31f47f7197c7131b5c9228304e5ed8287faf657afe1c8635b5d8146",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/provenance.json",
+      "bytes": 5821,
+      "git_blob": "1bd2b86709ac8eb4934a823c8e25963028f7930e",
+      "sha256": "2be5dd21e536d317ee492042283a69cf11e76f9e81012c8da8f0a1523b35ff45",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-17/style.css",
+      "bytes": 8061,
+      "git_blob": "ad40cdbe31ec716c218d287d93086686c07c277a",
+      "sha256": "87c315b48e6f62648b4bed37758004007032f2cc07882de7989c2110d643fefa",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/ART-DIRECTION.md",
+      "bytes": 19001,
+      "git_blob": "4795562b2a3a0ed2167487c90221c108caab229c",
+      "sha256": "74f3fa47e1c0ad1a233f8238d1d759f8ff5aa490383e6a17cfc67498849251e5",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/README.md",
+      "bytes": 6622,
+      "git_blob": "00d85f8afcfd91fabfa9137c83e6586190324a7d",
+      "sha256": "0cb3abd52026158703e1ea0d087d7a38c8bd67c65ff7c41ccf0a38db07e7717b",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/cel-adult.png",
+      "bytes": 1707741,
+      "git_blob": "e4083b4bc4c5c4efe82da6fdb4fbb38aa8797289",
+      "sha256": "43330766b3607972d77c142b1385464484e645afff435b8436ad1b209914bdcb",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/column-forest.png",
+      "bytes": 1832392,
+      "git_blob": "7d8b7d926faf8eeb545563c49391390790a2c441",
+      "sha256": "4340f19fb7088726a592ed1eb37ace24a4b4604f498057af5316bd49b72207bd",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/contour-step-v1.png",
+      "bytes": 1936365,
+      "git_blob": "4ec4639b2acdc388362ec16f9d1e76afde8787e5",
+      "sha256": "f54c71f23aec199842eabdddf09a296cdbca61a5e476e70fe4aae1cabf7ae91c",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/contour-step.png",
+      "bytes": 1658810,
+      "git_blob": "4c80396a1aed73f784d196653c922e9a8f531016",
+      "sha256": "34a701e55cfe51f74b6f62e1e6c547db8507f3e6628afb39e0ceb2336472d3be",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/ink-mass.png",
+      "bytes": 2021115,
+      "git_blob": "3af705dbb451a03db70002895146fc24d34ea1d8",
+      "sha256": "980ddcb335e7bb0c4e8f13408eb9c2340cd2183898270cc84d41d162cf672de4",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/long-diagonal.png",
+      "bytes": 1830845,
+      "git_blob": "179cef33413a9dbe0042709a94ab385e35fff287",
+      "sha256": "227afce81d5ef6970f14814ebba1935895f9c73e927f210e0ff1dc0e53f35a3e",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/one-bit.png",
+      "bytes": 1341460,
+      "git_blob": "9fc419da44032b1f3aa296c6ee213b4d05b0b824",
+      "sha256": "391dab8121bdb089c69ac338f7cdef5f37b2f6ed1006358be5581deb81589e29",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/open-yard.png",
+      "bytes": 1684400,
+      "git_blob": "29e4cfcc7d68ed423968c52363507d7f4cae4364",
+      "sha256": "94df2c6cb049390e6c1d441759e8dd5ab519510e9943f4683afea57a8c4ed7f1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/plan-profile.png",
+      "bytes": 2423882,
+      "git_blob": "280b6833819663f4759671a8d4ee7869e4fddaf2",
+      "sha256": "9263f282b0e5f77c763918911b83fa8615227c9e1acdea9ee1051520e8ac8920",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/retro-facet.png",
+      "bytes": 2193913,
+      "git_blob": "b0c0f93c7472abbfb0776484340f9356e6ac5ecc",
+      "sha256": "7d55486b8c4f741aa144a1dbce567f533a73cecf71acf04305404919dfc249fb",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/ribbon-body-v1.png",
+      "bytes": 1666190,
+      "git_blob": "ca9bd9f1f33d89b00400dfd33b4038de9eb43417",
+      "sha256": "10b86ccc3070a0ec4e9b4dc14a989828d5ef30d592ffa7e377854b06dbd1a3a1",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/ribbon-body.png",
+      "bytes": 1748281,
+      "git_blob": "75213ec358b1fa3fa2d2d31746de10e282a9e651",
+      "sha256": "33328a3c99b4793bdcedf534360c879845d43a6c4b863fc2e9cac7a195a1430f",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/shoulder-craft.png",
+      "bytes": 1730426,
+      "git_blob": "15e2ba6547dc46842a9e3e4f3624276c9e64c7ad",
+      "sha256": "2ddab8d60f8025095304988941113f2e567cc4f8345410910f8bed417ae19122",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/single-stage.png",
+      "bytes": 1670239,
+      "git_blob": "6947457d60209fb118d1b7a8f81335e1255d1e09",
+      "sha256": "51fbfe9385a79198ddbb7daad303d86dce8be517ad77e7ee9ad7afd630d311c3",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/soft-mass.png",
+      "bytes": 1744444,
+      "git_blob": "7ed3da219d5cebd6943e70189f64f7089cadd7f8",
+      "sha256": "3434339f83db16227427f1639441806fdb99e95534493d21de6c0b10f94b65b2",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/square-gesture.png",
+      "bytes": 1563740,
+      "git_blob": "e5f40aeaf0856dfed04d8db75cf0b07ee7356df4",
+      "sha256": "936e51f66ab7c360e72b39bd554f40a8a03f02c0acf4b9ba571c99081ea98520",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/assets/three-bands.png",
+      "bytes": 1756916,
+      "git_blob": "7e023ff120ed43191ec28a1c8e74e16c60a2728a",
+      "sha256": "28c0bb5ddecc2a0be20e7e84a1da1eb4d786e4d89bbf2c11e265dac595173518",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": true
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/brainstorm/01-SPACE.md",
+      "bytes": 8497,
+      "git_blob": "a8d578c43ddaf3367f40e2af4a47e120a0346268",
+      "sha256": "2795bf9b6fee78970171a25a73fc9d7f3bbb9b575e8a0b0c4487d4d1470e19be",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/brainstorm/02-CAST-UI.md",
+      "bytes": 9177,
+      "git_blob": "a2e6563b354541fa9e10b749ee2f795ddb36996e",
+      "sha256": "303679a6ceae721b3270d7a4e6ce198f8cf69cce79353c35ed82f992607fb248",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/brainstorm/03-RANGE-AUDIT.md",
+      "bytes": 7345,
+      "git_blob": "2cafbc8641974724149a905927328f78590d71a0",
+      "sha256": "878340d2635921fa7a3f11df8d9214452d507faa03bd90e76366d9b03355add0",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/browser-check.py",
+      "bytes": 14605,
+      "git_blob": "a0700e898d1a9a7a9381dfb19a760e1653779faa",
+      "sha256": "98854ccb16375cb923e6bb4616195590442e58d1137a0e4f49dae0eafd7011c5",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/gallery.js",
+      "bytes": 9868,
+      "git_blob": "3290853e88cf5374d9aabb29d191559043d33664",
+      "sha256": "fe85ddfa8ad4ed7fd1c9130503710d7da6e959a0aab0ce19e3c53b78f2d7ff91",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/index.html",
+      "bytes": 26398,
+      "git_blob": "c4430c7ed98af18809ad82beaf90a22ed4e7f0b6",
+      "sha256": "7bcdc36b23a9a67c2b24e3b3bf63454ea0a3df09e88155b11413f8e2087d47f3",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/prompts.json",
+      "bytes": 33511,
+      "git_blob": "ef55a3c1eb4bbf519ea2f7d9f07b184443b43925",
+      "sha256": "e2ceb487f2b035de155abfe8c33cc948362e70dbd6de493e963d1fca3b9c4edb",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/provenance.json",
+      "bytes": 8601,
+      "git_blob": "3705dfb99a40eedeb3e71aa704cb94645089bfa1",
+      "sha256": "12b0a51a792a2107d5dd708f2dae0fd442fdb8fa480cc54a90cb602bfa7bfab0",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    },
+    {
+      "path": "prototypes/sprint13/experiment-18/style.css",
+      "bytes": 8165,
+      "git_blob": "7f02e624a0aecb33f99e885ede44f52d0561a753",
+      "sha256": "c0c4e55ac09a6e70812422e533a11e3f11bf013c163feef6f3e15b4344d093ec",
+      "verification": "source_commit_and_worktree",
+      "immutable_visual_asset": false
+    }
+  ],
+  "exclusions": [
+    "This manifest and newly written approval/ADR/closure documents (avoid self-hash loops)",
+    "WORKLOG and generated exports",
+    "Ignored caches and runtime results"
+  ],
+  "limitations": [
+    "Inventory and hash verification are not a restore drill, runtime hot-swap or save compatibility test.",
+    "source_commit_only rows may differ in the current tree due to deliberate documentation banners; use the recorded Git blob for historical content.",
+    "Future art candidates receive their own profile/inventory and do not overwrite v1."
+  ]
+}

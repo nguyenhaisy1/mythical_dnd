@@ -2,6 +2,14 @@
 
 Dùng [Backlog](BACKLOG.csv) làm danh sách task có dependency và acceptance. FND-01 và DOC-01 đã có từ lần khởi tạo. Sprint 1 đã triển khai FND-02/03/04; Sprint2 có FND05–08 in-memory TransferResource; Sprint3 đã có event/causal journal và idempotent consumer; Sprint4 triển khai scheduler in-memory; Sprint5 có SQLite atomic current-state commit/reopen cho headless. Sprint6 triển khai FND12 snapshot/recovery/new-file migration; Sprint7 triển khai FND13 headless replay QA; Sprint8 triển khai FND14 content registry profile kernel; Sprint9 triển khai FND15 diagnostics; Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Headless evidence và các gate còn pending được ghi trong backlog. Module 28 giữ blueprint đầy đủ và Module 29 giữ 16 task Foundation nguyên bản.
 
+## Sprint13 đã chốt hướng; cổng G13 giữ khả năng mở lại — 03/11/2026
+
+Hướng hiện hành là **`earth-monument-2d-v1`: Đất dựng thành, nền 2D có cảm giác khối và nhân vật sprite**. Đọc [baseline mỹ thuật/G13](sprints/sprint-13/ART-DIRECTION-BASELINE.md), [ADR-022](../adr/022-earth-monument-2d-and-reopen-gate.md) và [approval register](sprints/sprint-13/APPROVALS.md). Chốt định hướng không xác nhận sprite/scene/UI runtime, origin generator, save trong Unity hay human playtest đã đạt. S13-A02/A03 là follow-up UI/Reveal chưa nghiệm thu; giữ random origin, không chỉnh xuất thân và không reroll tại Reveal.
+
+**Accepted / Reopenable** cho phép trở lại bài toán mỹ thuật ở Sprint13 mà giữ tiến độ phần độc lập. Mở candidate/profile mới từ code hiện hành, chỉ thay phần asset/camera/presenter/UI chịu ảnh hưởng, bảo toàn core/rules/content/stable IDs/save theo contract. Không reset repository về Sprint1, không xóa các thử nghiệm01–18 và không lấy bản engine cũ đè lên tiến độ mới. Nếu thay đổi ý nghĩa gameplay/schema thì cần ADR/impact/migration và acceptance riêng trước khi tích hợp.
+
+Khi được giao implementation, task đầu phải xác định contract vùng đi, mặt/tầng, che khuất, tỷ lệ sprite và camera cố định theo cảnh; query/command vẫn thuộc Application, thứ tự vẽ không tự là world truth. Áp dụng ngôn ngữ hình ảnh vào Bến Vạc/Tam Giang cho vòng sửa thuyền, không dời địa danh sang công trường trong ảnh14. Phải re-estimate đường2D sau kiểm nhỏ; ROM3D SPIN-036 không dùng làm budget/deadline2D. Quyết định này không tự mở Sprint14 hoặc thay các dependency/exit gate VS-01–10.
+
 ## Trình tự bắt đầu
 
 1. FND-02/03/04 hiện thực identity/time/RNG theo ADR-008 và specs/vectors đã bổ sung; không chọn lại wire codec hoặc tick unit trong từng domain.
@@ -49,6 +57,6 @@ Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai t
 
 [Compiler và cách dùng](../runbooks/SETTLEMENT-CONTENT.md) kiểm24actors/6households/4communities/8routes/24claims/24directedrelationships, tạo immutable authoring registry. VS02 full vẫnpartial: chưa8–12eventtemplates/eligibility, actor-specificobligations, randomprotagonist, routine execution hoặc gameplay. Không coi đủrecordcount là worldsimulation.
 
-## Forecast theo sprint — 26/10/2026
+## Forecast lịch sử theo sprint — 26/10/2026
 
-[Lộ trình hình ảnh và bản chơi thử](PLAYABLE-ROADMAP.md) bổ sung mốc dự kiến Sprint13 art direction/UI prototype và Sprint15–16 demo nhỏ. Đây là dự báo mới, chưa là release commitment. Client prototype giới hạn có thể làm trước VS07 đầy đủ; không thay dependencies hoặc exit gates của VS07/10.
+[Lộ trình hình ảnh và bản chơi thử](PLAYABLE-ROADMAP.md) bổ sung mốc dự kiến Sprint13 art direction/UI prototype và Sprint15–16 demo nhỏ. Đây là dự báo tại26/10, chưa là release commitment; sau chốt hướng2D03/11 cần đo/reforecast, không coi Sprint15–16 là ngày cam kết. Client prototype giới hạn có thể làm trước VS07 đầy đủ; không thay dependencies hoặc exit gates của VS07/10.

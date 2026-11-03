@@ -1,0 +1,146 @@
+# Sprint13 — Quyết định của chủ dự án và cổng mở lại mỹ thuật
+
+Cập nhật **03/11/2026 · SPIN-037**. Trạng thái hiện tại: **Sprint13 đã được chủ dự án chốt ở phạm vi định hướng mỹ thuật; G13 = Accepted / Reopenable**. Hướng được chọn là **Đất dựng thành** (Experiment14, `earth-monument`) với **nền 2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`.
+
+Nguồn quyết định là yêu cầu rõ ràng của chủ dự án ngày03/11/2026, sau cuộc trao đổi về phương án nền2D và sprite:
+
+> chốt sprint 13 theo hướng này nhé, nhưng hãy để cổng 13 để nếu mình phát triển thấy không ưng ý có thể quay về sprint 13 để làm lại theo hướng khác, tránh mất hết những gì từ sprint 13 quay trở về sprint 1
+
+Đây là **approval của chủ dự án về hướng và kết thúc vòng chọn hướng**, không được suy ra từ CI, kiểm tra hoặc nhận xét của AI. [Baseline hiện hành và G13](ART-DIRECTION-BASELINE.md), [ADR-022](../../../adr/022-earth-monument-2d-and-reopen-gate.md) là nguồn áp dụng sau quyết định này.
+
+## Register hiện tại
+
+| ID | Mục cần chốt | Quyết định áp dụng | Trạng thái hiện tại | Phần chưa được nghiệm thu |
+|---|---|---|---|---|
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí | Lấy Đất dựng thành14 làm hướng tham chiếu; triển khai theo nền2D có cảm giác khối và nhân vật sprite, profile `earth-monument-2d-v1` | **Approved — art direction**,03/11/2026 | Không duyệt mọi pixel/palette/cast/UI trong PNG, chưa xác nhận bộ asset, hoạt ảnh hoặc hiệu năng; áp ngôn ngữ về Bến Vạc, không đổi canon địa lý |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Giữ client UX baseline làm ràng buộc; bố cục và tương tác cụ thể tiếp tục được hiện thực, kiểm và review trong task client được giao | **Deferred — implementation gate**, chưa nghiệm thu UX cụ thể | Không chọn toàn bộ UI Experiment01 hoặc09–18 làm UI cuối; focus, modal, chữ Việt, scale và actor-scoped projection cần evidence thật |
+| S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Giữ sinh nhân vật ngẫu nhiên có nhân quả; một actor/campaign, không chọn/chỉnh origin và không reroll tại Reveal; kiểm cách trình bày khi triển khai onboarding | **Deferred — implementation gate**, chưa nghiệm thu onboarding | Prototype giới hạn của Experiment01 không là full life generator hoặc usability acceptance; cần implementation và kiểm dữ liệu/tri thức theo baseline |
+| S13-A04 | Chốt kết quả Sprint13 và bàn giao | Chốt vòng định hướng theo A01, giữ cổng G13 để quay lại thử hướng khác khi phát triển không ưng; bảo toàn công việc đã có | **Approved — direction closure with G13**,03/11/2026 | Không tự mở Sprint14, không xác nhận playable demo, asset production, gameplay, Player build hoặc lịch hoàn thành |
+
+**Cách xử lý A02/A03 là diễn giải phạm vi bàn giao của AI:** yêu cầu mới chốt hướng/Sprint13, không chứa quyết định duyệt từng màn hình hoặc cách diễn đạt biography. Vì vậy hai mục này được chuyển thành cổng triển khai có acceptance riêng, **không đổi thành Approved hoặc Passed** và không dùng trạng thái Pending lịch sử để phủ nhận việc chủ dự án vừa chốt vòng chọn hướng. Khi giao task client/onboarding, phải đưa chúng vào task contract và báo phần chưa đạt; việc kết thúc Sprint13 không xóa các nghĩa vụ đó.
+
+## Cổng G13 và phạm vi có thể mở lại
+
+- **Accepted / Reopenable** nghĩa là hướng v1 hiện được dùng làm baseline và khả năng quay lại Sprint13 được giữ sẵn; không có một yêu cầu mở lại đang chờ xử lý chỉ vì cổng tồn tại.
+- Nếu chủ dự án không ưng khi phát triển, ghi yêu cầu mở lại G13 và mở SPIN mới trong Sprint13 cho phương án mỹ thuật mới. Nếu AI phát hiện vấn đề về sản xuất/độ đọc/hiệu năng thì ghi evidence và đề xuất mở lại; phát hiện kỹ thuật không tự là duyệt một hướng thay thế.
+- Tạo candidate/version mới cạnh v1; giữ nguồn, ảnh, các biến thể01–18, ghi chú, báo cáo, lịch sử nhận xét và quyết định. Không xóa các phương án còn lại hoặc đánh dấu chúng bị chê chỉ vì v1 được chọn.
+- Mở lại chỉ khoanh ảnh hưởng ở asset, camera, layout/presenter và adapter hiển thị theo impact review. Engine, rule, dữ liệu nội dung, stable IDs, command/query contracts và thành quả Sprint1–12/về sau được giữ, trừ thay đổi có task/ADR/migration được giao riêng. Không reset repository về commit cũ để “quay về Sprint13”.
+- Hướng v1 tiếp tục là baseline cho tới khi chủ dự án chốt candidate mới; chỉ phần phụ thuộc trực tiếp vào thay đổi mỹ thuật cần được kiểm lại. Đổi art không tự làm mất acceptance kernel hoặc tuyên bố save compatibility đã được kiểm. Quy trình chi tiết theo [baseline/G13](ART-DIRECTION-BASELINE.md).
+
+## Lịch sử trước quyết định03/11/2026
+
+Các trạng thái Pending/Changes requested và câu “không đóngSprint13” từ đây trở xuống được giữ **đúng như thời điểm ghi nhận trước khi chủ dự án chốt**. Chúng là lịch sử của từng phiên bản, không thay trạng thái hiện tại ở register phía trên. Mọi artwork cũ vẫn là ảnh tham khảo; approval v1 không hồi tố thành nghiệm thu tất cả sản phẩm01–18.
+
+Trạng thái chung: **Pending user approval**. Chưa có quyết định duyệt mỹ thuật cuối hoặc kết thúc Sprint13. User đã ưu tiên đào sâu14/1–3; ưu tiên nghiên cứu này không tự là final approval. AI không chuyển Approved dựa trên test/CI hoặc nhận xét của agent.
+
+| ID | Mục cần chốt | Phương án hiện tại | Trạng thái | Quyết định thật |
+|---|---|---|---|---|
+| S13-A01 | Hướng hình ảnh, màu sắc và không khí Bến Vạc | Thư viện Experiment01–18 và workshop SPIN-029;14/1–3 ưu tiên đào sâu, các phiên bản cùng được giữ | Changes requested;14/1–3 ưu tiên đào sâu; chưa Final approved | 27/10: bản01 chưa ưng ý;30/10: user đánh giá rất tốt14/1–3 và cho phép đào sâu, chưa chốt cuối |
+| S13-A02 | Bố cục và cách tương tác Reveal/World/Journal/Preview | Experiment01 browser UI; Experiment09–18 UI concept tổng thể | Pending | Chưa có |
+| S13-A03 | Cách trình bày xuất thân ngẫu nhiên và lịch sử đời sống | Experiment01 mô hình giới hạn cho UX | Pending | Chưa có |
+| S13-A04 | Chốt kết quả Sprint13 và phạm vi chuyển sang Sprint14 | Đợi sản phẩm/review và quyết định user | Pending | Chưa có |
+
+Khi có phương án mới, thêm tham chiếu vào thư viện với lịch sử rõ; không mặc định thay thế, loại hoặc đánh giá kém phương án cũ nếu user chưa nói. Nhận xét/finding chỉ áp dụng đúng phiên bản và phạm vi đã quan sát. Khi user yêu cầu sang sprint mới, nhắc các mục Pending/Changes requested; chỉ chuyển khi chốt rõ. “Tiếp tục” cho phép làm tiếp thử nghiệm, không là nghiệm thu.
+
+## Thử nghiệm02 — SPIN017
+
+User đã yêu cầu đổi hướng hình ảnh của bản01; không suy thành từ chối UI hoặc origin. Bản01 giữ nguyên để so sánh. Bản02: tranh raster có chiều sâu và UI ưu tiên cảnh; tất cả hình ảnh/UI thay đổi vẫn chờ chốt. [Báo cáo02](EXPERIMENT-02-REPORT.md).
+
+## Thử nghiệm03 — SPIN019
+
+28/10/2026 user nói bản02 đẹp hơn nhiều nhưng màu có cảm giác AI dễ nhận ra, yêu cầu thử tiếp từ nhiều góc độ. Đây là **Changes requested về hình ảnh**, không phải Approved bản02. Bản03 có ba hướng A tự nhiên trời âm, B góc chéo gouache, C đồ họa nét khắc. Giữ01/02 làm tham chiếu; ba hướng mới đềuPending. [Báo cáo03](EXPERIMENT-03-REPORT.md).
+
+## Thử nghiệm04 — SPIN020
+
+User yêu cầu thử tiếp và có thể tạo view từ3D, đính kèm ảnh B bản03 làm tham chiếu. Chưa chốt B/A/C. Bản04 thử actual3D scene với nhiều camera, render và viewer; Pending. [Báo cáo04](EXPERIMENT-04-REPORT.md).
+
+## Thử nghiệm05 — SPIN021
+
+User giao tiếp tục, dùngMCPHyper3D theo quy tắc. ModelA có output thật nhưng lệch brief nhà thuyền; lượt sửa providererror không trảID và user chỉ thấy modelA trongMine. Không coi user xác nhận link modelA là approval. ModelA/ý tưởng nhà thuyền vẫnPending, brief xưởng sửa thuyền chưa đạt. [Báo cáo05](EXPERIMENT-05-REPORT.md).
+
+
+## Thử nghiệm 06 — SPIN-022
+
+29/10 user làm rõ mục tiêu: không muốn tạo model 3D thật ở bước này; yêu cầu ảnh giả lập game để xem trước, có thể 2D hoặc diện mạo 3D. Đây là **quyết định về cách thử nghiệm**, không phải duyệt hình ảnh/camera/màu hay kết quả Sprint 13. Vòng 06 thử ba hướng ảnh A góc chéo 2D, B giả lập 3D gần tầm người, C 2.5D nhìn ngang; ảnh tạo riêng, không cùng scene 3D. [Báo cáo 06](EXPERIMENT-06-REPORT.md). S13-A01–A04 vẫn Pending/Changes requested; không mở Sprint 14.
+
+
+## Thử nghiệm 07 — SPIN-023
+
+29/10 user yêu cầu “thử ý tưởng khác”, nhấn mạnh “thử cả đồ họa”. Vòng07 thử khắc gỗ/làng mùa nước, pixel art/xưởng đồng và giấy cắt/chợ hoặc đêm hội ven sông. Đây là yêu cầu tạo phương án mới, không phải approval bản06 hoặc quyết định canon/gameplay. Đổi cả phong cách và bối cảnh nên nhận xét cần phân biệt hai yếu tố; [báo cáo07](EXPERIMENT-07-REPORT.md) ghi evidence khi có. S13-A01–A04 giữ Pending/Changes requested;01–06 được giữ nguyên.
+
+## Thử nghiệm08 — SPIN-024 và cách hiểu thư viện
+
+29/10 user ghi nhận ý tưởng tốt dần, yêu cầu nghĩ thêm và làm rõ: các version để tham khảo; sang spin/thử nghiệm mới không có nghĩa bản cũ chắc chắn bị bỏ hoặc dở. Đây là chỉ dẫn giữ thư viện, **không phải final approval** cho A/B/C hoặc Sprint13. Phản hồi bản01 chưa ưng ý và các nhận xét lịch sử khác được giữ nguyên, không áp cho mọi phiên bản sau.
+
+Vòng08 thêm ba hướng trên cùng cảnh nhà chữa trị bên suối đồi: A hoạt hình2D, B thế giới dệt và C ảnh diện mạo3D cách điệu. [Báo cáo08](EXPERIMENT-08-REPORT.md). Thư viện01–08 cùng tồn tại; chỉ ghi chọn/loại/thay thế khi có quyết định rõ. S13-A01–A04 vẫn Pending/Changes requested theo đúng phản hồi đã có; không chuyển Sprint14.
+
+## Thử nghiệm09 — SPIN-025: ngôn ngữ hình ảnh toàn game
+
+29/10 user yêu cầu ý tưởng táo bạo hơn, nhấn mạnh đồ họa xuyên suốt từ tạo hình nhân vật tới giao diện. Đây là mở rộng scope thử định hướng, không phải chọn/loại một phiên bản. Vòng09 thử bảng concept sơn mài, phù điêu đồng và mực đen/trắng+nét đỏ, gồm cảnh chơi, nhân vật/chân dung, vật phẩm/icon và UI trong ảnh. [Báo cáo09](EXPERIMENT-09-REPORT.md). UI raster chưa là UI chạy hoặc quyết định thay baseline random-origin. Thư viện01–09 được giữ; S13-A01–A04 chưa được chốt, không chuyểnSprint14.
+
+
+## Thử nghiệm10 — SPIN-026: không cố định ba concept
+
+29/10 user yêu cầu tiếp tục ý tưởng, cho AI tự quyết số lượng theo trí tưởng tượng thay vì luôn ba phương án A/B/C. Đây là quyền chọn phạm vi concept trong vòng được giao, không là final approval cho đồ họa hoặc Sprint13. Vòng10 chọn hai hướng Men chàm và Bóng rối, có thế giới/cast/vật phẩm/UI trong ảnh; [báo cáo10](EXPERIMENT-10-REPORT.md) ghi evidence thật khi có.
+
+Thư viện01–10 cùng được giữ. Hồ sơ09 đã được hai critic mới kiểm lại và viết report riêng sau gián đoạn. Review09/10 là bằng chứng kỹ thuật/hình ảnh, không tự duyệt hay loại một phiên bản. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật, không chuyểnSprint14.
+
+## Thử nghiệm11 — SPIN-027: thêm cách thể hiện toàn game
+
+User yêu cầu thử tiếp2.5D,3D,pixel,anime hoặc ý tưởng khác; ngày30/10 yêu cầu tiếp tục vòng đang dở. Vòng11 thử bốn bảng concept xuyên cảnh/cast/vật phẩm/UI, không chốt một phương pháp hoặc chuyển công nghệ. [Báo cáo11](EXPERIMENT-11-REPORT.md). 2.5D/3D và pixel/anime là hai trục có thể kết hợp; ảnh tĩnh không chứng minh parallax, model, animation, UI runtime hoặc grid pixel production.
+
+Cast phụ nữ lao động trưởng thành chỉ minh họa một cuộc đời, không thay baseline xuất thân ngẫu nhiên. Các bản01–10 được giữ; yêu cầu nghĩ thêm/tiếp tục không loại bản cũ hoặc là final approval. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật, không chuyểnSprint14.
+
+## Thử nghiệm12 — SPIN-028: yêu cầu ít nhất năm mẫu mới
+
+Ngày30/10 user yêu cầu “>=5 mẫu tiếp theo” và tăng cường thử nghiệm. Đây là giao thêm concept, không duyệt vòng11 hoặc chốt Sprint13. Vòng12 chọn sáu bảng toàn game: Đất biết kể, Nét trong, Vách thời gian, Ký ức CD-ROM, Đêm than bạc và Gió mảng màu. Mỗi hướng thử cảnh/cast/chân dung/vật phẩm/UI; [báo cáo12](EXPERIMENT-12-REPORT.md) ghi phạm vi và evidence thực tế.
+
+Đất nặn, cảnh dựng sẵn hoặc hoạt hình trong tên hướng chỉ mô tả diện mạo ảnh; chưa có model3D, pipeline sản xuất, chuyển động hoặc UI runtime. Không thêm lựa chọn tạo origin thủ công. Giữ nguyên các phiên bản01–11 để xem lại/kết hợp, không suy vòng mới là loại bản cũ. S13-A01–A04 giữ Pending/Changes requested theo phản hồi thật; chỉ user quyết định chọn/kết hợp/loại hoặc kết thúc sprint.
+
+## Workshop SPIN-029 — phản hồi định nghĩa đồ họa và cảm giác thời đại
+
+Ngày30/10 user yêu cầu brainstorming với các tác nhân: các mẫu còn thiên ảnh thật/minh họa, nhãn3D chưa cho cảm giác game mong muốn và cần vibe Văn Lang–Âu Lạc rõ hơn. Đây là yêu cầu điều chỉnh cách tìm hướng, không phải quyết định loại mọi bản01–12, chọn một style mới hoặc chốtSprint13. [Workshop](ART-DIRECTION-RETHINK.md) phân biệt dữ kiện, audit và đề xuất. Chỉ dẫn không lấy photoreal làm mục tiêu mặc định đã ghi trong hướng dẫn; các hướng mỹ thuật cụ thể vẫn Pending. S13-A01–A04 giữ trạng thái cũ; không có approval mới, không chuyểnSprint14.
+
+## Thử nghiệm13 — SPIN-030: triển khai thử ảnh sau workshop
+
+Ngày30/10 user nói “thử tạo thêm các ý tưởng mới” và khuyến khích tiến triển. Đây là giao tạo mẫu tiếp, không duyệt workshop, một hướng cụ thể hoặc Sprint13. Vòng13 thử Khối Lạc, Dải đời sống và Trong lòng làng với hai frame thế giới/đối thoại riêng mỗi hướng; [báo cáo13](EXPERIMENT-13-REPORT.md) giữ kết quả thực tế sau khi tạo/review. Cách gọi3D mô tả diện mạo đề xuất, không chứng minh model/scene đã dựng.
+
+Cast, công cụ, UI và việc dùng ngữ pháp văn hóa là minh họa sáng tạo, không thêm canon/character creator hoặc chọn engine. Thư viện01–12 và workshop tiếp tục được giữ; ảnh độc lập không có cùng geometry/camera tuyệt đối. S13-A01–A04 giữ Pending/Changes requested, không có approval mới hoặc quyền chuyểnSprint14.
+
+## Thử nghiệm14 — SPIN-031: tốt hơn nhưng cần khác biệt mạnh hơn
+
+Ngày30/10 user nói sáu ảnh13 tốt nhưng còn giống nhau, chưa có nhiều khác biệt/vượt bậc, rồi giao thử tiếp. Đây là phản hồi tích cực kèm yêu cầu mở rộng, không phải duyệt một hướng13, loại các bản cũ hoặc chốtSprint13. Vòng14 giao sáu hướng độc lập, thay nhiều trục tạo hình và UI; [báo cáo14](EXPERIMENT-14-REPORT.md) ghi brief, output và evidence theo thực tế.
+
+Giữ toàn bộ01–13 và workshop; mỗi ảnh mới vẫn là phương án tham khảo. Camera cong, ký hình, first-person hoặc bố cục truyện tranh không tự đổi canon/engine/gameplay. S13-A01–A04 giữ Pending/Changes requested; chưa có quyết định chọn/loại/kết hợp hoặc chuyểnSprint14.
+
+## Thử nghiệm15 — SPIN-032: ưu tiên14/1–3 và tiếp tục ý tưởng mới
+
+Ngày30/10 user nói ý tưởng1,2,3 của vòng14 rất tốt, có thể triển khai thêm, đồng thời yêu cầu những ý tưởng mới táo bạo hơn. Ghi đúng ba ưu tiên: **Đất dựng thành** (`earth-monument`), **Ô đất sống** (`living-grid`), **Làng vòng cung** (`round-world`). Đây là quyền đào sâu bằng ảnh trong giai đoạn hiện hành, chưa phải chọn một art direction cuối, cấp quyền tạo model/gameplay hoặc chốtSprint13. Các hướng14/4–6 và01–13 vẫn được giữ.
+
+Vòng15 giao ba nhánh từ ưu tiên và ba cách nhìn mới; [báo cáo15](EXPERIMENT-15-REPORT.md) ghi intent/output/evidence theo thực tế. Mảng ghép không tự là luật ô/hex; phép cuộn không là hành tinh; đa diện, bóng và phản chiếu không thêm vật lý, phép thuật hoặc nguồn hidden truth. S13-A01–A04 tiếp tục chờ chốt cuối; không có quyền tự merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Thử nghiệm16 — SPIN-033: thêm ý tưởng, chưa có quyết định duyệt mới
+
+Ngày02/11 user yêu cầu “cho tôi thêm những ý tưởng mới”. Đây là quyền bổ sung ảnh xem trước, không duyệt vòng15, loại các hướng cũ hoặc chọn một style cuối. Vòng16 giao sáu cách tạo hình: Thế giới dệt, Nét dây không gian, Làng gấp, Mưa khắc hình, Mặt cắt đời sống và Hạt khối. [Báo cáo16](EXPERIMENT-16-REPORT.md) ghi ý định, output và review theo thực tế; vật liệu có tiền lệ không tự là ý tưởng hoàn toàn mới.
+
+Giữ01–15, các biến thể và ưu tiên đào sâu14/1–3. Hình dây/mặt cắt/voxel/gấp không là luật game hoặc quyền biết bí mật. S13-A01–A04 tiếp tục Pending/Changes requested theo phản hồi thật; chưa final approval, chưa có quyền merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Thử nghiệm17 — SPIN-034: mười phương án từ học hỏi và brainstorming
+
+Ngày02/11 user giao thêm10ý tưởng và cho phép học hỏi/improve từ bản cũ, brainstorming giữa tác nhân. Đây là quyền tạo thêm ảnh xem trước trong Sprint13, không duyệt16, loại bản cũ hoặc chốt style. Ba nhánh thành đất/mặt bằng/vòng sân nối ưu tiên14/1–3; bảy hướng khác/cải tiến bổ sung khoảng lựa chọn. [Báo cáo17](EXPERIMENT-17-REPORT.md) cùng các note brainstorm ghi lựa chọn batch của AI, lineage và output/review theo thực tế; không biến chọn phạm vi thử ảnh thành approval của user.
+
+Giữ01–16, biến thể và cả phương án dự phòng chưa đưa vào mười frame. Camera thấp/âm bản/relief/pixel không thêm luật game, nhìn xuyên hoặc quyền biết bí mật. S13-A01–A04 tiếp tục Pending/Changes requested theo phản hồi thật; chưa final approval, chưa có quyền merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## Thử nghiệm18 — SPIN-035: thêm khoảng mười lăm ý tưởng
+
+Ngày02/11 user yêu cầu thêm khoảng15ý tưởng và động viên tiếp tục. Đây là quyền bổ sung ảnh xem trước, không duyệt17, loại bản cũ hoặc chọn style cuối. AI brainstorming/gộp cel–soft–ink trùng rồi chọn15tổ hợp camera/hình người/render/UI; lựa chọn phạm vi này không là approval của user. [Báo cáo18](EXPERIMENT-18-REPORT.md) và các note ghi intent/output/review theo thực tế, không nhận đủ15tên thành15phương pháp đã đạt.
+
+Giữ toàn bộ01–17, biến thể và ưu tiên nghiên cứu14/1–3. Hybrid/contour/dither/mặt cắt không tự thêm luật game hoặc tri thức bí mật. S13-A01–A04 vẫn Pending/Changes requested theo phản hồi thật; chưa final approval, chưa có quyền merge dev, đóngSprint13 hoặc chuyểnSprint14.
+
+
+## SPIN-036 — yêu cầu đánh giá ba mẫu không là chọn mỹ thuật
+
+Ngày02/11 chủ dự án yêu cầu brainstorm effort, khả thi, lịch và stack cho Đất dựng thành14/Hành lang thành đất17/Đường chéo dài18. [Nghiên cứu](ART-FEASIBILITY-THREE-DIRECTIONS.md) và route3D/M0 đề xuất không là approval để chọn/bỏstyle, bootstrap/assetproduction hoặc đổicanon/engine. Giữ01–18, biến thể, ưu tiên14/1–3 và trạng tháiS13-A01–A04 theo phản hồi thật. Hai critic độc lập đã review ở các lượt sau; critic estimate bị usage-limit lượt đầu rồi tiếp tục được, rootself-review vẫn là lớp riêng. ChưaFinalaccepted hoặc quyềnmerge dev/đóngSprint13/quaSprint14.

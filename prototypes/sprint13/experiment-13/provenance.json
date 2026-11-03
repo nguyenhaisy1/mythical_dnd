@@ -1,0 +1,134 @@
+{
+  "created_date": "2026-10-30",
+  "tool": "built-in image_gen",
+  "type": "three appearance directions with world and dialogue frames; six displayed PNGs plus one retained iteration",
+  "real_3d_model_created": false,
+  "runtime_or_geometry_evidence": false,
+  "external_reference_images": [],
+  "internal_reference_policy": "Per-image reference_assets and reference_sha256; built-in tool used those previously generated local PNGs as appearance references. No actual same-scene geometry proof.",
+  "prompt_source": "prompts.json",
+  "postprocessing": "None; original PNG bytes copied. No HTML game HUD overlay.",
+  "approval": "Pending user approval; additive reference library",
+  "images": [
+    {
+      "variant": "block-world",
+      "asset": "assets/block-world.png",
+      "source_generated_filename": "exec-e0648ae5-ee58-4e79-9465-c950722c6ab4.png",
+      "sha256": "280850a7d465be0a64e490a3972530eaa75414a6b9c507af541c0221291fc2fc",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2221567,
+      "prompt_collection": "prompts",
+      "prompt_key": "block-world",
+      "reference_assets": [],
+      "reference_sha256": {}
+    },
+    {
+      "variant": "frieze-world",
+      "asset": "assets/frieze-world.png",
+      "source_generated_filename": "exec-842e81d1-8e02-4199-9dbc-8332ce39a327.png",
+      "sha256": "de38781ff13fdf8dbc1c4872ef7979b545b797aa37d1dd7f275a1c7da80947ba",
+      "width": 1671,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1551610,
+      "prompt_collection": "iterations",
+      "prompt_key": "frieze-world-v2",
+      "reference_assets": [
+        "assets/frieze-world-v1.png"
+      ],
+      "reference_sha256": {
+        "assets/frieze-world-v1.png": "e80851d7bd704975f567ac277488099e10976014e40f9bd9b9ab79a9d9109fb9"
+      }
+    },
+    {
+      "variant": "near-world",
+      "asset": "assets/near-world.png",
+      "source_generated_filename": "exec-17f44ac9-8d00-4ff3-896b-175ac19529b6.png",
+      "sha256": "0aa7a44c7e788c69298f1bfbb32ca21696a5d598eb85a2869b0d23faa427c28c",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2306507,
+      "prompt_collection": "prompts",
+      "prompt_key": "near-world",
+      "reference_assets": [
+        "assets/block-world.png"
+      ],
+      "reference_sha256": {
+        "assets/block-world.png": "280850a7d465be0a64e490a3972530eaa75414a6b9c507af541c0221291fc2fc"
+      }
+    },
+    {
+      "variant": "block-dialogue",
+      "asset": "assets/block-dialogue.png",
+      "source_generated_filename": "exec-bfec27aa-62a4-45f7-899f-c163162f71da.png",
+      "sha256": "323a2c7fc4f55bc83d668d79e95512f73bf258644f1773b421da4531e66328a1",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2113612,
+      "prompt_collection": "prompts",
+      "prompt_key": "block-dialogue",
+      "reference_assets": [
+        "assets/block-world.png"
+      ],
+      "reference_sha256": {
+        "assets/block-world.png": "280850a7d465be0a64e490a3972530eaa75414a6b9c507af541c0221291fc2fc"
+      }
+    },
+    {
+      "variant": "frieze-dialogue",
+      "asset": "assets/frieze-dialogue.png",
+      "source_generated_filename": "exec-6bcdbc76-492a-470f-993a-7dfb8c09b58f.png",
+      "sha256": "7e4616eae8781d32154e6b9f22ba82b3d6ec396b315afc03221262edc4882051",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1606103,
+      "prompt_collection": "prompts",
+      "prompt_key": "frieze-dialogue",
+      "reference_assets": [
+        "assets/frieze-world.png"
+      ],
+      "reference_sha256": {
+        "assets/frieze-world.png": "de38781ff13fdf8dbc1c4872ef7979b545b797aa37d1dd7f275a1c7da80947ba"
+      }
+    },
+    {
+      "variant": "near-dialogue",
+      "asset": "assets/near-dialogue.png",
+      "source_generated_filename": "exec-ca2f53c0-58a6-409b-a314-246c9edc35af.png",
+      "sha256": "41a1ddb8d4c87a794dbd39a9dce820fbe44f481fcb5aa41cc1de8aa8fb0b9382",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2014045,
+      "prompt_collection": "prompts",
+      "prompt_key": "near-dialogue",
+      "reference_assets": [
+        "assets/near-world.png"
+      ],
+      "reference_sha256": {
+        "assets/near-world.png": "0aa7a44c7e788c69298f1bfbb32ca21696a5d598eb85a2869b0d23faa427c28c"
+      }
+    }
+  ],
+  "retained_variants": [
+    {
+      "variant": "frieze-world-v1",
+      "asset": "assets/frieze-world-v1.png",
+      "source_generated_filename": "exec-29b3c906-de98-4d5f-a3c9-2a57c8ef06fe.png",
+      "sha256": "e80851d7bd704975f567ac277488099e10976014e40f9bd9b9ab79a9d9109fb9",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1942521,
+      "prompt_collection": "prompts",
+      "prompt_key": "frieze-world",
+      "reference_assets": [],
+      "reference_sha256": {}
+    }
+  ]
+}

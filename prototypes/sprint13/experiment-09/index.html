@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mythical — Ba ngôn ngữ cho cả game · Thử nghiệm 09</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#scene">Đến bản concept</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Đầu trang Mythical">MYTHICAL<span>MỘT ĐỜI BÊN DÒNG NƯỚC</span></a>
+    <div class="header-tools"><span class="edition">THỬ NGHIỆM 09</span><label for="text-size">Cỡ chữ trang xem</label><select id="text-size"><option value="100">100%</option><option value="125">125%</option><option value="150">150%</option></select></div>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">ĐỒ HỌA XUYÊN SUỐT THẾ GIỚI VÀ CON NGƯỜI</p><h1 id="page-title">Một ngôn ngữ.<br>Cả một game.</h1></div>
+      <div class="intro-copy"><p>Sơn mài, phù điêu đồng hay mực sống: thử cách một phong cách đi từ cảnh chơi tới nhân vật, chân dung, vật phẩm và giao diện.</p><p class="notice">Bản concept tổng thể · UI trong ảnh là minh họa</p></div>
+    </section>
+    <section id="scene" class="scene-section" aria-labelledby="scene-title">
+      <div class="scene-toolbar"><div><p class="eyebrow">BẢN THAM KHẢO ĐANG XEM</p><h2 id="scene-title">A — Sơn mài sống</h2></div><div class="view-tools"><div class="switches" role="group" aria-label="Chọn ngôn ngữ đồ họa"><button type="button" data-choice="a" aria-pressed="true">A <span>Sơn mài</span></button><button type="button" data-choice="b" aria-pressed="false">B <span>Phù điêu đồng</span></button><button type="button" data-choice="c" aria-pressed="false">C <span>Mực sống</span></button></div><button id="enlarge" type="button" class="enlarge" aria-label="Mở bản concept A toàn khung">Xem bản concept toàn khung ↗</button></div></div>
+      <figure class="hero-figure">
+        <div class="image-stage"><img id="hero-image" src="assets/a-lacquer.png" alt="Bản concept A: ngôn ngữ sơn mài thử cho thế giới, tạo hình nhân vật, chân dung, vật phẩm và giao diện." fetchpriority="high"></div>
+        <figcaption><p id="scene-description">Sơn mài thử nối mảng đen, sắc son, ánh kim và nét khắc giữa cảnh, trang phục, gương mặt và các khung giao diện.</p><p class="image-disclaimer">Toàn bộ giao diện game nằm trong ảnh raster. Chỉ các nút xem ảnh của trang này có tương tác.</p><p id="image-error" class="image-error" hidden>Chưa tải được ảnh. Kiểm tra thư mục assets của bản thử nghiệm 09.</p></figcaption>
+      </figure>
+      <p id="selection-status" class="sr-only" aria-live="polite">Đang xem bản concept A.</p>
+      <p class="keyboard-hint">Đổi bản bằng A / B / C hoặc phím 1 / 2 / 3. Mở toàn khung hoặc ảnh gốc để xem chữ, chân dung và biểu tượng lớn hơn. Cỡ chữ trang xem không thay chữ đã nằm trong ảnh.</p>
+    </section>
+    <section class="comparison" aria-labelledby="comparison-title">
+      <div class="section-heading"><p class="eyebrow">THẾ GIỚI / NHÂN VẬT / CHÂN DUNG / VẬT PHẨM / UI</p><h2 id="comparison-title">Phong cách có đi được hết game?</h2><p>Quan sát nét, hình khối, chất liệu và phân lớp thông tin có liên kết các phần trong mỗi bản hay không. Khung trang này giữ trung tính; giao diện được đề xuất nằm trong từng artwork.</p></div>
+      <div class="cards">
+        <article class="card"><button type="button" class="card-image" data-choice="a" aria-label="Xem bản concept A — Sơn mài sống"><img src="assets/a-lacquer.png" alt="Toàn bộ bản concept sơn mài, không cắt mất các phần nhân vật hoặc giao diện." loading="lazy"></button><p class="card-number">01 / A</p><h3>Sơn mài sống</h3><p>Thử hình nhân vật dứt khoát, mảng màu sâu, chân dung có nét khắc và UI như những tấm sơn mài có điểm nhấn ánh kim.</p><p class="tradeoff"><strong>Muốn xem:</strong> nhân vật có riêng biệt, vật phẩm dễ nhận và chữ còn rõ trong ngôn ngữ giàu tương phản này?</p></article>
+        <article class="card"><button type="button" class="card-image" data-choice="b" aria-label="Xem bản concept B — Phù điêu đồng"><img src="assets/b-bronze.png" alt="Toàn bộ bản concept phù điêu đồng, gồm cảnh chơi, nhân vật và giao diện minh họa." loading="lazy"></button><p class="card-number">02 / B</p><h3>Phù điêu đồng</h3><p>Thử cùng một cấu trúc nổi/chìm cho cảnh, gương mặt, biểu tượng và menu; sắc đồng và lớp gỉ trở thành vật liệu thị giác.</p><p class="tradeoff"><strong>Muốn xem:</strong> con người có giữ cá tính và cảm xúc, UI có phân cấp mà không lẫn vào họa tiết?</p></article>
+        <article class="card"><button type="button" class="card-image" data-choice="c" aria-label="Xem bản concept C — Mực sống"><img src="assets/c-ink.png" alt="Toàn bộ bản concept mực đen trắng và nét đỏ, từ cảnh và nhân vật tới các khung UI." loading="lazy"></button><p class="card-number">03 / C</p><h3>Mực sống</h3><p>Thử mảng đen/trắng, nét biểu cảm và điểm đỏ nối hình người, chân dung hội thoại, vật phẩm và khoảng trống của giao diện.</p><p class="tradeoff"><strong>Muốn xem:</strong> hình và thông tin có dễ đọc khi màu được tiết chế, các trạng thái có rõ bằng cả hình lẫn chữ?</p></article>
+      </div>
+    </section>
+    <section class="reference-library" aria-labelledby="library-title"><h2 id="library-title">Thư viện tham khảo — mọi phiên bản được giữ lại</h2><p>Vòng mới bổ sung cách nghĩ cho cả game. Các bản trước vẫn có thể được xem lại hoặc kết hợp; chưa tự xếp hạng, loại hoặc chốt thay bạn.</p><nav aria-label="Thư viện các phiên bản tham khảo"><a href="../experiment-01/index.html">Phiên bản 01</a><a href="../experiment-02/index.html">Phiên bản 02</a><a href="../experiment-03/index.html">Phiên bản 03</a><a href="../experiment-04/index.html">Phiên bản 04</a><a href="../experiment-05/index.html">Phiên bản 05</a><a href="../experiment-06/index.html">Phiên bản 06</a><a href="../experiment-07/index.html">Phiên bản 07</a><a href="../experiment-08/index.html">Phiên bản 08</a></nav></section>
+    <aside class="scope-note"><p>Đây là bản concept hình ảnh, chưa phải gameplay, thiết kế UI có thể dùng trực tiếp, font/biểu tượng production hoặc canon mới. Chân dung và trang nhân vật nếu có chỉ minh họa cách trình bày một cuộc đời; không thay nguyên tắc xuất thân ngẫu nhiên của game. Không dựng model 3D thật.</p></aside>
+  </main>
+  <footer><p>Sprint 13 · SPIN-025 · Các phiên bản tham khảo vẫn chờ chủ dự án chốt</p></footer>
+  <dialog id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-bar"><h2 id="dialog-title">A — Sơn mài sống</h2><div class="dialog-actions"><a id="original-image" href="assets/a-lacquer.png" target="_blank" rel="noopener">Mở ảnh gốc ↗</a><button id="close-dialog" type="button" autofocus>Đóng <span aria-hidden="true">×</span></button></div></div><div class="dialog-art"><img id="dialog-image" src="assets/a-lacquer.png" alt="Bản concept A: ngôn ngữ sơn mài thử cho thế giới, tạo hình nhân vật, chân dung, vật phẩm và giao diện."></div><p>UI và chữ trong artwork là raster minh họa; mở ảnh gốc để dùng khả năng phóng to của trình duyệt.</p></dialog>
+</body>
+</html>

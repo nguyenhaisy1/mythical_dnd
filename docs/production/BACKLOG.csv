@@ -21,7 +21,7 @@ VS-03,Three professions / economy / travel,VS-02,Domain,"River transport, boat r
 VS-04,Knowledge / narrative / autonomy,VS-02 VS-03,Narrative,"Three threads, perceived plans, exposure-only director","TEST-004,005,030,041,042",Not started
 VS-05,Combat / injuries / companion,VS-03,Gameplay,"Zone/slots encounter, refusal, surrender, persistent injury","TEST-012,015,031,047",Not started
 VS-06,Time / legacy,VS-03 VS-04,Legacy,"Skip with breakpoints, death, valid successor and transfers","TEST-013,033,043",Not started
-VS-07,Playable Unity client,FND-16 VS-03 VS-04 VS-05,Client,"Knowledge-safe UI, onboarding, map/journal, playable scene",TEST-004 via real UI; no direct world writes,Not started
+VS-07,Playable Unity client,FND-16 VS-03 VS-04 VS-05,Client,"Knowledge-safe UI, onboarding, map/journal, playable scene; earth-monument-2d-v1 layered backgrounds/sprites per ADR022; G13 reopening preserves core progress",TEST-004 via real UI; no direct world writes,Not started
 VS-08,Historical anchor proof,VS-04,Narrative,Small headless fixture with hard/flexible/emergent contracts,"TEST-014, SCN-05",Not started
 VS-09,Ecology / belief integration proof,VS-04,World,Constrained ecology and myth facts tests; not full bestiary,"TEST-044,046",Not started
 VS-10,Hardening / playtest / scale gate,VS-06 VS-07 VS-08 VS-09,QA,"Replay offline suite, measured performance, UX report, Go/No-Go","TEST-002,022,052 and regression matrix",Not started
