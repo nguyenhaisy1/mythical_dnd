@@ -2397,3 +2397,32 @@ Ba worker đãxong đúngownership;haiindependentcritic scope/preservationđãfr
 Rootđồngbộ.agent/AGENTS/HANDOFF/APPLICABLE/DEC028029/OPEN11/VS07/clientrunbooks/README/docindex/roadmap/changelog/integrationnotes23+28/generatedMaster+modules23/28;sourcearchive/bodynghiêncứubảotoàn. Báocáo3D/14vàREADME14thêmbannerhiệnhành, khôngđổiartwork/provenance/gallerycode. ROM3Dkhôngáp2D. TEST-MATRIX/core/save/schema/IDs/productVERSIONkhôngđổi.
 Checks cuối exit0: build_docs --check36; check_handoff882authoredlinks/6156sections/52req/28tasks; check_architecture portable/scaffoldboundaries; gitdiff --check; scope/secretpatternscan0hitcho34currenttextfilesvàPRdiffcũ. Lượtchecker tạm banđầuđòiwhitespace toànMaster nênfail với bodynghiêncứulịchsử;rootkhôngsửabodynguồn,đổiđúngphạmvi kiểmdòngdiff; rerunđạt. Lượtlinkchecktrướcthiếufilecritic khiđangviết, reruncuốiđạt;CSVDECnormalizeLF giữsemantics2newrows. Export.py7HTML+7DOCX; check_exports272sourceinputs/14containers/6156anchors/6251DOCXheadings/123tables/navigationvalid. Chỉcontainer/content/navigation, khôngvisualrender/gameacceptance.
 Tiếptheo stage34files/commit/pushfeature/checkCIđúngHEAD/PR13ready vàtíchhợpdev bằngmergecommitđểcheckpointsource reachable nếu servercho phép;verifyancestry/remoteCI. Khôngmain/tag/release/xóabranch/Sprint14. Nhật kýpostcommitđivớicommitcôngviệcsau, khôngamend/commitvònglặp.
+
+
+### EVT-00207 | SPIN-037 | GIT — PR13 đã merge giữ ancestry; đồng bộ nốt hướng dẫn skill trên dev mới
+
+<!-- worklog: {"id": "EVT-00207", "spin": "SPIN-037", "event": "GIT", "at": "2026-11-03T10:18:03+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:18:03+07:00
+- Actor: /root
+
+Đãpushfeaturecommit55e5af8352b9740ae809245c56fb71f06c5bf2fa,ls-remoteSHAkhớp. PR13đãready vàmergecommit a497e6e2d10264f5df31ff72aa94f272312c31f6 vàoorigin/dev. CIfeature55e5af8completed/success:push41570849469 vàpull_request41570857201;CIpushdev41571150439đangđượckiểmriêng. GitAPI merged=true;fetchvàmerge-base --is-ancestor xácnhậnsourcecheckpoint1e4332f vàfeature55e5af8 đềuancestor dev;4protectedtreeskhôngđổi,nhánhnguồnđượcgiữ.
+LượtmergepreflightđầutiênhelperGETrepoendpointthừa"/"trả404trướckhigửiPUTmerge;root sửaendpointđúngvàmergeđãxácnhận,khôngbypasspolicy hoặcgửilạimutationkhôngrõtrạngthái. Khôngmain/tag/release/xóabranch/Sprint14.
+Sauintegrationauditrootpháthiệnmộtcâutrongartskillreferencecònpendingunconditional. Mởdocs/sprint-13-g13-guidance từorigin/dev trongcùngSPIN037 đểđồngbộ2fileguidance,giữnguồnđãmerge;đâylàfixnộidungthật,khôngcommitvònglặpđểtựchứahash.
+
+
+### EVT-00208 | SPIN-037 | PROGRESS — Hướng dẫn skill đã đồng bộ và được phản biện độc lập
+
+<!-- worklog: {"id": "EVT-00208", "spin": "SPIN-037", "event": "PROGRESS", "at": "2026-11-03T10:18:53+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:18:53+07:00
+- Actor: /root
+
+FixguidancecùngSPIN037:rootđồngbộ2filetools/skills/mythical-prototype/references/game-art-direction.md vàdocs/runbooks/PROJECT-SKILLS.md. Independentreview/root/s13close_critic_scopeđọcđúngdiff2file+register/baseline,khôngP0/P1 vềAccepted/Reopenablev1/A02A03Deferred/candidateapproval/khôngSprint14 hoặcfullrollback;P2pathAPPROVALS.mdchưafullđượcsửathànhdocs/production/sprints/sprint-13/APPROVALS.md,đíchcóthật. Khôngsửareportcũhaymởrộngphạmvi;checksgenerated/source/link/diff vàexports cầnkhớpfingerprints2filemới.
+
+
+### EVT-00209 | SPIN-037 | RESULT — Đồng bộ xong chỉ dẫn skill và bản đọc; sáu liên kết skill dùng đúng nguồn
+
+<!-- worklog: {"id": "EVT-00209", "spin": "SPIN-037", "event": "RESULT", "at": "2026-11-03T10:21:37+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T10:21:37+07:00
+- Actor: /root
+
+Đồngbộ2fileguidanceđúngG13v1Accepted/Reopenable/A02A03Deferred/candidateapproval,giữtiếnđộvàkhôngtựmởSprint14. Independentcritic_scopeđọcdiff+baseline,khôngP0P1;P2fullpathAPPROVALSđãfixvàđíchđượckiểm. Checks cuối exit0:build_docs --check36;check_handoff883authoredlinks;diff --check;tools/skills/install.py --check6symlinks vàreadlinkglobalreference đúngprojectsource. Export7HTML+7DOCX/check_exports272inputs/14containers/6156anchors/6251headings/123tables/navigationvalid;khôngvisualrender/runtimeacceptance. CImergePR13a497e6e push41571150439completed/success. Sourcecheckpointvẫnancestor origin/dev;khônghướng/asset/schema/corechange. Tiếptheocommit3filetext/pushdocsbranch/PRCI/intdev; đâyfixguidancecóýnghĩakhôngcommitloghashvònglặp.

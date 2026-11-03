@@ -82,3 +82,8 @@ Theo yêu cầu chủ dự án, mở rộng hai skill hiện có, không thêm b
 [Design Sources](../../tools/skills/upstream/DESIGN-SOURCES.md) lưu phần chọn lọc, commit/hash, MIT licenses và thay đổi dành cho Codex. Đây là adaptation mới bổ sung sau hồ sơ14/10, không phải cài toàn upstream. Sáu symlink giữ nguyên; bản local đọc source cập nhật ngay. Automatic discovery metadata có thể cần phiên mới refresh.
 
 Sprint13 tiếp tục giữ mọi sản phẩm Pending đến khi user chốt; tích hợp skill không duyệt Experiment01 và không mở spin thử nghiệm hình ảnh mới.
+
+
+## Trạng thái Sprint13 hiện hành — 03/11/2026
+
+Chủ dự án đã chốt hướng `earth-monument-2d-v1`, nền2D có cảm giác khối + nhân vật sprite, và giữ [cổngG13](../production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) **Accepted / Reopenable**. Các câu Pending ở lịch sử tích hợp skill27/10 không yêu cầu duyệt lại hướngv1. A02/A03UI/onboarding là Deferred implementation chưaPassed; candidate mỹ thuật thay thế cần approval mới. Skill phải dùng approval register hiện hành, giữ core/dữ liệu/tiến độ khi mở lạiG13 và không tự mởSprint14.
