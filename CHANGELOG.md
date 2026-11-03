@@ -6,6 +6,13 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint14 — sửa thuyền headless
+
+- Thêm profile repair độc lập: item, capability/tool, activity và material hold; lệnh bắt đầu/hủy và completion nội bộ theo scheduler, reserve2timber/60ticks/+200conditioncap1000 từ parameterpack, không RNG.
+- Committedimage2/rule-content compatibility riêng, lưu/reopen/snapshot/recovery/replay cho repair; giữ đường legacyimage1 và physical SQLite schema2. Gameplay client2D/fullprofession/lifegenerator/Player chưa thuộc phạm vi này.
+- Siết restore theo accepted receipt/facts và actual workflow/execution, có adversarial regression. [Validation](docs/qa/SPRINT-14-EVIDENCE.md):562/562 runtime tests,0failed/skipped, process gates/negative controls đạt; chưa Unity repair verification.
+
+
 ### Sprint13 — chốt định hướng và giữ cổng mở lại
 
 - Chủ dự án chốt Đất dựng thành theo nền2D có cảm giác khối/nhân vật sprite (`earth-monument-2d-v1`); ADR022/G13 giữ khả năng đổi hướng trên code hiện tại, bảo toàn core/rules/content và thư viện01–18. UI/originUX chi tiết và runtime vẫn có gate riêng.

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "scenario.boat-repair@1",
+  "scope": "headless-prototype-not-full-settlement-or-life-generator",
+  "world_id": 14,
+  "initial_tick": 0,
+  "initial_revision": 1,
+  "timber_on_hand": 10,
+  "boat_condition": 500,
+  "seed": "sprint14-boat-repair",
+  "profile_source": "rules/parameters/boat-repair-v1.json",
+  "source_contract": "docs/contracts/BOAT-REPAIR-PROFILE.md",
+  "expectations": {
+    "reserved_after_start": 2,
+    "on_hand_after_start": 10,
+    "condition_before_due": 500,
+    "due_tick": 60,
+    "on_hand_after_completion": 8,
+    "reserved_after_completion": 0,
+    "condition_after_completion": 700,
+    "on_hand_after_cancel": 10,
+    "reserved_after_cancel": 0,
+    "condition_after_cancel": 500
+  }
+}

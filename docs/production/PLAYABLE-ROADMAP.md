@@ -1,6 +1,10 @@
 # Lộ trình hình ảnh và bản chơi thử
 
-## Trạng thái hiện hành — chốt ngày 03/11/2026
+## Sprint14 đã được giao — 03/11/2026
+
+[Sprint14](sprints/SPRINT-14.md) hiện thực vòng sửa thuyền **headless có luật/state thật**, reserve/time/cancel/complete và lưu/tải/replay theo [ADR023](../adr/023-bounded-boat-repair-profile.md). Phạm vi này chưa Unityclient/spriteanimation/worldlife/projection vàkhôngđóngfullVS03. Giữ profile2D/sprite đãchốt; bướcclient2Dproof/actorreadmodel/randomorigin còn phải giao vàkiểm riêng. ForecastSprint15–16lịch sử chưa được biến thành deadline sau scope thực thi này; reforecast dựa gates/evidence, không gọi kết quảheadless làdemo nhìn/chơi được.
+
+## Định hướng đã chốt ngày03/11/2026
 
 Chủ dự án đã chốt Sprint13 theo **Đất dựng thành: nền 2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. Đây là chốt định hướng để phát triển; chuyển động, asset production, UI chi tiết và bản game chạy thật vẫn cần acceptance riêng. [Baseline mỹ thuật và cổng G13](sprints/sprint-13/ART-DIRECTION-BASELINE.md), [ADR-022](../adr/022-earth-monument-2d-and-reopen-gate.md) và [approval register](sprints/sprint-13/APPROVALS.md) là nguồn hiện hành.
 

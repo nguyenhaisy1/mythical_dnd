@@ -28,4 +28,11 @@ Giữ artifact/manifest/versions/sourcefingerprint và JSON report. Xác định
 
 ## Giới hạn
 
-Hiện kiểm transfer/scheduler compiled rules. RNG contexts/counters được giữ, nhưng các commands này không draw nên chưa chứng minh stochastic gameplay. Full fielddiff/rule trace đã có profile FND15 ở [Diagnostics](DIAGNOSTICS.md), cần expected image riêng để so field, không suy từ replay hashes; content registry FND14 có profile kernel-content-v1 ở [Content Pipeline](CONTENT-PIPELINE.md); replay golden cũ vẫn pin fixturedescriptor, không tự chuyển sang pack mới. Unity FND16 còn pending. Replay không thay schema2 committed-image recovery của Sprint6.
+Golden legacy kiểm transfer/scheduler compiled rules; Sprint14 bổ sung repair profile riêng ở mục dưới. RNG contexts/counters được giữ, nhưng các commands này không draw nên chưa chứng minh stochastic gameplay. Full fielddiff/rule trace đã có profile FND15 ở [Diagnostics](DIAGNOSTICS.md), cần expected image riêng để so field, không suy từ replay hashes; content registry FND14 có profile kernel-content-v1 ở [Content Pipeline](CONTENT-PIPELINE.md); replay golden cũ vẫn pin fixturedescriptor, không tự chuyển sang pack mới. Unity FND16 đã có conformance kernel giới hạn Sprint10; replay gameplay mới và Player vẫn cần acceptance riêng. Replay không thay schema2 committed-image recovery của Sprint6.
+
+
+## Repair replay Sprint14
+
+[ADR023](../adr/023-bounded-boat-repair-profile.md) bổ sung `repairRecipe` optional khi Record/Replay; manifest phải dùng content hash do RepairContentRegistry compile và exact rule `transfer-resource-v1+scheduler-v1+boat-repair-v1`. Initial image2 chứa repair profile/recipe pins; processor được compose từ Recipe đã chọn ngoài artifact. Legacy arguments/golden image1 vẫn giữ, không ghi lại golden để khớp repair. Artifact version1 giữ vì action/manifest format không đổi.
+
+CLI `--replay` legacy phía trên không tự chọn repair registry. Dùng API Record/Replay với profile explicit hoặc CLI `--repair-probe` mô tả ở [Boat Repair](BOAT-REPAIR.md). Probe ghi Execute(StartRepair/retry/Advance/forged completion) và Drain rồi rerun actual rules; so full canonical image, checkpoints và jobs/hold/item/activity/events. Negative control đổi expected result hash phải diverge index0; không là đọc final journal. Cancel replay và malformed/profile cases còn có tests riêng, xem [evidence Sprint14](../qa/SPRINT-14-EVIDENCE.md). Không có stochastic draw, player projection hoặc Unity acceptance mới từ fixture headless này.

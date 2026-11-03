@@ -93,6 +93,12 @@ User giao sprint tiếp theo/SPIN014. Scope VS02A settlement-content-v1 theo ADR
 
 User giao sprint tiếp theo và yêu cầu mốc hình ảnh/demo. Sprint12/SPIN-015: VS02B event-eligibility-v1 theo ADR021 và docs/production/sprints/SPRINT-12.md. Tám template và evaluator trên trusted observations; không event effects hoặc fullVS02. Forecast mới tại docs/production/PLAYABLE-ROADMAP.md: Sprint13 định hướng hình ảnh, Sprint15–16 demo nhỏ, phụ thuộc gates; không tự mởSprint13/main/tag/release.
 
+## Sprint14 được giao — 03/11/2026
+
+Chủ dự án yêu cầu hoàn thành Sprint13 và tiến hành Sprint14. Sprint13 đã Accepted định hướng2D/sprite, G13 Reopenable; không yêu cầu chốt lại v1. Sprint14/SPIN-038 theo `docs/production/sprints/SPRINT-14.md`, ADR023 và BOAT-REPAIR-PROFILE: **VS-03A headless boat-repair** có reserve/time/complete/cancel/revalidation, SQLite reopen/recovery và command replay. Tham sốprototype2timber/60ticks/+200condition/cap1000, khôngRNG; newexplicitrepairprofile/image2 giữ legacyimage1/goldens vàphysicalSQLite schema2.
+
+Skill/tool/actor inputs là trusted fixture bounded, chưa full profession/life generator/VS02worldbinding/player projection. Chưa Unity/Player/2Dspriteproof hoặc humanplaytest. G13/profileearth-monument-2d-v1 và thư viện01–18 giữ nguyên; đổi core trong sprint này là gameplaytask được giao, không rollback core về checkpoint13. AI được điều phối/chia task/subagents/implement/test/review/đồng bộ/commit/push/PR/integrate dev theo workflow; không tự mởSprint15/main/tag/release. Đã nghiệm thu VS-03A headless với 562/562 runtime tests (113 repair),0failed/skipped và process gates; xem `docs/qa/SPRINT-14-EVIDENCE.md`. FullVS03/Unity2D vẫn chưa nghiệm thu; Git/CI cuối ở WORKLOG. Không tự mởSprint15.
+
 ## Quyết định hiện hành — 03/11/2026
 
 Chủ dự án **chốt Sprint13 ở phạm vi định hướng mỹ thuật**: **Đất dựng thành** (Experiment14/`earth-monument`) với **nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. Trạng thái **Accepted / Reopenable**, cổng **G13** luôn sẵn để mở lại một nhánh nghiên cứu mỹ thuật khi hướng này không phù hợp trong phát triển. Đọc [baseline và cổng G13](docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md), [approval](docs/production/sprints/sprint-13/APPROVALS.md) và [ADR022](docs/adr/022-earth-monument-2d-and-reopen-gate.md).

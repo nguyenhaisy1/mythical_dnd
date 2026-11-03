@@ -17,12 +17,16 @@ namespace Game.Infrastructure.Persistence
         private readonly Action<string>? probe;
         private readonly int timeout;
         private readonly int? maxPages;
-        private const string RuleVersion="transfer-resource-v1+scheduler-v1";
+        public const string LegacyRuleVersion="transfer-resource-v1+scheduler-v1";
+        public const string RepairRuleVersion="transfer-resource-v1+scheduler-v1+boat-repair-v1";
+        private readonly string ruleVersion;
+        public string ExpectedRuleVersion => ruleVersion;
         private static readonly string[] Tables={"entities","allocator","jobs","rng_contexts","events","commands"};
-        public SqliteWorldStore(string path,string contentHash,Action<string>? probe=null,int timeoutSeconds=1,int? maxPageCount=null)
+        public SqliteWorldStore(string path,string contentHash,Action<string>? probe=null,int timeoutSeconds=1,int? maxPageCount=null,string expectedRuleVersion=LegacyRuleVersion)
         {
             if(string.IsNullOrWhiteSpace(path)||path==":memory:"||contentHash==null||contentHash.Length!=64||contentHash.Any(c=>!"0123456789abcdef".Contains(c)))throw new ArgumentException("Invalid store path/content hash");
-            this.path=Path.GetFullPath(path);this.contentHash=contentHash;this.probe=probe;timeout=timeoutSeconds;maxPages=maxPageCount;
+            if(expectedRuleVersion!=LegacyRuleVersion&&expectedRuleVersion!=RepairRuleVersion)throw new ArgumentException("Unsupported store rule version");
+            ruleVersion=expectedRuleVersion;this.path=Path.GetFullPath(path);this.contentHash=contentHash;this.probe=probe;timeout=timeoutSeconds;maxPages=maxPageCount;
             if(timeoutSeconds<1||maxPageCount<1)throw new ArgumentOutOfRangeException();
         }
         private SqliteConnection Connect(bool create=false)
@@ -39,6 +43,7 @@ namespace Game.Infrastructure.Persistence
         public void InitializeSave(CommittedWorld initial,string? worldSeed=null) => InitializeCore(initial,true,worldSeed);
         private void InitializeCore(CommittedWorld initial,bool save,string? worldSeed,long acceptedCount=0,Action? beforeInitializeCommit=null)
         {
+            RequireCompatibleProfile(initial);
             // Explicit create only. Never initialize an existing file, even if empty or incompatible.
             using(var file=new FileStream(path,FileMode.CreateNew,FileAccess.Write,FileShare.None)){}
             using var c=Connect(true);
@@ -65,9 +70,9 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
             using var cmd=c.CreateCommand();cmd.Transaction=t;cmd.CommandText="SELECT world_id,revision,tick,schema_version,codec_version,rule_version,content_hash,rng_version,image,sha256 FROM world_meta WHERE singleton=1";
             using var r=cmd.ExecuteReader();if(!r.Read())throw new InvalidDataException("STORE_ROW_MISSING");
             if(r.GetInt64(3)!=1&&r.GetInt64(3)!=2)throw new InvalidDataException("UNSUPPORTED_SCHEMA");
-            if(r.GetString(4)!="mdc1"||r.GetString(5)!=RuleVersion||r.GetString(6)!=contentHash||r.GetString(7)!="sha256-counter-v1")throw new InvalidDataException("INCOMPATIBLE_SAVE");
+            if(r.GetString(4)!="mdc1"||r.GetString(5)!=ruleVersion||r.GetString(6)!=contentHash||r.GetString(7)!="sha256-counter-v1")throw new InvalidDataException("INCOMPATIBLE_SAVE");
             var bytes=(byte[])r[8];if(CommittedWorldCodec.Hash(bytes)!=r.GetString(9))throw new InvalidDataException("CORRUPT_IMAGE");
-            var state=CommittedWorldCodec.Decode(bytes);
+            var state=CommittedWorldCodec.Decode(bytes);RequireCompatibleProfile(state);
             if(r.GetString(0)!=state.World.WorldId.ToString("x16",CultureInfo.InvariantCulture)||r.GetString(1)!=state.World.Revision.Value.ToString("x16",CultureInfo.InvariantCulture)||r.GetInt64(2)!=state.World.Tick.Value)throw new InvalidDataException("CORRUPT_META");
             var schema=r.GetInt64(3);if(r.Read())throw new InvalidDataException("DUPLICATE_WORLD");r.Close();
             if(schema==1&&Convert.ToInt64(Scalar(c,t,"SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name IN ('save_manifest','save_points','recovery_images')"),CultureInfo.InvariantCulture)>0)throw new InvalidDataException("SCHEMA_LAYOUT_MISMATCH");
@@ -77,13 +82,18 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
         public void Commit(CommittedWorld expected,CommittedWorld candidate)
         {
             var before=CommittedWorldCodec.Encode(expected);var after=CommittedWorldCodec.Encode(candidate);
-            _=CommittedWorldCodec.Decode(after);
+            _=CommittedWorldCodec.Decode(after);RequireCompatibleProfile(expected);RequireCompatibleProfile(candidate);
             if(expected.World.WorldId!=candidate.World.WorldId||candidate.World.Revision.Value<expected.World.Revision.Value||candidate.World.Tick<expected.World.Tick)throw new InvalidDataException("INVALID_COMMIT_WORLD");
             probe?.Invoke("before_begin");using var c=Connect();using var t=c.BeginTransaction();
             var actual=Read(c,t);
             if(!actual.SequenceEqual(before))throw new InvalidOperationException("STORE_CONFLICT");
             VerifyMirrors(c,t,expected,actual);
             Write(c,t,candidate,after,true);AppendRecovery(c,t,expected,candidate,after);probe?.Invoke("before_commit");t.Commit();probe?.Invoke("after_commit");
+        }
+        private void RequireCompatibleProfile(CommittedWorld state)
+        {
+            if((state.World.Repair!=null)!=(ruleVersion==RepairRuleVersion))throw new InvalidDataException("INCOMPATIBLE_REPAIR_PROFILE");
+            if(state.World.Repair!=null&&Game.Infrastructure.Repair.RepairContentRegistry.HashForRecipe(state.World.Repair.Recipe)!=contentHash)throw new InvalidDataException("INCOMPATIBLE_REPAIR_CONTENT");
         }
         private sealed class Row
         {
@@ -99,7 +109,16 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
             string S(Dictionary<string,object?> x,string key)=>(string)x[key]!;
             var actors=List("actors").ToDictionary(x=>S(x,"id"));var lots=List("lots").ToDictionary(x=>S(x,"id"));
             var result=Tables.ToDictionary(x=>x,x=>new List<Row>(),StringComparer.Ordinal);
-            foreach(var e in List("entities")){var id=S(e,"id");result["entities"].Add(new Row(id,new Dictionary<string,object?>{{"identity",e},{"actor",actors.TryGetValue(id,out var a)?a:null},{"lot",lots.TryGetValue(id,out var l)?l:null}}));}
+            var repair=d.TryGetValue("repair",out var extension)?Map(extension):null;
+            Dictionary<string,Dictionary<string,object?>> RepairRows(string key,string idKey)=>repair==null?new Dictionary<string,Dictionary<string,object?>>()
+                :((IEnumerable<object?>)repair[key]!).Select(Map).ToDictionary(x=>S(x,idKey),StringComparer.Ordinal);
+            var items=RepairRows("items","id");var activities=RepairRows("activities","id");var capabilities=RepairRows("capabilities","actor");
+            foreach(var e in List("entities"))
+            {
+                var id=S(e,"id");var payload=new Dictionary<string,object?>{{"identity",e},{"actor",actors.TryGetValue(id,out var a)?a:null},{"lot",lots.TryGetValue(id,out var l)?l:null}};
+                if(repair!=null){payload.Add("item",items.TryGetValue(id,out var item)?item:null);payload.Add("activity",activities.TryGetValue(id,out var activity)?activity:null);payload.Add("capability",capabilities.TryGetValue(id,out var capability)?capability:null);}
+                result["entities"].Add(new Row(id,payload));
+            }
             foreach(var c in List("cursors"))result["allocator"].Add(new Row(S(c,"kind"),c));
             foreach(var j in List("jobs"))result["jobs"].Add(new Row(S(j,"id"),j));
             foreach(var r in List("rng"))result["rng_contexts"].Add(new Row(S(r,"key"),r));
@@ -123,7 +142,7 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
             }
             var schemaVersion=Convert.ToInt64(Scalar(c,t,"SELECT COALESCE(MAX(schema_version),1) FROM world_meta"),CultureInfo.InvariantCulture);
             Exec(c,t,"DELETE FROM world_meta");
-            Exec(c,t,"INSERT INTO world_meta VALUES(1,$world,$revision,$tick,$schema,'mdc1',$rule,$content,'sha256-counter-v1',$image,$sha)",("$schema",schemaVersion),("$world",state.World.WorldId.ToString("x16",CultureInfo.InvariantCulture)),("$revision",state.World.Revision.Value.ToString("x16",CultureInfo.InvariantCulture)),("$tick",state.World.Tick.Value),("$rule",RuleVersion),("$content",contentHash),("$image",bytes),("$sha",CommittedWorldCodec.Hash(bytes)));
+            Exec(c,t,"INSERT INTO world_meta VALUES(1,$world,$revision,$tick,$schema,'mdc1',$rule,$content,'sha256-counter-v1',$image,$sha)",("$schema",schemaVersion),("$world",state.World.WorldId.ToString("x16",CultureInfo.InvariantCulture)),("$revision",state.World.Revision.Value.ToString("x16",CultureInfo.InvariantCulture)),("$tick",state.World.Tick.Value),("$rule",ruleVersion),("$content",contentHash),("$image",bytes),("$sha",CommittedWorldCodec.Hash(bytes)));
             if(fault)probe?.Invoke("after_world_meta");
         }
         private static void VerifyMirrors(SqliteConnection c,SqliteTransaction t,CommittedWorld state,byte[] bytes)

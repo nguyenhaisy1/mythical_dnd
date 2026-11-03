@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using Game.Application.CommandPipeline;
 using Game.Application.SimulationScheduler;
 using Game.Domain.Kernel;
+using Game.Domain.Repair;
 using Game.Foundation.Random;
 using Game.Infrastructure.Persistence;
 
@@ -117,19 +118,21 @@ namespace Game.Infrastructure.Replay
                 throw new ReplayCompatibilityException();
         }
         public static ReplayArtifact Record(CommittedWorld initial,IEnumerable<ReplayAction> actions,ReplayManifest manifest,
-            RuleRegistry rules,JobHandlerRegistry? handlers=null,Action<ReplayObservation>? observer=null)
+            RuleRegistry rules,JobHandlerRegistry? handlers=null,Action<ReplayObservation>? observer=null,RepairRecipe? repairRecipe=null)
         {
             CheckManifest(manifest,manifest);
             var image=CommittedWorldCodec.Encode(initial);var clean=CommittedWorldCodec.Decode(image);
             var list=actions.Take(10001).ToArray();if(list.Length>10000)throw new ArgumentException("REPLAY_ACTION_COUNT");
-            var processor=new CommandProcessor(clean,rules,jobHandlers:handlers);
+            ValidateRepairManifest(clean,manifest,repairRecipe);
+            var processor=new CommandProcessor(clean,rules,jobHandlers:handlers,repairRecipe:repairRecipe);
             var checkpoints=list.Select((a,i)=>Step(processor,a,manifest,i,observer)).ToArray();
             return new ReplayArtifact(manifest,image,list,checkpoints);
         }
-        public static ReplayReport Replay(ReplayArtifact artifact,ReplayManifest expected,RuleRegistry rules,JobHandlerRegistry? handlers=null,Action<ReplayObservation>? observer=null)
+        public static ReplayReport Replay(ReplayArtifact artifact,ReplayManifest expected,RuleRegistry rules,JobHandlerRegistry? handlers=null,Action<ReplayObservation>? observer=null,RepairRecipe? repairRecipe=null)
         {
             CheckManifest(artifact.Manifest,expected);
-            var processor=new CommandProcessor(CommittedWorldCodec.Decode(artifact.InitialImage),rules,jobHandlers:handlers);
+            var initial=CommittedWorldCodec.Decode(artifact.InitialImage);ValidateRepairManifest(initial,expected,repairRecipe);
+            var processor=new CommandProcessor(initial,rules,jobHandlers:handlers,repairRecipe:repairRecipe);
             for(int i=0;i<artifact.Actions.Count;i++)
             {
                 var actual=Step(processor,artifact.Actions[i],expected,i,observer);var wanted=artifact.Checkpoints[i];
@@ -139,6 +142,17 @@ namespace Game.Infrastructure.Replay
                 if(wanted.Revision!=actual.Revision)return new ReplayReport(processor.InspectCommitted(),new ReplayDivergence(i,"revision",wanted.IntegrityHash,actual.IntegrityHash,wanted.Revision,actual.Revision));
             }
             return new ReplayReport(processor.InspectCommitted());
+        }
+        private static void ValidateRepairManifest(CommittedWorld initial,ReplayManifest manifest,RepairRecipe? recipe)
+        {
+            if(initial.World.Repair==null)
+            {
+                if(recipe!=null||manifest.RuleVersion==Game.Infrastructure.Repair.RepairContentRegistry.SupportedRuleVersion)throw new ReplayCompatibilityException();
+                return;
+            }
+            if(recipe==null||recipe.Fingerprint!=initial.World.Repair.Recipe.Fingerprint||
+               manifest.RuleVersion!=Game.Infrastructure.Repair.RepairContentRegistry.SupportedRuleVersion||
+               manifest.ContentHash!=Game.Infrastructure.Repair.RepairContentRegistry.HashForRecipe(recipe))throw new ReplayCompatibilityException();
         }
         private static ReplayCheckpoint Step(CommandProcessor processor,ReplayAction action,ReplayManifest manifest,int index,Action<ReplayObservation>? observer)
         {
