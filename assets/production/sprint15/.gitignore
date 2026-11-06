@@ -1,0 +1,3 @@
+# Deterministic processing/QC build artifacts; generated source originals and final runtime PNGs are tracked.
+processed/
+qa/

@@ -1,12 +1,22 @@
 # Bàn giao phát triển — 1.1-prototype-contracts
 
-## Sprint14 hiện hành — luật sửa thuyền headless
+## Sprint15 hiện hành — bản thử Unity2D đã có kiểm chứng tương tác
+
+Chủ dự án giao Sprint15 theo workflow thường trực, tiếp tục04–06/11/2026. [Brief](sprints/SPRINT-15.md), [ADR024](../adr/024-bounded-2d-repair-client.md) và [client contract](../contracts/REPAIR-CLIENT-PROFILE.md) xác định `repair-client-2d-v1`: một nhân vật cố định tại bãi sửa thuyền Bến Vạc, direct-observation grants theo field, safe DTO/session và luật repair/SQLite Sprint14. UI phải ghi rõ nhân vật cố định, không nhận raw WorldSnapshot/receipts/seed hoặc arbitrary filesystem path. Preview pure, stale yêu cầu xem lại, retry giữ original envelope.
+
+Actual Editor6000.6.7f1 đã tạo/import scene và build LinuxMono Player0lỗi/0cảnh báo. Lượt `sprint15-client-bo3487zv` có12ảnh renderer, sáu cases1280×720/1920×1080 ×100/125/150%, repair59→60/complete/cancel/wait/save/reopen và ba SQLite files được đọc final state/receipt counts riêng. Lượt OS-input `sprint15-input-yc1_bzfx` đạt native Tab/Back/Return, Space một lần chờ theo focus, S/L/C/Esc và mouse preview/Confirm bằng hai gesture riêng. Đây automation/technical proof, không human playtest. Focused31tests session/boundary/persistence đã đạt; không thay full regression cuối bằng focused tests.
+
+[Runbook](../runbooks/REPAIR-CLIENT.md) hướng dẫn staging/build/run. Năm gate đóng sprint và bằng chứng/review/regression cuối ở [evidence Sprint15](../qa/SPRINT-15-EVIDENCE.md); commit/push/PR/CI/integration sau commit được append vào WORKLOG. Chỉ đóng khi đủ cả năm gate trên revision cuối, không chuyển gate chưa đạt thành backlog hoặc suy CI đã đạt từ kiểm tra local.
+
+G13/profileearth-monument-2d-v1 và thư viện01–18 giữ nguyên. Full random life/knowledge/world binding/three professions/fullVS03/VS07, final user UI/art approval, performance/balance/human playtest là backlog dự án ngoài sprint. Báo cáo phải tách chúng khỏi **Điều kiện đóng Sprint15 còn thiếu**. Không tự Sprint16/main/tag/release.
+
+## Sprint14 đã nghiệm thu — luật sửa thuyền headless
 
 Chủ dự án đã giao Sprint14 ngày03/11/2026; [sprintbrief](sprints/SPRINT-14.md), [ADR023](../adr/023-bounded-boat-repair-profile.md) và [repairprofile](../contracts/BOAT-REPAIR-PROFILE.md) chốt VS-03A bounded. Thực thi reserve2timber/60tick/+200conditioncap1000, cancel/revalidation và atomiccommand/scheduler; explicitrepairimage2/rule/contentprofile, SQLitephysicalschema2/reopen/recovery/replay. [Evidence](../qa/SPRINT-14-EVIDENCE.md) ghi nghiệm thu VS-03A headless:562/562 runtime tests (113repair),0failed/skipped, negative controls và SQLite/replay process gates đạt. Git/CI integration theo WORKLOG, không mở rộng thành playable acceptance.
 
 Sprint13 đã kết thúc vòng chọn hướng/G13Reopenable; A02/A03UI/originUX chuyển follow-up, không cản sprint được giao. Core thay đổi ở Sprint14 là phát triển gameplay mới được giao, không lấy core cũ từ checkpointG13. Hướng2D/sprite giữ nguyên, chưaUnity/spriteproduction/Player/fullprofession/randomorigin/actorprojection hoặc fullVS03. Không tự mởSprint15 hoặc release. Các đoạn ngày trước bên dưới là bàn giao lịch sử theo mốc của chúng.
 
-## Trạng thái hiện hành — Sprint13 đã chốt định hướng, G13 có thể mở lại
+## Mốc Sprint13 — đã chốt định hướng, G13 có thể mở lại
 
 Ngày03/11/2026 chủ dự án chốt **Đất dựng thành + nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. Sprint13 **Accepted / Reopenable** ở phạm vi định hướng; [baseline/cổng G13](sprints/sprint-13/ART-DIRECTION-BASELINE.md) và [approval](sprints/sprint-13/APPROVALS.md) là nguồn hiện hành. S13-A02/A03 được chuyển thành follow-up implementation chưa nghiệm thu, không giả UI/originflow Passed. [ADR022](../adr/022-earth-monument-2d-and-reopen-gate.md) giữ core/luật/tri thức/dữ liệu độc lập với route đồ họa.
 
@@ -14,7 +24,7 @@ CổngG13 cho phép nghiên cứu lại mỹ thuật trên code tích hợp mớ
 
 ## Những gì đã có
 
-29 module GDD chi tiết và phụ lục Life Event, source archive, source/section index, baseline/decision register, open decisions, ownership/contracts, QA matrix, scenario specifications và implementation backlog. Repository có .NET solution với portable core primitives, Domain world/rules, Application in-memory pipeline và headless transfer demo. Client Unity có layout chuẩn bị, chưa được Unity Editor bootstrap.
+29 module GDD chi tiết và phụ lục Life Event, source archive, source/section index, baseline/decision register, open decisions, ownership/contracts, QA matrix, scenario specifications và implementation backlog. Repository có .NET solution với portable core primitives, Domain world/rules, Application in-memory pipeline và headless transfer demo. Client Unity có bounded repair proof Sprint15 đã chạy actual LinuxMono Player/OS input; project do Editor6000.6.7f1 tạo, full sprint closure và giới hạn acceptance theo evidence riêng.
 
 Nội dung nghiên cứu không bị thay bằng bản tóm tắt. Phần mô tả áp dụng được đặt đầu mỗi module để dev biết đoạn đề xuất cũ nào không còn hiệu lực. Các export tập hợp cùng nội dung làm việc, không dựa vào gói ZIP 13 trang của phiên cũ.
 

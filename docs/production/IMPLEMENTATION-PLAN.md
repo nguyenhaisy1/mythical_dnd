@@ -67,3 +67,11 @@ Quy trình áp dụng cho AI: [AI Execution](../runbooks/AI-EXECUTION.md). Vai t
 User đã giao [Sprint14](sprints/SPRINT-14.md) ngày03/11/2026. [ADR023](../adr/023-bounded-boat-repair-profile.md) cho phép hiện thực repair độc lập trên trusted fixture để kiểm một hành động causal thật khi VS02full cònpartial; không bypass dependency để đóngfullVS03. Typeditem/activity/holds vàinternalcompletion, SQLite/replay/canonicalcompatibility có acceptance riêng. Corechanges là gameplay mới được giao, G13 checkpoint vẫn giữ lịch sử thay vì freeze tất cả phát triển. Scene/sprite/projection/randomlife/Unitygates và fullVS07 vẫn riêng; chưa tự mởSprint15.
 
 VS-03A được nghiệm thu trong headless profile theo [evidence Sprint14](../qa/SPRINT-14-EVIDENCE.md):562/562 tests,113 repair,0failed/skipped. FullVS03 vẫnpartial; bước tiếp theo đề xuất là chia proof client2D và actor-scoped read model khi được giao, không tự mở sprint.
+
+## Sprint15 — client2D repair proof giới hạn
+
+[Sprint15](sprints/SPRINT-15.md) và [ADR024](../adr/024-bounded-2d-repair-client.md) đưa bounded repair lên Unity2D: safe actor-scoped port, preview/confirm/retry, actual SQLite và scene có lớp nền/foreground/boat/actor sprite độc lập. Một fixed trusted actor/worksite, không bỏ dependency của fullVS07 để gọi toàn milestone đã hoàn tất. Local footpoint/camera/animation chỉ là presentation, không Travel/WorldTick truth.
+
+Ngày06/11/2026 đã có actual Unity6000.6.7f1/LinuxMono Player build0lỗi/0cảnh báo,12ảnh/sáu layout cases, final SQLite repair/cancel/wait và OS keyboard/mouse evidence. Một cú nhấn–thả thuyền chỉ mở preview; Confirm cần hành động riêng. Đây bước thực thi của hướng2D/sprite, không chỉ concept hoặc source.
+
+Năm gate ở [client contract](../contracts/REPAIR-CLIENT-PROFILE.md) là điều kiện đóng Sprint15: session privacy tests; actual Editor/bootstrap/build; actual LinuxMono Player effects/save/reload; rendered/input evidence; independent review/regression/docs/CI. Trạng thái thực tại [evidence](../qa/SPRINT-15-EVIDENCE.md); chương trình callback automation, OS input, visual review và human playtest ghi riêng. Backlog random life/full knowledge/world binding/finalart/performance không là gate bổ sung ngoài scope sprint này.

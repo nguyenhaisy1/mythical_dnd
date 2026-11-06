@@ -1,5 +1,14 @@
 # Làm việc trong repository mythical_dnd
 
+## Sprint15 — nghiệm thu kỹ thuật local06/11/2026; Git/CI theo WORKLOG
+
+Chủ dự án giao sprint tiếp theo theo workflow thường trực. Sprint15/SPIN-039 theo `docs/production/sprints/SPRINT-15.md`, ADR024 và `docs/contracts/REPAIR-CLIENT-PROFILE.md`: bounded client2D repairproof ở Bến Vạc với fixed trusted actor, explicit observation grants/safe projection/session, core repair/SQLite thật và scene/sprite/UI. Dòng nhân vật cố định phải hiện; không giả random-life/fullVS07 hoặc đổi G13/profileearth-monument-2d-v1.
+
+Acceptance Sprint15 gồm safe session/hidden-data tests, actual Unity6000.6.7f1 bootstrap và LinuxMono Player build/run, repair/cancel/wait/save/reload thật, rendered captures/occlusion/UI/input checks, independentreview và regression/docs/CI. Chưa ghi Passed khi chỉ có source; không đưa gate chưa đạt ra ngoài scope để đóng sprint. Báo cáo tách **Điều kiện đóng sprint còn thiếu** khỏi **Backlog dự án ngoài sprint**. AI được tự điều phối/subagents/implement/test/review/docs/commitpushPRdev; không tự Sprint16/main/tag/release. Sprint14 đãđóng/PR15/deva99083f, journalpostcommitlocal được giữ cho meaningfulSprint15commit.
+
+Kết quả local06/11: actualUnity6000.6.7f1/LinuxMono Player `sprint15-client-bo3487zv` build0errors/warnings,12rendercaptures/sixlayouts/3SQLitefinalstates; OS `sprint15-input-yc1_bzfx` keyboard/mouse đạt, preview vàConfirm bằng hai gesture riêng. Full `sprint15-l08y6ql5`593/593tests,0failed/skipped + negative/processgates đạt trên nguồn cuối; independent reports tại docs/qa/sprint-15/. Nghiệmthu chỉboundedtechnicalproof, khôngfullVS07/randomlife/human/finalart. ExactHEADCI/PR/dev và trạng thái CLOSE saucommit ởWORKLOG; chỉđóngkhiGitgatesđạt. KhôngtựSprint16/main/tag/release. G13v1/Reopenable/core/01–18 giữ nguyên.
+
+
 Đọc `.agent`, `docs/production/HANDOFF.md` và `docs/governance/APPLICABLE-BASELINE.md` trước. Giao tiếp và tài liệu ưu tiên tiếng Việt; code identifiers theo tiếng Anh ổn định.
 
 - Tài liệu chi tiết nằm ở `docs/gdd/modules/`, nguồn bất biến ở `docs/source/`. Không thay nghiên cứu dài bằng summary hoặc sửa archive để khớp thiết kế mới.

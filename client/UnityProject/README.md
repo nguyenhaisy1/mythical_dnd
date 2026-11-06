@@ -1,14 +1,23 @@
-# Unity presentation workspace
+# Unity2D repair client workspace
 
-Đây là layout để khởi tạo Unity, chưa phải project đã được Editor tạo/kiểm chứng. Chưa có ProjectVersion.txt, Packages lock, scene hay Editor build. Không bịa các file đó để gọi là hoàn thành Unity bootstrap.
+Project này được Unity6000.6.7f1 tạo thật trong Sprint15. ProjectSettings/ProjectVersion.txt, Packages manifest/lock và source `.meta` có provenance Editor; Library/Temp/build/DLL staging là artifacts ignored. Kết quả actual import/build/Player và các điều kiện đóng sprint xem [evidence Sprint15](../../docs/qa/SPRINT-15-EVIDENCE.md), không suy từ sự hiện diện của source.
 
-Thực hiện FND-16/VS-07 theo docs/runbooks/UNITY-BOOTSTRAP.md: chọn editor, tạo project trong thư mục này, giữ Assets/Game, cài API .NET Standard 2.1, nhập portable core DLLs. UI gửi commands và đọc knowledge projections. Không đặt rule gameplay trong MonoBehaviour.
+Theo [ADR024](../../docs/adr/024-bounded-2d-repair-client.md) và [client contract](../../docs/contracts/REPAIR-CLIENT-PROFILE.md), đây là một worksite/nhân vật cố định tại Bến Vạc. UI phải hiện nhãn bản thử kỹ thuật; không có chọn/chỉnh origin hoặc reroll. Presenter chỉ nhận `IRepairClientSession`/safe DTO; Bootstrap là composition point bind Infrastructure. Rules/time/resources/save truth ở core Sprint14, không ở MonoBehaviour.
 
-## Sprint10 — chuẩn bị Unity conformance
+## Build và chạy
 
-[Bộ kiểm chứng và cách chạy](../../docs/runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Client này vẫn layout; project kiểm chứng nằm trong tests/results.
+Từ root repository:
 
+```sh
+python3 tools/unity/run_repair_client.py --dotnet /path/to/dotnet --editor /path/to/Editor/Unity
+```
 
-## Hướng trình bày đã chốt03/11/2026
+[Runbook](../../docs/runbooks/REPAIR-CLIENT.md) mô tả dependencies, DISPLAY, output mới, actual Editor methods, LinuxMono Player, autoplay/captures và OS-input probe. Runner stage portable DLL/native SQLite vào `Assets/Plugins/MythicalRuntime` trước khi import; không commit hoặc chép headless net10 executable vào project. Khi clone mới, chạy staging/build runner trước khi mở project trong Editor vì imported binaries không nằm trong Git.
 
-[Profileearth-monument-2d-v1 và cổngG13](../../docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) chọn nền2D có cảm giác khối + nhân vật sprite, camera giới hạn theo scene. Đây là định hướng, chưabootstrap/layeredasset/sprite/Player acceptance. Chọn renderer/package/import theo task Editor thật, không bịa manifest. View/projection/command boundaries giữ nguyên; mở lại mỹ thuật chỉ thay phần trình bày trên core hiện tại, không rollback nền tảng.
+Scene được Editor tạo tại `Assets/Game/Scenes/Sprint15Repair.unity`. Runtime code ở `Assets/Game/Presentation`; configure/import/scene/build hooks ở `Assets/Game/Editor`. Profile authoring resource phải khớp parameterpack; font NotoSans có LICENSE.txt đi cùng. Không reinitialize hoặc overwrite existing save để xử lý incompatibility.
+
+## Mỹ thuật và phạm vi
+
+`earth-monument-2d-v1` dùng base2D có cảm giác khối, actor sprite, boat variants và foreground occluder riêng; metadata nguồn ở `assets/production/sprint15`. Camera cố định, local footpoint chỉ là presentation trong một worksite; không Travel hoặc physics gameplay. Không tạo model3D.
+
+[G13](../../docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) vẫn Accepted/Reopenable, giữ core/rules/content/stableIDs và thư viện01–18 khi nghiên cứu lại mỹ thuật. Bản này chưa đại diện random-life onboarding/fullVS03/fullVS07, final UI/art approval hoặc human playtest. Những phần đó là backlog dự án ngoài năm gate đóng Sprint15.

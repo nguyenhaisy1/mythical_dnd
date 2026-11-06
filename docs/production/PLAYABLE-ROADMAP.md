@@ -1,6 +1,12 @@
 # Lộ trình hình ảnh và bản chơi thử
 
-## Sprint14 đã được giao — 03/11/2026
+## Sprint15 — bản thử kỹ thuật Unity2D đã chạy trên LinuxMono
+
+[Sprint15](sprints/SPRINT-15.md) hiện thực `repair-client-2d-v1` theo [ADR024](../adr/024-bounded-2d-repair-client.md): quan sát một thuyền, xem giá/thời gian, sửa/hủy/chờ và lưu/mở lại qua core Sprint14. Nền2D có khối, sprite, lớp che và camera cố định áp hướng đã chốt. Actor là fixture cố định và được ghi rõ trên UI; đây chưa là đường New campaign→random origin→Reveal hoàn chỉnh.
+
+Ngày06/11/2026, mốc **actual LinuxMono Player build/run và thao tác thật** đã có evidence: Unity6000.6.7f1/build0lỗi/0cảnh báo,12ảnh renderer/sáu layout cases, ba SQLite files và OS keyboard/mouse riêng. Bản thử cho xem vật liệu/thời gian, sửa/hủy/chờ/lưu/mở lại; một click mở preview và một click riêng mới xác nhận. Đây bản chơi thử kỹ thuật giới hạn, chưa là demo cuộc đời/campaign hoàn chỉnh. Regression/review/docs và Git/CI vẫn là gate đóng sprint theo revision cuối, có kết quả cụ thể ở báo cáo và WORKLOG. Điều kiện đóng nằm ở [client contract](../contracts/REPAIR-CLIENT-PROFILE.md) và [evidence](../qa/SPRINT-15-EVIDENCE.md). Sprint14 đã đóng headless; Sprint15 không cần nghiệm thu mọi hệ tương lai để đóng, nhưng phải đạt đủ năm gate đã nhận. Không chuyển gate đang thiếu thành backlog. Full demo/campaign với generator, full perceived knowledge/world binding và UI/art được chủ dự án duyệt tiếp tục có milestones riêng; chưa hứa ngày hoặc tự mở Sprint16.
+
+## Mốc Sprint14 — luật sửa thuyền headless, 03/11/2026
 
 [Sprint14](sprints/SPRINT-14.md) hiện thực vòng sửa thuyền **headless có luật/state thật**, reserve/time/cancel/complete và lưu/tải/replay theo [ADR023](../adr/023-bounded-boat-repair-profile.md). Phạm vi này chưa Unityclient/spriteanimation/worldlife/projection vàkhôngđóngfullVS03. Giữ profile2D/sprite đãchốt; bướcclient2Dproof/actorreadmodel/randomorigin còn phải giao vàkiểm riêng. ForecastSprint15–16lịch sử chưa được biến thành deadline sau scope thực thi này; reforecast dựa gates/evidence, không gọi kết quảheadless làdemo nhìn/chơi được.
 

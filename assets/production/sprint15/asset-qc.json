@@ -1,0 +1,223 @@
+{
+  "scope": "generated source/alpha/containment checks and composed previews; not Unity/runtime or user approval",
+  "assets": [
+    {
+      "id": "base",
+      "file": "client/UnityProject/Assets/Game/Resources/Sprint15/Art/base.png",
+      "sha256": "27a39db1c003536c8d1be3b73df7788b0fc7769974c89c0f938e9a0bfeabc04b",
+      "size": [
+        1920,
+        1080
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "has_transparent_pixels": false,
+      "alpha_edge_touch": true,
+      "anchor_top_left_pixels": null,
+      "pivot_normalized_bottom_left": [
+        0.5,
+        0.5
+      ],
+      "render_order": "background",
+      "display_size_pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "foreground",
+      "file": "client/UnityProject/Assets/Game/Resources/Sprint15/Art/foreground.png",
+      "sha256": "2f923662e40edc9b11f435c9c9b224736d6e387170b47323749a476c3e48f573",
+      "size": [
+        179,
+        714
+      ],
+      "visible_bbox": [
+        4,
+        4,
+        175,
+        710
+      ],
+      "has_transparent_pixels": true,
+      "alpha_edge_touch": false,
+      "anchor_top_left_pixels": [
+        650,
+        820
+      ],
+      "pivot_normalized_bottom_left": [
+        0.5,
+        0.0056022408963585435
+      ],
+      "render_order": 20,
+      "display_size_pixels": {
+        "height": 300,
+        "preserve_aspect": true
+      }
+    },
+    {
+      "id": "boat-damaged",
+      "file": "client/UnityProject/Assets/Game/Resources/Sprint15/Art/boat-damaged.png",
+      "sha256": "cbe87a55cc54d20479707b574d799d7c1da2aec7d52e3a59edfa8e6e9a1bc44d",
+      "size": [
+        714,
+        384
+      ],
+      "visible_bbox": [
+        4,
+        4,
+        710,
+        380
+      ],
+      "has_transparent_pixels": true,
+      "alpha_edge_touch": false,
+      "anchor_top_left_pixels": [
+        1160,
+        750
+      ],
+      "pivot_normalized_bottom_left": [
+        0.5,
+        0.010416666666666666
+      ],
+      "render_order": 10,
+      "display_size_pixels": [
+        530,
+        285
+      ]
+    },
+    {
+      "id": "boat-repaired",
+      "file": "client/UnityProject/Assets/Game/Resources/Sprint15/Art/boat-repaired.png",
+      "sha256": "a57624908c7854f8d1e9e2aeb32f11c51487ab80bf699162dcd82939f7d77b1b",
+      "size": [
+        714,
+        384
+      ],
+      "visible_bbox": [
+        4,
+        5,
+        710,
+        380
+      ],
+      "has_transparent_pixels": true,
+      "alpha_edge_touch": false,
+      "anchor_top_left_pixels": [
+        1160,
+        750
+      ],
+      "pivot_normalized_bottom_left": [
+        0.5,
+        0.010416666666666666
+      ],
+      "render_order": 10,
+      "display_size_pixels": [
+        530,
+        285
+      ]
+    },
+    {
+      "id": "actor-idle-0",
+      "file": "client/UnityProject/Assets/Game/Resources/Sprint15/Art/actor-idle-0.png",
+      "sha256": "f413e1389a6c44a759139db5a3eeb45e78270a2804149e6a00a5346f12a99153",
+      "size": [
+        116,
+        342
+      ],
+      "visible_bbox": [
+        5,
+        4,
+        112,
+        338
+      ],
+      "has_transparent_pixels": true,
+      "alpha_edge_touch": false,
+      "anchor_top_left_pixels": [
+        800,
+        820
+      ],
+      "pivot_normalized_bottom_left": [
+        0.5043103448275862,
+        0.011695906432748537
+      ],
+      "render_order": "Y relative to post for actor; boat10/post20",
+      "display_size_pixels": {
+        "height": 210,
+        "preserve_aspect": true
+      }
+    },
+    {
+      "id": "actor-idle-1",
+      "file": "client/UnityProject/Assets/Game/Resources/Sprint15/Art/actor-idle-1.png",
+      "sha256": "dbf7f86ee7a9567c755f29a32608605b88e490879d041065615a1aeb2721d02b",
+      "size": [
+        116,
+        342
+      ],
+      "visible_bbox": [
+        5,
+        4,
+        112,
+        338
+      ],
+      "has_transparent_pixels": true,
+      "alpha_edge_touch": false,
+      "anchor_top_left_pixels": [
+        800,
+        820
+      ],
+      "pivot_normalized_bottom_left": [
+        0.5043103448275862,
+        0.011695906432748537
+      ],
+      "render_order": "Y relative to post for actor; boat10/post20",
+      "display_size_pixels": {
+        "height": 210,
+        "preserve_aspect": true
+      }
+    }
+  ],
+  "processor_summaries": {
+    "boats": {
+      "frame_count": 2,
+      "valid_frame_count": 2,
+      "empty_count": 0,
+      "edge_touch_count": 0,
+      "paste_clamped_count": 0,
+      "body_scale_mean": 0.44246071649369845,
+      "output_subject_height_mean": 375.5,
+      "body_scale_cv": 0.0005347913856864388,
+      "anchor_x_std": 0.0,
+      "anchor_y_std": 0.030694668820678506,
+      "anchor_y_mean": 0.8287560581583199
+    },
+    "post": {
+      "frame_count": 1,
+      "valid_frame_count": 1,
+      "empty_count": 0,
+      "edge_touch_count": 0,
+      "paste_clamped_count": 0,
+      "body_scale_mean": 0.4827443270685489,
+      "output_subject_height_mean": 706.0,
+      "body_scale_cv": 0.0,
+      "anchor_x_std": 0.0,
+      "anchor_y_std": 0.0,
+      "anchor_y_mean": 0.8036044362292052
+    },
+    "actor": {
+      "frame_count": 4,
+      "valid_frame_count": 4,
+      "empty_count": 0,
+      "edge_touch_count": 0,
+      "paste_clamped_count": 0,
+      "body_scale_mean": 0.32679330727277317,
+      "output_subject_height_mean": 334.0,
+      "body_scale_cv": 0.00037102239378159483,
+      "anchor_x_std": 0.0,
+      "anchor_y_std": 0.0,
+      "anchor_y_mean": 0.8804523424878837
+    }
+  }
+}
