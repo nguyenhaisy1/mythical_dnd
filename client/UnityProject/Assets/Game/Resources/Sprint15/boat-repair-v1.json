@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "content.boat-repair@1",
+  "profile": "boat-repair-v1",
+  "status": "engineering-prototype-not-balanced",
+  "recipe": {
+    "id": "recipe.boat-repair@1",
+    "version": 1,
+    "handler": "boat-repair-v1",
+    "material": "commodity.timber@1",
+    "material_quantity": 2,
+    "duration_ticks": 60,
+    "condition_gain": 200,
+    "condition_max": 1000
+  }
+}

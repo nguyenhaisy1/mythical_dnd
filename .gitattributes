@@ -1,0 +1,5 @@
+# Unity's Editor serializer writes empty YAML values with a trailing space.
+# Preserve actual Editor output and evidence hashes; handwritten code keeps normal checks.
+client/UnityProject/**/*.meta whitespace=-blank-at-eol
+client/UnityProject/ProjectSettings/*.asset whitespace=-blank-at-eol
+client/UnityProject/Assets/Game/Scenes/*.unity whitespace=-blank-at-eol

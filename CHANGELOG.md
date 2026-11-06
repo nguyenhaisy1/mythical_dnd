@@ -6,6 +6,14 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint15 — cảnh Unity2D sửa thuyền
+
+- Thêm safe actor-scoped session/DTO và preview có token, explicit observation grants/Unknown, retry giữ original envelope; presenter không nhận raw world/receipt hoặc ghi authoritative state.
+- Thêm bản thử Bến Vạc theo Đất dựng thành: nền2D phân lớp, sprite nhân vật/thuyền/foreground, UI tiếng Việt, preview/confirm/cancel/wait/save/reload qua core và SQLite thật. Nhân vật cố định được ghi rõ; không thay random-life baseline.
+- Thêm actual Unity6000.6.7f1/LinuxMono build/render runner, OS keyboard/mouse driver theo PID, sáu text-scale/resolution cases và final SQLite state checks. Kết quả và failures/fixes được duy trì tại [evidence Sprint15](docs/qa/SPRINT-15-EVIDENCE.md).
+- Validation local:593/593 runtime tests,0failed/skipped và process/negative gates; actual LinuxMono Player/render/OS input đã đạt, hai review độc lập trong scope. CI/PR/dev saucommit theo WORKLOG; chưa release.
+- Giữ repair image2/exact rule-content và physicalSQLite schema2, legacy goldens, G13 Reopenable và thư viện01–18. FullVS03/VS07, random life/world binding/final art và human playtest vẫn có acceptance riêng.
+
 ### Sprint14 — sửa thuyền headless
 
 - Thêm profile repair độc lập: item, capability/tool, activity và material hold; lệnh bắt đầu/hủy và completion nội bộ theo scheduler, reserve2timber/60ticks/+200conditioncap1000 từ parameterpack, không RNG.

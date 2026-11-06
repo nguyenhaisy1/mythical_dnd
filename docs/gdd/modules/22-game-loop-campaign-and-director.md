@@ -12,7 +12,7 @@ World Director exposure-only. Không đổi truth hoặc bắt buộc crisis cho
 |---|---|
 | Dữ liệu đầu vào | Valid threads/opportunities, current knowledge, recent experience và player intent. |
 | Đầu ra / bên sở hữu | Ranked presentations; chỉ action/authorized workflow mới commit world changes. |
-| Đọc cùng | 06, 17, 21, 23–27.; ADR-008 và các contract specs bổ sung 14/10/2026. |
+| Đọc cùng | 06, 17, 21, 23–27.; ADR-008 và các contract specs bổ sung 14/10/2026. ADR024 và docs/contracts/REPAIR-CLIENT-PROFILE.md + docs/runbooks/REPAIR-CLIENT.md: Sprint15 repair-client-2d-v1 là bounded fixed-actor Unity2D proof với explicit field grants/deny-default DTO, pure preview/private revision và original-envelope retry, actual Unity6000.6.7f1/LinuxMono Player build/render/effects và OS keyboard/mouse đã kiểm chứng06/11/2026 (12captures/sixlayouts/3SQLitefiles). Preview bằng nhấn–thả thuyền và Confirm là hai gesture riêng. Năm gate đóng sprint gồm final regression/review/docs/Git-CI phải đối chiếu docs/qa/SPRINT-15-EVIDENCE.md và WORKLOG; không nhận full Knowledge/random life/fullVS07/finalart hoặc human playtest đã hoàn tất. |
 | Cổng nghiệm thu | Tắt Director không ngăn mandatory world consequences; đổi preset không sửa facts đã commit. |
 | Việc chưa được chứng minh | Playtime/pacing targets, difficulty tuning và onboarding playtest. |
 

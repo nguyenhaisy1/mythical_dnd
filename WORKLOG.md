@@ -2527,3 +2527,108 @@ Root da append report/evidence dung actor va thoi diem audit moi, giu lich su au
 
 Final check_exports exit0:282sourceinputs/14containers/6156sourceanchors/6251DOCXheadings/123tables/internalnavigationvalid. Đâycontainer/content/navigationchecks, khôngvisualrender/runtimeacceptance. Source đã đóng băng, generateddocs36/handoff942links/reference/vectors/architecture/offlineMCPcontrols/skill6links/diffchecks đạt. Root nghiệmthu VS03Aheadless sau full562/562 và independentfinalaudit;chưaUnity2D/fullVS03.
 Tiếp theo commit65files feature/sprint-14-boat-repair, pushchínhnhánh,PR→dev vàđợiCI đúngHEAD rồimerge. ĐâyworkflowSprint14đãđượccấpquyền;khôngmain/tag/release/tựmởSprint15. LiveWORKLOGđượcloạikhỏiexportfingerprints,ghi eventkhônglàmstaleexport. PostcommitGit/CLOSElogđểlocalcho meaningfulcommitkếtiếp,khôngamendvònglặp.
+
+
+### EVT-00220 | SPIN-038 | GIT — Đã push Sprint14 và mở PR15; chờ CI đúng HEAD trước tích hợp dev
+
+<!-- worklog: {"id": "EVT-00220", "spin": "SPIN-038", "event": "GIT", "at": "2026-11-03T16:27:53+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:27:53+07:00
+- Actor: /root
+
+Đã commit Sprint14 1752d3ec6a40814849fac92113f4a2798b78df75 trên feature/sprint-14-boat-repair,65files/3218insertions/98deletions. Push đúng nhánh thành công; ls-remote SHA khớp HEAD. PR15 https://github.com/nguyenhaisy1/mythical_dnd/pull/15 mở ready vào dev, API head SHA đúng; CI push41611138364 và pull_request41611167273 đang in_progress, chưa merge. Trước postcommitjournal workingtree sạch; exports freshness282inputs/14containers đã đạt. Journal GIT saucommit local sẽ đi cùng meaningfulcommit kếtiếp, không amend/commitvònglặp. Không main/tag/release/xóa branch/Sprint15.
+
+
+### EVT-00221 | SPIN-038 | GIT — PR15 đã vào dev; CI feature, PR và dev đều đạt
+
+<!-- worklog: {"id": "EVT-00221", "spin": "SPIN-038", "event": "GIT", "at": "2026-11-03T16:31:52+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:31:52+07:00
+- Actor: /root
+
+Sprint14 feature1752d3ec6a40814849fac92113f4a2798b78df75 đã push đúng nhánh;ls-remoteSHAkhớp. PR15 https://github.com/nguyenhaisy1/mythical_dnd/pull/15 đã squash merge vào dev a99083f0ea2de02a7699a07a56deb8af6a226fa6,API merged=true,stateclosed,fetchdevSHAkhớp. Hai CI đúng featureHEAD completed/success:push41611138364 vàpull_request41611167273. CI pushdev41611357751 completed/success gồm docs/reference/offlineMCP/runtimegates/evidenceupload/Hoststatus.
+Đã verify checkpoint source1e4332f0a122528b9bed850377529ffee1efb7da là ancestor origin/dev; committedtreeHEADfeature khớp origin/dev; source/archive/experiments01–18 giữ nguyên. Remote featurebranch vẫn1752d3e, khôngxóanhánh. ProductVERSION/main/tags/releases không đổi, chưaSprint15. Postcommitjournal GIT/HANDOFF/CLOSElocal chưa commit để đi cùng meaningfulchange kếtiếp;khôngamend hoặc commit tựchứahash.
+
+
+### EVT-00222 | SPIN-038 | HANDOFF — Bàn giao sửa thuyền đã chạy thật; client 2D và projection là bước đề xuất kế tiếp
+
+<!-- worklog: {"id": "EVT-00222", "spin": "SPIN-038", "event": "HANDOFF", "at": "2026-11-03T16:31:53+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:31:53+07:00
+- Actor: /root
+
+Bàn giao Sprint14/VS03A headless đã nghiệm thu: sửa thuyền có giữ2gỗ/thời gian60phút/tăng200conditioncap1000, cancel/revalidation không sinh gỗ, atomiccommand/scheduler, strictcontentprofile/image2, SQLitefilethật/reopen/snapshot/recovery và commandreplay. Source/evidence docs/qa/SPRINT-14-EVIDENCE.md và docs/qa/sprint-14/FINAL-REVIEW.md, full562/562tests+processgates/negativecontrols; độc lập baP1đãfix và khôngknownblocker. Actors/ownership/failure-before/fix-after/quota/fullaudit thật đều ghi report/events.
+Sprint13Accepted/Reopenable earth-monument-2d-v1 vàG13/sourcecheckpoint/thưviện01–18 giữ nguyên; A02/A03DeferredkhôngPassed. FullVS02/VS03,worldbinding/profession/lifegenerator/actorprojection,Unity2Dbackground/sprite/clientinput,Player/performance/humanplaytest vẫn riêng. Bước đề xuất khi user giao Sprint15: scoped2Dproof áp artdirection với actor-scoped readmodel và boundedrepairinteraction, chốt input/output/gates trướcimplementation; không tựmởSprint15. Reforecastdemo theo gates, không lấy headlesssuccess thành demo nhìn/chơi được.
+Gitdev a99083f/PR15 và3CIsuccess; localfeature1752d3e retained. Root chỉ còn livejournal saucommit, khôngcode/docsourcepending. Exports7HTML+7DOCX freshness282inputs/14containers đạt; khôngZIP/release.
+
+
+### EVT-00223 | SPIN-038 | CLOSE — Finished Sprint14: VS-03A headless đã nghiệm thu và tích hợp dev
+
+<!-- worklog: {"id": "EVT-00223", "spin": "SPIN-038", "event": "CLOSE", "at": "2026-11-03T16:31:53+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:31:53+07:00
+- Actor: /root
+
+Status:finished SPIN-038/Sprint14 trong scopeVS03Aboundedheadless đã được giao. Domain/Application/Infrastructure/Host/fixtures/tests/docs/notes/exports và independentreview hoàn tất; runtime562/562/113repair/0failed-skipped, processgates/negativecontrols,3P1fix,sourcefingerprints và CIfeature/PR/dev đều đạt. PR15 đã tích hợp dev a99083f0ea2de02a7699a07a56deb8af6a226fa6; khôngmain/tag/release hoặcSprint15.
+Evidence links và actors thật trong RESULT/HANDOFF, không gọi Unity/gameplayclient/humanplaytest/fullVS03Passed. G13 vẫnReopenablekhôngmấtcore/tiếnđộ; checkpointsourceancestor vàthưviện01–18 giữ nguyên. Journalpostcommit local chưa commit (đi cùng meaningfulchange kếtiếp theo workflow), toànbộ65filesSprint14 đãpush/merge; khônggiảworkingtreeclean sauappendlog. Bước tiếp theo chờ giao sprint mới với scoped2Dproof/projection và gates rõ.
+
+
+### EVT-00224 | SPIN-039 | OPEN — Bắt đầu Sprint15: bản thử Unity 2D tương tác với luật sửa thuyền thật
+
+<!-- worklog: {"id": "EVT-00224", "spin": "SPIN-039", "event": "OPEN", "at": "2026-11-03T16:43:52+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-03T16:43:52+07:00
+- Actor: /root
+
+User giao Sprint15 theo workflow thường trực. Branch feature/sprint-15-2d-repair-client từ origin/dev a99083f0ea2de02a7699a07a56deb8af6a226fa6; chỉ WORKLOG postcommit Sprint14 đang local và được giữ nguyên. Goal: bounded client2D repairproof tại Bến Vạc với fixed trusted actor, safe actor-scoped DTO/preview/session, luật sửa thuyền Sprint14 và SQLite thật, scene/sprite/camera/UI, actual Unity Editor và Linux Mono Player acceptance. Không randomlife/fullVS07/fullVS03/humanplaytest/finalartapproval; không Sprint16/main/tag/release. G13v1/Reopenable và01–18 giữ nguyên.
+Hai actor /root/s15_projection_audit và /root/s15_unity_audit đã readonly audit: projection/knowledge runtime chưa có, cần explicit direct-observation grants/denydefault/safe receipts; Editor6000.6.7f1+LinuxMono modules có thật. Root đã bắt đầu actualEditor createProject trongclient/UnityProject, chưa có kết quả nên khôngclaimbootstrapPass.
+Assignments sau audit: projectionactor owns Application/Projection+sessiontests; unityactor owns presentation/editor/build source; /root/s15_art owns runtime2Dassets/prompts/provenance theo map/sprite skills,built-inimagegen,no3D. Rootowns ADR024/contract/brief/Infra composition/runner/tests/actualEditorPlayer integration/docs/Git. Critics independent sẽgiao sauworkerfreeze, tốiđa4actorsđồngthời.
+
+
+### EVT-00225 | SPIN-039 | PROGRESS — Tiếp tục Sprint15 sau ngắt phiên; Editor đã tạo project thật, giao lại phần còn dở
+
+<!-- worklog: {"id": "EVT-00225", "spin": "SPIN-039", "event": "PROGRESS", "at": "2026-11-04T08:29:01+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-04T08:29:01+07:00
+- Actor: /root
+
+Tiếp tục cùng SPIN039 sau user04/11, không mở spin/sprint mới. Editor createProject thực tế đã exit0/entitlementresolved và tạo ProjectVersion6000.6.7f1/Packages/ProjectSettings; source/caches phân biệt. Root tạo ADR024/clientcontract/brief, Infra RepairDemoFactory và6SQLite/session tests chưa run; fontNotoSans+license và profile copied vàoResources. Chưa Unity import/build/Player evidence.
+Các actor trước không còn live sau ngắt phiên, không claimđãhoàn tất: /root/s15_session_finish tiếp quản App/sessiontests; /root/s15_unity_finish tiếp quản2Unitypartialfiles/bootstrap/UI/QA; /root/s15_art_finish tiếp quảnbase/rawart hiệncó vàphầnprops/sprites/provenance cònthiếu. Root tiếp tục runner/staging/actualexecution/docs/Git. Allownscope, không overwriteuseredits/oldexperiments hoặc tựSprint16.
+
+
+### EVT-00226 | SPIN-039 | PROGRESS — 31 ca session đạt; asset hoàn tất; sửa lỗi Unity và modal trước Player gate
+
+<!-- worklog: {"id": "EVT-00226", "spin": "SPIN-039", "event": "PROGRESS", "at": "2026-11-04T08:40:41+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-04T08:40:41+07:00
+- Actor: /root
+
+Actual .NET Releasebuild0warnings/errors; initialfocused29/29Passed (23session+6SQLitefactory). Independent/root/s15_critic_boundary bổsung2cases: before2executed1pass1fail vìlabel sentinel Chưa rõ làmrecipegate sai; rootfix dùngworksiteidentity, after31/31Pass0failed/skipped tại tests/results/sprint15-focused-fixed/client-session.trx. Criticđãtựparsebefore/aftervàreviewpatch,reportclosedP2,noknownP0/P1Appscope.
+Artactor/root/s15_art_finish phục hồi4generationtrước+1actorcallmới,6runtimePNGs+5rawsources/prompts/manifest/alphaQCđãfreeze; khôngtạo3D hoặcgọicomposedpreviewlàUnityrender. ActualUnityrunnerlượt1 tests/results/sprint15-client-puu3o6ny failedConfigure vìGame.ApplicationshadowUnityEngine.Application;workerđãsửafullyqualified. Criticclient mới phát hiệnP1modalkeyboardbackgroundactivationvàgapsQAtextscale/Monolabel;Unityworkerđangsửainert/focustrap/callbackguards/layout2resx3scale/actualMonoDetection. ChưarerunPlayer/chưanghiệmthuSprint15.
+RootthêminfraFactory/runner/staging/CIstaticchecker;docactor/root/s15_docs_syncđangđồngbộconsumerchưaclaimPlayerPassed. KhôngGitcommitpushSprint15/chưaSprint16/main/tag/release;livejournalSprint14cũđượcgiữ.
+
+
+### EVT-00227 | SPIN-039 | PROGRESS — Đối chiếu ảnh với SQLite phát hiện lượt sửa ngoài kịch bản; tiếp tục kiểm chứng Sprint15
+
+<!-- worklog: {"id": "EVT-00227", "spin": "SPIN-039", "event": "PROGRESS", "at": "2026-11-06T10:39:20+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-06T10:39:20+07:00
+- Actor: /root
+
+Tiếp tục ngày06/11 cùngSprint15/SPIN039. Lượt actualUnity21bx2wn3 trước ngắt phiên đãbuildLinuxMono0errors/warnings và runnerPassed; root/critic mới đối chiếu ảnhthật+SQLite phát hiện thêmStartRepair ởtick60 sau khiqa.completedđãsample, nên khôngnghiệmthu lượt này. LogcóS15_INPUT_KEY Return trongcallbackautoplay; nguyênnhân cụthể của inputchưađịnhkếtluận, cầnisolateautoplay vàkiểmfinalcommittedstate. Theme/scroll và1920blackbarsđãcófix/captures nhưng gateoverallchưađạt.
+OSdriverlượtđầu sprint15-input-1fcn8ks8 Failedtimeoutready, chưa gửiinput; logREADYxuất hiệncuối nhưngdriverkhôngcóreadinesshandshake. Root giao/root/s15_input_fix chỉUnityView/Autoplay, /root/s15_client_final_review reviewđộc lập source/captures/3DB; max3actors hiện tại. Rootđangchạyfullheadlessregression vàsẽrerun saufreeze cuối khi sourceđổi. Khôngcommit/push/đóngsprint hoặcSprint16; giữmọifailureartifacts. Skills mythical-task/validation tiếp tụcđượcdùng.
+
+
+### EVT-00228 | SPIN-039 | PROGRESS — Player render/SQLite đạt; OS input tìm lỗi cùng cú nhấp mở và xác nhận modal, đang kiểm bản sửa
+
+<!-- worklog: {"id": "EVT-00228", "spin": "SPIN-039", "event": "PROGRESS", "at": "2026-11-06T10:52:31+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-06T10:52:31+07:00
+- Actor: /root
+
+ActualPlayer0zqlba64 exit0 với nguồnkhóa trước/sauBuild+Player, actualMono6000.6.7f1,0buildwarnings/errors,12captures/sixlayouts,23requiredchecks và3DBfinalentities/activity/StartRepaircounts đúng. Root/2critic tựđọc ảnh/JSON/SQLite/sourcehashes; hoàn tấtchỉởcallback/renderprofile, chưaOSgate. gl6e8m11 trướcđóFailedSourcesChanged sauAPIobsoletepatch, khônglấyrunnerpassđểđóngsprint. PreventDefaultobsoleteđượcđổi sangFocusController.IgnoreEvent/StopImmediatePropagation cóexactUnityXML.
+OSinput5prtp46v đãnhậnphímthật: nativeTab/Back/Return, S/Ldurable, SpacefocusRepairvàWaitmỗilần1tick, cancelđúng. Failedởmouseboat: mộtgesture tại773,440 vừamởmodalvừanhấnConfirm mới (scenePicks1/modalfalse/reserved2), criticclientđốichiếures0trướcclickvàboundConfirm. Worker/root/s15_input_fix sửaeligiblepress-origin+matchingrelease, dispatchScenePointer sauEndOfFrame vàvôhiệugesturecũkhiModalmở; rootthêmdriverhelddown/releasepurepreviewvàsecondfreshConfirmclick. Sourcefreeze, actualbuildbo3487zvđangchạy; chưanóiOSgatePassed.
+Fullheadlessr365u194và9s6r3iz2 đều593/593tests,0failed/skipped,negativecontrolfailđúng1vàprocessgatesđãchạy, nhưngoverallExit1SourcesChanged bởiUI/runnerfix; đâyintermediate khôngevidencefinalsource. SẽrerunfullsauOSpass/finalfreeze. Actorreviews06/11:/root/s15_client_final_review và/root/s15_final_boundary_review chỉreport/read-onlyartifacts, khônggiảlàmworkerhoặchumanplaytest. ChưaGitcommitpush/CI/đóngSprint15.
+
+
+### EVT-00229 | SPIN-039 | RESULT — Sprint15 đủ nghiệm thu kỹ thuật local; regression, independent review và exports đạt, chuyển Git gates
+
+<!-- worklog: {"id": "EVT-00229", "spin": "SPIN-039", "event": "RESULT", "at": "2026-11-06T11:02:31+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-06T11:02:31+07:00
+- Actor: /root
+
+Nghiệmthu kỹthuật localSprint15 đủscope: actualUnity6000.6.7f1/LinuxMono build0errors/warnings, finalrun tests/results/sprint15-client-bo3487zv Passedexit0/183sourcehashesmatch fingerprint51564bd28a32a630279353015603d1deed1711805414d10ec56d23b6c680fb41,12rendercaptures/sixlayouts/23requiredflags/3actualSQLitefinalstates. OS tests/results/sprint15-input-yc1_bzfx Passedexit0/18actions, nativeTab/Back/Return/S/L/Spaceonce/C/Esc, heldpress/releasepurepreview vàsecondConfirmclick; same managedAssemblya507b552b10a726b191cfdfca33f66c41897b3d6d17aad537b88740aa67090ef. OSdrawable1280x683 đượcghiđúng, khôngthaymatrix1280x720/1920x1080. Failures/fixes cũgiữđủ trongreport.
+Finalfull tests/results/sprint15-l08y6ql5 exit0/593discovered-executed-passed/0failed-skipped;25S15session/boundary+6factorySQLite và113repair regression. Source256paths khớp60746b3f12cf8d18502517266afe451ae0870f9809cd18dd724ce14634b0c04d; negativecontrolfailđúng1, transaction/saveSIGKILL/replay/content/diagnostic/settlement/eligibility/repairprocessgatesđạt. Hai critic06/11đãfinalizebằngread-onlyartifacts+sourcehashes, noP0/P1scope; App/Infra7fingerprintschưađổi. Reviewreports vàactorschi tiết docs/qa/sprint-15/.
+Docsimpact đãđồngbộ8consumernguồncuốibởi/root/s15_docs_final, rootchốtbrief/evidence/.agent/AGENTS/changelog/runbook, regenerate36docs. Source/reference/contracts/architecture/staticclient/assets/4offlineMCP/6skilllinks/handoff991authoredlinks/diffchecksđạt. Export7HTML+7DOCX; check_exports290inputs/14containers/6156anchors/6251headings/123tablesđạt. Đâycontainerchecks, khôngclaimvisualDOCXrender/gameacceptance. KhôngZIP; sourcearchive/01–18/legacygoldens/parameterpacks khôngđổi.
+Precommitreview153filesđúngscope, nosecrets/forbiddenDLL-SO-cache-resultsZIP, khôngfile>10MiB. .gitattributes chỉUnityserializedmeta/ProjectSettings.asset/scene.unity giữ397trailingemptyYAMLvalues doEditorghi, khôngsửanguồnđãtestchỉđểtrimwhitespace; handwrittencode vẫncheckbìnhthường. gitdiffcachedcheckexit0. ChưaCI/PR/dev nên chưaCLOSEsprint; tiến hànhcommitpushPRtheoworkflow, khôngSprint16/main/tag/release. JournalpostSprint14đượcđưacùngmeaningfulSprint15commit.

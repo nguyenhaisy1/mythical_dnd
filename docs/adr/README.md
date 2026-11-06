@@ -19,3 +19,5 @@ Các ADR này ghi rationale cho baseline bàn giao. [Decision Register](../gover
 [ADR022 — Đất dựng thành nền2D/sprite và cổngG13](022-earth-monument-2d-and-reopen-gate.md): chủ dự án chốt hướng03/11/2026; mở lại mỹ thuật có chọn lọc, giữ core/dữ liệu/tiến độ; không runtime acceptance.
 
 [ADR023 — Sửa thuyền headless giới hạn](023-bounded-boat-repair-profile.md): typed repair state/job, material reservation/time/cancel, image2/exactprofile và SQLite/replay; legacy goldens giữ nguyên.
+
+[ADR024 — Client2D sửa thuyền và projection giới hạn](024-bounded-2d-repair-client.md): fixed trusted actor, explicit field observation grants, safe session/preview/save API, renderer/sprite presentation và actual LinuxMono Player gates; không tự đóng fullVS07.

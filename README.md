@@ -2,11 +2,17 @@
 
 Living World Narrative RPG lấy chất liệu Văn Lang–Âu Lạc. Nội dung, nhân quả, nghề nghiệp, quan hệ và cuộc đời nhân vật là trọng tâm; gameplay runtime chạy offline bằng code/rules. Tên game hiện là working title.
 
-**Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Đã có primitives Sprint 1 và path TransferResource in-memory Sprint 2; Sprint3 có event journal/causal trace và idempotent consumer; Sprint4 có scheduler/AdvanceTime in-memory cùng demo thực thi. Sprint5 có SQLite current-state commit/reopen headless; snapshot/recovery và replay headless đã bổ sung Sprint6–7; full gameplay simulation và playable Unity client chưa được triển khai.
+**Trạng thái:** đã khôi phục GDD chi tiết và khởi tạo repository. Đã có primitives Sprint 1 và path TransferResource in-memory Sprint 2; Sprint3 có event journal/causal trace và idempotent consumer; Sprint4 có scheduler/AdvanceTime in-memory cùng demo thực thi. Sprint5 có SQLite current-state commit/reopen headless; snapshot/recovery và replay headless đã bổ sung Sprint6–7; full gameplay simulation chưa được nghiệm thu. Sprint15 đã có bản thử client2D chạy và thao tác thật; phạm vi nghiệm thu và điều kiện đóng sprint nằm ở báo cáo sprint.
 
 **Sprint13 — chốt ngày03/11/2026:** hướng **Đất dựng thành, nền2D có cảm giác khối + nhân vật sprite**, profile `earth-monument-2d-v1`. [Baseline mỹ thuật và cổng G13](docs/production/sprints/sprint-13/ART-DIRECTION-BASELINE.md) giữ trạng thái **Accepted / Reopenable**: có thể mở lại hướng mỹ thuật mà giữ engine, luật, dữ liệu và tiến độ độc lập đã làm. Đây là chốt định hướng; sprite/scene/UI, chi tiết Reveal và hiệu năng vẫn cần triển khai/kiểm chứng, chưa là playable acceptance và chưa tự mở Sprint14. [Quyết định ADR-022](docs/adr/022-earth-monument-2d-and-reopen-gate.md).
 
-## Sprint14 hiện hành
+## Sprint15 hiện hành
+
+[Sprint15](docs/production/sprints/SPRINT-15.md) đưa luật sửa thuyền lên một cảnh Unity2D tại Bến Vạc với nhân vật cố định, nền phân lớp và sprite riêng. [ADR024](docs/adr/024-bounded-2d-repair-client.md), [client contract](docs/contracts/REPAIR-CLIENT-PROFILE.md) và [runbook](docs/runbooks/REPAIR-CLIENT.md) chốt dữ liệu theo nhân vật, preview/command/save boundaries và năm điều kiện đóng sprint. Ngày06/11/2026 đã kiểm actual Unity6000.6.7f1/LinuxMono Player: build0lỗi/0cảnh báo,12ảnh renderer, sáu tổ hợp độ phân giải/cỡ chữ và ba SQLite files có kết quả sửa/hủy/chờ đúng. Kiểm bàn phím/chuột hệ điều hành riêng đã đạt: Tab/Enter/Space, lưu/mở lại, hủy, nhấn–thả thuyền chỉ mở preview và cú nhấp xác nhận riêng mới bắt đầu sửa. [Evidence Sprint15](docs/qa/SPRINT-15-EVIDENCE.md) ghi năm gate; regression cuối, review/docs và Git/CI theo revision phải đủ trước đóng sprint, không suy từ kết quả build đơn lẻ.
+
+Bản thử luôn ghi rõ nhân vật cố định; chưa đại diện random-life onboarding/fullVS07 hoặc final approval của UI/art. Hướng `earth-monument-2d-v1` và G13 Reopenable giữ nguyên.
+
+## Sprint14 đã nghiệm thu
 
 [Sprint14](docs/production/sprints/SPRINT-14.md) đã nghiệm thu luật sửa thuyền headless: giữ vật liệu, chờ đúng thời gian, hoàn tất/hủy và lưu/tải/replay. [Kiểm chứng](docs/qa/SPRINT-14-EVIDENCE.md):562/562 tests,113 repair,0failed/skipped và process gates đạt. Hướng Đất dựng thành2D/sprite đã chốt ởG13 được giữ; chưa Unitydemo hoặc sprite chuyển động được nghiệmthu. [ADR023](docs/adr/023-bounded-boat-repair-profile.md) và [runbook](docs/runbooks/BOAT-REPAIR.md) ghi scope/profile/commands.
 
@@ -39,10 +45,10 @@ dotnet run --project engine/HeadlessRunner/Game.Headless.csproj --configuration 
 
 ```text
 engine/        Foundation, Domain, Application, Infrastructure, HeadlessRunner
-client/        Unity presentation workspace (chưa bootstrap Editor)
+client/        Unity2D workspace được Editor6000.6.7f1 tạo; runtime gates theo Sprint15
 content/       schemas, reference fixtures, definitions, narrative, localization
-assets/        vị trí source art/audio, chưa sản xuất asset
-rules/         vị trí specification/parameter authoring, chưa có runtime pack
+assets/        source art/provenance; bounded Sprint15 2D assets, chưa full production
+rules/         specifications và versioned parameter packs cho các profile đã triển khai
 docs/          GDD, ADR, contracts, governance, production, QA, runbooks, sources
 tests/         Unit, Integration, Properties, Replay, Content, Scenarios, Performance
 tools/         documentation build/export, checks, vị trí các công cụ engine tương lai
@@ -63,7 +69,7 @@ Quy trình áp dụng cho AI: [AI Execution](docs/runbooks/AI-EXECUTION.md). Vai
 
 ## Sprint10 — chuẩn bị Unity conformance
 
-[Bộ kiểm chứng và cách chạy](docs/runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Client game vẫn layout; project conformance tạo riêng bằng Editor thật.
+[Bộ kiểm chứng và cách chạy](docs/runbooks/UNITY-CONFORMANCE.md) đối chiếu host với Editor thật. Sprint10 đã kiểm chứng Unity6000.6.7f1/Linux x64/Editor Mono: 5 semantic checks khớp .NET; VS01 và FND16 được nghiệmthu trong kernel profile theo ADR019. Player/IL2CPP, Unity crash/recovery/migration, full gameplay và playable client chưa nghiệmthu. Tại Sprint10 client game còn là layout; project conformance được tạo riêng bằng Editor thật. Client Sprint15 có scope/evidence riêng phía trên.
 
 ## Sprint11 — VS02A: dữ liệu dân cư và mạng đường
 

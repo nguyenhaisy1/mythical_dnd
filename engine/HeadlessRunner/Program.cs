@@ -23,7 +23,7 @@ namespace Game.Headless
                 Console.WriteLine(JsonSerializer.Serialize(new
                 {
                     project = "mythical_dnd",
-                    stage = "boat-repair-headless",
+                    stage = "repair-client-session",
                     commandPipelineImplemented = true,
                     inMemorySchedulerImplemented = true,
                     durablePersistenceImplemented = true,
@@ -34,10 +34,11 @@ namespace Game.Headless
                     settlementAuthoringImplemented = true,
                     eventEligibilityImplemented = true,
                     boatRepairProfileImplemented = true,
+                    repairClientSessionImplemented = true,
                     simulationImplemented = false,
                     runtimeLlm = false,
                     documentation = "docs/production/HANDOFF.md",
-                    nextTask = "2D client proof / bounded world and actor projection"
+                    nextTask = "Random life / settlement binding / wider actor perception"
                 }, new JsonSerializerOptions { WriteIndented = true }));
                 return 0;
             }

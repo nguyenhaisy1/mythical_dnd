@@ -17,4 +17,12 @@ client/UnityProject/[Ll]ogs/
 client/UnityProject/[Uu]ser[Ss]ettings/
 client/UnityProject/Assets/Plugins/GameCore/*.dll
 client/UnityProject/Assets/Plugins/GameCore/*.pdb
+client/UnityProject/Assets/Plugins/MythicalRuntime/*.dll
+client/UnityProject/Assets/Plugins/MythicalRuntime/*.pdb
+client/UnityProject/Assets/Plugins/MythicalRuntime/*.so
+client/UnityProject/Assets/Plugins/MythicalRuntime/imports.json
 tests/results/
+client/UnityProject/*.csproj
+client/UnityProject/*.sln
+client/UnityProject/*.slnx
+client/UnityProject/.vscode/
