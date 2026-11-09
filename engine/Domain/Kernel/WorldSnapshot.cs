@@ -5,6 +5,7 @@ using Game.Foundation.Identity;
 using Game.Foundation.Random;
 using Game.Foundation.Time;
 using Game.Domain.Repair;
+using Game.Domain.Origins;
 using Game.Foundation.World;
 
 namespace Game.Domain.Kernel
@@ -72,7 +73,8 @@ namespace Game.Domain.Kernel
         public IReadOnlyList<ResourceLot> Lots { get; }
         public IReadOnlyList<RngStreamState> RngStates { get; }
         public RepairState? Repair { get; }
-        public WorldSnapshot(IdentitySnapshot identity, WorldTick tick, IEnumerable<ActorState> actors, IEnumerable<ResourceLot> lots, IEnumerable<RngStreamState>? rngStates = null, RepairState? repair = null)
+        public CampaignOriginState? Origin { get; }
+        public WorldSnapshot(IdentitySnapshot identity, WorldTick tick, IEnumerable<ActorState> actors, IEnumerable<ResourceLot> lots, IEnumerable<RngStreamState>? rngStates = null, RepairState? repair = null, CampaignOriginState? origin = null)
         {
             Identity = identity ?? throw new ArgumentNullException(nameof(identity)); Tick = tick;
             this.actors = (actors ?? throw new ArgumentNullException(nameof(actors))).ToDictionary(x => x.Id);
@@ -96,7 +98,10 @@ namespace Game.Domain.Kernel
                     throw new IdentityException("REF_NOT_FOUND");
             RngStates = Array.AsReadOnly(streams.Values.OrderBy(x => x.ContextKey, StringComparer.Ordinal).ToArray());
             Repair = repair;
+            if (repair != null && origin != null) throw new ArgumentException("Origin and repair profiles cannot coexist");
+            Origin = origin;
             Repair?.Validate(this);
+            Origin?.Validate(this);
         }
         private void RequireOwner(EntityId id)
         {

@@ -1,5 +1,12 @@
 # Làm việc trong repository mythical_dnd
 
+## Sprint16 được giao — 06/11/2026
+
+Chủ dự án giao sprint kế tiếp sau Sprint15Closed/PR16/dev6fa3e1d. Sprint16/SPIN040 theo docs/production/sprints/SPRINT-16.md, ADR025 và ORIGIN-COHORT-PROFILE: VS02C origin-cohort-v1/partialVS07, chọn ngẫu nhiên theo seed một authored adult tại Bến Vạc; safe New/Reveal/World/self record/time/save/Continue, immutable origin image3/exactSQLiteprofile và atomic pending-publish. Không full life-history generator/Character Viability/TEST001 hoặc full world/NPC binding; cohort không có boat-repair, không grant nghề/rights giả. Repair15 image2/factory/actualPlayer regression, legacyimage1/goldens/G13v1/01–18 giữ.
+Năm gates contract là acceptance thật gồm deterministic/privacy/SQLitecancel-fault-crash/newidempotency, actualUnity6000.6.7f1/LinuxMono/render/OS và repair15regression, independentreviews/fullregression/docs/exports/CI/PRdev. Không đóng khi gate thiếu, không chuyển gate sang backlog; báo cáo Việt dễ hiểu trước, tách điều kiện đóng còn thiếu/backlog. AI được điều phối/subagents/implement/test/review/docs/commitpushPRdev theo workflow; không tự Sprint17/main/tag/release. PostcommitjournalSprint15 local được giữ cho meaningfulSprint16commit.
+
+Kết quả kỹ thuật local09/11: full1rngpl9l674/674tests,0failed/skipped/negative-process gates đạt; actualUnity6000.6.7f1/LinuxMono8fpgghix hai seed/38origin captures/sixlayouts mỗi lượt và repair15 actualPlayer regression; OS22lns4xz20actions/hai process restart giữ origin/tick61/draw1, cùngAssembly30f5810c127951530fa98e466b278764e6c4ff01e6916550e8d8ad16071d35f8. Reviews/evidence ở docs/qa/sprint-16/ và SPRINT-16-EVIDENCE.md. Git/CI/PR/dev và CLOSE chỉ theo WORKLOG saucommit, chưaCLOSE nếu gatecuối thiếu. KhôngtựSprint17/main/tag/release.
+
 ## Sprint15 — nghiệm thu kỹ thuật local06/11/2026; Git/CI theo WORKLOG
 
 Chủ dự án giao sprint tiếp theo theo workflow thường trực. Sprint15/SPIN-039 theo `docs/production/sprints/SPRINT-15.md`, ADR024 và `docs/contracts/REPAIR-CLIENT-PROFILE.md`: bounded client2D repairproof ở Bến Vạc với fixed trusted actor, explicit observation grants/safe projection/session, core repair/SQLite thật và scene/sprite/UI. Dòng nhân vật cố định phải hiện; không giả random-life/fullVS07 hoặc đổi G13/profileearth-monument-2d-v1.

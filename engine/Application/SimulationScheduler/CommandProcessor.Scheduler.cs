@@ -72,7 +72,7 @@ namespace Game.Application.CommandPipeline
             return world.Revision.Value + 1;
         }
         private static WorldSnapshot WithIdentityAndTick(WorldSnapshot world, IdentitySnapshot identity, WorldTick tick, IEnumerable<ResourceLot>? lots = null)
-            => new WorldSnapshot(identity, tick, world.Actors, lots ?? world.Lots, world.RngStates, world.Repair);
+            => new WorldSnapshot(identity, tick, world.Actors, lots ?? world.Lots, world.RngStates, world.Repair, world.Origin);
         private void Publish(CommittedWorld before, CommittedWorld publication)
         {
             try { ValidateRepairProfile(publication.World); ValidateRepairBindings(publication.World, publication.Scheduler); ValidateRepairHistory(publication); }

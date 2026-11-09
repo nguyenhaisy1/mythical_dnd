@@ -2,6 +2,7 @@
 """Build and run runtime acceptance; reject missing/zero/skipped TRX and verify an intentional failure."""
 import argparse
 from check_boat_repair import run as run_boat_repair_checks
+from check_origin_cohort import run as run_origin_cohort_checks
 from check_persistence_crash import run as run_crash_checks
 from check_save_crash import run as run_save_crash_checks
 from check_replay import run as run_replay_checks
@@ -32,7 +33,7 @@ def source_manifest():
                'client/UnityProject/Packages', 'client/UnityProject/ProjectSettings',
                'content/definitions/vertical-slice', 'content/fixtures/kernel-smoke', 'content/fixtures/replay-kernel',
                'content/fixtures/content-kernel', 'content/fixtures/diagnostic-kernel', 'content/fixtures/event-eligibility',
-               'content/fixtures/boat-repair', 'rules/parameters', 'content/schemas')
+               'content/fixtures/boat-repair', 'content/fixtures/origin-cohort', 'rules/parameters', 'content/schemas')
     for folder in folders:
         for parent, dirs, names in os.walk(ROOT / folder):
             dirs[:] = sorted(d for d in dirs if d not in ('bin', 'obj', 'results', '__pycache__', 'Library', 'Temp'))
@@ -59,7 +60,7 @@ def main():
     args = parser.parse_args()
     destination = ROOT / 'tests/results'
     destination.mkdir(parents=True, exist_ok=True)
-    run_dir = Path(tempfile.mkdtemp(prefix='sprint15-', dir=destination))
+    run_dir = Path(tempfile.mkdtemp(prefix='sprint16-', dir=destination))
     started = datetime.now(timezone.utc).isoformat()
     manifest = source_manifest()
     commands = []
@@ -72,10 +73,10 @@ def main():
         print(process.stdout, flush=True)
         return process.returncode
 
-    result = dict(scope='headless-sprint15-repair-client-session', task_ids=['FND-02', 'FND-03', 'FND-04', 'FND-05', 'FND-06', 'FND-07', 'FND-08', 'FND-09', 'FND-10', 'FND-11', 'FND-12', 'FND-13', 'FND-14', 'FND-15', 'VS-03A', 'S15-01', 'S15-04'], test_ids=['TEST-027', 'TEST-008-primitives', 'TEST-007', 'TEST-024', 'TEST-025', 'TEST-026', 'FND-08-in-memory', 'TEST-037-in-memory', 'FND-10-in-memory', 'TEST-006-durable', 'TEST-034', 'TEST-035-current-image', 'TEST-035-snapshot', 'TEST-051', 'TEST-009', 'TEST-050', 'TEST-017', 'TEST-036'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
+    result = dict(scope='headless-sprint16-origin-cohort-and-repair-regression', task_ids=['FND-02', 'FND-03', 'FND-04', 'FND-05', 'FND-06', 'FND-07', 'FND-08', 'FND-09', 'FND-10', 'FND-11', 'FND-12', 'FND-13', 'FND-14', 'FND-15', 'VS-03A', 'S15-01', 'S15-04', 'S16-01', 'S16-02', 'S16-04'], test_ids=['TEST-027', 'TEST-008-primitives', 'TEST-007', 'TEST-024', 'TEST-025', 'TEST-026', 'FND-08-in-memory', 'TEST-037-in-memory', 'FND-10-in-memory', 'TEST-006-durable', 'TEST-034', 'TEST-035-current-image', 'TEST-035-snapshot', 'TEST-051', 'TEST-009', 'TEST-050', 'TEST-017', 'TEST-036'], source_revision='sha256:' + hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
                   utc_started=started, os=platform.platform(), architecture=platform.machine(),
                   runtime_version=None, unity_version=None, backend=None,
-                  fixture_versions={'identity': 'identity-v1', 'clock': 'clock-v1', 'codec': 'mdc1', 'rng': 'sha256-counter-v1', 'scenario': 1, 'boat_repair_profile': 'boat-repair-v1', 'boat_repair_image': 2},
+                  fixture_versions={'identity': 'identity-v1', 'clock': 'clock-v1', 'codec': 'mdc1', 'rng': 'sha256-counter-v1', 'scenario': 1, 'boat_repair_profile': 'boat-repair-v1', 'boat_repair_image': 2, 'origin_cohort_profile': 'origin-cohort-v1', 'origin_image': 3},
                   content_hash=manifest['content/fixtures/kernel-smoke/scenario.json'], rule_version=None, rng_version='sha256-counter-v1', seed='golden contexts in vectors.json',
                   discovered=0, passed=0, failed=0, skipped=0, exit_code=1, commands=commands)
     (run_dir / 'sources.json').write_text(json.dumps(manifest, indent=2) + '\n')
@@ -93,7 +94,7 @@ def main():
         result['runtime_exit_code'] = code
         test_results = ET.parse(run_dir / 'runtime.trx').findall('t:Results/t:UnitTestResult', NS)
         result['task_counts'] = {}
-        for task, prefix in [('FND-02', 'TEST_027_'), ('FND-03', 'TEST_008_'), ('FND-04', 'TEST_007_'), ('FND-05', 'FND_05_'), ('FND-06', 'FND_06_'), ('FND-07/idempotency', 'TEST_024_'), ('FND-07/mismatch', 'TEST_025_'), ('FND-07/stale', 'TEST_026_'), ('FND-08', 'FND_08_'), ('FND-09', 'TEST_037_'), ('FND-10', 'FND_10_'), ('FND-10/workflow', 'TEST_028_'), ('FND-11', 'FND_11_'), ('FND-12', 'FND_12_'), ('FND-13', 'FND_13_'), ('FND-14', 'FND_14_'), ('FND-15', 'FND_15_'), ('VS-02A', 'VS_02A_'), ('VS-02B', 'VS_02B_'), ('VS-03A', 'VS_03A_'), ('S15-01', 'S15_01_'), ('S15-04', 'S15_04_')]:
+        for task, prefix in [('FND-02', 'TEST_027_'), ('FND-03', 'TEST_008_'), ('FND-04', 'TEST_007_'), ('FND-05', 'FND_05_'), ('FND-06', 'FND_06_'), ('FND-07/idempotency', 'TEST_024_'), ('FND-07/mismatch', 'TEST_025_'), ('FND-07/stale', 'TEST_026_'), ('FND-08', 'FND_08_'), ('FND-09', 'TEST_037_'), ('FND-10', 'FND_10_'), ('FND-10/workflow', 'TEST_028_'), ('FND-11', 'FND_11_'), ('FND-12', 'FND_12_'), ('FND-13', 'FND_13_'), ('FND-14', 'FND_14_'), ('FND-15', 'FND_15_'), ('VS-02A', 'VS_02A_'), ('VS-02B', 'VS_02B_'), ('VS-03A', 'VS_03A_'), ('S15-01', 'S15_01_'), ('S15-04', 'S15_04_'), ('S16-01', 'S16_01_'), ('S16-02', 'S16_02_'), ('S16-04', 'S16_04_')]:
             matched = [r for r in test_results if r.attrib.get('testName', '').startswith(prefix)]
             result['task_counts'][task] = {'discovered': len(matched), 'passed': sum(r.attrib['outcome'] == 'Passed' for r in matched)}
             if not matched or any(r.attrib['outcome'] != 'Passed' for r in matched):
@@ -125,6 +126,7 @@ def main():
         result['settlement'] = run_settlement_checks(args.dotnet, run_dir / 'settlement.json')
         result['event_eligibility'] = run_event_eligibility_checks(args.dotnet, run_dir / 'event-eligibility.json')
         result['boat_repair'] = run_boat_repair_checks(args.dotnet, run_dir / 'boat-repair.json')
+        result['origin_cohort'] = run_origin_cohort_checks(args.dotnet, run_dir / 'origin-cohort.json')
         if source_manifest() != manifest:
             raise ValueError('Sources changed during run')
         result['exit_code'] = 0

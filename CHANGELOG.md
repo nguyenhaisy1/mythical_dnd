@@ -6,6 +6,13 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint16 — xuất thân theo seed và Continue
+
+- Thêm origin-cohort-v1: nhận một trong tám người trưởng thành đã biên soạn tại Bến Vạc theo seed, immutable assignment/RNG cursor và safe self-record; không full life-history generator hoặc chọn/chỉnh xuất thân.
+- Thêm New/Generating/cancel/Reveal/World/chờ/lưu/mở lại/Continue trong scene Unity riêng; dùng nền2D hiện có và marker trung tính, giữ proof sửa thuyền Sprint15 riêng.
+- Thêm canonical image3/exact origin SQLite profile, pending DB atomic publish, request idempotency và latest-campaign fail-closed; giữ image1/2, physical schema2/goldens. Replay artifactv1 từ chối Origin cho đến khi có profile riêng.
+- Validation local09/11:674/674tests,0failed/skipped; process21calls/3SIGKILL, actual Unity6000.6.7f1/LinuxMono hai seed/38captures/sixlayouts, OS20actions/hai process restart và repair15 Player regression đạt; hai final reviews độc lập noP0/P1 trong scope. Docs/exports và Git/CI closure tại [evidence Sprint16](docs/qa/SPRINT-16-EVIDENCE.md)/WORKLOG; chưa phát hành hoặc tự mở Sprint17.
+
 ### Sprint15 — cảnh Unity2D sửa thuyền
 
 - Thêm safe actor-scoped session/DTO và preview có token, explicit observation grants/Unknown, retry giữ original envelope; presenter không nhận raw world/receipt hoặc ghi authoritative state.

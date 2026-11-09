@@ -6,15 +6,15 @@
 
 ## Hướng dẫn áp dụng khi phát triển
 
-Không point-buy, nhập mô tả để quyết định profile hoặc chọn origin/class. Sinh biography trước năng lực cuối; reroll UX prototype được bổ sung trong ADR-008: không reroll ở Reveal; đây là quyết định biên soạn mới, không gán cho nguồn cũ. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.
+Không point-buy, nhập mô tả để quyết định profile hoặc chọn origin/class. Sinh biography trước năng lực cuối; reroll UX prototype được bổ sung trong ADR-008: không reroll ở Reveal; đây là quyết định biên soạn mới, không gán cho nguồn cũ. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation. Sprint16 thực hiện nhánh chọn existing authored character theo seed của M07, không thay yêu cầu random origin bằng point-buy hoặc full life-history claim.
 
 | Hợp đồng tích hợp | Nội dung |
 |---|---|
 | Dữ liệu đầu vào | Seed, world graph, family, aptitude, life events, current conditions. |
 | Đầu ra / bên sở hữu | Playable character hợp lệ; Characters ghi qua transaction; Knowledge có provenance. |
-| Đọc cùng | 04–06, 08–10, 24, 27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 04–06, 08–10, 24, 27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR025 và docs/contracts/ORIGIN-COHORT-PROFILE.md + docs/runbooks/ORIGIN-CLIENT.md: Sprint16 VS02C origin-cohort-v1/partialVS07 chọn theo seed một trong8authored adults tại Bến Vạc; immutable image3/exact profile, pending-verify-flush-create-new publication, idempotent New/cancel/fault/crash và safe own-record Reveal/Continue. Không full life-history generator/Character Viability/TEST001 hoặc world/NPC binding; cohort không boat-repair, không grant nghề/rights giả. Legacy image1/repair image2/goldens/G13v1 giữ. Actual Unity6000.6.7f1/LinuxMono hai seed/restart, render/sixlayouts/OSinput, repair15 Player regression và final independent review/fullregression/docs/exports/CI/PRdev là gates thật; kết quả ở docs/qa/SPRINT-16-EVIDENCE.md, actual evidence09/11:674/674runtime tests, hai seed/38origin captures/sixlayouts, OS20actions/two-process restart và repair15 Player regression đạt; docs/exports/Git/CI phải đủ trước CLOSE trong WORKLOG. |
 | Cổng nghiệm thu | Cùng seed/version tái hiện được; tất cả starting capabilities có nguồn và có con đường sống khả thi. |
-| Việc chưa được chứng minh | Onboarding viability và usability cần playtest; policy prototype một actor/campaign, không Reveal reroll theo CLIENT-UX-BASELINE. |
+| Việc chưa được chứng minh | Onboarding viability và usability cần playtest; policy prototype một actor/campaign, không Reveal reroll theo CLIENT-UX-BASELINE. Sprint16 đã kiểm chứng bounded authored-cohort onboarding09/11 theo ADR025; full generator/viability/world binding và final owner UX/art/humanplaytest vẫn riêng. Điều kiện đóng16 phải đối chiếu năm gates trong evidence, không chuyển gate chưa đạt thành backlog. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../../governance/APPLICABLE-BASELINE.md) và [Decision Register](../../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 

@@ -1,5 +1,12 @@
 # Lộ trình hình ảnh và bản chơi thử
 
+## Sprint16 — nghiệm thu kỹ thuật local09/11/2026: nối New/Reveal/Continue vào bản thử
+
+Kết quả local09/11:674/674runtime tests,0failed/skipped; actual Unity6000.6.7f1/LinuxMono hai seed,38ảnh origin/sixlayouts mỗi seed, OS20actions/hai process restart và actual repair15 regression đạt. Full evidence1rngpl9l, renderer8fpgghix, OS22lns4xz; docs/exports và exactHEADCI/PR/dev vẫn bắt buộc trước CLOSE, trạng thái Git cuối ở WORKLOG.
+[Sprint16](sprints/SPRINT-16.md) chọn theo seed một authored adult trong cohort tám người Bến Vạc. Người chơi nhận tên/tuổi/gia đình/quá khứ/kỹ năng/nhận định bản thân, vào World, chờ/lưu và Continue đúng người/tick đã lưu. Đây bước nối onboarding giới hạn, chưa là generator lịch sử cuộc đời hoặc demo campaign đầy đủ. Không ghép repair bằng cách cấp nghề/rights giả cho cohort; proof sửa thuyền15 vẫn chạy scene riêng.
+
+[ADR025](../adr/025-seeded-origin-cohort-and-reveal.md), [contract](../contracts/ORIGIN-COHORT-PROFILE.md), [runbook](../runbooks/ORIGIN-CLIENT.md) và [evidence](../qa/SPRINT-16-EVIDENCE.md) phân biệt source/focused tests, actual Player/render, actual OS input/restart và nghiệm thu cuối. Sprint16 chưa đóng chỉ vì đã có UI hoặc ảnh. Tám biography dùng marker trung tính trong cảnh, chưa là production sprites đủ cast. Full world/NPC/Knowledge, viability, professions/campaign, final UI/art và human playtest cần scope/gates riêng. Không hứa mốc ngày từ forecast Sprint15–16 cũ; không tự mở Sprint17 hoặc release. Giữ hướng2D/sprite/G13 và các thành quả cũ.
+
 ## Sprint15 — bản thử kỹ thuật Unity2D đã chạy trên LinuxMono
 
 [Sprint15](sprints/SPRINT-15.md) hiện thực `repair-client-2d-v1` theo [ADR024](../adr/024-bounded-2d-repair-client.md): quan sát một thuyền, xem giá/thời gian, sửa/hủy/chờ và lưu/mở lại qua core Sprint14. Nền2D có khối, sprite, lớp che và camera cố định áp hướng đã chốt. Actor là fixture cố định và được ghi rõ trên UI; đây chưa là đường New campaign→random origin→Reveal hoàn chỉnh.

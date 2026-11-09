@@ -7,6 +7,7 @@ namespace Game.Headless
     {
         private static int Main(string[] args)
         {
+            if (args.Length > 0 && args[0].StartsWith("--origin-", StringComparison.Ordinal)) return OriginProbe.Run(args);
             if (args.Length > 0 && args[0] == "--repair-probe") return BoatRepairProbe.Run(args);
             if (args.Length > 0 && args[0] == "--event-eligibility") return EventEligibilityProbe.Run(args);
             if (args.Length > 0 && args[0] == "--settlement-compile") return SettlementProbe.Run(args);

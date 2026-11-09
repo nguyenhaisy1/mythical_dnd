@@ -18,6 +18,7 @@ namespace Game.Infrastructure.Persistence
         private readonly int timeout;
         private readonly int? maxPages;
         public const string LegacyRuleVersion="transfer-resource-v1+scheduler-v1";
+        public const string OriginRuleVersion="transfer-resource-v1+scheduler-v1+origin-cohort-v1";
         public const string RepairRuleVersion="transfer-resource-v1+scheduler-v1+boat-repair-v1";
         private readonly string ruleVersion;
         public string ExpectedRuleVersion => ruleVersion;
@@ -25,7 +26,7 @@ namespace Game.Infrastructure.Persistence
         public SqliteWorldStore(string path,string contentHash,Action<string>? probe=null,int timeoutSeconds=1,int? maxPageCount=null,string expectedRuleVersion=LegacyRuleVersion)
         {
             if(string.IsNullOrWhiteSpace(path)||path==":memory:"||contentHash==null||contentHash.Length!=64||contentHash.Any(c=>!"0123456789abcdef".Contains(c)))throw new ArgumentException("Invalid store path/content hash");
-            if(expectedRuleVersion!=LegacyRuleVersion&&expectedRuleVersion!=RepairRuleVersion)throw new ArgumentException("Unsupported store rule version");
+            if(expectedRuleVersion!=LegacyRuleVersion&&expectedRuleVersion!=RepairRuleVersion&&expectedRuleVersion!=OriginRuleVersion)throw new ArgumentException("Unsupported store rule version");
             ruleVersion=expectedRuleVersion;this.path=Path.GetFullPath(path);this.contentHash=contentHash;this.probe=probe;timeout=timeoutSeconds;maxPages=maxPageCount;
             if(timeoutSeconds<1||maxPageCount<1)throw new ArgumentOutOfRangeException();
         }
@@ -46,6 +47,7 @@ namespace Game.Infrastructure.Persistence
             RequireCompatibleProfile(initial);
             // Explicit create only. Never initialize an existing file, even if empty or incompatible.
             using(var file=new FileStream(path,FileMode.CreateNew,FileAccess.Write,FileShare.None)){}
+            probe?.Invoke("after_create");
             using var c=Connect(true);
             Exec(c,null,"PRAGMA journal_mode=DELETE;");
             using var t=c.BeginTransaction();
@@ -83,6 +85,14 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
         {
             var before=CommittedWorldCodec.Encode(expected);var after=CommittedWorldCodec.Encode(candidate);
             _=CommittedWorldCodec.Decode(after);RequireCompatibleProfile(expected);RequireCompatibleProfile(candidate);
+            // Genesis assignment is immutable even when both images are individually canonical/valid.
+            // Compare every serialized origin field before opening a writer or emitting any write probe.
+            var oldImage=(Dictionary<string,object?>)MdcReader.Decode(before)!;
+            var newImage=(Dictionary<string,object?>)MdcReader.Decode(after)!;
+            var hadOrigin=oldImage.TryGetValue("origin",out var oldOrigin);
+            var hasOrigin=newImage.TryGetValue("origin",out var newOrigin);
+            if(hadOrigin!=hasOrigin||(hadOrigin&&!CanonicalCodec.Encode(oldOrigin).SequenceEqual(CanonicalCodec.Encode(newOrigin))))
+                throw new InvalidDataException("IMMUTABLE_ORIGIN");
             if(expected.World.WorldId!=candidate.World.WorldId||candidate.World.Revision.Value<expected.World.Revision.Value||candidate.World.Tick<expected.World.Tick)throw new InvalidDataException("INVALID_COMMIT_WORLD");
             probe?.Invoke("before_begin");using var c=Connect();using var t=c.BeginTransaction();
             var actual=Read(c,t);
@@ -92,6 +102,8 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
         }
         private void RequireCompatibleProfile(CommittedWorld state)
         {
+            if((state.World.Origin!=null)!=(ruleVersion==OriginRuleVersion))throw new InvalidDataException("INCOMPATIBLE_ORIGIN_PROFILE");
+            if(state.World.Origin!=null&&state.World.Origin.CohortContentHash!=contentHash)throw new InvalidDataException("INCOMPATIBLE_ORIGIN_CONTENT");
             if((state.World.Repair!=null)!=(ruleVersion==RepairRuleVersion))throw new InvalidDataException("INCOMPATIBLE_REPAIR_PROFILE");
             if(state.World.Repair!=null&&Game.Infrastructure.Repair.RepairContentRegistry.HashForRecipe(state.World.Repair.Recipe)!=contentHash)throw new InvalidDataException("INCOMPATIBLE_REPAIR_CONTENT");
         }

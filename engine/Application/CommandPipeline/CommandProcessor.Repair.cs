@@ -129,7 +129,7 @@ namespace Game.Application.CommandPipeline
                     activity.JobId.Value, tick, revision, 1, command.CommandId, command.CorrelationId, "scheduler-v1", 1,
                     new Dictionary<string, object?> { ["error_code"] = activity.TerminalReason, ["scheduled_by"] = activity.StartCommandId,
                         ["workflow_id"] = workflowId, ["status"] = scheduler.Workflow?.Status.ToString() }));
-            var candidate = new WorldSnapshot(stage.PrepareSnapshot(), tick, world.Actors, plan.Lots, world.RngStates, plan.Repair);
+            var candidate = new WorldSnapshot(stage.PrepareSnapshot(), tick, world.Actors, plan.Lots, world.RngStates, plan.Repair, world.Origin);
             var receipt = new CommandReceipt(command, fingerprint, CommandOutcome.Accepted, null, world.Revision.Value, revision, tick, facts.Select(f => f.Id));
             Publish(before, new CommittedWorld(candidate, before.AcceptedReceipts.Concat(new[] { receipt }), before.MetadataReceipts,
                 before.Events, scheduler, before.Journal.Events.Concat(facts)));
