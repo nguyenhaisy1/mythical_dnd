@@ -8,6 +8,7 @@ using Game.Application.Events;
 using Game.Application.SimulationScheduler;
 using Game.Domain.Kernel;
 using Game.Domain.Repair;
+using Game.Domain.Origins;
 using Game.Foundation.Identity;
 using Game.Foundation.Random;
 using Game.Foundation.Time;
@@ -78,6 +79,16 @@ namespace Game.Infrastructure.Persistence
             var activities=Arr(r["activities"]).Select(entry=>{var a=Map(entry);return new RepairActivity(Id<Activity>(a["id"]),Id<Actor>(a["actor"]),Id<Item>(a["item"]),Id<Lot>(a["lot"]),Id<Item>(a["tool"]),Id<Settlement>(a["worksite"]),Id<Job>(a["job"]),Tick(a["started"]),Tick(a["due"]),ReadRecipe(a["recipe"]),Str(a["cause"]),Str(a["correlation"]),EnumValue<RepairActivityStatus>(a["status"]),Int(a["reserved"]),a["reason"]==null?null:Str(a["reason"]));});
             return new RepairState(recipe,items,capabilities,activities);
         }
+        private static object OriginObject(CampaignOriginState o)=>Obj("profile",CampaignOriginState.ProfileId,
+            "principal",o.Principal.ToString(),"household",o.Household.ToString(),"home",o.Home.ToString(),
+            "actor_definition",o.ActorDefinitionId,"household_definition",o.HouseholdDefinitionId,"community_definition",o.CommunityDefinitionId,
+            "source_hash",o.SourceContentHash,"cohort_hash",o.CohortContentHash,"draw",o.DrawIndex);
+        private static CampaignOriginState ReadOrigin(object? value)
+        {
+            var o=Map(value);if(Str(o["profile"])!=CampaignOriginState.ProfileId)throw new FormatException("ORIGIN_PROFILE_UNSUPPORTED");
+            return new CampaignOriginState(Id<Actor>(o["principal"]),Id<Household>(o["household"]),Id<Settlement>(o["home"]),
+                Str(o["actor_definition"]),Str(o["household_definition"]),Str(o["community_definition"]),Str(o["source_hash"]),Str(o["cohort_hash"]),UInt(o["draw"]));
+        }
         public static byte[] Encode(CommittedWorld state)
         {
             var w=state.World;var s=state.Scheduler;
@@ -92,17 +103,19 @@ namespace Game.Infrastructure.Persistence
                 "workflows",Rows(s.Workflows,f=>Obj("id",f.Id,"owner",f.OwnerId.ToString(),"source",(int)f.OwnerSource,"target",f.TargetTick.Value,"status",(int)f.Status,"cursor",f.Cursor?.ToString(),"committed",f.CommittedJobs,"correlation",f.CorrelationId)),
                 "executions",Rows(s.Executions,e=>Obj("job",e.JobId.ToString(),"tick",e.Tick.Value,"command",e.CommandId,"error",e.ErrorCode)));
             if(w.Repair!=null){image["image_version"]=2;image.Add("repair",RepairObject(w.Repair));}
+            if(w.Origin!=null){image["image_version"]=3;image.Add("origin",OriginObject(w.Origin));}
             return CanonicalCodec.Encode(image);
         }
         public static CommittedWorld Decode(byte[] bytes)
         {
-            var d=Map(MdcReader.Decode(bytes));var version=Int(d["image_version"]);if(version!=1&&version!=2)throw new FormatException("UNSUPPORTED_IMAGE");
+            var d=Map(MdcReader.Decode(bytes));var version=Int(d["image_version"]);if(version!=1&&version!=2&&version!=3)throw new FormatException("UNSUPPORTED_IMAGE");
             var identity=IdentitySnapshot.Restore(UInt(d["world"]),UInt(d["revision"]),Arr(d["cursors"]).Select(x=>{var c=Map(x);return new AllocationCursor(Str(c["kind"]),UInt(c["next"]),Bool(c["exhausted"]));}),Arr(d["entities"]).Select(x=>{var e=Map(x);return new RegistryEntry(EntityId.Parse(Str(e["id"])),EnumValue<EntityLifecycle>(e["lifecycle"]),UInt(e["created"]),e["retired"]==null?null:UInt(e["retired"]));}));
             var actors=Arr(d["actors"]).Select(x=>{var a=Map(x);return new ActorState(Id<Actor>(a["id"]),Bool(a["alive"]),Id<Settlement>(a["location"]),Arr(a["owners"]).Select(v=>EntityId.Parse(Str(v))));});
             var lots=Arr(d["lots"]).Select(x=>{var l=Map(x);return new ResourceLot(Id<Lot>(l["id"]),DefinitionId.Parse(Str(l["commodity"])),EntityId.Parse(Str(l["owner"])),Id<Settlement>(l["location"]),Int(l["on_hand"]),Int(l["reserved"]));});
             var rng=Arr(d["rng"]).Select(x=>{var r=Map(x);return new RngStreamState(Str(r["key"]),new RngState(new RngContext(Str(r["seed"]),Str(r["domain"]),Str(r["decision"]),Str(r["occurrence"]),EntityId.Parse(Str(r["entity"])),Str(r["stream"])),UInt(r["draw"])));});
             var repair=version==2?ReadRepair(d["repair"]):null;
-            var world=new WorldSnapshot(identity,Tick(d["tick"]),actors,lots,rng,repair);
+            var origin=version==3?ReadOrigin(d["origin"]):null;
+            var world=new WorldSnapshot(identity,Tick(d["tick"]),actors,lots,rng,repair,origin);
             var accepted=Arr(d["accepted"]).Select(ReadReceipt).ToArray();var metadata=Arr(d["metadata"]).Select(ReadReceipt).ToArray();var events=Arr(d["events"]).Select(ReadEvent).ToArray();
             var jobs=Arr(d["jobs"]).Select(ReadJob).ToArray();var byJob=jobs.ToDictionary(j=>j.Id);
             var workflows=Arr(d["workflows"]).Select(x=>{var f=Map(x);return new AdvanceWorkflow(Str(f["id"]),Id<Actor>(f["owner"]),EnumValue<CommandSource>(f["source"]),Tick(f["target"]),EnumValue<AdvanceStatus>(f["status"]),f["cursor"]==null?null:Id<Job>(f["cursor"]),UInt(f["committed"]),Str(f["correlation"]));}).ToArray();

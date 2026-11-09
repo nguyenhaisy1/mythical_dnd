@@ -237,7 +237,7 @@ namespace Game.Application.CommandPipeline
             var updates = result.Changes.LotChanges.ToDictionary(c => c.LotId, c => c.NewOnHand);
             var lots = world.Lots.Select(l => updates.TryGetValue(l.Id, out var quantity)
                 ? new ResourceLot(l.Id, l.Commodity, l.Owner, l.Location, quantity, l.Reserved) : l).ToArray();
-            var candidate = new WorldSnapshot(identity.PrepareSnapshot(), world.Tick, world.Actors, lots, world.RngStates, world.Repair);
+            var candidate = new WorldSnapshot(identity.PrepareSnapshot(), world.Tick, world.Actors, lots, world.RngStates, world.Repair, world.Origin);
             var receipt = new CommandReceipt(envelope, fingerprint, CommandOutcome.Accepted, null, world.Revision.Value, revision,
                 world.Tick, new[] { eventId });
             var fact = new CommittedTransfer(eventId, revision, world.Tick, envelope, transfer);

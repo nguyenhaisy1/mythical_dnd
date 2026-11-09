@@ -145,6 +145,10 @@ namespace Game.Infrastructure.Replay
         }
         private static void ValidateRepairManifest(CommittedWorld initial,ReplayManifest manifest,RepairRecipe? recipe)
         {
+            // Origin genesis has a separate compatibility profile; this replay artifact v1
+            // currently supports only the legacy/repair paths whose manifests were accepted.
+            if(initial.World.Origin!=null || manifest.RuleVersion==SqliteWorldStore.OriginRuleVersion)
+                throw new ReplayCompatibilityException();
             if(initial.World.Repair==null)
             {
                 if(recipe!=null||manifest.RuleVersion==Game.Infrastructure.Repair.RepairContentRegistry.SupportedRuleVersion)throw new ReplayCompatibilityException();
