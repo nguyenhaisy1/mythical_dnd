@@ -18,6 +18,7 @@ namespace Game.Infrastructure.Persistence
         private readonly int timeout;
         private readonly int? maxPages;
         public const string LegacyRuleVersion="transfer-resource-v1+scheduler-v1";
+        public const string WeavingRuleVersion="transfer-resource-v1+scheduler-v1+origin-cohort-v1+personal-weaving-v1";
         public const string OriginRuleVersion="transfer-resource-v1+scheduler-v1+origin-cohort-v1";
         public const string RepairRuleVersion="transfer-resource-v1+scheduler-v1+boat-repair-v1";
         private readonly string ruleVersion;
@@ -26,7 +27,7 @@ namespace Game.Infrastructure.Persistence
         public SqliteWorldStore(string path,string contentHash,Action<string>? probe=null,int timeoutSeconds=1,int? maxPageCount=null,string expectedRuleVersion=LegacyRuleVersion)
         {
             if(string.IsNullOrWhiteSpace(path)||path==":memory:"||contentHash==null||contentHash.Length!=64||contentHash.Any(c=>!"0123456789abcdef".Contains(c)))throw new ArgumentException("Invalid store path/content hash");
-            if(expectedRuleVersion!=LegacyRuleVersion&&expectedRuleVersion!=RepairRuleVersion&&expectedRuleVersion!=OriginRuleVersion)throw new ArgumentException("Unsupported store rule version");
+            if(expectedRuleVersion!=LegacyRuleVersion&&expectedRuleVersion!=RepairRuleVersion&&expectedRuleVersion!=OriginRuleVersion&&expectedRuleVersion!=WeavingRuleVersion)throw new ArgumentException("Unsupported store rule version");
             ruleVersion=expectedRuleVersion;this.path=Path.GetFullPath(path);this.contentHash=contentHash;this.probe=probe;timeout=timeoutSeconds;maxPages=maxPageCount;
             if(timeoutSeconds<1||maxPageCount<1)throw new ArgumentOutOfRangeException();
         }
@@ -93,6 +94,13 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
             var hasOrigin=newImage.TryGetValue("origin",out var newOrigin);
             if(hadOrigin!=hasOrigin||(hadOrigin&&!CanonicalCodec.Encode(oldOrigin).SequenceEqual(CanonicalCodec.Encode(newOrigin))))
                 throw new InvalidDataException("IMMUTABLE_ORIGIN");
+            object? Genesis(Dictionary<string,object?> image)
+            {
+                if(!image.TryGetValue("weaving",out var extension))return null;
+                return ((Dictionary<string,object?>)extension!).Where(p=>p.Key!="activities").ToDictionary(p=>p.Key,p=>p.Value,StringComparer.Ordinal);
+            }
+            if(!CanonicalCodec.Encode(Genesis(oldImage)).SequenceEqual(CanonicalCodec.Encode(Genesis(newImage))))
+                throw new InvalidDataException("IMMUTABLE_WEAVING_GENESIS");
             if(expected.World.WorldId!=candidate.World.WorldId||candidate.World.Revision.Value<expected.World.Revision.Value||candidate.World.Tick<expected.World.Tick)throw new InvalidDataException("INVALID_COMMIT_WORLD");
             probe?.Invoke("before_begin");using var c=Connect();using var t=c.BeginTransaction();
             var actual=Read(c,t);
@@ -102,8 +110,10 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
         }
         private void RequireCompatibleProfile(CommittedWorld state)
         {
-            if((state.World.Origin!=null)!=(ruleVersion==OriginRuleVersion))throw new InvalidDataException("INCOMPATIBLE_ORIGIN_PROFILE");
-            if(state.World.Origin!=null&&state.World.Origin.CohortContentHash!=contentHash)throw new InvalidDataException("INCOMPATIBLE_ORIGIN_CONTENT");
+            if((state.World.Origin!=null)!=(ruleVersion==OriginRuleVersion||ruleVersion==WeavingRuleVersion))throw new InvalidDataException("INCOMPATIBLE_ORIGIN_PROFILE");
+            if(ruleVersion==OriginRuleVersion&&state.World.Origin!.CohortContentHash!=contentHash)throw new InvalidDataException("INCOMPATIBLE_ORIGIN_CONTENT");
+            if((state.World.Weaving!=null)!=(ruleVersion==WeavingRuleVersion))throw new InvalidDataException("INCOMPATIBLE_WEAVING_PROFILE");
+            if(state.World.Weaving!=null&&state.World.Weaving.ContentHash!=contentHash)throw new InvalidDataException("INCOMPATIBLE_WEAVING_CONTENT");
             if((state.World.Repair!=null)!=(ruleVersion==RepairRuleVersion))throw new InvalidDataException("INCOMPATIBLE_REPAIR_PROFILE");
             if(state.World.Repair!=null&&Game.Infrastructure.Repair.RepairContentRegistry.HashForRecipe(state.World.Repair.Recipe)!=contentHash)throw new InvalidDataException("INCOMPATIBLE_REPAIR_CONTENT");
         }
@@ -124,11 +134,15 @@ CREATE TABLE snapshots(revision TEXT PRIMARY KEY NOT NULL,payload BLOB NOT NULL,
             var repair=d.TryGetValue("repair",out var extension)?Map(extension):null;
             Dictionary<string,Dictionary<string,object?>> RepairRows(string key,string idKey)=>repair==null?new Dictionary<string,Dictionary<string,object?>>()
                 :((IEnumerable<object?>)repair[key]!).Select(Map).ToDictionary(x=>S(x,idKey),StringComparer.Ordinal);
+            var weaving=d.TryGetValue("weaving",out var weaveExtension)?Map(weaveExtension):null;
+            var weavingActivities=weaving==null?new Dictionary<string,Dictionary<string,object?>>()
+                :((IEnumerable<object?>)weaving["activities"]!).Select(Map).ToDictionary(x=>S(x,"id"),StringComparer.Ordinal);
             var items=RepairRows("items","id");var activities=RepairRows("activities","id");var capabilities=RepairRows("capabilities","actor");
             foreach(var e in List("entities"))
             {
                 var id=S(e,"id");var payload=new Dictionary<string,object?>{{"identity",e},{"actor",actors.TryGetValue(id,out var a)?a:null},{"lot",lots.TryGetValue(id,out var l)?l:null}};
                 if(repair!=null){payload.Add("item",items.TryGetValue(id,out var item)?item:null);payload.Add("activity",activities.TryGetValue(id,out var activity)?activity:null);payload.Add("capability",capabilities.TryGetValue(id,out var capability)?capability:null);}
+                if(weaving!=null)payload.Add("weaving_activity",weavingActivities.TryGetValue(id,out var work)?work:null);
                 result["entities"].Add(new Row(id,payload));
             }
             foreach(var c in List("cursors"))result["allocator"].Add(new Row(S(c,"kind"),c));

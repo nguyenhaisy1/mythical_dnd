@@ -39,7 +39,7 @@ def main():
     for path in sorted(presentation.glob('*.cs')):
         assert path.with_name(path.name + '.meta').is_file(), 'Missing source meta'
         # Only explicit trusted composition roots may load adapters; all presenters remain checked.
-        if path.name not in {'RepairClientBootstrap.cs', 'OriginClientBootstrap.cs'}:
+        if path.name not in {'RepairClientBootstrap.cs', 'OriginClientBootstrap.cs', 'WeavingClientBootstrap.cs'}:
             assert not re.search(forbidden, path.read_text()), 'Raw engine dependency in presenter: ' + path.name
             checked.append(path.name)
     assert {'RepairClientView.cs', 'RepairSceneView.cs', 'RepairAutoplay.cs'}.issubset(checked)

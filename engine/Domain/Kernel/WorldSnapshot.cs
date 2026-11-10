@@ -6,6 +6,7 @@ using Game.Foundation.Random;
 using Game.Foundation.Time;
 using Game.Domain.Repair;
 using Game.Domain.Origins;
+using Game.Domain.Weaving;
 using Game.Foundation.World;
 
 namespace Game.Domain.Kernel
@@ -74,7 +75,8 @@ namespace Game.Domain.Kernel
         public IReadOnlyList<RngStreamState> RngStates { get; }
         public RepairState? Repair { get; }
         public CampaignOriginState? Origin { get; }
-        public WorldSnapshot(IdentitySnapshot identity, WorldTick tick, IEnumerable<ActorState> actors, IEnumerable<ResourceLot> lots, IEnumerable<RngStreamState>? rngStates = null, RepairState? repair = null, CampaignOriginState? origin = null)
+        public WeavingState? Weaving { get; }
+        public WorldSnapshot(IdentitySnapshot identity, WorldTick tick, IEnumerable<ActorState> actors, IEnumerable<ResourceLot> lots, IEnumerable<RngStreamState>? rngStates = null, RepairState? repair = null, CampaignOriginState? origin = null, WeavingState? weaving = null)
         {
             Identity = identity ?? throw new ArgumentNullException(nameof(identity)); Tick = tick;
             this.actors = (actors ?? throw new ArgumentNullException(nameof(actors))).ToDictionary(x => x.Id);
@@ -100,8 +102,11 @@ namespace Game.Domain.Kernel
             Repair = repair;
             if (repair != null && origin != null) throw new ArgumentException("Origin and repair profiles cannot coexist");
             Origin = origin;
+            if (weaving != null && (origin == null || repair != null)) throw new ArgumentException("Weaving requires origin without repair");
+            Weaving = weaving;
             Repair?.Validate(this);
             Origin?.Validate(this);
+            Weaving?.Validate(this);
         }
         private void RequireOwner(EntityId id)
         {

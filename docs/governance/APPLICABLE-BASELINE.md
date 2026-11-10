@@ -1,5 +1,13 @@
 # Baseline áp dụng và giải quyết xung đột
 
+## Bổ sung personal weaving Sprint17 — 10/11/2026
+
+[ADR026](../adr/026-personal-weaving-on-origin.md), DEC-033 và [Personal Weaving Profile](../contracts/PERSONAL-WEAVING-PROFILE.md) chốt subset personal handcraft trên origin đã nhận. `personal-weaving-v1`: dùng tay2fiber/30ticks/1cord/minweaving40; Lâm43/Nhu61 đủ điều kiện, sáu xuất thân khác chưa có công việc phù hợp trong bản thử. Không sửa origin/random selection hoặc grant nghề/household rights;8starterfiber thuộc cá nhân là prototype genesis mới, không tài sản lịch sử hoặc balance cuối.
+
+Origin+Weaving canonical image4 dùng exact new rule/content/root; origin cohort/source hash giữ nghĩa cũ, metadata/genesis immutable; image1/2/3/goldens/scenes15–16 và physicalSQLite schema2 giữ. Không upgrade/enrich save16 âm thầm; replay artifactv1 vẫn từ chối. Typed activity/job Start/reserve→due consume/output hoặc cancel, receipt/causal facts/holds/tick commit cùng nhau, due revalidation và original-envelope retry; Continue drain workflow Advance đã nhận, không tạo intent mới. Safe session chỉ self lots/profile được quan sát explicit, không raw world/seed/IDs/private revision; ownership không cấp general Knowledge. Factory client bounded own actor tại home/hai lot, không là full Travel/rights/Health support.
+
+Năm gates trong contract/evidence17 bắt buộc actual core/SQLite crash/recovery/idempotency, actual Unity6000.6.7f1/LinuxMono hai qualified+một nonweaver, actual scene15–16 Player regression, six renderer layouts/nativeOS/two-process restart, independent reviews/fullsuite/docs/exports/exactHEADCI/PRdev trước CLOSE. [Runbook](../runbooks/PERSONAL-WEAVING.md) mô tả lệnh; [evidence](../qa/SPRINT-17-EVIDENCE.md)/WORKLOG ghi trạng thái thực. Không suy Passed từ source/focused tests hoặc chuyển gate chưa đạt sang backlog. Không full professions/three-profession VS03/fullgenerator/CharacterViability/worldNPCbinding; G13v1/01–18 giữ, không tự Sprint18/main/tag/release. Sprint16 đã đóng09/11/PR17/dev`e7dfd9b`; các lệnh không tự Sprint17 dưới đây là giới hạn lịch sử đã được yêu cầu mới thay thế.
+
 Phiên bản 1.1-prototype-contracts. Đây là lớp quyết định chung cho toàn bộ bộ hồ sơ, kể cả khi mở một đoạn nghiên cứu cũ từ Master GDD. [Decision Register](DECISIONS.csv) ghi nguồn, trạng thái và nội dung được thay thế; [Open Decisions](OPEN-DECISIONS.csv) ghi điều kiện cần chốt.
 
 ## Thứ tự hiệu lực

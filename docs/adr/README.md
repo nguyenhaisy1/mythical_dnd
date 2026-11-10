@@ -23,3 +23,5 @@ Các ADR này ghi rationale cho baseline bàn giao. [Decision Register](../gover
 [ADR024 — Client2D sửa thuyền và projection giới hạn](024-bounded-2d-repair-client.md): fixed trusted actor, explicit field observation grants, safe session/preview/save API, renderer/sprite presentation và actual LinuxMono Player gates; không tự đóng fullVS07.
 
 [ADR025 — Xuất thân từ cohort và Reveal lưu bền](025-seeded-origin-cohort-and-reveal.md): seeded authored adult selection tại Bến Vạc, immutable image3/exact SQLite profile và atomic pending publication; safe onboarding giới hạn, không full generator/viability hoặc fake repair qualification.
+
+[ADR026 — Đan dây cá nhân trên xuất thân đã nhận](026-personal-weaving-on-origin.md): authored skill qualification và prototype personal starterfiber; typed reserve/complete/cancel, image4/exact new profile/root, legacy compatibility và năm actual gates; không full professions/VS03.

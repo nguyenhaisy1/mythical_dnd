@@ -6,15 +6,15 @@
 
 ## Hướng dẫn áp dụng khi phát triển
 
-Profession, Career, Class là ba khái niệm riêng. Training và lao động có thời gian, điều kiện, tài nguyên và người dạy; không dùng nghề như combat background cộng điểm. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation.
+Profession, Career, Class là ba khái niệm riêng. Training và lao động có thời gian, điều kiện, tài nguyên và người dạy; không dùng nghề như combat background cộng điểm. Bổ sung 14/10/2026: ADR-008 và contract specs có hiệu lực trước các lựa chọn còn mở/ví dụ cũ trong body nghiên cứu; chưa phải runtime implementation. Sprint17 handcraft subset không grant profession/class/progression hoặc chứng minh đủ ba nghề VS03.
 
 | Hợp đồng tích hợp | Nội dung |
 |---|---|
 | Dữ liệu đầu vào | Capabilities, tools, mentor, work opportunities, household needs và contracts. |
 | Đầu ra / bên sở hữu | Work plans, learning evidence, income/obligations; phối hợp Characters/Economy/Assets. |
-| Đọc cùng | 09, 10, 18, 21, 27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. |
+| Đọc cùng | 09, 10, 18, 21, 27.; ADR-008; docs/production/DOCUMENTATION-COMPLETION-2026-10-14.md. ADR026 và docs/contracts/PERSONAL-WEAVING-PROFILE.md + docs/runbooks/PERSONAL-WEAVING.md: Sprint17 personal-weaving-v1 là subset handcraft trên cùng8random origins; Lâm43/Nhu61 đủweaving40, sáu nonweavers chưa hỗ trợ công việc phù hợp, không grant nghề/householdrights hoặc ép reroll.8starterfiber cá nhân là prototypegenesis mới; dùngtay2fiber/30ticks/1cord, noextraRNG. Typed reserve/due-complete/cancel/history và safeDTO/pureopaque preview/original-envelope retry; image4Origin+Weaving/exactnewrule-content/root, legacyimages1/2/3/scenes15–16/goldens/G13v1/source giữ, khôngupgrade16âmthầm; replayv1refuses. Factorybounded ownactor tại home/hai lots, khôngfullTravel/rightscommands. Năm gates thật core/SQLitefault-crash-recovery/idempotency/actualUnity6000.6.7f1LinuxMono Lâm/Nhu/nonweaver/actualPlayer15–16regression/sixlayouts/nativeOS/two-processrestart/independentreview/fullsuite/docs/exports/exactHEADCI/PRdev ở docs/qa/SPRINT-17-EVIDENCE.md; source/focusedtests không thay acceptance, chỉCLOSE khi đủ gates. Sprint17 technical local10/11:770/770runtime tests,32processcalls/7SIGKILL,actualUnity3origins/116newcaptures/sixWorldlayouts/nativeOS48actions/two-processrestart vàlegacy15–16 regression đã kiểm; final docs/exports/Git/CI vàCLOSE theoWORKLOG, khôngsuyfullmilestone/humanplaytest. |
 | Cổng nghiệm thu | Sửa thuyền và vận tải tạo thu nhập/tri thức hợp lệ mà không cần giết quái. |
-| Việc chưa được chứng minh | Production nghề đầy đủ; rates và anti-grind cần tuning. |
+| Việc chưa được chứng minh | Production nghề đầy đủ; rates và anti-grind cần tuning. Sprint16 đãđóng09/11/PR17/deve7dfd9b. Sprint17 acceptance theo evidence17/WORKLOG; không chuyển gate17 thiếu sang backlog. Full life generator/viability/worldNPCKnowledgebinding/three-professionVS03/progression/fullcampaign/finalart/humanplaytest/crossplatform và newcommandreplayprofile vẫn riêng; không tự Sprint18/main/tag/release. |
 
 **Thứ tự hiệu lực:** [Baseline áp dụng](../../governance/APPLICABLE-BASELINE.md) và [Decision Register](../../governance/DECISIONS.csv) giải quyết các đoạn cũ bên dưới. Phần nghiên cứu được giữ đầy đủ để không mất phương án, lý do và ví dụ; những câu “đề xuất”, “bước tiếp theo”, “chưa khóa” là trạng thái tại thời điểm hội thoại, không phải xác nhận triển khai hiện tại. Các tên/hệ số minh họa không tự trở thành production data.
 

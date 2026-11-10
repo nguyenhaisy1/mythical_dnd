@@ -72,6 +72,8 @@ namespace Game.Application.SimulationScheduler
         private readonly TransferResource? transfer;
         public TransferResource Transfer => transfer ?? throw new InvalidOperationException("Repair jobs do not contain a transfer payload");
         public bool IsRepair => RepairActivityId != null;
+        public bool IsWeaving => WeavingActivityId != null;
+        public EntityId<Activity>? WeavingActivityId { get; }
         public EntityId<Activity>? RepairActivityId { get; }
         public string HandlerKey { get; }
         public string CausationId { get; }
@@ -93,22 +95,28 @@ namespace Game.Application.SimulationScheduler
             AncestorKeys = Array.AsReadOnly((ancestorKeys ?? Array.Empty<string>()).ToArray());
         }
         private ScheduledJob(EntityId<Job> id, EntityId<Actor> actorId, WorldTick dueTick, ulong creationSequence,
-            EntityId<Activity> activityId, string causationId, string correlationId, ScheduledJobStatus status)
+            EntityId<Activity> activityId, string causationId, string correlationId, ScheduledJobStatus status, bool weaving = false)
         {
             Id = id ?? throw new ArgumentNullException(nameof(id));
             ActorId = actorId ?? throw new ArgumentNullException(nameof(actorId));
-            RepairActivityId = activityId ?? throw new ArgumentNullException(nameof(activityId));
+            if (activityId == null) throw new ArgumentNullException(nameof(activityId));
+            if (weaving) WeavingActivityId = activityId; else RepairActivityId = activityId;
             if (creationSequence == 0 || !Enum.IsDefined(typeof(ScheduledJobStatus), status)) throw new ArgumentException("Invalid repair job metadata");
             if (string.IsNullOrWhiteSpace(causationId) || string.IsNullOrWhiteSpace(correlationId)) throw new ArgumentException("Missing repair job causality");
             DueTick = dueTick; Phase = SchedulerPhase.ProductionHealth; Priority = 0; CreationSequence = creationSequence;
-            HandlerKey = "boat-repair-v1"; CausationId = causationId; CorrelationId = correlationId; Status = status;
+            HandlerKey = weaving ? "personal-weaving-v1" : "boat-repair-v1"; CausationId = causationId; CorrelationId = correlationId; Status = status;
             AncestorKeys = Array.AsReadOnly(Array.Empty<string>());
         }
         public static ScheduledJob ForRepair(EntityId<Job> id, EntityId<Actor> actorId, WorldTick dueTick,
             ulong creationSequence, EntityId<Activity> activityId, string causationId, string correlationId,
             ScheduledJobStatus status = ScheduledJobStatus.Pending)
             => new ScheduledJob(id, actorId, dueTick, creationSequence, activityId, causationId, correlationId, status);
-        internal ScheduledJob WithStatus(ScheduledJobStatus status) => IsRepair
+        public static ScheduledJob ForWeaving(EntityId<Job> id, EntityId<Actor> actorId, WorldTick dueTick,
+            ulong creationSequence, EntityId<Activity> activityId, string causationId, string correlationId,
+            ScheduledJobStatus status = ScheduledJobStatus.Pending)
+            => new ScheduledJob(id, actorId, dueTick, creationSequence, activityId, causationId, correlationId, status, true);
+        internal ScheduledJob WithStatus(ScheduledJobStatus status) => IsWeaving
+            ? ForWeaving(Id, ActorId, DueTick, CreationSequence, WeavingActivityId!, CausationId, CorrelationId, status) : IsRepair
             ? ForRepair(Id, ActorId, DueTick, CreationSequence, RepairActivityId!, CausationId, CorrelationId, status)
             : new ScheduledJob(Id, ActorId, DueTick, Phase, Priority,
                 CreationSequence, Transfer, CausationId, CorrelationId, HandlerKey, DeferredFromTick, status, AncestorKeys);
