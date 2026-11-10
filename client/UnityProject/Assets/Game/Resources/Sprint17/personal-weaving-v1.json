@@ -1,0 +1,13 @@
+{
+  "profile": "personal-weaving-v1",
+  "recipe_id": "recipe.hand-braid-cord@1",
+  "material_id": "commodity.fiber@1",
+  "output_id": "commodity.cord@1",
+  "fiber_cost": 2,
+  "duration_ticks": 30,
+  "cord_yield": 1,
+  "minimum_skill": 40,
+  "starter_fiber": 8,
+  "tool_mode": "hands",
+  "source": "prototype-authored: ADR026 Sprint17 engineering fixture; not balanced or historical evidence; starter stock is personal, not household authority"
+}

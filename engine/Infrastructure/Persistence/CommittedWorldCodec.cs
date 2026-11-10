@@ -9,6 +9,7 @@ using Game.Application.SimulationScheduler;
 using Game.Domain.Kernel;
 using Game.Domain.Repair;
 using Game.Domain.Origins;
+using Game.Domain.Weaving;
 using Game.Foundation.Identity;
 using Game.Foundation.Random;
 using Game.Foundation.Time;
@@ -47,7 +48,9 @@ namespace Game.Infrastructure.Persistence
         }
         internal static object EventObject(CommittedEvent e)=>Obj("id",e.Id.ToString(),"type",e.EventType,"aggregate",e.AggregateId.ToString(),"tick",e.Tick.Value,"sequence",e.CommitSequence,"index",e.EventIndex,"cause",e.CausationId,"correlation",e.CorrelationId,"rule",e.RuleVersion,"envelope_version",e.EnvelopeVersion,"payload_version",e.PayloadVersion,"payload",e.Payload);
         private static CommittedEvent ReadEvent(object? o){var d=Map(o);return new CommittedEvent(Id<Event>(d["id"]),Str(d["type"]),EntityId.Parse(Str(d["aggregate"])),Tick(d["tick"]),UInt(d["sequence"]),checked((uint)UInt(d["index"])),Str(d["cause"]),Str(d["correlation"]),Str(d["rule"]),checked((int)Int(d["payload_version"])),Map(d["payload"]),checked((int)Int(d["envelope_version"])));}
-        internal static object JobObject(ScheduledJob j)=>j.IsRepair
+        internal static object JobObject(ScheduledJob j)=>j.IsWeaving
+            ?Obj("id",j.Id.ToString(),"actor",j.ActorId.ToString(),"due",j.DueTick.Value,"phase",(int)j.Phase,"priority",j.Priority,"sequence",j.CreationSequence,"kind","weaving","activity",j.WeavingActivityId!.ToString(),"handler",j.HandlerKey,"cause",j.CausationId,"correlation",j.CorrelationId,"deferred",j.DeferredFromTick?.Value,"status",(int)j.Status,"ancestors",Rows(j.AncestorKeys,x=>x))
+            :j.IsRepair
             ?Obj("id",j.Id.ToString(),"actor",j.ActorId.ToString(),"due",j.DueTick.Value,"phase",(int)j.Phase,"priority",j.Priority,"sequence",j.CreationSequence,"kind","repair","activity",j.RepairActivityId!.ToString(),"handler",j.HandlerKey,"cause",j.CausationId,"correlation",j.CorrelationId,"deferred",j.DeferredFromTick?.Value,"status",(int)j.Status,"ancestors",Rows(j.AncestorKeys,x=>x))
             :Obj("id",j.Id.ToString(),"actor",j.ActorId.ToString(),"due",j.DueTick.Value,"phase",(int)j.Phase,"priority",j.Priority,"sequence",j.CreationSequence,"transfer",Transfer(j.Transfer),"handler",j.HandlerKey,"cause",j.CausationId,"correlation",j.CorrelationId,"deferred",j.DeferredFromTick?.Value,"status",(int)j.Status,"ancestors",Rows(j.AncestorKeys,x=>x));
         private static ScheduledJob ReadJob(object? o)
@@ -55,6 +58,7 @@ namespace Game.Infrastructure.Persistence
             var d=Map(o);
             if(d.TryGetValue("kind",out var kind))
             {
+                if(Str(kind)=="weaving")return ScheduledJob.ForWeaving(Id<Job>(d["id"]),Id<Actor>(d["actor"]),Tick(d["due"]),UInt(d["sequence"]),Id<Activity>(d["activity"]),Str(d["cause"]),Str(d["correlation"]),EnumValue<ScheduledJobStatus>(d["status"]));
                 if(Str(kind)!="repair")throw new FormatException("IMAGE_JOB_KIND");
                 return ScheduledJob.ForRepair(Id<Job>(d["id"]),Id<Actor>(d["actor"]),Tick(d["due"]),UInt(d["sequence"]),Id<Activity>(d["activity"]),Str(d["cause"]),Str(d["correlation"]),EnumValue<ScheduledJobStatus>(d["status"]));
             }
@@ -89,6 +93,18 @@ namespace Game.Infrastructure.Persistence
             return new CampaignOriginState(Id<Actor>(o["principal"]),Id<Household>(o["household"]),Id<Settlement>(o["home"]),
                 Str(o["actor_definition"]),Str(o["household_definition"]),Str(o["community_definition"]),Str(o["source_hash"]),Str(o["cohort_hash"]),UInt(o["draw"]));
         }
+        private static object WeavingRecipeObject(WeavingRecipe r)=>Obj("fiber_cost",r.FiberCost,"duration_ticks",r.DurationTicks,"cord_yield",r.CordYield,"minimum_skill",r.MinimumSkill,"fingerprint",r.Fingerprint);
+        private static WeavingRecipe ReadWeavingRecipe(object? value)
+        { var d=Map(value);return new WeavingRecipe(checked((int)Int(d["fiber_cost"])),Int(d["duration_ticks"]),checked((int)Int(d["cord_yield"])),checked((int)Int(d["minimum_skill"])),Str(d["fingerprint"])); }
+        private static object WeavingObject(WeavingState w)=>Obj("profile",WeavingState.ProfileId,"recipe",WeavingRecipeObject(w.Recipe),
+            "content_hash",w.ContentHash,"actor",w.ActorId.ToString(),"worksite",w.Worksite.ToString(),"input_lot",w.InputLotId.ToString(),"output_lot",w.OutputLotId.ToString(),"skill",w.SkillValue,
+            "activities",Rows(w.Activities,a=>Obj("id",a.Id.ToString(),"actor",a.ActorId.ToString(),"job",a.JobId.ToString(),"started",a.StartedTick.Value,"due",a.DueTick.Value,"cause",a.StartCommandId,"correlation",a.CorrelationId,"status",(int)a.Status,"reserved",a.ReservedQuantity,"reason",a.TerminalReason)));
+        private static WeavingState ReadWeaving(object? value)
+        {
+            var w=Map(value);if(Str(w["profile"])!=WeavingState.ProfileId)throw new FormatException("WEAVING_PROFILE_UNSUPPORTED");
+            var activities=Arr(w["activities"]).Select(entry=>{var a=Map(entry);return new WeavingActivity(Id<Activity>(a["id"]),Id<Actor>(a["actor"]),Id<Job>(a["job"]),Tick(a["started"]),Tick(a["due"]),Str(a["cause"]),Str(a["correlation"]),EnumValue<WeavingActivityStatus>(a["status"]),Int(a["reserved"]),a["reason"]==null?null:Str(a["reason"]));});
+            return new WeavingState(ReadWeavingRecipe(w["recipe"]),Str(w["content_hash"]),Id<Actor>(w["actor"]),Id<Settlement>(w["worksite"]),Id<Lot>(w["input_lot"]),Id<Lot>(w["output_lot"]),checked((int)Int(w["skill"])),activities);
+        }
         public static byte[] Encode(CommittedWorld state)
         {
             var w=state.World;var s=state.Scheduler;
@@ -104,18 +120,20 @@ namespace Game.Infrastructure.Persistence
                 "executions",Rows(s.Executions,e=>Obj("job",e.JobId.ToString(),"tick",e.Tick.Value,"command",e.CommandId,"error",e.ErrorCode)));
             if(w.Repair!=null){image["image_version"]=2;image.Add("repair",RepairObject(w.Repair));}
             if(w.Origin!=null){image["image_version"]=3;image.Add("origin",OriginObject(w.Origin));}
+            if(w.Weaving!=null){image["image_version"]=4;image.Add("weaving",WeavingObject(w.Weaving));}
             return CanonicalCodec.Encode(image);
         }
         public static CommittedWorld Decode(byte[] bytes)
         {
-            var d=Map(MdcReader.Decode(bytes));var version=Int(d["image_version"]);if(version!=1&&version!=2&&version!=3)throw new FormatException("UNSUPPORTED_IMAGE");
+            var d=Map(MdcReader.Decode(bytes));var version=Int(d["image_version"]);if(version!=1&&version!=2&&version!=3&&version!=4)throw new FormatException("UNSUPPORTED_IMAGE");
             var identity=IdentitySnapshot.Restore(UInt(d["world"]),UInt(d["revision"]),Arr(d["cursors"]).Select(x=>{var c=Map(x);return new AllocationCursor(Str(c["kind"]),UInt(c["next"]),Bool(c["exhausted"]));}),Arr(d["entities"]).Select(x=>{var e=Map(x);return new RegistryEntry(EntityId.Parse(Str(e["id"])),EnumValue<EntityLifecycle>(e["lifecycle"]),UInt(e["created"]),e["retired"]==null?null:UInt(e["retired"]));}));
             var actors=Arr(d["actors"]).Select(x=>{var a=Map(x);return new ActorState(Id<Actor>(a["id"]),Bool(a["alive"]),Id<Settlement>(a["location"]),Arr(a["owners"]).Select(v=>EntityId.Parse(Str(v))));});
             var lots=Arr(d["lots"]).Select(x=>{var l=Map(x);return new ResourceLot(Id<Lot>(l["id"]),DefinitionId.Parse(Str(l["commodity"])),EntityId.Parse(Str(l["owner"])),Id<Settlement>(l["location"]),Int(l["on_hand"]),Int(l["reserved"]));});
             var rng=Arr(d["rng"]).Select(x=>{var r=Map(x);return new RngStreamState(Str(r["key"]),new RngState(new RngContext(Str(r["seed"]),Str(r["domain"]),Str(r["decision"]),Str(r["occurrence"]),EntityId.Parse(Str(r["entity"])),Str(r["stream"])),UInt(r["draw"])));});
             var repair=version==2?ReadRepair(d["repair"]):null;
-            var origin=version==3?ReadOrigin(d["origin"]):null;
-            var world=new WorldSnapshot(identity,Tick(d["tick"]),actors,lots,rng,repair,origin);
+            var origin=version>=3?ReadOrigin(d["origin"]):null;
+            var weaving=version==4?ReadWeaving(d["weaving"]):null;
+            var world=new WorldSnapshot(identity,Tick(d["tick"]),actors,lots,rng,repair,origin,weaving);
             var accepted=Arr(d["accepted"]).Select(ReadReceipt).ToArray();var metadata=Arr(d["metadata"]).Select(ReadReceipt).ToArray();var events=Arr(d["events"]).Select(ReadEvent).ToArray();
             var jobs=Arr(d["jobs"]).Select(ReadJob).ToArray();var byJob=jobs.ToDictionary(j=>j.Id);
             var workflows=Arr(d["workflows"]).Select(x=>{var f=Map(x);return new AdvanceWorkflow(Str(f["id"]),Id<Actor>(f["owner"]),EnumValue<CommandSource>(f["source"]),Tick(f["target"]),EnumValue<AdvanceStatus>(f["status"]),f["cursor"]==null?null:Id<Job>(f["cursor"]),UInt(f["committed"]),Str(f["correlation"]));}).ToArray();
@@ -133,6 +151,8 @@ namespace Game.Infrastructure.Persistence
         {
             try { CommandProcessor.ValidateRepairHistory(s); }
             catch (ArgumentException error) { throw new FormatException("REPAIR_HISTORY", error); }
+            try { CommandProcessor.ValidateWeavingHistory(s); }
+            catch (ArgumentException error) { throw new FormatException("WEAVING_HISTORY", error); }
             var w=s.World;
             for(int i=0;i<s.AcceptedReceipts.Count;i++)
             {
@@ -155,7 +175,15 @@ namespace Game.Infrastructure.Persistence
             {
                 if(w.Identity.Resolve<Job>(j.Id.Value).Lifecycle!=(j.Status==ScheduledJobStatus.Pending?EntityLifecycle.Active:EntityLifecycle.Retired)|| (j.Status==ScheduledJobStatus.Pending&&j.DueTick<w.Tick)||j.AncestorKeys.Count>64||j.AncestorKeys.Any(string.IsNullOrWhiteSpace)||j.AncestorKeys.Distinct().Count()!=j.AncestorKeys.Count)throw new FormatException("JOB_REFERENCE");
                 w.GetActor(j.ActorId);
-                if(j.IsRepair)
+                if(j.IsWeaving)
+                {
+                    if(w.Weaving==null)throw new FormatException("WEAVING_JOB_WITHOUT_PROFILE");
+                    var a=w.Weaving.Activities.SingleOrDefault(x=>x.Id.Equals(j.WeavingActivityId));
+                    if(a==null||!a.JobId.Equals(j.Id)||!a.ActorId.Equals(j.ActorId)||a.DueTick!=j.DueTick||a.StartCommandId!=j.CausationId||a.CorrelationId!=j.CorrelationId||
+                       (j.Status==ScheduledJobStatus.Pending)!=(a.Status==WeavingActivityStatus.Running)||
+                       (j.Status==ScheduledJobStatus.Completed)!=(a.Status==WeavingActivityStatus.Completed))throw new FormatException("WEAVING_JOB_ACTIVITY");
+                }
+                else if(j.IsRepair)
                 {
                     if(w.Repair==null)throw new FormatException("REPAIR_JOB_WITHOUT_PROFILE");
                     var a=w.Repair.GetActivity(j.RepairActivityId!);
@@ -170,6 +198,11 @@ namespace Game.Infrastructure.Persistence
             {
                 var job=s.Scheduler.Jobs.SingleOrDefault(j=>j.Id.Equals(activity.JobId));
                 if(job==null||!job.IsRepair||!job.RepairActivityId!.Equals(activity.Id))throw new FormatException("REPAIR_ACTIVITY_JOB");
+            }
+            if(w.Weaving!=null)foreach(var activity in w.Weaving.Activities)
+            {
+                var job=s.Scheduler.Jobs.SingleOrDefault(j=>j.Id.Equals(activity.JobId));
+                if(job==null||!job.IsWeaving||!job.WeavingActivityId!.Equals(activity.Id))throw new FormatException("WEAVING_ACTIVITY_JOB");
             }
             if(s.Scheduler.Workflows.Select(f=>f.Id).Distinct().Count()!=s.Scheduler.Workflows.Count||s.Scheduler.Workflows.Take(Math.Max(0,s.Scheduler.Workflows.Count-1)).Any(f=>f.Status!=AdvanceStatus.Completed))throw new FormatException("WORKFLOW_ORDER");
             foreach(var f in s.Scheduler.Workflows)
@@ -190,7 +223,7 @@ namespace Game.Infrastructure.Persistence
                 var job=s.Scheduler.Jobs.Single(j=>j.Id.Equals(e.JobId));
                 var receipt=s.AcceptedReceipts.SingleOrDefault(r=>r.CommandId==e.CommandId)??throw new FormatException("EXECUTION_RECEIPT");
                 var command=receipt.OriginalEnvelope;
-                if(job.Status==ScheduledJobStatus.Pending||command.CommandId!="scheduler/job/"+job.Id||command.CommandType!=(job.IsRepair?"ExecuteScheduledRepair":"ExecuteScheduledTransfer")||command.SourceType!="Scheduler"||command.IssuerId!=job.ActorId.ToString()||command.CorrelationId!=job.CorrelationId||
+                if(job.Status==ScheduledJobStatus.Pending||command.CommandId!="scheduler/job/"+job.Id||command.CommandType!=(job.IsWeaving?"ExecuteScheduledWeaving":job.IsRepair?"ExecuteScheduledRepair":"ExecuteScheduledTransfer")||command.SourceType!="Scheduler"||command.IssuerId!=job.ActorId.ToString()||command.CorrelationId!=job.CorrelationId||
                    command.Payload.Count!=2||!command.Payload.TryGetValue("job_id",out var jobRef)||!Equals(jobRef,job.Id.ToString())||!command.Payload.TryGetValue("workflow_id",out var flowRef)||!s.Scheduler.Workflows.Any(f=>Equals(flowRef,f.Id))||receipt.CommittedTick!=job.DueTick)
                     throw new FormatException("EXECUTION_REFERENCE");
                 var terminal=receipt.OrderedEventIds.Select(id=>events[id]).SingleOrDefault(ev=>ev.AggregateId.Equals(job.Id.Value));

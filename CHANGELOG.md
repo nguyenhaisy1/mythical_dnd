@@ -6,6 +6,12 @@ Chưa có tagged release. Snapshot đầu tiên `1e45977` trên main là tài li
 
 ## [Unreleased]
 
+### Sprint17 — đan dây trên xuất thân
+
+- Thêm personal-weaving-v1: Lâm/Bà Nhu dùng kỹ năng đã có để giữ2fiber, làm30ticks và nhận1cord; hủy release hold, no extra RNG. Starter8fiber cá nhân là fixture mới được ghi rõ, không quyền hộ hoặc grant nghề giả cho sáu origin khác.
+- Thêm Origin+Weaving/image4/exact profile và safe preview/session/original intent retry/pending Advance resume; giữ image1/2/3 và scene15/16. Replay artifactv1 tiếp tục từ chối profile mới.
+- Thêm scene/UI/QA/build và native-input/process runners. Validation local10/11:770/770tests,32processcalls/7SIGKILL,actualUnity3origins/116newcaptures/sixWorldlayouts,48nativeactions/hai process restart vàactuallegacy15–16 regression đạt; hai final reviews độc lập noP0/P1 trong scope. Docs/exports/Git/CI closure tại [evidence Sprint17](docs/qa/SPRINT-17-EVIDENCE.md)/WORKLOG; không full gameplay/human playtest claim.
+
 ### Sprint16 — xuất thân theo seed và Continue
 
 - Thêm origin-cohort-v1: nhận một trong tám người trưởng thành đã biên soạn tại Bến Vạc theo seed, immutable assignment/RNG cursor và safe self-record; không full life-history generator hoặc chọn/chỉnh xuất thân.

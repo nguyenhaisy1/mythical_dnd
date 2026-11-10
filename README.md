@@ -1,5 +1,17 @@
 # Mythical DnD — Hồng Bàng / Mạch Lạc
 
+## Sprint17 — đan dây cá nhân từ xuất thân — nghiệm thu kỹ thuật local10/11/2026
+
+Kết quả kỹ thuật local10/11:770/770runtime tests,0failed/skipped; actual Unity6000.6.7f1/LinuxMono ba xuất thân/116ảnh mới và31ảnh regression15–16;48native actions/hai process SaveRunning→restart→complete một lần. Hai final reviews độc lập không còn P0/P1 trong scope. Docs/exports và exactHEADCI/PR→dev phải đạt trước CLOSE; Git sau commit theo WORKLOG.
+
+Chủ dự án giao [Sprint17](docs/production/sprints/SPRINT-17.md) ngày10/11/2026, SPIN-041, sau Sprint16 đã đóng qua PR17/dev`e7dfd9b`. Nhân vật đã biết đan có thể xem nguyên liệu cá nhân, xác nhận làm dây, chờ nhận sản phẩm hoặc hủy; lưu khi đang làm rồi mở ứng dụng lại phải giữ đúng tiến trình và không nhân đôi đồ. [ADR026](docs/adr/026-personal-weaving-on-origin.md), [contract](docs/contracts/PERSONAL-WEAVING-PROFILE.md), [runbook](docs/runbooks/PERSONAL-WEAVING.md) và [evidence](docs/qa/SPRINT-17-EVIDENCE.md) khóa phạm vi và kết quả theo revision.
+
+`personal-weaving-v1` dùng tay,2fiber/30ticks/1cord, yêu cầu weaving40; Vạc Lâm43 và Bà Nhu61 đủ điều kiện. Tám xuất thân vẫn được chọn ngẫu nhiên như16; sáu người khác được ghi rõ bản thử chưa hỗ trợ công việc phù hợp, không grant nghề/quyền giả hoặc ép reroll. Mỗi campaign17 mới có8fiber cá nhân của bản thử, không lấy kho hộ hoặc diễn giải thành tài sản lịch sử. Đây subset chế tác trên origin, chưa hoàn tất nghề/ba nghề VS03 hoặc fullVS02/VS07.
+
+Origin+Weaving dùng canonical image4, exact rule/content và save root riêng; không tự nâng cấp/enrich save16. Legacy image1/2/3, scenes15/16, goldens/archive/01–18 và G13`earth-monument-2d-v1` giữ. Replay artifactv1 vẫn từ chối origin/weaving; save/reopen không là command replay. Cổng đóng gồm core/history/rights, SQLite crash-recovery/idempotency, actual Unity6000.6.7f1/LinuxMono cho Lâm/Nhu/nonweaver cùng actual Player regression15–16, renderer/sixlayouts/nativeOS/actual restart, independent reviews/fullsuite/docs/exports/exactHEADCI/PR→dev. Source/focused tests không thay actual acceptance; chỉ CLOSE khi đủ cả năm gate, xem evidence và WORKLOG. Không tự Sprint18/main/tag/release.
+
+Các mục Sprint16 và trước bên dưới là lịch sử tại thời điểm viết; CLOSE Sprint16 đã ghi ở WORKLOG ngày09/11, không còn gate16 treo. Phần còn thiếu của Sprint17 phải báo riêng với backlog toàn dự án.
+
 ## Sprint16 — nghiệm thu kỹ thuật local09/11/2026: xuất thân ngẫu nhiên từ cohort
 
 [Sprint16](docs/production/sprints/SPRINT-16.md), [ADR025](docs/adr/025-seeded-origin-cohort-and-reveal.md) và [origin contract](docs/contracts/ORIGIN-COHORT-PROFILE.md) bổ sung New campaign → Generating/cancel → Reveal → World → chờ/lưu/Continue. Hệ thống chọn theo seed một trong tám người trưởng thành đã biên soạn tại Bến Vạc; giữ cùng quá khứ, kỹ năng và nhận định của bản thân khi mở lại. Đây là nhánh chọn nhân vật có sẵn theo M07, chưa phải bộ sinh lịch sử cuộc đời hoặc full Character Viability/TEST-001.

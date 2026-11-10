@@ -2728,3 +2728,94 @@ Finalfull tests/results/sprint16-1rngpl9l exit0,674discovered/executed/Passed,0f
 ActualUnity8fpgghix vàOS22lns4xz nhưEVT00237đãfinalPassed;206sourcehashes cònkhớp54b10aaf2ebc6f84f9e455a5e558e2f82004faecb28ca0368fdd504d8d69f6ba. /root/s16_final_reviewvà/root/s16_core_final_reviewđãfinalizereports độc lập sau tựparsefullTRX/negative/manifest/process/DB/captures/OS2processrestart; noknownP0/P1boundedtechnicalscope. Khônghumanplaytest/finalownerart/crossplatformclaim.
 Đồngbộ14consumerdocs+rootADR/contract/brief/evidence/.agent/AGENTS/changelog/registers/integrationnotes; regenerate36docs, checkhandoff1039authoredlinks/52requirements/28tasks; source/reference/contract/architecture/client-assets-origin/MCP4/skills6/diffchecksđạt. Finalexport7HTML+7DOCX check301inputs/14containers/6156anchors/6251headings/123tables/navPassed; chỉcontainer/contentchecks, khôngvisualDOCXrender. KhôngZIP. StaticrepaircheckerbanđầunhầmOriginBootstraplàpresenter đãsửaexplicit2trustedcompositionrootallowlist, vẫncheck5presenters vàorigincheckerđộc lập; criticđãreviewpatch.
 Precommit74files đúngscope,4253insertions/74deletionstrướcRESULTjournal; nosecrets/noDLLSOcache-resultsZIP/no>10MiB. G13ancestor/archive/oldfixtures đượcgiữ; indexdiffcheckPass. SẽcommitpushPRdevtheoworkflow; chưaexactHEADCI/devnênchưaCLOSE. GiữpostcommitjournalSprint15trongmeaningfulSprint16commit, cácGit/CLOSEsaucommit sẽlocalkếtiếp; khôngamend/selfhashloop, khôngSprint17/main/tag/release.
+
+
+### EVT-00239 | SPIN-040 | GIT — Push Sprint16 943da2d và mở PR17 vào dev; chờ exact HEAD CI
+
+<!-- worklog: {"id": "EVT-00239", "spin": "SPIN-040", "event": "GIT", "at": "2026-11-09T17:05:50+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-09T17:05:50+07:00
+- Actor: /root
+
+Đãcommit943da2d58e8c369e18c452c3e4360e94a954e14a feat(origin): add seeded cohort onboarding and durable Continue,74files/4266insertions/74deletions, gồmjournalpostSprint15 vàRESULTlocal16. Pushfeature/sprint-16-random-origin thànhcông; gitls-remoteexactSHAkhớplocalHEAD943da2d. PR17 https://github.com/nguyenhaisy1/mythical_dnd/pull/17 targetdev đãtạo; featurepushCI42598277107 inprogress, PRCIcònchờevent. ChưaCIPassed/merge/CLOSEsprint.
+AlllocalgatesEVT00238; sourceunchanged. Workingtreecleanngaysaucommit; eventGITnàylàpostcommitjournal local chomeaningfulcommitkếtiếp, khôngamend/selfhashloop. KhôngSprint17/main/tag/release.
+
+
+### EVT-00240 | SPIN-040 | GIT — PR17 merge dev e7dfd9b sau hai CI exactHEAD đạt; chờ CI dev cuối
+
+<!-- worklog: {"id": "EVT-00240", "spin": "SPIN-040", "event": "GIT", "at": "2026-11-09T17:09:08+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-09T17:09:08+07:00
+- Actor: /root
+
+ExactHEAD943da2d featurepushCI42598277107 vàPRCI42598308985 completed/success, toànstepsdocs/reference/architecture/staticclients/MCP/fullheadlessprocess/artifactupload/hoststatus success. PR17 đãsquashmerge đúngHEAD vào dev e7dfd9bd9f0b1c8b5f700ac0c16c012a3920439e, GitHubmergedtrue/stateclosed.
+Fetchorigin/devkhớpe7dfd9b; treeec31a38909c0019001a222be748d9bc78561b671 giốngfeatureHEAD943da2d nênlocalruntime/Unityevidenceápdụngcùngcâynguồn. G13checkpoint1e4332f0a122528b9bed850377529ffee1efb7davẫnancestor; difftừdev6fa3e1dkhôngđổidocs/source/prototypes01–18/settlementpack/legacygoldens/repairfixtures/parameterpacks. Featurebranchretained, khôngmain/tag/release/delete/forcehoặcSprint17.
+CIdev42598686729 đanginprogress đúngheade7dfd9b; chờtrướckhiCLOSE, chưaclaimđãđóng. WorkingtreechỉWORKLOGpostcommitjournalchưacommit theochínhsách, khôngcònsourcediffchưapush.
+
+
+### EVT-00241 | SPIN-040 | GIT — Ba CI feature/PR17/dev đạt; xác minh remote SHA và cây nguồn Sprint16 sau tích hợp
+
+<!-- worklog: {"id": "EVT-00241", "spin": "SPIN-040", "event": "GIT", "at": "2026-11-09T17:10:42+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-09T17:10:42+07:00
+- Actor: /root
+
+CIdev42598686729 completed/success đúngheade7dfd9bd9f0b1c8b5f700ac0c16c012a3920439e; toànstepsdocs/reference/architecture/staticclients/MCP/headlessfullprocess/upload/hoststatus success. Cộng featurepush42598277107 vàPR42598308985 là3CIđạt. RemoteSHAdev e7dfd9b vàfeature943da2dverifytrựctiếpgitls-remote; PR17closed/mergedtrue, source treeidenticalec31a38909c0019001a222be748d9bc78561b671.
+ĐủGitgate5saualllocalgates; khôngmain/tag/release hoặcSprint17. PostcommitjournalGIT/CLOSE giữlocalđếnmeaningfulcommitkếtiếp, khôngamend/selfhashcommitloop. Sourcechưapush:khôngcó; chỉWORKLOGappendlocaltheochínhsách.
+
+
+### EVT-00242 | SPIN-040 | CLOSE — Finished Sprint16: nhận xuất thân và Continue đã nghiệm thu, đủ năm gates và tích hợp dev
+
+<!-- worklog: {"id": "EVT-00242", "spin": "SPIN-040", "event": "CLOSE", "at": "2026-11-09T17:10:43+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-09T17:10:43+07:00
+- Actor: /root
+
+Status:finished Sprint16/SPIN040 ngày09/11/2026. Người chơi đãnhậnngẫunhiênmộttrong8authoredadults tạiBếnVạc, đọcReveal/bảnthân, vàoWorld/chờ/lưu/mởlại/Continue cùngorigin/quákhứ/tick/cursor; Newcancelpending khôngpublishnửa, retrieskhôngbốclại. ĐâyVS02C/partialVS07nhánhM07existingcharacter, khôngfullgenerator/viability/fullcampaign. Khônggrantnghề/rights giả; repair15scene/image2/factorygiữriêngvàactualregressionđạt.
+Điều kiện đóngSprint16 cònthiếu:khôngcó. Đủ5gates: deterministic/admission/privacy/idempotency; actualSQLiteprofile/image3/immutableorigin/cancel-fault-crash/publish; actualUnity6000.6.7f1/LinuxMono2seeds+OS2processrestart;38origincaptures/sixlayouts mỗi seed/20nativeOSactions vàrepair15actualPlayer12captures/3DB; haiindependentfinalreviews noP0P1+full674/674/0failedskip/negative/process/sourceguard/docs/exports/3CI/PRdev. Raw1rngpl9l/8fpgghix/22lns4xz, reportsdocs/qa/SPRINT-16-EVIDENCE.md vàdocs/qa/sprint-16/. Actor/tasks/failures/hashes ởEVT234–241 vàreports; khônghumanplaytest hoặcfinalownerartapprovalclaim.
+74filescommitpush943da2d58e8c369e18c452c3e4360e94a954e14a; PR17 https://github.com/nguyenhaisy1/mythical_dnd/pull/17 merged dev e7dfd9bd9f0b1c8b5f700ac0c16c012a3920439e, CIdev42598686729success. G13checkpoint/sourceancestor/profilev1/01–18/archive/legacygoldens/parameterpacks giữ. Sourceworkingtreekhôngcòndiffchưapush; chỉWORKLOGpostcommitjournalGIT/CLOSElocal đếnmeaningfulcommitkếtiếp, khôngamend/vòngcommittựchứahash. KhôngZIP/main/tag/release/Sprint17.
+Backlog dựán ngoàiSprint16: fullcausallifegenerator/CharacterViability/TEST001, world/NPC/economy/Knowledgebinding, professions/actions/progressionđúngcapability, fullVS02/VS07/campaign, đủcastart/finalownerUIartapproval, IL2CPP/crossplatform/performance/balance/humanplaytest vàorigincommandreplayprofile. Khônggọicácmụcđólàgate16còntreo. Đềxuấtkhiusergiaosprintkếtiếp: mộtvònghànhđộngnghềnghiệp phùhợpxuấtthân/rightsđãcó,nốivàocảnhchơivàsave; chốtboundedcontract/gatestrướcimplementation, khôngtựmởSprint17từCLOSEnày.
+
+
+### EVT-00243 | SPIN-041 | OPEN — Bắt đầu Sprint17: nghề đan dây cá nhân gắn với xuất thân và lưu tiến trình thật
+
+<!-- worklog: {"id": "EVT-00243", "spin": "SPIN-041", "event": "OPEN", "at": "2026-11-10T08:06:05+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-10T08:06:05+07:00
+- Actor: /root
+
+User giao tiếp tục ngày10/11/2026 sauSprint16CLOSE/PR17/deve7dfd9b; hiểu là Sprint17 theo workflowthườngtrực, khôngtựSprint18/main/tag/release. Rootđọc.agent/HANDOFF/APPLICABLE/worklog vàskills task/content/change-impact/kernel; fetchorigin/dev=e7dfd9bd9f0b1c8b5f700ac0c16c012a3920439e, HEAD16cùngtree. Tạo feature/sprint-17-weaving-loop từorigin/dev; WORKLOGpostcommit16đượcgiữ/carryrõràng cho meaningful17commit, khôngstash/reset.
+Hai readonlyaudits thực /root/s17_design_audit và/root/s17_arch_audit xácnhậncohort8skills: Lâm43/Nhu61weaving, Kiên/Mộc/Tòngtransport, Hà/Senmedicine, MặcMai trading57; noboatrepair. Packchỉgrain/timbervàhouseholdrightsbounded, khôngfiber/cord. Chọnboundedpersonalhandweaving theoM07/M18/M28: starterfiber mới phảiauthorprototypegenesis riêng, khôngbịawealth/history/householdrights. Dùngtay, khôngtoolassetgiả. Rootchốtparameters2fiber/30ticks/1cord/minweaving40/starter8personal fiber, normal8randomoriginsgiữ;6nonweaversUIghiđúngbảnthửchưahỗtrợcôngviệcphùhợp, khôngépchoosereroll. KhôngfullVS03/skillsprogression/worldNPCbinding.
+Goal: origin-boundcraft loop thựcStart/reserve→scheduleddueconsume+output→cancel/saveRunning/restart/Continue, immutableorigin/RNGvàexactnewimage4/profile; old1/2/3/15/16/G13/archive giữ. ContractADR026/PERSONAL-WEAVING-PROFILE/Sprint17brief đượcviếttrướcimplementation; assignments/gates thật ởeventkếtiếp. Rootownscontract/ports/tooling/actualchecks/Git; noimages/model3Dnewrequired.
+
+
+### EVT-00244 | SPIN-041 | ASSIGN — Giao core, lưu trữ/session và Unity theo contract đan dây đã khóa
+
+<!-- worklog: {"id": "EVT-00244", "spin": "SPIN-041", "event": "ASSIGN", "at": "2026-11-10T08:09:56+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-10T08:09:56+07:00
+- Actor: /root
+
+CORRECTION EVT00243: tênactortrading57làVạcMai, khôngphảiMặcMai; giữhistorychỉđínhchínhởeventnày.
+/root/s17_arch_audit từreadonlyaudit sangS17-01 core: DomainWeaving/WorldSnapshot/allCommandProcessor+SchedulerState/coretests; /root/s17_design_audit từreadonlyaudit sangS17-02 runtime: InfraWeaving/compiler/CommittedWorldCodec/SqliteStore/ApplicationWeavingSession/persistencetests. RootđãkhóacontractADR026/brief/parametersvàApplicationWeavingClientContracts trướcimplementation. WorkerchỉđúngownershipvàtraođổithayAPItrướckhisửa; coremodelctormatchescontract. UnityworkerS17-03tạo4filesBootstrap/View/QA/EditorBuild mới/khôngsửa15–16, sẽgiaoởtoolkếtiếp. Rootownsports/contract/probes/processrunner/static/actualEditorPlayerOS/fullregression/docs/Git, criticsluânphiênsauworkerfreeze. Max4runninggồmroot; khôngclaimactorschưachạy/Passed.
+
+
+### EVT-00245 | SPIN-041 | PROGRESS — Tiếp quản sau quota, sửa hai lỗi lịch sử restore; process/crash đạt và đang kiểm Unity bản mới
+
+<!-- worklog: {"id": "EVT-00245", "spin": "SPIN-041", "event": "PROGRESS", "at": "2026-11-10T08:51:00+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-10T08:51:00+07:00
+- Actor: /root
+
+Tiếp tục10/11 cùngSprint17/SPIN041. Coreworker/root/s17_arch_audit đãtriểnkhaiDomainWeaving/3rdjob/commands/history vàactualfirst41/41pass trước2tests bổsung; runtime/root/s17_design_audit sourcecompiler/session/gateway/codec/store đãtriểnkhai vàinfra-first47cases46pass1InvalidCasttestplumbing, khôngclaimnghiệmthuhoànthành. Cảhai vàcriticđầu/root/s17_critic_core sauđóbịusagequota; roottiếpquảnphầncòndở. Unityworker/root/s17_unity freeze4newfiles, khôngEditor/runtimeclaim. Rootgiaofreshforknone/root/s17_core_final và/root/s17_ui_review độc lập, /root/s17_docs14consumerdocs đãfreeze; max4runninggồmroot. Khônggiảcácactorquotađãfinalreview.
+Rootchạyadversarialvalid-before2Failed ExpectedFormatButnull: coherentRunning/CompletedretargettừqualifiedsangBếnKiênskill0đượcCodecnhận. Testdoindependentcriticviết nhưngrootphảisửarecursiveList/object[]plumbing trướcvalidrepro; artifactsetup-failurecũgiữ. RootthêmSTART_QUALIFICATIONhistoryguard, focused-final92/92Passed0failedskip; 43core+47infra+2independent. MộttestbudgetgiảđịnhDrain1phảidừngtick30đãsửabằngafterCommitcaptureactualjobpublication, khôngđổischedulergameplay. /root/s17_core_finaltựparseTRX/reviewrepro/fix vàtựchạy27history/adversarialtestsPassed.
+ReviewerfinalCorebắtthêmP1historicalbusyoverlap: haiStarttrướcCancelđầunhưngfinalcảhaiterminal vẫncanonical. IndependenttestWeavingOverlapAdversarialTests validserialcontrolpassed/forgedcaseFailed1tạisprint17-overlap-before; rootfixoccupancythểhiệnStart.AfterRevision>terminaltrước(khôngsoTickđểvẫnchocancel/restartcùngtick). Focused-second-fix96casesđangchạy; chưaclaimfinalfull.
+Actualprocess-first32childcalls/7SIGKILLPassed: newpre/postpublish, startbefore/aftercommit,response-lossretry, completebefore/aftercommit/rawinspect→ContinueResumeđúngacceptedAdvance; nodefaultnewtarget/draw.13publishedDBscriticcoretựdecodePythonMDC1/hash/exactprofile/cursor/effects. Đâytrướcbusyhistoryfix, finalfullsẽrerun.
+ActualUnityfirst tests/results/sprint17-client-vhwrph7p Configure/Scene/BuildSucceeded0errors/warnings và16provisionalcaptures; PlayerFailedRESOLUTION ởpreviewmatrixđổi1920fullscreen→1280windowWMtrả683px. KhônggọiPassed; rootđổiQAordering1280Reveal+Previewrồi1920Reveal+Preview, khôngcrop/giảmassert. /root/s17_ui_reviewđãreviewpatch, actualfreshbuildchưachạy. InputrunnerPIDguard/native2processRunning→completeđãviết; noOSacceptanceyet. Source/staticparams independenthash vàlegacy15/16sourceskhôngđổi. ChưaGitcommitpush/đóngSprint17/18/main/tag/release.
+
+
+### EVT-00246 | SPIN-041 | RESULT — Sprint17 đủ nghiệm thu kỹ thuật local: đan dây, Unity/OS, regression/reviews/docs đạt; chuyển Git gates
+
+<!-- worklog: {"id": "EVT-00246", "spin": "SPIN-041", "event": "RESULT", "at": "2026-11-10T09:24:19+07:00", "actor": "/root"} -->
+- Ghi lúc: 2026-11-10T09:24:19+07:00
+- Actor: /root
+
+Nghiệmthu kỹthuật localSprint17 đủscopepersonal-weaving-v1 ngày10/11/2026. HaiqualifiedoriginLâm43/BàNhu61 dùngstarter8fiber cá nhânprototype, Startreserve2→due30consume2/output1/cancelrelease;6nonweaverskhônggrantnghề/rights, giữnormal8random/nochoosereroll. SafeRead/Preview/Confirm/originalretry/saveRunning/actualrestart/Continue/acceptedAdvanceresume, immutableOrigin/genesis/image4/exactprofile; old1/2/3/15/16/goldens/G13/archivegiữ. KhôngfullVS03/viability/lifegenerator/worldbinding/humanplaytest/finalartclaim.
+Finalfull tests/results/sprint17-wpa3bfrf exit0,770discovered/executed/Passed,0failed/skipped;96new(43core/47infra/6integration-adversarial),674legacygồm113repair/81origin16. Negativeexact1Failedchildexit1đúng;transaction/saveSIGKILL/replay/content/diagnostics/conformance/settlement/eligibility/repair/origin/weavingprocessallPassed, weaving32calls7SIGKILL. Source322paths khớp8d31740d0494ab70ee0cd92634e71e5290386ae995bb9066cab161fe999100c8. Reviewer/root/s17_core_finaltựparseTRX/source/currenthashes/process vàPythonMDC113finalDB, own28casesPassed; haiP1restorequalification/busyhistory đãreprofail→fix→pass, noknownP0P1scope.
+ActualUnity finaltests/results/sprint17-client-8f9zo2ld exit0,0builderrors/warnings,6000.6.7f1/LinuxMono,3origins116newPNG(42/42/32),sixReveal/World/previewlayouts+scrollfocusmodal; actuallegacy16image3/19captures vàlegacy15image2/12captures/3DBrepair-cancel-waitPassed.230sourcepaths khớp2369663f9e869b89d7f5c69ef6b9069064ffc071d95b4e497acfc15d330d70e3; managedAssembly474694cb8f9646ad0ede7a182f8469ab9c18fa4c996e71ad5b261b2f81406d18.
+OS finaltests/results/sprint17-input-g714cvsc exit0/48nativeactions35+13/PIDs2544008,2544229; mousepreviewpure/freshpointerConfirm/cancelReturn/freshReturnConfirm/Wait1/SaveRunning/quit→actualnewprocessContinueRunning→SpaceWait60Completed61/SaveReloadContinue, onecompletionat30/draw1/fiber6cord1/hold0. Actualres1280x683phase1,1280x720phase2 đượcghiđúng; sameAssemblyabove. Reviewer/root/s17_ui_reviewtựđọcảnh/QA/DB/actions/sourcehashes, nativeConfirmP1fixedandretested, noP0P1UIknown. CallbackautomationkhôngthayOS/human. AllfailureartifactsRESOLUTION/sourcechanged/badtestcasts/QAreadyempty/nativeConfirmgiữ, khôngnóiPassedcáclượtđó.
+Source.agent/AGENTS/ADR026/contract/brief/runbook/evidence/changelog/registers/integration07/08/18/23/26/28/29+14consumerdocs đồngbộ; regenerate36docs, checkhandoff1086authoredlinks/52req/28tasks; reference/contractvectors/architecture/7safePresenter+assets/origin/weaving/MCP4/skill6/diffchecksPassed. Finalexport7HTML+7DOCX check311inputs/14containers/6156anchors/6251headings/123tables/navPassed; container/contentcheckkhôngvisualDOCXrender. Precommit82files/4842insertions122deletions trướcRESULTjournal, nosecrets/noDLLSOcache-resultsZIP/no>10MiB, indexdiffcheckPassed. Source/currentruntime/Unitymanifests đãverifykhớp.
+ChuyểnGitgatescommitpushPRdevtheoworkflow; chưaexactHEADCI/devnênchưaCLOSE. Giữpostcommitjournal16trongmeaningful17commit; Git/CLOSEsaucommitlocalchocommitmeaningfulkếtiếp, khôngamend/selfhashloop. KhôngSprint18/main/tag/release.

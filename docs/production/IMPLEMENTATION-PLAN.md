@@ -1,5 +1,15 @@
 # Kế hoạch triển khai từ bộ tài liệu
 
+## Sprint17 — personal handcraft gắn với origin, SPIN-041
+
+Kết quả kỹ thuật local10/11:770/770runtime tests,0failed/skipped; actual Unity6000.6.7f1/LinuxMono ba xuất thân/116ảnh mới và31ảnh regression15–16;48native actions/hai process SaveRunning→restart→complete một lần. Hai final reviews độc lập không còn P0/P1 trong scope. Docs/exports và exactHEADCI/PR→dev phải đạt trước CLOSE; Git sau commit theo WORKLOG.
+
+Chủ dự án giao10/11/2026 sau Sprint16CLOSE/PR17/dev`e7dfd9b`. [Brief17](sprints/SPRINT-17.md), [ADR026](../adr/026-personal-weaving-on-origin.md), [contract](../contracts/PERSONAL-WEAVING-PROFILE.md) và [runbook](../runbooks/PERSONAL-WEAVING.md) là input trước code. S17-01 sở hữu DomainWeaving/commands/typed scheduled jobs/history/invariants; S17-02 strict registry/image4/SQLite/atomic gateway/safe session; S17-03 scene17/preview/Confirm/running/output/nonweaver UI; S17-04 process/actual Unity/OS/restart/15–16 regression/fullsuite/docs/Git; S17-QA review độc lập. Actor/ownership và checks thực ở WORKLOG, không coi vai trò kế hoạch là nhân sự đã chạy.
+
+Lâm43/Nhu61 có weaving>=40 từ cohort, dùng tay2fiber/30ticks/1cord và8starterfiber cá nhân mới; sáu nonweavers giữ xuất thân và được thông báo công việc phù hợp chưa hỗ trợ. Không cấp household controls, skill/profession giả hoặc dùng sửa thuyền làm craft. Start reserve; completion tại due consume/output cùng publication; cancel trả hold; safe DTO/pure opaque preview/original-envelope retry và Continue drain accepted Advance giữ atomic/idempotent. Factory client17 chỉ own actor tại home/hai lot; Domain revalidation không đồng nghĩa đã có Travel/rights commands.
+
+Image4 Origin+Weaving/exact rule-content/root mới giữ images1–3/oldscenes/goldens; không auto-upgrade16. Replayv1 tiếp tục từ chối. Năm gates17 gồm core/history/rights/full regression; SQLite fault/SIGKILL/reopen/recovery/idempotency; actual Unity6000.6.7f1/LinuxMono Lâm/Nhu/nonweaver và actual Player15–16 regression; renderer/sixlayouts/nativeOS/two-process restart; independent reviews/docs/exports/exactHEADCI/PRdev. Kết quả hiện hành ở [evidence17](../qa/SPRINT-17-EVIDENCE.md), chỉ đóng sau đủ cả năm. Full professions/VS03/VS02/VS07/generator/viability/world binding/finalart/humanplaytest vẫn ngoài subset; gate đã nhận không được chuyển sang backlog. Không tự Sprint18/main/tag/release. Các kế hoạch16 và trước dưới đây là lịch sử; Sprint16 đã đóng09/11 theo WORKLOG.
+
 ## Sprint16 — nghiệm thu kỹ thuật local09/11/2026: VS02C và một phần onboarding VS07
 
 Kết quả local09/11:674/674runtime tests,0failed/skipped; actual Unity6000.6.7f1/LinuxMono hai seed,38ảnh origin/sixlayouts mỗi seed, OS20actions/hai process restart và actual repair15 regression đạt. Full evidence1rngpl9l, renderer8fpgghix, OS22lns4xz; docs/exports và exactHEADCI/PR/dev vẫn bắt buộc trước CLOSE, trạng thái Git cuối ở WORKLOG.

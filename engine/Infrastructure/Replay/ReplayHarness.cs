@@ -147,7 +147,7 @@ namespace Game.Infrastructure.Replay
         {
             // Origin genesis has a separate compatibility profile; this replay artifact v1
             // currently supports only the legacy/repair paths whose manifests were accepted.
-            if(initial.World.Origin!=null || manifest.RuleVersion==SqliteWorldStore.OriginRuleVersion)
+            if(initial.World.Origin!=null || manifest.RuleVersion==SqliteWorldStore.OriginRuleVersion || manifest.RuleVersion==SqliteWorldStore.WeavingRuleVersion)
                 throw new ReplayCompatibilityException();
             if(initial.World.Repair==null)
             {

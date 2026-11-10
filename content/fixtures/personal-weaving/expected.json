@@ -1,0 +1,39 @@
+{
+  "profile": "personal-weaving-v1",
+  "recipe_hash": "3001a817410943cc233bc064badf0c68493e6e9f52e99e48535e07ca05bd2df7",
+  "cohort_hash": "3b4560e57726f3693a483020924f33121fbfa554892ff912029dd50bdf95c8aa",
+  "content_hash": "f9d850edf58c22f525a185e8ba0e3430a0e189e0ccfe76531a088173a404a3bc",
+  "expected": {
+    "initial": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "running": [
+      8,
+      2,
+      0,
+      0
+    ],
+    "before_due": [
+      8,
+      2,
+      0,
+      29
+    ],
+    "completed": [
+      6,
+      0,
+      1,
+      30
+    ],
+    "cancelled": [
+      8,
+      0,
+      0,
+      0
+    ]
+  },
+  "note": "Independent Python MDC1 reference plus authored prototype arithmetic; runtime acceptance is separate."
+}

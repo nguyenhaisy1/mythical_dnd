@@ -33,12 +33,14 @@ namespace Game.Infrastructure.Origins
         private readonly string name, household, home;
         private readonly OriginHistoryView[] history;
         private readonly OriginSkillView[] skills;
+        private readonly IReadOnlyDictionary<string, int> skillValues;
         private readonly OriginClaimView[] claims;
         private readonly string[] needs;
         internal OriginSelfRecord(OriginCohortRecord r)
         {
             Candidate = new OriginCandidate(r.actor_id, r.household_id, r.community_id, r.alive, r.age);
             name = r.display_name; household = r.household_label; home = r.home_label;
+            skillValues = new System.Collections.ObjectModel.ReadOnlyDictionary<string, int>(r.skills.ToDictionary(s => s.id, s => s.value, StringComparer.Ordinal));
             history = r.history.OrderBy(h => h.at_age).ThenBy(h => h.id, StringComparer.Ordinal)
                 .Select(h => new OriginHistoryView(h.at_age, h.description, "Ký ức bản thân ở tuổi " + h.at_age)).ToArray();
             var episodes = r.history.ToDictionary(h => h.id, StringComparer.Ordinal);
@@ -51,6 +53,7 @@ namespace Game.Infrastructure.Origins
         private static string SkillLabel(string id) => id == "transport" ? "Vận tải đường sông" : id == "trading" ? "Trao đổi hàng"
             : id == "weaving" ? "Dệt" : id == "medicine" ? "Chăm sóc và chữa trị" : id == "farming" ? "Trồng trọt"
             : id == "fishing" ? "Đánh bắt" : id == "boat-repair" ? "Sửa thuyền" : throw new ArgumentException("ORIGIN_SKILL");
+        public int GetSkillValue(string skillId) => skillId != null && skillValues.TryGetValue(skillId, out var value) ? value : 0;
         public OriginRevealView Reveal(long tick) => new OriginRevealView(name, Candidate.Age, household, home, tick, history, skills, claims, needs);
     }
     public sealed class OriginCohortRegistry

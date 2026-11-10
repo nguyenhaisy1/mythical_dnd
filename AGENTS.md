@@ -1,5 +1,13 @@
 # Làm việc trong repository mythical_dnd
 
+## Sprint17 được giao — 10/11/2026
+
+Chủ dự án yêu cầu tiếp tục sau Sprint16Closed/PR17/deve7dfd9b. Sprint17/SPIN041 theo docs/production/sprints/SPRINT-17.md, ADR026 và PERSONAL-WEAVING-PROFILE: personal-weaving-v1, bounded handcraft trên xuất thân; Lâm43/Nhu61 đủ weaving40, starter8fiber cá nhân mới/2fiber/30ticks/1cord, dùng tay. Không grant nghề/household rights giả;6nonweavers ghi đúng bản thử chưa hỗ trợ công việc phù hợp, không ép reroll. Origin+Weaving/image4/exact rule-content/root mới, oldimage1/2/3/15/16/G13/archive/goldens giữ, không upgrade16âmthầm hoặc fullgenerator/fullVS03.
+Năm gates gồm core/history/rights/SQLitecrash-recovery/idempotency, actualUnity6000.6.7f1/LinuxMono haiqualified+mộtnonweaver/render/nativeOS/actualrestart và15–16actualPlayerregression, independentreviews/fullsuite/docs/exports/CI/PRdev. Không chuyển gate thiếu sang backlog để đóng. AI được điều phối/subagents/implement/test/review/docs/commitpushPRdev theo workflow; không tự Sprint18/main/tag/release. Journalpostcommit16local được giữ/carry cho meaningful17commit. Yêu cầu10/11 thay lệnh khôngtựSprint17 của mốc16 đãđóng; các mốc cũ là lịch sử.
+
+
+Kết quả local10/11: fullwpa3bfrf770/770tests,0failed/skipped/negative-process gates đạt,322sourcehashes8d31740d0494ab70ee0cd92634e71e5290386ae995bb9066cab161fe999100c8. ActualUnity8f9zo2ld230sourcehashes2369663f9e869b89d7f5c69ef6b9069064ffc071d95b4e497acfc15d330d70e3,116newcaptures/sixWorldlayouts vàactuallegacy15–16regression. OSg714cvsc48actions/2processSaveRunning→restart→completeonce; sameAssembly474694cb8f9646ad0ede7a182f8469ab9c18fa4c996e71ad5b261b2f81406d18. Haiindependentfinalreviews/evidence docs/qa/sprint-17/ vàSPRINT-17-EVIDENCE.md. Docs/Git/CI/PRdev vàCLOSE saucommittheoWORKLOG, khôngtựSprint18/main/tag/release.
+
 ## Sprint16 được giao — 06/11/2026
 
 Chủ dự án giao sprint kế tiếp sau Sprint15Closed/PR16/dev6fa3e1d. Sprint16/SPIN040 theo docs/production/sprints/SPRINT-16.md, ADR025 và ORIGIN-COHORT-PROFILE: VS02C origin-cohort-v1/partialVS07, chọn ngẫu nhiên theo seed một authored adult tại Bến Vạc; safe New/Reveal/World/self record/time/save/Continue, immutable origin image3/exactSQLiteprofile và atomic pending-publish. Không full life-history generator/Character Viability/TEST001 hoặc full world/NPC binding; cohort không có boat-repair, không grant nghề/rights giả. Repair15 image2/factory/actualPlayer regression, legacyimage1/goldens/G13v1/01–18 giữ.

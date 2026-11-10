@@ -37,7 +37,7 @@ namespace Game.Application.CommandPipeline
             {
                 if ((!restoreHistory && job.Status != ScheduledJobStatus.Pending) || world.Identity.Resolve<Job>(job.Id.Value).Lifecycle != (job.Status == ScheduledJobStatus.Pending ? EntityLifecycle.Active : EntityLifecycle.Retired) || (job.Status == ScheduledJobStatus.Pending && job.DueTick < world.Tick))
                     throw new ArgumentException("Invalid restored job lifecycle/time");
-                if (job.IsRepair) continue;
+                if (job.IsRepair || job.IsWeaving) continue;
                 ValidateJobReferences(world, job.ActorId, job.Transfer, job.HandlerKey);
                 if (job.AncestorKeys.Count > MaximumCausalDepth || job.AncestorKeys.Any(string.IsNullOrWhiteSpace) ||
                     job.AncestorKeys.Distinct(StringComparer.Ordinal).Count() != job.AncestorKeys.Count ||
@@ -46,6 +46,7 @@ namespace Game.Application.CommandPipeline
                     throw new ArgumentException("Invalid deferral trace");
             }
             ValidateRepairBindings(world, scheduler);
+            ValidateWeavingBindings(world, scheduler);
         }
         private void ValidateJobReferences(WorldSnapshot world, EntityId<Actor> actor, TransferResource transfer, string handlerKey)
         {
@@ -72,12 +73,15 @@ namespace Game.Application.CommandPipeline
             return world.Revision.Value + 1;
         }
         private static WorldSnapshot WithIdentityAndTick(WorldSnapshot world, IdentitySnapshot identity, WorldTick tick, IEnumerable<ResourceLot>? lots = null)
-            => new WorldSnapshot(identity, tick, world.Actors, lots ?? world.Lots, world.RngStates, world.Repair, world.Origin);
+            => new WorldSnapshot(identity, tick, world.Actors, lots ?? world.Lots, world.RngStates, world.Repair, world.Origin, world.Weaving);
         private void Publish(CommittedWorld before, CommittedWorld publication)
         {
             try { ValidateRepairProfile(publication.World); ValidateRepairBindings(publication.World, publication.Scheduler); ValidateRepairHistory(publication); }
             catch (Exception error) when (error is ArgumentException || error is IdentityException || error is FormatException)
             { throw new PipelineFailureException("PROPOSAL_REPAIR_STATE"); }
+            try { ValidateWeavingProfile(publication.World); ValidateWeavingBindings(publication.World, publication.Scheduler); ValidateWeavingHistory(publication); }
+            catch (Exception error) when (error is ArgumentException || error is IdentityException || error is FormatException)
+            { throw new PipelineFailureException("PROPOSAL_WEAVING_STATE"); }
             beforeCommit?.Invoke();
             if (!ReferenceEquals(current, before)) throw new PipelineFailureException("COMMIT_CONFLICT");
             if (store != null)
@@ -147,7 +151,7 @@ namespace Game.Application.CommandPipeline
             var job = current.Scheduler.Jobs.FirstOrDefault(j => j.Id.Equals(id));
             if (job == null) return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "REF_NOT_FOUND");
             if (!job.ActorId.Equals(principal.ActorId)) return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "NOT_AUTHORIZED");
-            if (job.IsRepair) return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "ACTIVITY_STATE");
+            if (job.IsRepair || job.IsWeaving) return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "ACTIVITY_STATE");
             if (job.Status != ScheduledJobStatus.Pending) return Metadata(envelope, fingerprint, CommandOutcome.NoOp, null);
             var stage = current.World.Identity.BeginStage(NextRevision(current.World)); stage.Retire(id);
             var scheduler = current.Scheduler.With(jobs: current.Scheduler.Jobs.Select(j => j.Id.Equals(id) ? j.WithStatus(ScheduledJobStatus.Cancelled) : j));
@@ -225,6 +229,7 @@ namespace Game.Application.CommandPipeline
         }
         private void ExecuteJob(ScheduledJob job, bool lastBudgetSlot)
         {
+            if (job.IsWeaving) { ExecuteWeavingJob(job, lastBudgetSlot); return; }
             if (job.IsRepair) { ExecuteRepairJob(job, lastBudgetSlot); return; }
             var before = current; var world = before.World; var workflow = before.Scheduler.Workflow!;
             if (job.DueTick < world.Tick) throw new PipelineFailureException("JOB_IN_PAST");

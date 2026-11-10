@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Game.Domain.Kernel;
 using Game.Domain.Repair;
+using Game.Domain.Weaving;
 using Game.Application.Events;
 using Game.Application.SimulationScheduler;
 using Game.Foundation.Identity;
@@ -145,26 +146,26 @@ namespace Game.Application.CommandPipeline
         private readonly Action? beforeCommit;
         private readonly Action? afterCommit;
         public CommandProcessor(WorldSnapshot initial, RuleRegistry rules, Action? beforeCommit = null, Action? afterCommit = null,
-            SchedulerState? initialScheduler = null, JobHandlerRegistry? jobHandlers = null, RepairRecipe? repairRecipe = null)
+            SchedulerState? initialScheduler = null, JobHandlerRegistry? jobHandlers = null, RepairRecipe? repairRecipe = null, WeavingRecipe? weavingRecipe = null)
         {
             current = new CommittedWorld(initial ?? throw new ArgumentNullException(nameof(initial)), Array.Empty<CommandReceipt>(),
                 Array.Empty<CommandReceipt>(), Array.Empty<CommittedTransfer>(), initialScheduler);
-            this.jobHandlers = jobHandlers ?? new JobHandlerRegistry(); this.repairRecipe = repairRecipe;
-            ValidateRepairProfile(current.World);
+            this.jobHandlers = jobHandlers ?? new JobHandlerRegistry(); this.repairRecipe = repairRecipe; this.weavingRecipe = weavingRecipe;
+            ValidateRepairProfile(current.World); ValidateWeavingProfile(current.World);
             ValidateInitialScheduler(current.World, current.Scheduler);
-            ValidateRepairHistory(current);
+            ValidateRepairHistory(current); ValidateWeavingHistory(current);
             this.rules = rules ?? throw new ArgumentNullException(nameof(rules));
             this.beforeCommit = beforeCommit; this.afterCommit = afterCommit;
         }
         public CommandProcessor(CommittedWorld initial, RuleRegistry rules, ICommittedWorldStore? store = null,
-            JobHandlerRegistry? jobHandlers = null, Action? beforeCommit = null, Action? afterCommit = null, RepairRecipe? repairRecipe = null)
+            JobHandlerRegistry? jobHandlers = null, Action? beforeCommit = null, Action? afterCommit = null, RepairRecipe? repairRecipe = null, WeavingRecipe? weavingRecipe = null)
         {
             current = initial ?? throw new ArgumentNullException(nameof(initial));
             this.rules = rules ?? throw new ArgumentNullException(nameof(rules));
-            this.store = store; this.jobHandlers = jobHandlers ?? new JobHandlerRegistry(); this.repairRecipe = repairRecipe;
-            ValidateRepairProfile(current.World);
+            this.store = store; this.jobHandlers = jobHandlers ?? new JobHandlerRegistry(); this.repairRecipe = repairRecipe; this.weavingRecipe = weavingRecipe;
+            ValidateRepairProfile(current.World); ValidateWeavingProfile(current.World);
             ValidateInitialScheduler(current.World, current.Scheduler, true);
-            ValidateRepairHistory(current);
+            ValidateRepairHistory(current); ValidateWeavingHistory(current);
             this.beforeCommit = beforeCommit; this.afterCommit = afterCommit;
         }
         // Trusted diagnostics/composition only: this omniscient view must not be exposed to UI/actor decisions.
@@ -205,15 +206,19 @@ namespace Game.Application.CommandPipeline
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "STALE_REVISION");
             if (envelope.WorldTick != world.Tick.Value)
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "TIME_MISMATCH");
-            if (envelope.CommandType == "CompleteRepair")
+            if (envelope.CommandType == "CompleteRepair" || envelope.CommandType == "CompleteWeaving" || envelope.CommandType == "ExecuteScheduledWeaving")
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "NOT_AUTHORIZED");
             if (before.Scheduler.Workflow != null && before.Scheduler.Workflow.Status != AdvanceStatus.Completed &&
-                envelope.CommandType != "CancelJob" && envelope.CommandType != "CancelActivity" && envelope.CommandType != "ResolveAdvanceDecision")
+                envelope.CommandType != "CancelJob" && envelope.CommandType != "CancelActivity" && envelope.CommandType != "CancelWeaving" && envelope.CommandType != "ResolveAdvanceDecision")
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "ADVANCE_IN_PROGRESS");
+            if (world.Weaving != null && envelope.CommandType == "ScheduleTransfer")
+                return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "COMMAND_UNKNOWN");
             if (IsSchedulerCommand(envelope.CommandType)) return ExecuteScheduler(envelope, principal, fingerprint);
+            if (envelope.CommandType == "StartWeaving" || envelope.CommandType == "CancelWeaving")
+                return ExecuteWeaving(envelope, principal, fingerprint);
             if (envelope.CommandType == "StartRepair" || envelope.CommandType == "CancelActivity")
                 return ExecuteRepair(envelope, principal, fingerprint);
-            if (envelope.CommandType != "TransferResource")
+            if (world.Weaving != null || envelope.CommandType != "TransferResource")
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "COMMAND_UNKNOWN");
             if (envelope.PayloadVersion != 1)
                 return Metadata(envelope, fingerprint, CommandOutcome.Rejected, "PAYLOAD_VERSION_UNSUPPORTED");
@@ -237,7 +242,7 @@ namespace Game.Application.CommandPipeline
             var updates = result.Changes.LotChanges.ToDictionary(c => c.LotId, c => c.NewOnHand);
             var lots = world.Lots.Select(l => updates.TryGetValue(l.Id, out var quantity)
                 ? new ResourceLot(l.Id, l.Commodity, l.Owner, l.Location, quantity, l.Reserved) : l).ToArray();
-            var candidate = new WorldSnapshot(identity.PrepareSnapshot(), world.Tick, world.Actors, lots, world.RngStates, world.Repair, world.Origin);
+            var candidate = new WorldSnapshot(identity.PrepareSnapshot(), world.Tick, world.Actors, lots, world.RngStates, world.Repair, world.Origin, world.Weaving);
             var receipt = new CommandReceipt(envelope, fingerprint, CommandOutcome.Accepted, null, world.Revision.Value, revision,
                 world.Tick, new[] { eventId });
             var fact = new CommittedTransfer(eventId, revision, world.Tick, envelope, transfer);

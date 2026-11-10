@@ -1,5 +1,15 @@
 # Lộ trình hình ảnh và bản chơi thử
 
+## Sprint17 — một vòng công việc phù hợp xuất thân, chưa nhận full demo
+
+Kết quả kỹ thuật local10/11:770/770runtime tests,0failed/skipped; actual Unity6000.6.7f1/LinuxMono ba xuất thân/116ảnh mới và31ảnh regression15–16;48native actions/hai process SaveRunning→restart→complete một lần. Hai final reviews độc lập không còn P0/P1 trong scope. Docs/exports và exactHEADCI/PR→dev phải đạt trước CLOSE; Git sau commit theo WORKLOG.
+
+Ngày10/11/2026 chủ dự án giao [Sprint17](sprints/SPRINT-17.md) sau Sprint16 đã đóng/PR17/dev`e7dfd9b`. Người đã có kỹ năng đan sẽ thấy8fiber cá nhân của bản thử, xem trước2fiber/30phút/1dây, xác nhận, chờ nhận sản phẩm, hủy hoặc lưu khi đang làm rồi Continue. Chỉ Lâm43/Nhu61 đủ weaving40; sáu xuất thân khác tiếp tục xem/chờ/lưu và được thông báo công việc phù hợp chưa có trong bản thử. Không yêu cầu reroll, cấp nghề hoặc quyền kho hộ giả.
+
+[ADR026](../adr/026-personal-weaving-on-origin.md), [contract](../contracts/PERSONAL-WEAVING-PROFILE.md), [runbook](../runbooks/PERSONAL-WEAVING.md) và [evidence17](../qa/SPRINT-17-EVIDENCE.md) phân biệt source/focused tests với actual Unity/OS/SQLite/restart/regression và nghiệm thu cuối. Image4/root/exact profile mới giữ save16 riêng; actual scenes15–16 Player regression là gate17. Năm gate phải đủ trước CLOSE, không chuyển gate thiếu sang backlog. Source hoặc hình UI không tự là demo đã đạt.
+
+Backlog toàn dự án vẫn gồm full life generator/viability/TEST001, world/NPC/Knowledge binding, full ba nghề/VS03 và campaign, progression/transport/medicine, đủ cast/final owner art/UX, balance/performance/cross-platform/human playtest và command replay profile mới. Không hứa ngày demo từ forecast15–16 lịch sử; không tự Sprint18/main/tag/release. G13v1/01–18 và tiến độ cũ giữ. Các mốc bên dưới là lịch sử; Sprint16 đã đủ gates và đóng09/11 theo WORKLOG.
+
 ## Sprint16 — nghiệm thu kỹ thuật local09/11/2026: nối New/Reveal/Continue vào bản thử
 
 Kết quả local09/11:674/674runtime tests,0failed/skipped; actual Unity6000.6.7f1/LinuxMono hai seed,38ảnh origin/sixlayouts mỗi seed, OS20actions/hai process restart và actual repair15 regression đạt. Full evidence1rngpl9l, renderer8fpgghix, OS22lns4xz; docs/exports và exactHEADCI/PR/dev vẫn bắt buộc trước CLOSE, trạng thái Git cuối ở WORKLOG.
